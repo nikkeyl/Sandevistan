@@ -1,0 +1,55 @@
+.quantity {
+    display: flex;
+    border: rem(2) solid $color-dark;
+    border-radius: rem(5);
+    @include wh(rem(88), rem(40));
+
+    &__button {
+        position: relative;
+        flex: 0 0 rem(30);
+        cursor: pointer;
+
+        &::before,
+        &::after {
+            @include wh(rem(10), rem(1));
+
+            @include pseudo();
+            left: 50%;
+            top: 50%;
+            margin: 0 0 0 rem(-4.5);
+            border-radius: rem(1);
+            background-color: $color-dark;
+            transition: all 0.3s ease;
+        }
+
+        &--plus {
+            &::before {
+                transform: rotate(-90deg);
+            }
+        }
+
+        &--minus {
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                &::before,
+                &::after {
+                    background-color: $color-dark;
+                }
+            }
+        }
+    }
+
+    &__input {
+        flex: 1 1 auto;
+
+        input {
+            @include wh(100%, 100%);
+            font-weight: 700;
+            font-size: rem(12);
+            text-align: center;
+            color: $color-dark;
+        }
+    }
+}

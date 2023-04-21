@@ -1,0 +1,4 @@
+/* Common styles for all svg icons */
+.icon {
+    @include wh(rem(20), rem(20));
+}

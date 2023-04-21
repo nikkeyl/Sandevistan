@@ -1,0 +1,142 @@
+VIDEOS {
+    сематника
+    https://www.youtube.com/watch?v=QWXlqvgHTkw&ab_channel=%D0%A4%D1%80%D1%96%D0%BB%D0%B0%D0%BD%D1%81%D0%B5%D1%80%D0%BF%D0%BE%D0%B6%D0%B8%D1%82%D1%82%D1%8E
+}
+
+HTML {
+    Тэк img должен быть всегда внизу в коде, а тэги заголовков всегда вверху в коде.
+
+    Текст оборачивать в тэг <p>.
+
+    Давать имена элементам формы.
+
+    ссылки <a> вкладывать в <h> а не наоборот.
+
+    Оборачивать input и label в div.
+
+    Если перед тэгом <p> идет блочный элемент, закрывающий тэг </p> можно не ставить.
+
+    В тэг address можно класть ссылку с телефоном и email.
+
+    Для тэга time атрибут datetime="2023-04-15T14:30:00+03:00"
+
+    Для прогресс баров указывать инлайновые стили в виде width: 30%;.
+
+    Если изображение для декора alt="" не указывать.
+}
+
+SHORTCUTS {
+    Ctrl + Shift + N    создать папку
+    F2                  переименовать папку
+    Win + D             свернуть все окна на рабочем столе
+    Alt + Tab	        переключение между окнами на рабочем столе
+    Win + L             выход из системы, блокировка компьютера
+    Ctrl + W	        закрыть вкладку
+    Ctrl + T	        создать новую вкладку
+    Ctrl + 1-9	        перемещение между вкладками
+    F3	                окно поиска по странице
+    Ctrl + N	        новое окно браузера
+    Ctrl + Shift + N	новое окно в режиме инкогнито
+}
+
+SCSS {
+    Задавать min-height header'у
+
+    В transition задавать конкретное свойство, например: transition: color 0.5s.
+
+    Чтобы шапка не дёргалась при открытие меню бургера
+    писать не transition: all, а конкретное свойство
+    transition: top 0.5s.
+
+    Даже если после блока нет другого блока все равно ставить
+    &:not(:last-child) {
+        margin-bottom: rem(5);
+    }
+
+    text-align: center; можно задавать не только тексту.
+
+    content: counter(item, decimal-leading-zero); для 01, 02 и т.д.
+
+    если в кнопке есть иконка то в кнопке создать span и ему через css background сделать иконку.
+
+    Чтобы ограничить текст который меньше по ширине чем контейнер и если слева или спрва есть какой то блок то {
+        grid-template-columns: rem(200) 1fr rem(200);
+    }
+
+    Псевдокласс :empty | :moz-only-whitespace выбирает любой элемент, не содержащий дочерних элементов для данного селектора.
+
+    Выход за ограничивающий контейнер
+        position: absolute;
+        width: calc(100% + ширина блока);
+        left или right: - половина ширины блока;
+
+    Выравнивание иконок разной высоты, контейнеру для иконки задать
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+
+    padding-bottom: percent(220,280);
+                         ^    ^
+                     height   width
+    высоту делить на ширину
+}
+
+JS {
+    Писать самодокументирующийся код.
+}
+
+OTHER {
+    Суть комментариев в коде обьяснять непонятные места.
+
+    Можно не w100% а w100p
+
+    Писать чище код.
+
+    ctrl + f1 свернуть все вложенности ctrl + K ctrl + О развернуть все вложенности.
+
+    Чтобы фоновое изображение смотрелось нормально под текстом (без обертки ibg)
+        .section {
+            position: relative;
+        }
+
+        img.section__bg {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .section__body {
+            position: relative;
+            z-index: 2;
+        }
+    Если обертка ibg {
+        .section {
+            position: relative;
+        }
+
+        .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .section__image {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .section__image img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}

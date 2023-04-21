@@ -1,0 +1,3 @@
+src/scss/libs/gallery/**/*.scss
+src/scss/base/variables.scss
+src/scss/base/mixins.scss

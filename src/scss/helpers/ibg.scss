@@ -1,0 +1,20 @@
+/* Background image using css */
+[class*="-ibg"] {
+    position: relative;
+
+    img {
+        @include wh(100%, 100%);
+
+        position: absolute;
+        left: 0;
+        top: 0;
+        object-fit: cover;
+    }
+}
+
+/* Background image using css (contain) */
+[class*="-ibg--contain"] {
+    img {
+        object-fit: contain;
+    }
+}

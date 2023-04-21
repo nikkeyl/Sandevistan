@@ -1,0 +1,61 @@
+.spollers {
+    display: grid;
+    gap: rem(15);
+
+    &__item {
+        font-size: rem(20);
+    }
+
+    &__title {
+        position: relative;
+        border: rem(1) solid $color-gray;
+        border-radius: rem(5);
+        padding: rem(10) rem(15);
+        width: 100%;
+        text-align: left;
+        cursor: default;
+
+        .spoller-init & {
+            cursor: pointer;
+
+            &::before,
+            &::after {
+                @include pseudo;
+                @include wh(rem(15), rem(2));
+
+                right: rem(10);
+                top: 50%;
+                background-color: $color-dark;
+                transition: transform 0.5s ease;
+            }
+
+            &::before {
+                transform: translate(-75%, -50%) rotate(40deg);
+            }
+
+            &::after {
+                transform: translate(0, -50%) rotate(-40deg);
+            }
+
+            &.spoller-active {
+                &::before {
+                    transform: translateX(-75%) rotate(-40deg);
+                }
+
+                &::after {
+                    transform: rotate(40deg);
+                }
+            }
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+            }
+        }
+    }
+
+    &__body {
+        border: rem(1) solid $color-gray;
+        padding: rem(20);
+    }
+}

@@ -1,0 +1,62 @@
+.rating {
+    display: flex;
+    align-items: flex-end;
+    font-size: rem(40);
+    line-height: 0.75;
+    transition: opacity 0.3s ease;
+
+    &__body {
+        position: relative;
+
+        &::before {
+            content: "★★★★★";
+            display: block;
+        }
+    }
+
+    &__active {
+        position: absolute;
+        left: 0;
+        top: 0;
+        overflow: hidden;
+        @include wh(0, 100%);
+        transition: all 0.2s ease;
+
+        &::before {
+            @include pseudo("★★★★★", absolute);
+            left: 0;
+            top: 0;
+            @include wh(100%, 100%);
+            color: $color-yellow;
+        }
+    }
+
+    &__items {
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: flex;
+        @include wh(100%, 100%);
+    }
+
+    &__item {
+        flex: 0 0 20%;
+        height: 100%;
+        opacity: 0;
+    }
+
+    &__value {
+        padding: 0 0 0 rem(10);
+        font-size: 50%;
+        line-height: 1;
+    }
+
+    &--sending {
+        opacity: 0.2;
+    }
+
+    &--set .rating__active,
+    &--set .rating__item {
+        cursor: pointer;
+    }
+}

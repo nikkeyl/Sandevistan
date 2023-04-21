@@ -1,0 +1,626 @@
+{
+    "Data Date Picker": {
+        "prefix": "ddp",
+        "body": [
+            "data-datepicker"
+        ]
+    },
+    "Data Marquee": {
+        "prefix": "dm",
+        "body": [
+            "data-marquee"
+        ]
+    },
+    "Data Change Font Item": {
+        "prefix": "dfi",
+        "body": [
+            "data-font-item"
+        ]
+    },
+    "Data Filter": {
+        "prefix": "dftr",
+        "body": [
+            "data-filter=\"${0:*}\""
+        ]
+    },
+    "Data Slider With Mouse Control": {
+        "prefix": "dms",
+        "body": [
+            "data-mousemove-swipe"
+        ]
+    },
+    "Data Quantity Max": {
+        "prefix": "dqmax",
+        "body": [
+            "data-quantity-max=\"$0\""
+        ]
+    },
+    "Data Quantity Min": {
+        "prefix": "dqmin",
+        "body": [
+            "data-quantity-min=\"$0\""
+        ]
+    },
+    "Data Glow Effect": {
+        "prefix": "dgl",
+        "body": [
+            "data-glow"
+        ]
+    },
+    "Data Line Effect": {
+        "prefix": "dle",
+        "body": [
+            "data-line-effect${1:=\"${2:230}\"}"
+        ]
+    },
+    "Data Glitch Effect": {
+        "prefix": "dgli",
+        "body": [
+            "data-glitch=\"${0:GLITCH}\""
+        ]
+    },
+    "Data Ripple Effect": {
+        "prefix": "drip",
+        "body": [
+            "data-ripple${0:=\"once\"}"
+        ]
+    },
+    "Data Digits Counter": {
+        "prefix": "ddc",
+        "body": [
+            "data-digits-counter=\"${0:1000}\""
+        ]
+    },
+    "Data Typed": {
+        "prefix": "dt",
+        "body": [
+            "data-typed"
+        ]
+    },
+    "Data Tooltip": {
+        "prefix": "dtc",
+        "body": [
+            "data-tippy-content${1:=\"${2:Подсказка}\"}"
+        ]
+    },
+    "Data Required": {
+        "prefix": "dr",
+        "body": [
+            "data-required${1:=\"${2:email}\"}"
+        ]
+    },
+    "Data Dynamic Adapt": {
+        "prefix": "da",
+        "body": [
+            "data-da=\".${1:block}, ${2:768}\""
+        ]
+    },
+    "Data Popup": {
+        "prefix": "dp",
+        "body": [
+            "data-popup=\"#${0:block}\""
+        ]
+    },
+    "Data Youtube": {
+        "prefix": "dy",
+        "body": [
+            "data-popup-youtube=\"$0\""
+        ]
+    },
+    "Data Youtube Place": {
+        "prefix": "dyp",
+        "body": [
+            "data-popup-youtube-place"
+        ]
+    },
+    "Data Placeholder Nohide": {
+        "prefix": "dpn",
+        "body": [
+            "data-placeholder-nohide"
+        ]
+    },
+    "Data No Focus Classes": {
+        "prefix": "dnfc",
+        "body": [
+            "data-no-focus-classes"
+        ]
+    },
+    "Data Validate": {
+        "prefix": "dv",
+        "body": [
+            "data-validate"
+        ]
+    },
+    "Data No Validate": {
+        "prefix": "dnv",
+        "body": [
+            "data-no-validate"
+        ]
+    },
+    "Data Ajax": {
+        "prefix": "daj",
+        "body": [
+            "data-ajax"
+        ]
+    },
+    "Data Dev": {
+        "prefix": "dd",
+        "body": [
+            "data-dev"
+        ]
+    },
+    "Data Goto Error": {
+        "prefix": "dge",
+        "body": [
+            "data-goto-error"
+        ]
+    },
+    "Data Popup Message": {
+        "prefix": "dpm",
+        "body": [
+            "data-popup-message=\"#${0:message}\""
+        ]
+    },
+    "Data Goto": {
+        "prefix": "dgt",
+        "body": [
+            "data-goto=\".${0:class}\""
+        ]
+    },
+    "Data Goto Header": {
+        "prefix": "dgh",
+        "body": [
+            "data-goto-header"
+        ]
+    },
+    "Data Goto Top": {
+        "prefix": "dgtt",
+        "body": [
+            "data-goto-top=\"${0:10}\""
+        ]
+    },
+    "Data Watch": {
+        "prefix": "dw",
+        "body": [
+            "data-watch${0:=\"navigator\"}"
+        ]
+    },
+    "Data Goto Speed": {
+        "prefix": "dgs",
+        "body": [
+            "data-goto-speed=\"${0:1000}\""
+        ]
+    },
+    "Data Scroll": {
+        "prefix": "ds",
+        "body": [
+            "data-scroll${1:=\"${2:120}\"}"
+        ]
+    },
+    "Data Scroll Show": {
+        "prefix": "dss",
+        "body": [
+            "data-scroll-show=\"${0:1000}\""
+        ]
+    },
+    "data Watch Root": {
+        "prefix": "dwr",
+        "body": [
+            "data-watch-root=\".${0:class}\""
+        ]
+    },
+    "Data Watch Margin": {
+        "prefix": "dwm",
+        "body": [
+            "data-watch-margin=\"${0:10}px\""
+        ]
+    },
+    "Data watch Threshold": {
+        "prefix": "dwt",
+        "body": [
+            "data-watch-threshold=\"0.${0:3}\""
+        ]
+    },
+    "Data Watch Once": {
+        "prefix": "dwo",
+        "body": [
+            "data-watch-once"
+        ]
+    },
+    "Data Sticky": {
+        "prefix": "dstic",
+        "body": [
+            "data-sticky"
+        ]
+    },
+    "Data Sticky Header": {
+        "prefix": "dsh",
+        "body": [
+            "data-sticky-header"
+        ]
+    },
+    "Data Sticky Item": {
+        "prefix": "dsi",
+        "body": [
+            "data-sticky-item"
+        ]
+    },
+    "Data Sticky Bottom": {
+        "prefix": "dsb",
+        "body": [
+            "data-sticky-bottom=\"$0\""
+        ]
+    },
+    "Data Sticky Top": {
+        "prefix": "dst",
+        "body": [
+            "data-sticky-top=\"$0\""
+        ]
+    },
+    "Data Showmore Media": {
+        "prefix": "dsm",
+        "body": [
+            "data-showmore-media=\"${1:768}, ${2:min}\""
+        ]
+    },
+    "Data Tabs Hash": {
+        "prefix": "dth",
+        "body": [
+            "data-tabs-hash"
+        ]
+    },
+    "Data Tabs Animate": {
+        "prefix": "dta",
+        "body": [
+            "data-tabs-animate=\"${0:1000}\""
+        ]
+    },
+    "Data Spollers": {
+        "prefix": "dsll",
+        "body": [
+            "data-spollers=\"${1:768}, ${2:max}\""
+        ]
+    },
+    "Data Spoller": {
+        "prefix": "dsl",
+        "body": [
+            "data-spoller"
+        ]
+    },
+    "Data One Spoller": {
+        "prefix": "dos",
+        "body": [
+            "data-one-spoller"
+        ]
+    },
+    "Data Spollers Speed": {
+        "prefix": "dssl",
+        "body": [
+            "data-spollers-speed=\"${0:1000}\""
+        ]
+    },
+    "Data PRLX Mouse Wrapper": {
+        "prefix": "dpmw",
+        "body": [
+            "data-prlx-mouse-wrapper"
+        ]
+    },
+    "Data PRLX Mouse": {
+        "prefix": "dpxm",
+        "body": [
+            "data-prlx-mouse"
+        ]
+    },
+    "Data PRLX CX": {
+        "prefix": "dpcx",
+        "body": [
+            "data-prlx-cx=\"$0\""
+        ]
+    },
+    "Data PRLX CY": {
+        "prefix": "dpcy",
+        "body": [
+            "data-prlx-cy=\"$0\""
+        ]
+    },
+    "Data PRLX DXR": {
+        "prefix": "dpxr",
+        "body": [
+            "data-prlx-dxr"
+        ]
+    },
+    "data PRLX DYR": {
+        "prefix": "dpyr",
+        "body": [
+            "data-prlx-dyr"
+        ]
+    },
+    "Data PRLX A": {
+        "prefix": "dpxa",
+        "body": [
+            "data-prlx-a=\"${0:1000}\""
+        ]
+    },
+    "Data Fullscreen": {
+        "prefix": "df",
+        "body": [
+            "data-fullscreen"
+        ]
+    },
+    "Data Gallery": {
+        "prefix": "dg",
+        "body": [
+            "data-gallery"
+        ]
+    },
+    "Data Simplebar": {
+        "prefix": "db",
+        "body": [
+            "data-simplebar"
+        ]
+    },
+    "Data Tags": {
+        "prefix": "dtag",
+        "body": [
+            "data-tags"
+        ]
+    },
+    "Data Checkbox": {
+        "prefix": "dcb",
+        "body": [
+            "data-checkbox"
+        ]
+    },
+    "Data Show Selected": {
+        "prefix": "dsel",
+        "body": [
+            "data-show-selected"
+        ]
+    },
+    "Data Search": {
+        "prefix": "dsearch",
+        "body": [
+            "data-search"
+        ]
+    },
+    "Data Open": {
+        "prefix": "dop",
+        "body": [
+            "data-open"
+        ]
+    },
+    "data Submit": {
+        "prefix": "dsub",
+        "body": [
+            "data-submit"
+        ]
+    },
+    "Data Pseudo Label": {
+        "prefix": "dpl",
+        "body": [
+            "data-pseudo-label=\"${0:заголовок}\""
+        ]
+    },
+    "Data One Select": {
+        "prefix": "dosel",
+        "body": [
+            "data-one-select"
+        ]
+    },
+    "Data Class": {
+        "prefix": "dk",
+        "body": [
+            "data-class=\"$0\""
+        ]
+    },
+    "Data Asset": {
+        "prefix": "dass",
+        "body": [
+            "data-asset=\"$0\""
+        ]
+    },
+    "Data Href": {
+        "prefix": "dhref",
+        "body": [
+            "data-href=\"$0\""
+        ]
+    },
+    "data Href Blank": {
+        "prefix": "dhrb",
+        "body": [
+            "data-href-blank"
+        ]
+    },
+    "Data Label": {
+        "prefix": "dl",
+        "body": [
+            "data-label"
+        ]
+    },
+    "Data LP": {
+        "prefix": "dlp",
+        "body": [
+            "data-lp"
+        ]
+    },
+    "Data Show": {
+        "prefix": "dssel",
+        "body": [
+            "data-show"
+        ]
+    },
+    "Active Class": {
+        "prefix": "ac",
+        "body": [
+            "active"
+        ]
+    },
+    "Block And Element": {
+        "prefix": "be",
+        "body": [
+            "${1:block}__${2:element}"
+        ]
+    },
+    "Image lazy": {
+        "prefix": "imgl",
+        "body": [
+            "<img data-src=\"@content$1\" alt=\"$2\">"
+        ]
+    },
+    "Image": {
+        "prefix": "img",
+        "body": [
+            "<img src=\"@content$1\" alt=\"$2\">"
+        ]
+    },
+    "Change Font Range": {
+        "prefix": "cfr",
+        "body": [
+            "<div class=\"${1:change-font-range} ${2:block}__${1:change-font-range}\">\n\t<input class=\"${1:change-font-range}__range\" id=\"range\" type=\"range\" value=\"${5:16}\" min=\"${3:16}\" max=\"${4:30}\" data-font-range>\n\t<label class=\"${1:change-font-range}__value\" for=\"range\" data-font-value></label>\n</div>"
+        ]
+    },
+    "Change Font Buttons": {
+        "prefix": "cfb",
+        "body": [
+            "<div class=\"${1:change-font-buttons} ${2:block}__${1:change-font-buttons}\">\n\t<button class=\"${1:change-font-buttons}__button active\" data-font-size=\"${3:16}\">${3:16}</button>\n\t<button class=\"${1:change-font-buttons}__button ${1:change-font-buttons}__button--low\" data-font-size=\"${4:25}\">${4:25}</button>\n\t<button class=\"${1:change-font-buttons}__button ${1:change-font-buttons}__button--big\" data-font-size=\"${5:30}\">${5:30}</button>\n</div>"
+        ]
+    },
+    "Rating": {
+        "prefix": "rating",
+        "body": [
+            "<div class=\"rating rating--set ${1:block}__rating\">\n\t<div class=\"rating__body\">\n\t\t<div class=\"rating__active\"></div>\n\t\t<div class=\"rating__items\">\n\t\t\t<input class=\"rating__item\" type=\"radio\" value=\"1\" name=\"rating\">\n\t\t\t<input class=\"rating__item\" type=\"radio\" value=\"2\" name=\"rating\">\n\t\t\t<input class=\"rating__item\" type=\"radio\" value=\"3\" name=\"rating\">\n\t\t\t<input class=\"rating__item\" type=\"radio\" value=\"4\" name=\"rating\">\n\t\t\t<input class=\"rating__item\" type=\"radio\" value=\"5\" name=\"rating\">\n\t\t</div>\n\t</div>\n\t<div class=\"rating__value\">3.6</div>\n</div>"
+        ]
+    },
+    "Form email": {
+        "prefix": "formemail",
+        "body": [
+            "<form class=\"${1:form} ${2:block}__${1:form}\" action=\"${3:files/sendmail/sendmail.php}\" method=\"${4:POST}\">\n\t<input class=\"${1:form}__input\" type=\"text\" placeholder=\"${5:E-mail}\" name=\"email\" data-required=\"email\" data-error=\"${6:Error}\">\n\t<button class=\"${1:form}__button button\" type=\"submit\">${7:Send}</button>\n</form>"
+        ]
+    },
+    "Logo": {
+        "prefix": "logo",
+        "body": [
+            "<a class=\"logo ${1:block}__logo\" href=\"index.html\">\n\t<img src=\"@content$2\" alt=\"${3:alt}\">\n</a>"
+        ]
+    },
+    "Breadcrumbs": {
+        "prefix": "bc",
+        "body": [
+            "<nav class=\"breadcrumbs ${1:block}__breadcrumbs\">\n\t<ul class=\"breadcrumbs__list\">\n\t\t<li class=\"breadcrumbs__item\">\n\t\t\t<a class=\"breadcrumbs__link\" href=\"${2:index}.html\">${3:prev}</a>\n\t\t</li>\n\t\t<li class=\"breadcrumbs__item\">\n\t\t\t<span class=\"breadcrumbs__current\">${5:current}</span>\n\t\t</li>\n\t</ul>\n</nav>"
+        ]
+    },
+    "Sprite": {
+        "prefix": "sprite",
+        "body": [
+            "<svg class=\"${1:icon} ${2:block}__${1:icon}\">\n\t<use href=\"@content/icons/sprite.svg#${3:icon}\"></use>\n</svg>"
+        ]
+    },
+    "Section": {
+        "prefix": "section",
+        "body": [
+            "<section class=\"${1:block}\">\n\t<div class=\"${1:block}__container\">\n\t\t$2\n\t</div>\n</section>"
+        ]
+    },
+    "Container": {
+        "prefix": "cnt",
+        "body": [
+            "<div class=\"${1:block}__container\">\n\t$2\n</div>"
+        ]
+    },
+    "Section Response": {
+        "prefix": "secres",
+        "body": [
+            "<section class=\"${1:block}\">\n\t<div class=\"${1:block}__inner\">\n\t\t<div class=\"${1:block}__container\">\n\t\t\t<div class=\"${1:block}__body\">\n\t\t\t\t$4\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div class=\"${1:block}__image\">\n\t\t<img src=\"@content$2\" alt=\"$3\">\n\t</div>\n</section>"
+        ]
+    },
+    "Spollers": {
+        "prefix": "spollers",
+        "body": [
+            "<div class=\"${1:spollers} ${2:block}__${1:spollers}\" data-spollers=\"${3:768}, ${4:max}\">\n\t<div class=\"${1:spollers}__item\">\n\t\t<button class=\"${1:spollers}__title\" type=\"button\" data-spoller>${5:title}</button>\n\t\t<div class=\"${1:spollers}__body\">${6:content}</div>\n\t</div>\n</div>"
+        ]
+    },
+    "Tabs": {
+        "prefix": "tabs",
+        "body": [
+            "<div class=\"${1:tabs} ${2:block}__${1:tabs}\" data-tabs>\n\t<nav class=\"${1:tabs}__navigation\" data-tabs-titles>\n\t\t<button class=\"${1:tabs}__title tab-active\" type=\"button\">${3:btn}</button>\n\t\t<button class=\"${1:tabs}__title\" type=\"button\">${4:btn}</button>\n\t\t<button class=\"${1:tabs}__title\" type=\"button\">${5:btn}</button>\n\t</nav>\n\t<div class=\"${1:tabs}__content\" data-tabs-body>\n\t\t<div class=\"${1:tabs}__body\">\n\t\t\t${6:content}\n\t\t</div>\n\t\t<div class=\"${1:tabs}__body\">\n\t\t\t${7:content}\n\t\t</div>\n\t\t<div class=\"${1:tabs}__body\">\n\t\t\t${8:content}\n\t\t</div>\n\t</div>\n</div>"
+        ]
+    },
+    "Show More": {
+        "prefix": "showmore",
+        "body": [
+            "<div class=\"${1:showmore} ${2:block}__${1:showmore}\" data-showmore>\n\t<div class=\"${1:showmore}__content\" data-showmore-content=\"${3:200}\">$6</div>\n\t<button class=\"${1:showmore}__button\" type=\"button\" data-showmore-button hidden>\n\t\t<span>${4:Показать еще}</span>\n\t\t<span>${5:Скыть}</span>\n\t</button>\n</div>"
+        ]
+    },
+    "Swiper": {
+        "prefix": "sf",
+        "body": [
+            "<div class=\"swiper ${1:block}__slider\">\n\t<div class=\"swiper-wrapper ${1:block}__wrapper\">\n\t\t<div class=\"swiper-slide ${1:block}__slide\">\n\t\t\t$2\n\t\t</div>\n\t</div>\n\t<div class=\"swiper-pagination\"></div>\n\t<button class=\"swiper-button-prev\" type=\"button\">$3</button>\n\t<button class=\"swiper-button-next\" type=\"button\">$4</button>\n\t<div class=\"swiper-scrollbar\"></div>\n</div>"
+        ]
+    },
+    "Quantity": {
+        "prefix": "qa",
+        "body": [
+            "<div class=\"quantity ${1:block}__quantity\" data-quantity>\n\t<button class=\"quantity__button quantity__button--plus\" type=\"button\" data-quantity-plus></button>\n\t<div class=\"quantity__input\">\n\t\t<input type=\"text\" autocomplete=\"off\" value=\"1\" name=\"quantity\" data-quantity-value>\n\t</div>\n\t<button class=\"quantity__button quantity__button--minus\" type=\"button\" data-quantity-minus></button>\n</div>"
+        ]
+    },
+    "IBG": {
+        "prefix": "ibg",
+        "body": [
+            "<div class=\"${1:block}__image-ibg\">\n\t<img data-src=\"@content$2\" alt=\"${3:alt}\">\n</div>"
+        ]
+    },
+    "IBGA": {
+        "prefix": "ibga",
+        "body": [
+            "<a class=\"${1:block}__image-ibg\" href=\"$2\">\n\t<img data-src=\"@content$3\" alt=\"${4:alt}\">\n</a>"
+        ]
+    },
+    "Input": {
+        "prefix": "inp",
+        "body": [
+            "<input class=\"${1:input} ${2:block}__${1:input}\" type=\"${3:text}\" autocomplete=\"off\" name=\"input\" placeholder=\"$4\" data-error=\"${5:error}\">"
+        ]
+    },
+    "Textarea": {
+        "prefix": "txta",
+        "body": [
+            "<textarea class=\"${1:input} ${2:form}__${1:input}\" autocomplete=\"off\" name=\"message\" placeholder=\"$3\" data-error=\"${4:error}\"></textarea>"
+        ]
+    },
+    "Select": {
+        "prefix": "sel",
+        "body": [
+            "<select class=\"${1:form} ${2:block}__${1:form}\" name=\"select\">\n\t<option value=\"1\" selected>${3:option}</option>\n\t<option value=\"2\">${4:option}</option>\n\t<option value=\"3\">${5:option}</option>\n\t<option value=\"4\">${6:option}</option>\n</select>"
+        ]
+    },
+    "Radio Buttons": {
+        "prefix": "opt",
+        "body": [
+            "<div class=\"options ${1:block}__options\">\n\t<div class=\"options__item\">\n\t\t<input class=\"options__input\" id=\"o_1\" type=\"radio\" value=\"1\" name=\"option\" hidden checked>\n\t\t<label class=\"options__label\" for=\"o_1\">\n\t\t\t<span class=\"options__text\">${2:text}</span>\n\t\t</label>\n\t</div>\n\t<div class=\"options__item\">\n\t\t<input class=\"options__input\" id=\"o_2\" type=\"radio\" value=\"2\" name=\"option\" hidden>\n\t\t<label class=\"options__label\" for=\"o_2\">\n\t\t\t<span class=\"options__text\">${3:text}</span>\n\t\t</label>\n\t</div>\n</div>"
+        ]
+    },
+    "Checkbox": {
+        "prefix": "chk",
+        "body": [
+            "<div class=\"checkbox ${1:block}__checkbox\">\n\t<input class=\"checkbox__input\" id=\"c_1\" type=\"checkbox\" value=\"1\" name=\"checkbox\" data-error=\"${2:error}\">\n\t<label class=\"checkbox__label\" for=\"c_1\">\n\t\t<span class=\"checkbox__text\">${3:text}</span>\n\t</label>\n</div>"
+        ]
+    },
+    "Button": {
+        "prefix": "btn",
+        "body": [
+            "<button class=\"button ${1:block}__button\" type=\"${2:button}\">$3</button>"
+        ]
+    },
+    "Button Link": {
+        "prefix": "abtn",
+        "body": [
+            "<a class=\"button ${1:block}__button\" href=\"$2\">$3</a>"
+        ]
+    },
+    "Menu": {
+        "prefix": "menu",
+        "body": [
+            "<div class=\"menu ${1:block}__menu\">\n\t<button class=\"icon-menu menu__icon-menu\" type=\"button\">\n\t\t<span>\n\t\t</span>\n\t</button>\n\t<nav class=\"menu__body\">\n\t\t<ul class=\"menu__list\">\n\t\t\t<li class=\"menu__item\">\n\t\t\t\t<a class=\"menu__link\" href=\"$2\">$3</a>\n\t\t\t</li>\n\t\t</ul>\n\t</nav>\n</div>"
+        ]
+    }
+}

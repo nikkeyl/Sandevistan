@@ -1,0 +1,27 @@
+$max-width-container    : 0;
+$container-padding      : 30;
+//---------------------------------//
+$max-width              : 1920;
+$min-width              : 320;
+//---------------------------------//
+$container-width        : $max-width-container + $container-padding;
+$pc                     : $container-width;
+$tablet                 : 992;
+$mobile                 : 768;
+$mobile-small           : 480;
+//---------------------------------//
+$color-dark             :#000;
+$color-dark-gray        :#333;
+$color-gray             :#888;
+$color-light            :#fff;
+//---------------------------------//
+$color-yellow           :#fe0;
+//---------------------------------//
+$main-font-family       : "";
+$font-second            : "";
+$main-font-weight       : 400;
+$main-font-size         : 16;
+$main-background-color  : $color-light;
+$main-font-color        : $color-dark;
+$a-focus-active-outline : 0;
+$focus-active-outline   : 0;

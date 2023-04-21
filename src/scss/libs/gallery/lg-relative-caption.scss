@@ -1,0 +1,26 @@
+@use "sass:math";
+
+@import "@scss/base/functions";
+
+.lg-relative-caption {
+    .lg-outer {
+        .lg-sub-html {
+            bottom: auto;
+            padding: 0;
+            white-space: normal;
+            background-image: none;
+        }
+
+        .lg-relative-caption-item {
+            padding: rem(16) 0;
+            opacity: 0;
+            transition: 0.5s opacity ease;
+        }
+
+        .lg-show-caption {
+            .lg-relative-caption-item {
+                opacity: 1;
+            }
+        }
+    }
+}

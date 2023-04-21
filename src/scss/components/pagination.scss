@@ -1,0 +1,35 @@
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__arrow {
+        &--prev {
+        }
+
+        &--next {
+        }
+    }
+
+    &__icon {
+    }
+
+    &__list {
+        display: flex;
+    }
+
+    &__item {
+        .active & {
+        }
+    }
+
+    &__link {
+        &.active {
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+            }
+        }
+    }
+}

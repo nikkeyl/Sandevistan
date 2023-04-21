@@ -1,0 +1,12 @@
+{
+    "scripts": {
+        "start": "npm i --loglevel=error",
+        "build": "stylelint **/*.scss --fix && git add -A && git commit -a -m \"Added new component\" && git push origin master && git status"
+    },
+    "devDependencies": {
+        "stylelint-config-standard-scss": "latest",
+        "stylelint-prettier": "latest",
+        "stylelint-order": "latest",
+        "stylelint": "latest"
+    }
+}

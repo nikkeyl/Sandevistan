@@ -1,0 +1,104 @@
+.block {
+    $gap: 1;
+
+    display: grid;
+    justify-items: center;
+
+    // .block__img
+    // &__img {
+    //     $size: 80;
+
+    //     @include wh(rem($size), rem($size));
+
+    //     display: flex;
+    //     align-items: center;
+    //     justify-content: center;
+    //     border-radius: 50%;
+    //     background-color: $color-gray;
+
+    //     svg {
+    //         $size-svg: 40;
+
+    //         @include wh(rem($size-svg), rem($size-svg));
+
+    //         fill: $color-light;
+    //     }
+    // }
+
+    // .block__icon
+    &__icon {
+        $size: 40;
+
+        @include wh(rem($size), rem($size));
+
+        fill: $color-gray;
+
+        @if $gap == 0 {
+            &:not(:last-child) {
+                margin-bottom: rem(20);
+            }
+        }
+    }
+
+    // .block__image-ibg
+    // &__image-ibg {
+    //     $size: 40;
+
+    //     @include wh(rem($size), rem($size));
+
+    //     background-color: $color-gray;
+
+    //     &:not(:last-child) {
+    //         margin-bottom: rem(20);
+    //     }
+    // }
+
+    // .block__body
+    &__body {
+        text-align: center;
+    }
+
+    // .block__title
+    &__title {
+        $font-size: 18;
+        $font-type: 1;
+
+        line-height: math.div(20, $font-size);
+        color: $color-dark;
+
+        &:not(:last-child) {
+            margin-bottom: rem(10);
+        }
+
+        @if $font-type == 1 {
+            @include adaptive-value("font-size", $font-size, 16);
+        } @else {
+            font-size: rem($font-size);
+        }
+    }
+
+    // .block__text
+    &__text {
+        $font-size: 18;
+        $font-type: 1;
+
+        line-height: math.div(20, $font-size);
+        color: $color-dark;
+
+        p {
+            &:not(:last-child) {
+                margin-bottom: rem(10);
+            }
+        }
+
+        @if $font-type == 1 {
+            @include adaptive-value("font-size", $font-size, 16);
+        } @else {
+            font-size: rem($font-size);
+        }
+    }
+
+    @if $gap == 1 {
+        gap: rem(20);
+    }
+}
