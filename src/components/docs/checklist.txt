@@ -91,6 +91,6 @@ Accessibility {
 Other {
     Уведомления об ошибках. Должны быть не js-alert’ом, а текстом в дизайне сайта
     background-color для img
-    [data-lp] в header
+    data-lp в header
     Елси нужно то задавать media тэгу img
 }
