@@ -42,6 +42,7 @@
         "stylelint-order": "latest",
         "gulp-fonter-fix": "latest",
         "gulp-clean-css": "latest",
+        "gulp-css-purge": "latest",
         "gulp-svg-sprite": "1.3.7",
         "gulp-ttf2woff2": "latest",
         "isotope-layout": "latest",

@@ -6,8 +6,8 @@
     overflow: clip;
     min-height: 100%;
 
-    /* Fixes swiper.js bug */
     > * {
+        /* Fixes swiper.js bug */
         min-width: 0;
     }
 }

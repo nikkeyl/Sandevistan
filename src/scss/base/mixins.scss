@@ -42,7 +42,7 @@
     }
 }
 
-/* Responsive exit from the container https://www.youtube.com/watch?v=NVdlfhkDAGM&pp=ygU70J7RgtC30YvQstGH0LjQstGL0Lkg0LLRi9GF0L7QtCDQuNC3INC60L7QvdGC0LXQudC90LXRgNCy0LA%3D */
+// Responsive exit from the container https://www.youtube.com/watch?v=NVdlfhkDAGM&pp=ygU70J7RgtC30YvQstGH0LjQstGL0Lkg0LLRi9GF0L7QtCDQuNC3INC60L7QvdGC0LXQudC90LXRgNCy0LA%3D
 @mixin responsive-output($image-height, $body-width, $breakpoint: 2, $reverse: 0) {
     $percent: round(math.div($body-width, $max-width-container) * 100);
     $width: $body-width - ($body-width - $percent);
@@ -167,10 +167,10 @@
                 animation-delay: #{$delay}s;
             }
         }
-    }    
+    }
 }
 
-/* Triangle using pseudo elements */
+// Triangle using pseudo elements
 @mixin triangle($color, $direction, $top, $right, $bottom, $left, $position) {
     position: $position;
     width: 0;
@@ -199,7 +199,7 @@
     }
 }
 
-/* Text truncation */
+// Text truncation
 @mixin truncate($truncation-width, $selector, $rows: 7, $type: 1) {
     @if $type == 1 {
         min-width: 0;
@@ -229,7 +229,7 @@
     }
 }
 
-/* Gradient text */
+// Gradient text
 @mixin text-gradient($gradient) {
     background: $gradient;
     -webkit-background-clip: text;

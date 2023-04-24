@@ -1,6 +1,7 @@
 import groupCssMediaQueries from 'gulp-group-css-media-queries'
 import autoprefixer from 'gulp-autoprefixer'
 import cleanCss from 'gulp-clean-css'
+import purge from 'gulp-css-purge'
 import webpcss from 'gulp-webpcss'
 
 export const css = () => {
@@ -37,6 +38,10 @@ export const css = () => {
                 )
             )
         )
+        .pipe(purge({
+            shorten: false,
+            trim: false
+        }))
         .pipe(app.gulp.dest(app.path.build.css))
         .pipe(
             app.plugins.if(
