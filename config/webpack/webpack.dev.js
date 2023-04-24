@@ -18,11 +18,6 @@ const config = {
         historyApiFallback: true,
         static: path.built,
         compress: true,
-        https: {
-            key: plugins.fs.readFileSync('config/certs/localhost-key.pem'),
-            cert: plugins.fs.readFileSync('config/certs/localhost.pem'),
-            ca: plugins.fs.readFileSync('config/certs/rootCA.pem')
-        },
         open: true,
 
         watchFiles: [
