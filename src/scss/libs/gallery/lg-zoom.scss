@@ -1,5 +1,38 @@
+@use "sass:math";
+
+@import "@scss/base/functions";
 @import "lg-variables";
 @import "lg-mixins";
+
+.lg-icon {
+    &.lg-zoom-in {
+        &::after {
+            content: "\e311";
+        }
+    }
+
+    &.lg-actual-size {
+        font-size: rem(20);
+
+        &::after {
+            content: "\e033";
+        }
+    }
+
+    &.lg-zoom-out {
+        opacity: 0.5;
+        pointer-events: none;
+
+        &::after {
+            content: "\e312";
+        }
+
+        .lg-zoomed & {
+            opacity: 1;
+            pointer-events: auto;
+        }
+    }
+}
 
 .lg-outer {
     .lg-item.lg-complete.lg-zoomable {
@@ -20,6 +53,17 @@
             @include backface-visibility(hidden);
 
             will-change: opacity, transform;
+        }
+    }
+
+    &[data-lg-slide-type="video"],
+    &[data-lg-slide-type="iframe"],
+    &.lg-first-slide-loading {
+        .lg-zoom-in,
+        .lg-actual-size,
+        .lg-zoom-out {
+            opacity: $lg-toolbar-icon-disabled-opacity;
+            pointer-events: none;
         }
     }
 
@@ -54,49 +98,6 @@
                     will-change: transform;
                 }
             }
-        }
-    }
-}
-
-.lg-icon {
-    &.lg-zoom-in {
-        &::after {
-            content: "\e311";
-        }
-    }
-
-    &.lg-actual-size {
-        font-size: 20px;
-
-        &::after {
-            content: "\e033";
-        }
-    }
-
-    &.lg-zoom-out {
-        opacity: 0.5;
-        pointer-events: none;
-
-        &::after {
-            content: "\e312";
-        }
-
-        .lg-zoomed & {
-            opacity: 1;
-            pointer-events: auto;
-        }
-    }
-}
-
-.lg-outer {
-    &[data-lg-slide-type="video"],
-    &[data-lg-slide-type="iframe"],
-    &.lg-first-slide-loading {
-        .lg-zoom-in,
-        .lg-actual-size,
-        .lg-zoom-out {
-            opacity: $lg-toolbar-icon-disabled-opacity;
-            pointer-events: none;
         }
     }
 }
