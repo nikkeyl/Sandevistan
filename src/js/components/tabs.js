@@ -147,8 +147,8 @@ export function tabs() {
 				)
 				tabActiveTitle.length
 					? (tabActiveTitle = Array.from(tabActiveTitle).filter(
-						item => item.closest('[data-tabs]') === tabsBlock
-					))
+							item => item.closest('[data-tabs]') === tabsBlock
+					  ))
 					: null
 				removeClasses('[data-tabs-title].tab-active', 'tab-active')
 				tabTitle.classList.add('tab-active')

@@ -130,19 +130,35 @@ $themeColor: #07f !default;
 	}
 
 	.swiper-slide-shadow-left {
-		background-image: linear-gradient(to left, rgb(0 0 0 / 50%), rgb(0 0 0 / 0%));
+		background-image: linear-gradient(
+			to left,
+			rgb(0 0 0 / 50%),
+			rgb(0 0 0 / 0%)
+		);
 	}
 
 	.swiper-slide-shadow-right {
-		background-image: linear-gradient(to right, rgb(0 0 0 / 50%), rgb(0 0 0 / 0%));
+		background-image: linear-gradient(
+			to right,
+			rgb(0 0 0 / 50%),
+			rgb(0 0 0 / 0%)
+		);
 	}
 
 	.swiper-slide-shadow-top {
-		background-image: linear-gradient(to top, rgb(0 0 0 / 50%), rgb(0 0 0 / 0%));
+		background-image: linear-gradient(
+			to top,
+			rgb(0 0 0 / 50%),
+			rgb(0 0 0 / 0%)
+		);
 	}
 
 	.swiper-slide-shadow-bottom {
-		background-image: linear-gradient(to bottom, rgb(0 0 0 / 50%), rgb(0 0 0 / 0%));
+		background-image: linear-gradient(
+			to bottom,
+			rgb(0 0 0 / 50%),
+			rgb(0 0 0 / 0%)
+		);
 	}
 
 	&,

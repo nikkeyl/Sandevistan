@@ -11,8 +11,16 @@
 			padding: 0 rem(math.div($container-padding, 2));
 		} @else {
 			/* Adaptive property, that helps to change numeric values depending on the width of the viewport */
-			@include adaptive-value("padding-left", math.div($container-padding, 2), 15);
-			@include adaptive-value("padding-right", math.div($container-padding, 2), 15);
+			@include adaptive-value(
+				"padding-left",
+				math.div($container-padding, 2),
+				15
+			);
+			@include adaptive-value(
+				"padding-right",
+				math.div($container-padding, 2),
+				15
+			);
 		}
 	}
 }

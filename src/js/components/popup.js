@@ -30,10 +30,10 @@ class Popup {
 				goHash: true
 			},
 			on: {
-				beforeOpen: () => { },
-				afterOpen: () => { },
-				beforeClose: () => { },
-				afterClose: () => { }
+				beforeOpen: () => {},
+				afterOpen: () => {},
+				beforeClose: () => {},
+				afterClose: () => {}
 			}
 		}
 		this.youTubeCode
@@ -104,8 +104,8 @@ class Popup {
 						this.options.attributeOpenButton
 					)
 						? buttonOpen.getAttribute(
-							this.options.attributeOpenButton
-						)
+								this.options.attributeOpenButton
+						  )
 						: 'error'
 					this.youTubeCode = buttonOpen.getAttribute(
 						this.options.youtubeAttribute
@@ -335,18 +335,19 @@ class Popup {
 		)
 			? `.${window.location.hash.replace('#', '')}`
 			: document.querySelector(`${window.location.hash}`)
-				? `${window.location.hash}`
-				: null
+			? `${window.location.hash}`
+			: null
 		const buttons = document.querySelector(
 			`[${this.options.attributeOpenButton} = "${classInHash}"]`
 		)
 			? document.querySelector(
-				`[${this.options.attributeOpenButton} = "${classInHash}"]`
-			)
+					`[${this.options.attributeOpenButton} = "${classInHash}"]`
+			  )
 			: document.querySelector(
-				`[${this.options.attributeOpenButton
-				} = "${classInHash.replace('.', '#')}"]`
-			)
+					`[${
+						this.options.attributeOpenButton
+					} = "${classInHash.replace('.', '#')}"]`
+			  )
 		if (buttons && classInHash) this.open(classInHash)
 	}
 	setHash() {

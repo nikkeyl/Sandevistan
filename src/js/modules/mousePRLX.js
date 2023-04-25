@@ -45,9 +45,11 @@ if (!isMobile.any()) {
 					const distY = coordYprocent - positionY
 					positionX = positionX + (distX * paramAnimation) / 1000
 					positionY = positionY + (distY * paramAnimation) / 1000
-					el.style.cssText = `transform: translate3D(${(directionX * positionX) / (paramCoefficientX / 10)
-						}%, ${(directionY * positionY) / (paramCoefficientY / 10)
-						}%, 0);`
+					el.style.cssText = `transform: translate3D(${
+						(directionX * positionX) / (paramCoefficientX / 10)
+					}%, ${
+						(directionY * positionY) / (paramCoefficientY / 10)
+					}%, 0);`
 					requestAnimationFrame(setMouseParallaxStyle)
 				}
 				function mouseMoveParalax(wrapper = window) {

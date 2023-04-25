@@ -128,15 +128,15 @@ export function showMore() {
 					if (!showMoreContent.classList.contains('slide')) {
 						showMoreBlock.classList.contains('showmore-active')
 							? slideUp(
-								showMoreContent,
-								showMoreSpeed,
-								hiddenHeight
-							)
+									showMoreContent,
+									showMoreSpeed,
+									hiddenHeight
+							  )
 							: slideDown(
-								showMoreContent,
-								showMoreSpeed,
-								hiddenHeight
-							)
+									showMoreContent,
+									showMoreSpeed,
+									hiddenHeight
+							  )
 						showMoreBlock.classList.toggle('showmore-active')
 					}
 				}

@@ -21,7 +21,8 @@ $lightblue: #add8e6;
 	border: rem(1) solid $color-gray;
 	border-radius: $radius;
 	width: $width;
-	box-shadow: 0 ($width * 0.08) ($width * 0.08) ($width * -0.06) rgb(0 0 0 / 30%);
+	box-shadow: 0 ($width * 0.08) ($width * 0.08) ($width * -0.06)
+		rgb(0 0 0 / 30%);
 	font-family: sans-serif;
 	font-size: rem(16);
 	color: $color-dark;
