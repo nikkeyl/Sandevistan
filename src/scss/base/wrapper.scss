@@ -1,13 +1,13 @@
 .wrapper {
-    display: grid;
-    grid-template-rows: auto 1fr auto;
+	display: grid;
+	grid-template-rows: auto 1fr auto;
 
-    /* With value overflow: clip;, position: sticky; works correctly */
-    overflow: clip;
-    min-height: 100%;
+	/* With value overflow: clip;, position: sticky; works correctly */
+	overflow: clip;
+	min-height: 100%;
 
-    > * {
-        /* Fixes swiper.js bug */
-        min-width: 0;
-    }
+	> * {
+		/* Fixes swiper.js bug */
+		min-width: 0;
+	}
 }

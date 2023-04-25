@@ -22,19 +22,19 @@ const dev = gulp.parallel(fonts, sprite, gitIgnore)
 const runFTP = gulp.series(build, ftp)
 
 export {
-    sprite,
-    runFTP,
-    build,
-    fonts
+	sprite,
+	runFTP,
+	build,
+	fonts
 }
 
 global.app = {
-    isNoWebp: !process.argv.includes('--nowebp'),
-    isBuild: process.argv.includes('--build'),
-    isDev: !process.argv.includes('--build'),
-    plugins,
-    paths,
-    gulp
+	isNoWebp: !process.argv.includes('--nowebp'),
+	isBuild: process.argv.includes('--build'),
+	isDev: !process.argv.includes('--build'),
+	plugins,
+	paths,
+	gulp
 }
 
 gulp.task('default', dev)

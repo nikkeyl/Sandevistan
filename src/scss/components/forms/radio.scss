@@ -1,61 +1,61 @@
 .options {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
 
-    &__item {
-        position: relative;
-        cursor: pointer;
+	&__item {
+		position: relative;
+		cursor: pointer;
 
-        &:not(:last-child) {
-            margin-bottom: em(5);
-        }
-    }
+		&:not(:last-child) {
+			margin-bottom: em(5);
+		}
+	}
 
-    &__input {
-        position: absolute;
-        @include wh(0, 0);
-        opacity: 0;
+	&__input {
+		position: absolute;
+		@include wh(0, 0);
+		opacity: 0;
 
-        &:checked + .options__label::before {
-        }
+		&:checked + .options__label::before {
+		}
 
-        &:checked + .options__label::after {
-            transform: scale(1);
-        }
+		&:checked + .options__label::after {
+			transform: scale(1);
+		}
 
-        &:focus + .options__label::before {
-            box-shadow: 0 0 rem(5) $color-dark;
-        }
-    }
+		&:focus + .options__label::before {
+			box-shadow: 0 0 rem(5) $color-dark;
+		}
+	}
 
-    &__label {
-        display: inline-flex;
-        align-items: center;
-        gap: rem(10);
-        cursor: pointer;
+	&__label {
+		display: inline-flex;
+		align-items: center;
+		gap: rem(10);
+		cursor: pointer;
 
-        &::before {
-            content: "";
-            flex: 0 0 rem(20);
-            align-self: flex-start;
-            border: 1px solid $color-gray;
-            border-radius: 50%;
-            @include wh(rem(20), rem(20));
-        }
+		&::before {
+			content: "";
+			flex: 0 0 rem(20);
+			align-self: flex-start;
+			border: 1px solid $color-gray;
+			border-radius: 50%;
+			@include wh(rem(20), rem(20));
+		}
 
-        &::after {
-            @include pseudo();
-            left: rem(5);
-            top: rem(5);
-            border-radius: 50%;
-            @include wh(rem(10), rem(10));
-            background-color: $color-dark-gray;
-            transform: scale(0);
-            transition: all 0.3s ease;
-        }
-    }
+		&::after {
+			@include pseudo();
+			left: rem(5);
+			top: rem(5);
+			border-radius: 50%;
+			@include wh(rem(10), rem(10));
+			background-color: $color-dark-gray;
+			transform: scale(0);
+			transition: all 0.3s ease;
+		}
+	}
 
-    &__text {
-    }
+	&__text {
+	}
 }

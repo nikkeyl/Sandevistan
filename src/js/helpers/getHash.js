@@ -1,3 +1,3 @@
 export function getHash() {
-    if (location.hash) return location.hash.replace('#', '')
+	if (location.hash) return location.hash.replace('#', '')
 }

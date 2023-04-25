@@ -1,23 +1,23 @@
 @function em($px, $current: 16) {
-    $result: math.div($px, $current) + em;
+	$result: math.div($px, $current) + em;
 
-    @return $result;
+	@return $result;
 }
 
 @function percent($px, $from) {
-    $result: math.div($px, $from) * 100%;
+	$result: math.div($px, $from) * 100%;
 
-    @return $result;
+	@return $result;
 }
 
 @function rem($px) {
-    $result: math.div($px, 16) + rem;
+	$result: math.div($px, 16) + rem;
 
-    @return $result;
+	@return $result;
 }
 
 @function md($px) {
-    $result: em($px - 0.02);
+	$result: em($px - 0.02);
 
-    @return $result;
+	@return $result;
 }

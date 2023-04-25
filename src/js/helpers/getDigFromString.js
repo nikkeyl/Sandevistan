@@ -1,3 +1,3 @@
 export function getDigFromString(item) {
-    return parseInt(item.replace(/[^\d]/g, ''))
+	return parseInt(item.replace(/[^\d]/g, ''))
 }

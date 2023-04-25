@@ -1,48 +1,48 @@
 /* Color scheme */
 .dark {
-    .page {
-        color: $color-light;
-        background-color: $color-dark-gray;
-    }
+	.page {
+		color: $color-light;
+		background-color: $color-dark-gray;
+	}
 
-    .theme-change {
-        // background: url("@content/icons/sprite.svg#") 0 0 no-repeat;
-    }
+	.theme-change {
+		// background: url("@content/icons/sprite.svg#") 0 0 no-repeat;
+	}
 }
 
 .light {
-    .page {
-        color: $color-dark-gray;
-        background-color: $color-light;
-    }
+	.page {
+		color: $color-dark-gray;
+		background-color: $color-light;
+	}
 
-    .theme-change {
-        // background: url("@content/icons/sprite.svg#") 0 0 no-repeat;
-    }
+	.theme-change {
+		// background: url("@content/icons/sprite.svg#") 0 0 no-repeat;
+	}
 }
 
 .theme-change {
-    @include wh(rem(30), rem(30));
+	@include wh(rem(30), rem(30));
 
-    transition: all 0.6s ease;
+	transition: all 0.6s ease;
 }
 
 .reset-theme {
-    @include wh(rem(15), rem(15));
+	@include wh(rem(15), rem(15));
 
-    border-radius: 50%;
-    font-size: rem(10);
-    color: $color-light;
-    background-color: $color-dark;
-    opacity: 0;
-    visibility: hidden;
+	border-radius: 50%;
+	font-size: rem(10);
+	color: $color-light;
+	background-color: $color-dark;
+	opacity: 0;
+	visibility: hidden;
 
-    &::before {
-        content: "X";
-    }
+	&::before {
+		content: "X";
+	}
 
-    &.active {
-        opacity: 1;
-        visibility: visible;
-    }
+	&.active {
+		opacity: 1;
+		visibility: visible;
+	}
 }

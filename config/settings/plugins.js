@@ -9,13 +9,13 @@ import ifPlugin from 'gulp-if'
 import fs from 'fs'
 
 export const plugins = {
-    FileIncludeWebpackPlugin,
-    if: ifPlugin,
-    TerserPlugin,
-    CopyPlugin,
-    plumber,
-    webpack,
-    notify,
-    rename,
-    fs
+	FileIncludeWebpackPlugin,
+	if: ifPlugin,
+	TerserPlugin,
+	CopyPlugin,
+	plumber,
+	webpack,
+	notify,
+	rename,
+	fs
 }

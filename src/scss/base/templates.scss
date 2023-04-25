@@ -1,89 +1,89 @@
 %responsive-video {
-    /* Responsive video */
-    position: relative;
-    overflow: hidden;
-    padding-bottom: 56.25%;
-    height: 0;
+	/* Responsive video */
+	position: relative;
+	overflow: hidden;
+	padding-bottom: 56.25%;
+	height: 0;
 
-    iframe,
-    object,
-    video,
-    embed {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-    }
+	iframe,
+	object,
+	video,
+	embed {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+	}
 }
 
 %video-background {
-    /* Video background */
-    iframe,
-    object,
-    video,
-    embed {
-        position: fixed;
-        left: 50%;
-        top: 50%;
-        z-index: -100;
-        width: auto;
-        height: auto;
-        min-width: 100%;
-        min-height: 100%;
-        background-size: cover;
-        transform: translateX(-50%) translateY(-50%);
-    }
+	/* Video background */
+	iframe,
+	object,
+	video,
+	embed {
+		position: fixed;
+		left: 50%;
+		top: 50%;
+		z-index: -100;
+		width: auto;
+		height: auto;
+		min-width: 100%;
+		min-height: 100%;
+		background-size: cover;
+		transform: translateX(-50%) translateY(-50%);
+	}
 }
 
 %list-counter {
-    /* List counter */
-    counter-reset: item;
-    list-style-type: none;
+	/* List counter */
+	counter-reset: item;
+	list-style-type: none;
 
-    li {
-        position: relative;
+	li {
+		position: relative;
 
-        &::before {
-            counter-increment: item;
-            content: counter(item);
-            position: absolute;
-            left: 0;
-            top: 0;
-        }
-    }
+		&::before {
+			counter-increment: item;
+			content: counter(item);
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+	}
 }
 
 %gray-filter {
-    /* Gray filter */
-    filter: grayscale(1);
-    transition: all 0.3s ease;
+	/* Gray filter */
+	filter: grayscale(1);
+	transition: all 0.3s ease;
 
-    @media (any-hover: hover) {
-        &:hover {
-            filter: grayscale(0);
-        }
-    }
+	@media (any-hover: hover) {
+		&:hover {
+			filter: grayscale(0);
+		}
+	}
 }
 
 %hide-scroll {
-    &::-webkit-scrollbar {
-        /* Hide scollbar */
-        display: none;
-    }
+	&::-webkit-scrollbar {
+		/* Hide scollbar */
+		display: none;
+	}
 }
 
 %touch {
-    /* Pulse-based scrolling https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-overflow-scrolling */
-    -webkit-overflow-scrolling: touch;
+	/* Pulse-based scrolling https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-overflow-scrolling */
+	-webkit-overflow-scrolling: touch;
 }
 
 %mirror {
-    /* Mirror effect */
-    transform: scale(-1, 1);
+	/* Mirror effect */
+	transform: scale(-1, 1);
 }
 
 %user-select {
-    /* Prevents the user from selecting text */
-    user-select: none;
+	/* Prevents the user from selecting text */
+	user-select: none;
 }

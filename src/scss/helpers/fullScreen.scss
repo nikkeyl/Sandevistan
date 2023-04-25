@@ -1,12 +1,12 @@
 [data-fullscreen] {
-    min-height: 100vh;
+	min-height: 100vh;
 
-    .touch & {
-        /* The (--vh) variable is used by the fullVHfix function */
-        min-height: calc(var(--vh, 1vh) * 100);
+	.touch & {
+		/* The (--vh) variable is used by the fullVHfix function */
+		min-height: calc(var(--vh, 1vh) * 100);
 
-        @media (max-width: md($mobile)) {
-            transition: height 0.2s;
-        }
-    }
+		@media (max-width: md($mobile)) {
+			transition: height 0.2s;
+		}
+	}
 }

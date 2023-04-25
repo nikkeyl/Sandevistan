@@ -1,33 +1,33 @@
 [data-showmore] {
-    display: grid;
-    gap: rem(10);
+	display: grid;
+	gap: rem(10);
 }
 
 [data-showmore-content] {
 }
 
 [data-showmore-button] {
-    display: inline-flex;
-    align-self: center;
-    border: rem(1) solid $color-dark;
-    padding: rem(5) rem(10);
+	display: inline-flex;
+	align-self: center;
+	border: rem(1) solid $color-dark;
+	padding: rem(5) rem(10);
 
-    span {
-        &:last-child {
-            display: none;
-        }
+	span {
+		&:last-child {
+			display: none;
+		}
 
-        .showmore-active & {
-            display: none;
+		.showmore-active & {
+			display: none;
 
-            &:last-child {
-                display: block;
-            }
-        }
-    }
+			&:last-child {
+				display: block;
+			}
+		}
+	}
 
-    @media (any-hover: hover) {
-        &:hover {
-        }
-    }
+	@media (any-hover: hover) {
+		&:hover {
+		}
+	}
 }

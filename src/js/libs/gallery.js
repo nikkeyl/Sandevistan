@@ -20,16 +20,16 @@ import '@scss/libs/gallery/lightgallery'
 
 const galleries = document.querySelectorAll('[data-gallery]')
 if (galleries.length) {
-    let galleryItems = []
-    galleries.forEach(gallery => {
-        galleryItems.push({
-            gallery,
-            galleryClass: lightGallery(gallery, {
-                // plugins: [lgZoom, lgThumbnail],
-                licenseKey: '7EC452A9-0CFD441C-BD984C7C-17C8456E',
-                speed: 500
-            })
-        })
-    })
-    nodeObjects.gallery = galleryItems
+	let galleryItems = []
+	galleries.forEach(gallery => {
+		galleryItems.push({
+			gallery,
+			galleryClass: lightGallery(gallery, {
+				// plugins: [lgZoom, lgThumbnail],
+				licenseKey: '7EC452A9-0CFD441C-BD984C7C-17C8456E',
+				speed: 500
+			})
+		})
+	})
+	nodeObjects.gallery = galleryItems
 }

@@ -1,15 +1,14 @@
 {
-    "tabWidth": 4,
-    "trailingComma": "none",
-    "arrowParens": "avoid",
-    "singleQuote": true,
-    "semi": false,
-    "overrides": [
-        {
-            "files": "*.scss",
-            "options": {
-                "singleQuote": false
-            }
-        }
-    ]
+	"trailingComma": "none",
+	"arrowParens": "avoid",
+	"singleQuote": true,
+	"semi": false,
+	"overrides": [
+		{
+			"files": "*.scss",
+			"options": {
+				"singleQuote": false
+			}
+		}
+	]
 }

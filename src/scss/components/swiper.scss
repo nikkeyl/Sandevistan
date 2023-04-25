@@ -1,44 +1,44 @@
 @import "@scss/base/mixins";
 
 .swiper {
-    overflow: hidden;
+	overflow: hidden;
 }
 
 .swiper-wrapper {
-    @include wh(100%, 100%);
+	@include wh(100%, 100%);
 
-    position: relative;
-    display: flex;
-    box-sizing: content-box;
+	position: relative;
+	display: flex;
+	box-sizing: content-box;
 }
 
 .swiper-vertical {
-    .swiper-wrapper {
-        flex-direction: column;
-    }
+	.swiper-wrapper {
+		flex-direction: column;
+	}
 }
 
 .swiper-autoheight {
-    .swiper-wrapper {
-        align-items: flex-start;
-    }
+	.swiper-wrapper {
+		align-items: flex-start;
+	}
 }
 
 .swiper-initialized {
-    .swiper-slide {
-        flex-shrink: 0;
+	.swiper-slide {
+		flex-shrink: 0;
 
-        //transition-property: transform;
-    }
+		//transition-property: transform;
+	}
 }
 
 .swiper-android {
-    .swiper-slide,
-    .swiper-wrapper {
-        transform: translate3d(0, 0, 0);
-    }
+	.swiper-slide,
+	.swiper-wrapper {
+		transform: translate3d(0, 0, 0);
+	}
 }
 
 .swiper-button-lock {
-    display: none !important;
+	display: none !important;
 }

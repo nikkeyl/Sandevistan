@@ -1,63 +1,53 @@
 /* Glitch effect */
 [data-glitch] {
-    $font-size: 100;
+	$font-size: 100;
 
-    position: relative;
-    width: rem(400);
-    font-size: rem($font-size);
-    line-height: math.div(30, $font-size);
-    color: $color-light;
+	position: relative;
+	width: rem(400);
+	font-size: rem($font-size);
+	line-height: math.div(30, $font-size);
+	color: $color-light;
 
-    &::before,
-    &::after {
-        @include pseudo(attr(data-glitch), absolute);
+	&::before,
+	&::after {
+		@include pseudo(attr(data-glitch), absolute);
 
-        top: 0;
-        overflow: hidden;
-        color: $color-light;
-        background: $color-dark;
-        clip: rect(0, rem(900), 0, 0);
-    }
+		top: 0;
+		overflow: hidden;
+		color: $color-light;
+		background: $color-dark;
+		clip: rect(0, rem(900), 0, 0);
+	}
 
-    &::before {
-        left: rem(-2);
-        text-shadow: rem(1) 0 #f00;
-        animation: noise-anim-2 3s infinite linear alternate-reverse;
+	&::before {
+		left: rem(-2);
+		text-shadow: rem(1) 0 #f00;
+		animation: noise-anim-2 3s infinite linear alternate-reverse;
 
-        @keyframes noise-anim-2 {
-            $steps: 20;
+		@keyframes noise-anim-2 {
+			$steps: 20;
 
-            @for $i from 0 through $steps {
-                #{percentage($i * calc(1 / $steps))} {
-                    clip: rect(
-                        math.random(6) + rem,
-                        rem(9999),
-                        math.random(6) + rem,
-                        0
-                    );
-                }
-            }
-        }
-    }
+			@for $i from 0 through $steps {
+				#{percentage($i * calc(1 / $steps))} {
+					clip: rect(math.random(6) + rem, rem(9999), math.random(6) + rem, 0);
+				}
+			}
+		}
+	}
 
-    &::after {
-        left: rem(2);
-        text-shadow: rem(-1) 0 #00f;
-        animation: noise-anim 2s infinite linear alternate-reverse;
+	&::after {
+		left: rem(2);
+		text-shadow: rem(-1) 0 #00f;
+		animation: noise-anim 2s infinite linear alternate-reverse;
 
-        @keyframes noise-anim {
-            $steps: 20;
+		@keyframes noise-anim {
+			$steps: 20;
 
-            @for $i from 0 through $steps {
-                #{percentage($i * calc(1 / $steps))} {
-                    clip: rect(
-                        math.random(6) + rem,
-                        rem(9999),
-                        math.random(6) + rem,
-                        0
-                    );
-                }
-            }
-        }
-    }
+			@for $i from 0 through $steps {
+				#{percentage($i * calc(1 / $steps))} {
+					clip: rect(math.random(6) + rem, rem(9999), math.random(6) + rem, 0);
+				}
+			}
+		}
+	}
 }
