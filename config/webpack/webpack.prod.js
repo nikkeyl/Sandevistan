@@ -2,7 +2,7 @@ import StylelintWebpackPlugin from 'stylelint-webpack-plugin'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 import ESLintWebpackPlugin from 'eslint-webpack-plugin'
 import { plugins } from '../settings/plugins.js'
-import { path } from '../settings/path.js'
+import { paths } from '../settings/paths.js'
 
 const config = {
     mode: 'production',
@@ -18,7 +18,7 @@ const config = {
     },
     output: {
         filename: 'app.min.js',
-        path: path.built,
+        path: paths.built,
         publicPath: '/'
     },
     module: {
@@ -72,7 +72,7 @@ const config = {
             fix: true
         }),
         new plugins.FileIncludeWebpackPlugin({
-            source: path.srcFolder,
+            source: paths.srcFolder,
             destination: '../',
             htmlBeautifyOptions: {
                 'indent-with-tabs': true,
@@ -94,11 +94,11 @@ const config = {
         new plugins.CopyPlugin({
             patterns: [
                 {
-                    from: `${path.root}/static`,
+                    from: `${paths.root}/static`,
                     to: '../static',
                     noErrorOnMissing: true
                 }, {
-                    from: `${path.root}/favicon.svg`,
+                    from: `${paths.root}/favicon.svg`,
                     to: '../',
                     noErrorOnMissing: true
                 }
@@ -112,8 +112,8 @@ const config = {
             '.js'
         ],
         alias: {
-            '@scss': `${path.root}/scss`,
-            '@js': `${path.root}/js`
+            '@scss': `${paths.root}/scss`,
+            '@js': `${paths.root}/js`
         }
     }
 }

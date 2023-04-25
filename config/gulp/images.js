@@ -3,14 +3,14 @@ import newer from 'gulp-newer'
 import webp from 'gulp-webp'
 
 export const images = () => {
-    return app.gulp.src(app.path.src.images)
+    return app.gulp.src(app.paths.src.images)
         .pipe(app.plugins.plumber(
             app.plugins.notify.onError({
                 title: 'IMAGES',
                 message: 'Error: <%= error.message %>'
             })
         ))
-        .pipe(newer(app.path.build.images))
+        .pipe(newer(app.paths.build.images))
         .pipe(
             app.plugins.if(
                 app.isNoWebp,
@@ -20,19 +20,19 @@ export const images = () => {
         .pipe(
             app.plugins.if(
                 app.isNoWebp,
-                app.gulp.dest(app.path.build.images)
+                app.gulp.dest(app.paths.build.images)
             )
         )
         .pipe(
             app.plugins.if(
                 app.isNoWebp,
-                app.gulp.src(app.path.src.images)
+                app.gulp.src(app.paths.src.images)
             )
         )
         .pipe(
             app.plugins.if(
                 app.isNoWebp,
-                newer(app.path.build.images)
+                newer(app.paths.build.images)
             )
         )
         .pipe(
@@ -48,7 +48,7 @@ export const images = () => {
                 })
             )
         )
-        .pipe(app.gulp.dest(app.path.build.images))
-        .pipe(app.gulp.src(app.path.src.svg))
-        .pipe(app.gulp.dest(app.path.build.images))
+        .pipe(app.gulp.dest(app.paths.build.images))
+        .pipe(app.gulp.src(app.paths.src.svg))
+        .pipe(app.gulp.dest(app.paths.build.images))
 }

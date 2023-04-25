@@ -1,5 +1,5 @@
 import { plugins } from '../settings/plugins.js'
-import { path } from '../settings/path.js'
+import { paths } from '../settings/paths.js'
 
 const config = {
     mode: 'development',
@@ -8,29 +8,29 @@ const config = {
     optimization: {
         minimize: false
     },
-    entry: `${path.root}/js/app.js`,
+    entry: `${paths.root}/js/app.js`,
     output: {
         filename: 'js/app.min.js',
-        path: path.built,
+        path: paths.built,
         publicPath: '/'
     },
     devServer: {
         historyApiFallback: true,
-        static: path.built,
+        static: paths.built,
         compress: true,
         open: true,
 
         watchFiles: [
-            `${path.root}/content/**/*.*`,
-            `${path.root}/**/*.html`,
-            `${path.root}/**/*.htm`
+            `${paths.root}/content/**/*.*`,
+            `${paths.root}/**/*.html`,
+            `${paths.root}/**/*.htm`
         ]
     },
     module: {
         rules: [
             {
                 test: /\.(scss|css)$/,
-                exclude: `${path.root}/fonts`,
+                exclude: `${paths.root}/fonts`,
                 use: [
                     'style-loader',
                     {
@@ -70,7 +70,7 @@ const config = {
     },
     plugins: [
         new plugins.FileIncludeWebpackPlugin({
-            source: path.srcFolder,
+            source: paths.srcFolder,
             replace: [
                 {
                     regex: '<link rel="stylesheet" href="css/style.min.css">',
@@ -87,17 +87,17 @@ const config = {
         new plugins.CopyPlugin({
             patterns: [
                 {
-                    from: `${path.root}/content`,
+                    from: `${paths.root}/content`,
                     to: 'content',
                     noErrorOnMissing: true,
                     force: true
                 }, {
-                    from: `${path.root}/static`,
+                    from: `${paths.root}/static`,
                     to: 'static',
                     noErrorOnMissing: true,
                     force: true
                 }, {
-                    from: `${path.root}/favicon.svg`,
+                    from: `${paths.root}/favicon.svg`,
                     to: './',
                     noErrorOnMissing: true
                 }
@@ -111,8 +111,8 @@ const config = {
             '.js'
         ],
         alias: {
-            '@scss': `${path.root}/scss`,
-            '@js': `${path.root}/js`
+            '@scss': `${paths.root}/scss`,
+            '@js': `${paths.root}/js`
         }
     }
 }

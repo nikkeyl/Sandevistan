@@ -2,7 +2,7 @@ import webpHtmlNosvg from 'gulp-webp-html-nosvg'
 import versionNumber from 'gulp-version-number'
 
 export const html = () => {
-    return app.gulp.src(`${app.path.build.html}**/*.html`)
+    return app.gulp.src(`${app.paths.build.html}**/*.html`)
         .pipe(app.plugins.plumber(
             app.plugins.notify.onError({
                 title: 'HTML',
@@ -31,5 +31,5 @@ export const html = () => {
                 })
             )
         )
-        .pipe(app.gulp.dest(app.path.build.html))
+        .pipe(app.gulp.dest(app.paths.build.html))
 }

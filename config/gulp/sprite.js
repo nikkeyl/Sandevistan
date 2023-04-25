@@ -1,7 +1,7 @@
 import svgSprite from 'gulp-svg-sprite'
 
 export const sprite = () => {
-    return app.gulp.src(app.path.src.svgSprites)
+    return app.gulp.src(app.paths.src.svgSprites)
         .pipe(app.plugins.plumber(
             app.plugins.notify.onError({
                 title: 'SVG',
@@ -41,5 +41,5 @@ export const sprite = () => {
                 xmlDeclaration: false
             }
         }))
-        .pipe(app.gulp.dest(app.path.srcFolder))
+        .pipe(app.gulp.dest(app.paths.srcFolder))
 }

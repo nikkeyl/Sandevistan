@@ -1,6 +1,6 @@
 import webPackConfig from '../webpack/webpack.prod.js'
 import { plugins } from '../settings/plugins.js'
-import { path } from '../settings/path.js'
+import { paths } from '../settings/paths.js'
 
 let webPackConfigBeautify = Object.assign({}, webPackConfig)
 
@@ -25,13 +25,13 @@ webPackConfigBeautify.optimization = {
 }
 
 webPackConfigBeautify.output = {
-    path: path.built,
+    path: paths.built,
     filename: 'app.js',
     publicPath: '/'
 }
 
 export const jsDev = () => {
-    return app.gulp.src(app.path.src.js)
+    return app.gulp.src(app.paths.src.js)
         .pipe(app.plugins.plumber(
             app.plugins.notify.onError({
                 title: 'JS',
@@ -41,5 +41,5 @@ export const jsDev = () => {
         .pipe(plugins.webpack({
             config: webPackConfigBeautify
         }))
-        .pipe(app.gulp.dest(app.path.build.js))
+        .pipe(app.gulp.dest(app.paths.build.js))
 }

@@ -5,7 +5,7 @@ const reportsFolder = 'reports'
 const buildFolder = 'build'
 const srcFolder = 'src'
 
-export const path = {
+export const paths = {
     build: {
         images: `${buildFolder}/content/`,
         static: `${buildFolder}/static/`,

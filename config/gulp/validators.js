@@ -6,8 +6,8 @@ export const validator = () => {
     return app.gulp.src
         (
             [
-                `${app.path.build.html}*.html`,
-                `!${app.path.build.html}*.min.html`
+                `${app.paths.build.html}*.html`,
+                `!${app.paths.build.html}*.min.html`
             ]
         )
         .pipe(bemValidator())

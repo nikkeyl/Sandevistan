@@ -2,7 +2,7 @@ import ttf2woff2 from 'gulp-ttf2woff2'
 import fonter from 'gulp-fonter-fix'
 
 export const otfToTtf = () => {
-    return app.gulp.src(`${app.path.srcFolder}/fonts/*.otf`)
+    return app.gulp.src(`${app.paths.srcFolder}/fonts/*.otf`)
         .pipe(app.plugins.plumber(
             app.plugins.notify.onError({
                 title: 'FONTS',
@@ -12,11 +12,11 @@ export const otfToTtf = () => {
         .pipe(fonter({
             formats: ['ttf']
         }))
-        .pipe(app.gulp.dest(`${app.path.srcFolder}/fonts/`))
+        .pipe(app.gulp.dest(`${app.paths.srcFolder}/fonts/`))
 }
 
 export const ttfToWoff = () => {
-    return app.gulp.src(`${app.path.srcFolder}/fonts/*.ttf`)
+    return app.gulp.src(`${app.paths.srcFolder}/fonts/*.ttf`)
         .pipe(app.plugins.plumber(
             app.plugins.notify.onError({
                 title: 'FONTS',
@@ -24,16 +24,16 @@ export const ttfToWoff = () => {
             })
         ))
         .pipe(ttf2woff2())
-        .pipe(app.gulp.dest(app.path.build.fonts))
-        .pipe(app.gulp.src(`${app.path.srcFolder}/fonts/*.woff2`))
-        .pipe(app.gulp.dest(app.path.build.fonts))
+        .pipe(app.gulp.dest(app.paths.build.fonts))
+        .pipe(app.gulp.src(`${app.paths.srcFolder}/fonts/*.woff2`))
+        .pipe(app.gulp.dest(app.paths.build.fonts))
 }
 
 export const fontsStyle = () => {
-    const fontsFile = `${app.path.srcFolder}/scss/base/fonts/fonts.scss`
+    const fontsFile = `${app.paths.srcFolder}/scss/base/fonts/fonts.scss`
 
     app.plugins.fs.unlink(fontsFile, cb)
-    app.plugins.fs.readdir(app.path.build.fonts, (err, fontsFiles) => {
+    app.plugins.fs.readdir(app.paths.build.fonts, (err, fontsFiles) => {
         if (fontsFiles) {
             if (!app.plugins.fs.existsSync(fontsFile)) {
                 app.plugins.fs.writeFile(fontsFile, '', cb)
@@ -74,6 +74,6 @@ export const fontsStyle = () => {
             app.plugins.fs.unlink(fontsFile, cb)
         }
     })
-    return app.gulp.src(app.path.srcFolder)
+    return app.gulp.src(app.paths.srcFolder)
     function cb() { }
 }

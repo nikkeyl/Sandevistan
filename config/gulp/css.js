@@ -5,7 +5,7 @@ import purge from 'gulp-css-purge'
 import webpcss from 'gulp-webpcss'
 
 export const css = () => {
-    return app.gulp.src(`${app.path.build.css}style.css`)
+    return app.gulp.src(`${app.paths.build.css}style.css`)
         .pipe(app.plugins.plumber(
             app.plugins.notify.onError({
                 title: 'CSS',
@@ -42,7 +42,7 @@ export const css = () => {
             shorten: false,
             trim: false
         }))
-        .pipe(app.gulp.dest(app.path.build.css))
+        .pipe(app.gulp.dest(app.paths.build.css))
         .pipe(
             app.plugins.if(
                 app.isBuild,
@@ -54,5 +54,5 @@ export const css = () => {
         .pipe(app.plugins.rename({
             suffix: '.min'
         }))
-        .pipe(app.gulp.dest(app.path.build.css))
+        .pipe(app.gulp.dest(app.paths.build.css))
 }

@@ -1,7 +1,7 @@
 import gulp from 'gulp'
 
 import { plugins } from './config/settings/plugins.js'
-import { path } from './config/settings/path.js'
+import { paths } from './config/settings/paths.js'
 
 import { otfToTtf, ttfToWoff, fontsStyle } from './config/gulp/fonts.js'
 import { validator } from './config/gulp/validators.js'
@@ -33,7 +33,7 @@ global.app = {
     isBuild: process.argv.includes('--build'),
     isDev: !process.argv.includes('--build'),
     plugins,
-    path,
+    paths,
     gulp
 }
 

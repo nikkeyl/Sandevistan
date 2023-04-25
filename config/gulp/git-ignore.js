@@ -9,6 +9,6 @@ export const gitIgnore = () => {
         app.plugins.fs.appendFile('.gitignore', 'reports/\r\n', cb)
         app.plugins.fs.appendFile('.gitignore', 'build/\r\n', cb)
     }
-    return app.gulp.src(app.path.srcFolder)
+    return app.gulp.src(app.paths.srcFolder)
 }
 function cb() { }

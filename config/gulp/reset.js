@@ -3,9 +3,9 @@ import { deleteAsync } from 'del'
 export const reset = () => {
     return deleteAsync(
         [
-            `${app.path.rootFolder}.zip`,
-            app.path.reportsFolder,
-            app.path.buildFolder,
+            `${app.paths.rootFolder}.zip`,
+            app.paths.reportsFolder,
+            app.paths.buildFolder,
             '**/.gitkeep'
         ]
     )
