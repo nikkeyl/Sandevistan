@@ -37,8 +37,8 @@ export const fontsStyle = () => {
 			if (!app.plugins.fs.existsSync(fontsFile)) {
 				app.plugins.fs.writeFile(fontsFile, '', cb)
 				let newFileOnly
-				for (let i = 0; i < fontsFiles.length; i++) {
-					const fontFileName = fontsFiles[i].split('.')[0]
+				fontsFiles.forEach(file => {
+					const fontFileName = file.split('.')[0]
 					if (newFileOnly !== fontFileName) {
 						const fontName = fontFileName.split('-')[0] ? fontFileName.split('-')[0] : fontFileName
 						let fontWeight = fontFileName.split('-')[1] ? fontFileName.split('-')[1] : fontFileName
@@ -64,7 +64,7 @@ export const fontsStyle = () => {
 						app.plugins.fs.appendFile(fontsFile, `@font-face {\n\tsrc: url("../fonts/${fontFileName}.woff2") format("woff2");\n\tfont-family: "${fontName}";\n\tfont-weight: ${fontWeight};\n\tfont-style: normal;\n\tfont-display: swap;\n}\n\n`, cb)
 						newFileOnly = fontFileName
 					}
-				}
+				})
 			}
 		} else {
 			app.plugins.fs.unlink(fontsFile, cb)
