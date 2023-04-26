@@ -1,3 +1,1 @@
-export function getIndex(el) {
-	return Array.from(el.parentNode.children).indexOf(el)
-}
+export const getIndex = el => Array.from(el.parentNode.children).indexOf(el)

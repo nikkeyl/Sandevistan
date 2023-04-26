@@ -5,7 +5,7 @@ export function stickyBlock() {
 		const stickyParents = document.querySelectorAll('[data-sticky]')
 		if (stickyParents.length) {
 			stickyParents.forEach(stickyParent => {
-				let stickyConfig = {
+				const stickyConfig = {
 					media: stickyParent.dataset.sticky
 						? parseInt(stickyParent.dataset.sticky)
 						: null,
@@ -39,7 +39,7 @@ export function stickyBlock() {
 				stickyParent.getBoundingClientRect().top +
 				scrollY -
 				(offsetTop + stickyBlockItem.offsetHeight + stickyConfig.bottom)
-			let stickyItemValues = {
+			const stickyItemValues = {
 				position: 'relative',
 				bottom: 'auto',
 				top: '0px',
@@ -85,7 +85,7 @@ export function stickyBlock() {
 }
 setTimeout(() => {
 	if (addWindowScrollEvent) {
-		let windowScroll = new Event('windowScroll')
+		const windowScroll = new Event('windowScroll')
 		window.addEventListener('scroll', () => {
 			document.dispatchEvent(windowScroll)
 		})

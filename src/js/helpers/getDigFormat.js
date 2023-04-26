@@ -1,3 +1,2 @@
-export function getDigFormat(item) {
-	return item.toString().replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ')
-}
+export const getDigFormat = item =>
+	item.toString().replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ')

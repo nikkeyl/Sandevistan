@@ -47,7 +47,7 @@ export function headerScroll() {
 }
 setTimeout(() => {
 	if (addWindowScrollEvent) {
-		let windowScroll = new Event('windowScroll')
+		const windowScroll = new Event('windowScroll')
 		window.addEventListener('scroll', () => {
 			document.dispatchEvent(windowScroll)
 		})

@@ -31,21 +31,17 @@ export const ttfToWoff = () => {
 
 export const fontsStyle = () => {
 	const fontsFile = `${app.paths.srcFolder}/scss/base/fonts/fonts.scss`
-
 	app.plugins.fs.unlink(fontsFile, cb)
 	app.plugins.fs.readdir(app.paths.build.fonts, (err, fontsFiles) => {
 		if (fontsFiles) {
 			if (!app.plugins.fs.existsSync(fontsFile)) {
 				app.plugins.fs.writeFile(fontsFile, '', cb)
 				let newFileOnly
-
 				for (let i = 0; i < fontsFiles.length; i++) {
 					const fontFileName = fontsFiles[i].split('.')[0]
-
 					if (newFileOnly !== fontFileName) {
 						const fontName = fontFileName.split('-')[0] ? fontFileName.split('-')[0] : fontFileName
 						let fontWeight = fontFileName.split('-')[1] ? fontFileName.split('-')[1] : fontFileName
-
 						if (fontWeight.toLowerCase() === 'thin') {
 							fontWeight = 100
 						} else if (fontWeight.toLowerCase() === 'extralight') {

@@ -94,13 +94,13 @@ export function showMore() {
 		}
 		function getOriginalHeight(showMoreContent) {
 			let parentHidden
-			let hiddenHeight = showMoreContent.offsetHeight
+			const hiddenHeight = showMoreContent.offsetHeight
 			showMoreContent.style.removeProperty('height')
 			if (showMoreContent.closest('[hidden]')) {
 				parentHidden = showMoreContent.closest('[hidden]')
 				parentHidden.hidden = false
 			}
-			let originalHeight = showMoreContent.offsetHeight
+			const originalHeight = showMoreContent.offsetHeight
 			parentHidden ? (parentHidden.hidden = true) : null
 			showMoreContent.style.height = `${hiddenHeight}px`
 			return originalHeight

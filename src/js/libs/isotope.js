@@ -44,8 +44,8 @@ export function filter() {
 				filterValue === '*'
 					? itemsGrid.arrange({ filter: `` })
 					: itemsGrid.arrange({
-						filter: `[data-filter="${filterValue}"]`
-					})
+							filter: `[data-filter="${filterValue}"]`
+					  })
 				filterActiveItem.classList.remove('active')
 				filterItem.classList.add('active')
 				e.preventDefault()

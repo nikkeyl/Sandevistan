@@ -1,94 +1,94 @@
 .block {
-    $breakpoint: $mobile-small;
-    $start-width: $max-width;
-    $end-width: $mobile-small;
-    $type-value: 1;
-    $body-grid: 1;
-    $center: 1;
-    $reverse: 0;
+	$breakpoint: $mobile-small;
+	$start-width: $max-width;
+	$end-width: $mobile-small;
+	$type-value: 1;
+	$body-grid: 1;
+	$center: 1;
+	$reverse: 0;
 
-    @include adaptive-value(
-        "padding-top",
-        120,
-        30,
-        $start-width,
-        $end-width,
-        $type-value
-    );
-    @include adaptive-value(
-        "padding-bottom",
-        120,
-        30,
-        $start-width,
-        $end-width,
-        $type-value
-    );
+	@include adaptive-value(
+		"padding-top",
+		120,
+		30,
+		$start-width,
+		$end-width,
+		$type-value
+	);
+	@include adaptive-value(
+		"padding-bottom",
+		120,
+		30,
+		$start-width,
+		$end-width,
+		$type-value
+	);
 
-    // .block__container
-    &__container {
-        display: grid;
-        gap: rem(20);
+	// .block__container
+	&__container {
+		display: grid;
+		gap: rem(20);
 
-        @if $center == 1 {
-            align-items: center;
-        }
+		@if $center == 1 {
+			align-items: center;
+		}
 
-        @media (min-width: em($breakpoint)) {
-            grid-template-columns: repeat(2, 1fr);
-        }
-    }
+		@media (min-width: em($breakpoint)) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
 
-    // .block__body
-    &__body {
-        @if $reverse == 1 {
-            order: 2;
-        }
+	// .block__body
+	&__body {
+		@if $reverse == 1 {
+			order: 2;
+		}
 
-        @if $center == 0 {
-            align-self: start;
-        }
+		@if $center == 0 {
+			align-self: start;
+		}
 
-        @if $body-grid == 1 {
-            display: grid;
-            gap: rem(30);
-        }
+		@if $body-grid == 1 {
+			display: grid;
+			gap: rem(30);
+		}
 
-        @media (min-width: em($breakpoint)) {
-            max-width: rem(500);
-        }
-    }
+		@media (min-width: em($breakpoint)) {
+			max-width: rem(500);
+		}
+	}
 
-    // .block__title
-    &__title {
-        @if $body-grid == 0 {
-            &:not(:last-child) {
-                margin-bottom: rem(30);
-            }
-        }
-    }
+	// .block__title
+	&__title {
+		@if $body-grid == 0 {
+			&:not(:last-child) {
+				margin-bottom: rem(30);
+			}
+		}
+	}
 
-    // .block__text
-    &__content {
-        @if $body-grid == 0 {
-            &:not(:last-child) {
-                margin-bottom: rem(30);
-            }
-        }
-    }
+	// .block__text
+	&__content {
+		@if $body-grid == 0 {
+			&:not(:last-child) {
+				margin-bottom: rem(30);
+			}
+		}
+	}
 
-    // .block__button
-    &__button {
-        @if $body-grid == 1 {
-            @media (min-width: em($breakpoint)) {
-                width: fit-content;
-            }
-        }
-    }
+	// .block__button
+	&__button {
+		@if $body-grid == 1 {
+			@media (min-width: em($breakpoint)) {
+				width: fit-content;
+			}
+		}
+	}
 
-    // .block__image-ibg
-    &__image-ibg {
-        align-self: start;
-        padding-bottom: percent(340, 500);
-        background-color: $color-gray;
-    }
+	// .block__image-ibg
+	&__image-ibg {
+		align-self: start;
+		padding-bottom: percent(340, 500);
+		background-color: $color-gray;
+	}
 }

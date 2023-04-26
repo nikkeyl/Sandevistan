@@ -48,11 +48,11 @@ export function pageNavigation() {
 					)
 				} else if (targetElement.classList.length) {
 					for (
-						let index = 0;
-						index < targetElement.classList.length;
-						index++
+						const i = 0;
+						i < targetElement.classList.length;
+						i++
 					) {
-						const element = targetElement.classList[index]
+						const element = targetElement.classList[i]
 						if (
 							document.querySelector(`[data-goto=".${element}"]`)
 						) {
@@ -90,7 +90,7 @@ export function pageNavigation() {
 }
 setTimeout(() => {
 	if (addWindowScrollEvent) {
-		let windowScroll = new Event('windowScroll')
+		const windowScroll = new Event('windowScroll')
 		window.addEventListener('scroll', () => {
 			document.dispatchEvent(windowScroll)
 		})

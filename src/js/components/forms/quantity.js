@@ -1,6 +1,6 @@
 export function quantity() {
 	document.addEventListener('click', e => {
-		let targetElement = e.target
+		let targetElement = e.target// checking how work this code with const
 		if (
 			targetElement.closest('[data-quantity-plus]') ||
 			targetElement.closest('[data-quantity-minus]')

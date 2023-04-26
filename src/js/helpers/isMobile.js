@@ -1,19 +1,11 @@
 export const isMobile = {
-	iOS: () => {
-		return navigator.userAgent.match(/iPhone|iPad|iPod/i)
-	},
-	Opera: () => {
-		return navigator.userAgent.match(/Opera Mini/i)
-	},
-	BlackBerry: () => {
-		return navigator.userAgent.match(/BlackBerry/i)
-	},
-	Android: () => {
-		return navigator.userAgent.match(/Android/i)
-	},
+	BlackBerry: () => navigator.userAgent.match(/BlackBerry/i),
+	iOS: () => navigator.userAgent.match(/iPhone|iPad|iPod/i),
+	Opera: () => navigator.userAgent.match(/Opera Mini/i),
+	Android: () => navigator.userAgent.match(/Android/i),
 	any: () =>
+		isMobile.BlackBerry() ||
 		isMobile.Android() ||
-		isMobile.iOS() ||
 		isMobile.Opera() ||
-		isMobile.BlackBerry()
+		isMobile.iOS()
 }

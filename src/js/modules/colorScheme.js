@@ -40,7 +40,7 @@ export function colorScheme() {
 		}
 		setThemeClass()
 		function changeTheme(saveTheme = false) {
-			let currentTheme = htmlBlock.classList.contains('light')
+			const currentTheme = htmlBlock.classList.contains('light')
 				? 'light'
 				: 'dark'
 			let newTheme

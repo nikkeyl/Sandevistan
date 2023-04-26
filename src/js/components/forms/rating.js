@@ -5,7 +5,7 @@ export function rating() {
 	}
 	function initRatings() {
 		let ratingActive, ratingValue
-		for (let index = 0; index < ratings.length; index++) {
+		for (let index = 0; index < ratings.length; index++) {// checking how work this code with const
 			const rating = ratings[index]
 			initRating(rating)
 		}
@@ -28,7 +28,7 @@ export function rating() {
 		}
 		function setRating(rating) {
 			const ratingItems = rating.querySelectorAll('.rating__item')
-			for (let index = 0; index < ratingItems.length; index++) {
+			for (let index = 0; index < ratingItems.length; index++) {// checking how work this code with const
 				const ratingItem = ratingItems[index]
 				ratingItem.addEventListener('mouseenter', () => {
 					initRatingVars(rating)
@@ -52,7 +52,7 @@ export function rating() {
 		async function setRatingValue(/* value, */ rating) {
 			if (!rating.classList.contains('rating--sending')) {
 				rating.classList.add('rating--sending')
-				let response = await fetch('rating.json', {
+				let response = await fetch('rating.json', {// checking how work this code with const
 					method: 'GET',
 
 					//body: JSON.stringify({

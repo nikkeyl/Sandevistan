@@ -1,7 +1,7 @@
 export function counter() {
 	window.addEventListener('load', () => {
 		function digitsCountersInit(digitsCountersItems) {
-			let digitsCounters = digitsCountersItems
+			const digitsCounters = digitsCountersItems
 				? digitsCountersItems
 				: document.querySelectorAll('[data-digits-counter]')
 			if (digitsCounters) {
@@ -32,10 +32,10 @@ export function counter() {
 			}
 			window.requestAnimationFrame(step)
 		}
-		let options = {
+		const options = {
 			threshold: 0.3
 		}
-		let observer = new IntersectionObserver((entries, observer) => {
+		const observer = new IntersectionObserver((entries, observer) => {
 			entries.forEach(entry => {
 				if (entry.isIntersecting) {
 					const targetElement = entry.target
@@ -49,7 +49,7 @@ export function counter() {
 				}
 			})
 		}, options)
-		let sections = document.querySelectorAll(
+		const sections = document.querySelectorAll(
 			'[data-digits-counter-wrapper]'
 		)
 		if (sections.length) {

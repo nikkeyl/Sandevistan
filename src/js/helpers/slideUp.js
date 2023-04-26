@@ -1,4 +1,4 @@
-export let slideUp = (target, duration = 500, showmore = 0) => {
+export const slideUp = (target, duration = 500, showmore = 0) => {
 	if (!target.classList.contains('slide')) {
 		target.classList.add('slide')
 		target.style.transitionProperty = 'height, margin, padding'

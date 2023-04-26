@@ -49,9 +49,9 @@ export function formFieldsInit(
 	})
 	if (options.viewPass) {
 		document.addEventListener('click', e => {
-			let targetElement = e.target
+			let targetElement = e.target// checking how work this code with const
 			if (targetElement.closest('[class*="__viewpass"]')) {
-				let inputType = targetElement.classList.contains(
+				let inputType = targetElement.classList.contains(// checking how work this code with const
 					'viewpass-active'
 				)
 					? 'password'

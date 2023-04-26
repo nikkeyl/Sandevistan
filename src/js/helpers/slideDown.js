@@ -1,9 +1,9 @@
-export let slideDown = (target, duration = 500, showmore = 0) => {
+export const slideDown = (target, duration = 500, showmore = 0) => {
 	if (!target.classList.contains('slide')) {
 		target.classList.add('slide')
 		target.hidden = target.hidden ? false : null
 		showmore ? target.style.removeProperty('height') : null
-		let height = target.offsetHeight
+		const height = target.offsetHeight
 		target.style.overflow = 'hidden'
 		target.style.height = showmore ? `${showmore}px` : '0px'
 		target.style.paddingTop = 0

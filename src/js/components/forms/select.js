@@ -5,7 +5,7 @@ import { slideUp } from '@js/helpers/slideUp'
 
 class SelectConstructor {
 	constructor(props, data = null) {
-		let defaultConfig = {
+		const defaultConfig = {
 			init: true
 		}
 		this.config = Object.assign(defaultConfig, props)
@@ -417,7 +417,7 @@ class SelectConstructor {
 		}
 	}
 	getSelectedOptionsData(originalSelect) {
-		let selectedOptions = []
+		const selectedOptions = []
 		if (originalSelect.multiple) {
 			selectedOptions = Array.from(originalSelect.options)
 				.filter(option => option.value)
@@ -438,10 +438,10 @@ class SelectConstructor {
 		}
 	}
 	getOptions(originalSelect) {
-		let selectOptionsScroll = originalSelect.hasAttribute('data-scroll')
+		const selectOptionsScroll = originalSelect.hasAttribute('data-scroll')
 			? 'data-simplebar'
 			: ''
-		let selectOptionsScrollHeight = originalSelect.dataset.scroll
+		const selectOptionsScrollHeight = originalSelect.dataset.scroll
 			? `style="max-height:${originalSelect.dataset.scroll}px"`
 			: ''
 		let selectOptions = Array.from(originalSelect.options)
@@ -574,7 +574,7 @@ class SelectConstructor {
 			originalSelect.hasAttribute('data-submit') &&
 			originalSelect.value
 		) {
-			let tempButton = document.createElement('button')
+			const tempButton = document.createElement('button')
 			tempButton.type = 'submit'
 			originalSelect.closest('form').append(tempButton)
 			tempButton.click()

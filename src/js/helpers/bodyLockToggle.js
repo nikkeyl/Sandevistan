@@ -1,24 +1,16 @@
-import { html } from '@js/helpers/nodeList'
+import { html, lockPadding, body } from '@js/helpers/nodeList'
 
-/*! When the lock class is added, the scrollbar is removed, and elements with the [data-lp] attribute are set to {padding-right}, which is equal to the width of the scrollbar */
-let lockPadding = document.querySelectorAll('[data-lp]')
 export let bodyLockStatus = true
 /*! Blocks page scrolling  */
-export let bodyLockToggle = (delay = 500) => {
-	if (html.classList.contains('lock')) {
-		bodyUnlock(delay)
-	} else {
-		bodyLock(delay)
-	}
+export const bodyLockToggle = (delay = 500) => {
+	html.classList.contains('lock') ? bodyUnlock(delay) : bodyLock(delay)
 }
-export let bodyUnlock = (delay = 500) => {
-	let body = document.querySelector('body')
+export const bodyUnlock = (delay = 500) => {
 	if (bodyLockStatus) {
 		setTimeout(() => {
-			for (let i = 0; i < lockPadding.length; i++) {
-				const el = lockPadding[i]
+			lockPadding.forEach(el => {
 				el.style.paddingRight = '0px'
-			}
+			})
 			body.style.paddingRight = '0px'
 			html.classList.remove('lock')
 		}, delay)
@@ -28,16 +20,14 @@ export let bodyUnlock = (delay = 500) => {
 		}, delay)
 	}
 }
-export let bodyLock = (delay = 500) => {
-	let body = document.querySelector('body')
+export const bodyLock = (delay = 500) => {
 	if (bodyLockStatus) {
-		for (let i = 0; i < lockPadding.length; i++) {
-			const el = lockPadding[i]
+		lockPadding.forEach(el => {
 			el.style.paddingRight =
 				window.innerWidth -
 				document.querySelector('.wrapper').offsetWidth +
 				'px'
-		}
+		})
 		body.style.paddingRight =
 			window.innerWidth -
 			document.querySelector('.wrapper').offsetWidth +

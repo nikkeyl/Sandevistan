@@ -4,7 +4,7 @@ import { isMobile } from '@js/helpers/isMobile'
 if (!isMobile.any()) {
 	class MousePRLX {
 		constructor(props) {
-			let defaultConfig = {
+			const defaultConfig = {
 				init: true
 			}
 			this.config = Object.assign(defaultConfig, props)

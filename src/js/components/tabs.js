@@ -19,7 +19,7 @@ export function tabs() {
 			tabsBlock.addEventListener('click', setTabsAction)
 			initTabs(tabsBlock)
 		})
-		let mdQueriesArray = dataMediaQueries(tabs, 'tabs')
+		const mdQueriesArray = dataMediaQueries(tabs, 'tabs')
 		if (mdQueriesArray && mdQueriesArray.length) {
 			mdQueriesArray.forEach(mdQueriesItem => {
 				mdQueriesItem.matchMedia.addEventListener('change', () => {
@@ -38,10 +38,10 @@ export function tabs() {
 	function setTitlePosition(tabsMediaArray, matchMedia) {
 		tabsMediaArray.forEach(tabsMediaItem => {
 			tabsMediaItem = tabsMediaItem.item
-			let tabsTitles = tabsMediaItem.querySelector('[data-tabs-titles]')
+			const tabsTitles = tabsMediaItem.querySelector('[data-tabs-titles]')
 			let tabsTitleItems =
 				tabsMediaItem.querySelectorAll('[data-tabs-title]')
-			let tabsContent = tabsMediaItem.querySelector('[data-tabs-body]')
+			const tabsContent = tabsMediaItem.querySelector('[data-tabs-body]')
 			let tabsContentItems =
 				tabsMediaItem.querySelectorAll('[data-tabs-item]')
 			tabsTitleItems = Array.from(tabsTitleItems).filter(

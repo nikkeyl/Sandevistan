@@ -11,7 +11,7 @@ export function spollers() {
 		if (spollersRegular.length) {
 			initSpollers(spollersRegular)
 		}
-		let mdQueriesArray = dataMediaQueries(spollersArray, 'spollers')
+		const mdQueriesArray = dataMediaQueries(spollersArray, 'spollers')
 		if (mdQueriesArray && mdQueriesArray.length) {
 			mdQueriesArray.forEach(mdQueriesItem => {
 				mdQueriesItem.matchMedia.addEventListener('change', () => {

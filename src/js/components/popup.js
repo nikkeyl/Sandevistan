@@ -7,7 +7,7 @@ import { nodeObjects, html } from '@js/helpers/nodeList'
 
 class Popup {
 	constructor(options) {
-		let config = {
+		const config = {
 			init: true,
 			attributeOpenButton: 'data-popup',
 			attributeCloseButton: 'data-close',
@@ -330,7 +330,7 @@ class Popup {
 		}
 	}
 	openToHash() {
-		let classInHash = document.querySelector(
+		const classInHash = document.querySelector(
 			`.${window.location.hash.replace('#', '')}`
 		)
 			? `.${window.location.hash.replace('#', '')}`

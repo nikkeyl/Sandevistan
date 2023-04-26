@@ -2,7 +2,7 @@ import { menuClose } from '@js/components/menu'
 import { html } from '@js/helpers/nodeList'
 import SmoothScroll from 'smooth-scroll'
 
-export let gotoBlock = (
+export const gotoBlock = (
 	targetBlock,
 	noHeader = false,
 	speed = 500,
@@ -16,7 +16,7 @@ export let gotoBlock = (
 			headerItem = 'header.header'
 			headerItemHeight = document.querySelector(headerItem).offsetHeight
 		}
-		let options = {
+		const options = {
 			speedAsDuration: true,
 			speed: speed,
 			header: headerItem,

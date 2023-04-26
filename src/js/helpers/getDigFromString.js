@@ -1,3 +1,1 @@
-export function getDigFromString(item) {
-	return parseInt(item.replace(/[^\d]/g, ''))
-}
+export const getDigFromString = item => parseInt(item.replace(/[^\d]/g, ''))

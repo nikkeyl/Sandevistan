@@ -17,7 +17,7 @@ class ScrollWatcher {
 	}
 	scrollWatcherConstructor(items) {
 		if (items.length) {
-			let uniqParams = uniqArray(
+			const uniqParams = uniqArray(
 				Array.from(items).map(item => {
 					return `${item.dataset.watchRoot ? item.dataset.watchRoot : null
 						}|${item.dataset.watchMargin
@@ -30,20 +30,20 @@ class ScrollWatcher {
 				})
 			)
 			uniqParams.forEach(uniqParam => {
-				let uniqParamArray = uniqParam.split('|')
-				let paramsWatch = {
+				const uniqParamArray = uniqParam.split('|')
+				const paramsWatch = {
 					root: uniqParamArray[0],
 					margin: uniqParamArray[1],
 					threshold: uniqParamArray[2],
 				}
-				let groupItems = Array.from(items).filter(item => {
-					let watchRoot = item.dataset.watchRoot
+				const groupItems = Array.from(items).filter(item => {
+					const watchRoot = item.dataset.watchRoot
 						? item.dataset.watchRoot
 						: null
-					let watchMargin = item.dataset.watchMargin
+					const watchMargin = item.dataset.watchMargin
 						? item.dataset.watchMargin
 						: '0px'
-					let watchThreshold = item.dataset.watchThreshold
+					const watchThreshold = item.dataset.watchThreshold
 						? item.dataset.watchThreshold
 						: 0
 					if (
@@ -55,20 +55,20 @@ class ScrollWatcher {
 					}
 				})
 
-				let configWatcher = this.getScrollWatcherConfig(paramsWatch)
+				const configWatcher = this.getScrollWatcherConfig(paramsWatch)
 				this.scrollWatcherInit(groupItems, configWatcher)
 			})
 		}
 	}
 	getScrollWatcherConfig(paramsWatch) {
-		let configWatcher = {}
+		const configWatcher = {}
 		if (document.querySelector(paramsWatch.root)) {
 			configWatcher.root = document.querySelector(paramsWatch.root)
 		}
 		configWatcher.rootMargin = paramsWatch.margin
 		if (paramsWatch.threshold === 'prx') {
 			paramsWatch.threshold = []
-			for (let i = 0; i <= 1.0; i += 0.005) {
+			for (const i = 0; i <= 1.0; i += 0.005) {
 				paramsWatch.threshold.push(i)
 			}
 		} else {
@@ -80,7 +80,7 @@ class ScrollWatcher {
 	}
 	scrollWatcherCreate(configWatcher) {
 		this.observer = new IntersectionObserver((entries, observer) => {
-			entries.forEach((entry) => {
+			entries.forEach(entry => {
 				this.scrollWatcherCallback(entry, observer)
 			})
 		}, configWatcher)
