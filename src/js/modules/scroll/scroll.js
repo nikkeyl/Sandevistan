@@ -2,7 +2,7 @@ import { nodeObjects } from '@js/helpers/nodeList'
 import { gotoBlock } from '@js/helpers/goToBlock'
 import { getHash } from '@js/helpers/getHash'
 
-let addWindowScrollEvent = false
+// let addWindowScrollEvent = false
 export function pageNavigation() {
 	document.addEventListener('click', pageNavigationAction)
 	document.addEventListener('watcherCallback', pageNavigationAction)
@@ -88,11 +88,11 @@ export function pageNavigation() {
 		goToHash ? gotoBlock(goToHash, true, 500, 20) : null
 	}
 }
-setTimeout(() => {
-	if (addWindowScrollEvent) {
-		const windowScroll = new Event('windowScroll')
-		window.addEventListener('scroll', () => {
-			document.dispatchEvent(windowScroll)
-		})
-	}
-}, 0)
+// setTimeout(() => {
+// 	if (addWindowScrollEvent) {
+// 		const windowScroll = new Event('windowScroll')
+// 		window.addEventListener('scroll', () => {
+// 			document.dispatchEvent(windowScroll)
+// 		})
+// 	}
+// }, 0)
