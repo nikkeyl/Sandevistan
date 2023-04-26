@@ -6,6 +6,9 @@ export function dataMediaQueries(array, dataSetValue) {
 		if (item.dataset[dataSetValue]) {
 			return item.dataset[dataSetValue].split(',')[0]
 		}
+		// item.dataset[dataSetValue]
+		// 	? item.dataset[dataSetValue].split(',')[0]
+		// 	: null
 	})
 	if (media.length) {
 		const breakpointsArray = []

@@ -378,6 +378,9 @@ class Popup {
 		} else {
 			focusable[0].focus()
 		}
+		// !this.isOpen && this.lastFocusEl
+		// 	? this.lastFocusEl.focus()
+		// 	: focusable[0].focus() [NEW]
 	}
 }
 nodeObjects.popup = new Popup({})

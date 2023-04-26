@@ -68,7 +68,7 @@ class ScrollWatcher {
 		configWatcher.rootMargin = paramsWatch.margin
 		if (paramsWatch.threshold === 'prx') {
 			paramsWatch.threshold = []
-			for (const i = 0; i <= 1.0; i += 0.005) {
+			for (let i = 0; i <= 1.0; i += 0.005) {
 				paramsWatch.threshold.push(i)
 			}
 		} else {

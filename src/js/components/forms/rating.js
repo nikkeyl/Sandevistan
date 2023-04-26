@@ -3,6 +3,9 @@ export function rating() {
 	if (ratings.length > 0) {
 		initRatings()
 	}
+	// ratings.length > 0
+	// 	? initRatings()
+	// 	: null [NEW]
 	function initRatings() {
 		let ratingActive, ratingValue
 		for (let index = 0; index < ratings.length; index++) {// checking how work this code with const
@@ -17,6 +20,9 @@ export function rating() {
 			if (rating.classList.contains('rating--set')) {
 				setRating(rating)
 			}
+			// rating.classList.contains('rating--set')
+			// 	? setRating(rating)
+			// 	: null [NEW]
 		}
 		function initRatingVars(rating) {
 			ratingActive = rating.querySelector('.rating__active')

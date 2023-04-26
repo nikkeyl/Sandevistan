@@ -1,3 +1,2 @@
-export function uniqArray(array) {
-	return array.filter((item, index, self) => self.indexOf(item) === index)
-}
+export const uniqArray = array =>
+	array.filter((item, index, self) => self.indexOf(item) === index)

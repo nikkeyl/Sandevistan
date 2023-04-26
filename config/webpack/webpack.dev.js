@@ -55,6 +55,10 @@ const config = {
 										return false
 									}
 									return true
+									// url.includes('content/') ||
+									// url.includes('fonts/')
+									// 	? false
+									// 	: true [NEW]
 								}
 							}
 						}

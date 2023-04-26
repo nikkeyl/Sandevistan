@@ -42,6 +42,9 @@ class SelectConstructor {
 			if (selectItems.length) {
 				this.selectsInit(selectItems)
 			}
+			// selectItems.length
+			// 	? this.selectsInit(selectItems)
+			// 	: null [NEW]
 		}
 	}
 	getSelectClass(className) {

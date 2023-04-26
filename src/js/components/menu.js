@@ -20,6 +20,7 @@ export function menuInit() {
 			if (e.code === 'Escape') {
 				html.classList.remove('menu-open')
 			}
+			// e.code === 'Escape' ? html.classList.remove('menu-open') : null [NEW]
 		})
 	}
 }

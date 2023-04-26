@@ -35,11 +35,9 @@ if (!isMobile.any()) {
 				let coordXprocent = 0,
 					coordYprocent = 0
 				setMouseParallaxStyle()
-				if (paralaxMouseWrapper) {
-					mouseMoveParalax(paralaxMouseWrapper)
-				} else {
-					mouseMoveParalax()
-				}
+				paralaxMouseWrapper
+					? mouseMoveParalax(paralaxMouseWrapper)
+					: mouseMoveParalax()
 				function setMouseParallaxStyle() {
 					const distX = coordXprocent - positionX
 					const distY = coordYprocent - positionY

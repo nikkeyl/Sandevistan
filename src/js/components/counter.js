@@ -29,6 +29,7 @@ export function counter() {
 				if (progress < 1) {
 					window.requestAnimationFrame(step)
 				}
+				// progress < 1 ? window.requestAnimationFrame(step) : null [NEW]
 			}
 			window.requestAnimationFrame(step)
 		}
@@ -45,6 +46,9 @@ export function counter() {
 					if (digitsCountersItems.length) {
 						digitsCountersInit(digitsCountersItems)
 					}
+					// digitsCountersItems.length
+					// 	? digitsCountersInit(digitsCountersItems)
+					// 	: null [NEW]
 					observer.unobserve(targetElement)
 				}
 			})

@@ -63,7 +63,9 @@ export function pageNavigation() {
 					}
 				}
 				if (entry.isIntersecting) {
-					// navigatorActiveItem ? navigatorActiveItem.classList.remove('navigator-active') : null
+					// navigatorActiveItem
+					// 	? navigatorActiveItem.classList.remove('navigator-active')
+					// 	: null
 					navigatorCurrentItem
 						? navigatorCurrentItem.classList.add('navigator-active')
 						: null
@@ -84,6 +86,9 @@ export function pageNavigation() {
 		} else if (document.querySelector(`.${getHash()}`)) {
 			goToHash = `.${getHash()}`
 		}
+		// document.querySelector(`#${getHash()}`)
+		// 	? goToHash = `#${getHash()}`
+		// 	: goToHash = `.${getHash()}` [NEW]
 		goToHash ? gotoBlock(goToHash, true, 500, 20) : null
 	}
 }

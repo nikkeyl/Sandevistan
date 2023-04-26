@@ -11,6 +11,7 @@ export function spollers() {
 		if (spollersRegular.length) {
 			initSpollers(spollersRegular)
 		}
+		// spollersRegular.length ? initSpollers(spollersRegular) : null [NEW]
 		const mdQueriesArray = dataMediaQueries(spollersArray, 'spollers')
 		if (mdQueriesArray && mdQueriesArray.length) {
 			mdQueriesArray.forEach(mdQueriesItem => {
@@ -75,6 +76,10 @@ export function spollers() {
 					) {
 						hideSpollersBody(spollersBlock)
 					}
+					// oneSpoller &&
+					// !spollerTitle.classList.contains('spoller-active')
+					// 	? hideSpollersBody(spollersBlock)
+					// 	: null [NEW]
 					spollerTitle.classList.toggle('spoller-active')
 					slideToggle(spollerTitle.nextElementSibling, spollerSpeed)
 				}

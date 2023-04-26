@@ -13,6 +13,9 @@ export function tabs() {
 		if (hash && hash.startsWith('tab-')) {
 			tabsActiveHash = hash.replace('tab-', '').split('-')
 		}
+		// hash && hash.startsWith('tab-')
+		// 	? tabsActiveHash = hash.replace('tab-', '').split('-')
+		// 	: null [NEW]
 		tabs.forEach((tabsBlock, index) => {
 			tabsBlock.classList.add('tab-init')
 			tabsBlock.setAttribute('data-tabs-index', index)
@@ -88,6 +91,9 @@ export function tabs() {
 				if (tabsActiveHashBlock && index == tabsActiveHash[1]) {
 					tabsTitles[index].classList.add('tab-active')
 				}
+				// tabsActiveHashBlock && index == tabsActiveHash[1]
+				// 	? tabsTitles[index].classList.add('tab-active')
+				// 	: null [NEW]
 				tabsContentItem.hidden =
 					!tabsTitles[index].classList.contains('tab-active')
 			})
@@ -120,9 +126,15 @@ export function tabs() {
 					} else {
 						tabsContentItem.hidden = false
 					}
+					// tabsBlockAnimate
+					// 	? slideDown(tabsContentItem, tabsBlockAnimate)
+					// 	: tabsContentItem.hidden = false [NEW]
 					if (isHash && !tabsContentItem.closest('.popup')) {
 						setHash(`tab-${tabsBlockIndex}-${index}`)
 					}
+					// isHash && !tabsContentItem.closest('.popup')
+					// 	? setHash(`tab-${tabsBlockIndex}-${index}`)
+					// 	: null [NEW]
 				} else {
 					if (tabsBlockAnimate) {
 						slideUp(tabsContentItem, tabsBlockAnimate)

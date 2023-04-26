@@ -72,11 +72,9 @@ class DynamicAdapt {
 	}
 	moveBack(parent, element, index) {
 		element.classList.remove(this.daClassname)
-		if (parent.children[index] !== undefined) {
-			parent.children[index].before(element)
-		} else {
-			parent.append(element)
-		}
+		parent.children[index] !== undefined
+			? parent.children[index].before(element)
+			: parent.append(element)
 	}
 	indexInParent(parent, element) {
 		return [...parent.children].indexOf(element)

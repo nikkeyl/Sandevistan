@@ -6,6 +6,7 @@ export function clock() {
 			if (clock) {
 				clock.innerHTML = time.toLocaleTimeString()
 			}
+			// clock ? clock.innerHTML = time.toLocaleTimeString() : null [NEW]
 		}, 1000)
 	})
 }
