@@ -24,8 +24,7 @@ const config = {
 	module: {
 		rules: [
 			{
-				test: /\.(scss|css)$/,
-				// test: /\.([s]css)$/, [NEW]
+				test: /\.scss$/,
 				use: [
 					MiniCssExtractPlugin.loader,
 					{
@@ -43,17 +42,10 @@ const config = {
 							modules: false,
 							url: {
 								filter: url => {
-									if (
-										url.includes('content') ||
+									url.includes('content') ||
 										url.includes('fonts')
-									) {
-										return false
-									}
-									return true
-									// url.includes('content') ||
-									// url.includes('fonts')
-									// 	? false
-									// 	: true [NEW]
+										? false
+										: true
 								}
 							}
 						}
@@ -113,7 +105,6 @@ const config = {
 	resolve: {
 		extensions: [
 			'.scss',
-			'.css',
 			'.js'
 		],
 		alias: {

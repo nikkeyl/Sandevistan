@@ -13,7 +13,6 @@ roundArrow,
 sticky,
 */
 
-//import 'tippy.js/animations/scale'
 import '@scss/libs/tippy'
 
 if (document.querySelectorAll('[data-tippy-content]')) {
