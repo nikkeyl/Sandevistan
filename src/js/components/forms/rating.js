@@ -1,28 +1,15 @@
 export function rating() {
 	const ratings = document.querySelectorAll('.rating')
-	if (ratings.length > 0) {
-		initRatings()
-	}
-	// ratings.length > 0
-	// 	? initRatings()
-	// 	: null [NEW]
+	ratings.length > 0 ? initRatings() : null
 	function initRatings() {
 		let ratingActive, ratingValue
-		for (let index = 0; index < ratings.length; index++) {// checking how work this code with const
-			const rating = ratings[index]
-			initRating(rating)
-		}
+		ratings.forEach(rating => initRating(rating))
 		function initRating(rating) {
 			initRatingVars(rating)
 
 			setRatingActiveWidth()
 
-			if (rating.classList.contains('rating--set')) {
-				setRating(rating)
-			}
-			// rating.classList.contains('rating--set')
-			// 	? setRating(rating)
-			// 	: null [NEW]
+			rating.classList.contains('rating--set') ? setRating(rating) : null
 		}
 		function initRatingVars(rating) {
 			ratingActive = rating.querySelector('.rating__active')
@@ -34,7 +21,7 @@ export function rating() {
 		}
 		function setRating(rating) {
 			const ratingItems = rating.querySelectorAll('.rating__item')
-			for (let index = 0; index < ratingItems.length; index++) {// checking how work this code with const
+			for (let index = 0; index < ratingItems.length; index++) {
 				const ratingItem = ratingItems[index]
 				ratingItem.addEventListener('mouseenter', () => {
 					initRatingVars(rating)
@@ -58,15 +45,15 @@ export function rating() {
 		async function setRatingValue(/* value, */ rating) {
 			if (!rating.classList.contains('rating--sending')) {
 				rating.classList.add('rating--sending')
-				let response = await fetch('rating.json', {// checking how work this code with const
+				const response = await fetch('rating.json', {
 					method: 'GET',
 
-					//body: JSON.stringify({
-					//	userRating: value
-					//}),
-					//headers: {
-					//	'content-type': 'application/json'
-					//}
+					// body: JSON.stringify({
+					// 	userRating: value
+					// }),
+					// headers: {
+					// 	'content-type': 'application/json'
+					// }
 				})
 				if (response.ok) {
 					const result = await response.json()

@@ -5,6 +5,12 @@ export let bodyLockStatus = true
 export const bodyLockToggle = (delay = 500) => {
 	html.classList.contains('lock') ? bodyUnlock(delay) : bodyLock(delay)
 }
+function delayToggle(delay) {
+	bodyLockStatus = false
+	setTimeout(() => {
+		bodyLockStatus = true
+	}, delay)
+}
 export const bodyUnlock = (delay = 500) => {
 	if (bodyLockStatus) {
 		setTimeout(() => {
@@ -14,10 +20,7 @@ export const bodyUnlock = (delay = 500) => {
 			body.style.paddingRight = '0px'
 			html.classList.remove('lock')
 		}, delay)
-		bodyLockStatus = false
-		setTimeout(() => {
-			bodyLockStatus = true
-		}, delay)
+		delayToggle(delay)
 	}
 }
 export const bodyLock = (delay = 500) => {
@@ -33,9 +36,6 @@ export const bodyLock = (delay = 500) => {
 			document.querySelector('.wrapper').offsetWidth +
 			'px'
 		html.classList.add('lock')
-		bodyLockStatus = false
-		setTimeout(() => {
-			bodyLockStatus = true
-		}, delay)
+		delayToggle(delay)
 	}
 }

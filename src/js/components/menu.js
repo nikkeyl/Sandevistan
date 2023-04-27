@@ -17,10 +17,7 @@ export function menuInit() {
 			}
 		})
 		document.addEventListener('keyup', e => {
-			if (e.code === 'Escape') {
-				html.classList.remove('menu-open')
-			}
-			// e.code === 'Escape' ? html.classList.remove('menu-open') : null [NEW]
+			e.code === 'Escape' ? html.classList.remove('menu-open') : null
 		})
 	}
 }

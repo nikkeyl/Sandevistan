@@ -113,7 +113,7 @@
         will-change: transform, opacity;
 
         &.lg-complete {
-            background-image: none;
+            background-image: none !important;
         }
 
         &.lg-current {

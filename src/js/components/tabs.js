@@ -10,12 +10,9 @@ export function tabs() {
 	let tabsActiveHash = []
 	if (tabs.length > 0) {
 		const hash = getHash()
-		if (hash && hash.startsWith('tab-')) {
-			tabsActiveHash = hash.replace('tab-', '').split('-')
-		}
-		// hash && hash.startsWith('tab-')
-		// 	? tabsActiveHash = hash.replace('tab-', '').split('-')
-		// 	: null [NEW]
+		hash && hash.startsWith('tab-')
+			? (tabsActiveHash = hash.replace('tab-', '').split('-'))
+			: null
 		tabs.forEach((tabsBlock, index) => {
 			tabsBlock.classList.add('tab-init')
 			tabsBlock.setAttribute('data-tabs-index', index)
@@ -88,12 +85,9 @@ export function tabs() {
 			tabsContent.forEach((tabsContentItem, index) => {
 				tabsTitles[index].setAttribute('data-tabs-title', '')
 				tabsContentItem.setAttribute('data-tabs-item', '')
-				if (tabsActiveHashBlock && index == tabsActiveHash[1]) {
-					tabsTitles[index].classList.add('tab-active')
-				}
-				// tabsActiveHashBlock && index == tabsActiveHash[1]
-				// 	? tabsTitles[index].classList.add('tab-active')
-				// 	: null [NEW]
+				tabsActiveHashBlock && index == tabsActiveHash[1]
+					? tabsTitles[index].classList.add('tab-active')
+					: null
 				tabsContentItem.hidden =
 					!tabsTitles[index].classList.contains('tab-active')
 			})
@@ -121,20 +115,12 @@ export function tabs() {
 			)
 			tabsContent.forEach((tabsContentItem, index) => {
 				if (tabsTitles[index].classList.contains('tab-active')) {
-					if (tabsBlockAnimate) {
-						slideDown(tabsContentItem, tabsBlockAnimate)
-					} else {
-						tabsContentItem.hidden = false
-					}
-					// tabsBlockAnimate
-					// 	? slideDown(tabsContentItem, tabsBlockAnimate)
-					// 	: tabsContentItem.hidden = false [NEW]
-					if (isHash && !tabsContentItem.closest('.popup')) {
-						setHash(`tab-${tabsBlockIndex}-${index}`)
-					}
-					// isHash && !tabsContentItem.closest('.popup')
-					// 	? setHash(`tab-${tabsBlockIndex}-${index}`)
-					// 	: null [NEW]
+					tabsBlockAnimate
+						? slideDown(tabsContentItem, tabsBlockAnimate)
+						: (tabsContentItem.hidden = false)
+					isHash && !tabsContentItem.closest('.popup')
+						? setHash(`tab-${tabsBlockIndex}-${index}`)
+						: null
 				} else {
 					if (tabsBlockAnimate) {
 						slideUp(tabsContentItem, tabsBlockAnimate)

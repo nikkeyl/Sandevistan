@@ -20,7 +20,7 @@ import '@scss/libs/gallery/lightgallery'
 
 const galleries = document.querySelectorAll('[data-gallery]')
 if (galleries.length) {
-	let galleryItems = [] // checking how work this code with const
+	const galleryItems = []
 	galleries.forEach(gallery => {
 		galleryItems.push({
 			gallery,

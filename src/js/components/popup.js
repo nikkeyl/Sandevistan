@@ -373,14 +373,9 @@ class Popup {
 		const focusable = this.previousOpen.element.querySelectorAll(
 			this.focusEl
 		)
-		if (!this.isOpen && this.lastFocusEl) {
-			this.lastFocusEl.focus()
-		} else {
-			focusable[0].focus()
-		}
-		// !this.isOpen && this.lastFocusEl
-		// 	? this.lastFocusEl.focus()
-		// 	: focusable[0].focus() [NEW]
+		!this.isOpen && this.lastFocusEl
+			? this.lastFocusEl.focus()
+			: focusable[0].focus()
 	}
 }
 nodeObjects.popup = new Popup({})

@@ -39,12 +39,7 @@ class SelectConstructor {
 			const selectItems = data
 				? document.querySelectorAll(data)
 				: document.querySelectorAll('select')
-			if (selectItems.length) {
-				this.selectsInit(selectItems)
-			}
-			// selectItems.length
-			// 	? this.selectsInit(selectItems)
-			// 	: null [NEW]
+			selectItems.length ? this.selectsInit(selectItems) : null
 		}
 	}
 	getSelectClass(className) {

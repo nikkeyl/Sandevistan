@@ -26,10 +26,7 @@ export function counter() {
 				digitsCounter.innerHTML = Math.floor(
 					progress * (startPosition + startValue)
 				)
-				if (progress < 1) {
-					window.requestAnimationFrame(step)
-				}
-				// progress < 1 ? window.requestAnimationFrame(step) : null [NEW]
+				progress < 1 ? window.requestAnimationFrame(step) : null
 			}
 			window.requestAnimationFrame(step)
 		}
@@ -43,12 +40,9 @@ export function counter() {
 					const digitsCountersItems = targetElement.querySelectorAll(
 						'[data-digits-counter]'
 					)
-					if (digitsCountersItems.length) {
-						digitsCountersInit(digitsCountersItems)
-					}
-					// digitsCountersItems.length
-					// 	? digitsCountersInit(digitsCountersItems)
-					// 	: null [NEW]
+					digitsCountersItems.length
+						? digitsCountersInit(digitsCountersItems)
+						: null
 					observer.unobserve(targetElement)
 				}
 			})

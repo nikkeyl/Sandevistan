@@ -38,7 +38,7 @@ export function formSubmit() {
 					body: formData,
 				})
 				if (response.ok) {
-					let responseResult = await response.json()// checking how work this code with const
+					const responseResult = await response.json()
 					form.classList.remove('sending')
 					formSent(form, responseResult)
 				} else {

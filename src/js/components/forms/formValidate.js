@@ -3,7 +3,7 @@ import { nodeObjects } from '@js/helpers/nodeList'
 export let formValidate = {
 	getErrors(form) {
 		let error = 0
-		let formRequiredItems = form.querySelectorAll('*[data-required]')// checking how work this code with const
+		const formRequiredItems = form.querySelectorAll('*[data-required]')
 		if (formRequiredItems.length) {
 			formRequiredItems.forEach(formRequiredItem => {
 				if (
@@ -18,7 +18,7 @@ export let formValidate = {
 		return error
 	},
 	validateInput(formRequiredItem) {
-		let error = 0// checking how work this code with const
+		let error = 0
 		if (formRequiredItem.dataset.required === 'email') {
 			formRequiredItem.value = formRequiredItem.value.replace(' ', '')
 			if (this.emailTest(formRequiredItem)) {
@@ -46,7 +46,7 @@ export let formValidate = {
 	addError(formRequiredItem) {
 		formRequiredItem.classList.add('form-error')
 		formRequiredItem.parentElement.classList.add('form-error')
-		let inputError =// checking how work this code with const
+		const inputError =
 			formRequiredItem.parentElement.querySelector('.form__error')
 		if (inputError) formRequiredItem.parentElement.removeChild(inputError)
 		if (formRequiredItem.dataset.error) {
@@ -68,24 +68,32 @@ export let formValidate = {
 	formClean(form) {
 		form.reset()
 		setTimeout(() => {
-			let inputs = form.querySelectorAll('input,textarea')// checking how work this code with const
-			for (let index = 0; index < inputs.length; index++) {// checking how work this code with const
-				const el = inputs[index]
+			const inputs = form.querySelectorAll('input,textarea')
+			// for (let index = 0; index < inputs.length; index++) {
+			// 	const el = inputs[index]
+			// 	el.parentElement.classList.remove('form-focus')
+			// 	el.classList.remove('form-focus')
+			// 	formValidate.removeError(el)
+			// }
+			inputs.forEach(el => {
 				el.parentElement.classList.remove('form-focus')
 				el.classList.remove('form-focus')
 				formValidate.removeError(el)
-			}
-			let checkboxes = form.querySelectorAll('.checkbox__input')// checking how work this code with const
+			})
+			const checkboxes = form.querySelectorAll('.checkbox__input')
 			if (checkboxes.length > 0) {
-				for (let index = 0; index < checkboxes.length; index++) {// checking how work this code with const
-					const checkbox = checkboxes[index]
+				// for (let index = 0; index < checkboxes.length; index++) {
+				// 	const checkbox = checkboxes[index]
+				// 	checkbox.checked = false
+				// }
+				checkboxes.forEach(checkbox => {
 					checkbox.checked = false
-				}
+				})
 			}
 			if (nodeObjects.select) {
-				let selects = form.querySelectorAll('.select')// checking how work this code with const
+				let selects = form.querySelectorAll('.select')
 				if (selects.length) {
-					for (let index = 0; index < selects.length; index++) {// checking how work this code with const
+					for (let index = 0; index < selects.length; index++) {
 						const select = selects[index].querySelector('select')
 						nodeObjects.select.selectBuild(select)
 					}

@@ -8,10 +8,7 @@ export function spollers() {
 		const spollersRegular = Array.from(spollersArray).filter(item => {
 			return !item.dataset.spollers.split(',')[0]
 		})
-		if (spollersRegular.length) {
-			initSpollers(spollersRegular)
-		}
-		// spollersRegular.length ? initSpollers(spollersRegular) : null [NEW]
+		spollersRegular.length ? initSpollers(spollersRegular) : null
 		const mdQueriesArray = dataMediaQueries(spollersArray, 'spollers')
 		if (mdQueriesArray && mdQueriesArray.length) {
 			mdQueriesArray.forEach(mdQueriesItem => {
@@ -70,16 +67,10 @@ export function spollers() {
 					? parseInt(spollersBlock.dataset.spollersSpeed)
 					: 500
 				if (!spollersBlock.querySelectorAll('.slide').length) {
-					if (
-						oneSpoller &&
-						!spollerTitle.classList.contains('spoller-active')
-					) {
-						hideSpollersBody(spollersBlock)
-					}
-					// oneSpoller &&
-					// !spollerTitle.classList.contains('spoller-active')
-					// 	? hideSpollersBody(spollersBlock)
-					// 	: null [NEW]
+					oneSpoller &&
+					!spollerTitle.classList.contains('spoller-active')
+						? hideSpollersBody(spollersBlock)
+						: null
 					spollerTitle.classList.toggle('spoller-active')
 					slideToggle(spollerTitle.nextElementSibling, spollerSpeed)
 				}

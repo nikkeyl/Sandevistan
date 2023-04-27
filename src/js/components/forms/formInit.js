@@ -8,12 +8,9 @@ export function formFieldsInit(
 	)
 	if (formFields.length) {
 		formFields.forEach(formField => {
-			if (!formField.hasAttribute('data-placeholder-nohide')) {
-				formField.dataset.placeholder = formField.placeholder
-			}
-			// !formField.hasAttribute('data-placeholder-nohide')
-			// 	? formField.dataset.placeholder = formField.placeholder
-			// 	: null [NEW]
+			!formField.hasAttribute('data-placeholder-nohide')
+				? formField.dataset.placeholder = formField.placeholder
+				: null
 		})
 	}
 	document.body.addEventListener('focusin', e => {
@@ -22,12 +19,9 @@ export function formFieldsInit(
 			targetElement.tagName === 'INPUT' ||
 			targetElement.tagName === 'TEXTAREA'
 		) {
-			if (targetElement.dataset.placeholder) {
-				targetElement.placeholder = ''
-			}
-			// targetElement.dataset.placeholder
-			// 	? targetElement.placeholder = ''
-			// 	: null [NEW]
+			targetElement.dataset.placeholder
+				? targetElement.placeholder = ''
+				: null
 			if (!targetElement.hasAttribute('data-no-focus-classes')) {
 				targetElement.classList.add('form-focus')
 				targetElement.parentElement.classList.add('form-focus')
@@ -41,29 +35,23 @@ export function formFieldsInit(
 			targetElement.tagName === 'INPUT' ||
 			targetElement.tagName === 'TEXTAREA'
 		) {
-			if (targetElement.dataset.placeholder) {
-				targetElement.placeholder = targetElement.dataset.placeholder
-			}
-			// targetElement.dataset.placeholder
-			// 	? targetElement.placeholder = targetElement.dataset.placeholder
-			// 	: null [NEW]
+			targetElement.dataset.placeholder
+				? targetElement.placeholder = targetElement.dataset.placeholder
+				: null
 			if (!targetElement.hasAttribute('data-no-focus-classes')) {
 				targetElement.classList.remove('form-focus')
 				targetElement.parentElement.classList.remove('form-focus')
 			}
-			if (targetElement.hasAttribute('data-validate')) {
-				formValidate.validateInput(targetElement)
-			}
-			// targetElement.hasAttribute('data-validate')
-			// 	? formValidate.validateInput(targetElement)
-			// 	: null [NEW]
+			targetElement.hasAttribute('data-validate')
+				? formValidate.validateInput(targetElement)
+				: null
 		}
 	})
 	if (options.viewPass) {
 		document.addEventListener('click', e => {
-			let targetElement = e.target// checking how work this code with const
+			const targetElement = e.target
 			if (targetElement.closest('[class*="__viewpass"]')) {
-				let inputType = targetElement.classList.contains(// checking how work this code with const
+				const inputType = targetElement.classList.contains(
 					'viewpass-active'
 				)
 					? 'password'

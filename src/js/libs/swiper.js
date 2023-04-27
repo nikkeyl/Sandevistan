@@ -79,19 +79,31 @@ function initSliders() {
 			on: {
 				/* fix: применить при не правильном числе слайдов */
 				/* init: swiper => {
-					const allSlides = document.querySelector('.fraction-controll__all')
-					const allSlidesItems = document.querySelectorAll('.slide-main-block:not(.swiper-slide-duplicate)')
-					allSlides.innerHTML = allSlidesItems.length < 10 ? `0${allSlidesItems.length}` : allSlidesItems.length
+					const allSlides = document.querySelector(
+						'.fraction-controll__all'
+					)
+					const allSlidesItems = document.querySelectorAll(
+						'.slide-main-block:not(.swiper-slide-duplicate)'
+					)
+					allSlides.innerHTML =
+						allSlidesItems.length < 10
+							? `0${allSlidesItems.length}`
+							: allSlidesItems.length
 				},
 				slideChange: swiper => {
-					const currentSlide = document.querySelector('.fraction-controll__current')
-					currentSlide.innerHTML = swiper.realIndex + 1 < 10 ? `0${swiper.realIndex + 1}` : swiper.realIndex + 1
+					const currentSlide = document.querySelector(
+						'.fraction-controll__current'
+					)
+					currentSlide.innerHTML =
+						swiper.realIndex + 1 < 10
+							? `0${swiper.realIndex + 1}`
+							: swiper.realIndex + 1
 				} */
 			}
 		})
 	}
 	/* if (document.querySelector('.swiper')) {
-		let pageSlider = new Swiper('.slider', {
+		const pageSlider = new Swiper('.slider', {
 			modules: [Scrollbar, Controller],
 			speed: 1000,
 			scrollbar: {
@@ -144,11 +156,11 @@ function initSliders() {
 			`
 			page.insertAdjacentHTML('afterbegin', background)
 			page.insertAdjacentHTML('beforeend', text)
-			let pageBgSlider = new Swiper('.background', {
+			const pageBgSlider = new Swiper('.background', {
 				modules: [Controller],
 				speed: 500
 			})
-			let pageTextSlider = new Swiper('.text', {
+			const pageTextSlider = new Swiper('.text', {
 				modules: [EffectFade],
 				effect: 'fade',
 				fadeEffect: {
@@ -167,7 +179,9 @@ function initSliders() {
 			if (targetElement.closest('.slide')) {
 				const slide = targetElement.closest('.slide')
 				const slideImage = slide.querySelector('img')
-				const activeImage = document.querySelector('.slide__picture.active')
+				const activeImage = document.querySelector(
+					'.slide__picture.active'
+				)
 				if (slide.classList.contains('swiper-slide-active')) {
 					slideImage.classList.add('active')
 					textBlock.classList.add('active')
@@ -180,7 +194,9 @@ function initSliders() {
 			}
 			if (targetElement.closest('.open-image')) {
 				const openIamge = targetElement.closest('.open-image')
-				const activeIamge = document.querySelector('.slide__picture.active')
+				const activeIamge = document.querySelector(
+					'.slide__picture.active'
+				)
 				const imagePos = getImagePos(activeIamge)
 				openIamge.style.cssText = `
 					position: fixed;
@@ -214,11 +230,11 @@ function initSliders() {
 			`
 			document.body.append(openImageBlock)
 			setTimeout(() => {
-				image.style.opacity = 0;
-				openImageBlock.style.left = 0;
-				openImageBlock.style.top = 0;
-				openImageBlock.style.width = '100%';
-				openImageBlock.style.height = '100%';
+				image.style.opacity = 0
+				openImageBlock.style.left = 0
+				openImageBlock.style.top = 0
+				openImageBlock.style.width = '100%'
+				openImageBlock.style.height = '100%'
 			}, 0)
 		}
 		function getImagePos(image) {
@@ -232,34 +248,36 @@ function initSliders() {
 	} */
 }
 // const sliderMouseMove = new Swiper('[data-mousemove-swipe]', {
-//     modules: [Pagination],
-//     // spaceBetween: 10,
-//     // speed: 800,
-//     pagination: {
-//         el: '.swiper-pagination'
-//     }
+// 	modules: [Pagination],
+// 	// spaceBetween: 10,
+// 	// speed: 800,
+// 	pagination: {
+// 		el: '.swiper-pagination'
+// 	}
 // })
-// /*! MOUSE MOVE SLIDE */
+// /*! Mouse move slide */
 // function sliderMouseSlideInit() {
-//     document.addEventListener('mousemove', e => {
-//         const targetElement = e.target
-//         if (targetElement.closest('[data-mousemove-swipe]')) {
-//             const sliderElement = targetElement.closest('[data-mousemove-swipe]')
-//             const sliderItem = sliderMouseMove
-//             const sliderLength = sliderItem.slides.length
-//             if (sliderLength > 1) {
-//                 const sliderWidth = sliderItem.width
-//                 const sliderPath = Math.round(sliderWidth / sliderLength)
-//                 const sliderMousePos = e.clientX - sliderElement.offsetLeft
-//                 const sliderSlide = Math.floor(sliderMousePos / sliderPath)
-//                 sliderItem.slideTo(sliderSlide)
-//             }
-//         }
-//     })
+// 	document.addEventListener('mousemove', e => {
+// 		const targetElement = e.target
+// 		if (targetElement.closest('[data-mousemove-swipe]')) {
+// 			const sliderElement = targetElement.closest(
+// 				'[data-mousemove-swipe]'
+// 			)
+// 			const sliderItem = sliderMouseMove
+// 			const sliderLength = sliderItem.slides.length
+// 			if (sliderLength > 1) {
+// 				const sliderWidth = sliderItem.width
+// 				const sliderPath = Math.round(sliderWidth / sliderLength)
+// 				const sliderMousePos = e.clientX - sliderElement.offsetLeft
+// 				const sliderSlide = Math.floor(sliderMousePos / sliderPath)
+// 				sliderItem.slideTo(sliderSlide)
+// 			}
+// 		}
+// 	})
 // }
 window.addEventListener('load', () => {
 	initSliders()
-	// if (document.querySelector('[data-mousemove-swipe]')) {
-	//     sliderMouseSlideInit()
-	// }
+	// document.querySelector('[data-mousemove-swipe]')
+	// 	? sliderMouseSlideInit()
+	// 	: null
 })

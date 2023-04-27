@@ -11,8 +11,8 @@ import '@scss/components/forms/range'
 export function rangeInit() {
 	const priceSlider = document.querySelector('[data-range]')
 	if (priceSlider) {
-		// let textFrom = priceSlider.getAttribute('data-from')
-		// let textTo = priceSlider.getAttribute('data-to')
+		// const textFrom = priceSlider.getAttribute('data-from')
+		// const textTo = priceSlider.getAttribute('data-to')
 		noUiSlider.create(priceSlider, {
 			start: [0, 200000],
 			connect: true,
@@ -29,12 +29,8 @@ export function rangeInit() {
 		function setPriceValues() {
 			let priceStartValue
 			let priceEndValue
-			if (priceStart.value != '') {
-				priceStartValue = priceStart.value
-			}
-			if (priceEnd.value != '') {
-				priceEndValue = priceEnd.value
-			}
+			priceStart.value != '' ? (priceStartValue = priceStart.value) : null
+			priceEnd.value != '' ? (priceEndValue = priceEnd.value) : null
 			priceSlider.noUiSlider.set([priceStartValue, priceEndValue])
 		}
 	}
