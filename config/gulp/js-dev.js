@@ -1,3 +1,5 @@
+import { app } from '../../gulpfile.js'
+
 import { plugins } from '../settings/plugins.js'
 import { paths } from '../settings/paths.js'
 

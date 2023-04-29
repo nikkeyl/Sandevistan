@@ -1,4 +1,4 @@
-import { plugins } from '../settings/plugins.js'
+import { app } from '../../gulpfile.js'
 
 import webPackConfig from '../webpack/webpack.prod.js'
 
@@ -10,7 +10,7 @@ export const js = () => {
 				message: 'Error: <%= error.message %>'
 			})
 		))
-		.pipe(plugins.webpack({
+		.pipe(app.plugins.webpack({
 			config: webPackConfig
 		}))
 		.pipe(app.gulp.dest(app.paths.build.js))
