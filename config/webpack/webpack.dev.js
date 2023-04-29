@@ -48,10 +48,8 @@ const config = {
 							modules: false,
 							url: {
 								filter: url => {
-									url.includes('content/') ||
-										url.includes('fonts/')
-										? false
-										: true
+									!url.includes('content/') ||
+										!url.includes('fonts/')
 								}
 							}
 						}
