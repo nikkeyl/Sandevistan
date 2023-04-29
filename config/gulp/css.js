@@ -8,12 +8,7 @@ import purge from 'gulp-css-purge'
 
 export const css = () => {
 	return app.gulp.src(`${app.paths.build.css}style.css`)
-		.pipe(app.plugins.plumber(
-			app.plugins.notify.onError({
-				title: 'CSS',
-				message: 'Error: <%= error.message %>'
-			})
-		))
+		.pipe(app.plugins.handleError('CSS'))
 		.pipe(
 			app.plugins.if(
 				app.isBuild,

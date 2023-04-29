@@ -6,12 +6,7 @@ import webp from 'gulp-webp'
 
 export const images = () => {
 	return app.gulp.src(app.paths.src.images)
-		.pipe(app.plugins.plumber(
-			app.plugins.notify.onError({
-				title: 'IMAGES',
-				message: 'Error: <%= error.message %>'
-			})
-		))
+		.pipe(app.plugins.handleError('IMAGES'))
 		.pipe(newer(app.paths.build.images))
 		.pipe(
 			app.plugins.if(

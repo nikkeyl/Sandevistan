@@ -4,12 +4,7 @@ import svgSprite from 'gulp-svg-sprite'
 
 export const sprite = () => {
 	return app.gulp.src(app.paths.src.svgSprites)
-		.pipe(app.plugins.plumber(
-			app.plugins.notify.onError({
-				title: 'SVG',
-				message: 'Error: <%= error.message %>'
-			})
-		))
+		.pipe(app.plugins.handleError('SPRITE'))
 		.pipe(svgSprite({
 			mode: {
 				symbol: {

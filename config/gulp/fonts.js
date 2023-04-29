@@ -5,12 +5,7 @@ import fonter from 'gulp-fonter-fix'
 
 export const otfToTtf = () => {
 	return app.gulp.src(`${app.paths.srcFolder}/fonts/*.otf`)
-		.pipe(app.plugins.plumber(
-			app.plugins.notify.onError({
-				title: 'FONTS',
-				message: 'Error: <%= error.message %>'
-			})
-		))
+		.pipe(app.plugins.handleError('FONTS'))
 		.pipe(fonter({
 			formats: ['ttf']
 		}))
@@ -19,12 +14,7 @@ export const otfToTtf = () => {
 
 export const ttfToWoff = () => {
 	return app.gulp.src(`${app.paths.srcFolder}/fonts/*.ttf`)
-		.pipe(app.plugins.plumber(
-			app.plugins.notify.onError({
-				title: 'FONTS',
-				message: 'Error: <%= error.message %>'
-			})
-		))
+		.pipe(app.plugins.handleError('FONTS'))
 		.pipe(ttf2woff2())
 		.pipe(app.gulp.dest(app.paths.build.fonts))
 		.pipe(app.gulp.src(`${app.paths.srcFolder}/fonts/*.woff2`))
