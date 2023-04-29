@@ -1,3 +1,5 @@
+import { app } from '../../gulpfile.js'
+
 import ttf2woff2 from 'gulp-ttf2woff2'
 import fonter from 'gulp-fonter-fix'
 

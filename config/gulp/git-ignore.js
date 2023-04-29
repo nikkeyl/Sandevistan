@@ -1,3 +1,5 @@
+import { app } from '../../gulpfile.js'
+
 export const gitIgnore = () => {
 	if (!app.plugins.fs.existsSync('.gitignore')) {
 		app.plugins.fs.writeFile('.gitignore', '', cb)

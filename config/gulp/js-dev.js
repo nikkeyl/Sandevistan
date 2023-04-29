@@ -1,6 +1,7 @@
-import webPackConfig from '../webpack/webpack.prod.js'
 import { plugins } from '../settings/plugins.js'
 import { paths } from '../settings/paths.js'
+
+import webPackConfig from '../webpack/webpack.prod.js'
 
 let webPackConfigBeautify = Object.assign({}, webPackConfig)
 

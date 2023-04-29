@@ -1,5 +1,6 @@
-import webPackConfig from '../webpack/webpack.prod.js'
 import { plugins } from '../settings/plugins.js'
+
+import webPackConfig from '../webpack/webpack.prod.js'
 
 export const js = () => {
 	return app.gulp.src(app.paths.src.js)

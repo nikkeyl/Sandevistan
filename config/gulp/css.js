@@ -1,8 +1,10 @@
+import { app } from '../../gulpfile.js'
+
 import groupCssMediaQueries from 'gulp-group-css-media-queries'
 import autoprefixer from 'gulp-autoprefixer'
 import cleanCss from 'gulp-clean-css'
-import purge from 'gulp-css-purge'
 import webpcss from 'gulp-webpcss'
+import purge from 'gulp-css-purge'
 
 export const css = () => {
 	return app.gulp.src(`${app.paths.build.css}style.css`)

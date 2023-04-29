@@ -1,3 +1,5 @@
+import { app } from '../../gulpfile.js'
+
 import imagemin from 'gulp-imagemin'
 import newer from 'gulp-newer'
 import webp from 'gulp-webp'

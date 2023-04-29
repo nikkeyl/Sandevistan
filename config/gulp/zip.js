@@ -1,3 +1,5 @@
+import { app } from '../../gulpfile.js'
+
 import zipPlugin from 'gulp-zip'
 
 export const zip = () => {

@@ -1,3 +1,5 @@
+import { app } from '../../gulpfile.js'
+
 import svgSprite from 'gulp-svg-sprite'
 
 export const sprite = () => {

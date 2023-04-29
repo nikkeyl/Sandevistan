@@ -1,4 +1,7 @@
+import { app } from '../../gulpfile.js'
+
 import { configFTP } from '../settings/ftp.js'
+
 import vinylFTP from 'vinyl-ftp'
 import util from 'gulp-util'
 

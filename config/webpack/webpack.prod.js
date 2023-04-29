@@ -1,8 +1,9 @@
+import { plugins } from '../settings/plugins.js'
+import { paths } from '../settings/paths.js'
+
 import StylelintWebpackPlugin from 'stylelint-webpack-plugin'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 import ESLintWebpackPlugin from 'eslint-webpack-plugin'
-import { plugins } from '../settings/plugins.js'
-import { paths } from '../settings/paths.js'
 
 const config = {
 	mode: 'production',
