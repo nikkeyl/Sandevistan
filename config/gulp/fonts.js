@@ -61,7 +61,11 @@ export const fontsStyle = () => {
 					} else {
 						fontWeight = 400
 					}
-					app.plugins.fs.appendFile(fontsFile, `@font-face {\n\tsrc: url("../fonts/${fontFileName}.woff2") format("woff2");\n\tfont-family: "${fontName}";\n\tfont-weight: ${fontWeight};\n\tfont-style: normal;\n\tfont-display: swap;\n}\n\n`, cb)
+					app.plugins.fs.appendFile(
+						fontsFile,
+						`@font-face {\n\tsrc: url("../fonts/${fontFileName}.woff2") format("woff2");\n\tfont-family: "${fontName}";\n\tfont-weight: ${fontWeight};\n\tfont-style: normal;\n\tfont-display: swap;\n}\n\n`,
+						cb
+					)
 					newFileOnly = fontFileName
 				}
 			})
