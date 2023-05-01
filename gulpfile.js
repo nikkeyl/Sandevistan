@@ -1,5 +1,7 @@
 import gulp from 'gulp'
 
+import { argv } from 'node:process'
+
 import { plugins } from './config/settings/plugins.js'
 import { paths } from './config/settings/paths.js'
 
@@ -17,12 +19,18 @@ import { ftp } from './config/gulp/ftp.js'
 import { js } from './config/gulp/js.js'
 
 const fonts = gulp.series(reset, otfToTtf, ttfToWoff, fontsStyle)
-const build = gulp.series(fonts, jsDev, js, gulp.parallel(html, css, images), gulp.parallel(validator, zip))
+const build = gulp.series(
+	fonts,
+	jsDev,
+	js,
+	gulp.parallel(html, css, images),
+	gulp.parallel(validator, zip)
+)
 const dev = gulp.parallel(fonts, sprite, gitIgnore)
 const runFTP = gulp.series(build, ftp)
 
 const app = {
-	isNoWebp: !process.argv.includes('--nowebp'),
+	isNoWebp: !argv.includes('--nowebp'),
 	plugins,
 	paths,
 	gulp
@@ -30,10 +38,4 @@ const app = {
 
 gulp.task('default', dev)
 
-export {
-	sprite,
-	runFTP,
-	build,
-	fonts,
-	app
-}
+export { sprite, runFTP, build, fonts, app }
