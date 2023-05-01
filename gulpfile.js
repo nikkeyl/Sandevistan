@@ -5,7 +5,7 @@ import { paths } from './config/settings/paths.js'
 
 import { otfToTtf, ttfToWoff, fontsStyle } from './config/gulp/fonts.js'
 import { validator } from './config/gulp/validators.js'
-import { gitIgnore } from './config/gulp/git-ignore.js'
+import { gitIgnore } from './config/gulp/gitIgnore.js'
 import { images } from './config/gulp/images.js'
 import { sprite } from './config/gulp/sprite.js'
 import { jsDev } from './config/gulp/js-dev.js'

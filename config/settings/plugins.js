@@ -1,4 +1,4 @@
-import { handleError } from './error-handler.js'
+import { handleError } from './errorHandler.js'
 
 import FileIncludeWebpackPlugin from 'file-include-webpack-plugin-replace'
 import TerserPlugin from 'terser-webpack-plugin'
