@@ -4,7 +4,7 @@ import imagemin from 'gulp-imagemin'
 import newer from 'gulp-newer'
 import webp from 'gulp-webp'
 
-export const images = () => {
+const images = () => {
 	return app.gulp.src(app.paths.src.images)
 		.pipe(app.plugins.handleError('IMAGES'))
 		.pipe(newer(app.paths.build.images))
@@ -49,3 +49,5 @@ export const images = () => {
 		.pipe(app.gulp.src(app.paths.src.svg))
 		.pipe(app.gulp.dest(app.paths.build.images))
 }
+
+export { images }

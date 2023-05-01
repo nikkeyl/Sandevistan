@@ -2,7 +2,7 @@ import { app } from '../../gulpfile.js'
 
 import webPackConfig from '../webpack/webpack.prod.js'
 
-export const js = () => {
+const js = () => {
 	return app.gulp.src(app.paths.src.js)
 		.pipe(app.plugins.handleError('JS'))
 		.pipe(app.plugins.webpack({
@@ -10,3 +10,5 @@ export const js = () => {
 		}))
 		.pipe(app.gulp.dest(app.paths.build.js))
 }
+
+export { js }

@@ -6,7 +6,7 @@ import cleanCss from 'gulp-clean-css'
 import webpcss from 'gulp-webpcss'
 import purge from 'gulp-css-purge'
 
-export const css = () => {
+const css = () => {
 	return app.gulp.src(`${app.paths.build.css}style.css`)
 		.pipe(app.plugins.handleError('CSS'))
 		.pipe(
@@ -53,3 +53,5 @@ export const css = () => {
 		}))
 		.pipe(app.gulp.dest(app.paths.build.css))
 }
+
+export { css }

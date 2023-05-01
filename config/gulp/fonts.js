@@ -3,7 +3,7 @@ import { app } from '../../gulpfile.js'
 import ttf2woff2 from 'gulp-ttf2woff2'
 import fonter from 'gulp-fonter-fix'
 
-export const otfToTtf = () => {
+const otfToTtf = () => {
 	return app.gulp.src(`${app.paths.srcFolder}/fonts/*.otf`)
 		.pipe(app.plugins.handleError('FONTS'))
 		.pipe(fonter({
@@ -12,7 +12,7 @@ export const otfToTtf = () => {
 		.pipe(app.gulp.dest(`${app.paths.srcFolder}/fonts/`))
 }
 
-export const ttfToWoff = () => {
+const ttfToWoff = () => {
 	return app.gulp.src(`${app.paths.srcFolder}/fonts/*.ttf`)
 		.pipe(app.plugins.handleError('FONTS'))
 		.pipe(ttf2woff2())
@@ -21,7 +21,7 @@ export const ttfToWoff = () => {
 		.pipe(app.gulp.dest(app.paths.build.fonts))
 }
 
-export const fontsStyle = () => {
+const fontsStyle = () => {
 	const fontsFile = `${app.paths.srcFolder}/scss/base/fonts/fonts.scss`
 	app.plugins.fs.existsSync(fontsFile)
 		? app.plugins.fs.unlink(fontsFile, cb)
@@ -74,3 +74,5 @@ export const fontsStyle = () => {
 	return app.gulp.src(app.paths.srcFolder)
 	function cb() { }
 }
+
+export { otfToTtf, ttfToWoff, fontsStyle }

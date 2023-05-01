@@ -33,7 +33,7 @@ webPackConfigBeautify.output = {
 	publicPath: '/'
 }
 
-export const jsDev = () => {
+const jsDev = () => {
 	return app.gulp.src(app.paths.src.js)
 		.pipe(app.plugins.handleError('JS'))
 		.pipe(plugins.webpack({
@@ -41,3 +41,5 @@ export const jsDev = () => {
 		}))
 		.pipe(app.gulp.dest(app.paths.build.js))
 }
+
+export { jsDev }

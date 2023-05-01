@@ -21,9 +21,7 @@ const build = gulp.series(fonts, jsDev, js, gulp.parallel(html, css, images), gu
 const dev = gulp.parallel(fonts, sprite, gitIgnore)
 const runFTP = gulp.series(build, ftp)
 
-gulp.task('default', dev)
-
-export const app = {
+const app = {
 	isNoWebp: !process.argv.includes('--nowebp'),
 	isBuild: process.argv.includes('--build'),
 	isDev: !process.argv.includes('--build'),
@@ -32,9 +30,12 @@ export const app = {
 	gulp
 }
 
+gulp.task('default', dev)
+
 export {
 	sprite,
 	runFTP,
 	build,
-	fonts
+	fonts,
+	app
 }

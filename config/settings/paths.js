@@ -5,7 +5,7 @@ const reportsFolder = 'reports'
 const buildFolder = 'build'
 const srcFolder = 'src'
 
-export const paths = {
+const paths = {
 	build: {
 		images: `${buildFolder}/content/`,
 		static: `${buildFolder}/static/`,
@@ -35,3 +35,5 @@ export const paths = {
 	srcFolder,
 	ftp: ``
 }
+
+export { paths }

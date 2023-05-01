@@ -2,7 +2,7 @@ import { app } from '../../gulpfile.js'
 
 import svgSprite from 'gulp-svg-sprite'
 
-export const sprite = () => {
+const sprite = () => {
 	return app.gulp.src(app.paths.src.svgSprites)
 		.pipe(app.plugins.handleError('SPRITE'))
 		.pipe(svgSprite({
@@ -40,3 +40,5 @@ export const sprite = () => {
 		}))
 		.pipe(app.gulp.dest(app.paths.srcFolder))
 }
+
+export { sprite }

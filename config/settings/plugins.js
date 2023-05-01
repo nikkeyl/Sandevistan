@@ -8,7 +8,7 @@ import rename from 'gulp-rename'
 import ifPlugin from 'gulp-if'
 import fs from 'fs'
 
-export const plugins = {
+const plugins = {
 	FileIncludeWebpackPlugin,
 	if: ifPlugin,
 	TerserPlugin,
@@ -18,3 +18,5 @@ export const plugins = {
 	rename,
 	fs
 }
+
+export { plugins }

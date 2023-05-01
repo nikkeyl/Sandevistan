@@ -4,7 +4,7 @@ import { htmlValidator } from 'gulp-w3c-html-validator'
 import accessibility from 'gulp-wcag-accessibility'
 import bemValidator from 'gulp-html-bem-validator'
 
-export const validator = () => {
+const validator = () => {
 	return app.gulp.src
 		(
 			[
@@ -27,3 +27,5 @@ export const validator = () => {
 			}
 		))
 }
+
+export { validator }
