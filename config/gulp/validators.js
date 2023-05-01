@@ -15,17 +15,15 @@ const validator = () => {
 		.pipe(bemValidator())
 		.pipe(htmlValidator.analyzer())
 		.pipe(htmlValidator.reporter())
-		.pipe(accessibility(
-			{
-				accessibilityLevel: 'WCAG2AAA',
-				reportLevels: {
-					warning: true,
-					error: true
-				},
-				verbose: false,
-				force: true
-			}
-		))
+		.pipe(accessibility({
+			accessibilityLevel: 'WCAG2AAA',
+			reportLevels: {
+				warning: true,
+				error: true
+			},
+			verbose: false,
+			force: true
+		}))
 }
 
 export { validator }
