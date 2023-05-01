@@ -9,45 +9,23 @@ import purge from 'gulp-css-purge'
 const css = () => {
 	return app.gulp.src(`${app.paths.build.css}style.css`)
 		.pipe(app.plugins.handleError('CSS'))
-		.pipe(
-			app.plugins.if(
-				app.isBuild,
-				groupCssMediaQueries()
-			)
-		)
-		.pipe(
-			app.plugins.if(
-				app.isBuild,
-				autoprefixer({
-					cascade: true,
-					grid: true
-				})
-			)
-		)
-		.pipe(
-			app.plugins.if(
-				app.isNoWebp,
-				webpcss(
-					{
-						noWebpClass: '.no-webp',
-						webpClass: '.webp'
-					}
-				)
-			)
-		)
+		.pipe(groupCssMediaQueries())
+		.pipe(autoprefixer({
+			cascade: true,
+			grid: true
+		}))
+		.pipe(webpcss({
+			noWebpClass: '.no-webp',
+			webpClass: '.webp'
+		}))
 		.pipe(purge({
 			shorten: false,
 			trim: false
 		}))
 		.pipe(app.gulp.dest(app.paths.build.css))
-		.pipe(
-			app.plugins.if(
-				app.isBuild,
-				cleanCss({
-					level: 2
-				})
-			)
-		)
+		.pipe(cleanCss({
+			level: 2
+		}))
 		.pipe(app.plugins.rename({
 			suffix: '.min'
 		}))

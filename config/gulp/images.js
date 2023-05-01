@@ -32,19 +32,14 @@ const images = () => {
 				newer(app.paths.build.images)
 			)
 		)
-		.pipe(
-			app.plugins.if(
-				app.isBuild,
-				imagemin({
-					svgoPlugins: [{
-						removeViewBox: false
-					}],
-					optimizationLevel: 4,
-					progressive: true,
-					interlaced: true
-				})
-			)
-		)
+		.pipe(imagemin({
+			svgoPlugins: [{
+				removeViewBox: false
+			}],
+			optimizationLevel: 4,
+			progressive: true,
+			interlaced: true
+		}))
 		.pipe(app.gulp.dest(app.paths.build.images))
 		.pipe(app.gulp.src(app.paths.src.svg))
 		.pipe(app.gulp.dest(app.paths.build.images))

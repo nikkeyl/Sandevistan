@@ -23,8 +23,6 @@ const runFTP = gulp.series(build, ftp)
 
 const app = {
 	isNoWebp: !process.argv.includes('--nowebp'),
-	isBuild: process.argv.includes('--build'),
-	isDev: !process.argv.includes('--build'),
 	plugins,
 	paths,
 	gulp

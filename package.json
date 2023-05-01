@@ -3,12 +3,12 @@
 	"scripts": {
 		"start": "rm -rf .git && npm i --loglevel=error && gulp && webpack serve -c config/webpack/webpack.dev.js",
 		"dev": "stylelint src/scss/**/*.scss --fix && gulp && webpack serve -c config/webpack/webpack.dev.js",
-		"build": "gulp build --build",
-		"devBuild": "gulp build --build --nowebp",
+		"build": "gulp build",
+		"devBuild": "gulp build --nowebp",
 		"deploy": "gh-pages -d build",
 		"sprite": "gulp sprite",
 		"fonts": "gulp fonts",
-		"ftp": "gulp runFTP --build"
+		"ftp": "gulp runFTP"
 	},
 	"repository": {
 		"type": "git",
