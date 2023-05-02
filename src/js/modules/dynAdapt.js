@@ -28,7 +28,7 @@ class DynamicAdapt {
 		this.mediaQueries = this.objects
 			.map(
 				({ breakpoint }) =>
-					`(${this.type}-width: ${breakpoint}px), ${breakpoint}`
+					`(${this.type}-width: ${breakpoint}px),${breakpoint}`
 			)
 			.filter((item, index, self) => self.indexOf(item) === index)
 		this.mediaQueries.forEach(media => {
