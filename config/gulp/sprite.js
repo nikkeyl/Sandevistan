@@ -1,5 +1,7 @@
 import { app } from '../../gulpfile.js'
 
+import { svgoConfig } from '../../svgo.config.js'
+
 import svgSprite from 'gulp-svg-sprite'
 
 const sprite = () => {
@@ -11,31 +13,17 @@ const sprite = () => {
 					sprite: '../content/icons/sprite.svg'
 				}
 			},
-			shape: {
-				transform: [
-					{
-						svgo: {
-							plugins: [
-								{
-									removeAttrs: { attrs: '(stroke|fill)' }
-								}, {
-									convertPathData: false
-								}, {
-									removeViewBox: false
-								}, {
-									removeXMLNS: true
-								}
-							]
-						}
-					}
-				]
-			},
+			transform: [
+				{
+					svgo: svgoConfig
+				}
+			],
 			svg: {
+				xmlDeclaration: false,
 				rootAttributes: {
 					style: 'display: none;',
 					'aria-hidden': true
-				},
-				xmlDeclaration: false
+				}
 			}
 		}))
 		.pipe(app.gulp.dest(app.paths.srcFolder))
