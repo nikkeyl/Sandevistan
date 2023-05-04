@@ -6,7 +6,8 @@ import { nodeObjects } from '@js/helpers/nodeList'
 import marquee from 'vanilla-marquee'
 
 if (document.querySelector('[data-marquee]')) {
-	const creepLine = new marquee({
+	const elem = document.querySelector('[data-marquee]')
+	const creepLine = new marquee(elem, {
 		css3easing: 'linear',
 		delayBeforeStart: 1000,
 		direction: 'left',
