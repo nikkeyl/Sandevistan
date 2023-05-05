@@ -53,12 +53,6 @@
 			"data-line-effect${1:=\"${2:230}\"}"
 		]
 	},
-	"Data Glitch Effect": {
-		"prefix": "dgli",
-		"body": [
-			"data-glitch=\"${0:GLITCH}\""
-		]
-	},
 	"Data Ripple Effect": {
 		"prefix": "drip",
 		"body": [
