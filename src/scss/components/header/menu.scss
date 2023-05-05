@@ -1,7 +1,7 @@
 /* Menu */
 .menu {
 	&__body {
-		@media (max-width: md($mobile)) {
+		@media (max-width: md($tablet)) {
 			@include wh(100%, 100%);
 
 			position: fixed;
@@ -15,11 +15,11 @@
 
 			&::before {
 				@include pseudo("", fixed);
+				@include wh(100%, rem(70));
 
 				left: -100%;
 				top: 0;
 				z-index: 4;
-				@include wh(100%, rem(70));
 				background-color: $color-light;
 				transition: left 0.3s ease;
 			}
@@ -35,12 +35,12 @@
 	}
 
 	&__icon-menu {
-		@media (max-width: md($mobile)) {
+		@media (max-width: md($tablet)) {
 		}
 	}
 
 	&__item {
-		@media (max-width: md($mobile)) {
+		@media (max-width: md($tablet)) {
 		}
 	}
 
@@ -68,7 +68,7 @@
 		column-gap: rem(20);
 		row-gap: rem(10);
 
-		@media (max-width: md($mobile)) {
+		@media (max-width: md($tablet)) {
 			flex-direction: column;
 			align-items: center;
 			row-gap: rem(20);

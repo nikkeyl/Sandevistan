@@ -55,11 +55,11 @@
 	$width: $body-width - ($body-width - $percent);
 
 	@if $breakpoint == 1 {
-		$breakpoint: $tablet;
+		$breakpoint: $laptop;
 	} @else if $breakpoint == 2 {
-		$breakpoint: $mobile;
+		$breakpoint: $tablet;
 	} @else if $breakpoint == 3 {
-		$breakpoint: $mobile-small;
+		$breakpoint: $phone;
 	} @else {
 		$breakpoint: $breakpoint;
 	}
@@ -139,7 +139,7 @@
 	}
 }
 
-@mixin slide($items, $translate, $time, $animation-delay, $direction, $breakpoint: $mobile) {
+@mixin slide($items, $translate, $time, $animation-delay, $direction, $breakpoint: $tablet) {
 	$count: $items + 1;
 
 	@media (min-width: em($breakpoint)) {
@@ -231,7 +231,7 @@
 	}
 }
 
-@mixin grid-cards($type: fit, $min: rem(290), $max: 1fr, $breakpoint: $mobile-small) {
+@mixin grid-cards($type: fit, $min: rem(290), $max: 1fr, $breakpoint: $phone) {
 	display: grid;
 	@content;
 

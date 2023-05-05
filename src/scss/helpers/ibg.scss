@@ -12,9 +12,11 @@
 	}
 }
 
-/* Background image using css (contain) */
-[class*="-ibg--contain"] {
-	img {
-		object-fit: contain;
+@if $ibg-contain == 1 {
+	/* Background image using css (contain) */
+	[class*="-ibg--contain"] {
+		img {
+			object-fit: contain;
+		}
 	}
 }

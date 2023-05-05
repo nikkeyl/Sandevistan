@@ -5,52 +5,52 @@
 @import "lg-mixins";
 
 .lg-outer {
-    .lg-img-rotate {
-        @include transitionCustom(transform 0.4s cubic-bezier(0, 0, 0.25, 1));
+	.lg-img-rotate {
+		@include transitionCustom(transform 0.4s cubic-bezier(0, 0, 0.25, 1));
 
-        position: absolute;
-        inset: 0;
-    }
+		position: absolute;
+		inset: 0;
+	}
 
-    &[data-lg-slide-type="video"],
-    &[data-lg-slide-type="iframe"] {
-        .lg-rotate-left,
-        .lg-rotate-right,
-        .lg-flip-ver,
-        .lg-flip-hor {
-            opacity: $lg-toolbar-icon-disabled-opacity;
-            pointer-events: none;
-        }
-    }
+	&[data-lg-slide-type="video"],
+	&[data-lg-slide-type="iframe"] {
+		.lg-rotate-left,
+		.lg-rotate-right,
+		.lg-flip-ver,
+		.lg-flip-hor {
+			opacity: $lg-toolbar-icon-disabled-opacity;
+			pointer-events: none;
+		}
+	}
 }
 
 .lg-rotate-left {
-    &::after {
-        content: "\e900";
-    }
+	&::after {
+		content: "\e900";
+	}
 }
 
 .lg-rotate-right {
-    &::after {
-        content: "\e901";
-    }
+	&::after {
+		content: "\e901";
+	}
 }
 
 .lg-icon {
-    &.lg-flip-hor,
-    &.lg-flip-ver {
-        font-size: rem(26);
-    }
+	&.lg-flip-hor,
+	&.lg-flip-ver {
+		font-size: rem(26);
+	}
 }
 
 .lg-flip-ver {
-    &::after {
-        content: "\e903";
-    }
+	&::after {
+		content: "\e903";
+	}
 }
 
 .lg-flip-hor {
-    &::after {
-        content: "\e902";
-    }
+	&::after {
+		content: "\e902";
+	}
 }

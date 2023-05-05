@@ -2,19 +2,21 @@
 .icon-menu {
 	display: none;
 
-	@media (max-width: md($mobile)) {
+	@media (max-width: md($tablet)) {
+		@include wh(rem(30), rem(18));
+
 		position: relative;
 		z-index: 5;
 		display: block;
-		@include wh(rem(30), rem(18));
 		cursor: pointer;
 
 		&__line,
 		&::before,
 		&::after {
-			@include pseudo();
-			right: 0;
+			@include pseudo;
 			@include wh(100%, rem(2));
+
+			right: 0;
 			background-color: $color-dark;
 			transition: all 0.3s ease;
 		}

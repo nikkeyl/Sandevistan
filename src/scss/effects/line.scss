@@ -1,6 +1,6 @@
 /* Line effect */
 .hover {
-	@media (min-width: em($mobile)) {
+	@media (min-width: em($tablet)) {
 		@include wh(100%, 100%);
 
 		position: absolute;

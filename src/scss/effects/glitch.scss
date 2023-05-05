@@ -30,9 +30,9 @@
 			@for $i from 0 through $steps {
 				#{percentage($i * calc(1 / $steps))} {
 					clip: rect(
-						math.random(6) + rem,
+						math.random(100) + rem,
 						rem(9999),
-						math.random(6) + rem,
+						math.random(100) + rem,
 						0
 					);
 				}
@@ -51,9 +51,9 @@
 			@for $i from 0 through $steps {
 				#{percentage($i * calc(1 / $steps))} {
 					clip: rect(
-						math.random(6) + rem,
+						math.random(100) + rem,
 						rem(9999),
-						math.random(6) + rem,
+						math.random(100) + rem,
 						0
 					);
 				}

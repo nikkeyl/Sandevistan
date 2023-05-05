@@ -34,16 +34,16 @@
 	&:disabled {
 	}
 
+	&--fw {
+		@media (max-width: md($phone)) {
+			width: 100%;
+		}
+	}
+
 	@if $icon == 1 {
 		span {
 			padding: 0 rem(30) 0 0;
 			background: url("@content") left no-repeat;
-		}
-	}
-
-	&--fw {
-		@media (max-width: md($mobile-small)) {
-			width: 100%;
 		}
 	}
 

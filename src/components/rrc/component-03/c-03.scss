@@ -1,7 +1,7 @@
 .block {
-	$breakpoint: $mobile-small;
+	$breakpoint: $phone;
 	$start-width: $max-width;
-	$end-width: $mobile-small;
+	$end-width: $phone;
 	$type-value: 1;
 	$center: 1;
 	$grid: 1;

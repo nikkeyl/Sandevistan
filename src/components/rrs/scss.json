@@ -50,7 +50,7 @@
 	"Mixin Grid Cards": {
 		"prefix": "gc",
 		"body": [
-			"@include grid-cards(${1:fit}, rem(${2:290}), ${3:1fr}, ${4:\\$mobile-small}) {\n\tgap: rem(${5:30});\n}"
+			"@include grid-cards(${1:fit}, rem(${2:290}), ${3:1fr}, ${4:\\$phone}) {\n\tgap: rem(${5:30});\n}"
 		]
 	},
 	"Triangle": {
@@ -167,76 +167,76 @@
 			"@media (min-width: em($1)) and (max-width: md($2)) {\n\t$3\n}"
 		]
 	},
-	"@media Max Width Pc": {
+	"@media Max Width desktop": {
 		"prefix": "md1",
 		"body": [
-			"@media (max-width: md(\\$pc)) {\n\t$0\n}"
+			"@media (max-width: md(\\$desktop)) {\n\t$0\n}"
 		]
 	},
-	"@media Min Width Pc": {
+	"@media Min Width desktop": {
 		"prefix": "mmd1",
 		"body": [
-			"@media (min-width: em(\\$pc)) {\n\t$0\n}"
+			"@media (min-width: em(\\$desktop)) {\n\t$0\n}"
+		]
+	},
+	"@media Max Width Laptop": {
+		"prefix": "md2",
+		"body": [
+			"@media (max-width: md(\\$laptop)) {\n\t$0\n}"
+		]
+	},
+	"@media Min Width Laptop": {
+		"prefix": "mmd2",
+		"body": [
+			"@media (min-width: em(\\$laptop)) {\n\t$0\n}"
 		]
 	},
 	"@media Max Width Tablet": {
-		"prefix": "md2",
+		"prefix": "md3",
 		"body": [
 			"@media (max-width: md(\\$tablet)) {\n\t$0\n}"
 		]
 	},
 	"@media Min Width Tablet": {
-		"prefix": "mmd2",
+		"prefix": "mmd3",
 		"body": [
 			"@media (min-width: em(\\$tablet)) {\n\t$0\n}"
 		]
 	},
-	"@media Max Width Mobile": {
-		"prefix": "md3",
-		"body": [
-			"@media (max-width: md(\\$mobile)) {\n\t$0\n}"
-		]
-	},
-	"@media Min Width Mobile": {
-		"prefix": "mmd3",
-		"body": [
-			"@media (min-width: em(\\$mobile)) {\n\t$0\n}"
-		]
-	},
-	"@media Max Width Mobile Small": {
+	"@media Max Width Phone": {
 		"prefix": "md4",
 		"body": [
-			"@media (max-width: md(\\$mobile-small)) {\n\t$0\n}"
+			"@media (max-width: md(\\$phone)) {\n\t$0\n}"
 		]
 	},
-	"@media Min Width Mobile Small": {
+	"@media Min Width Phone": {
 		"prefix": "mmd4",
 		"body": [
-			"@media (min-width: em(\\$mobile-small)) {\n\t$0\n}"
+			"@media (min-width: em(\\$phone)) {\n\t$0\n}"
 		]
 	},
 	"@media Min And Max Width With Variables": {
 		"prefix": "mdav",
 		"body": [
-			"@media (min-width: em(\\$${1:tablet})) and (max-width: md(\\$${2:pc})) {\n\t$3\n}"
+			"@media (min-width: em(\\$${1:laptop})) and (max-width: md(\\$${2:desktop})) {\n\t$3\n}"
 		]
 	},
-	"@media Min And Max Width With Tablet And Pc": {
+	"@media Min And Max Width With Laptop And desktop": {
 		"prefix": "mda1",
 		"body": [
-			"@media (min-width: em(\\$tablet)) and (max-width: md(\\$pc)) {\n\t$0\n}"
+			"@media (min-width: em(\\$laptop)) and (max-width: md(\\$desktop)) {\n\t$0\n}"
 		]
 	},
-	"@media Min And Max Width With Mobile And Tablet": {
+	"@media Min And Max Width With Tablet And Laptop": {
 		"prefix": "mda2",
 		"body": [
-			"@media (min-width: em(\\$mobile)) and (max-width: md(\\$tablet)) {\n\t$0\n}"
+			"@media (min-width: em(\\$tablet)) and (max-width: md(\\$laptop)) {\n\t$0\n}"
 		]
 	},
-	"@media Min And Max Width With Mobile Small And Mobile": {
+	"@media Min And Max Width With Phone And Tablet": {
 		"prefix": "mda3",
 		"body": [
-			"@media (min-width: em(\\$mobile-small)) and (max-width: md(\\$mobile)) {\n\t$0\n}"
+			"@media (min-width: em(\\$phone)) and (max-width: md(\\$tablet)) {\n\t$0\n}"
 		]
 	},
 	"Gap With Rem ": {

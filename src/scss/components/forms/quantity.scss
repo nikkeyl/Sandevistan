@@ -1,8 +1,9 @@
 .quantity {
+	@include wh(rem(88), rem(40));
+
 	display: flex;
 	border: rem(2) solid $color-dark;
 	border-radius: rem(5);
-	@include wh(rem(88), rem(40));
 
 	&__button {
 		position: relative;
@@ -12,8 +13,8 @@
 		&::before,
 		&::after {
 			@include wh(rem(10), rem(1));
+			@include pseudo;
 
-			@include pseudo();
 			left: 50%;
 			top: 50%;
 			margin: 0 0 0 rem(-4.5);
@@ -46,6 +47,7 @@
 
 		input {
 			@include wh(100%, 100%);
+
 			font-weight: 700;
 			font-size: rem(12);
 			text-align: center;

@@ -10,8 +10,10 @@
 		flex: 1 1 auto;
 	}
 
-	> * {
-		/* Fixes swiper.js bug */
-		min-width: 0;
+	@if $slider-fix == 1 {
+		> * {
+			/* Fixes swiper.js bug */
+			min-width: 0;
+		}
 	}
 }

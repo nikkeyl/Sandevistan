@@ -5,7 +5,7 @@
 		/* The (--vh) variable is used by the fullVHfix function */
 		min-height: calc(var(--vh, 1vh) * 100);
 
-		@media (max-width: md($mobile)) {
+		@media (max-width: md($tablet)) {
 			transition: height 0.2s;
 		}
 	}

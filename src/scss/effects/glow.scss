@@ -1,6 +1,6 @@
 /* Glow effect */
 .button {
-	@media (min-width: em($mobile)) {
+	@media (min-width: em($tablet)) {
 		position: relative;
 		overflow: hidden;
 

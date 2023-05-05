@@ -15,28 +15,31 @@
 	}
 
 	&__active {
+		@include wh(0, 100%);
+
 		position: absolute;
 		left: 0;
 		top: 0;
 		overflow: hidden;
-		@include wh(0, 100%);
 		transition: all 0.2s ease;
 
 		&::before {
 			@include pseudo("★★★★★", absolute);
+			@include wh(100%, 100%);
+
 			left: 0;
 			top: 0;
-			@include wh(100%, 100%);
 			color: $color-yellow;
 		}
 	}
 
 	&__items {
+		@include wh(100%, 100%);
+
 		position: absolute;
 		left: 0;
 		top: 0;
 		display: flex;
-		@include wh(100%, 100%);
 	}
 
 	&__item {
