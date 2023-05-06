@@ -81,14 +81,14 @@ export function pageNavigation() {
 	}
 	if (getHash()) {
 		let goToHash
-		if (document.querySelector(`#${getHash()}`)) {
-			goToHash = `#${getHash()}`
-		} else if (document.querySelector(`.${getHash()}`)) {
-			goToHash = `.${getHash()}`
-		}
-		// document.querySelector(`#${getHash()}`)
-		// 	? goToHash = `#${getHash()}`
-		// 	: goToHash = `.${getHash()}` [NEW]
+		// if (document.querySelector(`#${getHash()}`)) {
+		// 	goToHash = `#${getHash()}`
+		// } else if (document.querySelector(`.${getHash()}`)) {
+		// 	goToHash = `.${getHash()}`
+		// }
+		document.querySelector(`#${getHash()}`)
+			? goToHash = `#${getHash()}`
+			: goToHash = `.${getHash()}`
 		goToHash ? gotoBlock(goToHash, true, 500, 20) : null
 	}
 }

@@ -3,9 +3,9 @@ import { uniqArray } from '@js/helpers/uniqArray'
 export function dataMediaQueries(array, dataSetValue) {
 	/*! This function helps to run other functions depending on the width of the viewport [768, max] or [768, min] */
 	const media = Array.from(array).filter(item => {
-		item.dataset[dataSetValue]
-			? item.dataset[dataSetValue].split(',')[0]
-			: null
+		if (item.dataset[dataSetValue]) {
+			return item.dataset[dataSetValue].split(',')[0]
+		}
 	})
 	if (media.length) {
 		const breakpointsArray = []

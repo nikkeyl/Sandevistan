@@ -83,6 +83,7 @@ export function stickyBlock() {
 	}
 	stickyBlockInit()
 }
+// duplicate code in headerScroll.js
 setTimeout(() => {
 	if (addWindowScrollEvent) {
 		const windowScroll = new Event('windowScroll')

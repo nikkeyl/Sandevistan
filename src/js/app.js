@@ -89,17 +89,14 @@ lazyMedia /* https://github.com/verlok/vanilla-lazyload */
 // import { changeFontSize } from '@js/modules/changeFontSize'
 // changeFontSize()
 
+// import { addLoadedClass } from '@js/modules/addLoadedClass'
+// addLoadedClass()
+
 // import { colorScheme } from '@js/modules/colorScheme'
 // colorScheme()
 
 // import { fullVHfix } from '@js/modules/fullScreenFix'
 // fullVHfix()
-
-// import { addLoadedClass } from '@js/modules/loaded'
-// addLoadedClass()
-
-// import { addTouchClass } from '@js/modules/touch'
-// addTouchClass()
 
 import { webp } from '@js/modules/webp'
 webp()

@@ -9,6 +9,7 @@ export function spollers() {
 			return !item.dataset.spollers.split(',')[0]
 		})
 		spollersRegular.length ? initSpollers(spollersRegular) : null
+		// duplicate code tabs
 		const mdQueriesArray = dataMediaQueries(spollersArray, 'spollers')
 		if (mdQueriesArray && mdQueriesArray.length) {
 			mdQueriesArray.forEach(mdQueriesItem => {

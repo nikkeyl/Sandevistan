@@ -45,6 +45,7 @@ export function headerScroll() {
 		scrollDirection = scrollTop <= 0 ? 0 : scrollTop
 	})
 }
+// duplicate code in stickyBlock.js
 setTimeout(() => {
 	if (addWindowScrollEvent) {
 		const windowScroll = new Event('windowScroll')

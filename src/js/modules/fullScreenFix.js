@@ -1,3 +1,4 @@
+import { addTouchClass } from '@js/helpers/addTouchClass'
 import { isMobile } from '@js/helpers/isMobile'
 import { html } from '@js/helpers/nodeList'
 
@@ -10,6 +11,7 @@ export function fullVHfix() {
 	}
 	if (fullScreens.length && isMobile.any()) {
 		window.addEventListener('resize', fixHeight)
+		addTouchClass()
 		fixHeight()
 	}
 }

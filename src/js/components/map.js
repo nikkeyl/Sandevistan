@@ -57,8 +57,7 @@ function mapInit(n = 1) {
 				'stylers': [
 					{
 						'visibility': 'on'
-					},
-					{
+					}, {
 						'hue': '#1900ff'
 					}, {
 						'color': '#c0e8e8'
