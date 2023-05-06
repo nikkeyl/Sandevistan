@@ -47,7 +47,7 @@ export function pageNavigation() {
 					)
 				} else if (targetElement.classList.length) {
 					for (
-						const i = 0;
+						let i = 0;
 						i < targetElement.classList.length;
 						i++
 					) {
