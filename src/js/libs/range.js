@@ -8,9 +8,9 @@ import wNumb from 'wnumb'
 import '@scss/components/forms/range'
 // import '@scss/libs/range'
 
-export function rangeInit() {
+export function range() {
 	const priceSlider = document.querySelector('[data-range]')
-	if (priceSlider) {
+	function rangeInit() {
 		// const textFrom = priceSlider.getAttribute('data-from')
 		// const textTo = priceSlider.getAttribute('data-to')
 		noUiSlider.create(priceSlider, {
@@ -34,4 +34,5 @@ export function rangeInit() {
 			priceSlider.noUiSlider.set([priceStartValue, priceEndValue])
 		}
 	}
+	if (priceSlider) rangeInit()
 }

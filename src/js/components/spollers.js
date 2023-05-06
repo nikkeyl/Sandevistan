@@ -4,7 +4,7 @@ import { slideUp } from '@js/helpers/slideUp'
 
 export function spollers() {
 	const spollersArray = document.querySelectorAll('[data-spollers]')
-	if (spollersArray.length > 0) {
+	function spoller() {
 		const spollersRegular = Array.from(spollersArray).filter(item => {
 			return !item.dataset.spollers.split(',')[0]
 		})
@@ -111,4 +111,5 @@ export function spollers() {
 			})
 		}
 	}
+	if (spollersArray.length > 0) spoller()
 }

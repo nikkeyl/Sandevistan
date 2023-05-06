@@ -16,7 +16,7 @@ if (document.querySelector('[data-marquee]')) {
 		speed: 100,
 		gap: 20,
 		pauseOnHover: true,
-		startVisible: true,
+		startVisible: true
 		// recalcResize: true
 	})
 	nodeObjects.creepLine = creepLine

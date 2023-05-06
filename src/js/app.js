@@ -75,8 +75,8 @@ lazyMedia /* https://github.com/verlok/vanilla-lazyload */
 // import { rating } from '@js/components/forms/rating'
 // rating()
 
-// import { rangeInit } from '@js/libs/range'
-// rangeInit() /* https://refreshless.com/nouislider/ */
+// import { range } from '@js/libs/range'
+// range() /* https://refreshless.com/nouislider/ */
 
 // import '@js/components/forms/select'
 
