@@ -524,7 +524,7 @@
 	"Section Response": {
 		"prefix": "secres",
 		"body": [
-			"<section class=\"${1:block}\">\n\t<div class=\"${1:block}__inner\">\n\t\t<div class=\"${1:block}__container\">\n\t\t\t<div class=\"${1:block}__body\">\n\t\t\t\t$4\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div class=\"${1:block}__image\">\n\t\t<img src=\"@content$2\" alt=\"$3\">\n\t</div>\n</section>"
+			"<section class=\"${1:block}\">\n\t<div class=\"${1:block}__inner\">\n\t\t<div class=\"${1:block}__container\">\n\t\t\t<div class=\"${1:block}__body\">\n\t\t\t\t$4\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div class=\"${1:block}__image\">\n\t\t<img data-src=\"@content$2\" alt=\"$3\">\n\t</div>\n</section>"
 		]
 	},
 	"Spollers": {
