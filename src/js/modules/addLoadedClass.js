@@ -1,5 +1,7 @@
 import { html } from '@js/helpers/nodeList'
 
-export function addLoadedClass() {
+function addLoadedClass() {
 	window.onload = html.classList.add('loaded')
 }
+
+export { addLoadedClass }

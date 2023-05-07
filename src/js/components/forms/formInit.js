@@ -1,7 +1,10 @@
 import { formValidate } from '@js/components/forms/formValidate'
 
-export function formFieldsInit(
-	options = { viewPass: false, autoHeight: false }
+function formFieldsInit(
+	options = {
+		viewPass: false,
+		autoHeight: false
+	}
 ) {
 	const formFields = document.querySelectorAll(
 		'input[placeholder],textarea[placeholder]'
@@ -9,7 +12,7 @@ export function formFieldsInit(
 	if (formFields.length) {
 		formFields.forEach(formField => {
 			!formField.hasAttribute('data-placeholder-nohide')
-				? formField.dataset.placeholder = formField.placeholder
+				? (formField.dataset.placeholder = formField.placeholder)
 				: null
 		})
 	}
@@ -20,7 +23,7 @@ export function formFieldsInit(
 			targetElement.tagName === 'TEXTAREA'
 		) {
 			targetElement.dataset.placeholder
-				? targetElement.placeholder = ''
+				? (targetElement.placeholder = '')
 				: null
 			if (!targetElement.hasAttribute('data-no-focus-classes')) {
 				targetElement.classList.add('form-focus')
@@ -36,7 +39,8 @@ export function formFieldsInit(
 			targetElement.tagName === 'TEXTAREA'
 		) {
 			targetElement.dataset.placeholder
-				? targetElement.placeholder = targetElement.dataset.placeholder
+				? (targetElement.placeholder =
+						targetElement.dataset.placeholder)
 				: null
 			if (!targetElement.hasAttribute('data-no-focus-classes')) {
 				targetElement.classList.remove('form-focus')
@@ -63,33 +67,32 @@ export function formFieldsInit(
 			}
 		})
 	}
-	if (options.autoHeight) {
-		const textareas = document.querySelectorAll('textarea[data-autoheight]')
-		if (textareas.length) {
-			textareas.forEach(textarea => {
-				const startHeight = textarea.hasAttribute('data-autoheight-min')
-					? Number(textarea.dataset.autoheightMin)
-					: Number(textarea.offsetHeight)
-				const maxHeight = textarea.hasAttribute('data-autoheight-max')
-					? Number(textarea.dataset.autoheightMax)
-					: Infinity
-				setHeight(textarea, Math.min(startHeight, maxHeight))
-				textarea.addEventListener('input', () => {
-					if (textarea.scrollHeight > startHeight) {
-						textarea.style.height = 'auto'
-						setHeight(
-							textarea,
-							Math.min(
-								Math.max(textarea.scrollHeight, startHeight),
-								maxHeight
-							)
-						)
-					}
-				})
-			})
-			function setHeight(textarea, height) {
-				textarea.style.height = `${height}px`
+	const textareas = document.querySelectorAll('textarea[data-autoheight]')
+	textareas.forEach(textarea => {
+		const startHeight = textarea.hasAttribute('data-autoheight-min')
+			? Number(textarea.dataset.autoheightMin)
+			: Number(textarea.offsetHeight)
+		const maxHeight = textarea.hasAttribute('data-autoheight-max')
+			? Number(textarea.dataset.autoheightMax)
+			: Infinity
+		setHeight(textarea, Math.min(startHeight, maxHeight))
+		textarea.addEventListener('input', () => {
+			if (textarea.scrollHeight > startHeight) {
+				textarea.style.height = 'auto'
+				setHeight(
+					textarea,
+					Math.min(
+						Math.max(textarea.scrollHeight, startHeight),
+						maxHeight
+					)
+				)
 			}
-		}
+		})
+	})
+	function setHeight(textarea, height) {
+		textarea.style.height = `${height}px`
 	}
+	if (textareas.length && options.autoHeight) setHeight()
 }
+
+export { formFieldsInit }

@@ -1,6 +1,6 @@
 import { uniqArray } from '@js/helpers/uniqArray'
 
-export function dataMediaQueries(array, dataSetValue) {
+function dataMediaQueries(array, dataSetValue) {
 	/*! This function helps to run other functions depending on the width of the viewport [768, max] or [768, min] */
 	const media = Array.from(array).filter(item => {
 		if (item.dataset[dataSetValue]) {
@@ -55,3 +55,5 @@ export function dataMediaQueries(array, dataSetValue) {
 		}
 	}
 }
+
+export { dataMediaQueries }

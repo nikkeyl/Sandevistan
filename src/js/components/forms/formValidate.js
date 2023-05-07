@@ -1,6 +1,6 @@
 import { nodeObjects } from '@js/helpers/nodeList'
 
-export let formValidate = {
+let formValidate = {
 	getErrors(form) {
 		let error = 0
 		const formRequiredItems = form.querySelectorAll('*[data-required]')
@@ -107,3 +107,5 @@ export let formValidate = {
 		)
 	}
 }
+
+export { formValidate }

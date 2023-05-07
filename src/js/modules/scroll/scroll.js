@@ -2,7 +2,7 @@ import { nodeObjects } from '@js/helpers/nodeList'
 import { gotoBlock } from '@js/helpers/goToBlock'
 import { getHash } from '@js/helpers/getHash'
 
-export function pageNavigation() {
+function pageNavigation() {
 	document.addEventListener('click', pageNavigationAction)
 	document.addEventListener('watcherCallback', pageNavigationAction)
 	function pageNavigationAction(e) {
@@ -46,11 +46,7 @@ export function pageNavigation() {
 						`[data-goto="#${targetElement.id}"]`
 					)
 				} else if (targetElement.classList.length) {
-					for (
-						let i = 0;
-						i < targetElement.classList.length;
-						i++
-					) {
+					for (let i = 0; i < targetElement.classList.length; i++) {
 						const element = targetElement.classList[i]
 						if (
 							document.querySelector(`[data-goto=".${element}"]`)
@@ -72,8 +68,8 @@ export function pageNavigation() {
 				} else {
 					navigatorCurrentItem
 						? navigatorCurrentItem.classList.remove(
-							'navigator-active'
-						)
+								'navigator-active'
+						  )
 						: null
 				}
 			}
@@ -87,8 +83,10 @@ export function pageNavigation() {
 		// 	goToHash = `.${getHash()}`
 		// }
 		document.querySelector(`#${getHash()}`)
-			? goToHash = `#${getHash()}`
-			: goToHash = `.${getHash()}`
+			? (goToHash = `#${getHash()}`)
+			: (goToHash = `.${getHash()}`)
 		goToHash ? gotoBlock(goToHash, true, 500, 20) : null
 	}
 }
+
+export { pageNavigation }

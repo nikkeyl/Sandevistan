@@ -1,6 +1,6 @@
 import { html } from '@js/helpers/nodeList'
 
-export function colorScheme() {
+function colorScheme() {
 	window.addEventListener('load', () => {
 		const htmlBlock = html
 		const saveUserTheme = localStorage.getItem('user-theme')
@@ -53,3 +53,5 @@ export function colorScheme() {
 		}
 	})
 }
+
+export { colorScheme }

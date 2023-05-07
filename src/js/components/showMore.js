@@ -2,7 +2,7 @@ import { dataMediaQueries } from '@js/helpers/dataMedia'
 import { slideDown } from '@js/helpers/slideDown'
 import { slideUp } from '@js/helpers/slideUp'
 
-export function showMore() {
+function showMore() {
 	window.addEventListener('load', () => {
 		const showMoreBlocks = document.querySelectorAll('[data-showmore]')
 		let showMoreBlocksRegular
@@ -151,3 +151,5 @@ export function showMore() {
 		}
 	})
 }
+
+export { showMore }

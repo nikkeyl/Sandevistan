@@ -1,4 +1,4 @@
-export function hoverEffect() {
+function hoverEffect() {
 	const menuLinksWrappers = document.querySelectorAll('[data-line-effect]')
 	menuLinksWrappers.length ? menuEffect() : null
 	function menuEffect() {
@@ -106,3 +106,5 @@ export function hoverEffect() {
 		}
 	}
 }
+
+export { hoverEffect }

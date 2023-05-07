@@ -8,7 +8,7 @@ import wNumb from 'wnumb'
 import '@scss/components/forms/range'
 // import '@scss/libs/range'
 
-export function range() {
+function range() {
 	const priceSlider = document.querySelector('[data-range]')
 	function rangeInit() {
 		// const textFrom = priceSlider.getAttribute('data-from')
@@ -36,3 +36,5 @@ export function range() {
 	}
 	if (priceSlider) rangeInit()
 }
+
+export { range }

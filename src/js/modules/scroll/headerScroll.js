@@ -1,6 +1,4 @@
-// let addWindowScrollEvent = false
-export function headerScroll() {
-	// addWindowScrollEvent = true
+function headerScroll() {
 	const header = document.querySelector('header.header')
 	const headerShow = header.hasAttribute('data-scroll-show')
 	const headerShowTimer = header.dataset.scrollShow
@@ -45,12 +43,5 @@ export function headerScroll() {
 		scrollDirection = scrollTop <= 0 ? 0 : scrollTop
 	})
 }
-// duplicate code in stickyBlock.js
-// setTimeout(() => {
-// 	if (addWindowScrollEvent) {
-// 		const windowScroll = new Event('windowScroll')
-// 		window.addEventListener('scroll', () => {
-// 			document.dispatchEvent(windowScroll)
-// 		})
-// 	}
-// }, 0)
+
+export { headerScroll }

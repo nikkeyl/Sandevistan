@@ -2,7 +2,7 @@ import { formValidate } from '@js/components/forms/formValidate'
 import { nodeObjects } from '@js/helpers/nodeList'
 import { gotoBlock } from '@js/helpers/goToBlock'
 
-export function formSubmit() {
+function formSubmit() {
 	const forms = document.forms
 	if (forms.length) {
 		for (const form of forms) {
@@ -35,7 +35,7 @@ export function formSubmit() {
 				form.classList.add('sending')
 				const response = await fetch(formAction, {
 					method: formMethod,
-					body: formData,
+					body: formData
 				})
 				if (response.ok) {
 					const responseResult = await response.json()
@@ -79,3 +79,5 @@ export function formSubmit() {
 		formValidate.formClean(form)
 	}
 }
+
+export { formSubmit }

@@ -2,7 +2,7 @@ import { dataMediaQueries } from '@js/helpers/dataMedia'
 import { slideToggle } from '@js/helpers/slideToggle'
 import { slideUp } from '@js/helpers/slideUp'
 
-export function spollers() {
+function spollers() {
 	const spollersArray = document.querySelectorAll('[data-spollers]')
 	function spoller() {
 		const spollersRegular = Array.from(spollersArray).filter(item => {
@@ -113,3 +113,5 @@ export function spollers() {
 	}
 	if (spollersArray.length > 0) spoller()
 }
+
+export { spollers }

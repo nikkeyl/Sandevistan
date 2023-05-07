@@ -11,7 +11,7 @@ import Isotope from 'isotope-layout'
 	width: 100%;
 }
 */
-export function filter() {
+function filter() {
 	function imagesInit() {
 		const images = document.querySelectorAll('.article__image')
 		if (images.length) {
@@ -57,3 +57,5 @@ export function filter() {
 		gridInit()
 	})
 }
+
+export { filter }

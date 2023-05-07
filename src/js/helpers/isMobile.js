@@ -1,4 +1,4 @@
-export const isMobile = {
+const isMobile = {
 	BlackBerry: () => navigator.userAgent.match(/BlackBerry/i),
 	iOS: () => navigator.userAgent.match(/iPhone|iPad|iPod/i),
 	Opera: () => navigator.userAgent.match(/Opera Mini/i),
@@ -9,3 +9,5 @@ export const isMobile = {
 		isMobile.Opera() ||
 		isMobile.iOS()
 }
+
+export { isMobile }

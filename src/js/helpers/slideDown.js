@@ -1,4 +1,4 @@
-export const slideDown = (target, duration = 500, showmore = 0) => {
+const slideDown = (target, duration = 500, showmore = 0) => {
 	if (!target.classList.contains('slide')) {
 		target.classList.add('slide')
 		target.hidden = target.hidden ? false : null
@@ -34,3 +34,5 @@ export const slideDown = (target, duration = 500, showmore = 0) => {
 		}, duration)
 	}
 }
+
+export { slideDown }

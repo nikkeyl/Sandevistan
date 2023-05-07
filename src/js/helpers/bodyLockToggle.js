@@ -1,8 +1,8 @@
 import { html, lockPadding, body } from '@js/helpers/nodeList'
 
-export let bodyLockStatus = true
+let bodyLockStatus = true
 /*! Blocks page scrolling  */
-export const bodyLockToggle = (delay = 500) => {
+const bodyLockToggle = (delay = 500) => {
 	html.classList.contains('lock') ? bodyUnlock(delay) : bodyLock(delay)
 }
 function delayToggle(delay) {
@@ -11,7 +11,7 @@ function delayToggle(delay) {
 		bodyLockStatus = true
 	}, delay)
 }
-export const bodyUnlock = (delay = 500) => {
+const bodyUnlock = (delay = 500) => {
 	if (bodyLockStatus) {
 		setTimeout(() => {
 			lockPadding.forEach(el => {
@@ -23,7 +23,7 @@ export const bodyUnlock = (delay = 500) => {
 		delayToggle(delay)
 	}
 }
-export const bodyLock = (delay = 500) => {
+const bodyLock = (delay = 500) => {
 	if (bodyLockStatus) {
 		lockPadding.forEach(el => {
 			el.style.paddingRight =
@@ -39,3 +39,5 @@ export const bodyLock = (delay = 500) => {
 		delayToggle(delay)
 	}
 }
+
+export { bodyLockStatus, bodyLockToggle, bodyUnlock, bodyLock }

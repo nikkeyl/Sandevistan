@@ -1,4 +1,4 @@
-export function counter() {
+function counter() {
 	window.addEventListener('load', () => {
 		function digitsCountersInit(digitsCountersItems) {
 			const digitsCounters = digitsCountersItems
@@ -57,3 +57,5 @@ export function counter() {
 		}
 	})
 }
+
+export { counter }

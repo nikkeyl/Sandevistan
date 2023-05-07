@@ -1,6 +1,6 @@
 import { html } from '@js/helpers/nodeList'
 
-export function webp() {
+function webp() {
 	function testWebP(callback) {
 		let webP = new Image()
 		webP.onload = webP.onerror = () => callback(webP.height == 2)
@@ -12,3 +12,5 @@ export function webp() {
 		html.classList.add(className)
 	})
 }
+
+export { webp }

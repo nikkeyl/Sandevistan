@@ -1,4 +1,4 @@
-export function clock() {
+function clock() {
 	window.addEventListener('load', () => {
 		setInterval(() => {
 			const time = new Date().toLocaleTimeString([], {
@@ -11,3 +11,5 @@ export function clock() {
 		}, 1000)
 	})
 }
+
+export { clock }

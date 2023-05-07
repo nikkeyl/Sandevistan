@@ -101,10 +101,11 @@ class SelectConstructor {
 				).selectElement
 				selectItemTitle.insertAdjacentHTML(
 					'afterbegin',
-					`<span class="${this.selectClasses.classSelectLabel}">${this.getSelectPlaceholder(originalSelect).label.text
-						? this.getSelectPlaceholder(originalSelect).label
-							.text
-						: this.getSelectPlaceholder(originalSelect).value
+					`<span class="${this.selectClasses.classSelectLabel}">${
+						this.getSelectPlaceholder(originalSelect).label.text
+							? this.getSelectPlaceholder(originalSelect).label
+									.text
+							: this.getSelectPlaceholder(originalSelect).value
 					}</span>`
 				)
 			}
@@ -127,19 +128,19 @@ class SelectConstructor {
 		selectItem.dataset.id = originalSelect.dataset.id
 		originalSelect.dataset.classModif
 			? selectItem.classList.add(
-				`select--${originalSelect.dataset.classModif}`
-			)
+					`select--${originalSelect.dataset.classModif}`
+			  )
 			: null
 		originalSelect.multiple
 			? selectItem.classList.add(this.selectClasses.classSelectMultiple)
 			: selectItem.classList.remove(
-				this.selectClasses.classSelectMultiple
-			)
+					this.selectClasses.classSelectMultiple
+			  )
 		originalSelect.hasAttribute('data-checkbox') && originalSelect.multiple
 			? selectItem.classList.add(this.selectClasses.classSelectCheckBox)
 			: selectItem.classList.remove(
-				this.selectClasses.classSelectCheckBox
-			)
+					this.selectClasses.classSelectCheckBox
+			  )
 		this.setSelectTitleValue(selectItem, originalSelect)
 		this.setOptions(selectItem, originalSelect)
 		originalSelect.hasAttribute('data-search')
@@ -164,13 +165,14 @@ class SelectConstructor {
 			const selectItem = targetElement.closest('.select')
 				? targetElement.closest('.select')
 				: document.querySelector(
-					`.${this.selectClasses.classSelect}[data-id="${targetElement.closest(
-						this.getSelectClass(
-							this.selectClasses.classSelectTag
-						)
-					).dataset.selectId
-					}"]`
-				)
+						`.${this.selectClasses.classSelect}[data-id="${
+							targetElement.closest(
+								this.getSelectClass(
+									this.selectClasses.classSelectTag
+								)
+							).dataset.selectId
+						}"]`
+				  )
 			const originalSelect =
 				this.getSelectElement(selectItem).originalSelect
 			if (targetType === 'click') {
@@ -230,11 +232,11 @@ class SelectConstructor {
 				) {
 					targetType === 'focusin'
 						? selectItem.classList.add(
-							this.selectClasses.classSelectFocus
-						)
+								this.selectClasses.classSelectFocus
+						  )
 						: selectItem.classList.remove(
-							this.selectClasses.classSelectFocus
-						)
+								this.selectClasses.classSelectFocus
+						  )
 				}
 			} else if (targetType === 'keydown' && e.code === 'Escape') {
 				this.selectsClose()
@@ -311,11 +313,12 @@ class SelectConstructor {
 			selectTitleValue = this.getSelectedOptionsData(originalSelect)
 				.elements.map(
 					option =>
-						`<span role="button" data-select-id="${selectItem.dataset.id
+						`<span role="button" data-select-id="${
+							selectItem.dataset.id
 						}" data-value="${option.value}"
                            class="select-tag">${this.getSelectElementContent(
-							option
-						)}</span>`
+								option
+							)}</span>`
 				)
 				.join('')
 			if (
@@ -331,8 +334,8 @@ class SelectConstructor {
 		selectTitleValue = selectTitleValue.length
 			? selectTitleValue
 			: originalSelect.dataset.placeholder
-				? originalSelect.dataset.placeholder
-				: ''
+			? originalSelect.dataset.placeholder
+			: ''
 		let pseudoAttribute = ''
 		let pseudoAttributeClass = ''
 		if (originalSelect.hasAttribute('data-pseudo-label')) {
@@ -357,11 +360,12 @@ class SelectConstructor {
 		} else {
 			const customClass =
 				this.getSelectedOptionsData(originalSelect).elements.length &&
-					this.getSelectedOptionsData(originalSelect).elements[0].dataset
-						.class
-					? ` ${this.getSelectedOptionsData(originalSelect)
-						.elements[0].dataset.class
-					}`
+				this.getSelectedOptionsData(originalSelect).elements[0].dataset
+					.class
+					? ` ${
+							this.getSelectedOptionsData(originalSelect)
+								.elements[0].dataset.class
+					  }`
 					: ''
 			return `<button class="${this.selectClasses.classSelectTitle}"
                 type="button">
@@ -415,7 +419,7 @@ class SelectConstructor {
 		}
 	}
 	getSelectedOptionsData(originalSelect) {
-		const selectedOptions = []
+		let selectedOptions = []
 		if (originalSelect.multiple) {
 			selectedOptions = Array.from(originalSelect.options)
 				.filter(option => option.value)
@@ -473,8 +477,8 @@ class SelectConstructor {
 				: ''
 		const selectOptionHide =
 			selectOption.selected &&
-				!originalSelect.hasAttribute('data-show-selected') &&
-				!originalSelect.multiple
+			!originalSelect.hasAttribute('data-show-selected') &&
+			!originalSelect.multiple
 				? 'hidden'
 				: ''
 		const selectOptionClass = selectOption.dataset.class

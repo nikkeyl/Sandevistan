@@ -1,4 +1,6 @@
-export function setHash(hash) {
+function setHash(hash) {
 	hash = hash ? `#${hash}` : window.location.href.split('#')[0]
 	history.pushState('', '', hash)
 }
+
+export { setHash }

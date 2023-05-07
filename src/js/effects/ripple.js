@@ -1,4 +1,4 @@
-export function ripple() {
+function ripple() {
 	document.addEventListener('click', e => {
 		const targetItem = e.target
 		const button = targetItem.closest('[data-ripple]')
@@ -35,3 +35,5 @@ export function ripple() {
 		}
 	})
 }
+
+export { ripple }

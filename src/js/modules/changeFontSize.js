@@ -1,6 +1,6 @@
 import { toggleClasses } from '@js/helpers/toggleClasses'
 
-export function changeFontSize() {
+function changeFontSize() {
 	window.addEventListener('load', () => {
 		const range = document.querySelector('[data-font-range]')
 		const value = document.querySelector('[data-font-value]')
@@ -31,3 +31,5 @@ export function changeFontSize() {
 		}
 	})
 }
+
+export { changeFontSize }

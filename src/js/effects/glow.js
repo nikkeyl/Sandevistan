@@ -1,6 +1,6 @@
 import { html } from '@js/helpers/nodeList'
 
-export function glow() {
+function glow() {
 	let bGlow, bGlowColor, bGlowSize
 	function buttonActions(e) {
 		const button = e.target.closest('[data-glow]')
@@ -42,3 +42,5 @@ export function glow() {
 		html.addEventListener('mousemove', buttonActions)
 	}
 }
+
+export { glow }

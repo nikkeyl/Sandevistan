@@ -5,7 +5,7 @@ import { slideUp } from '@js/helpers/slideUp'
 import { getHash } from '@js/helpers/getHash'
 import { setHash } from '@js/helpers/setHash'
 
-export function tabs() {
+function tabs() {
 	const tabs = document.querySelectorAll('[data-tabs]')
 	let tabsActiveHash = []
 	if (tabs.length > 0) {
@@ -157,3 +157,5 @@ export function tabs() {
 		}
 	}
 }
+
+export { tabs }

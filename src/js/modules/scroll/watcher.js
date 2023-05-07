@@ -19,14 +19,17 @@ class ScrollWatcher {
 		if (items.length) {
 			const uniqParams = uniqArray(
 				Array.from(items).map(item => {
-					return `${item.dataset.watchRoot ? item.dataset.watchRoot : null
-						}|${item.dataset.watchMargin
+					return `${
+						item.dataset.watchRoot ? item.dataset.watchRoot : null
+					}|${
+						item.dataset.watchMargin
 							? item.dataset.watchMargin
 							: '0px'
-						}|${item.dataset.watchThreshold
+					}|${
+						item.dataset.watchThreshold
 							? item.dataset.watchThreshold
 							: 0
-						}`
+					}`
 				})
 			)
 			uniqParams.forEach(uniqParam => {
@@ -34,7 +37,7 @@ class ScrollWatcher {
 				const paramsWatch = {
 					root: uniqParamArray[0],
 					margin: uniqParamArray[1],
-					threshold: uniqParamArray[2],
+					threshold: uniqParamArray[2]
 				}
 				const groupItems = Array.from(items).filter(item => {
 					const watchRoot = item.dataset.watchRoot

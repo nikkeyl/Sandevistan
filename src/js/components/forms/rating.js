@@ -1,4 +1,4 @@
-export function rating() {
+function rating() {
 	const ratings = document.querySelectorAll('.rating')
 	ratings.length > 0 ? initRatings() : null
 	function initRatings() {
@@ -46,7 +46,7 @@ export function rating() {
 			if (!rating.classList.contains('rating--sending')) {
 				rating.classList.add('rating--sending')
 				const response = await fetch('rating.json', {
-					method: 'GET',
+					method: 'GET'
 
 					// body: JSON.stringify({
 					// 	userRating: value
@@ -69,3 +69,5 @@ export function rating() {
 		}
 	}
 }
+
+export { rating }

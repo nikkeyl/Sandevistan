@@ -2,7 +2,7 @@ import { menuClose } from '@js/components/menu'
 import { html } from '@js/helpers/nodeList'
 import SmoothScroll from 'smooth-scroll'
 
-export const gotoBlock = (
+const gotoBlock = (
 	targetBlock,
 	noHeader = false,
 	speed = 500,
@@ -42,3 +42,5 @@ export const gotoBlock = (
 		}
 	}
 }
+
+export { gotoBlock }

@@ -6,7 +6,7 @@ import {
 } from '@js/helpers/bodyLockToggle'
 import { html } from '@js/helpers/nodeList'
 
-export function menuInit() {
+function menuInit() {
 	if (document.querySelector('.icon-menu')) {
 		document.addEventListener('click', e => {
 			if (bodyLockStatus && e.target.closest('.icon-menu')) {
@@ -21,11 +21,13 @@ export function menuInit() {
 		})
 	}
 }
-export function menuOpen() {
+function menuOpen() {
 	bodyLock()
 	html.classList.add('menu-open')
 }
-export function menuClose() {
+function menuClose() {
 	bodyUnlock()
 	html.classList.remove('menu-open')
 }
+
+export { menuClose, menuOpen, menuInit }

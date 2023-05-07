@@ -1,4 +1,4 @@
-export function quantity() {
+function quantity() {
 	document.addEventListener('click', e => {
 		const targetElement = e.target
 		if (
@@ -33,3 +33,5 @@ export function quantity() {
 		}
 	})
 }
+
+export { quantity }
