@@ -1,6 +1,6 @@
-let addWindowScrollEvent = false
+// let addWindowScrollEvent = false
 export function stickyBlock() {
-	addWindowScrollEvent = true
+	// addWindowScrollEvent = true
 	function stickyBlockInit() {
 		const stickyParents = document.querySelectorAll('[data-sticky]')
 		if (stickyParents.length) {
@@ -30,7 +30,7 @@ export function stickyBlock() {
 		const startPoint =
 			stickyBlockItem.getBoundingClientRect().top + scrollY - offsetTop
 
-		document.addEventListener('windowScroll', stickyBlockActions)
+		document.addEventListener('scroll', stickyBlockActions)
 		//window.addEventListener('resize', stickyBlockActions)
 
 		function stickyBlockActions() {
@@ -84,11 +84,11 @@ export function stickyBlock() {
 	stickyBlockInit()
 }
 // duplicate code in headerScroll.js
-setTimeout(() => {
-	if (addWindowScrollEvent) {
-		const windowScroll = new Event('windowScroll')
-		window.addEventListener('scroll', () => {
-			document.dispatchEvent(windowScroll)
-		})
-	}
-}, 0)
+// setTimeout(() => {
+// 	if (addWindowScrollEvent) {
+// 		const windowScroll = new Event('windowScroll')
+// 		window.addEventListener('scroll', () => {
+// 			document.dispatchEvent(windowScroll)
+// 		})
+// 	}
+// }, 0)

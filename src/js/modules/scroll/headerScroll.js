@@ -1,6 +1,6 @@
-let addWindowScrollEvent = false
+// let addWindowScrollEvent = false
 export function headerScroll() {
-	addWindowScrollEvent = true
+	// addWindowScrollEvent = true
 	const header = document.querySelector('header.header')
 	const headerShow = header.hasAttribute('data-scroll-show')
 	const headerShowTimer = header.dataset.scrollShow
@@ -9,7 +9,7 @@ export function headerScroll() {
 	const startPoint = header.dataset.scroll ? header.dataset.scroll : 1
 	let scrollDirection = 0
 	let timer
-	document.addEventListener('windowScroll', () => {
+	document.addEventListener('scroll', () => {
 		const scrollTop = window.scrollY
 		clearTimeout(timer)
 		if (scrollTop >= startPoint) {
@@ -46,11 +46,11 @@ export function headerScroll() {
 	})
 }
 // duplicate code in stickyBlock.js
-setTimeout(() => {
-	if (addWindowScrollEvent) {
-		const windowScroll = new Event('windowScroll')
-		window.addEventListener('scroll', () => {
-			document.dispatchEvent(windowScroll)
-		})
-	}
-}, 0)
+// setTimeout(() => {
+// 	if (addWindowScrollEvent) {
+// 		const windowScroll = new Event('windowScroll')
+// 		window.addEventListener('scroll', () => {
+// 			document.dispatchEvent(windowScroll)
+// 		})
+// 	}
+// }, 0)
