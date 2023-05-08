@@ -8,33 +8,31 @@ import { setHash } from '@js/helpers/setHash'
 function tabs() {
 	const tabs = document.querySelectorAll('[data-tabs]')
 	let tabsActiveHash = []
-	if (tabs.length > 0) {
-		const hash = getHash()
-		hash && hash.startsWith('tab-')
-			? (tabsActiveHash = hash.replace('tab-', '').split('-'))
-			: null
-		tabs.forEach((tabsBlock, index) => {
-			tabsBlock.classList.add('tab-init')
-			tabsBlock.setAttribute('data-tabs-index', index)
-			tabsBlock.addEventListener('click', setTabsAction)
-			initTabs(tabsBlock)
-		})
-		// duplicate code spollers
-		const mdQueriesArray = dataMediaQueries(tabs, 'tabs')
-		if (mdQueriesArray && mdQueriesArray.length) {
-			mdQueriesArray.forEach(mdQueriesItem => {
-				mdQueriesItem.matchMedia.addEventListener('change', () => {
-					setTitlePosition(
-						mdQueriesItem.itemsArray,
-						mdQueriesItem.matchMedia
-					)
-				})
+	const hash = getHash()
+	hash && hash.startsWith('tab-')
+		? (tabsActiveHash = hash.replace('tab-', '').split('-'))
+		: null
+	tabs.forEach((tabsBlock, index) => {
+		tabsBlock.classList.add('tab-init')
+		tabsBlock.setAttribute('data-tabs-index', index)
+		tabsBlock.addEventListener('click', setTabsAction)
+		initTabs(tabsBlock)
+	})
+	// duplicate code spollers
+	const mdQueriesArray = dataMediaQueries(tabs, 'tabs')
+	if (mdQueriesArray && mdQueriesArray.length) {
+		mdQueriesArray.forEach(mdQueriesItem => {
+			mdQueriesItem.matchMedia.addEventListener('change', () => {
 				setTitlePosition(
 					mdQueriesItem.itemsArray,
 					mdQueriesItem.matchMedia
 				)
 			})
-		}
+			setTitlePosition(
+				mdQueriesItem.itemsArray,
+				mdQueriesItem.matchMedia
+			)
+		})
 	}
 	function setTitlePosition(tabsMediaArray, matchMedia) {
 		tabsMediaArray.forEach(tabsMediaItem => {
@@ -76,23 +74,21 @@ function tabs() {
 				? tabsActiveTitle.classList.remove('tab-active')
 				: null
 		}
-		if (tabsContent.length) {
-			tabsContent = Array.from(tabsContent).filter(
-				item => item.closest('[data-tabs]') === tabsBlock
-			)
-			tabsTitles = Array.from(tabsTitles).filter(
-				item => item.closest('[data-tabs]') === tabsBlock
-			)
-			tabsContent.forEach((tabsContentItem, index) => {
-				tabsTitles[index].setAttribute('data-tabs-title', '')
-				tabsContentItem.setAttribute('data-tabs-item', '')
-				tabsActiveHashBlock && index == tabsActiveHash[1]
-					? tabsTitles[index].classList.add('tab-active')
-					: null
-				tabsContentItem.hidden =
-					!tabsTitles[index].classList.contains('tab-active')
-			})
-		}
+		tabsContent = Array.from(tabsContent).filter(
+			item => item.closest('[data-tabs]') === tabsBlock
+		)
+		tabsTitles = Array.from(tabsTitles).filter(
+			item => item.closest('[data-tabs]') === tabsBlock
+		)
+		tabsContent.forEach((tabsContentItem, index) => {
+			tabsTitles[index].setAttribute('data-tabs-title', '')
+			tabsContentItem.setAttribute('data-tabs-item', '')
+			tabsActiveHashBlock && index == tabsActiveHash[1]
+				? tabsTitles[index].classList.add('tab-active')
+				: null
+			tabsContentItem.hidden =
+				!tabsTitles[index].classList.contains('tab-active')
+		})
 	}
 	function setTabsStatus(tabsBlock) {
 		let tabsTitles = tabsBlock.querySelectorAll('[data-tabs-title]')
@@ -106,31 +102,29 @@ function tabs() {
 			}
 		}
 		const tabsBlockAnimate = isTabsAnamate(tabsBlock)
-		if (tabsContent.length > 0) {
-			const isHash = tabsBlock.hasAttribute('data-tabs-hash')
-			tabsContent = Array.from(tabsContent).filter(
-				item => item.closest('[data-tabs]') === tabsBlock
-			)
-			tabsTitles = Array.from(tabsTitles).filter(
-				item => item.closest('[data-tabs]') === tabsBlock
-			)
-			tabsContent.forEach((tabsContentItem, index) => {
-				if (tabsTitles[index].classList.contains('tab-active')) {
-					tabsBlockAnimate
-						? slideDown(tabsContentItem, tabsBlockAnimate)
-						: (tabsContentItem.hidden = false)
-					isHash && !tabsContentItem.closest('.popup')
-						? setHash(`tab-${tabsBlockIndex}-${index}`)
-						: null
+		const isHash = tabsBlock.hasAttribute('data-tabs-hash')
+		tabsContent = Array.from(tabsContent).filter(
+			item => item.closest('[data-tabs]') === tabsBlock
+		)
+		tabsTitles = Array.from(tabsTitles).filter(
+			item => item.closest('[data-tabs]') === tabsBlock
+		)
+		tabsContent.forEach((tabsContentItem, index) => {
+			if (tabsTitles[index].classList.contains('tab-active')) {
+				tabsBlockAnimate
+					? slideDown(tabsContentItem, tabsBlockAnimate)
+					: (tabsContentItem.hidden = false)
+				isHash && !tabsContentItem.closest('.popup')
+					? setHash(`tab-${tabsBlockIndex}-${index}`)
+					: null
+			} else {
+				if (tabsBlockAnimate) {
+					slideUp(tabsContentItem, tabsBlockAnimate)
 				} else {
-					if (tabsBlockAnimate) {
-						slideUp(tabsContentItem, tabsBlockAnimate)
-					} else {
-						tabsContentItem.hidden = true
-					}
+					tabsContentItem.hidden = true
 				}
-			})
-		}
+			}
+		})
 	}
 	function setTabsAction(e) {
 		const el = e.target
@@ -146,8 +140,8 @@ function tabs() {
 				)
 				tabActiveTitle.length
 					? (tabActiveTitle = Array.from(tabActiveTitle).filter(
-							item => item.closest('[data-tabs]') === tabsBlock
-					  ))
+						item => item.closest('[data-tabs]') === tabsBlock
+					))
 					: null
 				removeClasses('[data-tabs-title].tab-active', 'tab-active')
 				tabTitle.classList.add('tab-active')

@@ -4,11 +4,9 @@ function counter() {
 			const digitsCounters = digitsCountersItems
 				? digitsCountersItems
 				: document.querySelectorAll('[data-digits-counter]')
-			if (digitsCounters) {
-				digitsCounters.forEach(digitsCounter => {
-					digitsCountersAnimate(digitsCounter)
-				})
-			}
+			digitsCounters.forEach(digitsCounter => {
+				digitsCountersAnimate(digitsCounter)
+			})
 		}
 		function digitsCountersAnimate(digitsCounter) {
 			let startTimestamp = null
@@ -40,9 +38,7 @@ function counter() {
 					const digitsCountersItems = targetElement.querySelectorAll(
 						'[data-digits-counter]'
 					)
-					digitsCountersItems.length
-						? digitsCountersInit(digitsCountersItems)
-						: null
+					digitsCountersInit(digitsCountersItems)
 					observer.unobserve(targetElement)
 				}
 			})
@@ -50,11 +46,9 @@ function counter() {
 		const sections = document.querySelectorAll(
 			'[data-digits-counter-wrapper]'
 		)
-		if (sections.length) {
-			sections.forEach(section => {
-				observer.observe(section)
-			})
-		}
+		sections.forEach(section => {
+			observer.observe(section)
+		})
 	})
 }
 

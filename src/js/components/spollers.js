@@ -4,114 +4,108 @@ import { slideUp } from '@js/helpers/slideUp'
 
 function spollers() {
 	const spollersArray = document.querySelectorAll('[data-spollers]')
-	function spoller() {
-		const spollersRegular = Array.from(spollersArray).filter(item => {
-			return !item.dataset.spollers.split(',')[0]
-		})
-		spollersRegular.length ? initSpollers(spollersRegular) : null
-		// duplicate code tabs
-		const mdQueriesArray = dataMediaQueries(spollersArray, 'spollers')
-		if (mdQueriesArray && mdQueriesArray.length) {
-			mdQueriesArray.forEach(mdQueriesItem => {
-				mdQueriesItem.matchMedia.addEventListener('change', () => {
-					initSpollers(
-						mdQueriesItem.itemsArray,
-						mdQueriesItem.matchMedia
-					)
-				})
-				initSpollers(mdQueriesItem.itemsArray, mdQueriesItem.matchMedia)
-			})
-		}
-		function initSpollers(spollersArray, matchMedia = false) {
-			spollersArray.forEach(spollersBlock => {
-				spollersBlock = matchMedia ? spollersBlock.item : spollersBlock
-				if (matchMedia.matches || !matchMedia) {
-					spollersBlock.classList.add('spoller-init')
-					initSpollerBody(spollersBlock)
-					spollersBlock.addEventListener('click', setSpollerAction)
-				} else {
-					spollersBlock.classList.remove('spoller-init')
-					initSpollerBody(spollersBlock, false)
-					spollersBlock.removeEventListener('click', setSpollerAction)
-				}
-			})
-		}
-		function initSpollerBody(spollersBlock, hideSpollerBody = true) {
-			let spollerTitles = spollersBlock.querySelectorAll('[data-spoller]')
-			if (spollerTitles.length) {
-				spollerTitles = Array.from(spollerTitles).filter(
-					item => item.closest('[data-spollers]') === spollersBlock
+	const spollersRegular = Array.from(spollersArray).filter(item => {
+		return !item.dataset.spollers.split(',')[0]
+	})
+	spollersRegular.length ? initSpollers(spollersRegular) : null
+	// duplicate code tabs
+	const mdQueriesArray = dataMediaQueries(spollersArray, 'spollers')
+	if (mdQueriesArray && mdQueriesArray.length) {
+		mdQueriesArray.forEach(mdQueriesItem => {
+			mdQueriesItem.matchMedia.addEventListener('change', () => {
+				initSpollers(
+					mdQueriesItem.itemsArray,
+					mdQueriesItem.matchMedia
 				)
-				spollerTitles.forEach(spollerTitle => {
-					if (hideSpollerBody) {
-						spollerTitle.removeAttribute('tabindex')
-						if (
-							!spollerTitle.classList.contains('spoller-active')
-						) {
-							spollerTitle.nextElementSibling.hidden = true
-						}
-					} else {
-						spollerTitle.setAttribute('tabindex', '-1')
-						spollerTitle.nextElementSibling.hidden = false
-					}
-				})
+			})
+			initSpollers(mdQueriesItem.itemsArray, mdQueriesItem.matchMedia)
+		})
+	}
+	function initSpollers(spollersArray, matchMedia = false) {
+		spollersArray.forEach(spollersBlock => {
+			spollersBlock = matchMedia ? spollersBlock.item : spollersBlock
+			if (matchMedia.matches || !matchMedia) {
+				spollersBlock.classList.add('spoller-init')
+				initSpollerBody(spollersBlock)
+				spollersBlock.addEventListener('click', setSpollerAction)
+			} else {
+				spollersBlock.classList.remove('spoller-init')
+				initSpollerBody(spollersBlock, false)
+				spollersBlock.removeEventListener('click', setSpollerAction)
 			}
-		}
-		function setSpollerAction(e) {
-			const el = e.target
-			if (el.closest('[data-spoller]')) {
-				const spollerTitle = el.closest('[data-spoller]')
-				const spollersBlock = spollerTitle.closest('[data-spollers]')
-				const oneSpoller =
-					spollersBlock.hasAttribute('data-one-spoller')
-				const spollerSpeed = spollersBlock.dataset.spollersSpeed
-					? parseInt(spollersBlock.dataset.spollersSpeed)
-					: 500
-				if (!spollersBlock.querySelectorAll('.slide').length) {
-					oneSpoller &&
+		})
+	}
+	function initSpollerBody(spollersBlock, hideSpollerBody = true) {
+		let spollerTitles = spollersBlock.querySelectorAll('[data-spoller]')
+
+		spollerTitles = Array.from(spollerTitles).filter(
+			item => item.closest('[data-spollers]') === spollersBlock
+		)
+		spollerTitles.forEach(spollerTitle => {
+			if (hideSpollerBody) {
+				spollerTitle.removeAttribute('tabindex')
+				if (
 					!spollerTitle.classList.contains('spoller-active')
-						? hideSpollersBody(spollersBlock)
-						: null
-					spollerTitle.classList.toggle('spoller-active')
-					slideToggle(spollerTitle.nextElementSibling, spollerSpeed)
+				) {
+					spollerTitle.nextElementSibling.hidden = true
 				}
-				e.preventDefault()
+			} else {
+				spollerTitle.setAttribute('tabindex', '-1')
+				spollerTitle.nextElementSibling.hidden = false
 			}
-		}
-		function hideSpollersBody(spollersBlock) {
-			const spollerActiveTitle = spollersBlock.querySelector(
-				'[data-spoller].spoller-active'
-			)
+		})
+	}
+	function setSpollerAction(e) {
+		const el = e.target
+		if (el.closest('[data-spoller]')) {
+			const spollerTitle = el.closest('[data-spoller]')
+			const spollersBlock = spollerTitle.closest('[data-spollers]')
+			const oneSpoller =
+				spollersBlock.hasAttribute('data-one-spoller')
 			const spollerSpeed = spollersBlock.dataset.spollersSpeed
 				? parseInt(spollersBlock.dataset.spollersSpeed)
 				: 500
-			if (
-				spollerActiveTitle &&
-				!spollersBlock.querySelectorAll('.slide').length
-			) {
-				spollerActiveTitle.classList.remove('spoller-active')
-				slideUp(spollerActiveTitle.nextElementSibling, spollerSpeed)
+			if (!spollersBlock.querySelectorAll('.slide').length) {
+				oneSpoller &&
+					!spollerTitle.classList.contains('spoller-active')
+					? hideSpollersBody(spollersBlock)
+					: null
+				spollerTitle.classList.toggle('spoller-active')
+				slideToggle(spollerTitle.nextElementSibling, spollerSpeed)
 			}
-		}
-		const spollersClose = document.querySelectorAll('[data-spoller-close]')
-		if (spollersClose.length) {
-			document.addEventListener('click', e => {
-				const el = e.target
-				if (!el.closest('[data-spollers]')) {
-					spollersClose.forEach(spollerClose => {
-						const spollersBlock =
-							spollerClose.closest('[data-spollers]')
-						const spollerSpeed = spollersBlock.dataset.spollersSpeed
-							? parseInt(spollersBlock.dataset.spollersSpeed)
-							: 500
-						spollerClose.classList.remove('spoller-active')
-						slideUp(spollerClose.nextElementSibling, spollerSpeed)
-					})
-				}
-			})
+			e.preventDefault()
 		}
 	}
-	if (spollersArray.length > 0) spoller()
+	function hideSpollersBody(spollersBlock) {
+		const spollerActiveTitle = spollersBlock.querySelector(
+			'[data-spoller].spoller-active'
+		)
+		const spollerSpeed = spollersBlock.dataset.spollersSpeed
+			? parseInt(spollersBlock.dataset.spollersSpeed)
+			: 500
+		if (
+			spollerActiveTitle &&
+			!spollersBlock.querySelectorAll('.slide').length
+		) {
+			spollerActiveTitle.classList.remove('spoller-active')
+			slideUp(spollerActiveTitle.nextElementSibling, spollerSpeed)
+		}
+	}
+	const spollersClose = document.querySelectorAll('[data-spoller-close]')
+	document.addEventListener('click', e => {
+		const el = e.target
+		if (!el.closest('[data-spollers]')) {
+			spollersClose.forEach(spollerClose => {
+				const spollersBlock =
+					spollerClose.closest('[data-spollers]')
+				const spollerSpeed = spollersBlock.dataset.spollersSpeed
+					? parseInt(spollersBlock.dataset.spollersSpeed)
+					: 500
+				spollerClose.classList.remove('spoller-active')
+				slideUp(spollerClose.nextElementSibling, spollerSpeed)
+			})
+		}
+	})
 }
 
 export { spollers }

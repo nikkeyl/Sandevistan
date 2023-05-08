@@ -1,10 +1,10 @@
+import { html } from '@js/helpers/nodeList'
 import {
 	bodyLockStatus,
 	bodyLockToggle,
 	bodyUnlock,
 	bodyLock
 } from '@js/helpers/bodyLockToggle'
-import { html } from '@js/helpers/nodeList'
 
 function menuInit() {
 	if (document.querySelector('.icon-menu')) {
