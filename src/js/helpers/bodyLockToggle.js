@@ -1,8 +1,4 @@
-import {
-	lockPadding,
-	html,
-	body
-} from '@js/helpers/nodeList'
+import { lockPadding, html, body } from '@js/helpers/nodeList'
 
 let bodyLockStatus = true
 /*! Blocks page scrolling  */
@@ -44,9 +40,4 @@ const bodyLock = (delay = 500) => {
 	}
 }
 
-export {
-	bodyLockStatus,
-	bodyLockToggle,
-	bodyUnlock,
-	bodyLock
-}
+export { bodyLockStatus, bodyLockToggle, bodyUnlock, bodyLock }

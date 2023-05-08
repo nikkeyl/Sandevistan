@@ -8,8 +8,8 @@ function clock() {
 				minute: '2-digit',
 				hour12: false
 			})
-
-			document.querySelector('[data-clock]')?.innerHTML = time
+			const clock = document.querySelector('[data-clock]')
+			if (clock) clock.innerHTML = time
 		}, 1000)
 	})
 }
