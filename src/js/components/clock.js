@@ -1,15 +1,17 @@
 function clock() {
 	window.addEventListener('load', () => {
 		setInterval(() => {
-			const time = new Date().toLocaleTimeString([], {
+			const currentDate = new Date();
+			
+			const time = currentDate.toLocaleTimeString([], {
 				hour: '2-digit',
 				minute: '2-digit',
 				hour12: false
 			})
-			const clock = document.querySelector('[data-clock]')
-			clock ? (clock.innerHTML = time) : null
+			
+			document.querySelector('[data-clock]')?.innerHTML = time;
 		}, 1000)
 	})
 }
 
-export { clock }
+export { clock };
