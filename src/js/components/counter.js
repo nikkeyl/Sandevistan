@@ -10,8 +10,9 @@ function counter() {
 		}
 		function digitsCountersAnimate(digitsCounter) {
 			let startTimestamp
-			const duration =
-				parseInt(digitsCounter?.dataset?.digitsCounter) ?? 1000
+			const duration = parseInt(digitsCounter.dataset.digitsCounter)
+				? parseInt(digitsCounter.dataset.digitsCounter)
+				: 1000
 			const startValue = parseInt(digitsCounter.innerHTML)
 			const startPosition = 0
 			const step = timestamp => {

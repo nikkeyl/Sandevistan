@@ -8,7 +8,7 @@ import {
 
 function menuInit() {
 	if (document.querySelector('.icon-menu')) {
-		document.addEventListener('click', ({ target, code }) => {
+		document.addEventListener('click', ({ target }) => {
 			if (bodyLockStatus && target.closest('.icon-menu')) {
 				bodyLockToggle()
 				html.classList.toggle('menu-open')
@@ -16,9 +16,8 @@ function menuInit() {
 				html.classList.remove('menu-open')
 			}
 		})
-		
 		document.addEventListener('keyup', e => {
-			code === 'Escape' && html.classList.remove('menu-open');
+			e.code === 'Escape' && html.classList.remove('menu-open')
 		})
 	}
 }
