@@ -16,15 +16,11 @@ class MousePRLX {
 	paralaxMouseInit(paralaxMouse) {
 		paralaxMouse.forEach(el => {
 			const paralaxMouseWrapper = el.closest('[data-prlx-mouse-wrapper]')
-			const paramCoefficientX = el.dataset.prlxCx
-				? +el.dataset.prlxCx
-				: 100
-			const paramCoefficientY = el.dataset.prlxCy
-				? +el.dataset.prlxCy
-				: 100
+			const paramCoefficientX = +el.dataset.prlxCx || 100
+			const paramCoefficientY = +el.dataset.prlxCy || 100
 			const directionX = el.hasAttribute('data-prlx-dxr') ? -1 : 1
 			const directionY = el.hasAttribute('data-prlx-dyr') ? -1 : 1
-			const paramAnimation = el.dataset.prlxA ? +el.dataset.prlxA : 50
+			const paramAnimation = +el.dataset.prlxA || 50
 			let positionX = 0,
 				positionY = 0
 			let coordXprocent = 0,
@@ -38,11 +34,9 @@ class MousePRLX {
 				const distY = coordYprocent - positionY
 				positionX = positionX + (distX * paramAnimation) / 1000
 				positionY = positionY + (distY * paramAnimation) / 1000
-				el.style.cssText = `transform: translate3D(${
-					(directionX * positionX) / (paramCoefficientX / 10)
-				}%, ${
-					(directionY * positionY) / (paramCoefficientY / 10)
-				}%, 0);`
+				el.style.cssText = `transform: translate3D(${(directionX * positionX) / (paramCoefficientX / 10)
+					}%, ${(directionY * positionY) / (paramCoefficientY / 10)
+					}%, 0);`
 				requestAnimationFrame(setMouseParallaxStyle)
 			}
 			function mouseMoveParalax(wrapper = window) {

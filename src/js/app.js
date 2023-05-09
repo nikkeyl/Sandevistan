@@ -29,13 +29,13 @@ menuInit()
 
 // import '@js/components/map'
 
-// import '@js/libs/gallery' /* https://www.lightgalleryjs.com/ */
+// import '@js/libs/gallery'
 
-// import '@js/libs/marquee' /* https://mattiacoll.github.io/vanilla-marquee-site/ */
+// import '@js/libs/marquee'
 
-// import '@js/libs/swiper' /* https://swiperjs.com/ */
+// import '@js/libs/swiper'
 
-// import '@js/libs/tippy' /* https://atomiks.github.io/tippyjs/ */
+// import '@js/libs/tippy'
 
 //----------------------------------------------------------------SCROLL
 
@@ -49,11 +49,11 @@ menuInit()
 // pageNavigation()
 
 import { lazyMedia } from '@js/libs/lazyLoad'
-lazyMedia /* https://github.com/verlok/vanilla-lazyload */
+lazyMedia
 
 // import '@js/modules/scroll/watcher'
 
-// import '@js/libs/simpleBar' /* https://github.com/Grsmto/simplebar/tree/master/packages/simplebar */
+// import '@js/libs/simpleBar'
 
 //----------------------------------------------------------------FORMS
 
@@ -76,13 +76,13 @@ lazyMedia /* https://github.com/verlok/vanilla-lazyload */
 // rating()
 
 // import { range } from '@js/libs/range'
-// range() /* https://refreshless.com/nouislider/ */
+// range()
 
 // import '@js/components/forms/select'
 
-// import '@js/libs/datePicker' /* https://www.npmjs.com/package/js-datepicker */
+// import '@js/libs/datePicker'
 
-// import '@js/libs/inputMask' /* https://github.com/RobinHerbots/Inputmask */
+// import '@js/libs/inputMask'
 
 //----------------------------------------------------------------MODULES
 
@@ -98,14 +98,15 @@ lazyMedia /* https://github.com/verlok/vanilla-lazyload */
 // import { fullVHfix } from '@js/modules/fullScreenFix'
 // fullVHfix()
 
+// import { DynamicAdapt } from '@js/modules/dynAdapt'
+// new DynamicAdapt('max').init()
+
 import { webp } from '@js/modules/webp'
 webp()
 
 // import '@js/modules/mousePRLX'
 
-// import '@js/modules/dynAdapt' /* https://github.com/FreelancerLifeStyle/dynamic_adapt */
-
-// import '@js/libs/typed' /* https://mattboldt.github.io/typed/ */
+// import '@js/libs/typed'
 
 //----------------------------------------------------------------EFFECTS
 

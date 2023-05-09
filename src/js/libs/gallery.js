@@ -1,3 +1,5 @@
+/* https://www.lightgalleryjs.com/ */
+
 import { nodeObjects } from '@js/helpers/nodeList'
 import lightGallery from 'lightgallery'
 
