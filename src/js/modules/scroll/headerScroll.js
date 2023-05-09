@@ -1,10 +1,8 @@
 function headerScroll() {
 	const header = document.querySelector('header.header')
 	const headerShow = header.hasAttribute('data-scroll-show')
-	const headerShowTimer = header.dataset.scrollShow
-		? header.dataset.scrollShow
-		: 500
-	const startPoint = header.dataset.scroll ? header.dataset.scroll : 1
+	const headerShowTimer = header.dataset.scrollShow || 500
+	const startPoint = header.dataset.scroll || 1
 	let scrollDirection = 0
 	let timer
 	document.addEventListener('scroll', () => {
@@ -43,5 +41,4 @@ function headerScroll() {
 		scrollDirection = scrollTop <= 0 ? 0 : scrollTop
 	})
 }
-
 export { headerScroll }

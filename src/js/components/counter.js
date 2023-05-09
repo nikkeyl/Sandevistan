@@ -1,18 +1,14 @@
 function counter() {
 	window.addEventListener('load', () => {
 		function digitsCountersInit(digitsCountersItems) {
-			const digitsCounters =
-				digitsCountersItems ??
-				document.querySelectorAll('[data-digits-counter]')
+			const digitsCounters = digitsCountersItems
 			digitsCounters.forEach(digitsCounter =>
 				digitsCountersAnimate(digitsCounter)
 			)
 		}
 		function digitsCountersAnimate(digitsCounter) {
 			let startTimestamp
-			const duration = parseInt(digitsCounter.dataset.digitsCounter)
-				? parseInt(digitsCounter.dataset.digitsCounter)
-				: 1000
+			const duration = parseInt(digitsCounter.dataset.digitsCounter) || 1000
 			const startValue = parseInt(digitsCounter.innerHTML)
 			const startPosition = 0
 			const step = timestamp => {
@@ -35,8 +31,7 @@ function counter() {
 					const digitsCountersItems = target.querySelectorAll(
 						'[data-digits-counter]'
 					)
-					digitsCountersItems.length &&
-						digitsCountersInit(digitsCountersItems)
+					digitsCountersInit(digitsCountersItems)
 					observer.unobserve(target)
 				}
 			})
