@@ -21,7 +21,7 @@
 		left: 0;
 		top: 0;
 		overflow: hidden;
-		transition: all 0.2s ease;
+		transition: width 0.2s ease, color 0.2s ease;
 
 		&::before {
 			@include pseudo("★★★★★", absolute);

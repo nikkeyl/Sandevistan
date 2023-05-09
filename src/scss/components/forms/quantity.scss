@@ -19,8 +19,8 @@
 			top: 50%;
 			margin: 0 0 0 rem(-4.5);
 			border-radius: rem(1);
-			background-color: $color-dark;
-			transition: all 0.3s ease;
+			background-color: $color-gray;
+			transition: background-color 0.3s ease;
 		}
 
 		&--plus {

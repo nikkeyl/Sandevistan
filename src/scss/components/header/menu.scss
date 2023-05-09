@@ -11,7 +11,7 @@
 			overflow: auto;
 			padding: rem(80) 0 rem(30);
 			background-color: $color-light;
-			transition: all 0.3s ease;
+			transition: left 0.3s ease;
 
 			&::before {
 				@include pseudo("", fixed);
@@ -49,7 +49,7 @@
 
 		font-size: rem($font-size);
 		line-height: math.div(19, $font-size);
-		transition: all 0.3s ease;
+		transition: color 0.3s ease;
 
 		// для корректной работы line effect
 		//     display: block;

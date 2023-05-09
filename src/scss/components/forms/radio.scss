@@ -42,8 +42,9 @@
 			content: "";
 			flex: 0 0 rem(20);
 			align-self: flex-start;
-			border: 1px solid $color-gray;
+			border: rem(1) solid $color-gray;
 			border-radius: 50%;
+			transition: box-shadow 0.3s ease;
 		}
 
 		&::after {
@@ -55,7 +56,7 @@
 			border-radius: 50%;
 			background-color: $color-dark-gray;
 			transform: scale(0);
-			transition: all 0.3s ease;
+			transition: transform 0.3s ease;
 		}
 	}
 

@@ -10,7 +10,7 @@
 		border-radius: 50%;
 		color: $color-light;
 		background-color: $color-dark-gray;
-		transition: all 0.3s ease;
+		transition: color 0.3s ease, background-color 0.3s ease;
 
 		&.active {
 			color: $color-dark;
@@ -28,7 +28,7 @@
 }
 
 [data-font-item] {
-	transition: all 0.3s ease;
+	transition: font-size 0.3s ease;
 }
 
 .change-font-range {
@@ -39,14 +39,14 @@
 	&__range {
 		appearance: none;
 		width: rem(100);
-		background: transparent;
+		background-color: transparent;
 
 		&::-webkit-slider-thumb {
 			appearance: none;
 			border-radius: 50%;
 			width: rem(9);
 			height: rem(9);
-			background: $color-dark;
+			background-color: $color-dark;
 			cursor: pointer;
 		}
 

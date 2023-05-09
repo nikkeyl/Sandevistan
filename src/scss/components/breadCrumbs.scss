@@ -21,7 +21,7 @@
 
 	&__link {
 		color: $color-gray;
-		transition: all 0.3s ease;
+		transition: color 0.3s ease;
 
 		@media (any-hover: hover) {
 			&:hover {

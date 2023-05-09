@@ -52,20 +52,20 @@
 	position: relative;
 	border: rem(1) solid #d3d3d3;
 	border-radius: rem(30);
-	background: #fafafa;
+	background-color: #fafafa;
 }
 
 .noUi-connect {
-	background: #add8e6;
+	background-color: #add8e6;
 }
 
 .noUi-handle {
 	position: absolute;
 	border: rem(1) solid #d9d9d9;
 	border-radius: 50%;
-	background: $color-light;
+	background-color: $color-light;
 	backface-visibility: hidden;
-	transition: all 0.1s ease;
+	transition: background-color 0.1s ease;
 	cursor: grab;
 }
 
@@ -83,7 +83,7 @@
 	white-space: nowrap;
 	text-align: center;
 	color: $color-dark;
-	background: $color-light;
+	background-color: $color-light;
 }
 
 .noUi-horizontal .noUi-tooltip {

@@ -57,7 +57,7 @@
 %gray-filter {
 	/* Gray filter */
 	filter: grayscale(1);
-	transition: all 0.3s ease;
+	transition: filter 0.3s ease;
 
 	@media (any-hover: hover) {
 		&:hover {

@@ -17,7 +17,8 @@
 	&::-webkit-scrollbar-thumb {
 		border-radius: rem(5);
 		background-color: $color-dark;
-		transition: background-color 0.3s ease;
+
+		// transition: background-color 0.3s ease;
 
 		@media (any-hover: hover) {
 			&:hover {

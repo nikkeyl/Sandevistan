@@ -1,17 +1,33 @@
+@function decimal-round($number, $digits: 4, $mode: round) {
+	$n: 1;
+
+	@for $i from 1 through $digits {
+		$n: $n * 10;
+	}
+
+	@if $mode == round {
+		@return math.div(round($number * $n), $n);
+	} @else if $mode == ceil {
+		@return math.div(ceil($number * $n), $n);
+	} @else {
+		@return math.div(floor($number * $n), $n);
+	}
+}
+
 @function em($px, $current: 16) {
-	$result: math.div($px, $current) + em;
+	$result: decimal-round(math.div($px, $current)) + em;
 
 	@return $result;
 }
 
 @function percent($px, $from) {
-	$result: math.div($px, $from) * 100%;
+	$result: decimal-round(math.div($px, $from)) * 100%;
 
 	@return $result;
 }
 
 @function rem($px) {
-	$result: math.div($px, 16) + rem;
+	$result: decimal-round(math.div($px, 16)) + rem;
 
 	@return $result;
 }

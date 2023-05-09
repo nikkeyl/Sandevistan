@@ -104,11 +104,11 @@
 	border: rem(1) solid #d3d3d3;
 	border-radius: rem(4);
 	box-shadow: inset 0 rem(1) rem(1) #f0f0f0, 0 rem(3) rem(6) rem(-5) #bbb;
-	background: #fafafa;
+	background-color: #fafafa;
 }
 
 .noUi-connect {
-	background: #3fb8af;
+	background-color: #3fb8af;
 }
 
 /* Handles and cursors; */
@@ -126,7 +126,7 @@
 	border-radius: rem(3);
 	box-shadow: inset 0 0 rem(1) $color-light, inset 0 rem(1) rem(7) #ebebeb,
 		0 rem(3) rem(6) rem(-3) #bbb;
-	background: $color-light;
+	background-color: $color-light;
 	backface-visibility: hidden;
 	cursor: default;
 }
@@ -145,7 +145,7 @@
 	left: rem(14);
 	top: rem(6);
 	display: block;
-	background: #e8e7e6;
+	background-color: #e8e7e6;
 }
 
 .noUi-handle::after {
@@ -166,7 +166,7 @@
 
 /* Disabled state; */
 [disabled] .noUi-connect {
-	background: #b8b8b8;
+	background-color: #b8b8b8;
 }
 
 [disabled].noUi-target,
@@ -201,15 +201,15 @@
 /* Markings; */
 .noUi-marker {
 	position: absolute;
-	background: #ccc;
+	background-color: #ccc;
 }
 
 .noUi-marker-sub {
-	background: #aaa;
+	background-color: #aaa;
 }
 
 .noUi-marker-large {
-	background: #aaa;
+	background-color: #aaa;
 }
 
 /* Horizontal layout; */
@@ -283,7 +283,7 @@
 	white-space: nowrap;
 	text-align: center;
 	color: $color-dark;
-	background: $color-light;
+	background-color: $color-light;
 }
 
 .noUi-horizontal .noUi-tooltip {

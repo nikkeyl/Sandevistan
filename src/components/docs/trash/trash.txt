@@ -30,6 +30,8 @@
 
 Исправить круговую зависимость
 
+слелать пре коммит хук для commit
+
 когда поддержка media queries будет 90 - 95% перейти на @media (width >= rem($tablet))
 
 Перенести import webPackConfig в plugins.js
