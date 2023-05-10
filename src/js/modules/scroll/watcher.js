@@ -83,9 +83,7 @@ class ScrollWatcher {
 	}
 	scrollWatcherCreate(configWatcher) {
 		this.observer = new IntersectionObserver((entries, observer) => {
-			entries.forEach(entry => {
-				this.scrollWatcherCallback(entry, observer)
-			})
+			entries.forEach(entry => this.scrollWatcherCallback(entry, observer))
 		}, configWatcher)
 	}
 	scrollWatcherInit(items, configWatcher) {
@@ -119,11 +117,6 @@ class ScrollWatcher {
 				}
 			})
 		)
-		/*
-		if (targetElement.dataset.watch === 'some value') {
-			/пишем уникальную специфику
-		}
-		*/
 	}
 }
 nodeObjects.watcher = new ScrollWatcher({})

@@ -14,7 +14,7 @@ function dataMediaQueries(array, dataSetValue) {
 			const breakpoint = {}
 			const paramsArray = params.split(',')
 			breakpoint.value = paramsArray[0]
-			breakpoint.type = paramsArray[1] ? paramsArray[1].trim() : 'max'
+			breakpoint.type = paramsArray[1]?.trim() || 'max'
 			breakpoint.item = item
 			breakpointsArray.push(breakpoint)
 		})

@@ -18,7 +18,6 @@ function tabs() {
 		tabsBlock.addEventListener('click', setTabsAction)
 		initTabs(tabsBlock)
 	})
-	// duplicate code spollers
 	const mdQueriesArray = dataMediaQueries(tabs, 'tabs')
 	if (mdQueriesArray && mdQueriesArray.length) {
 		mdQueriesArray.forEach(mdQueriesItem => {

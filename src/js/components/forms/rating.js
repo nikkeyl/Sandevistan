@@ -42,7 +42,7 @@ function rating() {
 				})
 			}
 		}
-		async function setRatingValue(/* value, */ rating) {
+		async function setRatingValue(rating) {
 			if (!rating.classList.contains('rating--sending')) {
 				rating.classList.add('rating--sending')
 				const response = await fetch('rating.json', {

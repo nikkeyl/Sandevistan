@@ -17,7 +17,6 @@ class Popup {
 			setAutoplayYoutube: true,
 			classes: {
 				popup: 'popup',
-				// popupWrapper: 'popup__wrapper',
 				popupContent: 'popup__content',
 				popupActive: 'popup--show',
 				bodyActive: 'popup-show'

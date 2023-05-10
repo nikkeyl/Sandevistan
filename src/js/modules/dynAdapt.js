@@ -24,15 +24,15 @@ class DynamicAdapt {
 			)
 			object.breakpoint = dataArray[1]?.trim() || '767.98'
 			object.place = dataArray[2]?.trim() || 'last'
-			object.index = this.indexInParent(object.parent, object.element)
 			this.objects.push(object)
 		})
 		this.arraySort(this.objects)
-		this.mediaQueries = uniqArray(this.objects
-			.map(
+		this.mediaQueries = uniqArray(
+			this.objects.map(
 				({ breakpoint }) =>
 					`(${this.type}-width: ${breakpoint}px),${breakpoint}`
-			))
+			)
+		)
 		this.mediaQueries.forEach(media => {
 			const mediaSplit = media.split(',')
 			const matchMedia = window.matchMedia(mediaSplit[0])
@@ -49,7 +49,6 @@ class DynamicAdapt {
 	mediaHandler(matchMedia, objects) {
 		if (matchMedia.matches) {
 			objects.forEach(object => {
-				// object.index = this.indexInParent(object.parent, object.element)
 				this.moveTo(object.place, object.element, object.destination)
 			})
 		} else {
@@ -74,10 +73,9 @@ class DynamicAdapt {
 	}
 	moveBack(parent, element, index) {
 		element.classList.remove(this.daClassname)
-		parent.children[index]?.before(element) || parent.append(element)
-	}
-	indexInParent(parent, element) {
-		return [...parent.children].indexOf(element)
+		parent.children[index]
+			? parent.children[index].before(element)
+			: parent.append(element)
 	}
 	arraySort(arr) {
 		if (this.type === 'min') {

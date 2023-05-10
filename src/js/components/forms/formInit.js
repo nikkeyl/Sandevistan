@@ -9,13 +9,11 @@ function formFieldsInit(
 	const formFields = document.querySelectorAll(
 		'input[placeholder],textarea[placeholder]'
 	)
-	if (formFields.length) {
-		formFields.forEach(formField => {
-			!formField.hasAttribute('data-placeholder-nohide')
-				? (formField.dataset.placeholder = formField.placeholder)
-				: null
-		})
-	}
+	formFields.forEach(formField => {
+		!formField.hasAttribute('data-placeholder-nohide')
+			? (formField.dataset.placeholder = formField.placeholder)
+			: null
+	})
 	document.body.addEventListener('focusin', e => {
 		const targetElement = e.target
 		if (
@@ -40,7 +38,7 @@ function formFieldsInit(
 		) {
 			targetElement.dataset.placeholder
 				? (targetElement.placeholder =
-						targetElement.dataset.placeholder)
+					targetElement.dataset.placeholder)
 				: null
 			if (!targetElement.hasAttribute('data-no-focus-classes')) {
 				targetElement.classList.remove('form-focus')
@@ -92,7 +90,7 @@ function formFieldsInit(
 	function setHeight(textarea, height) {
 		textarea.style.height = `${height}px`
 	}
-	if (textareas.length && options.autoHeight) setHeight()
+	if (options.autoHeight) setHeight()
 }
 
 export { formFieldsInit }

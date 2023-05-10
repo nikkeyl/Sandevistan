@@ -12,12 +12,10 @@ if (document.querySelector('[data-marquee]')) {
 		delayBeforeStart: 1000,
 		direction: 'left',
 		duplicated: true,
-		// duration: 15000,
 		speed: 100,
 		gap: 20,
 		pauseOnHover: true,
 		startVisible: true
-		// recalcResize: true
 	})
 	nodeObjects.creepLine = creepLine
 }

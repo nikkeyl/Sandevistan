@@ -27,12 +27,10 @@ if (document.querySelector('[data-datepicker]')) {
 		overlayButton: 'Применить',
 		overlayPlaceholder: 'Год (4 цифры)',
 		startDay: 1,
-		formatter: (input, date /* , instance */) => {
+		formatter: (input, date) => {
 			const value = date.toLocaleDateString()
 			input.value = value
 		}
-		/* onSelect: (input, instance, date) => {
-		} */
 	})
 	nodeObjects.datepicker = picker
 }

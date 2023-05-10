@@ -601,7 +601,6 @@ class SelectConstructor {
 		}
 	}
 	searchActions(selectItem) {
-		// const originalSelect = this.getSelectElement(selectItem).originalSelect
 		const selectInput = this.getSelectElement(
 			selectItem,
 			this.selectClasses.classSelectInput
@@ -631,7 +630,7 @@ class SelectConstructor {
 				: null
 		})
 	}
-	selectCallback(/* selectItem, */ originalSelect) {
+	selectCallback(originalSelect) {
 		document.dispatchEvent(
 			new CustomEvent('selectCallback', {
 				detail: {

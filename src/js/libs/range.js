@@ -6,13 +6,10 @@ import * as noUiSlider from 'nouislider'
 import wNumb from 'wnumb'
 
 import '@scss/components/forms/range'
-// import '@scss/libs/range'
 
 function range() {
 	const priceSlider = document.querySelector('[data-range]')
 	function rangeInit() {
-		// const textFrom = priceSlider.getAttribute('data-from')
-		// const textTo = priceSlider.getAttribute('data-to')
 		noUiSlider.create(priceSlider, {
 			start: [0, 200000],
 			connect: true,

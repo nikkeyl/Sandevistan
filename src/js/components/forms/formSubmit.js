@@ -62,7 +62,7 @@ function formSubmit() {
 			}
 		}
 	}
-	function formSent(form /* responseResult = `` */) {
+	function formSent(form) {
 		document.dispatchEvent(
 			new CustomEvent('formSent', {
 				detail: {

@@ -36,7 +36,6 @@ function pageNavigation() {
 			const entry = e.detail.entry
 			const targetElement = entry.target
 			if (targetElement.dataset.watch === 'navigator') {
-				// const navigatorActiveItem = document.querySelector(`[data-goto].navigator-active`)
 				let navigatorCurrentItem
 				if (
 					targetElement.id &&
@@ -59,9 +58,6 @@ function pageNavigation() {
 					}
 				}
 				if (entry.isIntersecting) {
-					// navigatorActiveItem
-					// 	? navigatorActiveItem.classList.remove('navigator-active')
-					// 	: null
 					navigatorCurrentItem
 						? navigatorCurrentItem.classList.add('navigator-active')
 						: null
@@ -77,11 +73,6 @@ function pageNavigation() {
 	}
 	if (getHash()) {
 		let goToHash
-		// if (document.querySelector(`#${getHash()}`)) {
-		// 	goToHash = `#${getHash()}`
-		// } else if (document.querySelector(`.${getHash()}`)) {
-		// 	goToHash = `.${getHash()}`
-		// }
 		document.querySelector(`#${getHash()}`)
 			? (goToHash = `#${getHash()}`)
 			: (goToHash = `.${getHash()}`)

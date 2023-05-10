@@ -14,15 +14,13 @@ import Isotope from 'isotope-layout'
 function filter() {
 	function imagesInit() {
 		const images = document.querySelectorAll('.article__image')
-		if (images.length) {
-			images.forEach(image => {
-				const imageItem = image.querySelector('img')
-				const padding =
-					(imageItem.offsetHeight / imageItem.offsetWidth) * 100
-				image.style.paddingBottom = `${padding}%`
-				imageItem.classList.add('init')
-			})
-		}
+		images.forEach(image => {
+			const imageItem = image.querySelector('img')
+			const padding =
+				(imageItem.offsetHeight / imageItem.offsetWidth) * 100
+			image.style.paddingBottom = `${padding}%`
+			imageItem.classList.add('init')
+		})
 	}
 	function gridInit() {
 		const items = document.querySelector('.articles__items')

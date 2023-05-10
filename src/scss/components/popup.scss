@@ -47,7 +47,7 @@
 		background-color: $color-gray;
 		visibility: hidden;
 		transform: scale(0);
-		transition: transform 0.3s ease;
+		transition: transform 0.3s ease, visibility 0.3s ease;
 
 		.lock & {
 			visibility: visible;

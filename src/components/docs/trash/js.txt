@@ -1,14 +1,18 @@
-покопаться в комментариях в js файлах
-
 Исправить все проблемы в функциях которые показывает eslint
 
 Выделить все одинаковые скрипты в функциях и сделать их отдельными файлами
 
 переделать import '@js/libs/typed' на import { typed } from '@js/libs/typed'
 
+заменить == на === если возможно
+
+заменить code.value ? code.value : other.code на code?.value || other.code
+
 удалить if если после него стоит forEach
 
 Удаление не нужного кода js
+
+заменить hasAttribute на dataset
 
 Убрать nodeObjects
 

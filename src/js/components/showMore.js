@@ -30,14 +30,14 @@ function showMore() {
 			}
 		}
 		function initItemsMedia(mdQueriesArray) {
-			mdQueriesArray.forEach(mdQueriesItem => {
+			mdQueriesArray.forEach(mdQueriesItem =>
 				initItems(mdQueriesItem.itemsArray, mdQueriesItem.matchMedia)
-			})
+			)
 		}
 		function initItems(showMoreBlocks, matchMedia) {
-			showMoreBlocks.forEach(showMoreBlock => {
+			showMoreBlocks.forEach(showMoreBlock =>
 				initItem(showMoreBlock, matchMedia)
-			})
+			)
 		}
 		function initItem(showMoreBlock, matchMedia = false) {
 			showMoreBlock = matchMedia ? showMoreBlock.item : showMoreBlock
