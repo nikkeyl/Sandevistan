@@ -12,6 +12,26 @@
 		"sourceType": "module"
 	},
 	"rules": {
-		"no-useless-escape": 0
+		"no-useless-escape": 0,
+		"spaced-comment": [
+			"error",
+			"always",
+			{
+				"line": {
+					"markers": [
+						"/"
+					]
+				},
+				"block": {
+					"markers": [
+						"!"
+					],
+					"exceptions": [
+						"*"
+					],
+					"balanced": true
+				}
+			}
+		]
 	}
 }
