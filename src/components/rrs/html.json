@@ -542,7 +542,7 @@
 	"Show More": {
 		"prefix": "showmore",
 		"body": [
-			"<div class=\"${1:showmore} ${2:block}__${1:showmore}\" data-showmore>\n\t<div class=\"${1:showmore}__content\" data-showmore-content=\"${3:200}\">$6</div>\n\t<button class=\"${1:showmore}__button\" type=\"button\" data-showmore-button hidden>\n\t\t<span>${4:Сркыть}</span>\n\t\t<span>${5:Показать еще}</span>\n\t</button>\n</div>"
+			"<div class=\"${1:showmore} ${2:block}__${1:showmore}\" data-showmore>\n\t<div class=\"${1:showmore}__content\" data-showmore-content=\"${3:200}\">$6</div>\n\t<button class=\"${1:showmore}__button\" type=\"button\" data-showmore-button hidden>\n\t\t<span>${4:Показать ещё}</span>\n\t\t<span>${5:Скрыть}</span>\n\t</button>\n</div>"
 		]
 	},
 	"Swiper": {
