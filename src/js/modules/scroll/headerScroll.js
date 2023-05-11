@@ -41,4 +41,5 @@ function headerScroll() {
 		scrollDirection = scrollTop <= 0 ? 0 : scrollTop
 	})
 }
+
 export { headerScroll }

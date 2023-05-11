@@ -1,25 +1,17 @@
 function stickyBlock() {
 	function stickyBlockInit() {
 		const stickyParents = document.querySelectorAll('[data-sticky]')
-		if (stickyParents.length) {
-			stickyParents.forEach(stickyParent => {
-				const stickyConfig = {
-					media: stickyParent.dataset.sticky
-						? parseInt(stickyParent.dataset.sticky)
-						: null,
-					top: stickyParent.dataset.stickyTop
-						? parseInt(stickyParent.dataset.stickyTop)
-						: 0,
-					bottom: stickyParent.dataset.stickyBottom
-						? parseInt(stickyParent.dataset.stickyBottom)
-						: 0,
-					header: stickyParent.hasAttribute('data-sticky-header')
-						? document.querySelector('header.header').offsetHeight
-						: 0
-				}
-				stickyBlockItem(stickyParent, stickyConfig)
-			})
-		}
+		stickyParents.forEach(stickyParent => {
+			const stickyConfig = {
+				media: parseInt(stickyParent.dataset.sticky) || null,
+				top: parseInt(stickyParent.dataset.stickyTop) || 0,
+				bottom: parseInt(stickyParent.dataset.stickyBottom) || 0,
+				header: stickyParent.hasAttribute('data-sticky-header')
+					? document.querySelector('header.header').offsetHeight
+					: 0
+			}
+			stickyBlockItem(stickyParent, stickyConfig)
+		})
 	}
 	function stickyBlockItem(stickyParent, stickyConfig) {
 		const stickyBlockItem = stickyParent.querySelector('[data-sticky-item]')
@@ -27,10 +19,7 @@ function stickyBlock() {
 		const offsetTop = headerHeight + stickyConfig.top
 		const startPoint =
 			stickyBlockItem.getBoundingClientRect().top + scrollY - offsetTop
-
 		document.addEventListener('scroll', stickyBlockActions)
-		//window.addEventListener('resize', stickyBlockActions)
-
 		function stickyBlockActions() {
 			const endPoint =
 				stickyParent.offsetHeight +
@@ -42,22 +31,21 @@ function stickyBlock() {
 				bottom: 'auto',
 				top: '0px',
 				left: '0px',
-				width: 'auto'
+				width: 'auto',
 			}
 			if (!stickyConfig.media || stickyConfig.media < window.innerWidth) {
 				if (
 					offsetTop +
-						stickyConfig.bottom +
-						stickyBlockItem.offsetHeight <
+					stickyConfig.bottom +
+					stickyBlockItem.offsetHeight <
 					window.innerHeight
 				) {
 					if (scrollY >= startPoint && scrollY <= endPoint) {
 						stickyItemValues.position = 'fixed'
 						stickyItemValues.bottom = 'auto'
 						stickyItemValues.top = `${offsetTop}px`
-						stickyItemValues.left = `${
-							stickyBlockItem.getBoundingClientRect().left
-						}px`
+						stickyItemValues.left = `${stickyBlockItem.getBoundingClientRect().left
+							}px`
 						stickyItemValues.width = `${stickyBlockItem.offsetWidth}px`
 					} else if (scrollY >= endPoint) {
 						stickyItemValues.position = 'absolute'

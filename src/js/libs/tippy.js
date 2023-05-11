@@ -18,32 +18,32 @@ import '@scss/libs/tippy'
 if (document.querySelectorAll('[data-tippy-content]')) {
 	const hints = tippy('[data-tippy-content]', {
 		plugins: [
-			//animateFill,
-			//roundArrow,
-			//followCursor,
-			//inlinePositioning,
-			//sticky
+			// animateFill,
+			// roundArrow,
+			// followCursor,
+			// inlinePositioning,
+			// sticky
 		],
-		//allowHTML: false,
-		//animateFill: false,
-		//animation: 'fade',
-		//appendTo: () => document.body,
-		//appendTo: 'parent',
-		//appendTo: element,
-		/*aria: {
+		// allowHTML: false,
+		// animateFill: false,
+		// animation: 'fade',
+		// appendTo: () => document.body,
+		// appendTo: 'parent',
+		// appendTo: element,
+		/* aria: {
 			content: 'auto',
 			expanded: 'auto'
-		},*/
-		//arrow: true,
-		//content: '',
+		}, */
+		// arrow: true,
+		// content: '',
 		delay: 0,
 		duration: [300, 250],
-		//followCursor: false,
-		//getReferenceClientRect: null,
-		//hideOnClick: true,
-		//ignoreAttributes: false,
-		//inertia: false,
-		//inlinePositioning: false,
+		// followCursor: false,
+		// getReferenceClientRect: null,
+		// hideOnClick: true,
+		// ignoreAttributes: false,
+		// inertia: false,
+		// inlinePositioning: false,
 		interactive: false,
 		interactiveBorder: 2,
 		interactiveDebounce: 0,

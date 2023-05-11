@@ -2,7 +2,7 @@ import '@scss/style'
 
 import '@js/script'
 
-//----------------------------------------------------------------COMPONENTS
+// ----------------------------------------------------------------COMPONENTS
 
 // import { showMore } from '@js/components/showMore'
 // showMore()
@@ -37,7 +37,10 @@ menuInit()
 
 // import '@js/libs/tippy'
 
-//----------------------------------------------------------------SCROLL
+// ----------------------------------------------------------------SCROLL
+
+// import { pageNavigation } from '@js/modules/scroll/pageNavigation'
+// pageNavigation()
 
 // import { headerScroll } from '@js/modules/scroll/headerScroll'
 // headerScroll()
@@ -45,17 +48,15 @@ menuInit()
 // import { stickyBlock } from '@js/modules/scroll/stickyBlock'
 // stickyBlock()
 
-// import { pageNavigation } from '@js/modules/scroll/scroll'
-// pageNavigation()
-
 import { lazyMedia } from '@js/libs/lazyLoad'
 lazyMedia
 
-// import '@js/modules/scroll/watcher'
+// import { ScrollWatcher } from '@js/modules/scroll/watcher'
+// new ScrollWatcher()
 
 // import '@js/libs/simpleBar'
 
-//----------------------------------------------------------------FORMS
+// ----------------------------------------------------------------FORMS
 
 // import { formFieldsInit } from '@js/components/forms/formInit'
 // formFieldsInit({
@@ -84,7 +85,7 @@ lazyMedia
 
 // import '@js/libs/inputMask'
 
-//----------------------------------------------------------------MODULES
+// ----------------------------------------------------------------MODULES
 
 // import { changeFontSize } from '@js/modules/changeFontSize'
 // changeFontSize()
@@ -101,14 +102,15 @@ lazyMedia
 // import { DynamicAdapt } from '@js/modules/dynAdapt'
 // new DynamicAdapt('max').init()
 
+// import { MousePRLX } from '@js/modules/mousePRLX'
+// new MousePRLX()
+
 import { webp } from '@js/modules/webp'
 webp()
 
-// import '@js/modules/mousePRLX'
-
 // import '@js/libs/typed'
 
-//----------------------------------------------------------------EFFECTS
+// ----------------------------------------------------------------EFFECTS
 
 // import { hoverEffect } from '@js/effects/hoverEffect'
 // hoverEffect()

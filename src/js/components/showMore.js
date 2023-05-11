@@ -8,9 +8,9 @@ function showMore() {
 		let showMoreBlocksRegular
 		let mdQueriesArray
 		if (showMoreBlocks.length) {
-			showMoreBlocksRegular = Array.from(showMoreBlocks).filter(item => {
-				return !item.dataset.showmoreMedia
-			})
+			showMoreBlocksRegular = Array.from(showMoreBlocks).filter(
+				item => !item.dataset.showmoreMedia
+			)
 			showMoreBlocksRegular.length
 				? initItems(showMoreBlocksRegular)
 				: null
@@ -69,25 +69,19 @@ function showMore() {
 		}
 		function getHeight(showMoreBlock, showMoreContent) {
 			let hiddenHeight = 0
-			const showMoreType = showMoreBlock.dataset.showmore
-				? showMoreBlock.dataset.showmore
-				: 'size'
+			const showMoreType = showMoreBlock.dataset.showmore || 'size'
 			if (showMoreType === 'items') {
-				const showMoreTypeValue = showMoreContent.dataset
-					.showmoreContent
-					? showMoreContent.dataset.showmoreContent
-					: 3
+				const showMoreTypeValue =
+					showMoreContent.dataset.showmoreContent || 3
 				const showMoreItems = showMoreContent.children
 				for (let i = 1; i < showMoreItems.length; i++) {
 					const showMoreItem = showMoreItems[i - 1]
 					hiddenHeight += showMoreItem.offsetHeight
-					if (i == showMoreTypeValue) break
+					if (i === showMoreTypeValue) break
 				}
 			} else {
-				const showMoreTypeValue = showMoreContent.dataset
-					.showmoreContent
-					? showMoreContent.dataset.showmoreContent
-					: 150
+				const showMoreTypeValue =
+					showMoreContent.dataset.showmoreContent || 150
 				hiddenHeight = showMoreTypeValue
 			}
 			return hiddenHeight
@@ -118,9 +112,8 @@ function showMore() {
 					const showMoreContent = showMoreBlock.querySelector(
 						'[data-showmore-content]'
 					)
-					const showMoreSpeed = showMoreButton.dataset.showmoreButton
-						? showMoreButton.dataset.showmoreButton
-						: '500'
+					const showMoreSpeed =
+						showMoreButton.dataset.showmoreButton || '500'
 					const hiddenHeight = getHeight(
 						showMoreBlock,
 						showMoreContent

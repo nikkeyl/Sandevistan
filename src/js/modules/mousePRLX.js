@@ -1,12 +1,9 @@
-import { nodeObjects } from '@js/helpers/nodeList'
+import { isMobile } from '@js/helpers/isMobile'
 
 class MousePRLX {
-	constructor(props) {
-		const defaultConfig = {
-			init: true
-		}
-		this.config = Object.assign(defaultConfig, props)
-		if (this.config.init) {
+	constructor() {
+		this.config = isMobile.any() ? false : true
+		if (this.config) {
 			const paralaxMouse = document.querySelectorAll('[data-prlx-mouse]')
 			if (paralaxMouse.length) {
 				this.paralaxMouseInit(paralaxMouse)
@@ -34,11 +31,9 @@ class MousePRLX {
 				const distY = coordYprocent - positionY
 				positionX = positionX + (distX * paramAnimation) / 1000
 				positionY = positionY + (distY * paramAnimation) / 1000
-				el.style.cssText = `transform: translate3D(${
-					(directionX * positionX) / (paramCoefficientX / 10)
-				}%, ${
-					(directionY * positionY) / (paramCoefficientY / 10)
-				}%, 0);`
+				el.style.cssText = `transform: translate3D(${(directionX * positionX) / (paramCoefficientX / 10)
+					}%, ${(directionY * positionY) / (paramCoefficientY / 10)
+					}%, 0);`
 				requestAnimationFrame(setMouseParallaxStyle)
 			}
 			function mouseMoveParalax(wrapper = window) {
@@ -61,4 +56,5 @@ class MousePRLX {
 		})
 	}
 }
-nodeObjects.mousePrlx = new MousePRLX({})
+
+export { MousePRLX }

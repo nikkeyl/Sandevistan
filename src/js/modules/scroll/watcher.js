@@ -1,10 +1,8 @@
-import { nodeObjects } from '@js/helpers/nodeList'
 import { uniqArray } from '@js/helpers/uniqArray'
 import { html } from '@js/helpers/nodeList'
 
 class ScrollWatcher {
-	constructor(props) {
-		this.config = Object.assign(props)
+	constructor() {
 		this.observer
 		!html.classList.contains('watcher') ? this.scrollWatcherRun() : null
 	}
@@ -16,52 +14,35 @@ class ScrollWatcher {
 		this.scrollWatcherConstructor(document.querySelectorAll('[data-watch]'))
 	}
 	scrollWatcherConstructor(items) {
-		if (items.length) {
-			const uniqParams = uniqArray(
-				Array.from(items).map(item => {
-					return `${
-						item.dataset.watchRoot ? item.dataset.watchRoot : null
-					}|${
-						item.dataset.watchMargin
-							? item.dataset.watchMargin
-							: '0px'
-					}|${
-						item.dataset.watchThreshold
-							? item.dataset.watchThreshold
-							: 0
-					}`
-				})
-			)
-			uniqParams.forEach(uniqParam => {
-				const uniqParamArray = uniqParam.split('|')
-				const paramsWatch = {
-					root: uniqParamArray[0],
-					margin: uniqParamArray[1],
-					threshold: uniqParamArray[2]
-				}
-				const groupItems = Array.from(items).filter(item => {
-					const watchRoot = item.dataset.watchRoot
-						? item.dataset.watchRoot
-						: null
-					const watchMargin = item.dataset.watchMargin
-						? item.dataset.watchMargin
-						: '0px'
-					const watchThreshold = item.dataset.watchThreshold
-						? item.dataset.watchThreshold
-						: 0
-					if (
-						String(watchRoot) === paramsWatch.root &&
-						String(watchMargin) === paramsWatch.margin &&
-						String(watchThreshold) === paramsWatch.threshold
-					) {
-						return item
-					}
-				})
-
-				const configWatcher = this.getScrollWatcherConfig(paramsWatch)
-				this.scrollWatcherInit(groupItems, configWatcher)
+		const uniqParams = uniqArray(
+			Array.from(items).map(item => {
+				return `${item.dataset.watchRoot || null}|${
+					item.dataset.watchMargin || '0px'
+				}|${item.dataset.watchThreshold || 0}`
 			})
-		}
+		)
+		uniqParams.forEach(uniqParam => {
+			const uniqParamArray = uniqParam.split('|')
+			const paramsWatch = {
+				root: uniqParamArray[0],
+				margin: uniqParamArray[1],
+				threshold: uniqParamArray[2]
+			}
+			const groupItems = Array.from(items).filter(item => {
+				const watchRoot = item.dataset.watchRoot || null
+				const watchMargin = item.dataset.watchMargin || '0px'
+				const watchThreshold = item.dataset.watchThreshold || 0
+				if (
+					String(watchRoot) === paramsWatch.root &&
+					String(watchMargin) === paramsWatch.margin &&
+					String(watchThreshold) === paramsWatch.threshold
+				) {
+					return item
+				}
+			})
+			const configWatcher = this.getScrollWatcherConfig(paramsWatch)
+			this.scrollWatcherInit(groupItems, configWatcher)
+		})
 	}
 	getScrollWatcherConfig(paramsWatch) {
 		const configWatcher = {}
@@ -78,12 +59,13 @@ class ScrollWatcher {
 			paramsWatch.threshold = paramsWatch.threshold.split(',')
 		}
 		configWatcher.threshold = paramsWatch.threshold
-
 		return configWatcher
 	}
 	scrollWatcherCreate(configWatcher) {
 		this.observer = new IntersectionObserver((entries, observer) => {
-			entries.forEach(entry => this.scrollWatcherCallback(entry, observer))
+			entries.forEach(entry =>
+				this.scrollWatcherCallback(entry, observer)
+			)
 		}, configWatcher)
 	}
 	scrollWatcherInit(items, configWatcher) {
@@ -119,4 +101,5 @@ class ScrollWatcher {
 		)
 	}
 }
-nodeObjects.watcher = new ScrollWatcher({})
+
+export { ScrollWatcher }

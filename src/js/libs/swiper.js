@@ -15,7 +15,7 @@ Parallax,
 */
 
 import '@scss/components/swiper'
-//import '@scss/libs/swiper'
+// import '@scss/libs/swiper'
 
 function initSliders() {
 	if (document.querySelector('.swiper')) {
@@ -27,11 +27,11 @@ function initSliders() {
 			spaceBetween: 0,
 			autoHeight: true,
 			speed: 800,
-			//touchRatio: 0,
-			//simulateTouch: true,
-			//loop: true,
-			//preloadImages: true,
-			//lazy: true,
+			// touchRatio: 0,
+			// simulateTouch: true,
+			// loop: true,
+			// preloadImages: true,
+			// lazy: true,
 			/*
 			effect: 'fade',
 			autoplay: {

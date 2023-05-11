@@ -67,7 +67,6 @@ class Popup {
 			'[contenteditable]',
 			'[tabindex]:not([tabindex^="-"])'
 		]
-		//this.options = Object.assign(config, options)
 		this.options = {
 			...config,
 			...options,

@@ -16,12 +16,12 @@ if (document.querySelector('[data-typed]')) {
 		fadeOut: false,
 		smartBackspace: true,
 		showCursor: false
-		//cursorChar: '_',
-		//fadeOutDelay: 500,
-		//autoInsertCss: true,
-		//shuffle: false,
-		//attr: 'placeholder',
-		//bindInputFocusEvents: true
+		// cursorChar: '_',
+		// fadeOutDelay: 500,
+		// autoInsertCss: true,
+		// shuffle: false,
+		// attr: 'placeholder',
+		// bindInputFocusEvents: true
 	})
 	nodeObjects.typed = typed
 }

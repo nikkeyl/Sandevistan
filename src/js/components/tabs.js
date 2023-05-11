@@ -61,14 +61,12 @@ function tabs() {
 		let tabsTitles = tabsBlock.querySelectorAll('[data-tabs-titles]>*')
 		let tabsContent = tabsBlock.querySelectorAll('[data-tabs-body]>*')
 		const tabsBlockIndex = tabsBlock.dataset.tabsIndex
-		const tabsActiveHashBlock = tabsActiveHash[0] == tabsBlockIndex
+		const tabsActiveHashBlock = tabsActiveHash[0] === tabsBlockIndex
 		if (tabsActiveHashBlock) {
 			const tabsActiveTitle = tabsBlock.querySelector(
 				'[data-tabs-titles]>.tab-active'
 			)
-			tabsActiveTitle
-				? tabsActiveTitle.classList.remove('tab-active')
-				: null
+			tabsActiveTitle?.classList.remove('tab-active')
 		}
 		tabsContent = Array.from(tabsContent).filter(
 			item => item.closest('[data-tabs]') === tabsBlock
@@ -79,7 +77,7 @@ function tabs() {
 		tabsContent.forEach((tabsContentItem, index) => {
 			tabsTitles[index].setAttribute('data-tabs-title', '')
 			tabsContentItem.setAttribute('data-tabs-item', '')
-			tabsActiveHashBlock && index == tabsActiveHash[1]
+			tabsActiveHashBlock && index === tabsActiveHash[1]
 				? tabsTitles[index].classList.add('tab-active')
 				: null
 			tabsContentItem.hidden =
@@ -92,9 +90,7 @@ function tabs() {
 		const tabsBlockIndex = tabsBlock.dataset.tabsIndex
 		function isTabsAnamate(tabsBlock) {
 			if (tabsBlock.hasAttribute('data-tabs-animate')) {
-				return tabsBlock.dataset.tabsAnimate > 0
-					? Number(tabsBlock.dataset.tabsAnimate)
-					: 500
+				return +tabsBlock.dataset.tabsAnimate || 500
 			}
 		}
 		const tabsBlockAnimate = isTabsAnamate(tabsBlock)
@@ -136,8 +132,8 @@ function tabs() {
 				)
 				tabActiveTitle.length
 					? (tabActiveTitle = Array.from(tabActiveTitle).filter(
-							item => item.closest('[data-tabs]') === tabsBlock
-					  ))
+						item => item.closest('[data-tabs]') === tabsBlock
+					))
 					: null
 				removeClasses('[data-tabs-title].tab-active', 'tab-active')
 				tabTitle.classList.add('tab-active')

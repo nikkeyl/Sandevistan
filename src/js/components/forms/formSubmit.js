@@ -24,14 +24,11 @@ function formSubmit() {
 			const ajax = form.hasAttribute('data-ajax')
 			if (ajax) {
 				e.preventDefault()
-				const formAction = form.getAttribute('action')
-					? form.getAttribute('action').trim()
-					: '#'
-				const formMethod = form.getAttribute('method')
-					? form.getAttribute('method').trim()
-					: 'GET'
+				const formAction = form.getAttribute('action')?.trim()
+					|| '#'
+				const formMethod = form.getAttribute('method')?.trim()
+					|| 'GET'
 				const formData = new FormData(form)
-
 				form.classList.add('sending')
 				const response = await fetch(formAction, {
 					method: formMethod,
@@ -55,9 +52,7 @@ function formSubmit() {
 				form.querySelector('.form-error') &&
 				form.hasAttribute('data-goto-error')
 			) {
-				const formGoToErrorClass = form.dataset.gotoError
-					? form.dataset.gotoError
-					: '.form-error'
+				const formGoToErrorClass = form.dataset.gotoError || '.form-error'
 				gotoBlock(formGoToErrorClass, true, 1000)
 			}
 		}

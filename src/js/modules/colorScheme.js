@@ -13,9 +13,9 @@ function colorScheme() {
 		}
 		window
 			.matchMedia('(prefers-color-scheme: dark)')
-			.addEventListener('change', () => {
+			.addEventListener('change', () =>
 				!saveUserTheme ? changeTheme() : null
-			})
+			)
 		const themeButton = document.querySelector('.theme-change')
 		const resetButton = document.querySelector('.reset-theme')
 		if (themeButton) {

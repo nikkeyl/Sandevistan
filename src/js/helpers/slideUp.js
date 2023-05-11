@@ -12,7 +12,7 @@ const slideUp = (target, duration = 500, showmore = 0) => {
 		target.style.marginTop = 0
 		target.style.marginBottom = 0
 		window.setTimeout(() => {
-			target.hidden = !showmore ? true : false
+			target.hidden = !showmore
 			!showmore ? target.style.removeProperty('height') : null
 			target.style.removeProperty('padding-top')
 			target.style.removeProperty('padding-bottom')

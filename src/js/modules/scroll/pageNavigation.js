@@ -1,4 +1,3 @@
-import { nodeObjects } from '@js/helpers/nodeList'
 import { gotoBlock } from '@js/helpers/goToBlock'
 import { getHash } from '@js/helpers/getHash'
 
@@ -10,26 +9,11 @@ function pageNavigation() {
 			const targetElement = e.target
 			if (targetElement.closest('[data-goto]')) {
 				const gotoLink = targetElement.closest('[data-goto]')
-				const gotoLinkSelector = gotoLink.dataset.goto
-					? gotoLink.dataset.goto
-					: ''
+				const gotoLinkSelector = gotoLink.dataset.goto || ''
 				const noHeader = gotoLink.hasAttribute('data-goto-header')
-					? true
-					: false
-				const gotoSpeed = gotoLink.dataset.gotoSpeed
-					? gotoLink.dataset.gotoSpeed
-					: 500
-				const offsetTop = gotoLink.dataset.gotoTop
-					? parseInt(gotoLink.dataset.gotoTop)
-					: 0
-				if (nodeObjects.fullpage) {
-					const fullPageSectionId = +document.querySelector(
-						`${gotoLinkSelector}[data-fp-section]`
-					)
-					nodeObjects.fullpage.switchingSection(fullPageSectionId)
-				} else {
-					gotoBlock(gotoLinkSelector, noHeader, gotoSpeed, offsetTop)
-				}
+				const gotoSpeed = gotoLink.dataset.gotoSpeed || 500
+				const offsetTop = parseInt(gotoLink.dataset.gotoTop) || 0
+				gotoBlock(gotoLinkSelector, noHeader, gotoSpeed, offsetTop)
 				e.preventDefault()
 			}
 		} else if (e.type === 'watcherCallback' && e.detail) {
@@ -45,7 +29,11 @@ function pageNavigation() {
 						`[data-goto="#${targetElement.id}"]`
 					)
 				} else if (targetElement.classList.length) {
-					for (let i = 0; i < targetElement.classList.length; i++) {
+					for (
+						let i = 0;
+						i < targetElement.classList.length;
+						i++
+					) {
 						const element = targetElement.classList[i]
 						if (
 							document.querySelector(`[data-goto=".${element}"]`)
@@ -58,15 +46,11 @@ function pageNavigation() {
 					}
 				}
 				if (entry.isIntersecting) {
-					navigatorCurrentItem
-						? navigatorCurrentItem.classList.add('navigator-active')
-						: null
+					navigatorCurrentItem?.classList.add('navigator-active')
 				} else {
-					navigatorCurrentItem
-						? navigatorCurrentItem.classList.remove(
-								'navigator-active'
-						  )
-						: null
+					navigatorCurrentItem?.classList.remove(
+						'navigator-active'
+					)
 				}
 			}
 		}
@@ -74,8 +58,8 @@ function pageNavigation() {
 	if (getHash()) {
 		let goToHash
 		document.querySelector(`#${getHash()}`)
-			? (goToHash = `#${getHash()}`)
-			: (goToHash = `.${getHash()}`)
+			? goToHash = `#${getHash()}`
+			: goToHash = `.${getHash()}`
 		goToHash ? gotoBlock(goToHash, true, 500, 20) : null
 	}
 }
