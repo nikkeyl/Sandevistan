@@ -1,4 +1,4 @@
-@function decimal-round($number, $digits: 4, $mode: round) {
+@function rounding($number, $digits: 4, $mode: round) {
 	$n: 1;
 
 	@for $i from 1 through $digits {
@@ -15,25 +15,17 @@
 }
 
 @function em($px, $current: 16) {
-	$result: decimal-round(math.div($px, $current)) + em;
-
-	@return $result;
+	@return rounding(math.div($px, $current)) + em;
 }
 
 @function percent($px, $from) {
-	$result: decimal-round(math.div($px, $from)) * 100%;
-
-	@return $result;
+	@return rounding(math.div($px, $from)) * 100%;
 }
 
 @function rem($px) {
-	$result: decimal-round(math.div($px, 16)) + rem;
-
-	@return $result;
+	@return rounding(math.div($px, 16)) + rem;
 }
 
 @function md($px) {
-	$result: em($px - 0.02);
-
-	@return $result;
+	@return em($px - 0.02);
 }
