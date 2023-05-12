@@ -6,7 +6,7 @@
 		min-height: calc(var(--vh, 1vh) * 100);
 
 		@media (max-width: md($tablet)) {
-			transition: height 0.2s;
+			transition: min-height 0.3s;
 		}
 	}
 }
