@@ -2,9 +2,14 @@ import { html } from '@js/helpers/nodeList'
 
 function glow() {
 	let bGlow, bGlowColor, bGlowSize
+
 	function buttonActions(e) {
 		const button = e.target.closest('[data-glow]')
-		if (!button) return
+
+		if (!button) {
+			return
+		}
+
 		if (e.type === 'mouseover') {
 			button.insertAdjacentHTML(
 				'beforeend',
@@ -21,14 +26,16 @@ function glow() {
 			bGlowColor.style.width = `${button.offsetWidth}px`
 			bGlowColor.style.height = `${button.offsetHeight}px`
 		}
+
 		if (e.type === 'mouseout') {
 			button.querySelector('.button__glow').remove()
 		}
+
 		if (e.type === 'mousemove') {
-			const posX =
-				e.pageX - (button.getBoundingClientRect().left - scrollX)
-			const posY =
-				e.pageY - (button.getBoundingClientRect().top - scrollY)
+			const posX = e.pageX - (button.getBoundingClientRect().left - scrollX)
+
+			const posY = e.pageY - (button.getBoundingClientRect().top - scrollY)
+
 			bGlow.style.left = `${posX - bGlowSize / 2}px`
 			bGlow.style.top = `${posY - bGlowSize / 2}px`
 			bGlowColor.style.transform = `
@@ -36,6 +43,7 @@ function glow() {
                             ${posY - (button.offsetHeight - bGlowSize / 2)}px)`
 		}
 	}
+
 	if (document.querySelector('[data-glow]')) {
 		html.addEventListener('mouseover', buttonActions)
 		html.addEventListener('mouseout', buttonActions)

@@ -9,6 +9,7 @@ function formFieldsInit(
 	const formFields = document.querySelectorAll(
 		'input[placeholder],textarea[placeholder]'
 	)
+
 	formFields.forEach(formField => {
 		!formField.hasAttribute('data-placeholder-nohide')
 			? (formField.dataset.placeholder = formField.placeholder)
@@ -16,6 +17,7 @@ function formFieldsInit(
 	})
 	document.body.addEventListener('focusin', e => {
 		const targetElement = e.target
+
 		if (
 			targetElement.tagName === 'INPUT' ||
 			targetElement.tagName === 'TEXTAREA'
@@ -23,41 +25,46 @@ function formFieldsInit(
 			targetElement.dataset.placeholder
 				? (targetElement.placeholder = '')
 				: null
+
 			if (!targetElement.hasAttribute('data-no-focus-classes')) {
 				targetElement.classList.add('form-focus')
 				targetElement.parentElement.classList.add('form-focus')
 			}
+
 			formValidate.removeError(targetElement)
 		}
 	})
 	document.body.addEventListener('focusout', e => {
 		const targetElement = e.target
+
 		if (
 			targetElement.tagName === 'INPUT' ||
 			targetElement.tagName === 'TEXTAREA'
 		) {
 			targetElement.dataset.placeholder
-				? (targetElement.placeholder =
-					targetElement.dataset.placeholder)
+				? (targetElement.placeholder = targetElement.dataset.placeholder)
 				: null
+
 			if (!targetElement.hasAttribute('data-no-focus-classes')) {
 				targetElement.classList.remove('form-focus')
 				targetElement.parentElement.classList.remove('form-focus')
 			}
+
 			targetElement.hasAttribute('data-validate')
 				? formValidate.validateInput(targetElement)
 				: null
 		}
 	})
+
 	if (options.viewPass) {
 		document.addEventListener('click', e => {
 			const targetElement = e.target
+
 			if (targetElement.closest('[class*="__viewpass"]')) {
-				const inputType = targetElement.classList.contains(
-					'viewpass-active'
-				)
+				const inputType = targetElement.classList.contains('viewpass-active')
 					? 'password'
 					: 'text'
+
 				targetElement.parentElement
 					.querySelector('input')
 					.setAttribute('type', inputType)
@@ -65,32 +72,32 @@ function formFieldsInit(
 			}
 		})
 	}
+
 	const textareas = document.querySelectorAll('textarea[data-autoheight]')
+
 	textareas.forEach(textarea => {
-		const startHeight = textarea.hasAttribute('data-autoheight-min')
-			? Number(textarea.dataset.autoheightMin)
-			: Number(textarea.offsetHeight)
-		const maxHeight = textarea.hasAttribute('data-autoheight-max')
-			? Number(textarea.dataset.autoheightMax)
-			: Infinity
+		const startHeight = +textarea.dataset.autoheightMin || +textarea.offsetHeight
+		const maxHeight = +textarea.dataset.autoheightMax || Infinity
+
 		setHeight(textarea, Math.min(startHeight, maxHeight))
 		textarea.addEventListener('input', () => {
 			if (textarea.scrollHeight > startHeight) {
 				textarea.style.height = 'auto'
 				setHeight(
 					textarea,
-					Math.min(
-						Math.max(textarea.scrollHeight, startHeight),
-						maxHeight
-					)
+					Math.min(Math.max(textarea.scrollHeight, startHeight), maxHeight)
 				)
 			}
 		})
 	})
+
 	function setHeight(textarea, height) {
 		textarea.style.height = `${height}px`
 	}
-	if (options.autoHeight) setHeight()
+
+	if (options.autoHeight) {
+		setHeight()
+	}
 }
 
 export { formFieldsInit }

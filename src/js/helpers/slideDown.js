@@ -3,7 +3,9 @@ const slideDown = (target, duration = 500, showmore = 0) => {
 		target.classList.add('slide')
 		target.hidden = target.hidden ? false : null
 		showmore ? target.style.removeProperty('height') : null
+
 		const height = target.offsetHeight
+
 		target.style.overflow = 'hidden'
 		target.style.height = showmore ? `${showmore}px` : '0px'
 		target.style.paddingTop = 0
@@ -18,12 +20,14 @@ const slideDown = (target, duration = 500, showmore = 0) => {
 		target.style.removeProperty('padding-bottom')
 		target.style.removeProperty('margin-top')
 		target.style.removeProperty('margin-bottom')
+
 		window.setTimeout(() => {
 			target.style.removeProperty('height')
 			target.style.removeProperty('overflow')
 			target.style.removeProperty('transition-duration')
 			target.style.removeProperty('transition-property')
 			target.classList.remove('slide')
+
 			document.dispatchEvent(
 				new CustomEvent('slideDownDone', {
 					detail: {

@@ -1,4 +1,5 @@
-/*!
+/*
+ *!
  * Сalendar (Datepicker plugin)
  * https://www.npmjs.com/package/js-datepicker
  */
@@ -29,8 +30,10 @@ if (document.querySelector('[data-datepicker]')) {
 		startDay: 1,
 		formatter: (input, date) => {
 			const value = date.toLocaleDateString()
+
 			input.value = value
 		}
 	})
+
 	nodeObjects.datepicker = picker
 }

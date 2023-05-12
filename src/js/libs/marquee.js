@@ -1,13 +1,14 @@
-/*!
+/*
+ *!
  * Creeping line (Marquee plugin)
  * https://mattiacoll.github.io/vanilla-marquee-site/
  */
 import { nodeObjects } from '@js/helpers/nodeList'
-import marquee from 'vanilla-marquee'
+import Marquee from 'vanilla-marquee'
 
 if (document.querySelector('[data-marquee]')) {
 	const elem = document.querySelector('[data-marquee]')
-	const creepLine = new marquee(elem, {
+	const creepLine = new Marquee(elem, {
 		css3easing: 'linear',
 		delayBeforeStart: 1000,
 		direction: 'left',
@@ -17,5 +18,6 @@ if (document.querySelector('[data-marquee]')) {
 		pauseOnHover: true,
 		startVisible: true
 	})
+
 	nodeObjects.creepLine = creepLine
 }

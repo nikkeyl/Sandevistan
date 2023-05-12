@@ -6,13 +6,16 @@ class ScrollWatcher {
 		this.observer
 		!html.classList.contains('watcher') ? this.scrollWatcherRun() : null
 	}
+
 	scrollWatcherUpdate() {
 		this.scrollWatcherRun()
 	}
+
 	scrollWatcherRun() {
 		html.classList.add('watcher')
 		this.scrollWatcherConstructor(document.querySelectorAll('[data-watch]'))
 	}
+
 	scrollWatcherConstructor(items) {
 		const uniqParams = uniqArray(
 			Array.from(items).map(item => {
@@ -21,6 +24,7 @@ class ScrollWatcher {
 				}|${item.dataset.watchThreshold || 0}`
 			})
 		)
+
 		uniqParams.forEach(uniqParam => {
 			const uniqParamArray = uniqParam.split('|')
 			const paramsWatch = {
@@ -32,6 +36,7 @@ class ScrollWatcher {
 				const watchRoot = item.dataset.watchRoot || null
 				const watchMargin = item.dataset.watchMargin || '0px'
 				const watchThreshold = item.dataset.watchThreshold || 0
+
 				if (
 					String(watchRoot) === paramsWatch.root &&
 					String(watchMargin) === paramsWatch.margin &&
@@ -41,37 +46,46 @@ class ScrollWatcher {
 				}
 			})
 			const configWatcher = this.getScrollWatcherConfig(paramsWatch)
+
 			this.scrollWatcherInit(groupItems, configWatcher)
 		})
 	}
+
 	getScrollWatcherConfig(paramsWatch) {
 		const configWatcher = {}
+
 		if (document.querySelector(paramsWatch.root)) {
 			configWatcher.root = document.querySelector(paramsWatch.root)
 		}
+
 		configWatcher.rootMargin = paramsWatch.margin
+
 		if (paramsWatch.threshold === 'prx') {
 			paramsWatch.threshold = []
+
 			for (let i = 0; i <= 1.0; i += 0.005) {
 				paramsWatch.threshold.push(i)
 			}
 		} else {
 			paramsWatch.threshold = paramsWatch.threshold.split(',')
 		}
+
 		configWatcher.threshold = paramsWatch.threshold
+
 		return configWatcher
 	}
+
 	scrollWatcherCreate(configWatcher) {
 		this.observer = new IntersectionObserver((entries, observer) => {
-			entries.forEach(entry =>
-				this.scrollWatcherCallback(entry, observer)
-			)
+			entries.forEach(entry => this.scrollWatcherCallback(entry, observer))
 		}, configWatcher)
 	}
+
 	scrollWatcherInit(items, configWatcher) {
 		this.scrollWatcherCreate(configWatcher)
 		items.forEach(item => this.observer.observe(item))
 	}
+
 	scrollWatcherIntersecting(entry, targetElement) {
 		if (entry.isIntersecting) {
 			!targetElement.classList.contains('watcher-view')
@@ -83,11 +97,14 @@ class ScrollWatcher {
 				: null
 		}
 	}
+
 	scrollWatcherOff(targetElement, observer) {
 		observer.unobserve(targetElement)
 	}
+
 	scrollWatcherCallback(entry, observer) {
 		const targetElement = entry.target
+
 		this.scrollWatcherIntersecting(entry, targetElement)
 		targetElement.hasAttribute('data-watch-once') && entry.isIntersecting
 			? this.scrollWatcherOff(targetElement, observer)

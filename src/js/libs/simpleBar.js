@@ -1,4 +1,5 @@
-/*!
+/*
+ *!
  * Custom scrollbar (Simplebar plugin)
  * https://github.com/Grsmto/simplebar/tree/master/packages/simplebar
  */

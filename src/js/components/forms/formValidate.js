@@ -1,9 +1,11 @@
 import { nodeObjects } from '@js/helpers/nodeList'
 
-let formValidate = {
+const formValidate = {
 	getErrors(form) {
-		let error = 0
 		const formRequiredItems = form.querySelectorAll('*[data-required]')
+
+		let error = 0
+
 		formRequiredItems.forEach(formRequiredItem => {
 			if (
 				(formRequiredItem.offsetParent !== null ||
@@ -13,12 +15,15 @@ let formValidate = {
 				error += this.validateInput(formRequiredItem)
 			}
 		})
+
 		return error
 	},
 	validateInput(formRequiredItem) {
 		let error = 0
+
 		if (formRequiredItem.dataset.required === 'email') {
 			formRequiredItem.value = formRequiredItem.value.replace(' ', '')
+
 			if (this.emailTest(formRequiredItem)) {
 				this.addError(formRequiredItem)
 				error++
@@ -31,22 +36,26 @@ let formValidate = {
 		) {
 			this.addError(formRequiredItem)
 			error++
+		} else if (!formRequiredItem.value.trim()) {
+			this.addError(formRequiredItem)
+			error++
 		} else {
-			if (!formRequiredItem.value.trim()) {
-				this.addError(formRequiredItem)
-				error++
-			} else {
-				this.removeError(formRequiredItem)
-			}
+			this.removeError(formRequiredItem)
 		}
+
 		return error
 	},
 	addError(formRequiredItem) {
 		formRequiredItem.classList.add('form-error')
 		formRequiredItem.parentElement.classList.add('form-error')
+
 		const inputError =
 			formRequiredItem.parentElement.querySelector('.form__error')
-		if (inputError) formRequiredItem.parentElement.removeChild(inputError)
+
+		if (inputError) {
+			formRequiredItem.parentElement.removeChild(inputError)
+		}
+
 		if (formRequiredItem.dataset.error) {
 			formRequiredItem.parentElement.insertAdjacentHTML(
 				'beforeend',
@@ -57,6 +66,7 @@ let formValidate = {
 	removeError(formRequiredItem) {
 		formRequiredItem.classList.remove('form-error')
 		formRequiredItem.parentElement.classList.remove('form-error')
+
 		if (formRequiredItem.parentElement.querySelector('.form__error')) {
 			formRequiredItem.parentElement.removeChild(
 				formRequiredItem.parentElement.querySelector('.form__error')
@@ -67,17 +77,22 @@ let formValidate = {
 		form.reset()
 		setTimeout(() => {
 			const inputs = form.querySelectorAll('input,textarea')
+
 			inputs.forEach(el => {
 				el.parentElement.classList.remove('form-focus')
 				el.classList.remove('form-focus')
 				formValidate.removeError(el)
 			})
+
 			const checkboxes = form.querySelectorAll('.checkbox__input')
+
 			checkboxes.forEach(checkbox => {
 				checkbox.checked = false
 			})
+
 			if (nodeObjects.select) {
-				let selects = form.querySelectorAll('.select')
+				const selects = form.querySelectorAll('.select')
+
 				selects.forEach(select => {
 					select.querySelector('select')
 					nodeObjects.select.selectBuild(select)

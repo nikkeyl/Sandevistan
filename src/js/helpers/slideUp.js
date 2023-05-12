@@ -11,6 +11,7 @@ const slideUp = (target, duration = 500, showmore = 0) => {
 		target.style.paddingBottom = 0
 		target.style.marginTop = 0
 		target.style.marginBottom = 0
+
 		window.setTimeout(() => {
 			target.hidden = !showmore
 			!showmore ? target.style.removeProperty('height') : null
@@ -22,6 +23,7 @@ const slideUp = (target, duration = 500, showmore = 0) => {
 			target.style.removeProperty('transition-duration')
 			target.style.removeProperty('transition-property')
 			target.classList.remove('slide')
+
 			document.dispatchEvent(
 				new CustomEvent('slideUpDone', {
 					detail: {

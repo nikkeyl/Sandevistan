@@ -4,11 +4,14 @@ import { html } from '@js/helpers/nodeList'
 
 function fullVHfix() {
 	const fullScreens = document.querySelectorAll('[data-fullscreen]')
+
 	/*! Accounting for floating panel in mobile browsers */
 	function fixHeight() {
 		const vh = window.innerHeight * 0.01
+
 		html.style.setProperty('--vh', `${vh}px`)
 	}
+
 	if (fullScreens.length && isMobile.any()) {
 		window.addEventListener('resize', fixHeight)
 		addTouchClass()

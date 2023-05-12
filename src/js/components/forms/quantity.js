@@ -1,6 +1,7 @@
 function quantity() {
 	document.addEventListener('click', e => {
 		const targetElement = e.target
+
 		if (
 			targetElement.closest('[data-quantity-plus]') ||
 			targetElement.closest('[data-quantity-minus]')
@@ -8,9 +9,12 @@ function quantity() {
 			const valueElement = targetElement
 				.closest('[data-quantity]')
 				.querySelector('[data-quantity-value]')
+
 			let value = parseInt(valueElement.value)
+
 			if (targetElement.hasAttribute('data-quantity-plus')) {
 				value++
+
 				if (
 					+valueElement.dataset.quantityMax &&
 					+valueElement.dataset.quantityMax < value
@@ -19,6 +23,7 @@ function quantity() {
 				}
 			} else {
 				--value
+
 				if (+valueElement.dataset.quantityMin) {
 					if (+valueElement.dataset.quantityMin > value) {
 						value = valueElement.dataset.quantityMin
@@ -27,6 +32,7 @@ function quantity() {
 					value = 1
 				}
 			}
+
 			targetElement
 				.closest('[data-quantity]')
 				.querySelector('[data-quantity-value]').value = value
