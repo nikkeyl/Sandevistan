@@ -126,39 +126,23 @@ $themeColor: #07f !default;
 	}
 
 	.swiper-slide-shadow {
-		background: rgb(0 0 0 / 15%);
+		background-color: rgb(0 0 0 / 15%);
 	}
 
 	.swiper-slide-shadow-left {
-		background-image: linear-gradient(
-			to left,
-			rgb(0 0 0 / 50%),
-			rgb(0 0 0 / 0%)
-		);
+		background: linear-gradient(to left, rgb(0 0 0 / 50%), rgb(0 0 0 / 0%));
 	}
 
 	.swiper-slide-shadow-right {
-		background-image: linear-gradient(
-			to right,
-			rgb(0 0 0 / 50%),
-			rgb(0 0 0 / 0%)
-		);
+		background: linear-gradient(to right, rgb(0 0 0 / 50%), rgb(0 0 0 / 0%));
 	}
 
 	.swiper-slide-shadow-top {
-		background-image: linear-gradient(
-			to top,
-			rgb(0 0 0 / 50%),
-			rgb(0 0 0 / 0%)
-		);
+		background: linear-gradient(to top, rgb(0 0 0 / 50%), rgb(0 0 0 / 0%));
 	}
 
 	.swiper-slide-shadow-bottom {
-		background-image: linear-gradient(
-			to bottom,
-			rgb(0 0 0 / 50%),
-			rgb(0 0 0 / 0%)
-		);
+		background: linear-gradient(to bottom, rgb(0 0 0 / 50%), rgb(0 0 0 / 0%));
 	}
 
 	&,
