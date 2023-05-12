@@ -1,8 +1,5 @@
 {
-	"trailingComma": "none",
 	"arrowParens": "avoid",
-	"singleQuote": true,
-	"semi": false,
 	"overrides": [
 		{
 			"files": "*.scss",
@@ -10,5 +7,9 @@
 				"singleQuote": false
 			}
 		}
-	]
+	],
+	"quoteProps": "as-needed",
+	"singleQuote": true,
+	"semi": false,
+	"trailingComma": "none"
 }
