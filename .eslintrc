@@ -1,7 +1,10 @@
 {
 	"extends": [
 		"eslint:recommended",
-		"plugin:prettier/recommended"
+		"prettier"
+	],
+	"plugins": [
+		"prettier"
 	],
 	"env": {
 		"browser": true,
@@ -12,7 +15,130 @@
 		"sourceType": "module"
 	},
 	"rules": {
+		"prettier/prettier": "error",
+		// "arrow-body-style": [
+		// 	"error",
+		// 	"as-needed"
+		// ],
+		// "class-methods-use-this": "error",
+		// "consistent-return": "error",
+		// "capitalized-comments": [
+		// 	"error",
+		// 	"always"
+		// ],
+		"curly": "error",
+		"default-case": "error",
+		"dot-notation": "error",
+		"eqeqeq": [
+			"error",
+			"always"
+		],
+		"func-name-matching": "error",
+		"for-direction": "error",
+		// "func-style": [
+		// 	"error",
+		// 	"expression"
+		// ],
+		"grouped-accessor-pairs": "error",
+		"lines-between-class-members": [
+			"error",
+			"always"
+		],
+		"lines-around-comment": [
+			"error",
+			{
+				"beforeBlockComment": true,
+				"beforeLineComment": true,
+				"allowObjectStart": true,
+				"allowArrayStart": true,
+				"allowBlockStart": true
+			}
+		],
+		"multiline-comment-style": [
+			"error",
+			"starred-block"
+		],
+		// "max-lines-per-function": [
+		// 	"error",
+		// 	{
+		// 		"skipBlankLines": true,
+		// 		"skipComments": true,
+		// 		"max": 10
+		// 	}
+		// ],
+		// "max-params": [
+		// 	"error",
+		// 	4
+		// ],
+		"no-constant-binary-expression": "error",
+		"no-new-native-nonconstructor": "error",
+		"no-template-curly-in-string": "error",
+		"no-array-constructor": "error",
+		"no-duplicate-imports": "error",
+		// "no-use-before-define": "error",
+		"no-confusing-arrow": "error",
+		"no-empty-function": "error",
+		"no-self-compare": "error",
+		"no-invalid-this": "error",
+		"no-extra-bind": "error",
 		"no-useless-escape": 0,
+		// "no-alert": "error",
+		"no-console": "error",
+		"no-bitwise": "error",
+		"no-eq-null": "error",
+		"no-eval": "error",
+		"new-cap": "error",
+		"prefer-exponentiation-operator": "error",
+		"padding-line-between-statements": [
+			"error",
+			{
+				"blankLine": "always",
+				"prev": [
+					"const"
+				],
+				"next": "*"
+			},
+			{
+				"blankLine": "any",
+				"prev": [
+					"const"
+				],
+				"next": [
+					"const"
+				]
+			},
+			{
+				"blankLine": "always",
+				"prev": [
+					"let"
+				],
+				"next": "*"
+			},
+			{
+				"blankLine": "any",
+				"prev": [
+					"let"
+				],
+				"next": [
+					"let"
+				]
+			},
+			{
+				"blankLine": "always",
+				"prev": [
+					"function"
+				],
+				"next": "*"
+			},
+			{
+				"blankLine": "always",
+				"prev": [
+					"if"
+				],
+				"next": "*"
+			}
+		],
+		"prefer-const": "error",
 		"spaced-comment": [
 			"error",
 			"always",
