@@ -25,9 +25,6 @@ function range() {
 		const priceStart = document.querySelector('[data-price-start]')
 		const priceEnd = document.querySelector('[data-price-end]')
 
-		priceStart.addEventListener('change', setPriceValues)
-		priceEnd.addEventListener('change', setPriceValues)
-
 		function setPriceValues() {
 			let priceStartValue
 			let priceEndValue
@@ -36,6 +33,9 @@ function range() {
 			priceEnd.value !== '' ? (priceEndValue = priceEnd.value) : null
 			priceSlider.noUiSlider.set([priceStartValue, priceEndValue])
 		}
+
+		priceStart.addEventListener('change', setPriceValues)
+		priceEnd.addEventListener('change', setPriceValues)
 	}
 
 	if (priceSlider) {

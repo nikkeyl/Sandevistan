@@ -1,13 +1,5 @@
 function counter() {
 	window.addEventListener('load', () => {
-		function digitsCountersInit(digitsCountersItems) {
-			const digitsCounters = digitsCountersItems
-
-			digitsCounters.forEach(digitsCounter =>
-				digitsCountersAnimate(digitsCounter)
-			)
-		}
-
 		function digitsCountersAnimate(digitsCounter) {
 			const duration = parseInt(digitsCounter.dataset.digitsCounter) || 1000
 			const startValue = parseInt(digitsCounter.innerHTML)
@@ -29,6 +21,12 @@ function counter() {
 			}
 
 			window.requestAnimationFrame(step)
+		}
+
+		function digitsCountersInit(digitsCountersItems) {
+			digitsCountersItems.forEach(digitsCounter =>
+				digitsCountersAnimate(digitsCounter)
+			)
 		}
 
 		const options = { threshold: 0.3 }

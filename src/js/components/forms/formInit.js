@@ -75,6 +75,10 @@ function formFieldsInit(
 
 	const textareas = document.querySelectorAll('textarea[data-autoheight]')
 
+	function setHeight(textarea, height) {
+		textarea.style.height = `${height}px`
+	}
+
 	textareas.forEach(textarea => {
 		const startHeight = +textarea.dataset.autoheightMin || +textarea.offsetHeight
 		const maxHeight = +textarea.dataset.autoheightMax || Infinity
@@ -90,10 +94,6 @@ function formFieldsInit(
 			}
 		})
 	})
-
-	function setHeight(textarea, height) {
-		textarea.style.height = `${height}px`
-	}
 
 	if (options.autoHeight) {
 		setHeight()

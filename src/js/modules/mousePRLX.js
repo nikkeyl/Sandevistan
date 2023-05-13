@@ -27,12 +27,6 @@ class MousePRLX {
 			let coordXprocent = 0,
 				coordYprocent = 0
 
-			setMouseParallaxStyle()
-
-			paralaxMouseWrapper
-				? mouseMoveParalax(paralaxMouseWrapper)
-				: mouseMoveParalax()
-
 			function setMouseParallaxStyle() {
 				const distX = coordXprocent - positionX
 				const distY = coordYprocent - positionY
@@ -63,6 +57,12 @@ class MousePRLX {
 					}
 				})
 			}
+
+			setMouseParallaxStyle()
+
+			paralaxMouseWrapper
+				? mouseMoveParalax(paralaxMouseWrapper)
+				: mouseMoveParalax()
 		})
 	}
 }
