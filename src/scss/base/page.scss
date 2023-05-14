@@ -1,35 +1,35 @@
 .page {
-	font-family: $main-font-family;
-	font-weight: $main-font-weight;
-	font-size: rem($main-font-size);
-	color: $main-font-color;
+    font-family: $main-font-family;
+    font-weight: $main-font-weight;
+    font-size: rem($main-font-size);
+    color: $main-font-color;
 
-	.lock & {
-		overflow: hidden;
-		touch-action: none;
+    .lock & {
+        overflow: hidden;
+        touch-action: none;
 
-		/* Prevents chain scrolling */
-		overscroll-behavior: none;
-	}
+        /* Prevents chain scrolling */
+        overscroll-behavior: none;
+    }
 
-	.loaded & {
-	}
+    .loaded & {
+    }
 
-	@if $background-gradient == 1 {
-		background: $main-background-color;
+    @if $background-gradient == 1 {
+        background: $main-background-color;
 
-		/* If the background is a gradient, then this property helps to stretch the gradinet to its full height */
-		background-attachment: fixed;
-	} @else {
-		background-color: $main-background-color;
-	}
+        /* If the background is a gradient, then this property helps to stretch the gradinet to its full height */
+        background-attachment: fixed;
+    } @else {
+        background-color: $main-background-color;
+    }
 
-	@if $selestion == 1 {
-		*::selection {
-			color: $color-light;
+    @if $selestion == 1 {
+        *::selection {
+            color: $color-light;
 
-			/* Changes the default text selection styles */
-			background-color: $color-dark-gray;
-		}
-	}
+            /* Changes the default text selection styles */
+            background-color: $color-dark-gray;
+        }
+    }
 }

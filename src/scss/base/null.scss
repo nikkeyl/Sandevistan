@@ -1,25 +1,25 @@
 *,
 *::before,
 *::after {
-	margin: 0;
-	border: 0;
-	padding: 0;
-	box-sizing: border-box;
-	-webkit-tap-highlight-color: transparent;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
 }
 
 html,
 body {
-	height: 100%;
-	min-width: $min-width + px;
+    height: 100%;
+    min-width: $min-width + px;
 }
 
 body {
-	line-height: 1;
-	text-rendering: optimizelegibility;
-	text-size-adjust: 100%;
-	-moz-osx-font-smoothing: grayscale;
-	-webkit-font-smoothing: antialiased;
+    line-height: 1;
+    text-rendering: optimizelegibility;
+    text-size-adjust: 100%;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
 }
 
 input[type="search"],
@@ -27,72 +27,72 @@ input[type="email"],
 input[type="text"],
 input[type="tel"],
 textarea {
-	appearance: none;
+    appearance: none;
 }
 
 textarea,
 select,
 button,
 input {
-	font-family: $main-font-family;
-	font-size: inherit;
+    font-family: $main-font-family;
+    font-size: inherit;
 }
 
 button {
-	color: inherit;
-	background-color: inherit;
-	cursor: pointer;
+    color: inherit;
+    background-color: inherit;
+    cursor: pointer;
 
-	&::-moz-focus-inner {
-		border: 0;
-		padding: 0;
-	}
+    &::-moz-focus-inner {
+        border: 0;
+        padding: 0;
+    }
 }
 
 :focus,
 :active {
-	@if $focus-active-outline == 1 {
-		outline: none;
-	}
+    @if $focus-active-outline == 1 {
+        outline: none;
+    }
 }
 
 a {
-	color: inherit;
+    color: inherit;
 
-	&:visited,
-	&:link {
-		text-decoration: none;
-	}
+    &:visited,
+    &:link {
+        text-decoration: none;
+    }
 
-	&:active,
-	&:focus {
-		@if $a-focus-active-outline == 1 {
-			outline: none;
-		}
-	}
+    &:active,
+    &:focus {
+        @if $a-focus-active-outline == 1 {
+            outline: none;
+        }
+    }
 
-	&:hover {
-		text-decoration: none;
-	}
+    &:hover {
+        text-decoration: none;
+    }
 }
 
 address {
-	font-style: normal;
+    font-style: normal;
 }
 
 label {
-	cursor: pointer;
+    cursor: pointer;
 }
 
 summary,
 ul,
 ol,
 li {
-	list-style: none;
+    list-style: none;
 }
 
 img {
-	vertical-align: top;
+    vertical-align: top;
 }
 
 h1,
@@ -102,6 +102,6 @@ h4,
 h5,
 h6,
 p {
-	font-weight: inherit;
-	font-size: inherit;
+    font-weight: inherit;
+    font-size: inherit;
 }

@@ -1,46 +1,46 @@
 .anim-rise {
-	opacity: 0;
-	transform: translateY(rem(20));
-	transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+    transform: translateY(rem(20));
+    transition: transform 0.3s ease, opacity 0.3s ease;
 
-	&.watcher-view {
-		opacity: 1;
-		transform: translateY(0);
-	}
+    &.watcher-view {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 //========================================================================================================================================================//
 .anim-down {
-	opacity: 0;
-	transform: translateY(rem(-20));
-	transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+    transform: translateY(rem(-20));
+    transition: transform 0.3s ease, opacity 0.3s ease;
 
-	&.watcher-view {
-		opacity: 1;
-		transform: translateY(0);
-	}
+    &.watcher-view {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 //========================================================================================================================================================//
 .anim-ltr {
-	opacity: 0;
-	transform: translateX(rem(-20));
-	transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+    transform: translateX(rem(-20));
+    transition: transform 0.3s ease, opacity 0.3s ease;
 
-	&.watcher-view {
-		opacity: 1;
-		transform: translateX(0);
-	}
+    &.watcher-view {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 //========================================================================================================================================================//.anim-rise {
 .anim-rtl {
-	opacity: 0;
-	transform: translateX(rem(20));
-	transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+    transform: translateX(rem(20));
+    transition: transform 0.3s ease, opacity 0.3s ease;
 
-	&.watcher-view {
-		opacity: 1;
-		transform: translateX(0);
-	}
+    &.watcher-view {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }

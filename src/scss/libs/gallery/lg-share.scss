@@ -6,150 +6,150 @@
 @import "lg-mixins";
 
 .lg-outer {
-	.lg-dropdown-overlay {
-		@include transition(visibility 0s linear 0.18s, opacity 0.18s linear);
+    .lg-dropdown-overlay {
+        @include transition(visibility 0s linear 0.18s, opacity 0.18s linear);
 
-		position: absolute;
-		z-index: $zindex-toolbar - 1;
-		background-color: rgb(0 0 0 / 25%);
-		opacity: 0;
-		visibility: hidden;
-		will-change: visibility, opacity;
-		cursor: default;
-		inset: 0;
-	}
+        position: absolute;
+        z-index: $zindex-toolbar - 1;
+        background-color: rgb(0 0 0 / 25%);
+        opacity: 0;
+        visibility: hidden;
+        will-change: visibility, opacity;
+        cursor: default;
+        inset: 0;
+    }
 
-	.lg-dropdown {
-		@include transform(translate3d(0, rem(5), 0));
-		@include transitionCustom(
-			transform 0.18s linear,
-			visibility 0s linear 0.5s,
-			opacity 0.18s linear
-		);
+    .lg-dropdown {
+        @include transform(translate3d(0, rem(5), 0));
+        @include transitionCustom(
+            transform 0.18s linear,
+            visibility 0s linear 0.5s,
+            opacity 0.18s linear
+        );
 
-		position: absolute;
-		right: 0;
-		top: rem(50);
-		list-style-type: none;
-		margin: 0;
-		border-radius: rem(2);
-		padding: rem(10) 0;
-		font-size: rem(14);
-		text-align: left;
-		background-color: $color-light;
-		opacity: 0;
-		visibility: hidden;
-		will-change: visibility, opacity, transform;
+        position: absolute;
+        right: 0;
+        top: rem(50);
+        list-style-type: none;
+        margin: 0;
+        border-radius: rem(2);
+        padding: rem(10) 0;
+        font-size: rem(14);
+        text-align: left;
+        background-color: $color-light;
+        opacity: 0;
+        visibility: hidden;
+        will-change: visibility, opacity, transform;
 
-		&::after {
-			content: "";
-			position: absolute;
-			right: rem(16);
-			top: rem(-16);
-			display: block;
-			border: rem(8) solid transparent;
-			border-bottom-color: $color-light;
-			width: 0;
-			height: 0;
-		}
+        &::after {
+            content: "";
+            position: absolute;
+            right: rem(16);
+            top: rem(-16);
+            display: block;
+            border: rem(8) solid transparent;
+            border-bottom-color: $color-light;
+            width: 0;
+            height: 0;
+        }
 
-		> li {
-			&:hover {
-				a {
-					color: $color-dark-gray;
-				}
-			}
+        > li {
+            &:hover {
+                a {
+                    color: $color-dark-gray;
+                }
+            }
 
-			&:last-child {
-				margin-bottom: 0;
-			}
-		}
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
 
-		a {
-			display: block;
-			padding: rem(4) rem(12);
-			font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Arial",
-				sans-serif;
-			font-size: rem(12);
-			white-space: pre;
-			color: $color-dark-gray;
+        a {
+            display: block;
+            padding: rem(4) rem(12);
+            font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Arial",
+                sans-serif;
+            font-size: rem(12);
+            white-space: pre;
+            color: $color-dark-gray;
 
-			&:hover {
-				background-color: rgb(0 0 0 / 7%);
-			}
-		}
+            &:hover {
+                background-color: rgb(0 0 0 / 7%);
+            }
+        }
 
-		.lg-dropdown-text {
-			display: inline-block;
-			vertical-align: middle;
-			margin-top: rem(-3);
-			line-height: 1;
-		}
+        .lg-dropdown-text {
+            display: inline-block;
+            vertical-align: middle;
+            margin-top: rem(-3);
+            line-height: 1;
+        }
 
-		.lg-icon {
-			display: inline-block;
-			float: none;
-			vertical-align: middle;
-			margin-right: rem(8);
-			padding: 0;
-			width: auto;
-			height: auto;
-			font-size: rem(20);
-			line-height: 1;
-			color: $color-dark-gray;
-		}
-	}
+        .lg-icon {
+            display: inline-block;
+            float: none;
+            vertical-align: middle;
+            margin-right: rem(8);
+            padding: 0;
+            width: auto;
+            height: auto;
+            font-size: rem(20);
+            line-height: 1;
+            color: $color-dark-gray;
+        }
+    }
 
-	.lg-share {
-		position: relative;
+    .lg-share {
+        position: relative;
 
-		&::after {
-			content: "\e80d";
-		}
-	}
+        &::after {
+            content: "\e80d";
+        }
+    }
 
-	.lg-share-facebook {
-		.lg-icon {
-			color: #3b5998;
+    .lg-share-facebook {
+        .lg-icon {
+            color: #3b5998;
 
-			&::after {
-				content: "\e904";
-			}
-		}
-	}
+            &::after {
+                content: "\e904";
+            }
+        }
+    }
 
-	.lg-share-twitter {
-		.lg-icon {
-			color: #00aced;
+    .lg-share-twitter {
+        .lg-icon {
+            color: #00aced;
 
-			&::after {
-				content: "\e907";
-			}
-		}
-	}
+            &::after {
+                content: "\e907";
+            }
+        }
+    }
 
-	.lg-share-pinterest {
-		.lg-icon {
-			color: #cb2027;
+    .lg-share-pinterest {
+        .lg-icon {
+            color: #cb2027;
 
-			&::after {
-				content: "\e906";
-			}
-		}
-	}
+            &::after {
+                content: "\e906";
+            }
+        }
+    }
 
-	&.lg-dropdown-active {
-		.lg-dropdown,
-		.lg-dropdown-overlay {
-			@include transition-delay(0s);
-			@include transform(translate3d(0, 0, 0));
+    &.lg-dropdown-active {
+        .lg-dropdown,
+        .lg-dropdown-overlay {
+            @include transition-delay(0s);
+            @include transform(translate3d(0, 0, 0));
 
-			opacity: 1;
-			visibility: visible;
-		}
+            opacity: 1;
+            visibility: visible;
+        }
 
-		.lg-share {
-			color: $color-light;
-		}
-	}
+        .lg-share {
+            color: $color-light;
+        }
+    }
 }

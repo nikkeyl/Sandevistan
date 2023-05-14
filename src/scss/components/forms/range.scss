@@ -8,86 +8,86 @@
 
 .noUi-target,
 .noUi-target * {
-	box-sizing: border-box;
-	user-select: none;
+    box-sizing: border-box;
+    user-select: none;
 }
 
 .noUi-base,
 .noUi-connects {
-	@include wh(100%, 100%);
+    @include wh(100%, 100%);
 }
 
 /* Wrapper for all connect elements. */
 .noUi-connect,
 .noUi-origin {
-	@include wh(100%, 100%);
+    @include wh(100%, 100%);
 
-	position: absolute;
-	right: 0;
-	top: 0;
-	transform-origin: 0 0;
-	will-change: transform;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform-origin: 0 0;
+    will-change: transform;
 }
 
 /* Give origins 0 height/width so they don't interfere with clicking the * connect elements. */
 .noUi-state-tap .noUi-connect,
 .noUi-state-tap .noUi-origin {
-	transition: transform 0.3s;
+    transition: transform 0.3s;
 }
 
 /* Slider size and handle placement; */
 .noUi-horizontal {
-	height: rem(10);
+    height: rem(10);
 }
 
 .noUi-horizontal .noUi-handle {
-	@include wh(rem(15), rem(15));
+    @include wh(rem(15), rem(15));
 
-	right: rem(-7.5);
-	top: rem(-3);
+    right: rem(-7.5);
+    top: rem(-3);
 }
 
 /* Styling; * Giving the connect element a border radius causes issues with using transform: scale */
 .noUi-target {
-	position: relative;
-	border: rem(1) solid #d3d3d3;
-	border-radius: rem(30);
-	background-color: #fafafa;
+    position: relative;
+    border: rem(1) solid #d3d3d3;
+    border-radius: rem(30);
+    background-color: #fafafa;
 }
 
 .noUi-connect {
-	background-color: #add8e6;
+    background-color: #add8e6;
 }
 
 .noUi-handle {
-	position: absolute;
-	border: rem(1) solid #d9d9d9;
-	border-radius: 50%;
-	background-color: $color-light;
-	backface-visibility: hidden;
-	transition: background-color 0.1s ease;
-	cursor: grab;
+    position: absolute;
+    border: rem(1) solid #d9d9d9;
+    border-radius: 50%;
+    background-color: $color-light;
+    backface-visibility: hidden;
+    transition: background-color 0.1s ease;
+    cursor: grab;
 }
 
 .noUi-active {
-	background-color: #d9d9d9;
-	cursor: grabbing;
+    background-color: #d9d9d9;
+    cursor: grabbing;
 }
 
 .noUi-tooltip {
-	position: absolute;
-	display: block;
-	border: rem(1) solid #d9d9d9;
-	border-radius: rem(3);
-	padding: rem(5);
-	white-space: nowrap;
-	text-align: center;
-	color: $color-dark;
-	background-color: $color-light;
+    position: absolute;
+    display: block;
+    border: rem(1) solid #d9d9d9;
+    border-radius: rem(3);
+    padding: rem(5);
+    white-space: nowrap;
+    text-align: center;
+    color: $color-dark;
+    background-color: $color-light;
 }
 
 .noUi-horizontal .noUi-tooltip {
-	left: 50%;
-	bottom: 120%;
-	transform: translate(-50%, 0);
+    left: 50%;
+    bottom: 120%;
+    transform: translate(-50%, 0);
 }

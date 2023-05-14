@@ -4,12 +4,7 @@
 @import "@scss/base/variables";
 
 $backdrop-opacity: 1 !default;
-$lg-toolbar-bg:
-	linear-gradient(
-	0deg,
-	rgb(0 0 0 / 0%),
-	rgb(0 0 0 / 40%)
-) !default;
+$lg-toolbar-bg: linear-gradient(0deg, rgb(0 0 0 / 0%), rgb(0 0 0 / 40%)) !default;
 $lg-border-radius-base: rem(2) !default;
 $lg-theme-highlight: rgb(169 7 7) !default;
 $lg-theme-color: $color-dark !default;
@@ -30,12 +25,7 @@ $lg-progress-bar-height: rem(5) !default;
 $lg-path-fonts: "../fonts" !default;
 $lg-path-images: "../images" !default;
 $zoom-transition-duration: 0.5s !default;
-$lg-sub-html-bg:
-	linear-gradient(
-	180deg,
-	rgb(0 0 0 / 0%),
-	rgb(0 0 0 / 60%)
-) !default;
+$lg-sub-html-bg: linear-gradient(180deg, rgb(0 0 0 / 0%), rgb(0 0 0 / 60%)) !default;
 $lg-sub-html-color: #eee !default;
 $lg-thumb-toggle-bg: #0d0a0a !default;
 $lg-thumb-toggle-color: $lg-icon-color !default;

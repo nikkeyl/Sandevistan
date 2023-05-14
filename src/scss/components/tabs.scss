@@ -1,26 +1,26 @@
 .tabs {
-	&__navigation {
-		display: flex;
-	}
+    &__navigation {
+        display: flex;
+    }
 
-	&__title {
-		border: rem(1) solid $color-gray;
-		padding: rem(10) rem(15);
+    &__title {
+        border: rem(1) solid $color-gray;
+        padding: rem(10) rem(15);
 
-		&.tab-active {
-			border: rem(1) solid $color-dark;
-		}
+        &.tab-active {
+            border: rem(1) solid $color-dark;
+        }
 
-		@media (any-hover: hover) {
-			&:hover {
-			}
-		}
-	}
+        @media (any-hover: hover) {
+            &:hover {
+            }
+        }
+    }
 
-	&__content {
-		padding: rem(10) rem(15);
-	}
+    &__content {
+        padding: rem(10) rem(15);
+    }
 
-	&__body {
-	}
+    &__body {
+    }
 }

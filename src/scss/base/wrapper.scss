@@ -1,19 +1,19 @@
 .wrapper {
-	display: flex;
-	flex-direction: column;
+    display: flex;
+    flex-direction: column;
 
-	/* With value overflow: clip;, position: sticky; works correctly */
-	overflow: clip;
-	min-height: 100%;
+    /* With value overflow: clip;, position: sticky; works correctly */
+    overflow: clip;
+    min-height: 100%;
 
-	> .content {
-		flex: 1 1 auto;
-	}
+    > .content {
+        flex: 1 1 auto;
+    }
 
-	@if $slider-fix == 1 {
-		> * {
-			/* Fixes swiper.js bug */
-			min-width: 0;
-		}
-	}
+    @if $slider-fix == 1 {
+        > * {
+            /* Fixes swiper.js bug */
+            min-width: 0;
+        }
+    }
 }

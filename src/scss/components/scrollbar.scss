@@ -1,29 +1,29 @@
 /* Styles for scrollbar */
 * {
-	// scrollbar-color: $color-dark #d6d6d6;
-	// scrollbar-width: rem(10);
+    // scrollbar-color: $color-dark #d6d6d6;
+    // scrollbar-width: rem(10);
 
-	&::-webkit-scrollbar {
-		@include wh(rem(10), rem(10));
+    &::-webkit-scrollbar {
+        @include wh(rem(10), rem(10));
 
-		background-color: $color-light;
-	}
+        background-color: $color-light;
+    }
 
-	&::-webkit-scrollbar-track {
-		border-radius: rem(5);
-		background-color: $color-gray;
-	}
+    &::-webkit-scrollbar-track {
+        border-radius: rem(5);
+        background-color: $color-gray;
+    }
 
-	&::-webkit-scrollbar-thumb {
-		border-radius: rem(5);
-		background-color: $color-dark;
+    &::-webkit-scrollbar-thumb {
+        border-radius: rem(5);
+        background-color: $color-dark;
 
-		// transition: background-color 0.3s ease;
+        // transition: background-color 0.3s ease;
 
-		@media (any-hover: hover) {
-			&:hover {
-				background-color: $color-dark;
-			}
-		}
-	}
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: $color-dark;
+            }
+        }
+    }
 }

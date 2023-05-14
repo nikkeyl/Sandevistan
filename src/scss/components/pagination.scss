@@ -1,35 +1,35 @@
 .pagination {
-	display: flex;
-	align-items: center;
-	justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-	&__arrow {
-		&--prev {
-		}
+    &__arrow {
+        &--prev {
+        }
 
-		&--next {
-		}
-	}
+        &--next {
+        }
+    }
 
-	&__icon {
-	}
+    &__icon {
+    }
 
-	&__list {
-		display: flex;
-	}
+    &__list {
+        display: flex;
+    }
 
-	&__item {
-		.active & {
-		}
-	}
+    &__item {
+        .active & {
+        }
+    }
 
-	&__link {
-		&.active {
-		}
+    &__link {
+        &.active {
+        }
 
-		@media (any-hover: hover) {
-			&:hover {
-			}
-		}
-	}
+        @media (any-hover: hover) {
+            &:hover {
+            }
+        }
+    }
 }

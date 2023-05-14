@@ -1,57 +1,57 @@
 /* Burger menu icon */
 .icon-menu {
-	display: none;
+    display: none;
 
-	@media (max-width: md($tablet)) {
-		@include wh(rem(30), rem(18));
+    @media (max-width: md($tablet)) {
+        @include wh(rem(30), rem(18));
 
-		position: relative;
-		z-index: 5;
-		display: block;
-		cursor: pointer;
+        position: relative;
+        z-index: 5;
+        display: block;
+        cursor: pointer;
 
-		&__line,
-		&::before,
-		&::after {
-			@include pseudo;
-			@include wh(100%, rem(2));
+        &__line,
+        &::before,
+        &::after {
+            @include pseudo;
+            @include wh(100%, rem(2));
 
-			right: 0;
-			background-color: $color-dark;
-			transition: transform 0.3s ease, width 0.3s ease, top 0.3s ease,
-				bottom 0.3s ease;
-		}
+            right: 0;
+            background-color: $color-dark;
+            transition: transform 0.3s ease, width 0.3s ease, top 0.3s ease,
+                bottom 0.3s ease;
+        }
 
-		&::before {
-			top: 0;
-		}
+        &::before {
+            top: 0;
+        }
 
-		&::after {
-			bottom: 0;
-		}
+        &::after {
+            bottom: 0;
+        }
 
-		&__line {
-			top: calc(50% - rem(1));
-		}
+        &__line {
+            top: calc(50% - rem(1));
+        }
 
-		.menu-open & {
-			&::before,
-			&::after {
-			}
+        .menu-open & {
+            &::before,
+            &::after {
+            }
 
-			&::before {
-				top: calc(50% - rem(1));
-				transform: rotate(-45deg);
-			}
+            &::before {
+                top: calc(50% - rem(1));
+                transform: rotate(-45deg);
+            }
 
-			&::after {
-				bottom: calc(50% - rem(1));
-				transform: rotate(45deg);
-			}
+            &::after {
+                bottom: calc(50% - rem(1));
+                transform: rotate(45deg);
+            }
 
-			&__line {
-				width: 0;
-			}
-		}
-	}
+            &__line {
+                width: 0;
+            }
+        }
+    }
 }
