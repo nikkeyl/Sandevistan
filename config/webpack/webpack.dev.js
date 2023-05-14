@@ -1,6 +1,10 @@
 import { plugins } from '../settings/plugins.js'
 import { paths } from '../settings/paths.js'
 
+import { extensionsAndAliases } from '../settings/extensionsAndAliases.js'
+import { replaceLoaderOptions } from '../settings/replaceLoaderOptions.js'
+import { cssLoaderOptions } from '../settings/cssLoaderOptions.js'
+
 const config = {
 	mode: 'development',
 	devtool: 'inline-source-map',
@@ -35,24 +39,10 @@ const config = {
 					'style-loader',
 					{
 						loader: 'string-replace-loader',
-						options: {
-							search: '@content',
-							replace: '../content',
-							flags: 'g'
-						}
+						options: replaceLoaderOptions
 					}, {
 						loader: 'css-loader',
-						options: {
-							importLoaders: 1,
-							sourceMap: true,
-							modules: false,
-							url: {
-								filter: url => {
-									!url.includes('content/') ||
-										!url.includes('fonts/')
-								}
-							}
-						}
+						options: cssLoaderOptions(1, true, '/')
 					}, {
 						loader: 'sass-loader',
 						options: {
@@ -99,16 +89,7 @@ const config = {
 			]
 		})
 	],
-	resolve: {
-		extensions: [
-			'.scss',
-			'.js'
-		],
-		alias: {
-			'@scss': `${paths.root}/scss`,
-			'@js': `${paths.root}/js`
-		}
-	}
+	resolve: extensionsAndAliases
 }
 
 export default config

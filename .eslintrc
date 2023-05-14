@@ -1,10 +1,11 @@
 {
 	"extends": [
-		"eslint:recommended",
-		"prettier"
+		"eslint:recommended"
+		// "plugin:prettier/recommended"
+		// "prettier"
 	],
 	"plugins": [
-		"prettier"
+		// "prettier"
 	],
 	"env": {
 		"browser": true,
@@ -15,41 +16,93 @@
 		"sourceType": "module"
 	},
 	"rules": {
-		"prettier/prettier": "error",
-		"array-callback-return": "error",
-		"array-bracket-spacing": [
-			"error",
-			"never"
-		],
-		// "array-bracket-newline": [
+		// "prettier/prettier": "error",
+		// "array-callback-return": "error",
+		"array-bracket-spacing": "error",
+
+		// "array-bracket-newline": [ // working wrong and conflict with "prettier/prettier": "error"
 		// 	"error",
 		// 	{
 		// 		"multiline": true,
 		// 		"minItems": 3
 		// 	}
 		// ],
+
 		"arrow-body-style": [
 			"error",
 			"as-needed"
 		],
-		// "class-methods-use-this": "error",
-		// "consistent-return": "error",
-		// "capitalized-comments": [
+		"arrow-spacing": [
+			"error",
+			{
+				"before": true,
+				"after": true
+			}
+		],
+
+		// "arrow-parens": [ // conflict with prettier/prettier
+		// 	"error",
+		// 	"as-needed"
+		// ],
+
+		"block-spacing": "error",
+		"brace-style": "error",
+
+		"computed-property-spacing": "error",
+
+		// "class-methods-use-this": "error", // refactor code
+
+		// "consistent-return": "error", // refactor code
+
+		// "capitalized-comments": [ // not working with /*! or //!
 		// 	"error",
 		// 	"always"
 		// ],
+
+		"comma-spacing": "error",
+
+		// "comma-dangle": [ // conflict with "prettier/prettier": "error"
+		// 	"error",
+		// 	{
+		// 		"functions": "never",
+		// 		"objects": "never",
+		// 		"exports": "never",
+		// 		"imports": "never",
+		// 		"arrays": "never"
+		// 	}
+		// ],
+
+		"comma-style": "error",
 		"curly": "error",
+
 		"default-case": "error",
 		"dot-notation": "error",
-		// "eol-last": [
+		"dot-location": [
+			"error",
+			"property"
+		],
+
+		// "eol-last": [// editorconfig use
 		// 	"error",
 		// 	"never"
 		// ],
+
 		"eqeqeq": [
 			"error",
 			"always"
 		],
+
+		// "function-call-argument-newline": "error", // working wrong
+
+		// "function-paren-newline": [ // working wrong
+		// 	"error",
+		// 	{
+		// 		"minItems": 3
+		// 	}
+		// ],
+
 		"func-name-matching": "error",
+		"func-call-spacing": "error",
 		"func-style": [
 			"error",
 			"declaration",
@@ -57,12 +110,22 @@
 				"allowArrowFunctions": true
 			}
 		],
+
 		"grouped-accessor-pairs": "error",
 		"generator-star-spacing": [
 			"error",
 			"both"
 		],
+
+		// "implicit-arrow-linebreak": "error", // conflict with arrow-body-style
+
+		// "indent": "error", // editorconfig use
+
+		"keyword-spacing": "error",
+		"key-spacing": "error",
+
 		"lines-between-class-members": "error",
+		"line-comment-position": "error",
 		"lines-around-comment": [
 			"error",
 			{
@@ -72,12 +135,20 @@
 				"beforeLineComment": true
 			}
 		],
+
 		"max-statements-per-line": "error",
-		// "multiline-comment-style": [
+
+		// "multiline-comment-style": [ // working wrong
 		// 	"error",
 		// 	"starred-block"
 		// ],
-		// "max-lines": [
+
+		"multiline-ternary": [
+			"error",
+			"always-multiline"
+		],
+
+		// "max-lines": [ // refactor code
 		// 	"error",
 		// 	{
 		// 		"max": 100,
@@ -85,7 +156,8 @@
 		// 		"skipComments": true
 		// 	}
 		// ],
-		// "max-lines-per-function": [
+
+		// "max-lines-per-function": [ // refactor code
 		// 	"error",
 		// 	{
 		// 		"skipBlankLines": true,
@@ -93,16 +165,38 @@
 		// 		"max": 10
 		// 	}
 		// ],
+
 		"max-params": [
 			"error",
 			4
 		],
+
+		// "max-len": [ // editorconfig use
+		// 	"error",
+		// 	{
+		// 		"code": 85
+		// 	}
+		// ],
+
+		"nonblock-statement-body-position": [
+			"error",
+			"beside"
+		],
 		"no-unused-private-class-members": "error",
+		"no-whitespace-before-property": "error",
 		"no-constant-binary-expression": "error",
 		"no-new-native-nonconstructor": "error",
 		"no-unmodified-loop-condition": "error",
 		"no-template-curly-in-string": "error",
 		"no-promise-executor-return": "error",
+
+		// "newline-per-chained-call": [ // conflict with "prettier/prettier": "error"
+		// 	"error",
+		// 	{
+		// 		"ignoreChainWithDepth": 3
+		// 	}
+		// ],
+
 		"no-multiple-empty-lines": [
 			"error",
 			{
@@ -121,35 +215,59 @@
 				]
 			}
 		],
-		// "no-use-before-define": [
+
+		// "no-trailing-spaces": "error", // editorconfig use
+
+		// "no-use-before-define": [ // refactor code
 		// 	"error",
 		// 	{
 		// 		"classes": false
 		// 	}
 		// ],
+
 		"no-confusing-arrow": "error",
-		// "no-empty-function": "error",
+
+		// "no-empty-function": "error", // refactor code
+
 		"no-await-in-loop": "error",
 		"no-self-compare": "error",
 		"no-invalid-this": "error",
+		"no-extra-parens": "error", // conflict with "prettier/prettier": "error"
+		"no-multi-spaces": "error",
 		"no-extra-bind": "error",
-		// "no-alert": "error",
+
+		// "no-alert": "error", // refactor code
+
 		"no-console": "error",
 		"no-bitwise": "error",
 		"no-eq-null": "error",
+		"new-parens": "error",
 		"no-eval": "error",
+
+		// "no-tabs": "error", // refactor code
+
 		"new-cap": "error",
-		// "object-curly-newline": [
+
+		// "object-property-newline": "error", // working wrong
+
+		// "object-curly-newline": [ // working wrong
 		// 	"error",
 		// 	{
 		// 		"minProperties": 3,
 		// 		"multiline": true
 		// 	}
 		// ],
-		// "operator-linebreak": [
+
+		// "object-curly-spacing": [ // have in prettier
+		// 	"error",
+		// 	"always"
+		// ],
+
+		// "operator-linebreak": [ // conflict with "prettier/prettier": "error"
 		// 	"error",
 		// 	"before"
 		// ],
+
 		"prefer-exponentiation-operator": "error",
 		"padding-line-between-statements": [
 			"error",
@@ -205,7 +323,26 @@
 			"never"
 		],
 		"prefer-const": "error",
+
 		"require-atomic-updates": "error",
+
+		"space-before-function-paren": [
+			"error",
+			"never"
+		],
+		"template-curly-spacing": "error",
+		"switch-colon-spacing": "error",
+		"template-tag-spacing": [
+			"error",
+			"always"
+		],
+		"space-before-blocks": "error",
+		"space-infix-ops": "error",
+		"space-unary-ops": "error",
+		"space-in-parens": [
+			"error",
+			"never"
+		],
 		"spaced-comment": [
 			"error",
 			"always",
@@ -225,6 +362,13 @@
 					"balanced": true
 				}
 			}
-		]
+		],
+
+		// "semi": [ // conflict with "prettier/prettier": "error"
+		// 	"error",
+		// 	"never"
+		// ]
+
+		"wrap-regex": "error"
 	}
 }

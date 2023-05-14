@@ -1,9 +1,12 @@
 import { plugins } from '../settings/plugins.js'
 import { paths } from '../settings/paths.js'
 
-import StylelintWebpackPlugin from 'stylelint-webpack-plugin'
+import { extensionsAndAliases } from '../settings/extensionsAndAliases.js'
+import { replaceLoaderOptions } from '../settings/replaceLoaderOptions.js'
+import { cssLoaderOptions } from '../settings/cssLoaderOptions.js'
+import { linters } from '../modules/linters.js'
+
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
-import ESLintWebpackPlugin from 'eslint-webpack-plugin'
 
 const config = {
 	mode: 'production',
@@ -30,24 +33,10 @@ const config = {
 					MiniCssExtractPlugin.loader,
 					{
 						loader: 'string-replace-loader',
-						options: {
-							search: '@content',
-							replace: '../content',
-							flags: 'g'
-						}
+						options: replaceLoaderOptions
 					}, {
 						loader: 'css-loader',
-						options: {
-							importLoaders: 0,
-							sourceMap: false,
-							modules: false,
-							url: {
-								filter: url => {
-									!url.includes('content') ||
-										!url.includes('fonts')
-								}
-							}
-						}
+						options: cssLoaderOptions()
 					}, {
 						loader: 'sass-loader',
 						options: {
@@ -61,12 +50,9 @@ const config = {
 		]
 	},
 	plugins: [
-		new StylelintWebpackPlugin({
-			fix: true
-		}),
-		new ESLintWebpackPlugin({
-			fix: true
-		}),
+		linters.StyleLint,
+		linters.ESLint,
+
 		new plugins.FileIncludeWebpackPlugin({
 			source: paths.srcFolder,
 			destination: '../',
@@ -101,16 +87,7 @@ const config = {
 			]
 		})
 	],
-	resolve: {
-		extensions: [
-			'.scss',
-			'.js'
-		],
-		alias: {
-			'@scss': `${paths.root}/scss`,
-			'@js': `${paths.root}/js`
-		}
-	}
+	resolve: extensionsAndAliases
 }
 
 export default config
