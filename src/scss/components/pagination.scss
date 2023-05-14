@@ -4,6 +4,9 @@
     justify-content: center;
 
     &__arrow {
+        svg {
+        }
+
         &--prev {
         }
 
@@ -11,20 +14,17 @@
         }
     }
 
-    &__icon {
-    }
-
     &__list {
         display: flex;
     }
 
     &__item {
-        .active & {
+        &.active {
         }
     }
 
     &__link {
-        &.active {
+        .active & {
         }
 
         @media (any-hover: hover) {
