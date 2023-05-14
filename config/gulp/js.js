@@ -4,7 +4,7 @@ import webPackConfig from '../webpack/webpack.prod.js'
 
 const js = () => {
 	return app.gulp.src(app.paths.src.js)
-		.pipe(app.plugins.handleError('JS'))
+		.pipe(app.plugins.catchError('JS'))
 		.pipe(app.plugins.webpack({
 			config: webPackConfig
 		}))

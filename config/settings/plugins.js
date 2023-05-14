@@ -1,4 +1,4 @@
-import { handleError } from './errorHandler.js'
+import { catchError } from './catchErrors.js'
 
 import FileIncludeWebpackPlugin from 'file-include-webpack-plugin-replace'
 import TerserPlugin from 'terser-webpack-plugin'
@@ -12,7 +12,7 @@ const plugins = {
 	FileIncludeWebpackPlugin,
 	if: ifPlugin,
 	TerserPlugin,
-	handleError,
+	catchError,
 	CopyPlugin,
 	webpack,
 	rename,

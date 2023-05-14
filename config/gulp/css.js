@@ -8,7 +8,7 @@ import purge from 'gulp-css-purge'
 
 const css = () => {
 	return app.gulp.src(`${app.paths.build.css}style.css`)
-		.pipe(app.plugins.handleError('CSS'))
+		.pipe(app.plugins.catchError('CSS'))
 		.pipe(groupCssMediaQueries())
 		.pipe(autoprefixer({
 			cascade: true,

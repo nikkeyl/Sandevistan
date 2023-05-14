@@ -6,7 +6,7 @@ import webp from 'gulp-webp'
 
 const images = () => {
 	return app.gulp.src(app.paths.src.images)
-		.pipe(app.plugins.handleError('IMAGES'))
+		.pipe(app.plugins.catchError('IMAGES'))
 		.pipe(newer(app.paths.build.images))
 		.pipe(
 			app.plugins.if(

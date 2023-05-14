@@ -35,7 +35,7 @@ webPackConfigBeautify.output = {
 
 const jsDev = () => {
 	return app.gulp.src(app.paths.src.js)
-		.pipe(app.plugins.handleError('JS'))
+		.pipe(app.plugins.catchError('JS'))
 		.pipe(plugins.webpack({
 			config: webPackConfigBeautify
 		}))

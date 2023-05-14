@@ -6,7 +6,7 @@ import svgSprite from 'gulp-svg-sprite'
 
 const sprite = () => {
 	return app.gulp.src(app.paths.src.svgSprites)
-		.pipe(app.plugins.handleError('SPRITE'))
+		.pipe(app.plugins.catchError('SPRITE'))
 		.pipe(svgSprite({
 			mode: {
 				symbol: {
