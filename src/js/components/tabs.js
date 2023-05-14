@@ -12,7 +12,7 @@ function tabs() {
     let tabsActiveHash = []
 
     hash && hash.startsWith('tab-')
-        ? (tabsActiveHash = hash.replace('tab-', '').split('-'))
+        ? tabsActiveHash = hash.replace('tab-', '').split('-')
         : null
     tabs.forEach((tabsBlock, index) => {
         tabsBlock.classList.add('tab-init')
@@ -118,7 +118,7 @@ function tabs() {
             if (tabsTitles[index].classList.contains('tab-active')) {
                 tabsBlockAnimate
                     ? slideDown(tabsContentItem, tabsBlockAnimate)
-                    : (tabsContentItem.hidden = false)
+                    : tabsContentItem.hidden = false
                 isHash && !tabsContentItem.closest('.popup')
                     ? setHash(`tab-${tabsBlockIndex}-${index}`)
                     : null
@@ -146,9 +146,9 @@ function tabs() {
                 )
 
                 tabActiveTitle.length
-                    ? (tabActiveTitle = Array.from(tabActiveTitle).filter(
+                    ? tabActiveTitle = Array.from(tabActiveTitle).filter(
                           item => item.closest('[data-tabs]') === tabsBlock
-                      ))
+                      )
                     : null
                 removeClasses('[data-tabs-title].tab-active', 'tab-active')
                 tabTitle.classList.add('tab-active')

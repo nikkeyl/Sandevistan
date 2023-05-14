@@ -29,8 +29,8 @@ function range() {
             let priceStartValue
             let priceEndValue
 
-            priceStart.value !== '' ? (priceStartValue = priceStart.value) : null
-            priceEnd.value !== '' ? (priceEndValue = priceEnd.value) : null
+            priceStart.value !== '' ? priceStartValue = priceStart.value : null
+            priceEnd.value !== '' ? priceEndValue = priceEnd.value : null
             priceSlider.noUiSlider.set([priceStartValue, priceEndValue])
         }
 

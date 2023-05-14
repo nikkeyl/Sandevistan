@@ -54,7 +54,7 @@ function colorScheme() {
 
             let newTheme
 
-            currentTheme === 'light' ? (newTheme = 'dark') : (newTheme = 'light')
+            currentTheme === 'light' ? newTheme = 'dark' : newTheme = 'light'
             htmlBlock.classList.remove(currentTheme)
             htmlBlock.classList.add(newTheme)
             saveTheme ? localStorage.setItem('user-theme', newTheme) : null

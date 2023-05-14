@@ -25,11 +25,7 @@ const slideUp = (target, duration = 500, showmore = 0) => {
             target.classList.remove('slide')
 
             document.dispatchEvent(
-                new CustomEvent('slideUpDone', {
-                    detail: {
-                        target: target
-                    }
-                })
+                new CustomEvent('slideUpDone', { detail: { target: target } })
             )
         }, duration)
     }

@@ -91,7 +91,7 @@ class Popup {
     eventsPopup() {
         document.addEventListener(
             'click',
-            function (e) {
+            function(e) {
                 const buttonOpen = e.target.closest(
                     `[${this.options.attributeOpenButton}]`
                 )
@@ -130,8 +130,8 @@ class Popup {
 
                 if (
                     buttonClose ||
-                    (!e.target.closest(`.${this.options.classes.popupContent}`) &&
-                        this.isOpen)
+                    !e.target.closest(`.${this.options.classes.popupContent}`) &&
+                        this.isOpen
                 ) {
                     e.preventDefault()
                     this.close()
@@ -143,7 +143,7 @@ class Popup {
 
         document.addEventListener(
             'keydown',
-            function (e) {
+            function(e) {
                 if (
                     this.options.closeEsc &&
                     e.which === 27 &&
@@ -167,7 +167,7 @@ class Popup {
         if (this.options.hashSettings.goHash) {
             window.addEventListener(
                 'hashchange',
-                function () {
+                function() {
                     if (window.location.hash) {
                         this.openToHash()
                     } else {
@@ -178,7 +178,7 @@ class Popup {
 
             window.addEventListener(
                 'load',
-                function () {
+                function() {
                     if (window.location.hash) {
                         this.openToHash()
                     }
@@ -258,11 +258,7 @@ class Popup {
 
                 this.options.on.beforeOpen(this)
                 document.dispatchEvent(
-                    new CustomEvent('beforePopupOpen', {
-                        detail: {
-                            popup: this
-                        }
-                    })
+                    new CustomEvent('beforePopupOpen', { detail: { popup: this } })
                 )
                 this.targetOpen.element.classList.add(
                     this.options.classes.popupActive
@@ -285,11 +281,7 @@ class Popup {
                 }, 50)
                 this.options.on.afterOpen(this)
                 document.dispatchEvent(
-                    new CustomEvent('afterPopupOpen', {
-                        detail: {
-                            popup: this
-                        }
-                    })
+                    new CustomEvent('afterPopupOpen', { detail: { popup: this } })
                 )
             }
         }
@@ -310,11 +302,7 @@ class Popup {
 
         this.options.on.beforeClose(this)
         document.dispatchEvent(
-            new CustomEvent('beforePopupClose', {
-                detail: {
-                    popup: this
-                }
-            })
+            new CustomEvent('beforePopupClose', { detail: { popup: this } })
         )
 
         if (this.youTubeCode) {
@@ -347,11 +335,7 @@ class Popup {
 
         this.options.on.afterClose(this)
         document.dispatchEvent(
-            new CustomEvent('afterPopupClose', {
-                detail: {
-                    popup: this
-                }
-            })
+            new CustomEvent('afterPopupClose', { detail: { popup: this } })
         )
         setTimeout(() => {
             this.focusTrap()

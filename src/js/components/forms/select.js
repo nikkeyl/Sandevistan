@@ -5,9 +5,7 @@ import { slideUp } from '@js/helpers/slideUp'
 
 class SelectConstructor {
     constructor(props, data = null) {
-        const defaultConfig = {
-            init: true
-        }
+        const defaultConfig = { init: true }
 
         this.config = Object.assign(defaultConfig, props)
         this.selectClasses = {
@@ -63,25 +61,25 @@ class SelectConstructor {
         })
         document.addEventListener(
             'click',
-            function (e) {
+            function(e) {
                 this.selectsActions(e)
             }.bind(this)
         )
         document.addEventListener(
             'keydown',
-            function (e) {
+            function(e) {
                 this.selectsActions(e)
             }.bind(this)
         )
         document.addEventListener(
             'focusin',
-            function (e) {
+            function(e) {
                 this.selectsActions(e)
             }.bind(this)
         )
         document.addEventListener(
             'focusout',
-            function (e) {
+            function(e) {
                 this.selectsActions(e)
             }.bind(this)
         )
@@ -95,7 +93,7 @@ class SelectConstructor {
         originalSelect.parentNode.insertBefore(selectItem, originalSelect)
         selectItem.appendChild(originalSelect)
         originalSelect.hidden = true
-        index ? (originalSelect.dataset.id = index) : null
+        index ? originalSelect.dataset.id = index : null
 
         if (this.getSelectPlaceholder(originalSelect)) {
             originalSelect.dataset.placeholder =
@@ -462,8 +460,8 @@ class SelectConstructor {
             let selectOptionsHTML = ``
 
             if (
-                (this.getSelectPlaceholder(originalSelect) &&
-                    !this.getSelectPlaceholder(originalSelect).show) ||
+                this.getSelectPlaceholder(originalSelect) &&
+                    !this.getSelectPlaceholder(originalSelect).show ||
                 originalSelect.multiple
             ) {
                 selectOptions = selectOptions.filter(option => option.value)
@@ -657,11 +655,7 @@ class SelectConstructor {
 
     selectCallback(originalSelect) {
         document.dispatchEvent(
-            new CustomEvent('selectCallback', {
-                detail: {
-                    select: originalSelect
-                }
-            })
+            new CustomEvent('selectCallback', { detail: { select: originalSelect } })
         )
     }
 }

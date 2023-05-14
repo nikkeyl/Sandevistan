@@ -71,11 +71,7 @@ function formSubmit() {
 
     function formSent(form) {
         document.dispatchEvent(
-            new CustomEvent('formSent', {
-                detail: {
-                    form: form
-                }
-            })
+            new CustomEvent('formSent', { detail: { form: form } })
         )
         setTimeout(() => {
             if (nodeObjects.popup) {

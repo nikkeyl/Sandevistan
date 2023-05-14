@@ -117,7 +117,7 @@ function showMore() {
 
             const originalHeight = showMoreContent.offsetHeight
 
-            parentHidden ? (parentHidden.hidden = true) : null
+            parentHidden ? parentHidden.hidden = true : null
             showMoreContent.style.height = `${hiddenHeight}px`
 
             return originalHeight

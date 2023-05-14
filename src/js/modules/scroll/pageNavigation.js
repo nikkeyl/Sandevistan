@@ -60,8 +60,8 @@ function pageNavigation() {
         let goToHash
 
         document.querySelector(`#${getHash()}`)
-            ? (goToHash = `#${getHash()}`)
-            : (goToHash = `.${getHash()}`)
+            ? goToHash = `#${getHash()}`
+            : goToHash = `.${getHash()}`
         goToHash ? gotoBlock(goToHash, true, 500, 20) : null
     }
 }

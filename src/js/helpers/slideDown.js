@@ -29,11 +29,7 @@ const slideDown = (target, duration = 500, showmore = 0) => {
             target.classList.remove('slide')
 
             document.dispatchEvent(
-                new CustomEvent('slideDownDone', {
-                    detail: {
-                        target: target
-                    }
-                })
+                new CustomEvent('slideDownDone', { detail: { target: target } })
             )
         }, duration)
     }

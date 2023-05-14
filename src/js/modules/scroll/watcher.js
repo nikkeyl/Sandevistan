@@ -111,11 +111,7 @@ class ScrollWatcher {
             ? this.scrollWatcherOff(targetElement, observer)
             : null
         document.dispatchEvent(
-            new CustomEvent('watcherCallback', {
-                detail: {
-                    entry: entry
-                }
-            })
+            new CustomEvent('watcherCallback', { detail: { entry: entry } })
         )
     }
 }

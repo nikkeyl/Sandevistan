@@ -18,7 +18,7 @@ function filter() {
 
         images.forEach(image => {
             const imageItem = image.querySelector('img')
-            const padding = (imageItem.offsetHeight / imageItem.offsetWidth) * 100
+            const padding = imageItem.offsetHeight / imageItem.offsetWidth * 100
 
             image.style.paddingBottom = `${padding}%`
             imageItem.classList.add('init')
@@ -47,9 +47,7 @@ function filter() {
 
                 filterValue === '*'
                     ? itemsGrid.arrange({ filter: `` })
-                    : itemsGrid.arrange({
-                          filter: `[data-filter="${filterValue}"]`
-                      })
+                    : itemsGrid.arrange({ filter: `[data-filter="${filterValue}"]` })
                 filterActiveItem.classList.remove('active')
                 filterItem.classList.add('active')
                 e.preventDefault()

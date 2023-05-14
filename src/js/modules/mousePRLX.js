@@ -31,11 +31,11 @@ class MousePRLX {
                 const distX = coordXprocent - positionX
                 const distY = coordYprocent - positionY
 
-                positionX = positionX + (distX * paramAnimation) / 1000
-                positionY = positionY + (distY * paramAnimation) / 1000
+                positionX = positionX + distX * paramAnimation / 1000
+                positionY = positionY + distY * paramAnimation / 1000
                 el.style.cssText = `transform: translate3D(${
-                    (directionX * positionX) / (paramCoefficientX / 10)
-                }%, ${(directionY * positionY) / (paramCoefficientY / 10)}%, 0);`
+                    directionX * positionX / (paramCoefficientX / 10)
+                }%, ${directionY * positionY / (paramCoefficientY / 10)}%, 0);`
                 requestAnimationFrame(setMouseParallaxStyle)
             }
 
@@ -52,8 +52,8 @@ class MousePRLX {
                         const coordX = e.clientX - parallaxWidth / 2
                         const coordY = e.clientY - parallaxHeight / 2
 
-                        coordXprocent = (coordX / parallaxWidth) * 100
-                        coordYprocent = (coordY / parallaxHeight) * 100
+                        coordXprocent = coordX / parallaxWidth * 100
+                        coordYprocent = coordY / parallaxHeight * 100
                     }
                 })
             }

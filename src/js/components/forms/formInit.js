@@ -12,7 +12,7 @@ function formFieldsInit(
 
     formFields.forEach(formField => {
         !formField.hasAttribute('data-placeholder-nohide')
-            ? (formField.dataset.placeholder = formField.placeholder)
+            ? formField.dataset.placeholder = formField.placeholder
             : null
     })
     document.body.addEventListener('focusin', e => {
@@ -23,7 +23,7 @@ function formFieldsInit(
             targetElement.tagName === 'TEXTAREA'
         ) {
             targetElement.dataset.placeholder
-                ? (targetElement.placeholder = '')
+                ? targetElement.placeholder = ''
                 : null
 
             if (!targetElement.hasAttribute('data-no-focus-classes')) {
@@ -42,7 +42,7 @@ function formFieldsInit(
             targetElement.tagName === 'TEXTAREA'
         ) {
             targetElement.dataset.placeholder
-                ? (targetElement.placeholder = targetElement.dataset.placeholder)
+                ? targetElement.placeholder = targetElement.dataset.placeholder
                 : null
 
             if (!targetElement.hasAttribute('data-no-focus-classes')) {
