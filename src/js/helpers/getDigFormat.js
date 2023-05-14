@@ -1,4 +1,4 @@
 const getDigFormat = item =>
-	item.toString().replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ')
+    item.toString().replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ')
 
 export { getDigFormat }
