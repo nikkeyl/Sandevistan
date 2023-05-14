@@ -488,7 +488,7 @@
 	"Form email": {
 		"prefix": "formemail",
 		"body": [
-			"<form class=\"${1:form} ${2:block}__${1:form}\" action=\"${3:files/sendmail/sendmail.php}\" method=\"${4:POST}\">\n\t<input class=\"${1:form}__input\" type=\"text\" placeholder=\"${5:E-mail}\" name=\"email\" data-required=\"email\" data-error=\"${6:Error}\">\n\t<button class=\"${1:form}__button button\" type=\"submit\">${7:Send}</button>\n</form>"
+			"<form class=\"${1:form} ${2:block}__${1:form}\" action=\"${3:static/sendmail/sendmail.php}\" method=\"${4:POST}\">\n\t<input class=\"${1:form}__input\" type=\"text\" placeholder=\"${5:E-mail}\" name=\"email\" data-required=\"email\" data-error=\"${6:Error}\">\n\t<button class=\"${1:form}__button button\" type=\"submit\">${7:Send}</button>\n</form>"
 		]
 	},
 	"Logo": {
