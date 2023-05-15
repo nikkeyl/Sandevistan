@@ -1,16 +1,15 @@
 const cssLoaderOptions = (importLoaders = 0, sourceMap = false, endPath = '') => {
-    const options = {
+    return {
         importLoaders: importLoaders,
         sourceMap: sourceMap,
         modules: false,
         url: {
-            filter: url =>
+            filter: url => {
                 !url.includes(`content${endPath}`)
-                || !url.includes(`fonts${endPath}`)
+                    || !url.includes(`fonts${endPath}`)
+            }
         }
     }
-
-    return options
 }
 
 export { cssLoaderOptions }
