@@ -410,7 +410,7 @@
 	"Filter": {
 		"prefix": "bfil",
 		"body": [
-			"position: relative;\n\n&::before {\n\t@include pseudo();\n\twidth: 100%;\n\theight: 100%;\n\ttop: 0;\n\tleft: 0;\n\tbackground-color: rgba(0, 0, 0, 0.3);\n}"
+			"position: relative;\n\n&::before {\n\t@include pseudo();\n\twidth: 100%;\n\theight: 100%;\n\ttop: 0;\n\tleft: 0;\n\tbackground-color: rgba(\\$color-dark, 0.3);\n}"
 		]
 	},
 	"Padding In Rem": {
@@ -530,7 +530,7 @@
 	"Box Shadow": {
 		"prefix": "bs",
 		"body": [
-			"box-shadow: ${1:0} ${2:0} rem(${3:0}) rgba(${4:0}, ${5:0}, ${6:0}, 0.${7:3});"
+			"box-shadow: ${1:0} ${2:0} rem(${3:0}) rgba(\\$color-${4:dark}, 0.${5:3});"
 		]
 	},
 	"Width Auto": {
@@ -710,7 +710,7 @@
 	"Background": {
 		"prefix": "bg+",
 		"body": [
-			"background: url('@content$0') 0 0 no-repeat;"
+			"background: url(\"@content$0\") 0 0 no-repeat;"
 		]
 	},
 	"Inline Flex": {
