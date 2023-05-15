@@ -1,33 +1,33 @@
 $max-width-container: 0;
 $container-padding: 30;
 
-//---------------------------------//
+// --------------------------------- //
 $max-width: 1920;
 $min-width: 320;
 
-//---------------------------------//
+// --------------------------------- //
 $container-width: $max-width-container + $container-padding;
 $desktop: $container-width;
 $laptop: 992;
 $tablet: 768;
 $phone: 480;
 
-//---------------------------------//
+// --------------------------------- //
 $background-gradient: 0;
 $ibg-contain: 0;
 $slider-fix: 0;
 $selestion: 0;
 
-//---------------------------------//
+// --------------------------------- //
 $color-dark: #000;
 $color-dark-gray: #333;
 $color-gray: #888;
 $color-light: #fff;
 
-//---------------------------------//
+// --------------------------------- //
 $color-yellow: #fe0;
 
-//---------------------------------//
+// --------------------------------- //
 $main-font-family: "";
 $font-second: "";
 $main-font-weight: 400;

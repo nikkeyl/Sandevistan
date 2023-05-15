@@ -71,8 +71,8 @@
 
         display: block;
         border-radius: 50%;
-        box-shadow: 0 0 0 rem(8) rgb(255 255 255 / 70%) inset;
-        background-color: rgb(255 255 255 / 50%);
+        box-shadow: 0 0 0 rem(8) rgba($color-light, 0.7) inset;
+        background-color: rgba($color-light, 0.5);
 
         &:hover,
         &:focus {

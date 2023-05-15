@@ -12,24 +12,6 @@
         }
     }
 
-    &__input {
-        @include wh(0, 0);
-
-        position: absolute;
-        opacity: 0;
-
-        &:checked + .options__label::before {
-        }
-
-        &:checked + .options__label::after {
-            transform: scale(1);
-        }
-
-        &:focus + .options__label::before {
-            box-shadow: 0 0 rem(5) $color-dark;
-        }
-    }
-
     &__label {
         display: inline-flex;
         align-items: center;
@@ -57,6 +39,24 @@
             background-color: $color-dark-gray;
             transform: scale(0);
             transition: transform 0.3s ease;
+        }
+    }
+
+    &__input {
+        @include wh(0, 0);
+
+        position: absolute;
+        opacity: 0;
+
+        &:checked + .options__label::before {
+        }
+
+        &:checked + .options__label::after {
+            transform: scale(1);
+        }
+
+        &:focus + .options__label::before {
+            box-shadow: 0 0 rem(5) $color-dark;
         }
     }
 

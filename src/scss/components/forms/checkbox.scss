@@ -1,25 +1,6 @@
 .checkbox {
     position: relative;
 
-    &__input {
-        position: absolute;
-        width: 0;
-        height: 0;
-        opacity: 0;
-
-        &:checked + .checkbox__label::before {
-            //background-color: rgb(0, 81, 255);
-        }
-
-        &:checked + .checkbox__label::after {
-            transform: scale(1);
-        }
-
-        &:focus + .checkbox__label::before {
-            //box-shadow: 0 0 rem(5) $color-dark;
-        }
-    }
-
     &__label {
         position: relative;
         display: inline-flex;
@@ -48,6 +29,25 @@
             background-color: $color-dark;
             transform: scale(0);
             transition: transform 0.3s ease;
+        }
+    }
+
+    &__input {
+        position: absolute;
+        width: 0;
+        height: 0;
+        opacity: 0;
+
+        &:checked + .checkbox__label::before {
+            // background-color: rgb(0, 81, 255);
+        }
+
+        &:checked + .checkbox__label::after {
+            transform: scale(1);
+        }
+
+        &:focus + .checkbox__label::before {
+            // box-shadow: 0 0 rem(5) $color-dark;
         }
     }
 

@@ -11,7 +11,7 @@
 
         position: absolute;
         z-index: $zindex-toolbar - 1;
-        background-color: rgb(0 0 0 / 25%);
+        background-color: rgba($color-dark, 0.25);
         opacity: 0;
         visibility: hidden;
         will-change: visibility, opacity;
@@ -75,7 +75,7 @@
             color: $color-dark-gray;
 
             &:hover {
-                background-color: rgb(0 0 0 / 7%);
+                background-color: rgba($color-dark 0.07);
             }
         }
 

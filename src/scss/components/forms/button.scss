@@ -43,7 +43,7 @@
     @if $icon == 1 {
         span {
             padding: 0 rem(30) 0 0;
-            background-image: url("@content") left no-repeat;
+            background: url("@content") left no-repeat;
         }
     }
 
