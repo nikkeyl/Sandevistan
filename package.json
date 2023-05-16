@@ -1,7 +1,7 @@
 {
 	"type": "module",
 	"scripts": {
-		"start": "rm -rf .git && npm i --loglevel=error && husky install && gulp && webpack serve -c config/webpack/webpack.dev.js",
+		"start": "rm -rf .git && npm i --loglevel=error && gulp && webpack serve -c config/webpack/webpack.dev.js",
 		"dev": "stylelint src/scss/**/*.scss --fix && gulp && webpack serve -c config/webpack/webpack.dev.js",
 		"build": "gulp build",
 		"devBuild": "gulp build --nowebp",
@@ -13,14 +13,6 @@
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/nikkeyl/projectName.git"
-	},
-	"lint-staged": {
-		"*.scss": [
-			"stylelint --fix"
-		],
-		"*.js": [
-			"eslint --fix"
-		]
 	},
 	"dependencies": {
 		"simplebar": "latest"
@@ -58,12 +50,10 @@
 		"gulp-webp-html-nosvg": "latest",
 		"gulp-webpcss": "latest",
 		"gulp-zip": "latest",
-		"husky": "latest",
 		"inputmask": "latest",
 		"isotope-layout": "latest",
 		"js-datepicker": "latest",
 		"lightgallery": "latest",
-		"lint-staged": "latest",
 		"mini-css-extract-plugin": "latest",
 		"nouislider": "latest",
 		"prettier": "latest",

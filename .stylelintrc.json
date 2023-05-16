@@ -423,7 +423,14 @@
 			}
 		],
 		"at-rule-no-unknown": null,
-		"block-no-empty": null,
+
+		"block-no-empty": [
+			true,
+			{
+				"severity": "warning"
+			}
+		],
+
 		"custom-property-empty-line-before": [
 			"always",
 			{
@@ -459,6 +466,9 @@
 		"color-no-hex": null,
 		"declaration-block-no-redundant-longhand-properties": true,
 		"declaration-block-no-shorthand-property-overrides": true,
+
+		"declaration-block-no-duplicate-custom-properties": true,
+
 		"declaration-block-single-line-max-declarations": 0,
 		"declaration-block-no-duplicate-properties": true,
 		"declaration-empty-line-before": [
@@ -483,22 +493,31 @@
 		"font-weight-notation": "numeric",
 		"function-url-quotes": "always",
 		"function-name-case": "lower",
+		"keyframe-block-no-duplicate-selectors": true,
 		"keyframe-declaration-no-important": true,
 		"length-zero-no-unit": true,
 		"media-feature-name-no-vendor-prefix": true,
 		"media-feature-name-no-unknown": true,
 		"max-nesting-depth": null,
+
 		"no-invalid-double-slash-comments": true,
-		"no-descending-specificity": null,
+
+		"no-duplicate-at-import-rules": true,
+
+		"named-grid-areas-no-invalid": true,
+		
+		"no-descending-specificity": true,
 		"no-duplicate-selectors": true,
 		"no-unknown-animations": true,
 		"number-max-precision": 6,
+
 		"no-empty-source": [
 			true,
 			{
-				"severity": "error"
+				"severity": "warning"
 			}
 		],
+
 		"property-no-vendor-prefix": null,
 		"property-no-unknown": [
 			true,
@@ -560,8 +579,8 @@
 		"scss/dollar-variable-colon-newline-after": "always-multi-line",
 		"scss/dollar-variable-colon-space-after": "always-single-line",
 		"scss/declaration-nested-properties-no-divided-groups": null,
+		"scss/double-slash-comment-whitespace-inside": "always",
 		"scss/dollar-variable-no-missing-interpolation": null,
-		"scss/double-slash-comment-whitespace-inside": null,
 		"scss/dollar-variable-colon-space-before": "never",
 		"scss/double-slash-comment-empty-line-before": [
 			"always",
