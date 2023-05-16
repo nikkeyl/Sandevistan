@@ -6,15 +6,6 @@ function formFieldsInit(
         autoHeight: false
     }
 ) {
-    const formFields = document.querySelectorAll(
-        'input[placeholder],textarea[placeholder]'
-    )
-
-    formFields.forEach(formField => {
-        !formField.hasAttribute('data-placeholder-nohide')
-            ? formField.dataset.placeholder = formField.placeholder
-            : null
-    })
     document.body.addEventListener('focusin', e => {
         const targetElement = e.target
 
@@ -22,10 +13,6 @@ function formFieldsInit(
             targetElement.tagName === 'INPUT' ||
             targetElement.tagName === 'TEXTAREA'
         ) {
-            targetElement.dataset.placeholder
-                ? targetElement.placeholder = ''
-                : null
-
             if (!targetElement.hasAttribute('data-no-focus-classes')) {
                 targetElement.classList.add('form-focus')
                 targetElement.parentElement.classList.add('form-focus')
@@ -41,10 +28,6 @@ function formFieldsInit(
             targetElement.tagName === 'INPUT' ||
             targetElement.tagName === 'TEXTAREA'
         ) {
-            targetElement.dataset.placeholder
-                ? targetElement.placeholder = targetElement.dataset.placeholder
-                : null
-
             if (!targetElement.hasAttribute('data-no-focus-classes')) {
                 targetElement.classList.remove('form-focus')
                 targetElement.parentElement.classList.remove('form-focus')

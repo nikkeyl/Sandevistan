@@ -1,7 +1,7 @@
 .input {
     display: block;
     border: rem(1) solid $color-gray;
-    border-radius: 0 !important;
+    border-radius: rem(5);
     padding: 0 rem(20);
     width: 100%;
     color: $color-gray;
@@ -14,17 +14,16 @@
     }
 
     &::placeholder {
-        // opacity: 1;
-        // transition: opacity 0.3s ease;
+        opacity: 1;
+        transition: opacity 0.3s ease;
     }
 
     &:disabled {
     }
 
-    &.form-focus {
+    &:focus {
         &::placeholder {
-            // opacity: 0;
-            // transition: opacity 0.3s ease;
+            opacity: 0;
         }
     }
 
