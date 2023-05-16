@@ -587,60 +587,6 @@
 			"transform: translate(rem(${1:0}), rem(${2:0})) rotate(${3:0}deg) scale(${4:1}) skew(${5:0}, ${6:0});"
 		]
 	},
-	"Extend": {
-		"prefix": "ex",
-		"body": [
-			"@extend .$0;"
-		]
-	},
-	"Extend Responsive Video": {
-		"prefix": "erv",
-		"body": [
-			"@extend %responsive-video;"
-		]
-	},
-	"Extend Video Background": {
-		"prefix": "evb",
-		"body": [
-			"@extend %video-background;"
-		]
-	},
-	"Extend List Counter": {
-		"prefix": "elc",
-		"body": [
-			"@extend %list-counter;"
-		]
-	},
-	"Extend Gray Filter": {
-		"prefix": "egf",
-		"body": [
-			"@extend %gray-filter;"
-		]
-	},
-	"Extend Hide Scroll": {
-		"prefix": "ehs",
-		"body": [
-			"@extend %hide-scroll;"
-		]
-	},
-	"Extend Touch": {
-		"prefix": "et",
-		"body": [
-			"@extend %touch;"
-		]
-	},
-	"Extend Mirror": {
-		"prefix": "emir",
-		"body": [
-			"@extend %mirror;"
-		]
-	},
-	"Extend User Select": {
-		"prefix": "eus",
-		"body": [
-			"@extend %user-select;"
-		]
-	},
 	"Last Child": {
 		"prefix": "lc",
 		"body": [

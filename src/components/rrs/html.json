@@ -5,6 +5,54 @@
 			"data-datepicker"
 		]
 	},
+	"Data Responsive Video": {
+		"prefix": "drv",
+		"body": [
+			"data-responsive-video"
+		]
+	},
+	"Data Video Background": {
+		"prefix": "dvb",
+		"body": [
+			"data-video-background"
+		]
+	},
+	"Data List Counter": {
+		"prefix": "dlc",
+		"body": [
+			"data-list-counter"
+		]
+	},
+	"Data Gray Filter": {
+		"prefix": "dgf",
+		"body": [
+			"data-gray-filter"
+		]
+	},
+	"Data Hide Scroll": {
+		"prefix": "dhs",
+		"body": [
+			"data-hide-scroll"
+		]
+	},
+	"Data Touch": {
+		"prefix": "dtouch",
+		"body": [
+			"data-touch"
+		]
+	},
+	"Data Mirror": {
+		"prefix": "emir",
+		"body": [
+			"data-mirror"
+		]
+	},
+	"Data User Select": {
+		"prefix": "dus",
+		"body": [
+			"data-user-select"
+		]
+	},
 	"Data Marquee": {
 		"prefix": "dm",
 		"body": [
