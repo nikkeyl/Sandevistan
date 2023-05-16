@@ -314,7 +314,7 @@
 	"Font Size In Rem": {
 		"prefix": "fz",
 		"body": [
-			"\\$font-size: ${0:18};\nfont-size: rem(\\$font-size);"
+			"\\$font-size: ${0:18};\n\nfont-size: rem(\\$font-size);"
 		]
 	},
 	"Divide": {
