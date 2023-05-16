@@ -107,12 +107,6 @@
 			"data-popup-youtube-place"
 		]
 	},
-	"Data Placeholder Nohide": {
-		"prefix": "dpn",
-		"body": [
-			"data-placeholder-nohide"
-		]
-	},
 	"Data No Focus Classes": {
 		"prefix": "dnfc",
 		"body": [
