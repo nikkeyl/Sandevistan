@@ -1,7 +1,7 @@
 {
 	"type": "module",
 	"scripts": {
-		"start": "rm -rf .git && npm i --loglevel=error && gulp && webpack serve -c config/webpack/webpack.dev.js",
+		"start": "rm -rf .git && npm i && gulp && webpack serve -c config/webpack/webpack.dev.js",
 		"dev": "stylelint src/scss/**/*.scss --fix && gulp && webpack serve -c config/webpack/webpack.dev.js",
 		"build": "gulp build",
 		"devBuild": "gulp build --nowebp",
