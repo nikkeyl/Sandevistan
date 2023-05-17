@@ -29,9 +29,6 @@
             }
         }
 
-        &--minus {
-        }
-
         @media (any-hover: hover) {
             &:hover {
                 &::before,
@@ -46,10 +43,12 @@
         flex: 1 1 auto;
 
         input {
+            $font-size: 18;
+
             @include wh(100%, 100%);
 
             font-weight: 700;
-            font-size: rem(12);
+            font-size: rem($font-size);
             text-align: center;
             color: $color-dark;
         }

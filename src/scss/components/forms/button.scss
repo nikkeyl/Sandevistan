@@ -1,37 +1,20 @@
 .button {
     $icon: 0;
     $fw: 0;
+    $font-size: 18;
 
     display: inline-flex;
     justify-content: center;
     padding: rem(10) rem(15);
-    font-size: rem(16);
-    line-height: math.div(20, 16);
+    font-size: rem($font-size);
+    line-height: math.div(20, $font-size);
     text-align: center;
     color: $color-dark;
     background-color: $color-light;
     transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
 
-    &::before {
-    }
-
-    &::after {
-    }
-
-    &:link {
-    }
-
-    &:visited {
-    }
-
-    &:focus {
-    }
-
     &:active {
         transform: translateY(rem(3));
-    }
-
-    &:disabled {
     }
 
     &--fw {
@@ -44,11 +27,6 @@
         span {
             padding: 0 rem(30) 0 0;
             background: url("@content") left no-repeat;
-        }
-    }
-
-    @media (any-hover: hover) {
-        &:hover {
         }
     }
 }

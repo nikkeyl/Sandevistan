@@ -3,7 +3,9 @@
     gap: rem(15);
 
     &__item {
-        font-size: rem(20);
+        $font-size: 18;
+
+        font-size: rem($font-size);
     }
 
     &__title {
@@ -45,11 +47,6 @@
                 &::after {
                     transform: rotate(40deg);
                 }
-            }
-        }
-
-        @media (any-hover: hover) {
-            &:hover {
             }
         }
     }

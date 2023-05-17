@@ -1,2 +1,3 @@
+src/scss/components/swiper.scss
 src/scss/base/mixins.scss
 src/scss/libs/**/*.scss

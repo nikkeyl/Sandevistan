@@ -194,7 +194,9 @@
 }
 
 .noUi-value-sub {
-    font-size: rem(10);
+    $font-size: 18;
+
+    font-size: rem($font-size);
     color: #ccc;
 }
 

@@ -15,10 +15,12 @@
 }
 
 .tippy-box {
+    $font-size: 18;
+
+    font-size: rem($font-size);
     position: relative;
     outline: 0;
     border-radius: rem(4);
-    font-size: rem(14);
     line-height: 1.4;
     white-space: normal;
     color: $color-light;

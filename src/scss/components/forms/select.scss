@@ -76,11 +76,11 @@
         overflow-y: auto;
         max-height: rem(200);
 
-        .simplebar-scrollbar {
-            &::before {
-                // opacity: 1;
-            }
-        }
+        // .simplebar-scrollbar {
+        //     &::before {
+        //         opacity: 1;
+        //     }
+        // }
     }
 
     &__option {
@@ -106,27 +106,27 @@
         align-items: center;
     }
 
-    &__asset {
-    }
+    // &__asset {
+    // }
 
     &.select-open {
         z-index: 5;
     }
 
-    &.select-disabled {
-    }
+    // &.select-disabled {
+    // }
 
-    &.select-active {
-    }
+    // &.select-active {
+    // }
 
-    &.select-focus {
-    }
+    // &.select-focus {
+    // }
 
-    &.select-multiple {
-    }
+    // &.select-multiple {
+    // }
 
-    &.select-checkbox {
-    }
+    // &.select-checkbox {
+    // }
 }
 
 .select-tag {

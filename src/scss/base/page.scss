@@ -12,8 +12,8 @@
         overscroll-behavior: none;
     }
 
-    .loaded & {
-    }
+    // .loaded & {
+    // }
 
     @if $background-gradient == 1 {
         background: $main-background-color;

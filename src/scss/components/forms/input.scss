@@ -7,33 +7,14 @@
     color: $color-gray;
     transition: color 0.3s ease;
 
-    &::before {
-    }
-
-    &::after {
-    }
-
     &::placeholder {
         opacity: 1;
         transition: opacity 0.3s ease;
     }
 
-    &:disabled {
-    }
-
     &:focus {
         &::placeholder {
             opacity: 0;
-        }
-    }
-
-    &.form-error {
-        &::placeholder {
-        }
-    }
-
-    @media (any-hover: hover) {
-        &:hover {
         }
     }
 }

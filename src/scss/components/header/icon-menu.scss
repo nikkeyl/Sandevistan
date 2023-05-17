@@ -35,10 +35,6 @@
         }
 
         .menu-open & {
-            &::before,
-            &::after {
-            }
-
             &::before {
                 top: calc(50% - rem(1));
                 transform: rotate(-45deg);

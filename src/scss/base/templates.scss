@@ -1,5 +1,4 @@
-%responsive-video {
-    /* Responsive video */
+[data-responsive-video] {
     position: relative;
     overflow: hidden;
     padding-bottom: 56.25%;
@@ -17,8 +16,7 @@
     }
 }
 
-%video-background {
-    /* Video background */
+[data-video-background] {
     iframe,
     object,
     video,
@@ -36,8 +34,7 @@
     }
 }
 
-%list-counter {
-    /* List counter */
+[data-list-counter] {
     counter-reset: item;
     list-style-type: none;
 
@@ -54,8 +51,7 @@
     }
 }
 
-%gray-filter {
-    /* Gray filter */
+[data-gray-filter] {
     filter: grayscale(1);
     transition: filter 0.3s ease;
 
@@ -66,24 +62,23 @@
     }
 }
 
-%hide-scroll {
+[data-hide-scroll] {
     &::-webkit-scrollbar {
-        /* Hide scollbar */
         display: none;
     }
 }
 
-%touch {
+[data-touch] {
     /* Pulse-based scrolling https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-overflow-scrolling */
     -webkit-overflow-scrolling: touch;
 }
 
-%mirror {
+[data-mirror] {
     /* Mirror effect */
     transform: scale(-1, 1);
 }
 
-%user-select {
+[data-user-select] {
     /* Prevents the user from selecting text */
     user-select: none;
 }

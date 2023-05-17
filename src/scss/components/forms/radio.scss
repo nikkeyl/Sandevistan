@@ -48,18 +48,16 @@
         position: absolute;
         opacity: 0;
 
-        &:checked + .options__label::before {
-        }
-
         &:checked + .options__label::after {
             transform: scale(1);
-        }
-
-        &:focus + .options__label::before {
-            box-shadow: 0 0 rem(5) $color-dark;
         }
     }
 
     &__text {
+        $font-size: 18;
+
+        font-size: rem($font-size);
+        line-height: math.div(22, $font-size);
+        color: $color-gray;
     }
 }

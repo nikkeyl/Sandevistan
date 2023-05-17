@@ -10,17 +10,9 @@
         &.tab-active {
             border: rem(1) solid $color-dark;
         }
-
-        @media (any-hover: hover) {
-            &:hover {
-            }
-        }
     }
 
     &__content {
         padding: rem(10) rem(15);
-    }
-
-    &__body {
     }
 }

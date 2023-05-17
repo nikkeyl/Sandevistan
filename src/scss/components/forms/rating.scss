@@ -1,7 +1,9 @@
 .rating {
+    $font-size: 18;
+
     display: flex;
     align-items: flex-end;
-    font-size: rem(40);
+    font-size: rem($font-size);
     line-height: 0.75;
     transition: opacity 0.3s ease;
 

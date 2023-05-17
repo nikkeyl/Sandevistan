@@ -1,11 +1,10 @@
 {
 	"extends": [
-		"eslint:recommended"
-		// "plugin:prettier/recommended"
-		// "prettier"
+		"eslint:recommended",
+		"prettier"
 	],
 	"plugins": [
-		// "prettier"
+		"prettier"
 	],
 	"env": {
 		"browser": true,
@@ -16,7 +15,7 @@
 		"sourceType": "module"
 	},
 	"rules": {
-		// "prettier/prettier": "error",
+		"prettier/prettier": "error",
 		// "array-callback-return": "error",
 		"array-bracket-spacing": "error",
 
@@ -45,8 +44,8 @@
 		// 	"as-needed"
 		// ],
 
-		"block-spacing": "error",
-		"brace-style": "error",
+		// "block-spacing": "error", // have in prettier
+		// "brace-style": "error",
 
 		"computed-property-spacing": "error",
 

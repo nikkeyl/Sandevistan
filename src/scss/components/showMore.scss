@@ -3,9 +3,6 @@
     gap: rem(10);
 }
 
-[data-showmore-content] {
-}
-
 [data-showmore-button] {
     display: inline-flex;
     align-self: center;
@@ -23,11 +20,6 @@
             &:last-child {
                 display: block;
             }
-        }
-    }
-
-    @media (any-hover: hover) {
-        &:hover {
         }
     }
 }

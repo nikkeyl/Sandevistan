@@ -38,20 +38,17 @@
         height: 0;
         opacity: 0;
 
-        &:checked + .checkbox__label::before {
-            // background-color: rgb(0, 81, 255);
-        }
-
         &:checked + .checkbox__label::after {
             transform: scale(1);
-        }
-
-        &:focus + .checkbox__label::before {
-            // box-shadow: 0 0 rem(5) $color-dark;
         }
     }
 
     &__text {
+        $font-size: 18;
+
+        font-size: rem($font-size);
+        line-height: math.div(22, $font-size);
+        color: $color-gray;
     }
 
     &:not(:last-child) {
