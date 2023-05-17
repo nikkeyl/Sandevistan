@@ -491,12 +491,6 @@
 			"active"
 		]
 	},
-	"Block And Element": {
-		"prefix": "be",
-		"body": [
-			"${1:block}__${2:element}"
-		]
-	},
 	"Image lazy": {
 		"prefix": "imgl",
 		"body": [
