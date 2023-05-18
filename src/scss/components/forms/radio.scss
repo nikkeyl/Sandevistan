@@ -19,7 +19,7 @@
         cursor: pointer;
 
         &::before {
-            @include wh(rem(20), rem(20));
+            @include width-height(rem(20), rem(20));
 
             content: "";
             flex: 0 0 rem(20);
@@ -31,7 +31,7 @@
 
         &::after {
             @include pseudo;
-            @include wh(rem(10), rem(10));
+            @include width-height(rem(10), rem(10));
 
             left: rem(5);
             top: rem(5);
@@ -43,7 +43,7 @@
     }
 
     &__input {
-        @include wh(0, 0);
+        @include width-height(0, 0);
 
         position: absolute;
         opacity: 0;

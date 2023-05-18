@@ -79,7 +79,7 @@
 }
 
 .tippy-arrow {
-    @include wh(rem(16), rem(16));
+    @include width-height(rem(16), rem(16));
 
     color: $color-dark-gray;
 

@@ -252,7 +252,7 @@
 	position: $position;
 }
 
-@mixin wh($width, $height) {
+@mixin width-height($width, $height) {
 	width: $width;
 	height: $height;
 }

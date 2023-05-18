@@ -46,7 +46,7 @@ $lightblue: #add8e6;
 }
 
 .qs-overlay {
-    @include wh(100%, 100%);
+    @include width-height(100%, 100%);
 
     position: absolute;
     left: 0;
@@ -145,7 +145,7 @@ $lightblue: #add8e6;
 }
 
 .qs-arrow {
-    @include wh(math.div($width, 10), math.div($width, 10));
+    @include width-height(math.div($width, 10), math.div($width, 10));
 
     position: relative;
     border-radius: $radius;
@@ -229,7 +229,7 @@ $lightblue: #add8e6;
 }
 
 .qs-square {
-    @include wh(#{"calc(100% / 7)"}, math.div($width, 10));
+    @include width-height(#{"calc(100% / 7)"}, math.div($width, 10));
 
     display: flex;
     align-items: center;
@@ -324,7 +324,7 @@ $lightblue: #add8e6;
 
     &::after {
         @include pseudo;
-        @include wh($width * 0.03, $width * 0.03);
+        @include width-height($width * 0.03, $width * 0.03);
 
         right: 0;
         bottom: 0;

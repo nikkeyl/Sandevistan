@@ -4,7 +4,7 @@
 
 .lg-progress-bar {
     @include transitionCustom(opacity 0.08s ease 0s);
-    @include wh(100%, $lg-progress-bar-height);
+    @include width-height(100%, $lg-progress-bar-height);
 
     position: absolute;
     left: 0;

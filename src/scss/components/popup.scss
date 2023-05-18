@@ -1,6 +1,6 @@
 .page {
     &::after {
-        @include wh(100%, 100%);
+        @include width-height(100%, 100%);
         @include pseudo("", fixed);
 
         left: 0;

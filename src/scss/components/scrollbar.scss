@@ -4,7 +4,7 @@
     // scrollbar-width: rem(10);
 
     &::-webkit-scrollbar {
-        @include wh(rem(10), rem(10));
+        @include width-height(rem(10), rem(10));
 
         background-color: $color-light;
     }

@@ -14,13 +14,13 @@
 
 .noUi-base,
 .noUi-connects {
-    @include wh(100%, 100%);
+    @include width-height(100%, 100%);
 }
 
 /* Wrapper for all connect elements. */
 .noUi-connect,
 .noUi-origin {
-    @include wh(100%, 100%);
+    @include width-height(100%, 100%);
 
     position: absolute;
     right: 0;
@@ -55,7 +55,7 @@
 }
 
 .noUi-horizontal .noUi-handle {
-    @include wh(rem(15), rem(15));
+    @include width-height(rem(15), rem(15));
 
     right: rem(-7.5);
     top: rem(-3);

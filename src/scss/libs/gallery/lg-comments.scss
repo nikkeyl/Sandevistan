@@ -36,13 +36,13 @@
     }
 
     .lg-comment-body {
-        @include wh(100% !important, 100% !important);
+        @include width-height(100% !important, 100% !important);
 
         padding-top: rem(43) !important;
     }
 
     .fb-comments {
-        @include wh(100%, 100%);
+        @include width-height(100%, 100%);
 
         display: inline-block;
         overflow-y: auto;

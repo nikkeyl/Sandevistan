@@ -17,7 +17,7 @@
     }
 
     &__active {
-        @include wh(0, 100%);
+        @include width-height(0, 100%);
 
         position: absolute;
         left: 0;
@@ -27,7 +27,7 @@
 
         &::before {
             @include pseudo("★★★★★", absolute);
-            @include wh(100%, 100%);
+            @include width-height(100%, 100%);
 
             left: 0;
             top: 0;
@@ -36,7 +36,7 @@
     }
 
     &__items {
-        @include wh(100%, 100%);
+        @include width-height(100%, 100%);
 
         position: absolute;
         left: 0;

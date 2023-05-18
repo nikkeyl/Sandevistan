@@ -1,7 +1,7 @@
 /* Line effect */
 .hover {
     @media (min-width: em($tablet)) {
-        @include wh(100%, 100%);
+        @include width-height(100%, 100%);
 
         position: absolute;
         left: 0;

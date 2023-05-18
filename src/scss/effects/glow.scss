@@ -6,7 +6,7 @@
 
         &::before {
             @include pseudo;
-            @include wh(100%, 100%);
+            @include width-height(100%, 100%);
 
             left: 0;
             top: 0;

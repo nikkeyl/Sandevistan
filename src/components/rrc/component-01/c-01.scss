@@ -8,7 +8,7 @@
 	// &__img {
 	//     $size: 80;
 
-	//     @include wh(rem($size), rem($size));
+	//     @include width-height(rem($size), rem($size));
 
 	//     display: flex;
 	//     align-items: center;
@@ -19,7 +19,7 @@
 	//     svg {
 	//         $size-svg: 40;
 
-	//         @include wh(rem($size-svg), rem($size-svg));
+	//         @include width-height(rem($size-svg), rem($size-svg));
 
 	//         fill: $color-light;
 	//     }
@@ -29,7 +29,7 @@
 	&__icon {
 		$size: 40;
 
-		@include wh(rem($size), rem($size));
+		@include width-height(rem($size), rem($size));
 
 		fill: $color-gray;
 
@@ -44,7 +44,7 @@
 	// &__image-ibg {
 	//     $size: 40;
 
-	//     @include wh(rem($size), rem($size));
+	//     @include width-height(rem($size), rem($size));
 
 	//     background-color: $color-gray;
 

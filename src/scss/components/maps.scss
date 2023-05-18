@@ -1,5 +1,5 @@
 .map {
-    @include wh(rem(100), rem(100));
+    @include width-height(rem(100), rem(100));
 
     position: absolute;
     left: 50%;

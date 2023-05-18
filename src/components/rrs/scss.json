@@ -8,7 +8,7 @@
 	"Mixin Width And Height": {
 		"prefix": "wh",
 		"body": [
-			"@include wh(rem($1), rem($2));"
+			"@include width-height(rem($1), rem($2));"
 		]
 	},
 	"Mixin Gradient For Text": {

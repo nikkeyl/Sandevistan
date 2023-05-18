@@ -46,7 +46,7 @@
     .lg-pager-thumb-cont {
         @include transitionCustom(opacity 0.15s ease, transform 0.15s ease);
         @include translate3d(0, rem(5), 0);
-        @include wh(rem(120), rem(83));
+        @include width-height(rem(120), rem(83));
 
         position: absolute;
         left: 0;
@@ -61,13 +61,13 @@
         will-change: transform, opacity;
 
         img {
-            @include wh(100%, 100%);
+            @include width-height(100%, 100%);
         }
     }
 
     .lg-pager {
         @include transition(box-shadow 0.3s ease 0s);
-        @include wh(rem(12), rem(12));
+        @include width-height(rem(12), rem(12));
 
         display: block;
         border-radius: 50%;
@@ -81,7 +81,7 @@
     }
 
     .lg-caret {
-        @include wh(0, 0);
+        @include width-height(0, 0);
 
         position: absolute;
         left: 50%;

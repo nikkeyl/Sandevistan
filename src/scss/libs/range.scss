@@ -15,7 +15,7 @@
 
 .noUi-base,
 .noUi-connects {
-    @include wh(100%, 100%);
+    @include width-height(100%, 100%);
 
     position: relative;
     z-index: 1;
@@ -30,7 +30,7 @@
 
 .noUi-connect,
 .noUi-origin {
-    @include wh(100%, 100%);
+    @include width-height(100%, 100%);
 
     position: absolute;
     right: 0;
@@ -58,7 +58,7 @@
 }
 
 .noUi-touch-area {
-    @include wh(100%, 100%);
+    @include width-height(100%, 100%);
 }
 
 .noUi-state-tap .noUi-connect,
@@ -76,7 +76,7 @@
 }
 
 .noUi-horizontal .noUi-handle {
-    @include wh(rem(30), rem(30));
+    @include width-height(rem(30), rem(30));
 
     right: rem(-17);
     top: rem(-6);
@@ -87,7 +87,7 @@
 }
 
 .noUi-vertical .noUi-handle {
-    @include wh(rem(28), rem(24));
+    @include width-height(rem(28), rem(24));
 
     right: rem(6);
     bottom: rem(-17);
@@ -140,7 +140,7 @@
 .noUi-handle::before,
 .noUi-handle::after {
     @include pseudo;
-    @include wh(rem(1), rem(14));
+    @include width-height(rem(1), rem(14));
 
     left: rem(14);
     top: rem(6);
@@ -154,7 +154,7 @@
 
 .noUi-vertical .noUi-handle::before,
 .noUi-vertical .noUi-handle::after {
-    @include wh(rem(14), rem(1));
+    @include width-height(rem(14), rem(1));
 
     left: rem(6);
     top: rem(14);
@@ -216,7 +216,7 @@
 
 /* Horizontal layout; */
 .noUi-pips-horizontal {
-    @include wh(100%, rem(80));
+    @include width-height(100%, rem(80));
 
     left: 0;
     top: 100%;
@@ -232,7 +232,7 @@
 }
 
 .noUi-marker-horizontal.noUi-marker {
-    @include wh(rem(2), rem(5));
+    @include width-height(rem(2), rem(5));
 
     margin-left: rem(-1);
 }
@@ -263,7 +263,7 @@
 }
 
 .noUi-marker-vertical.noUi-marker {
-    @include wh(rem(5), rem(2));
+    @include width-height(rem(5), rem(2));
 
     margin-top: rem(-1);
 }

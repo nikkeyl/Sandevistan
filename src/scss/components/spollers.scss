@@ -23,7 +23,7 @@
             &::before,
             &::after {
                 @include pseudo;
-                @include wh(rem(15), rem(2));
+                @include width-height(rem(15), rem(2));
 
                 right: rem(10);
                 top: 50%;

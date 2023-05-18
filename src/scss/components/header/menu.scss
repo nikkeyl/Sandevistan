@@ -2,7 +2,7 @@
 .menu {
     &__body {
         @media (max-width: md($tablet)) {
-            @include wh(100%, 100%);
+            @include width-height(100%, 100%);
 
             position: fixed;
             left: -100%;
@@ -15,7 +15,7 @@
 
             &::before {
                 @include pseudo("", fixed);
-                @include wh(100%, rem(70));
+                @include width-height(100%, rem(70));
 
                 left: -100%;
                 top: 0;

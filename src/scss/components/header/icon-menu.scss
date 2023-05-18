@@ -3,7 +3,7 @@
     display: none;
 
     @media (max-width: md($tablet)) {
-        @include wh(rem(30), rem(18));
+        @include width-height(rem(30), rem(18));
 
         position: relative;
         z-index: 5;
@@ -14,7 +14,7 @@
         &::before,
         &::after {
             @include pseudo;
-            @include wh(100%, rem(2));
+            @include width-height(100%, rem(2));
 
             right: 0;
             background-color: $color-dark;

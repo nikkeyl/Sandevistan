@@ -5,7 +5,7 @@
     width: fit-content;
 
     &__button {
-        @include wh(rem(25), rem(25));
+        @include width-height(rem(25), rem(25));
 
         border-radius: 50%;
         color: $color-light;
@@ -18,11 +18,11 @@
         }
 
         &--low {
-            @include wh(rem(30), rem(30));
+            @include width-height(rem(30), rem(30));
         }
 
         &--big {
-            @include wh(rem(35), rem(35));
+            @include width-height(rem(35), rem(35));
         }
     }
 }
@@ -62,7 +62,7 @@
     &__value {
         $font-size: 14;
 
-        @include wh(rem(25), rem(25));
+        @include width-height(rem(25), rem(25));
 
         display: flex;
         align-items: center;

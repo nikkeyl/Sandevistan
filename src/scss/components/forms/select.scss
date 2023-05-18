@@ -53,7 +53,7 @@
     }
 
     &__input {
-        @include wh(100%, 100%);
+        @include width-height(100%, 100%);
 
         background-color: transparent;
     }

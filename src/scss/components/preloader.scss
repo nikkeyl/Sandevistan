@@ -1,5 +1,5 @@
 .preloader {
-    @include wh(100%, 100%);
+    @include width-height(100%, 100%);
 
     position: fixed;
     left: 0;
@@ -11,7 +11,7 @@
     transition: opacity 0.3s ease, visibility 0.3s ease;
 
     &__load {
-        @include wh(rem(100), rem(100));
+        @include width-height(rem(100), rem(100));
 
         position: absolute;
         left: 50%;

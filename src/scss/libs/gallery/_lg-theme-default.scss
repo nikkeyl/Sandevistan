@@ -110,7 +110,7 @@
 
     .lg-icon {
         @include transition(color 0.2s linear);
-        @include wh(rem(50), rem(47));
+        @include width-height(rem(50), rem(47));
 
         float: right;
         outline: medium none;

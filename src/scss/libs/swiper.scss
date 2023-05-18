@@ -48,7 +48,7 @@ $themeColor: #07f !default;
 }
 
 .swiper-wrapper {
-    @include wh(100%, 100%);
+    @include width-height(100%, 100%);
 
     position: relative;
     z-index: 1;
@@ -71,7 +71,7 @@ $themeColor: #07f !default;
 }
 
 .swiper-slide {
-    @include wh(100%, 100%);
+    @include width-height(100%, 100%);
 
     position: relative;
     flex-shrink: 0;
@@ -116,7 +116,7 @@ $themeColor: #07f !default;
     .swiper-slide-shadow-left,
     .swiper-slide-shadow-top,
     .swiper-slide-shadow {
-        @include wh(100%, 100%);
+        @include width-height(100%, 100%);
 
         position: absolute;
         left: 0;

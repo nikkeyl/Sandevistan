@@ -1,5 +1,5 @@
 .quantity {
-    @include wh(rem(88), rem(40));
+    @include width-height(rem(88), rem(40));
 
     display: flex;
     border: rem(2) solid $color-dark;
@@ -12,7 +12,7 @@
 
         &::before,
         &::after {
-            @include wh(rem(10), rem(1));
+            @include width-height(rem(10), rem(1));
             @include pseudo;
 
             left: 50%;
@@ -45,7 +45,7 @@
         input {
             $font-size: 18;
 
-            @include wh(100%, 100%);
+            @include width-height(100%, 100%);
 
             font-weight: 700;
             font-size: rem($font-size);

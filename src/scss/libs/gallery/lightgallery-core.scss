@@ -76,7 +76,7 @@
 
 .lg-outer {
     @include transition(opacity 0.15s ease 0s);
-    @include wh(100%, 100%);
+    @include width-height(100%, 100%);
 
     position: fixed;
     left: 0;
@@ -128,7 +128,7 @@
 
     .lg-item,
     .lg-img-wrap {
-        @include wh(100%, 100%);
+        @include width-height(100%, 100%);
 
         position: absolute;
         display: inline-block;
@@ -150,7 +150,7 @@
     }
 
     .lg-object {
-        @include wh(auto, auto);
+        @include width-height(auto, auto);
 
         position: relative;
         display: inline-block;
