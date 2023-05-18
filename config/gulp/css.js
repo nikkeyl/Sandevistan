@@ -11,8 +11,7 @@ const css = () => {
 		.pipe(app.plugins.catchError('CSS'))
 		.pipe(groupCssMediaQueries())
 		.pipe(autoprefixer({
-			cascade: true,
-			grid: true
+			cascade: true
 		}))
 		.pipe(webpcss({
 			noWebpClass: '.no-webp',
