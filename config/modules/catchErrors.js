@@ -1,9 +1,9 @@
 import plumber from 'gulp-plumber'
 import notify from 'gulp-notify'
 
-const catchError = taskName =>
+const catchError = title =>
 	plumber(notify.onError({
-		title: taskName,
+		title: title,
 		message: 'Error: <%= error.message %>'
 	}))
 
