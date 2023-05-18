@@ -1,788 +1,526 @@
 {
 	"Include Mixin": {
 		"prefix": "in",
-		"body": [
-			"@include $0;"
-		]
+		"body": "@include $0;"
 	},
 	"Mixin Width And Height": {
 		"prefix": "wh",
-		"body": [
-			"@include width-height(rem($1), rem($2));"
-		]
+		"body": "@include width-height(rem($1), rem($2));"
 	},
 	"Mixin Gradient For Text": {
 		"prefix": "gt",
-		"body": [
-			"@include text-gradient($0);"
-		]
+		"body": "@include text-gradient($0);"
 	},
 	"Mixin Truncate": {
 		"prefix": "trun",
-		"body": [
-			"@include truncate(${1:400}, ${2:text}, ${3:3}, ${4:1});"
-		]
+		"body": "@include truncate(${1:400}, ${2:text}, ${3:3}, ${4:1});"
 	},
 	"Mixin Slide": {
 		"prefix": "slide",
-		"body": [
-			"@include slide(${1:5}, ${2:100}, ${3:1}, 0.${4:2}, ${5:top});"
-		]
+		"body": "@include slide(${1:5}, ${2:100}, ${3:1}, 0.${4:2}, ${5:top});"
 	},
 	"Mixin Responsive Output": {
 		"prefix": "ro",
-		"body": [
-			"@include responsive-output(${1:600}, ${2:400}, ${3:2}, ${4:0});"
-		]
+		"body": "@include responsive-output(${1:600}, ${2:400}, ${3:2}, ${4:0});"
 	},
 	"Mixin Pseudo": {
 		"prefix": "pseudo",
-		"body": [
-			"@include pseudo($0);"
-		]
+		"body": "@include pseudo($0);"
 	},
 	"Mixin Currency": {
 		"prefix": "cur",
-		"body": [
-			"@include currency(\"${0:₽}\");"
-		]
+		"body": "@include currency(\"${0:₽}\");"
 	},
 	"Mixin Grid Cards": {
 		"prefix": "gc",
-		"body": [
-			"@include grid-cards(${1:fit}, rem(${2:290}), ${3:1fr}, ${4:\\$phone}) {\n\tgap: rem(${5:30});\n\tjustify-items: center;\n}"
-		]
+		"body": "@include grid-cards(${1:fit}, rem(${2:290}), ${3:1fr}, ${4:\\$phone}) {\n\tgap: rem(${5:30});\n\tjustify-items: center;\n}"
 	},
 	"Triangle": {
 		"prefix": "triangle",
-		"body": [
-			"@include triangle(\\$color${1:-dark}, ${2:bottom}, ${3:10}, ${4:10}, ${5:10}, ${6:10}, ${7:absolute});"
-		]
+		"body": "@include triangle(\\$color${1:-dark}, ${2:bottom}, ${3:10}, ${4:10}, ${5:10}, ${6:10}, ${7:absolute});"
 	},
 	"Adaptive Value": {
 		"prefix": "av",
-		"body": [
-			"@include adaptive-value(\"$1\", $2, $3, \\$max-width, \\$min-width, 1);"
-		]
+		"body": "@include adaptive-value(\"$1\", $2, $3, \\$max-width, \\$min-width, 1);"
 	},
 	"Adaptive Font Value": {
 		"prefix": "avf",
-		"body": [
-			"@include adaptive-value(\"font-size\", ${1:\\$font-size}, $2, \\$max-width, \\$min-width, 1);"
-		]
+		"body": "@include adaptive-value(\"font-size\", ${1:\\$font-size}, $2, \\$max-width, \\$min-width, 1);"
 	},
 	"Adaptive Gap Value": {
 		"prefix": "avg",
-		"body": [
-			"@include adaptive-value(\"gap\", $1, $2, \\$max-width, \\$min-width, 1);"
-		]
+		"body": "@include adaptive-value(\"gap\", $1, $2, \\$max-width, \\$min-width, 1);"
 	},
 	"Adaptive Padding Value": {
 		"prefix": "avp",
-		"body": [
-			"@include adaptive-value(\"padding\", $1, $2, \\$max-width, \\$min-width, 1);"
-		]
+		"body": "@include adaptive-value(\"padding\", $1, $2, \\$max-width, \\$min-width, 1);"
 	},
 	"Adaptive Padding Top Value": {
 		"prefix": "avpt",
-		"body": [
-			"@include adaptive-value(\"padding-top\", $1, $2, \\$max-width, \\$min-width, 1);"
-		]
+		"body": "@include adaptive-value(\"padding-top\", $1, $2, \\$max-width, \\$min-width, 1);"
 	},
 	"Adaptive Padding Bottom Value": {
 		"prefix": "avpb",
-		"body": [
-			"@include adaptive-value(\"padding-bottom\", $1, $2, \\$max-width, \\$min-width, 1);"
-		]
+		"body": "@include adaptive-value(\"padding-bottom\", $1, $2, \\$max-width, \\$min-width, 1);"
 	},
 	"Adaptive Padding Right Value": {
 		"prefix": "avpr",
-		"body": [
-			"@include adaptive-value(\"padding-right\", $1, $2, \\$max-width, \\$min-width, 1);"
-		]
+		"body": "@include adaptive-value(\"padding-right\", $1, $2, \\$max-width, \\$min-width, 1);"
 	},
 	"Adaptive Padding Left Value": {
 		"prefix": "avpl",
-		"body": [
-			"@include adaptive-value(\"padding-left\", $1, $2, \\$max-width, \\$min-width, 1);"
-		]
+		"body": "@include adaptive-value(\"padding-left\", $1, $2, \\$max-width, \\$min-width, 1);"
 	},
 	"Adaptive Margin Value": {
 		"prefix": "avm",
-		"body": [
-			"@include adaptive-value(\"margin\", $1, $2, \\$max-width, \\$min-width, 1);"
-		]
+		"body": "@include adaptive-value(\"margin\", $1, $2, \\$max-width, \\$min-width, 1);"
 	},
 	"Adaptive Margin Top Value": {
 		"prefix": "avmt",
-		"body": [
-			"@include adaptive-value(\"margin-top\", $1, $2, \\$max-width, \\$min-width, 1);"
-		]
+		"body": "@include adaptive-value(\"margin-top\", $1, $2, \\$max-width, \\$min-width, 1);"
 	},
 	"Adaptive Margin Bottom Value": {
 		"prefix": "avmb",
-		"body": [
-			"@include adaptive-value(\"margin-bottom\", $1, $2, \\$max-width, \\$min-width, 1);"
-		]
+		"body": "@include adaptive-value(\"margin-bottom\", $1, $2, \\$max-width, \\$min-width, 1);"
 	},
 	"Adaptive Margin Right Value": {
 		"prefix": "avmr",
-		"body": [
-			"@include adaptive-value(\"margin-right\", $1, $2, \\$max-width, \\$min-width, 1);"
-		]
+		"body": "@include adaptive-value(\"margin-right\", $1, $2, \\$max-width, \\$min-width, 1);"
 	},
 	"Adaptive Margin Left Value": {
 		"prefix": "avml",
-		"body": [
-			"@include adaptive-value(\"margin-left\", $1, $2, \\$max-width, \\$min-width, 1);"
-		]
+		"body": "@include adaptive-value(\"margin-left\", $1, $2, \\$max-width, \\$min-width, 1);"
 	},
 	"Adaptive Height Value": {
 		"prefix": "avh",
-		"body": [
-			"@include adaptive-value(\"height\", $1, $2, \\$max-width, \\$min-width, 1);"
-		]
+		"body": "@include adaptive-value(\"height\", $1, $2, \\$max-width, \\$min-width, 1);"
 	},
 	"Adaptive Width Value": {
 		"prefix": "avw",
-		"body": [
-			"@include adaptive-value(\"width\", $1, $2, \\$max-width, \\$min-width, 1);"
-		]
+		"body": "@include adaptive-value(\"width\", $1, $2, \\$max-width, \\$min-width, 1);"
 	},
 	"@media max": {
 		"prefix": "md",
-		"body": [
-			"@media (max-width: md($1)) {\n\t$2\n}"
-		]
+		"body": "@media (max-width: md($1)) {\n\t$2\n}"
 	},
 	"@media min": {
 		"prefix": "mmd",
-		"body": [
-			"@media (min-width: em($1)) {\n\t$2\n}"
-		]
+		"body": "@media (min-width: em($1)) {\n\t$2\n}"
 	},
 	"@media Min And Max Width": {
 		"prefix": "mda",
-		"body": [
-			"@media (min-width: em($1)) and (max-width: md($2)) {\n\t$3\n}"
-		]
+		"body": "@media (min-width: em($1)) and (max-width: md($2)) {\n\t$3\n}"
 	},
 	"@media Max Width desktop": {
 		"prefix": "md1",
-		"body": [
-			"@media (max-width: md(\\$desktop)) {\n\t$0\n}"
-		]
+		"body": "@media (max-width: md(\\$desktop)) {\n\t$0\n}"
 	},
 	"@media Min Width desktop": {
 		"prefix": "mmd1",
-		"body": [
-			"@media (min-width: em(\\$desktop)) {\n\t$0\n}"
-		]
+		"body": "@media (min-width: em(\\$desktop)) {\n\t$0\n}"
 	},
 	"@media Max Width Laptop": {
 		"prefix": "md2",
-		"body": [
-			"@media (max-width: md(\\$laptop)) {\n\t$0\n}"
-		]
+		"body": "@media (max-width: md(\\$laptop)) {\n\t$0\n}"
 	},
 	"@media Min Width Laptop": {
 		"prefix": "mmd2",
-		"body": [
-			"@media (min-width: em(\\$laptop)) {\n\t$0\n}"
-		]
+		"body": "@media (min-width: em(\\$laptop)) {\n\t$0\n}"
 	},
 	"@media Max Width Tablet": {
 		"prefix": "md3",
-		"body": [
-			"@media (max-width: md(\\$tablet)) {\n\t$0\n}"
-		]
+		"body": "@media (max-width: md(\\$tablet)) {\n\t$0\n}"
 	},
 	"@media Min Width Tablet": {
 		"prefix": "mmd3",
-		"body": [
-			"@media (min-width: em(\\$tablet)) {\n\t$0\n}"
-		]
+		"body": "@media (min-width: em(\\$tablet)) {\n\t$0\n}"
 	},
 	"@media Max Width Phone": {
 		"prefix": "md4",
-		"body": [
-			"@media (max-width: md(\\$phone)) {\n\t$0\n}"
-		]
+		"body": "@media (max-width: md(\\$phone)) {\n\t$0\n}"
 	},
 	"@media Min Width Phone": {
 		"prefix": "mmd4",
-		"body": [
-			"@media (min-width: em(\\$phone)) {\n\t$0\n}"
-		]
+		"body": "@media (min-width: em(\\$phone)) {\n\t$0\n}"
 	},
 	"@media Min And Max Width With Variables": {
 		"prefix": "mdav",
-		"body": [
-			"@media (min-width: em(\\$${1:laptop})) and (max-width: md(\\$${2:desktop})) {\n\t$3\n}"
-		]
+		"body": "@media (min-width: em(\\$${1:laptop})) and (max-width: md(\\$${2:desktop})) {\n\t$3\n}"
 	},
 	"@media Min And Max Width With Laptop And desktop": {
 		"prefix": "mda1",
-		"body": [
-			"@media (min-width: em(\\$laptop)) and (max-width: md(\\$desktop)) {\n\t$0\n}"
-		]
+		"body": "@media (min-width: em(\\$laptop)) and (max-width: md(\\$desktop)) {\n\t$0\n}"
 	},
 	"@media Min And Max Width With Tablet And Laptop": {
 		"prefix": "mda2",
-		"body": [
-			"@media (min-width: em(\\$tablet)) and (max-width: md(\\$laptop)) {\n\t$0\n}"
-		]
+		"body": "@media (min-width: em(\\$tablet)) and (max-width: md(\\$laptop)) {\n\t$0\n}"
 	},
 	"@media Min And Max Width With Phone And Tablet": {
 		"prefix": "mda3",
-		"body": [
-			"@media (min-width: em(\\$phone)) and (max-width: md(\\$tablet)) {\n\t$0\n}"
-		]
+		"body": "@media (min-width: em(\\$phone)) and (max-width: md(\\$tablet)) {\n\t$0\n}"
 	},
 	"Gap With Rem ": {
 		"prefix": "gap",
-		"body": [
-			"gap: rem($0);"
-		]
+		"body": "gap: rem($0);"
 	},
 	"Dark Theme": {
 		"prefix": "dt",
-		"body": [
-			".dark & {\n\tbackground-color: \\$color-$1;\n\tcolor: \\$color-$2;\n}"
-		]
+		"body": ".dark & {\n\tbackground-color: \\$color-$1;\n\tcolor: \\$color-$2;\n}"
 	},
 	"Letter Spacing With Em": {
 		"prefix": "lte",
-		"body": [
-			"letter-spacing: em($1, ${2:\\$font-size});"
-		]
+		"body": "letter-spacing: em($1, ${2:\\$font-size});"
 	},
 	"Font Family": {
 		"prefix": "ff",
-		"body": [
-			"font-family: \\$font$0;"
-		]
+		"body": "font-family: \\$font$0;"
 	},
 	"Light Theme": {
 		"prefix": "lt",
-		"body": [
-			".ligth & {\n\tbackground-color: \\$color-$1;\n\tcolor: \\$color-$2;\n}"
-		]
+		"body": ".ligth & {\n\tbackground-color: \\$color-$1;\n\tcolor: \\$color-$2;\n}"
 	},
 	"Flex Centering": {
 		"prefix": "cf",
-		"body": [
-			"display: flex;\nflex-direction: column;\nalign-items: center;"
-		]
+		"body": "display: flex;\nflex-direction: column;\nalign-items: center;"
 	},
 	"Em": {
 		"prefix": "em",
-		"body": [
-			"em(${1:$2, $3})"
-		]
+		"body": "em(${1:$2, $3})"
 	},
 	"Rem": {
 		"prefix": "rem",
-		"body": [
-			"rem($0)"
-		]
+		"body": "rem($0)"
 	},
 	"Z-index And Position Relative": {
 		"prefix": "z",
-		"body": [
-			"z-index: 3;\nposition: relative;"
-		]
+		"body": "z-index: 3;\nposition: relative;"
 	},
 	"Color Alpha": {
 		"prefix": "ca",
-		"body": [
-			"rgba(\\$color-${1:light}, 0.${2:5})"
-		]
+		"body": "rgba(\\$color-${1:light}, 0.${2:5})"
 	},
 	"Percent": {
 		"prefix": "prc",
-		"body": [
-			"percent($1, $2)"
-		]
+		"body": "percent($1, $2)"
 	},
 	"Percentage Padding Bottom": {
 		"prefix": "pbp",
-		"body": [
-			"padding-bottom: percent($1, $2);"
-		]
+		"body": "padding-bottom: percent($1, $2);"
 	},
 	"Font Size In Rem": {
 		"prefix": "fz",
-		"body": [
-			"\\$font-size: ${0:18};\n\nfont-size: rem(\\$font-size);"
-		]
+		"body": "\\$font-size: ${0:18};\n\nfont-size: rem(\\$font-size);"
 	},
 	"Divide": {
 		"prefix": "di",
-		"body": [
-			"math.div($1, $2)"
-		]
+		"body": "math.div($1, $2)"
 	},
 	"Width In Rem": {
 		"prefix": "w",
-		"body": [
-			"width: rem($0);"
-		]
+		"body": "width: rem($0);"
 	},
 	"Height In Rem": {
 		"prefix": "h",
-		"body": [
-			"height: rem($0);"
-		]
+		"body": "height: rem($0);"
 	},
 	"Margin Bottom In Em": {
 		"prefix": "mbe",
-		"body": [
-			"margin-bottom: em($1, $2);"
-		]
+		"body": "margin-bottom: em($1, $2);"
 	},
 	"Cycle @For": {
 		"prefix": "for",
-		"body": [
-			"@for ${1:\\$i} from 1 through ${2:\\$count} {\n\t$3\n}"
-		]
+		"body": "@for ${1:\\$i} from 1 through ${2:\\$count} {\n\t$3\n}"
 	},
 	"Margin Bottom Not Last-Child": {
 		"prefix": "mbl",
-		"body": [
-			"&:not(:last-child) {\n\tmargin-bottom: rem($0);\n}"
-		]
+		"body": "&:not(:last-child) {\n\tmargin-bottom: rem($0);\n}"
 	},
 	"Margin Bottom Not Last-Child In Em": {
 		"prefix": "mble",
-		"body": [
-			"&:not(:last-child) {\n\tmargin-bottom: em($1, ${2:\\$font-size});\n}"
-		]
+		"body": "&:not(:last-child) {\n\tmargin-bottom: em($1, ${2:\\$font-size});\n}"
 	},
 	"Not Last-Child": {
 		"prefix": "nlc",
-		"body": [
-			"&:not(:last-child) {\n\t$0\n}"
-		]
+		"body": "&:not(:last-child) {\n\t$0\n}"
 	},
 	"Image 100%": {
 		"prefix": "is",
-		"body": [
-			"img {\n\tmax-width: 100%;\n}"
-		]
+		"body": "img {\n\tmax-width: 100%;\n}"
 	},
 	"Position Absolute Center": {
 		"prefix": "img",
-		"body": [
-			"position: absolute;\ntop: 50%;\nleft: 50%;\ntransform: translate(-50%, -50%);\nwidth: 100%;\nheight: 100%;"
-		]
+		"body": "position: absolute;\ntop: 50%;\nleft: 50%;\ntransform: translate(-50%, -50%);\nwidth: 100%;\nheight: 100%;"
 	},
 	"Background Blur": {
 		"prefix": "br",
-		"body": [
-			"backdrop-filter: blur(rem($0));"
-		]
+		"body": "backdrop-filter: blur(rem($0));"
 	},
 	"Opacity": {
 		"prefix": "op",
-		"body": [
-			"opacity: ${0:0};"
-		]
+		"body": "opacity: ${0:0};"
 	},
 	"Line Height": {
 		"prefix": "lh",
-		"body": [
-			"line-height: math.div($1, ${2:\\$font-size});"
-		]
+		"body": "line-height: math.div($1, ${2:\\$font-size});"
 	},
 	"Max Width": {
 		"prefix": "mw",
-		"body": [
-			"max-width: rem($0);"
-		]
+		"body": "max-width: rem($0);"
 	},
 	"Flex Basis In Percent": {
 		"prefix": "fbpp",
-		"body": [
-			"flex: 0 0 percent($1, $2);"
-		]
+		"body": "flex: 0 0 percent($1, $2);"
 	},
 	"Filter": {
 		"prefix": "bfil",
-		"body": [
-			"position: relative;\n\n&::before {\n\t@include pseudo();\n\twidth: 100%;\n\theight: 100%;\n\ttop: 0;\n\tleft: 0;\n\tbackground-color: rgba(\\$color-dark, 0.3);\n}"
-		]
+		"body": "position: relative;\n\n&::before {\n\t@include pseudo();\n\twidth: 100%;\n\theight: 100%;\n\ttop: 0;\n\tleft: 0;\n\tbackground-color: rgba(\\$color-dark, 0.3);\n}"
 	},
 	"Padding In Rem": {
 		"prefix": "pp",
-		"body": [
-			"padding: rem(${1:0}) rem(${2:0}) rem(${3:0}) rem(${4:0});"
-		]
+		"body": "padding: rem(${1:0}) rem(${2:0}) rem(${3:0}) rem(${4:0});"
 	},
 	"Padding Rigth And Left In Rem": {
 		"prefix": "ppp",
-		"body": [
-			"padding: 0 rem($0);"
-		]
+		"body": "padding: 0 rem($0);"
 	},
 	"Padding Top In Rem": {
 		"prefix": "ppt",
-		"body": [
-			"padding-top: rem($0);"
-		]
+		"body": "padding-top: rem($0);"
 	},
 	"Padding Bottom In Rem": {
 		"prefix": "ppb",
-		"body": [
-			"padding-bottom: rem($0);"
-		]
+		"body": "padding-bottom: rem($0);"
 	},
 	"Padding Left In Rem": {
 		"prefix": "ppl",
-		"body": [
-			"padding-left: rem($0);"
-		]
+		"body": "padding-left: rem($0);"
 	},
 	"Padding Right In Rem": {
 		"prefix": "ppr",
-		"body": [
-			"padding-right: rem($0);"
-		]
+		"body": "padding-right: rem($0);"
 	},
 	"Margin In Rem": {
 		"prefix": "mm",
-		"body": [
-			"margin: rem(${1:0}) rem(${2:0}) rem(${3:0}) rem(${4:0});"
-		]
+		"body": "margin: rem(${1:0}) rem(${2:0}) rem(${3:0}) rem(${4:0});"
 	},
 	"Margin Left Auto": {
 		"prefix": "mr",
-		"body": [
-			"margin: 0 0 0 auto;"
-		]
+		"body": "margin: 0 0 0 auto;"
 	},
 	"Margin Left And Right In Rem": {
 		"prefix": "mmm",
-		"body": [
-			"margin: 0 rem($0);"
-		]
+		"body": "margin: 0 rem($0);"
 	},
 	"Margin Top In Rem": {
 		"prefix": "mmt",
-		"body": [
-			"margin-top: rem($0);"
-		]
+		"body": "margin-top: rem($0);"
 	},
 	"Margin Bottom In Rem": {
 		"prefix": "mmb",
-		"body": [
-			"margin-bottom: rem($0);"
-		]
+		"body": "margin-bottom: rem($0);"
 	},
 	"Margin Left In Rem": {
 		"prefix": "mml",
-		"body": [
-			"margin-left: rem($0);"
-		]
+		"body": "margin-left: rem($0);"
 	},
 	"Margin Right In Rem": {
 		"prefix": "mmr",
-		"body": [
-			"margin-right: rem($0);"
-		]
+		"body": "margin-right: rem($0);"
 	},
 	"Margin Left And Right Auto": {
 		"prefix": "mu",
-		"body": [
-			"margin: 0 auto;"
-		]
+		"body": "margin: 0 auto;"
 	},
 	"Margin Auto": {
 		"prefix": "ma",
-		"body": [
-			"margin: auto;"
-		]
+		"body": "margin: auto;"
 	},
 	"Max Width None": {
 		"prefix": "mwn",
-		"body": [
-			"max-width: none;"
-		]
+		"body": "max-width: none;"
 	},
 	"Position": {
 		"prefix": "ps",
-		"body": [
-			"position: ${absolute};\nwidth: 100%;\nheight: 100%;\ntop: 0;\nleft: 0;"
-		]
+		"body": "position: ${absolute};\nwidth: 100%;\nheight: 100%;\ntop: 0;\nleft: 0;"
 	},
 	"Direction": {
 		"prefix": "drt",
-		"body": [
-			"direction: rtl;"
-		]
+		"body": "direction: rtl;"
 	},
 	"Border Radius 50%": {
 		"prefix": "br5",
-		"body": [
-			"border-radius: 50%;"
-		]
+		"body": "border-radius: 50%;"
 	},
 	"Box Shadow": {
 		"prefix": "bs",
-		"body": [
-			"box-shadow: ${1:0} ${2:0} rem(${3:0}) rgba(\\$color-${4:dark}, 0.${5:3});"
-		]
+		"body": "box-shadow: ${1:0} ${2:0} rem(${3:0}) rgba(\\$color-${4:dark}, 0.${5:3});"
 	},
 	"Width Auto": {
 		"prefix": "wa",
-		"body": [
-			"width: auto;"
-		]
+		"body": "width: auto;"
 	},
 	"Height Auto": {
 		"prefix": "ha",
-		"body": [
-			"height: auto;"
-		]
+		"body": "height: auto;"
 	},
 	"Color": {
 		"prefix": "c",
-		"body": [
-			"color: #${0:fff};"
-		]
+		"body": "color: #${0:fff};"
 	},
 	"Animation": {
 		"prefix": "an",
-		"body": [
-			"animation: ${1:name} ${2:1}s ${3:infinite} ${4:linear};"
-		]
+		"body": "animation: ${1:name} ${2:1}s ${3:infinite} ${4:linear};"
 	},
 	"Transition": {
 		"prefix": "aa",
-		"body": [
-			"transition: ${1:all} 0.${2:3}s ${3:ease} ${4:0}s;"
-		]
+		"body": "transition: ${1:all} 0.${2:3}s ${3:ease} ${4:0}s;"
 	},
 	"Transform Rotate": {
 		"prefix": "ar",
-		"body": [
-			"transform: rotate(-${0:180}deg);"
-		]
+		"body": "transform: rotate(-${0:180}deg);"
 	},
 	"Transform Scale": {
 		"prefix": "as",
-		"body": [
-			"transform: scale(${0:1});"
-		]
+		"body": "transform: scale(${0:1});"
 	},
 	"Transform Translate": {
 		"prefix": "at",
-		"body": [
-			"transform: translate(rem(${1:0}), rem(${2:0}));"
-		]
+		"body": "transform: translate(rem(${1:0}), rem(${2:0}));"
 	},
 	"Transform All": {
 		"prefix": "att",
-		"body": [
-			"transform: translate(rem(${1:0}), rem(${2:0})) rotate(${3:0}deg) scale(${4:1}) skew(${5:0}, ${6:0});"
-		]
+		"body": "transform: translate(rem(${1:0}), rem(${2:0})) rotate(${3:0}deg) scale(${4:1}) skew(${5:0}, ${6:0});"
 	},
 	"Last Child": {
 		"prefix": "lc",
-		"body": [
-			"&:last-child {\n\t$0\n}"
-		]
+		"body": "&:last-child {\n\t$0\n}"
 	},
 	"First Child": {
 		"prefix": "fc",
-		"body": [
-			"&:first-child {\n\t$0\n}"
-		]
+		"body": "&:first-child {\n\t$0\n}"
 	},
 	"Nth Child": {
 		"prefix": "nc",
-		"body": [
-			"&:nth-child($1) {\n\t$2\n}"
-		]
+		"body": "&:nth-child($1) {\n\t$2\n}"
 	},
 	"Before And after": {
 		"prefix": "ba",
-		"body": [
-			"position: relative;\n\n&::before,\n&::after {\n\t@include pseudo($1);\n\t$2\n}"
-		]
+		"body": "position: relative;\n\n&::before,\n&::after {\n\t@include pseudo($1);\n\t$2\n}"
 	},
 	"After": {
 		"prefix": "a",
-		"body": [
-			"position: relative;\n\n&::after {\n\t@include pseudo($1);\n\t$2\n}"
-		]
+		"body": "position: relative;\n\n&::after {\n\t@include pseudo($1);\n\t$2\n}"
 	},
 	"Before": {
 		"prefix": "b",
-		"body": [
-			"position: relative;\n\n&::before {\n\t@include pseudo($1);\n\t$2\n}"
-		]
+		"body": "position: relative;\n\n&::before {\n\t@include pseudo($1);\n\t$2\n}"
 	},
 	"Transition And Hover": {
 		"prefix": "hhv",
-		"body": [
-			"transition: ${1:all} 0.${2:3}s ${3:ease} ${4:0}s;\n\n@media (any-hover: hover) {\n\t&:hover {\n\t\t$5\n\t}\n}"
-		]
+		"body": "transition: ${1:all} 0.${2:3}s ${3:ease} ${4:0}s;\n\n@media (any-hover: hover) {\n\t&:hover {\n\t\t$5\n\t}\n}"
 	},
 	"Pseudo Class Active": {
 		"prefix": "acc",
-		"body": [
-			"&:active {\n\t$0\n}"
-		]
+		"body": "&:active {\n\t$0\n}"
 	},
 	"Pseudo Class Focus": {
 		"prefix": "foc",
-		"body": [
-			"&:focus {\n\t$0\n}"
-		]
+		"body": "&:focus {\n\t$0\n}"
 	},
 	"Pseudo Element Placeholder": {
 		"prefix": "pl",
-		"body": [
-			"&::placeholder {\n\t$0\n}"
-		]
+		"body": "&::placeholder {\n\t$0\n}"
 	},
 	"Active Class": {
 		"prefix": "ac",
-		"body": [
-			"&.active {\n\t$0\n}"
-		]
+		"body": "&.active {\n\t$0\n}"
 	},
 	"Background": {
 		"prefix": "bg+",
-		"body": [
-			"background: url(\"@content$0\") 0 0 no-repeat;"
-		]
+		"body": "background: url(\"@content$0\") 0 0 no-repeat;"
 	},
 	"Inline Flex": {
 		"prefix": "fbi",
-		"body": [
-			"display: inline-flex;"
-		]
+		"body": "display: inline-flex;"
 	},
 	"Flex Order": {
 		"prefix": "fbo",
-		"body": [
-			"order: ${0:1};"
-		]
+		"body": "order: ${0:1};"
 	},
 	"Justify Content": {
 		"prefix": "fbs",
-		"body": [
-			"justify-content: space-${0:between};"
-		]
+		"body": "justify-content: space-${0:between};"
 	},
 	"Align items": {
 		"prefix": "aic",
-		"body": [
-			"align-items: center;"
-		]
+		"body": "align-items: center;"
 	},
 	"Flex Row": {
 		"prefix": "dfr",
-		"body": [
-			"display: flex;\nflex-direction: row;\nflex-wrap: wrap;\njustify-content: center;\nalign-items: center;"
-		]
+		"body": "display: flex;\nflex-direction: row;\nflex-wrap: wrap;\njustify-content: center;\nalign-items: center;"
 	},
 	"Flex Column": {
 		"prefix": "dfc",
-		"body": [
-			"display: flex;\nflex-direction: column;\nflex-wrap: wrap;\njustify-content: center;\nalign-items: center;"
-		]
+		"body": "display: flex;\nflex-direction: column;\nflex-wrap: wrap;\njustify-content: center;\nalign-items: center;"
 	},
 	"Flex wrap": {
 		"prefix": "fbw",
-		"body": [
-			"flex-wrap: ${no}wrap;"
-		]
+		"body": "flex-wrap: ${no}wrap;"
 	},
 	"Flex Direction Column": {
 		"prefix": "fbd",
-		"body": [
-			"flex-direction: column;"
-		]
+		"body": "flex-direction: column;"
 	},
 	"Flex Basis 100%": {
 		"prefix": "fbg",
-		"body": [
-			"flex: 1 1 100%;"
-		]
+		"body": "flex: 1 1 100%;"
 	},
 	"Flex Basis Auto": {
 		"prefix": "fbga",
-		"body": [
-			"flex: 1 1 auto;"
-		]
+		"body": "flex: 1 1 auto;"
 	},
 	"Flex Basis 50%": {
 		"prefix": "fbgh",
-		"body": [
-			"flex: 0 1 50%;"
-		]
+		"body": "flex: 0 1 50%;"
 	},
 	"Flex Basis 33%": {
 		"prefix": "fbgt",
-		"body": [
-			"flex: 0 1 33.333%;"
-		]
+		"body": "flex: 0 1 33.333%;"
 	},
 	"Flex Basis 25%": {
 		"prefix": "fbgq",
-		"body": [
-			"flex: 0 1 25%;"
-		]
+		"body": "flex: 0 1 25%;"
 	},
 	"Flex Basis With Rem": {
 		"prefix": "fbp",
-		"body": [
-			"flex: 0 0 rem($0);"
-		]
+		"body": "flex: 0 0 rem($0);"
 	},
 	"Flex Center": {
 		"prefix": "fbc",
-		"body": [
-			"justify-content: center;\nalign-items: center;"
-		]
+		"body": "justify-content: center;\nalign-items: center;"
 	},
 	"Last Child Margin": {
 		"prefix": "lcm",
-		"body": [
-			"&:last-child {\n\tmargin: rem(${1:0}) rem(${2:0}) rem(${3:0}) rem(${4:0});\n}"
-		]
+		"body": "&:last-child {\n\tmargin: rem(${1:0}) rem(${2:0}) rem(${3:0}) rem(${4:0});\n}"
 	},
 	"Hover Decoration Underline": {
 		"prefix": "hvu",
-		"body": [
-			"@media (any-hover: hover) {\n\t&:hover {\n\t\ttext-decoration: underline;\n\t}\n}"
-		]
+		"body": "@media (any-hover: hover) {\n\t&:hover {\n\t\ttext-decoration: underline;\n\t}\n}"
 	},
 	"Hover Decoration None": {
 		"prefix": "hvn",
-		"body": [
-			"@media (any-hover: hover) {\n\t&:hover {\n\t\ttext-decoration: none;\n\t}\n}"
-		]
+		"body": "@media (any-hover: hover) {\n\t&:hover {\n\t\ttext-decoration: none;\n\t}\n}"
 	},
 	"Key Frames": {
 		"prefix": "kf",
-		"body": [
-			"@keyframes ${1:name} {\n\t0% {\n\t\t$2\n\t}\n\t100% {\n\t\t$3\n\t}\n}"
-		]
+		"body": "@keyframes ${1:name} {\n\t0% {\n\t\t$2\n\t}\n\t100% {\n\t\t$3\n\t}\n}"
 	},
 	"Separating Comment": {
 		"prefix": "sp",
-		"body": [
-			"// ======================================================================================================================================================== //"
-		]
+		"body": "// ======================================================================================================================================================== //"
 	},
 	"White Space": {
 		"prefix": "wsnw",
-		"body": [
-			"white-space: ${no}wrap;"
-		]
+		"body": "white-space: ${no}wrap;"
 	}
 }
