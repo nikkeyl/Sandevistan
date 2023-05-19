@@ -1,4 +1,4 @@
-let configFTP = {
+const configFTP = {
 	password: '',
 	parallel: 5,
 	host: '',
