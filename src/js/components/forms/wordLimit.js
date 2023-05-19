@@ -1,5 +1,9 @@
 function wordLimit() {
-    /*! This function sets the maximum allowed number of characters in <input> or <textarea> and outputs the remaining number to the [data-max-length] element */
+    /*!
+        This function sets the maximum allowed number of characters
+        in <input> or <textarea> and outputs the remaining number
+        to the [data-max-length] element
+    */
     window.addEventListener('load', () => {
         const txtItem = document.querySelector('[data-input]')
 
