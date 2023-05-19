@@ -1,6 +1,6 @@
-import * as path from 'path'
+import { basename, resolve } from 'path'
 
-const rootFolder = path.basename(path.resolve())
+const rootFolder = basename(resolve())
 const reportsFolder = 'reports'
 const buildFolder = 'build'
 const srcFolder = 'src'
@@ -27,8 +27,8 @@ const paths = {
 		js: `${srcFolder}/js/app.js`,
 		html: `${srcFolder}/*.html`
 	},
-	built: path.resolve(buildFolder),
-	root: path.resolve(srcFolder),
+	built: resolve(buildFolder),
+	root: resolve(srcFolder),
 	reportsFolder,
 	buildFolder,
 	rootFolder,
