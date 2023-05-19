@@ -2,10 +2,10 @@ import StylelintWebpackPlugin from 'stylelint-webpack-plugin'
 import ESLintWebpackPlugin from 'eslint-webpack-plugin'
 
 const linters = {
-	StyleLint: new ESLintWebpackPlugin({
+	styleLint: new ESLintWebpackPlugin({
 		fix: true
 	}),
-	ESLint: new StylelintWebpackPlugin({
+	esLint: new StylelintWebpackPlugin({
 		fix: true
 	})
 }

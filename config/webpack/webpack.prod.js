@@ -50,8 +50,8 @@ const config = {
 		]
 	},
 	plugins: [
-		linters.StyleLint,
-		linters.ESLint,
+		linters.styleLint,
+		linters.esLint,
 
 		new plugins.FileIncludeWebpackPlugin({
 			source: paths.srcFolder,
