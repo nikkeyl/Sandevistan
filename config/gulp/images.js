@@ -36,8 +36,6 @@ const images = () => {
 			svgoPlugins: [{
 				removeViewBox: false
 			}],
-			optimizationLevel: 4,
-			progressive: true,
 			interlaced: true
 		}))
 		.pipe(app.gulp.dest(app.paths.build.images))
