@@ -1,8 +1,4 @@
-/*
- *!
- * Dynamiс adapt
- * https://github.com/FreelancerLifeStyle/dynamic_adapt
- */
+/*! Dynamiс adapt https://github.com/FreelancerLifeStyle/dynamic_adapt */
 
 import { uniqArray } from '@js/helpers/uniqArray'
 

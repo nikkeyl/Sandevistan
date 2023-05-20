@@ -1,16 +1,16 @@
 import Isotope from 'isotope-layout'
 
 // Не использовать вместе с lazy load
-/*
- *Для контейнера
- *@media (max-width: md(430)) {
- *	width: auto !important;
- *}
- *для карточки
- *@media (max-width: md(430)) {
- *	width: 100%;
- *}
- */
+
+// Для контейнера
+// @media(max - width: md(430)) {
+//     width: auto!important;
+// }
+//  для карточки
+// @media(max - width: md(430)) {
+//     width: 100 %;
+// }
+
 
 function filter() {
     function imagesInit() {

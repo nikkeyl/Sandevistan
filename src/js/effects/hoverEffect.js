@@ -64,67 +64,6 @@ function hoverEffect() {
                             : effectLeft + effectTransition
                 }
             }
-
-            /*
-             * Const effectHover = `transform: translateY(0);`
-             * Const effectTop = `transform: translateY(-100%);`
-             * Const effectBottom = `transform: translateY(100%);`
-             */
-
-            /*
-             * MenuLinks.forEach(menuLink => {
-             *     MenuLink.insertAdjacentHTML(
-             *         'beforeend',
-             *         `
-             *         <span class="hover" style="transform: translateY(100%);">
-             *             <span class="hover__text" style="transform: translateY(-100%);">
-             *             ${menuLink.textContent}
-             *             </span>
-             *         </span>
-             *     `
-             *     )
-             *     MenuLink.onmouseenter = menuLink.onmouseleave = menuLinkActions
-             * })
-             */
-
-            /*
-             * function menuLinkActions(e) {
-             *     Const menuLink = e.target
-             *     Const menuLinkItem = menuLink.querySelector('.hover')
-             *     Const menuLinkText = menuLink.querySelector('.hover__text')
-             *     Const menuLinkHeight = menuLink.offsetHeight / 2
-             *     Const menuLinkPos =
-             *         E.pageY - (menuLink.getBoundingClientRect().top + scrollY)
-             */
-
-            /*
-             *     if (e.type === 'mouseenter') {
-             *         MenuLinkItem.style.cssText =
-             *             MenuLinkPos > menuLinkHeight ? effectBottom : effectTop
-             *         MenuLinkText.style.cssText =
-             *             MenuLinkPos > menuLinkHeight ? effectTop : effectBottom
-             *         SetTimeout(() => {
-             *             MenuLinkItem.style.cssText =
-             *                 EffectHover + effectTransition
-             *             MenuLinkText.style.cssText =
-             *                 EffectHover + effectTransition
-             *         }, 5)
-             *     }
-             */
-
-            /*
-             *     If (e.type === 'mouseleave') {
-             *         MenuLinkItem.style.cssText =
-             *             MenuLinkPos > menuLinkHeight
-             *                 ? effectBottom + effectTransition
-             *                 : effectTop + effectTransition
-             *         MenuLinkText.style.cssText =
-             *             MenuLinkPos > menuLinkHeight
-             *                 ? effectTop + effectTransition
-             *                 : effectBottom + effectTransition
-             *     }
-             * }
-             */
         }
     }
 }

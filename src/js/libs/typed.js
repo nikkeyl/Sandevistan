@@ -1,8 +1,4 @@
-/*
- *!
- * Simulate text printing (Typed plugin)
- * https://mattboldt.github.io/typed/
- */
+/*! Simulate text printing (Typed plugin) https://mattboldt.github.io/typed/ */
 import { nodeObjects } from '@js/helpers/nodeList'
 import Typed from 'typed.js'
 
@@ -18,14 +14,12 @@ if (document.querySelector('[data-typed]')) {
         smartBackspace: true,
         showCursor: false
 
-        /*
-         * CursorChar: '_',
-         * FadeOutDelay: 500,
-         * AutoInsertCss: true,
-         * Shuffle: false,
-         * Attr: 'placeholder',
-         * BindInputFocusEvents: true
-         */
+        // cursorChar: '_',
+        // fadeOutDelay: 500,
+        // autoInsertCss: true,
+        // shuffle: false,
+        // attr: 'placeholder',
+        // bindInputFocusEvents: true
     })
 
     nodeObjects.typed = typed

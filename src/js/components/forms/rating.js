@@ -58,14 +58,12 @@ function rating() {
                 const response = await fetch('rating.json', {
                     method: 'GET'
 
-                    /*
-                     * Body: JSON.stringify({
-                     * 	UserRating: value
-                     * }),
-                     * Headers: {
-                     * 	'content-type': 'application/json'
-                     * }
-                     */
+                    // body: JSON.stringify({
+                    //     userRating: value
+                    // }),
+                    // headers: {
+                    //     'content-type': 'application/json'
+                    // }
                 })
 
                 if (response.ok) {

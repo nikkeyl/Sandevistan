@@ -1,62 +1,46 @@
-/*
- *!
- * Tips (Tippy plugin)
- * https://atomiks.github.io/tippyjs/
- */
+/*! Tips (Tippy plugin) https://atomiks.github.io/tippyjs/ */
 import { nodeObjects } from '@js/helpers/nodeList'
 import tippy from 'tippy.js'
 
-/*
- *InlinePositioning,
- *followCursor,
- *animateFill,
- *roundArrow,
- *sticky,
- */
+// inlinePositioning,
+// followCursor,
+// animateFill,
+// roundArrow,
+// sticky,
 
 import '@scss/libs/tippy'
 
 if (document.querySelectorAll('[data-tippy-content]')) {
     const hints = tippy('[data-tippy-content]', {
         plugins: [
-            /*
-             * AnimateFill,
-             * RoundArrow,
-             * FollowCursor,
-             * InlinePositioning,
-             * Sticky
-             */
+            // animateFill,
+            // roundArrow,
+            // followCursor,
+            // inlinePositioning,
+            // sticky
         ],
 
-        /*
-         * AllowHTML: false,
-         * AnimateFill: false,
-         * Animation: 'fade',
-         * AppendTo: () => document.body,
-         * AppendTo: 'parent',
-         * AppendTo: element,
-         */
-        /*
-         * Aria: {
-         * content: 'auto',
-         * expanded: 'auto'
-         * },
-         */
-        /*
-         * Arrow: true,
-         * Content: '',
-         */
+        // AllowHTML: false,
+        // AnimateFill: false,
+        // Animation: 'fade',
+        // AppendTo: () => document.body,
+        // AppendTo: 'parent',
+        // AppendTo: element,
+        // Aria: {
+        //     content: 'auto',
+        //     expanded: 'auto'
+        // },
+        // Arrow: true,
+        // Content: '',
         delay: 0,
         duration: [300, 250],
 
-        /*
-         * FollowCursor: false,
-         * GetReferenceClientRect: null,
-         * HideOnClick: true,
-         * IgnoreAttributes: false,
-         * Inertia: false,
-         * InlinePositioning: false,
-         */
+        // followCursor: false,
+        // getReferenceClientRect: null,
+        // hideOnClick: true,
+        // ignoreAttributes: false,
+        // inertia: false,
+        // inlinePositioning: false,
         interactive: false,
         interactiveBorder: 2,
         interactiveDebounce: 0,

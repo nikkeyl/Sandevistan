@@ -1,8 +1,4 @@
-/*
- *!
- * Сalendar (Datepicker plugin)
- * https://www.npmjs.com/package/js-datepicker
- */
+/*! Сalendar (Datepicker plugin) https://www.npmjs.com/package/js-datepicker */
 import { nodeObjects } from '@js/helpers/nodeList'
 import datepicker from 'js-datepicker'
 

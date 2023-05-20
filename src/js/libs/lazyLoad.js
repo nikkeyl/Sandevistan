@@ -1,8 +1,7 @@
-/*
- *!
- * Lazy image upload (Lazy-load plugin)
- * https://github.com/verlok/vanilla-lazyload
- */
+/*!
+    Lazy image upload (Lazy-load plugin)
+    https://github.com/verlok/vanilla-lazyload
+*/
 import LazyLoad from 'vanilla-lazyload'
 
 const lazyMedia = new LazyLoad({

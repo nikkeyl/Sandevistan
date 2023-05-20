@@ -1,8 +1,4 @@
-/*
- *!
- * Range (NoUiSlider plugin)
- * https://refreshless.com/nouislider/
- */
+/*! Range (NoUiSlider plugin) https://refreshless.com/nouislider/ */
 import noUiSlider from 'nouislider'
 import wNumb from 'wnumb'
 

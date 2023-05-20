@@ -1,8 +1,7 @@
-/*
- *!
- * Creeping line (Marquee plugin)
- * https://mattiacoll.github.io/vanilla-marquee-site/
- */
+/*!
+    Creeping line (Marquee plugin)
+    https://mattiacoll.github.io/vanilla-marquee-site/
+*/
 import { nodeObjects } from '@js/helpers/nodeList'
 import Marquee from 'vanilla-marquee'
 
