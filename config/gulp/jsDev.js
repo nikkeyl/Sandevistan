@@ -1,11 +1,11 @@
 import { app } from '../../gulpfile.js'
 
-import webPackConfig from '../webpack/webpack.prod.js'
-
 import { plugins } from '../settings/plugins.js'
 import { paths } from '../settings/paths.js'
 
-let webPackConfigBeautify = Object.assign({}, webPackConfig)
+import webPackConfig from '../webpack/webpack.prod.js'
+
+const webPackConfigBeautify = Object.assign({}, webPackConfig)
 
 webPackConfigBeautify.optimization = {
 	minimizer: [
