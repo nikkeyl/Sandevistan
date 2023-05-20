@@ -13,6 +13,8 @@ $tablet: 768;
 $phone: 480;
 
 // --------------------------------- //
+$a-focus-active-outline: 0;
+$focus-active-outline: 0;
 $background-gradient: 0;
 $ibg-contain: 0;
 $slider-fix: 0;
@@ -23,8 +25,6 @@ $color-dark: #000;
 $color-dark-gray: #333;
 $color-gray: #888;
 $color-light: #fff;
-
-// --------------------------------- //
 $color-yellow: #fe0;
 
 // --------------------------------- //
@@ -34,5 +34,3 @@ $main-font-weight: 400;
 $main-font-size: 16;
 $main-background-color: $color-light;
 $main-font-color: $color-dark;
-$a-focus-active-outline: 0;
-$focus-active-outline: 0;
