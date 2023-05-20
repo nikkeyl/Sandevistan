@@ -14,8 +14,7 @@ webPackConfigBeautify.optimization = {
 			terserOptions: {
 				keep_classnames: true,
 				compress: {
-					defaults: false,
-					unused: true
+					defaults: false
 				},
 				format: {
 					beautify: true
