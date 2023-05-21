@@ -21,7 +21,6 @@ const bodyUnlock = (delay = 500) => {
         delayToggle(delay)
     }
 }
-
 const bodyLock = (delay = 500) => {
     if (bodyLockStatus) {
         lockPadding.forEach(el => {
