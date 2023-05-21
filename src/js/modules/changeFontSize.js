@@ -24,7 +24,7 @@ function changeFontSize() {
                 const targetElement = e.target
 
                 if (targetElement.closest('[data-font-size]')) {
-                    addSize(targetElement.getAttribute('data-font-size'))
+                    addSize(targetElement.dataset.fontSize)
                     toggleClasses(targetElement, 'active', '[data-font-size].active')
                 }
             })
