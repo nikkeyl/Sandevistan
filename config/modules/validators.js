@@ -10,6 +10,7 @@ const validator = () => {
 		.pipe(htmlValidator.analyzer())
 		.pipe(htmlValidator.reporter())
 		.pipe(accessibility({
+			reportLocation: app.paths.tempFolder,
 			accessibilityLevel: 'WCAG2AAA',
 			reportLevels: {
 				warning: true,

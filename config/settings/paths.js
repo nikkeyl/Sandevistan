@@ -1,8 +1,8 @@
 import { basename, resolve } from 'path'
 
 const rootFolder = basename(resolve())
-const reportsFolder = 'reports'
 const buildFolder = 'build'
+const tempFolder = 'temp'
 const srcFolder = 'src'
 
 const paths = {
@@ -29,7 +29,7 @@ const paths = {
 	},
 	built: resolve(buildFolder),
 	root: resolve(srcFolder),
-	reportsFolder,
+	tempFolder,
 	buildFolder,
 	rootFolder,
 	srcFolder,
