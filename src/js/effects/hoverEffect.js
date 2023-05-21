@@ -6,9 +6,7 @@ function hoverEffect() {
     function menuEffect() {
         menuLinksWrappers.forEach(menuLinksWrapper => {
             const menuLinks = menuLinksWrapper.querySelectorAll('a')
-            const effectSpeed = menuLinksWrapper.dataset.lineEffect
-                ? menuLinksWrapper.dataset.lineEffect
-                : 200
+            const effectSpeed = menuLinksWrapper.dataset.lineEffect || 200
 
             menuLinks.length ? menuEffectItem(menuLinks, effectSpeed) : null
         })

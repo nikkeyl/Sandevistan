@@ -98,16 +98,12 @@ class Popup {
 
                 if (buttonOpen) {
                     e.preventDefault()
-                    this.dataValue = buttonOpen.getAttribute(
+                    this.dataValue = buttonOpen?.getAttribute(
                         this.options.attributeOpenButton
-                    )
-                        ? buttonOpen.getAttribute(this.options.attributeOpenButton)
-                        : 'error'
-                    this.youTubeCode = buttonOpen.getAttribute(
+                    ) || 'error'
+                    this.youTubeCode = buttonOpen?.getAttribute(
                         this.options.youtubeAttribute
-                    )
-                        ? buttonOpen.getAttribute(this.options.youtubeAttribute)
-                        : null
+                    ) || null
 
                     if (this.dataValue !== 'error') {
                         if (!this.isOpen) {
@@ -359,12 +355,8 @@ class Popup {
             ? `${window.location.hash}`
             : null
         const buttons = document.querySelector(
-            `[${this.options.attributeOpenButton} = "${classInHash}"]`
-        )
-            ? document.querySelector(
                   `[${this.options.attributeOpenButton} = "${classInHash}"]`
-              )
-            : document.querySelector(
+              ) || document.querySelector(
                   `[${this.options.attributeOpenButton} = "${classInHash.replace(
                       '.',
                       '#'

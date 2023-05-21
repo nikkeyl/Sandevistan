@@ -231,7 +231,7 @@ class SelectConstructor {
     }
 
     selectsClose(selectOneGroup) {
-        const selectsGroup = selectOneGroup ? selectOneGroup : document
+        const selectsGroup = selectOneGroup || document
         const selectActiveItems = selectsGroup.querySelectorAll(
             `${this.getSelectClass(
                 this.selectClasses.classSelect
