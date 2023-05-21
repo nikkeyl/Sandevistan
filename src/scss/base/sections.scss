@@ -1,2 +1,4 @@
-// .content {
-// }
+/* Section-specific styles */
+.content {
+    @include adaptive-value("padding-top", 150, 80, $max-width, $min-width, 1);
+}
