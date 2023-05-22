@@ -15,6 +15,7 @@
 		"sourceType": "module"
 	},
 	"rules": {
+		// POSSIBLE PROBLEMS
 		// "array-callback-return": "error", // refactor code
 		"no-await-in-loop": "error",
 		"no-constant-binary-expression": "error",
@@ -28,6 +29,57 @@
 		"no-unused-private-class-members": "error",
 		// "no-use-before-define": "error", // refactor code
 		"require-atomic-updates": "error",
+
+
+
+		// LAYOUT AND FORMATTER
+		"array-bracket-newline": [
+			"error",
+			{
+				"multiline": true,
+				"minItems": 4
+			}
+		],
+		"array-bracket-spacing": "error",
+		"array-element-newline": [
+			"error",
+			{
+				"multiline": true,
+				"minItems": 4
+			}
+		],
+		"arrow-parens": [
+			"error",
+			"as-needed"
+		],
+		"arrow-spacing": "error",
+		"block-spacing": "error",
+		"brace-style": "error",
+		"comma-dangle": "error",
+		"comma-spacing": "error",
+		"comma-style": "error",
+		"computed-property-spacing": "error",
+		"dot-location": [
+			"error",
+			"property"
+		],
+		"eol-last": "error",
+		"func-call-spacing": "error",
+		"function-call-argument-newline": "error",
+		"function-paren-newline": "error",
+		"generator-star-spacing": [
+			"error",
+			"both"
+		],
+		"implicit-arrow-linebreak": "error",
+		"indent": [
+			"error",
+			"tab"
+		],
+		// "jsx-quotes": "error", // for react
+		"key-spacing": "error",
+
+
 
 		"eqeqeq": [
 			"error",
@@ -54,12 +106,12 @@
 			"error",
 			4
 		],
-		"max-len": [
-			"error",
-			{
-				"code": 85
-			}
-		],
+		// "max-len": [
+		// 	"error",
+		// 	{
+		// 		"code": 85
+		// 	}
+		// ],
 		"newline-per-chained-call": [
 			"error",
 			{
@@ -170,8 +222,9 @@
 				}
 			}
 		],
+		// IMPORT
 		"import/no-empty-named-blocks": "error",
-		"import/no-mutable-exports": "error",
+		// "import/no-mutable-exports": "error",
 		"import/no-named-as-default": "error",
 		"import/no-named-as-default-member": "error",
 		"import/no-unused-modules": "error",
@@ -179,7 +232,7 @@
 		"import/no-commonjs": "error",
 		"import/no-import-module-exports": "error",
 		"import/no-nodejs-modules": "error",
-		"import/unambiguous": "error",
+		// "import/unambiguous": "error",
 		"import/no-absolute-path": "error",
 		"import/no-cycle": "error",
 		"import/no-dynamic-require": "error",
