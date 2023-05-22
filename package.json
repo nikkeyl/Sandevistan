@@ -30,6 +30,7 @@
 		"gulp-autoprefixer": "latest",
 		"gulp-clean-css": "latest",
 		"gulp-css-purge": "latest",
+		"gulp-csscomb": "latest",
 		"gulp-fonter-fix": "latest",
 		"gulp-group-css-media-queries": "latest",
 		"gulp-html-bem-validator": "latest",
