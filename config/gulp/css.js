@@ -1,16 +1,17 @@
 import { app } from '../../gulpfile.js'
 
 import groupCssMediaQueries from 'gulp-group-css-media-queries'
-import autoprefixer from 'gulp-autoprefixer'
+import autoPrefixer from 'gulp-autoprefixer'
 import cleanCss from 'gulp-clean-css'
-import webpcss from 'gulp-webpcss'
+import webpCss from 'gulp-webpcss'
+import cssComb from 'gulp-csscomb'
 import purge from 'gulp-css-purge'
 
 const css = () => {
 	return app.gulp.src(`${app.paths.build.css}style.css`)
 		.pipe(app.plugins.catchError('CSS'))
 		.pipe(groupCssMediaQueries())
-		.pipe(webpcss({
+		.pipe(webpCss({
 			noWebpClass: '.no-webp',
 			webpClass: '.webp'
 		}))
@@ -18,7 +19,8 @@ const css = () => {
 			shorten: false,
 			trim: false
 		}))
-		.pipe(autoprefixer())
+		.pipe(cssComb())
+		.pipe(autoPrefixer())
 		.pipe(app.gulp.dest(app.paths.build.css))
 		.pipe(cleanCss({
 			level: 2
