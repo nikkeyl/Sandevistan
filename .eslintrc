@@ -30,7 +30,7 @@
 		// "no-use-before-define": "error", // refactor code
 		"require-atomic-updates": "error",
 
-
+		// SUGGESTIONS
 
 		// LAYOUT AND FORMATTER
 		"array-bracket-newline": [
@@ -65,7 +65,10 @@
 		],
 		"eol-last": "error",
 		"func-call-spacing": "error",
-		"function-call-argument-newline": "error",
+		"function-call-argument-newline": [
+			"error",
+			"consistent"
+		],
 		"function-paren-newline": "error",
 		"generator-star-spacing": [
 			"error",
@@ -78,13 +81,12 @@
 		],
 		// "jsx-quotes": "error", // for react
 		"key-spacing": "error",
-
-
-
-		"eqeqeq": [
-			"error",
-			"always"
-		],
+		"keyword-spacing": "error",
+		"line-comment-position": "error",
+		// "linebreak-style": [ // learn more
+		// 	"error",
+		// 	"windows"
+		// ],
 		"lines-around-comment": [
 			"error",
 			{
@@ -102,28 +104,64 @@
 				"allowClassEnd": false
 			}
 		],
-		"max-params": [
+		"lines-between-class-members": "error",
+		"max-len": [ // learn more
 			"error",
-			4
+			{
+				"code": 85
+			}
 		],
-		// "max-len": [
-		// 	"error",
-		// 	{
-		// 		"code": 85
-		// 	}
-		// ],
+		"max-statements-per-line": "error",
+		"multiline-ternary": "error",
+		"new-parens": "error",
 		"newline-per-chained-call": [
 			"error",
 			{
 				"ignoreChainWithDepth": 3
 			}
 		],
+		"no-extra-parens": "error",
+		"no-multi-spaces": "error",
 		"no-multiple-empty-lines": [
 			"error",
 			{
 				"max": 1
 			}
 		],
+		"no-trailing-spaces": "error",
+		"no-whitespace-before-property": "error",
+		"nonblock-statement-body-position": "error",
+		"object-curly-newline": [
+			"error",
+			{
+				"multiline": true,
+				"minProperties": 2
+			}
+		],
+		"object-curly-spacing": [
+			"error",
+			"always"
+		],
+		"object-property-newline": "error",
+		"operator-linebreak": [ // in folder scroll wrong working
+			"error",
+			"before"
+		],
+
+
+
+		"eqeqeq": [
+			"error",
+			"always"
+		],
+
+		"max-params": [
+			"error",
+			4
+		],
+
+
+
 		"padding-line-between-statements": [
 			"error",
 			{
