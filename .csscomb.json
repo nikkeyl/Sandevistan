@@ -262,7 +262,6 @@
         "background-blend-mode",
         "image-orientation",
         "image-rendering",
-        "-o-object-fit",
         "object-fit",
         "object-position",
         "opacity",
