@@ -3,6 +3,8 @@ import { app } from '../../gulpfile.js'
 import ttf2woff2 from 'gulp-ttf2woff2'
 import fonter from 'gulp-fonter-fix'
 
+function cb() { }
+
 const otfToTtf = () => {
 	return app.gulp.src(`${app.paths.srcFolder}/fonts/*.otf`)
 		.pipe(app.plugins.catchError('FONTS'))
@@ -11,7 +13,6 @@ const otfToTtf = () => {
 		}))
 		.pipe(app.gulp.dest(`${app.paths.srcFolder}/fonts/`))
 }
-
 const ttfToWoff = () => {
 	return app.gulp.src(`${app.paths.srcFolder}/fonts/*.ttf`)
 		.pipe(app.plugins.catchError('FONTS'))
@@ -20,59 +21,51 @@ const ttfToWoff = () => {
 		.pipe(app.gulp.src(`${app.paths.srcFolder}/fonts/*.woff2`))
 		.pipe(app.gulp.dest(app.paths.build.fonts))
 }
+const fontWeights = {
+	thin: 100,
+	extralight: 200,
+	light: 300,
+	regular: 400,
+	medium: 500,
+	semibold: 600,
+	bold: 700,
+	heavy: 800,
+	black: 900,
+}
+const fontStyle = () => {
+	const fontStylesFile = `${app.paths.srcFolder}/scss/base/fonts/fonts.scss`
 
-const fontsStyle = () => {
-	const fontsFile = `${app.paths.srcFolder}/scss/base/fonts/fonts.scss`
-	app.plugins.fs.existsSync(fontsFile)
-		? app.plugins.fs.unlink(fontsFile, cb)
+	app.plugins.fs.existsSync(fontStylesFile)
+		? app.plugins.fs.unlink(fontStylesFile, cb)
 		: null
-	app.plugins.fs.readdir(app.paths.build.fonts, (err, fontsFiles) => {
-		if (fontsFiles) {
-			app.plugins.fs.writeFile(fontsFile, '', cb)
+	app.plugins.fs.readdir(app.paths.build.fonts, (err, fontFiles) => {
+		if (fontFiles) {
 			let newFileOnly
-			fontsFiles.forEach(file => {
-				const fontFileName = file.split('.')[0]
-				if (newFileOnly !== fontFileName) {
-					const fontName = fontFileName.split('-')[0]
-						? fontFileName.split('-')[0]
-						: fontFileName
-					let fontWeight = fontFileName.split('-')[1]
-						? fontFileName.split('-')[1]
-						: fontFileName
-					if (fontWeight.toLowerCase() === 'thin') {
-						fontWeight = 100
-					} else if (fontWeight.toLowerCase() === 'extralight') {
-						fontWeight = 200
-					} else if (fontWeight.toLowerCase() === 'light') {
-						fontWeight = 300
-					} else if (fontWeight.toLowerCase() === 'medium') {
-						fontWeight = 500
-					} else if (fontWeight.toLowerCase() === 'semibold') {
-						fontWeight = 600
-					} else if (fontWeight.toLowerCase() === 'bold') {
-						fontWeight = 700
-					} else if (
-						fontWeight.toLowerCase() === 'extrabold' ||
-						fontWeight.toLowerCase() === 'heavy'
-					) {
-						fontWeight = 800
-					} else if (fontWeight.toLowerCase() === 'black') {
-						fontWeight = 900
-					} else {
-						fontWeight = 400
-					}
+
+			app.plugins.fs.writeFile(
+				fontStylesFile,
+				'',
+				cb
+			)
+			fontFiles.forEach(file => {
+				const fileName = file.split('.')[0]
+
+				if (newFileOnly !== fileName) {
+					const [fontName, fontWeight = 'regular'] = fileName.split('-')
+					const fontWeightValue = fontWeights[fontWeight.toLowerCase()]
+
 					app.plugins.fs.appendFile(
-						fontsFile,
-						`@font-face {\n\tsrc: url("../fonts/${fontFileName}.woff2") format("woff2");\n\tfont-family: "${fontName}";\n\tfont-weight: ${fontWeight};\n\tfont-style: normal;\n\tfont-display: swap;\n}\n\n`,
+						fontStylesFile,
+						`@font-face {\n\tsrc: url("../fonts/${fileName}.woff2") format("woff2");\n\tfont-family: "${fontName}";\n\tfont-weight: ${fontWeightValue};\n\tfont-style: normal;\n\tfont-display: swap;\n}\n\n`,
 						cb
 					)
-					newFileOnly = fontFileName
+					newFileOnly = fileName
 				}
 			})
 		}
 	})
+
 	return app.gulp.src(app.paths.srcFolder)
-	function cb() { }
 }
 
-export { otfToTtf, ttfToWoff, fontsStyle }
+export { otfToTtf, ttfToWoff, fontStyle }
