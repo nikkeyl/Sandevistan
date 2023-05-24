@@ -1,104 +1,131 @@
 .block {
-	$gap: 1;
+    $gap: 1;
 
-	display: grid;
-	justify-items: center;
+    display: grid;
+    justify-items: center;
 
-	// .block__img
-	// &__img {
-	//     $size: 80;
+    // .block__img
+    // &__img {
+    //     $size: 80;
 
-	//     @include width-height(rem($size), rem($size));
+    //     @include width-height(rem($size), rem($size));
 
-	//     display: flex;
-	//     align-items: center;
-	//     justify-content: center;
-	//     border-radius: 50%;
-	//     background-color: $color-gray;
+    //     display: flex;
+    //     align-items: center;
+    //     justify-content: center;
+    //     border-radius: 50%;
 
-	//     svg {
-	//         $size-svg: 40;
+    //     svg {
+    //         $size-svg: 40;
 
-	//         @include width-height(rem($size-svg), rem($size-svg));
+    //         @include width-height(rem($size-svg), rem($size-svg));
 
-	//         fill: $color-light;
-	//     }
-	// }
+    //         @if $native-variables == 1 {
+    //             fill: var(--color-light);
+    //         } @else {
+    //             fill: $color-light;
+    //         }
+    //     }
 
-	// .block__icon
-	&__icon {
-		$size: 40;
+    //     @if $native-variables == 1 {
+    //         background-color: var(--color-gray);
+    //     } @else {
+    //         background-color: $color-gray;
+    //     }
+    // }
 
-		@include width-height(rem($size), rem($size));
+    // .block__icon
+    &__icon {
+        $size: 40;
 
-		fill: $color-gray;
+        @include width-height(rem($size), rem($size));
 
-		@if $gap == 0 {
-			&:not(:last-child) {
-				margin-bottom: rem(20);
-			}
-		}
-	}
+        @if $native-variables == 1 {
+            fill: var(--color-gray);
+        } @else {
+            fill: $color-gray;
+        }
 
-	// .block__image-ibg
-	// &__image-ibg {
-	//     $size: 40;
+        @if $gap == 0 {
+            &:not(:last-child) {
+                margin-bottom: rem(20);
+            }
+        }
+    }
 
-	//     @include width-height(rem($size), rem($size));
+    //     &:not(:last-child) {
+    //         margin-bottom: rem(20);
+    //     }
+    // }
 
-	//     background-color: $color-gray;
+    // .block__body
+    &__body {
+        text-align: center;
+    }
 
-	//     &:not(:last-child) {
-	//         margin-bottom: rem(20);
-	//     }
-	// }
+    // .block__title
+    &__title {
+        $font-size: 18;
+        $font-type: 1;
 
-	// .block__body
-	&__body {
-		text-align: center;
-	}
+        line-height: math.div(20, $font-size);
 
-	// .block__title
-	&__title {
-		$font-size: 18;
-		$font-type: 1;
+        &:not(:last-child) {
+            margin-bottom: rem(10);
+        }
 
-		line-height: math.div(20, $font-size);
-		color: $color-dark;
+        @if $native-variables == 1 {
+            color: var(--color-dark);
+        } @else {
+            color: $color-dark;
+        }
 
-		&:not(:last-child) {
-			margin-bottom: rem(10);
-		}
+        @if $font-type == 1 {
+            @include adaptive-value("font-size", $font-size, 16);
+        } @else {
+            font-size: rem($font-size);
+        }
+    }
 
-		@if $font-type == 1 {
-			@include adaptive-value("font-size", $font-size, 16);
-		} @else {
-			font-size: rem($font-size);
-		}
-	}
+    // .block__text
+    &__text {
+        $font-size: 18;
+        $font-type: 1;
 
-	// .block__text
-	&__text {
-		$font-size: 18;
-		$font-type: 1;
+        line-height: math.div(20, $font-size);
 
-		line-height: math.div(20, $font-size);
-		color: $color-dark;
+        p {
+            &:not(:last-child) {
+                margin-bottom: rem(10);
+            }
+        }
 
-		p {
-			&:not(:last-child) {
-				margin-bottom: rem(10);
-			}
-		}
+        @if $native-variables == 1 {
+            color: var(--color-dark);
+        } @else {
+            color: $color-dark;
+        }
 
-		@if $font-type == 1 {
-			@include adaptive-value("font-size", $font-size, 16);
-		} @else {
-			font-size: rem($font-size);
-		}
-	}
+        @if $font-type == 1 {
+            @include adaptive-value("font-size", $font-size, 16);
+        } @else {
+            font-size: rem($font-size);
+        }
+    }
 
-	@if $gap == 1 {
-		gap: rem(20);
-	}
+    // .block__image-ibg
+    // &__image-ibg {
+    //     $size: 40;
+
+    //     @include width-height(rem($size), rem($size));
+
+    @if $native-variables == 1 {
+        background-color: var(--color-gray);
+    } @else {
+        background-color: $color-gray;
+    }
+
+    @if $gap == 1 {
+        gap: rem(20);
+    }
 }

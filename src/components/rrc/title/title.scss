@@ -1,37 +1,47 @@
 .title {
-	text-align: center;
+    text-align: center;
 
-	// .title__main
-	&__main {
-		$font-size: 30;
-		$font-type: 1;
+    // .title__main
+    &__main {
+        $font-size: 30;
+        $font-type: 1;
 
-		line-height: math.div(20, $font-size);
-		color: $color-dark;
+        line-height: math.div(20, $font-size);
 
-		&:not(:last-child) {
-			margin-bottom: rem(20);
-		}
+        &:not(:last-child) {
+            margin-bottom: rem(20);
+        }
 
-		@if $font-type == 1 {
-			@include adaptive-value("font-size", $font-size, 18);
-		} @else {
-			font-size: rem($font-size);
-		}
-	}
+        @if $native-variables == 1 {
+            color: var(--color-dark);
+        } @else {
+            color: $color-dark;
+        }
 
-	// .title__text
-	&__text {
-		$font-size: 20;
-		$font-type: 1;
+        @if $font-type == 1 {
+            @include adaptive-value("font-size", $font-size, 18);
+        } @else {
+            font-size: rem($font-size);
+        }
+    }
 
-		line-height: math.div(20, $font-size);
-		color: $color-dark;
+    // .title__text
+    &__text {
+        $font-size: 20;
+        $font-type: 1;
 
-		@if $font-type == 1 {
-			@include adaptive-value("font-size", $font-size, 16);
-		} @else {
-			font-size: rem($font-size);
-		}
-	}
+        line-height: math.div(20, $font-size);
+
+        @if $native-variables == 1 {
+            color: var(--color-dark);
+        } @else {
+            color: $color-dark;
+        }
+
+        @if $font-type == 1 {
+            @include adaptive-value("font-size", $font-size, 16);
+        } @else {
+            font-size: rem($font-size);
+        }
+    }
 }

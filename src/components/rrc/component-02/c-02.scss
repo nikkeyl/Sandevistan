@@ -1,92 +1,117 @@
 .block {
-	display: flex;
-	gap: rem(20);
+    display: flex;
+    gap: rem(20);
 
-	// align-items: center;
+    // align-items: center;
 
-	// .block__img
-	// &__img {
-	//     $size: 40;
+    // .block__img
+    // &__img {
+    //     $size: 40;
 
-	//     @include width-height(rem($size), rem($size));
+    //     @include width-height(rem($size), rem($size));
 
-	//     display: flex;
-	//     flex: 0 0 rem($size);
-	//     align-items: center;
-	//     justify-content: center;
-	//     border-radius: 50%;
-	//     background-color: $color-gray;
+    //     display: flex;
+    //     flex: 0 0 rem($size);
+    //     align-items: center;
+    //     justify-content: center;
+    //     border-radius: 50%;
 
-	//     svg {
-	//         $size-svg: 20;
+    //     svg {
+    //         $size-svg: 20;
 
-	//         @include width-height(rem($size-svg), rem($size-svg));
+    //         @include width-height(rem($size-svg), rem($size-svg));
 
-	//         fill: $color-light;
-	//     }
-	// }
+    //         fill: $color-light;
+    //     }
 
-	// .block__icon
-	&__icon {
-		$size: 40;
+    //     @if $native-variables == 1 {
+    //         background-color: var(--color-gray);
+    //     } @else {
+    //         background-color: $color-gray;
+    //     }
+    // }
 
-		@include width-height(rem($size), rem($size));
+    // .block__icon
+    &__icon {
+        $size: 40;
 
-		flex: 0 0 rem($size);
-		fill: $color-gray;
-	}
+        @include width-height(rem($size), rem($size));
 
-	// .block__image-ibg
-	// &__image-ibg {
-	//     $size: 40;
+        flex: 0 0 rem($size);
 
-	//     @include width-height(rem($size), rem($size));
+        @if $native-variables == 1 {
+            fill: var(--color-gray);
+        } @else {
+            fill: $color-gray;
+        }
+    }
 
-	//     flex: 0 0 rem($size);
-	//     background-color: $color-gray;
-	// }
+    // .block__image-ibg
+    &__image-ibg {
+        $size: 40;
 
-	// .block__body
-	// &__body {
-	// }
+        @include width-height(rem($size), rem($size));
 
-	// .block__title
-	&__title {
-		$font-size: 18;
-		$font-type: 1;
+        flex: 0 0 rem($size);
 
-		line-height: math.div(20, $font-size);
-		color: $color-dark;
+        @if $native-variables == 1 {
+            background-color: var(--color-gray);
+        } @else {
+            background-color: $color-gray;
+        }
+    }
 
-		&:not(:last-child) {
-			margin-bottom: rem(10);
-		}
+    // .block__body
+    // &__body {
+    // }
 
-		@if $font-type == 1 {
-			@include adaptive-value("font-size", $font-size, 16);
-		} @else {
-			font-size: rem($font-size);
-		}
-	}
+    // .block__title
+    &__title {
+        $font-size: 18;
+        $font-type: 1;
 
-	// .block__text
-	&__text {
-		$font-size: 18;
-		$font-type: 1;
+        line-height: math.div(20, $font-size);
 
-		line-height: math.div(20, $font-size);
-		color: $color-dark;
+        &:not(:last-child) {
+            margin-bottom: rem(10);
+        }
 
-		p {
-			&:not(:last-child) {
-				margin-bottom: rem(10);
-			}
-		}
+        @if $native-variables == 1 {
+            color: var(--color-dark);
+        } @else {
+            color: $color-dark;
+        }
 
-		@if $font-type == 1 {
-			@include adaptive-value("font-size", $font-size, 16);
-		} @else {
-			font-size: rem($font-size);
-		}
-	}
+        @if $font-type == 1 {
+            @include adaptive-value("font-size", $font-size, 16);
+        } @else {
+            font-size: rem($font-size);
+        }
+    }
+
+    // .block__text
+    &__text {
+        $font-size: 18;
+        $font-type: 1;
+
+        line-height: math.div(20, $font-size);
+
+        p {
+            &:not(:last-child) {
+                margin-bottom: rem(10);
+            }
+        }
+
+        @if $native-variables == 1 {
+            color: var(--color-dark);
+        } @else {
+            color: $color-dark;
+        }
+
+        @if $font-type == 1 {
+            @include adaptive-value("font-size", $font-size, 16);
+        } @else {
+            font-size: rem($font-size);
+        }
+    }
 }
