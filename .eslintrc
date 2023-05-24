@@ -79,14 +79,9 @@
 			"error",
 			"tab"
 		],
-		// "jsx-quotes": "error", // for react
 		"key-spacing": "error",
 		"keyword-spacing": "error",
 		"line-comment-position": "error",
-		// "linebreak-style": [ // learn more
-		// 	"error",
-		// 	"windows"
-		// ],
 		"lines-around-comment": [
 			"error",
 			{
@@ -135,7 +130,7 @@
 			"error",
 			{
 				"multiline": true,
-				"minProperties": 2
+				"minProperties": 4
 			}
 		],
 		"object-curly-spacing": [
@@ -147,21 +142,10 @@
 			"error",
 			"before"
 		],
-
-
-
-		"eqeqeq": [
+		"padded-blocks": [
 			"error",
-			"always"
+			"never"
 		],
-
-		"max-params": [
-			"error",
-			4
-		],
-
-
-
 		"padding-line-between-statements": [
 			"error",
 			{
@@ -239,6 +223,46 @@
 				"next": "if"
 			}
 		],
+		"quotes": [
+			"error",
+			"single"
+		],
+		"rest-spread-spacing": "error",
+		"semi": [
+			"error",
+			"never"
+		],
+		"space-before-blocks": "error",
+		"space-before-function-paren": [
+			"error",
+			"never"
+		],
+		"space-in-parens": "error",
+		"space-infix-ops": "error",
+		"space-unary-ops": "error",
+		"switch-colon-spacing": "error",
+		"template-curly-spacing": "error",
+		"template-tag-spacing": [
+			"error",
+			"always"
+		],
+		"wrap-regex": "error",
+		"yield-star-spacing": [
+			"error",
+			"both"
+		],
+
+
+
+		"eqeqeq": [
+			"error",
+			"always"
+		],
+
+		"max-params": [
+			"error",
+			4
+		],
 		"prefer-const": "error",
 		"spaced-comment": [
 			"error",
@@ -260,6 +284,7 @@
 				}
 			}
 		],
+
 		// IMPORT
 		"import/no-empty-named-blocks": "error",
 		// "import/no-mutable-exports": "error",
