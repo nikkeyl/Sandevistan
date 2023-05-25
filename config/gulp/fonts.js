@@ -21,25 +21,24 @@ const ttfToWoff = () => {
 		.pipe(app.gulp.src(`${app.paths.srcFolder}/fonts/*.woff2`))
 		.pipe(app.gulp.dest(app.paths.build.fonts))
 }
-const fontWeights = {
-	thin: 100,
-	extralight: 200,
-	light: 300,
-	regular: 400,
-	medium: 500,
-	semibold: 600,
-	bold: 700,
-	heavy: 800,
-	black: 900,
-}
 const fontStyle = () => {
 	const fontStylesFile = `${app.paths.srcFolder}/scss/base/fonts/fonts.scss`
 
-	app.plugins.fs.existsSync(fontStylesFile)
-		? app.plugins.fs.unlink(fontStylesFile, cb)
-		: null
+	app.plugins.fs.existsSync(app.plugins.fs.unlink(fontStylesFile, cb))
 	app.plugins.fs.readdir(app.paths.build.fonts, (err, fontFiles) => {
 		if (fontFiles) {
+			const fontWeights = {
+				thin: 100,
+				extralight: 200,
+				light: 300,
+				regular: 400,
+				medium: 500,
+				semibold: 600,
+				bold: 700,
+				heavy: 800,
+				black: 900,
+			}
+
 			let newFileOnly
 
 			app.plugins.fs.writeFile(
