@@ -1,4 +1,4 @@
-[data-responsive-video] {
+%responsive-video {
     position: relative;
     overflow: hidden;
     padding-bottom: 56.25%;
@@ -16,7 +16,7 @@
     }
 }
 
-[data-video-background] {
+%video-background {
     iframe,
     object,
     video,
@@ -34,7 +34,7 @@
     }
 }
 
-[data-list-counter] {
+%list-counter {
     counter-reset: item;
     list-style-type: none;
 
@@ -51,7 +51,7 @@
     }
 }
 
-[data-gray-filter] {
+%gray-filter {
     filter: grayscale(1);
     transition: filter 0.3s ease;
 
@@ -62,23 +62,23 @@
     }
 }
 
-[data-hide-scroll] {
+%hide-scroll {
     &::-webkit-scrollbar {
         display: none;
     }
 }
 
-[data-touch] {
+%touch {
     /* Pulse-based scrolling https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-overflow-scrolling */
     -webkit-overflow-scrolling: touch;
 }
 
-[data-mirror] {
+%mirror {
     /* Mirror effect */
     transform: scale(-1, 1);
 }
 
-[data-user-select] {
+%user-select {
     /* Prevents the user from selecting text */
     user-select: none;
 }
