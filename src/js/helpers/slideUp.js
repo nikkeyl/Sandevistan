@@ -6,9 +6,7 @@ const slideUp = (target, duration = 500, showmore = 0) => {
 		target.style.height = `${target.offsetHeight}px`
 		target.offsetHeight
 		target.style.overflow = 'hidden'
-		target.style.height = showmore
-			? `${showmore}px`
-			: '0px'
+		target.style.height = `${showmore}px`
 		target.style.paddingTop = 0
 		target.style.paddingBottom = 0
 		target.style.marginTop = 0
