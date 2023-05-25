@@ -99,6 +99,38 @@
         "prefix": "avw",
         "body": "@include adaptive-value(\"width\", $1, $2, \\$max-width, \\$min-width, 1);"
     },
+    "%Responsive Video": {
+        "prefix": "erv",
+        "body": "%responsive-video"
+    },
+    "Extend Video Background": {
+        "prefix": "evb",
+        "body": "%video-background"
+    },
+    "Extend List Counter": {
+        "prefix": "elc",
+        "body": "%list-counter"
+    },
+    "Extend Gray Filter": {
+        "prefix": "egf",
+        "body": "%gray-filter"
+    },
+    "Extend Hide Scroll": {
+        "prefix": "ehs",
+        "body": "%hide-scroll"
+    },
+    "Extend Touch": {
+        "prefix": "etouch",
+        "body": "%touch"
+    },
+    "Extend Mirror": {
+        "prefix": "emir",
+        "body": "%mirror"
+    },
+    "Extend User Select": {
+        "prefix": "eus",
+        "body": "%user-select"
+    },
     "@media max": {
         "prefix": "md",
         "body": "@media (max-width: md($1)) {\n\t$2\n}"
