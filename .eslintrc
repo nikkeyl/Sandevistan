@@ -45,7 +45,7 @@
 		// 	2
 		// ],
 		// "consistent-return": "error", // learn more
-		// "consistent-this": "error", // learn more
+		"consistent-this": "error",
 		"curly": [
 			"error",
 			"multi"
@@ -78,6 +78,69 @@
 			"setBeforeGet"
 		],
 		"guard-for-in": "error",
+
+		// "id-denylist": [ // learn more
+		// 	"error",
+		// 	"data",
+		// 	"err",
+		// 	"e",
+		// 	"cb",
+		// 	"callback"
+		// ],
+		"id-length": "error",
+		// "id-match": [ // learn more
+		// 	"error",
+		// 	"^[a-z]+([A-Z][a-z]+)*$"
+		// ],
+		// "init-declarations": [ // learn more
+		// 	"error",
+		// 	"always"
+		// ],
+		"logical-assignment-operators": "error",
+		"max-classes-per-file": "error",
+		// "max-depth": [ // refactor code
+		// 	"error",
+		// 	4
+		// ],
+		// "max-lines": [ // refactor code
+		// 	"error",
+		// 	{
+		// 		"max": 100,
+		// 		"skipBlankLines": true,
+		// 		"skipComments": true
+		// 	}
+		// ],
+		// "max-lines-per-function": [ // refactor code
+		// 	"error",
+		// 	{
+		// 		"max": 10,
+		// 		"skipBlankLines": true,
+		// 		"skipComments": true
+		// 	}
+		// ],
+		// "max-nested-callbacks": [ // test and refactor
+		// 	"error",
+		// 	3
+		// ],
+		"max-params": [
+			"error",
+			4
+		],
+		// "max-statements": [ // learn more
+		// 	"error",
+		// 	5
+		// ],
+		// "multiline-comment-style": [ // test
+		// 	"error",
+		// 	"bare-block"
+		// ],
+		"new-cap": "error",
+		// "no-alert": "error", // refactor code
+		"no-array-constructor": "error",
+		"no-bitwise": "error",
+		"no-caller": "error",
+		"no-confusing-arrow": "error",
+		"no-console": "error",
 
 
 
@@ -183,7 +246,7 @@
 			"error",
 			{
 				"multiline": true,
-				"minProperties": 4
+				"minProperties": 3
 			}
 		],
 		"object-curly-spacing": [
@@ -304,10 +367,7 @@
 
 
 
-		"max-params": [
-			"error",
-			4
-		],
+
 		"prefer-const": "error",
 		"spaced-comment": [
 			"error",
