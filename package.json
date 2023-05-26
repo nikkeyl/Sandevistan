@@ -1,8 +1,8 @@
 {
 	"type": "module",
 	"scripts": {
-		"start": "rm -rf .git && npm i && gulp && webpack serve -c config/webpack/webpack.dev.js",
-		"dev": "stylelint src/scss/**/*.scss --fix && gulp && webpack serve -c config/webpack/webpack.dev.js",
+		"start": "rm -rf .git && npm i",
+		"dev": "gulp && webpack serve -c config/webpack/webpack.dev.js",
 		"build": "gulp build",
 		"devBuild": "gulp build --nowebp",
 		"deploy": "gh-pages -d build",
@@ -12,10 +12,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/nikkeyl/projectName.git"
-	},
-	"dependencies": {
-		"simplebar": "latest"
+		"url": "https://github.com/nikkeyl/projectName.git"
 	},
 	"devDependencies": {
 		"copy-webpack-plugin": "latest",
@@ -58,6 +55,7 @@
 		"nouislider": "latest",
 		"sass": "latest",
 		"sass-loader": "latest",
+		"simplebar": "latest",
 		"smooth-scroll": "latest",
 		"string-replace-loader": "latest",
 		"style-loader": "latest",
