@@ -7,7 +7,7 @@ const svgoConfig = {
 		}, {
 			convertPathData: false
 		}, {
-			removeViewBox: false // not working
+			removeViewBox: false
 		}, {
 			removeXMLNS: true
 		},
