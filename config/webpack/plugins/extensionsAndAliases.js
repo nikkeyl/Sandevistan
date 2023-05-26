@@ -1,4 +1,4 @@
-import { paths } from './paths.js'
+import { paths } from '../../settings/paths.js'
 
 const extensionsAndAliases = {
     extensions: [

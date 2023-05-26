@@ -1,9 +1,9 @@
 import { plugins } from '../settings/plugins.js'
 import { paths } from '../settings/paths.js'
 
-import { extensionsAndAliases } from '../settings/extensionsAndAliases.js'
-import { replaceLoaderOptions } from '../settings/replaceLoaderOptions.js'
-import { cssLoaderOptions } from '../settings/cssLoaderOptions.js'
+import { extensionsAndAliases } from './plugins/extensionsAndAliases.js'
+import { replaceLoaderOptions } from './plugins/replaceLoaderOptions.js'
+import { cssLoaderOptions } from './plugins/cssLoaderOptions.js'
 import { linters } from '../modules/linters.js'
 
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'

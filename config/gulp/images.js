@@ -34,7 +34,7 @@ const images = () => {
 		)
 		.pipe(imagemin({
 			svgoPlugins: [{
-				removeViewBox: false
+				removeViewBox: false // not working
 			}],
 			interlaced: true
 		}))
