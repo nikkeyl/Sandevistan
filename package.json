@@ -1,7 +1,7 @@
 {
 	"type": "module",
 	"scripts": {
-		"start": "rm -rf .git && npm i",
+		"init": "rm -rf .git && npm i",
 		"dev": "gulp && webpack serve -c config/webpack/webpack.dev.js",
 		"build": "gulp build",
 		"devBuild": "gulp build --nowebp",
