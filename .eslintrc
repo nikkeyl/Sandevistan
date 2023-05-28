@@ -30,6 +30,7 @@
 		// "no-use-before-define": "error", // refactor code
 		"require-atomic-updates": "error",
 
+
 		// SUGGESTIONS
 		"accessor-pairs": "error", // learn more
 		"arrow-body-style": [ // learn more
@@ -48,7 +49,7 @@
 		"consistent-this": "error",
 		"curly": [
 			"error",
-			"multi"
+			"multi-or-nest"
 		],
 		"default-case": "error",
 		"default-case-last": "error",
@@ -78,7 +79,6 @@
 			"setBeforeGet"
 		],
 		"guard-for-in": "error",
-
 		// "id-denylist": [ // learn more
 		// 	"error",
 		// 	"data",
@@ -141,6 +141,25 @@
 		"no-caller": "error",
 		"no-confusing-arrow": "error",
 		"no-console": "error",
+		"no-continue": "error",
+		"no-div-regex": "error",
+		"no-else-return": [
+			"error",
+			{
+				"allowElseIf": false
+			}
+		],
+		"no-empty-function": "error",
+		"no-empty-static-block": "error",
+		"no-eval": "error",
+		"no-extend-native": "error",
+		"no-extra-bind": "error",
+		"no-extra-label": "error",
+		"no-floating-decimal": "error",
+
+
+
+
 
 
 
@@ -349,7 +368,13 @@
 			"never"
 		],
 		"space-before-blocks": "error",
-		"space-before-function-paren": "error",
+		"space-before-function-paren": [
+			"error",
+			{
+				"anonymous": "always",
+				"named": "never"
+			}
+		],
 		"space-in-parens": "error",
 		"space-infix-ops": "error",
 		"space-unary-ops": "error",
@@ -364,10 +389,6 @@
 			"error",
 			"both"
 		],
-
-
-
-
 		"prefer-const": "error",
 		"spaced-comment": [
 			"error",
@@ -389,7 +410,6 @@
 				}
 			}
 		],
-
 		// IMPORT
 		"import/no-empty-named-blocks": "error",
 		// "import/no-mutable-exports": "error",
