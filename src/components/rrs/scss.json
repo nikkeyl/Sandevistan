@@ -405,7 +405,7 @@
     },
     "Transition": {
         "prefix": "aa",
-        "body": "transition: ${1:all} 0.${2:3}s ${3:ease} ${4:0}s;"
+        "body": "transition: ${1:all} 0.${2:3}s ${3:0}s;"
     },
     "Transform Rotate": {
         "prefix": "ar",
@@ -449,7 +449,7 @@
     },
     "Transition And Hover": {
         "prefix": "hhv",
-        "body": "transition: ${1:all} 0.${2:3}s ${3:ease} ${4:0}s;\n\n@media (any-hover: hover) {\n\t&:hover {\n\t\t$5\n\t}\n}"
+        "body": "transition: ${1:all} 0.${2:3}s ${3:0}s;\n\n@media (any-hover: hover) {\n\t&:hover {\n\t\t$5\n\t}\n}"
     },
     "Pseudo Class Active": {
         "prefix": "acc",
