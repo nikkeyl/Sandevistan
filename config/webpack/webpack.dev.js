@@ -82,7 +82,7 @@ const config = {
 					noErrorOnMissing: true,
 					force: true
 				}, {
-					from: `${paths.root}/favicon.svg`,
+					from: `${paths.root}/favicon.ico`,
 					to: './',
 					noErrorOnMissing: true
 				}

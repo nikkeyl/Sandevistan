@@ -80,7 +80,7 @@ const config = {
 					to: '../static',
 					noErrorOnMissing: true
 				}, {
-					from: `${paths.root}/favicon.svg`,
+					from: `${paths.root}/favicon.ico`,
 					to: '../',
 					noErrorOnMissing: true
 				}
