@@ -133,63 +133,43 @@
     },
     "@media max": {
         "prefix": "md",
-        "body": "@media (max-width: md($1)) {\n\t$2\n}"
+        "body": "@include media-max($1) {\n\t$2\n}"
     },
     "@media min": {
         "prefix": "mmd",
-        "body": "@media (min-width: em($1)) {\n\t$2\n}"
-    },
-    "@media Min And Max Width": {
-        "prefix": "mda",
-        "body": "@media (min-width: em($1)) and (max-width: md($2)) {\n\t$3\n}"
+        "body": "@include media-min($1) {\n\t$2\n}"
     },
     "@media Max Width desktop": {
         "prefix": "md1",
-        "body": "@media (max-width: md(\\$desktop)) {\n\t$0\n}"
+        "body": "@include media-max(\\$desktop) {\n\t$0\n}"
     },
     "@media Min Width desktop": {
         "prefix": "mmd1",
-        "body": "@media (min-width: em(\\$desktop)) {\n\t$0\n}"
+        "body": "@include media-min(\\$desktop) {\n\t$0\n}"
     },
     "@media Max Width Laptop": {
         "prefix": "md2",
-        "body": "@media (max-width: md(\\$laptop)) {\n\t$0\n}"
+        "body": "@include media-max(\\$laptop) {\n\t$0\n}"
     },
     "@media Min Width Laptop": {
         "prefix": "mmd2",
-        "body": "@media (min-width: em(\\$laptop)) {\n\t$0\n}"
+        "body": "@include media-min(\\$laptop) {\n\t$0\n}"
     },
     "@media Max Width Tablet": {
         "prefix": "md3",
-        "body": "@media (max-width: md(\\$tablet)) {\n\t$0\n}"
+        "body": "@include media-max(\\$tablet) {\n\t$0\n}"
     },
     "@media Min Width Tablet": {
         "prefix": "mmd3",
-        "body": "@media (min-width: em(\\$tablet)) {\n\t$0\n}"
+        "body": "@include media-min(\\$tablet) {\n\t$0\n}"
     },
     "@media Max Width Phone": {
         "prefix": "md4",
-        "body": "@media (max-width: md(\\$phone)) {\n\t$0\n}"
+        "body": "@include media-max(\\$phone) {\n\t$0\n}"
     },
     "@media Min Width Phone": {
         "prefix": "mmd4",
-        "body": "@media (min-width: em(\\$phone)) {\n\t$0\n}"
-    },
-    "@media Min And Max Width With Variables": {
-        "prefix": "mdav",
-        "body": "@media (min-width: em(\\$${1:laptop})) and (max-width: md(\\$${2:desktop})) {\n\t$3\n}"
-    },
-    "@media Min And Max Width With Laptop And desktop": {
-        "prefix": "mda1",
-        "body": "@media (min-width: em(\\$laptop)) and (max-width: md(\\$desktop)) {\n\t$0\n}"
-    },
-    "@media Min And Max Width With Tablet And Laptop": {
-        "prefix": "mda2",
-        "body": "@media (min-width: em(\\$tablet)) and (max-width: md(\\$laptop)) {\n\t$0\n}"
-    },
-    "@media Min And Max Width With Phone And Tablet": {
-        "prefix": "mda3",
-        "body": "@media (min-width: em(\\$phone)) and (max-width: md(\\$tablet)) {\n\t$0\n}"
+        "body": "@include media-min(\\$phone) {\n\t$0\n}"
     },
     "Gap With Rem ": {
         "prefix": "gap",
@@ -447,10 +427,6 @@
         "prefix": "b",
         "body": "position: relative;\n\n&::before {\n\t@include pseudo($1);\n\t$2\n}"
     },
-    "Transition And Hover": {
-        "prefix": "hhv",
-        "body": "transition: ${1:all} 0.${2:3}s ${3:0}s;\n\n@media (any-hover: hover) {\n\t&:hover {\n\t\t$5\n\t}\n}"
-    },
     "Pseudo Class Active": {
         "prefix": "acc",
         "body": "&:active {\n\t$0\n}"
@@ -534,6 +510,10 @@
     "Last Child Margin": {
         "prefix": "lcm",
         "body": "&:last-child {\n\tmargin: rem(${1:0}) rem(${2:0}) rem(${3:0}) rem(${4:0});\n}"
+    },
+    "Transition And Hover": {
+        "prefix": "hhv",
+        "body": "transition: ${1:all} 0.${2:3}s ${3:0}s;\n\n@media (any-hover: hover) {\n\t&:hover {\n\t\t$5\n\t}\n}"
     },
     "Hover Decoration Underline": {
         "prefix": "hvu",

@@ -58,7 +58,7 @@
             gap: rem(30);
         }
 
-        @media (min-width: em($breakpoint)) {
+        @include media-min($breakpoint) {
             @if $center == 1 and $grid == 1 {
                 width: 100%;
             }
@@ -74,7 +74,7 @@
     @if $button == 1 {
         // .block__button
         &__button {
-            @media (min-width: em($breakpoint)) {
+            @include media-min($breakpoint) {
                 @if $center == 1 and $grid == 0 {
                     display: flex;
                     margin: 0 auto;

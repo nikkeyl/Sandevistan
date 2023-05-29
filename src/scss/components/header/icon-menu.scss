@@ -2,7 +2,7 @@
 .icon-menu {
     display: none;
 
-    @media (max-width: md($tablet)) {
+    @include media-max($tablet) {
         @include width-height(rem(30), rem(18));
 
         position: relative;

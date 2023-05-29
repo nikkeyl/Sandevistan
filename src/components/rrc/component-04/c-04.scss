@@ -7,22 +7,8 @@
     $center: 1;
     $reverse: 0;
 
-    @include adaptive-value(
-        "padding-top",
-        120,
-        30,
-        $start-width,
-        $end-width,
-        $type-value
-    );
-    @include adaptive-value(
-        "padding-bottom",
-        120,
-        30,
-        $start-width,
-        $end-width,
-        $type-value
-    );
+    @include adaptive-value("padding-top", 120, 30, $start-width, $end-width, $type-value);
+    @include adaptive-value("padding-bottom", 120, 30, $start-width, $end-width, $type-value);
 
     // .block__container
     &__container {
@@ -33,7 +19,7 @@
             align-items: center;
         }
 
-        @media (min-width: em($breakpoint)) {
+        @include media-min($breakpoint) {
             grid-template-columns: repeat(2, 1fr);
         }
     }
@@ -53,7 +39,7 @@
             gap: rem(30);
         }
 
-        @media (min-width: em($breakpoint)) {
+        @include media-min($breakpoint) {
             max-width: rem(500);
         }
     }
@@ -79,7 +65,7 @@
     // .block__button
     &__button {
         @if $body-grid == 1 {
-            @media (min-width: em($breakpoint)) {
+            @include media-min($breakpoint) {
                 width: fit-content;
             }
         }

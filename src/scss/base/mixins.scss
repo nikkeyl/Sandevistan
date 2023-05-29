@@ -37,13 +37,13 @@
 	#{$property}: $property-value;
 
 	@if $width-from != $container-width and $width-from != $max-width and $keep-size != 1 and $keep-size != 2 {
-		@media (min-width: em($width-from)) {
+		@include media-min($width-from) {
 			#{$property}: inherit;
 		}
 	}
 
 	@if $width-to != $min-width and $keep-size != 1 and $keep-size != 3 {
-		@media (max-width: md($width-to)) {
+		@include media-max($width-to) {
 			#{$property}: inherit;
 		}
 	}
@@ -83,7 +83,7 @@
 	}
 
 	&__body {
-		@media (min-width: em($breakpoint)) {
+		@include media-min($breakpoint) {
 			width: #{$percent} + "%";
 		}
 	}
@@ -93,7 +93,7 @@
 			width: 100%;
 		}
 
-		@media (min-width: em($breakpoint)) {
+		@include media-min($breakpoint) {
 			position: relative;
 			flex: 0 0
 				calc(
@@ -118,12 +118,12 @@
 			}
 		}
 
-		@media (min-width: em($container-width)) {
+		@include media-min($container-width) {
 			flex: 0 0 calc(50% - (0.#{$width} - 0.5) * rem($max-width-container));
 		}
 	}
 
-	@media (min-width: em($breakpoint)) {
+	@include media-min($breakpoint) {
 		display: flex;
 
 		@if $reverse == 1 {
@@ -131,7 +131,7 @@
 		}
 	}
 
-	@media (max-width: md($breakpoint)) {
+	@include media-max($breakpoint) {
 		@if $reverse == 1 {
 			display: flex;
 			flex-direction: column-reverse;
@@ -142,7 +142,7 @@
 @mixin slide($items, $translate, $time, $animation-delay, $direction, $breakpoint: $tablet) {
 	$count: $items + 1;
 
-	@media (min-width: em($breakpoint)) {
+	@include media-min($breakpoint) {
 		opacity: 0;
 		animation: slide-#{$direction} #{$time}s forwards;
 
@@ -235,8 +235,20 @@
 	display: grid;
 	@content;
 
-	@media (min-width: em($breakpoint)) {
+	@include media-min($breakpoint) {
 		grid-template-columns: repeat(auto-#{$type}, minmax($min, $max));
+	}
+}
+
+@mixin media-min($value) {
+	@media (min-width: em($value)) {
+		@content;
+	}
+}
+
+@mixin media-max($value) {
+	@media (max-width: md($value)) {
+		@content;
 	}
 }
 
