@@ -6,7 +6,6 @@ import { plugins } from './config/settings/plugins.js'
 import { paths } from './config/settings/paths.js'
 
 import { validator } from './config/modules/validators.js'
-import { gitIgnore } from './config/modules/gitIgnore.js'
 import { reset } from './config/modules/reset.js'
 import { zip } from './config/modules/zip.js'
 import { ftp } from './config/modules/ftp.js'
@@ -27,7 +26,7 @@ const build = gulp.series(
 	gulp.parallel(html, css, images),
 	gulp.parallel(validator, zip)
 )
-const dev = gulp.parallel(fonts, sprite, gitIgnore)
+const dev = gulp.parallel(fonts, sprite)
 const runFTP = gulp.series(build, ftp)
 const app = {
 	isNoWebp: !argv.includes('--nowebp'),
