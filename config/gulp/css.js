@@ -5,7 +5,7 @@ import autoPrefixer from 'gulp-autoprefixer'
 import cleanCss from 'gulp-clean-css'
 import webpCss from 'gulp-webpcss'
 import cssComb from 'gulp-csscomb'
-import purge from 'gulp-css-purge'
+// import purge from 'gulp-css-purge'
 
 const css = () => {
 	return app.gulp.src(`${app.paths.build.css}style.css`)
@@ -15,10 +15,10 @@ const css = () => {
 			noWebpClass: '.no-webp',
 			webpClass: '.webp'
 		}))
-		.pipe(purge({
-			shorten: false,
-			trim: false
-		}))
+		// .pipe(purge({
+		// 	shorten: false,
+		// 	trim: false
+		// }))
 		.pipe(cssComb())
 		.pipe(autoPrefixer())
 		.pipe(app.gulp.dest(app.paths.build.css))
