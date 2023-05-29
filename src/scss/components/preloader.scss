@@ -8,7 +8,7 @@
     background-color: $color-dark;
     opacity: 1;
     visibility: visible;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
+    transition: opacity 0.3s, visibility 0.3s;
 
     &__load {
         @include width-height(rem(100), rem(100));

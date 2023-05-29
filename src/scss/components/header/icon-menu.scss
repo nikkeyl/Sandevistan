@@ -18,8 +18,7 @@
 
             right: 0;
             background-color: $color-dark;
-            transition: transform 0.3s ease, width 0.3s ease, top 0.3s ease,
-                bottom 0.3s ease;
+            transition: transform 0.3s, width 0.3s, top 0.3s, bottom 0.3s;
         }
 
         &::before {

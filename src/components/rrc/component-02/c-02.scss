@@ -15,6 +15,7 @@
     //     align-items: center;
     //     justify-content: center;
     //     border-radius: 50%;
+    //     background-color: $color-gray;
 
     //     svg {
     //         $size-svg: 20;
@@ -22,12 +23,6 @@
     //         @include width-height(rem($size-svg), rem($size-svg));
 
     //         fill: $color-light;
-    //     }
-
-    //     @if $native-variables == 1 {
-    //         background-color: var(--color-gray);
-    //     } @else {
-    //         background-color: $color-gray;
     //     }
     // }
 
@@ -38,12 +33,7 @@
         @include width-height(rem($size), rem($size));
 
         flex: 0 0 rem($size);
-
-        @if $native-variables == 1 {
-            fill: var(--color-gray);
-        } @else {
-            fill: $color-gray;
-        }
+        fill: $color-gray;
     }
 
     // .block__image-ibg
@@ -53,12 +43,7 @@
         @include width-height(rem($size), rem($size));
 
         flex: 0 0 rem($size);
-
-        @if $native-variables == 1 {
-            background-color: var(--color-gray);
-        } @else {
-            background-color: $color-gray;
-        }
+        background-color: $color-gray;
     }
 
     // .block__body
@@ -71,15 +56,10 @@
         $font-type: 1;
 
         line-height: math.div(20, $font-size);
+        color: $color-dark;
 
         &:not(:last-child) {
             margin-bottom: rem(10);
-        }
-
-        @if $native-variables == 1 {
-            color: var(--color-dark);
-        } @else {
-            color: $color-dark;
         }
 
         @if $font-type == 1 {
@@ -95,17 +75,12 @@
         $font-type: 1;
 
         line-height: math.div(20, $font-size);
+        color: $color-dark;
 
         p {
             &:not(:last-child) {
                 margin-bottom: rem(10);
             }
-        }
-
-        @if $native-variables == 1 {
-            color: var(--color-dark);
-        } @else {
-            color: $color-dark;
         }
 
         @if $font-type == 1 {

@@ -4,6 +4,14 @@
     display: grid;
     justify-items: center;
 
+    // .block__image-ibg
+    // &__image-ibg {
+    //     $size: 40;
+
+    //     @include width-height(rem($size), rem($size));
+
+    background-color: $color-gray;
+
     // .block__img
     // &__img {
     //     $size: 80;
@@ -14,23 +22,14 @@
     //     align-items: center;
     //     justify-content: center;
     //     border-radius: 50%;
+    //     background-color: $color-gray;
 
     //     svg {
     //         $size-svg: 40;
 
     //         @include width-height(rem($size-svg), rem($size-svg));
 
-    //         @if $native-variables == 1 {
-    //             fill: var(--color-light);
-    //         } @else {
-    //             fill: $color-light;
-    //         }
-    //     }
-
-    //     @if $native-variables == 1 {
-    //         background-color: var(--color-gray);
-    //     } @else {
-    //         background-color: $color-gray;
+    //         fill: $color-light;
     //     }
     // }
 
@@ -40,11 +39,7 @@
 
         @include width-height(rem($size), rem($size));
 
-        @if $native-variables == 1 {
-            fill: var(--color-gray);
-        } @else {
-            fill: $color-gray;
-        }
+        fill: $color-gray;
 
         @if $gap == 0 {
             &:not(:last-child) {
@@ -69,15 +64,10 @@
         $font-type: 1;
 
         line-height: math.div(20, $font-size);
+        color: $color-dark;
 
         &:not(:last-child) {
             margin-bottom: rem(10);
-        }
-
-        @if $native-variables == 1 {
-            color: var(--color-dark);
-        } @else {
-            color: $color-dark;
         }
 
         @if $font-type == 1 {
@@ -93,6 +83,7 @@
         $font-type: 1;
 
         line-height: math.div(20, $font-size);
+        color: $color-dark;
 
         p {
             &:not(:last-child) {
@@ -100,29 +91,11 @@
             }
         }
 
-        @if $native-variables == 1 {
-            color: var(--color-dark);
-        } @else {
-            color: $color-dark;
-        }
-
         @if $font-type == 1 {
             @include adaptive-value("font-size", $font-size, 16);
         } @else {
             font-size: rem($font-size);
         }
-    }
-
-    // .block__image-ibg
-    // &__image-ibg {
-    //     $size: 40;
-
-    //     @include width-height(rem($size), rem($size));
-
-    @if $native-variables == 1 {
-        background-color: var(--color-gray);
-    } @else {
-        background-color: $color-gray;
     }
 
     @if $gap == 1 {

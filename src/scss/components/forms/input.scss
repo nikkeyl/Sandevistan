@@ -5,11 +5,11 @@
     padding: 0 rem(20);
     width: 100%;
     color: $color-gray;
-    transition: color 0.3s ease;
+    transition: color 0.3s;
 
     &::placeholder {
         opacity: 1;
-        transition: opacity 0.3s ease;
+        transition: opacity 0.3s;
     }
 
     &:focus {

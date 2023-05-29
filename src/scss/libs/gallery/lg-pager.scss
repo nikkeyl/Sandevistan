@@ -44,7 +44,7 @@
     }
 
     .lg-pager-thumb-cont {
-        @include transitionCustom(opacity 0.15s ease, transform 0.15s ease);
+        @include transitionCustom(opacity 0.15s, transform 0.15s);
         @include translate3d(0, rem(5), 0);
         @include width-height(rem(120), rem(83));
 
@@ -66,7 +66,7 @@
     }
 
     .lg-pager {
-        @include transition(box-shadow 0.3s ease 0s);
+        @include transition(box-shadow 0.3s 0s);
         @include width-height(rem(12), rem(12));
 
         display: block;

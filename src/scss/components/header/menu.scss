@@ -11,7 +11,7 @@
             overflow: auto;
             padding: rem(80) 0 rem(30);
             background-color: $color-light;
-            transition: left 0.3s ease;
+            transition: left 0.3s;
 
             &::before {
                 @include pseudo("", fixed);
@@ -21,7 +21,7 @@
                 top: 0;
                 z-index: 4;
                 background-color: $color-light;
-                transition: left 0.3s ease;
+                transition: left 0.3s;
             }
 
             .menu-open & {
@@ -39,7 +39,7 @@
 
         font-size: rem($font-size);
         line-height: math.div(19, $font-size);
-        transition: color 0.3s ease;
+        transition: color 0.3s;
 
         // для корректной работы line effect
         //     display: block;

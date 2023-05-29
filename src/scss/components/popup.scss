@@ -8,7 +8,7 @@
         z-index: 149;
         background-color: rgba($color-dark, 50%);
         opacity: 0;
-        transition: opacity 0.8s ease;
+        transition: opacity 0.8s;
         pointer-events: none;
     }
 }
@@ -25,7 +25,7 @@
     position: fixed;
     padding: rem(30) rem(10);
     visibility: hidden;
-    transition: visibility 0.8s ease;
+    transition: visibility 0.8s;
     pointer-events: none;
     inset: 0;
 
@@ -47,7 +47,7 @@
         background-color: $color-gray;
         visibility: hidden;
         transform: scale(0);
-        transition: transform 0.3s ease, visibility 0.3s ease;
+        transition: transform 0.3s, visibility 0.3s;
 
         .lock & {
             visibility: visible;

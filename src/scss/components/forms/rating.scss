@@ -5,7 +5,7 @@
     align-items: flex-end;
     font-size: rem($font-size);
     line-height: 0.75;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.3s;
 
     &__body {
         position: relative;
@@ -23,7 +23,7 @@
         left: 0;
         top: 0;
         overflow: hidden;
-        transition: width 0.2s ease, color 0.2s ease;
+        transition: width 0.2s, color 0.2s;
 
         &::before {
             @include pseudo("★★★★★", absolute);

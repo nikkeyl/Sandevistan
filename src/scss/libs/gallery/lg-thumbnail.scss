@@ -87,7 +87,7 @@ $thumbnails-margin: 5;
         }
 
         @media (width >= $tablet) {
-            @include transition(border-color 0.25s ease);
+            @include transition(border-color 0.25s);
 
             border: rem(2) solid #fff;
             border-radius: rem(4);

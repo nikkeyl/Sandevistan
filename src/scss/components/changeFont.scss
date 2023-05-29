@@ -10,7 +10,7 @@
         border-radius: 50%;
         color: $color-light;
         background-color: $color-dark-gray;
-        transition: color 0.3s ease, background-color 0.3s ease;
+        transition: color 0.3s, background-color 0.3s;
 
         &.active {
             color: $color-dark;
@@ -28,7 +28,7 @@
 }
 
 [data-font-item] {
-    transition: font-size 0.3s ease;
+    transition: font-size 0.3s;
 }
 
 .change-font-range {

@@ -89,11 +89,6 @@
     &__image-ibg {
         align-self: start;
         padding-bottom: percent(340, 500);
-
-        @if $native-variables == 1 {
-            background-color: var(--color-gray);
-        } @else {
-            background-color: $color-gray;
-        }
+        background-color: $color-gray;
     }
 }

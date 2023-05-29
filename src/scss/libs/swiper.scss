@@ -130,35 +130,19 @@ $themeColor: #07f !default;
     }
 
     .swiper-slide-shadow-left {
-        background-image: linear-gradient(
-            to left,
-            rgba($color-dark, 0.5),
-            rgba($color-dark, 0)
-        );
+        background-image: linear-gradient(to left, rgba($color-dark, 0.5), rgba($color-dark, 0));
     }
 
     .swiper-slide-shadow-right {
-        background-image: linear-gradient(
-            to right,
-            rgba($color-dark, 0.5),
-            rgba($color-dark, 0)
-        );
+        background-image: linear-gradient(to right, rgba($color-dark, 0.5), rgba($color-dark, 0));
     }
 
     .swiper-slide-shadow-top {
-        background-image: linear-gradient(
-            to top,
-            rgba($color-dark, 0.5),
-            rgba($color-dark, 0)
-        );
+        background-image: linear-gradient(to top, rgba($color-dark, 0.5), rgba($color-dark, 0));
     }
 
     .swiper-slide-shadow-bottom {
-        background-image: linear-gradient(
-            to bottom,
-            rgba($color-dark, 0.5),
-            rgba($color-dark, 0)
-        );
+        background-image: linear-gradient(to bottom, rgba($color-dark, 0.5), rgba($color-dark, 0));
     }
 
     &,

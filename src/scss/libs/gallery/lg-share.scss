@@ -21,11 +21,7 @@
 
     .lg-dropdown {
         @include transform(translate3d(0, rem(5), 0));
-        @include transitionCustom(
-            transform 0.18s linear,
-            visibility 0s linear 0.5s,
-            opacity 0.18s linear
-        );
+        @include transitionCustom(transform 0.18s linear, visibility 0s linear 0.5s, opacity 0.18s linear);
 
         position: absolute;
         right: 0;
@@ -68,14 +64,13 @@
         a {
             display: block;
             padding: rem(4) rem(12);
-            font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Arial",
-                sans-serif;
+            font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
             font-size: rem(12);
             white-space: pre;
             color: $color-dark-gray;
 
             &:hover {
-                background-color: rgba($color-dark 0.07);
+                background-color: rgba($color-dark, 0.07);
             }
         }
 

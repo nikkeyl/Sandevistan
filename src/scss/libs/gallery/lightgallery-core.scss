@@ -75,7 +75,7 @@
 }
 
 .lg-outer {
-    @include transition(opacity 0.15s ease 0s);
+    @include transition(opacity 0.15s 0s);
     @include width-height(100%, 100%);
 
     position: fixed;
@@ -272,7 +272,7 @@
         .lg-prev-slide,
         .lg-next-slide,
         .lg-current {
-            @include transitionCustom(none 0s ease 0s !important);
+            @include transitionCustom(none 0s 0s !important);
         }
     }
 
@@ -332,7 +332,7 @@
                 &.lg-current {
                     @include transitionCustom(
                         transform 1s cubic-bezier(0, 0, 0.25, 1),
-                        opacity 0.1s ease
+                        opacity 0.1s
                     );
                 }
             }

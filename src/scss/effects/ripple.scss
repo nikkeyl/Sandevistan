@@ -9,7 +9,7 @@
     border: rem(1) solid $color-gray;
     border-radius: 50%;
     background-color: $color-light;
-    animation: ripple 2s ease forwards;
+    animation: ripple 2s forwards;
 
     @keyframes ripple {
         0% {

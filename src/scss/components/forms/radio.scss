@@ -26,7 +26,7 @@
             align-self: flex-start;
             border: rem(1) solid $color-gray;
             border-radius: 50%;
-            transition: box-shadow 0.3s ease;
+            transition: box-shadow 0.3s;
         }
 
         &::after {
@@ -38,7 +38,7 @@
             border-radius: 50%;
             background-color: $color-dark-gray;
             transform: scale(0);
-            transition: transform 0.3s ease;
+            transition: transform 0.3s;
         }
     }
 

@@ -3,7 +3,7 @@
 @import "lg-mixins";
 
 .lg-progress-bar {
-    @include transitionCustom(opacity 0.08s ease 0s);
+    @include transitionCustom(opacity 0.08s 0s);
     @include width-height(100%, $lg-progress-bar-height);
 
     position: absolute;

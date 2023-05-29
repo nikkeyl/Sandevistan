@@ -6,12 +6,7 @@
     // .card__image-ibg
     &__image-ibg {
         padding-bottom: percent(170, 300);
-
-        @if $native-variables == 1 {
-            background-color: var(--color-gray);
-        } @else {
-            background-color: $color-gray;
-        }
+        background-color: $color-gray;
     }
 
     // .card__body
@@ -24,7 +19,7 @@
 
         font-size: rem($font-size);
         line-height: math.div(20, $font-size);
-        transition: all 0.3s ease;
+        transition: all 0.3s;
         cursor: pointer;
 
         a {
@@ -34,11 +29,7 @@
 
         @media (any-hover: hover) {
             &:hover {
-                @if $native-variables == 1 {
-                    color: var(--color-gray);
-                } @else {
-                    color: $color-gray;
-                }
+                color: $color-gray;
             }
         }
     }
