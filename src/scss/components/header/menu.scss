@@ -1,8 +1,8 @@
 /* Menu */
 .menu {
     &__body {
-        @include media-max($tablet) {
-            @include width-height(100%, 100%);
+        @include mediaMax($tablet) {
+            @include widthHeight(100%, 100%);
 
             position: fixed;
             left: -100%;
@@ -10,17 +10,17 @@
             z-index: 4;
             overflow: auto;
             padding: rem(80) 0 rem(30);
-            background-color: $color-light;
+            background-color: $colorLight;
             transition: left 0.3s;
 
             &::before {
                 @include pseudo("", fixed);
-                @include width-height(100%, rem(70));
+                @include widthHeight(100%, rem(70));
 
                 left: -100%;
                 top: 0;
                 z-index: 4;
-                background-color: $color-light;
+                background-color: $colorLight;
                 transition: left 0.3s;
             }
 
@@ -35,18 +35,18 @@
     }
 
     &__link {
-        $font-size: 16;
+        $fontSize: 16;
 
-        font-size: rem($font-size);
-        line-height: math.div(20, $font-size);
+        font-size: rem($fontSize);
+        line-height: math.div(20, $fontSize);
         transition: color 0.3s;
 
         // для корректной работы line effect
         //     display: block;
         //     overflow: hidden;
 
-        @include media-hover {
-            color: $color-dark;
+        @include mediaHover {
+            color: $colorDark;
         }
     }
 
@@ -56,7 +56,7 @@
         column-gap: rem(20);
         row-gap: rem(10);
 
-        @include media-max($tablet) {
+        @include mediaMax($tablet) {
             flex-direction: column;
             align-items: center;
             row-gap: rem(20);

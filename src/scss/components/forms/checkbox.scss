@@ -12,7 +12,7 @@
             content: "";
             flex: 0 0 rem(20);
             align-self: flex-start;
-            border: rem(1) solid $color-gray;
+            border: rem(1) solid $colorGray;
             border-radius: rem(5);
             width: rem(20);
             height: rem(20);
@@ -26,7 +26,7 @@
             border-radius: rem(2);
             width: rem(16);
             height: rem(16);
-            background-color: $color-dark;
+            background-color: $colorDark;
             transform: scale(0);
             transition: transform 0.3s;
         }
@@ -44,11 +44,11 @@
     }
 
     &__text {
-        $font-size: 18;
+        $fontSize: 18;
 
-        font-size: rem($font-size);
-        line-height: math.div(22, $font-size);
-        color: $color-gray;
+        font-size: rem($fontSize);
+        line-height: math.div(22, $fontSize);
+        color: $colorGray;
     }
 
     &:not(:last-child) {

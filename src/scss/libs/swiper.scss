@@ -48,7 +48,7 @@ $themeColor: #07f !default;
 }
 
 .swiper-wrapper {
-    @include width-height(100%, 100%);
+    @include widthHeight(100%, 100%);
 
     position: relative;
     z-index: 1;
@@ -71,7 +71,7 @@ $themeColor: #07f !default;
 }
 
 .swiper-slide {
-    @include width-height(100%, 100%);
+    @include widthHeight(100%, 100%);
 
     position: relative;
     flex-shrink: 0;
@@ -116,7 +116,7 @@ $themeColor: #07f !default;
     .swiper-slide-shadow-left,
     .swiper-slide-shadow-top,
     .swiper-slide-shadow {
-        @include width-height(100%, 100%);
+        @include widthHeight(100%, 100%);
 
         position: absolute;
         left: 0;
@@ -126,23 +126,23 @@ $themeColor: #07f !default;
     }
 
     .swiper-slide-shadow {
-        background-color: rgba($color-dark, 0.15);
+        background-color: rgba($colorDark, 0.15);
     }
 
     .swiper-slide-shadow-left {
-        background-image: linear-gradient(to left, rgba($color-dark, 0.5), rgba($color-dark, 0));
+        background-image: linear-gradient(to left, rgba($colorDark, 0.5), rgba($colorDark, 0));
     }
 
     .swiper-slide-shadow-right {
-        background-image: linear-gradient(to right, rgba($color-dark, 0.5), rgba($color-dark, 0));
+        background-image: linear-gradient(to right, rgba($colorDark, 0.5), rgba($colorDark, 0));
     }
 
     .swiper-slide-shadow-top {
-        background-image: linear-gradient(to top, rgba($color-dark, 0.5), rgba($color-dark, 0));
+        background-image: linear-gradient(to top, rgba($colorDark, 0.5), rgba($colorDark, 0));
     }
 
     .swiper-slide-shadow-bottom {
-        background-image: linear-gradient(to bottom, rgba($color-dark, 0.5), rgba($color-dark, 0));
+        background-image: linear-gradient(to bottom, rgba($colorDark, 0.5), rgba($colorDark, 0));
     }
 
     &,

@@ -3,7 +3,7 @@
     position: relative;
 
     img {
-        @include width-height(100%, 100%);
+        @include widthHeight(100%, 100%);
 
         position: absolute;
         left: 0;
@@ -12,7 +12,7 @@
     }
 }
 
-@if $ibg-contain == 1 {
+@if $ibgContain == 1 {
     /* Background image using css (contain) */
     [class*="-ibg--contain"] {
         img {

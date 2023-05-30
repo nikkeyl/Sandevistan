@@ -9,7 +9,7 @@
 $width: 15.625em;
 $radius: $width * 0.016891;
 $transition: 0.3s;
-$font-size: $width * 0.056;
+$fontSize: $width * 0.056;
 $lightblue: #add8e6;
 
 .qs-datepicker-container {
@@ -18,14 +18,14 @@ $lightblue: #add8e6;
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    border: rem(1) solid $color-gray;
+    border: rem(1) solid $colorGray;
     border-radius: $radius;
     width: $width;
-    box-shadow: 0 ($width * 0.08) ($width * 0.08) ($width * -0.06) rgba($color-dark, 0.3);
+    box-shadow: 0 ($width * 0.08) ($width * 0.08) ($width * -0.06) rgba($colorDark, 0.3);
     font-family: sans-serif;
     font-size: rem(16);
-    color: $color-dark;
-    background-color: $color-light;
+    color: $colorDark;
+    background-color: $colorLight;
     user-select: none;
 
     * {
@@ -45,7 +45,7 @@ $lightblue: #add8e6;
 }
 
 .qs-overlay {
-    @include width-height(100%, 100%);
+    @include widthHeight(100%, 100%);
 
     position: absolute;
     left: 0;
@@ -54,8 +54,8 @@ $lightblue: #add8e6;
     display: flex;
     flex-direction: column;
     padding: em(8);
-    color: $color-light;
-    background-color: rgba($color-dark, 0.75);
+    color: $colorLight;
+    background-color: rgba($colorDark, 0.75);
     opacity: 1;
     transition: opacity $transition;
 
@@ -63,13 +63,13 @@ $lightblue: #add8e6;
         display: block;
         margin: 0 auto;
         border: none;
-        border-bottom: rem(1) solid $color-light;
+        border-bottom: rem(1) solid $colorLight;
         border-radius: 0;
         padding: em(8) 0;
         width: 80%;
-        font-size: $font-size;
+        font-size: $fontSize;
         text-align: center;
-        color: $color-light;
+        color: $colorLight;
         background-color: transparent;
 
         &::-webkit-inner-spin-button {
@@ -87,15 +87,15 @@ $lightblue: #add8e6;
 
     .qs-submit {
         margin: 0 auto auto;
-        border: rem(1) solid $color-light;
+        border: rem(1) solid $colorLight;
         border-radius: $radius;
         padding: em(8);
         background-color: rgba(#808080, 0.4);
         cursor: pointer;
 
         &.qs-disabled {
-            border-color: $color-gray;
-            color: $color-gray;
+            border-color: $colorGray;
+            color: $colorGray;
             cursor: not-allowed;
         }
     }
@@ -144,7 +144,7 @@ $lightblue: #add8e6;
 }
 
 .qs-arrow {
-    @include width-height(math.div($width, 10), math.div($width, 10));
+    @include widthHeight(math.div($width, 10), math.div($width, 10));
 
     position: relative;
     border-radius: $radius;
@@ -161,25 +161,25 @@ $lightblue: #add8e6;
 
     &.qs-left::after {
         right: 50%;
-        border-right-color: $color-gray;
+        border-right-color: $colorGray;
         transform: translate(25%, -50%);
     }
 
     &.qs-right::after {
         left: 50%;
-        border-left-color: $color-gray;
+        border-left-color: $colorGray;
         transform: translate(-25%, -50%);
     }
 
-    @include media-hover {
-        background-color: rgba($color-dark, 0.1);
+    @include mediaHover {
+        background-color: rgba($colorDark, 0.1);
 
         &.qs-left::after {
-            border-right-color: $color-dark;
+            border-right-color: $colorDark;
         }
 
         &.qs-right::after {
-            border-left-color: $color-dark;
+            border-left-color: $colorDark;
         }
     }
 }
@@ -197,8 +197,8 @@ $lightblue: #add8e6;
     &:not(.qs-disabled-year-overlay) {
         cursor: pointer;
 
-        @include media-hover {
-            border-bottom: rem(1) solid $color-gray;
+        @include mediaHover {
+            border-bottom: rem(1) solid $colorGray;
         }
     }
 }
@@ -224,7 +224,7 @@ $lightblue: #add8e6;
 }
 
 .qs-square {
-    @include width-height(#{"calc(100% / 7)"}, math.div($width, 10));
+    @include widthHeight(#{"calc(100% / 7)"}, math.div($width, 10));
 
     display: flex;
     align-items: center;
@@ -237,8 +237,8 @@ $lightblue: #add8e6;
     &:not(.qs-disabled),
     &:not(.qs-day),
     &:not(.qs-active) {
-        @include media-hover {
-            background-color: $color-dark-gray;
+        @include mediaHover {
+            background-color: $colorDarkGray;
         }
     }
 }
@@ -308,7 +308,7 @@ $lightblue: #add8e6;
 
 .qs-day {
     font-weight: 700;
-    color: $color-gray;
+    color: $colorGray;
     cursor: default;
 }
 
@@ -317,11 +317,11 @@ $lightblue: #add8e6;
 
     &::after {
         @include pseudo;
-        @include width-height($width * 0.03, $width * 0.03);
+        @include widthHeight($width * 0.03, $width * 0.03);
 
         right: 0;
         bottom: 0;
         border-radius: 50%;
-        background-color: $color-gray;
+        background-color: $colorGray;
     }
 }

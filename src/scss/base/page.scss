@@ -1,8 +1,8 @@
 .page {
-    font-family: $main-font-family;
-    font-weight: $main-font-weight;
-    font-size: rem($main-font-size);
-    color: $main-font-color;
+    font-family: $mainFontFamily;
+    font-weight: $mainFontWeight;
+    font-size: rem($mainFontSize);
+    color: $mainFontColor;
 
     .lock & {
         overflow: hidden;
@@ -15,21 +15,21 @@
     // .loaded & {
     // }
 
-    @if $background-gradient == 1 {
-        background: $main-background-color;
+    @if $backgroundGradient == 1 {
+        background: $mainBackgroundColor;
 
         /* If the background is a gradient, then this property helps to stretch the gradinet to its full height */
         background-attachment: fixed;
     } @else {
-        background-color: $main-background-color;
+        background-color: $mainBackgroundColor;
     }
 
     @if $selestion == 1 {
         *::selection {
-            color: $color-light;
+            color: $colorLight;
 
             /* Changes the default text selection styles */
-            background-color: $color-dark-gray;
+            background-color: $colorDarkGray;
         }
     }
 }

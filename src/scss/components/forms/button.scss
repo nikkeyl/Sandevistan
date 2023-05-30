@@ -1,16 +1,16 @@
 .button {
     $icon: 0;
     $fw: 0;
-    $font-size: 18;
+    $fontSize: 18;
 
     display: inline-flex;
     justify-content: center;
     padding: rem(10) rem(15);
-    font-size: rem($font-size);
-    line-height: math.div(20, $font-size);
+    font-size: rem($fontSize);
+    line-height: math.div(20, $fontSize);
     text-align: center;
-    color: $color-dark;
-    background-color: $color-light;
+    color: $colorDark;
+    background-color: $colorLight;
     transition: transform 0.3s, background-color 0.3s, color 0.3s;
 
     &:active {
@@ -18,7 +18,7 @@
     }
 
     &--fw {
-        @include media-max($phone) {
+        @include mediaMax($phone) {
             width: 100%;
         }
     }

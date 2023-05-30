@@ -1,7 +1,7 @@
-%responsive-video {
+%responsiveVideo {
     position: relative;
     overflow: hidden;
-    padding-bottom: aspect-ratio(16, 9);
+    padding-bottom: aspectRatio(16, 9);
     height: 0;
 
     iframe,
@@ -16,7 +16,7 @@
     }
 }
 
-%video-background {
+%videoBackground {
     iframe,
     object,
     video,
@@ -34,7 +34,7 @@
     }
 }
 
-%list-counter {
+%listCounter {
     counter-reset: item;
     list-style-type: none;
 
@@ -51,16 +51,16 @@
     }
 }
 
-%gray-filter {
+%grayFilter {
     filter: grayscale(1);
     transition: filter 0.3s;
 
-    @include media-hover {
+    @include mediaHover {
         filter: grayscale(0);
     }
 }
 
-%hide-scroll {
+%hideScroll {
     &::-webkit-scrollbar {
         display: none;
     }
@@ -76,7 +76,7 @@
     transform: scale(-1, 1);
 }
 
-%user-select {
+%userSelect {
     /* Prevents the user from selecting text */
     user-select: none;
 }

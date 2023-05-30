@@ -19,31 +19,31 @@
         cursor: pointer;
 
         &::before {
-            @include width-height(rem(20), rem(20));
+            @include widthHeight(rem(20), rem(20));
 
             content: "";
             flex: 0 0 rem(20);
             align-self: flex-start;
-            border: rem(1) solid $color-gray;
+            border: rem(1) solid $colorGray;
             border-radius: 50%;
             transition: box-shadow 0.3s;
         }
 
         &::after {
             @include pseudo;
-            @include width-height(rem(10), rem(10));
+            @include widthHeight(rem(10), rem(10));
 
             left: rem(5);
             top: rem(5);
             border-radius: 50%;
-            background-color: $color-dark-gray;
+            background-color: $colorDarkGray;
             transform: scale(0);
             transition: transform 0.3s;
         }
     }
 
     &__input {
-        @include width-height(0, 0);
+        @include widthHeight(0, 0);
 
         position: absolute;
         opacity: 0;
@@ -54,10 +54,10 @@
     }
 
     &__text {
-        $font-size: 18;
+        $fontSize: 18;
 
-        font-size: rem($font-size);
-        line-height: math.div(22, $font-size);
-        color: $color-gray;
+        font-size: rem($fontSize);
+        line-height: math.div(22, $fontSize);
+        color: $colorGray;
     }
 }

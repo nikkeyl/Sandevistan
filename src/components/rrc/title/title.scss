@@ -3,35 +3,35 @@
 
     // .title__main
     &__main {
-        $font-size: 30;
-        $font-type: 1;
+        $fontSize: 30;
+        $fontType: 1;
 
-        line-height: math.div(20, $font-size);
-        color: $color-dark;
+        line-height: math.div(20, $fontSize);
+        color: $colorDark;
 
         &:not(:last-child) {
             margin-bottom: rem(20);
         }
 
-        @if $font-type == 1 {
-            @include adaptive-value("font-size", $font-size, 18);
+        @if $fontType == 1 {
+            @include adaptiveValue("font-size", $fontSize, 18);
         } @else {
-            font-size: rem($font-size);
+            font-size: rem($fontSize);
         }
     }
 
     // .title__text
     &__text {
-        $font-size: 20;
-        $font-type: 1;
+        $fontSize: 20;
+        $fontType: 1;
 
-        line-height: math.div(20, $font-size);
-        color: $color-dark;
+        line-height: math.div(20, $fontSize);
+        color: $colorDark;
 
-        @if $font-type == 1 {
-            @include adaptive-value("font-size", $font-size, 16);
+        @if $fontType == 1 {
+            @include adaptiveValue("font-size", $fontSize, 16);
         } @else {
-            font-size: rem($font-size);
+            font-size: rem($fontSize);
         }
     }
 }

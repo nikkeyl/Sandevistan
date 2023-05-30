@@ -6,9 +6,9 @@
 
 .ripple {
     position: absolute;
-    border: rem(1) solid $color-gray;
+    border: rem(1) solid $colorGray;
     border-radius: 50%;
-    background-color: $color-light;
+    background-color: $colorLight;
     animation: ripple 2s forwards;
 
     @keyframes ripple {

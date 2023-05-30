@@ -1,23 +1,23 @@
 .preloader {
-    @include width-height(100%, 100%);
+    @include widthHeight(100%, 100%);
 
     position: fixed;
     left: 0;
     top: 0;
     z-index: 100;
-    background-color: $color-dark;
+    background-color: $colorDark;
     opacity: 1;
     visibility: visible;
     transition: opacity 0.3s, visibility 0.3s;
 
     &__load {
-        @include width-height(rem(100), rem(100));
+        @include widthHeight(rem(100), rem(100));
 
         position: absolute;
         left: 50%;
         top: 50%;
-        border: rem(10) solid $color-light;
-        border-top-color: $color-gray;
+        border: rem(10) solid $colorLight;
+        border-top-color: $colorGray;
         border-radius: 50%;
         transform: translate(-50%, -50%);
         animation: spin 2s linear infinite;

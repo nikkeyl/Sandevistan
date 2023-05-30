@@ -6,7 +6,7 @@
     // .card__image-ibg
     &__image-ibg {
         padding-bottom: percent(170, 300);
-        background-color: $color-gray;
+        background-color: $colorGray;
     }
 
     // .card__body
@@ -15,10 +15,10 @@
 
     // .card__title
     &__title {
-        $font-size: 18;
+        $fontSize: 18;
 
-        font-size: rem($font-size);
-        line-height: math.div(20, $font-size);
+        font-size: rem($fontSize);
+        line-height: math.div(20, $fontSize);
         transition: all 0.3s;
         cursor: pointer;
 
@@ -27,8 +27,8 @@
             width: 100%;
         }
 
-        @include media-hover {
-            color: $color-gray;
+        @include mediaHover {
+            color: $colorGray;
         }
     }
 }

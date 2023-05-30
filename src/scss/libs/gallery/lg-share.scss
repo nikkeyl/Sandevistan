@@ -11,7 +11,7 @@
 
         position: absolute;
         z-index: $zindex-toolbar - 1;
-        background-color: rgba($color-dark, 0.25);
+        background-color: rgba($colorDark, 0.25);
         opacity: 0;
         visibility: hidden;
         will-change: visibility, opacity;
@@ -32,7 +32,7 @@
         padding: rem(10) 0;
         font-size: rem(14);
         text-align: left;
-        background-color: $color-light;
+        background-color: $colorLight;
         opacity: 0;
         visibility: hidden;
         will-change: visibility, opacity, transform;
@@ -44,7 +44,7 @@
             top: rem(-16);
             display: block;
             border: rem(8) solid transparent;
-            border-bottom-color: $color-light;
+            border-bottom-color: $colorLight;
             width: 0;
             height: 0;
         }
@@ -52,7 +52,7 @@
         > li {
             &:hover {
                 a {
-                    color: $color-dark-gray;
+                    color: $colorDarkGray;
                 }
             }
 
@@ -67,10 +67,10 @@
             font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
             font-size: rem(12);
             white-space: pre;
-            color: $color-dark-gray;
+            color: $colorDarkGray;
 
             &:hover {
-                background-color: rgba($color-dark, 0.07);
+                background-color: rgba($colorDark, 0.07);
             }
         }
 
@@ -91,7 +91,7 @@
             height: auto;
             font-size: rem(20);
             line-height: 1;
-            color: $color-dark-gray;
+            color: $colorDarkGray;
         }
     }
 
@@ -144,7 +144,7 @@
         }
 
         .lg-share {
-            color: $color-light;
+            color: $colorLight;
         }
     }
 }

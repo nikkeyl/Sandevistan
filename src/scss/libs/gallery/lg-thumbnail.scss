@@ -75,7 +75,7 @@ $thumbnails-margin: 5;
         cursor: pointer;
 
         img {
-            @include width-height(100%, 100%);
+            @include widthHeight(100%, 100%);
 
             display: block;
             object-fit: cover;

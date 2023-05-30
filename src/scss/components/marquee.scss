@@ -1,9 +1,9 @@
 /* Styles for the creeping line */
 [data-marquee] {
-    $font-size: 18;
+    $fontSize: 18;
 
-    font-size: rem($font-size);
-    line-height: math.div(20, $font-size);
+    font-size: rem($fontSize);
+    line-height: math.div(20, $fontSize);
     white-space: nowrap;
-    color: $color-light;
+    color: $colorLight;
 }

@@ -26,7 +26,7 @@
     @return rounding(math.div($px, 16)) + rem;
 }
 
-@function aspect-ratio($width, $height) {
+@function aspectRatio($width, $height) {
     @return percent($height, $width);
 }
 

@@ -13,7 +13,7 @@
         text-align: center;
 
         .lg-object {
-            @include width-height(100% !important, 100% !important);
+            @include widthHeight(100% !important, 100% !important);
         }
     }
 

@@ -15,7 +15,7 @@
 
 .noUi-base,
 .noUi-connects {
-    @include width-height(100%, 100%);
+    @include widthHeight(100%, 100%);
 
     position: relative;
     z-index: 1;
@@ -30,7 +30,7 @@
 
 .noUi-connect,
 .noUi-origin {
-    @include width-height(100%, 100%);
+    @include widthHeight(100%, 100%);
 
     position: absolute;
     right: 0;
@@ -58,7 +58,7 @@
 }
 
 .noUi-touch-area {
-    @include width-height(100%, 100%);
+    @include widthHeight(100%, 100%);
 }
 
 .noUi-state-tap .noUi-connect,
@@ -76,7 +76,7 @@
 }
 
 .noUi-horizontal .noUi-handle {
-    @include width-height(rem(30), rem(30));
+    @include widthHeight(rem(30), rem(30));
 
     right: rem(-17);
     top: rem(-6);
@@ -87,7 +87,7 @@
 }
 
 .noUi-vertical .noUi-handle {
-    @include width-height(rem(28), rem(24));
+    @include widthHeight(rem(28), rem(24));
 
     right: rem(6);
     bottom: rem(-17);
@@ -124,21 +124,21 @@
     position: absolute;
     border: rem(1) solid #d9d9d9;
     border-radius: rem(3);
-    box-shadow: inset 0 0 rem(1) $color-light, inset 0 rem(1) rem(7) #ebebeb, 0 rem(3) rem(6) rem(-3) #bbb;
-    background-color: $color-light;
+    box-shadow: inset 0 0 rem(1) $colorLight, inset 0 rem(1) rem(7) #ebebeb, 0 rem(3) rem(6) rem(-3) #bbb;
+    background-color: $colorLight;
     backface-visibility: hidden;
     cursor: default;
 }
 
 .noUi-active {
-    box-shadow: inset 0 0 rem(1) $color-light, inset 0 rem(1) rem(7) #ddd, 0 rem(3) rem(6) rem(-3) #bbb;
+    box-shadow: inset 0 0 rem(1) $colorLight, inset 0 rem(1) rem(7) #ddd, 0 rem(3) rem(6) rem(-3) #bbb;
 }
 
 /* Handle stripes; */
 .noUi-handle::before,
 .noUi-handle::after {
     @include pseudo;
-    @include width-height(rem(1), rem(14));
+    @include widthHeight(rem(1), rem(14));
 
     left: rem(14);
     top: rem(6);
@@ -152,7 +152,7 @@
 
 .noUi-vertical .noUi-handle::before,
 .noUi-vertical .noUi-handle::after {
-    @include width-height(rem(14), rem(1));
+    @include widthHeight(rem(14), rem(1));
 
     left: rem(6);
     top: rem(14);
@@ -192,9 +192,9 @@
 }
 
 .noUi-value-sub {
-    $font-size: 18;
+    $fontSize: 18;
 
-    font-size: rem($font-size);
+    font-size: rem($fontSize);
     color: #ccc;
 }
 
@@ -214,7 +214,7 @@
 
 /* Horizontal layout; */
 .noUi-pips-horizontal {
-    @include width-height(100%, rem(80));
+    @include widthHeight(100%, rem(80));
 
     left: 0;
     top: 100%;
@@ -230,7 +230,7 @@
 }
 
 .noUi-marker-horizontal.noUi-marker {
-    @include width-height(rem(2), rem(5));
+    @include widthHeight(rem(2), rem(5));
 
     margin-left: rem(-1);
 }
@@ -261,7 +261,7 @@
 }
 
 .noUi-marker-vertical.noUi-marker {
-    @include width-height(rem(5), rem(2));
+    @include widthHeight(rem(5), rem(2));
 
     margin-top: rem(-1);
 }
@@ -282,8 +282,8 @@
     padding: rem(5);
     white-space: nowrap;
     text-align: center;
-    color: $color-dark;
-    background-color: $color-light;
+    color: $colorDark;
+    background-color: $colorLight;
 }
 
 .noUi-horizontal .noUi-tooltip {

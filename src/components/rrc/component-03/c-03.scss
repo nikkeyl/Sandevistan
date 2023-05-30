@@ -1,27 +1,27 @@
 .block {
     $breakpoint: $phone;
-    $start-width: $max-width;
-    $end-width: $phone;
-    $type-value: 1;
+    $startWidth: $maxWidth;
+    $endWidth: $phone;
+    $typeValue: 1;
     $center: 1;
     $grid: 1;
     $button: 1;
 
-    @include adaptive-value(
+    @include adaptiveValue(
         "padding-top",
         120,
         30,
-        $start-width,
-        $end-width,
-        $type-value
+        $startWidth,
+        $endWidth,
+        $typeValue
     );
-    @include adaptive-value(
+    @include adaptiveValue(
         "padding-bottom",
         120,
         30,
-        $start-width,
-        $end-width,
-        $type-value
+        $startWidth,
+        $endWidth,
+        $typeValue
     );
 
     // .block__container
@@ -53,12 +53,12 @@
 
     // .block__cards
     &__cards {
-        @include grid-cards(fit, rem(290), 1fr, $breakpoint) {
+        @include gridCards(fit, rem(290), 1fr, $breakpoint) {
             justify-items: center;
             gap: rem(30);
         }
 
-        @include media-min($breakpoint) {
+        @include mediaMin($breakpoint) {
             @if $center == 1 and $grid == 1 {
                 width: 100%;
             }
@@ -74,7 +74,7 @@
     @if $button == 1 {
         // .block__button
         &__button {
-            @include media-min($breakpoint) {
+            @include mediaMin($breakpoint) {
                 @if $center == 1 and $grid == 0 {
                     display: flex;
                     margin: 0 auto;

@@ -1,12 +1,12 @@
 /* Common styles for all svg icons */
 .icon {
-    @include width-height(rem(20), rem(20));
+    @include widthHeight(rem(20), rem(20));
 
     fill: none;
-    stroke: $color-gray;
+    stroke: $colorGray;
     transition: stroke 0.3s;
 
-    @include media-hover {
-        stroke: $color-gray;
+    @include mediaHover {
+        stroke: $colorGray;
     }
 }

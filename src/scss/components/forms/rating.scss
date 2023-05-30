@@ -1,9 +1,9 @@
 .rating {
-    $font-size: 18;
+    $fontSize: 18;
 
     display: flex;
     align-items: flex-end;
-    font-size: rem($font-size);
+    font-size: rem($fontSize);
     line-height: 0.75;
     transition: opacity 0.3s;
 
@@ -17,7 +17,7 @@
     }
 
     &__active {
-        @include width-height(0, 100%);
+        @include widthHeight(0, 100%);
 
         position: absolute;
         left: 0;
@@ -27,16 +27,16 @@
 
         &::before {
             @include pseudo("★★★★★", absolute);
-            @include width-height(100%, 100%);
+            @include widthHeight(100%, 100%);
 
             left: 0;
             top: 0;
-            color: $color-yellow;
+            color: $colorYellow;
         }
     }
 
     &__items {
-        @include width-height(100%, 100%);
+        @include widthHeight(100%, 100%);
 
         position: absolute;
         left: 0;

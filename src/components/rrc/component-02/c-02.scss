@@ -8,21 +8,21 @@
     // &__img {
     //     $size: 40;
 
-    //     @include width-height(rem($size), rem($size));
+    //     @include widthHeight(rem($size), rem($size));
 
     //     display: flex;
     //     flex: 0 0 rem($size);
     //     align-items: center;
     //     justify-content: center;
     //     border-radius: 50%;
-    //     background-color: $color-gray;
+    //     background-color: $colorGray;
 
     //     svg {
-    //         $size-svg: 20;
+    //         $sizeSvg: 20;
 
-    //         @include width-height(rem($size-svg), rem($size-svg));
+    //         @include widthHeight(rem($sizeSvg), rem($sizeSvg));
 
-    //         fill: $color-light;
+    //         fill: $colorLight;
     //     }
     // }
 
@@ -30,20 +30,20 @@
     &__icon {
         $size: 40;
 
-        @include width-height(rem($size), rem($size));
+        @include widthHeight(rem($size), rem($size));
 
         flex: 0 0 rem($size);
-        fill: $color-gray;
+        fill: $colorGray;
     }
 
     // .block__image-ibg
     &__image-ibg {
         $size: 40;
 
-        @include width-height(rem($size), rem($size));
+        @include widthHeight(rem($size), rem($size));
 
         flex: 0 0 rem($size);
-        background-color: $color-gray;
+        background-color: $colorGray;
     }
 
     // .block__body
@@ -52,30 +52,30 @@
 
     // .block__title
     &__title {
-        $font-size: 18;
-        $font-type: 1;
+        $fontSize: 18;
+        $fontType: 1;
 
-        line-height: math.div(20, $font-size);
-        color: $color-dark;
+        line-height: math.div(20, $fontSize);
+        color: $colorDark;
 
         &:not(:last-child) {
             margin-bottom: rem(10);
         }
 
-        @if $font-type == 1 {
-            @include adaptive-value("font-size", $font-size, 16);
+        @if $fontType == 1 {
+            @include adaptiveValue("font-size", $fontSize, 16);
         } @else {
-            font-size: rem($font-size);
+            font-size: rem($fontSize);
         }
     }
 
     // .block__text
     &__text {
-        $font-size: 18;
-        $font-type: 1;
+        $fontSize: 18;
+        $fontType: 1;
 
-        line-height: math.div(20, $font-size);
-        color: $color-dark;
+        line-height: math.div(20, $fontSize);
+        color: $colorDark;
 
         p {
             &:not(:last-child) {
@@ -83,10 +83,10 @@
             }
         }
 
-        @if $font-type == 1 {
-            @include adaptive-value("font-size", $font-size, 16);
+        @if $fontType == 1 {
+            @include adaptiveValue("font-size", $fontSize, 16);
         } @else {
-            font-size: rem($font-size);
+            font-size: rem($fontSize);
         }
     }
 }

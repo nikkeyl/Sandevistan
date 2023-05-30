@@ -1,58 +1,58 @@
-@mixin adaptive-value(
+@mixin adaptiveValue(
 	$property,
-	$start-size,
-	$min-size,
-	$width-from: $container-width,
-	$width-to: $min-width,
-	$keep-size: 0
+	$startSize,
+	$minSize,
+	$widthFrom: $containerWidth,
+	$widthTo: $minWidth,
+	$keepSize: 0
 ) {
-	@if $start-size == 0 {
-		$start-size: 0.000001;
+	@if $startSize == 0 {
+		$startSize: 0.000001;
 	}
 
-	@if $min-size == 0 {
-		$min-size: 0.000001;
+	@if $minSize == 0 {
+		$minSize: 0.000001;
 	}
 
-	$add-size: math.div($start-size - $min-size, 16);
+	$addSize: math.div($startSize - $minSize, 16);
 
-	@if $width-from == $container-width and $max-width-container == 0 {
-		$width-from: $max-width;
+	@if $widthFrom == $containerWidth and $maxWidthContainer == 0 {
+		$widthFrom: $maxWidth;
 	}
 
-	$slope: math.div(($start-size - $min-size), ($width-from - $width-to));
-	$y-intersection: -$width-to * $slope + $min-size;
+	$slope: math.div(($startSize - $minSize), ($widthFrom - $widthTo));
+	$yIntersection: -$widthTo * $slope + $minSize;
 
-	@if $y-intersection == 0 {
-		$y-intersection: 0.000001;
+	@if $yIntersection == 0 {
+		$yIntersection: 0.000001;
 	}
 
-	$fly-value: #{rem($y-intersection)}" + " #{$slope * 100}vw;
-	$property-value: #{"clamp(" rem($min-size) "," $fly-value "," rem($start-size) ")"};
+	$flyValue: #{rem($yIntersection)}" + " #{$slope * 100}vw;
+	$propertyValue: #{"clamp(" rem($minSize) "," $flyValue "," rem($startSize) ")"};
 
-	@if $min-size > $start-size {
-		$property-value: #{"clamp(" rem($start-size) "," $fly-value "," rem($min-size) ")"};
+	@if $minSize > $startSize {
+		$propertyValue: #{"clamp(" rem($startSize) "," $flyValue "," rem($minSize) ")"};
 	}
 
-	#{$property}: $property-value;
+	#{$property}: $propertyValue;
 
-	@if $width-from != $container-width and $width-from != $max-width and $keep-size != 1 and $keep-size != 2 {
-		@include media-min($width-from) {
+	@if $widthFrom != $containerWidth and $widthFrom != $maxWidth and $keepSize != 1 and $keepSize != 2 {
+		@include mediaMin($widthFrom) {
 			#{$property}: inherit;
 		}
 	}
 
-	@if $width-to != $min-width and $keep-size != 1 and $keep-size != 3 {
-		@include media-max($width-to) {
+	@if $widthTo != $minWidth and $keepSize != 1 and $keepSize != 3 {
+		@include mediaMax($widthTo) {
 			#{$property}: inherit;
 		}
 	}
 }
 
 // Responsive exit from the container https://www.youtube.com/watch?v=NVdlfhkDAGM&pp=ygU70J7RgtC30YvQstGH0LjQstGL0Lkg0LLRi9GF0L7QtCDQuNC3INC60L7QvdGC0LXQudC90LXRgNCy0LA%3D
-@mixin responsive-output($image-height, $body-width, $breakpoint: 2, $reverse: 0) {
-	$percent: round(math.div($body-width, $max-width-container) * 100);
-	$width: $body-width - ($body-width - $percent);
+@mixin responsiveOutput($imageHeight, $bodyWidth, $breakpoint: 2, $reverse: 0) {
+	$percent: round(math.div($bodyWidth, $maxWidthContainer) * 100);
+	$width: $bodyWidth - ($bodyWidth - $percent);
 
 	@if $breakpoint == 1 {
 		$breakpoint: $laptop;
@@ -83,7 +83,7 @@
 	}
 
 	&__body {
-		@include media-min($breakpoint) {
+		@include mediaMin($breakpoint) {
 			width: #{$percent} + "%";
 		}
 	}
@@ -93,14 +93,14 @@
 			width: 100%;
 		}
 
-		@include media-min($breakpoint) {
+		@include mediaMin($breakpoint) {
 			position: relative;
 			flex: 0 0
 				calc(
-					((100% - #{rem($container-padding)}) * 0.#{math.div((100 - $percent), 1)}) +
-						(rem($container-padding) / 2)
+					((100% - #{rem($containerPadding)}) * 0.#{math.div((100 - $percent), 1)}) +
+						(rem($containerPadding) / 2)
 				);
-			padding-bottom: round(percent($image-height, $max-width));
+			padding-bottom: round(percent($imageHeight, $maxWidth));
 
 			img {
 				position: absolute;
@@ -118,12 +118,12 @@
 			}
 		}
 
-		@include media-min($container-width) {
-			flex: 0 0 calc(50% - (0.#{$width} - 0.5) * rem($max-width-container));
+		@include mediaMin($containerWidth) {
+			flex: 0 0 calc(50% - (0.#{$width} - 0.5) * rem($maxWidthContainer));
 		}
 	}
 
-	@include media-min($breakpoint) {
+	@include mediaMin($breakpoint) {
 		display: flex;
 
 		@if $reverse == 1 {
@@ -131,7 +131,7 @@
 		}
 	}
 
-	@include media-max($breakpoint) {
+	@include mediaMax($breakpoint) {
 		@if $reverse == 1 {
 			display: flex;
 			flex-direction: column-reverse;
@@ -139,10 +139,10 @@
 	}
 }
 
-@mixin slide($items, $translate, $time, $animation-delay, $direction, $breakpoint: $tablet) {
+@mixin slide($items, $translate, $time, $animationDelay, $direction, $breakpoint: $tablet) {
 	$count: $items + 1;
 
-	@include media-min($breakpoint) {
+	@include mediaMin($breakpoint) {
 		opacity: 0;
 		animation: slide-#{$direction} #{$time}s forwards;
 
@@ -173,7 +173,8 @@
 		}
 
 		@for $i from 2 through $count {
-			$delay: ($i - 1) * $animation-delay;
+			$delay: ($i - 1) * $animationDelay;
+
 			&:nth-child(#{$i}) {
 				animation-delay: #{$delay}s;
 			}
@@ -211,13 +212,13 @@
 }
 
 // Text truncation
-@mixin truncate($truncation-width, $selector, $rows: 7, $type: 1) {
+@mixin truncate($truncationWidth, $selector, $rows: 7, $type: 1) {
 	@if $type == 1 {
 		min-width: 0;
 	}
 
 	&__#{$selector} {
-		max-width: rem($truncation-width);
+		max-width: rem($truncationWidth);
 		overflow: hidden;
 
 		@if $type == 0 {
@@ -231,28 +232,28 @@
 	}
 }
 
-@mixin grid-cards($type: fit, $min: rem(290), $max: 1fr, $breakpoint: $phone) {
+@mixin gridCards($type: fit, $min: rem(290), $max: 1fr, $breakpoint: $phone) {
 	display: grid;
 	@content;
 
-	@include media-min($breakpoint) {
+	@include mediaMin($breakpoint) {
 		grid-template-columns: repeat(auto-#{$type}, minmax($min, $max));
 	}
 }
 
-@mixin media-min($breakpoint) {
+@mixin mediaMin($breakpoint) {
 	@media (min-width: em($breakpoint)) {
 		@content;
 	}
 }
 
-@mixin media-max($breakpoint) {
+@mixin mediaMax($breakpoint) {
 	@media (max-width: md($breakpoint)) {
 		@content;
 	}
 }
 
-@mixin media-hover {
+@mixin mediaHover {
 	@media (any-hover: hover) {
 		&:hover {
 			@content;
@@ -261,7 +262,7 @@
 }
 
 // Gradient text
-@mixin text-gradient($gradient) {
+@mixin textGradient($gradient) {
 	background: $gradient;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -272,7 +273,7 @@
 	position: $position;
 }
 
-@mixin width-height($width, $height) {
+@mixin widthHeight($width, $height) {
 	width: $width;
 	height: $height;
 }

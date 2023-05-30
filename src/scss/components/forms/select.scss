@@ -6,12 +6,12 @@
     }
 
     &__title {
-        border: rem(1) solid $color-gray;
+        border: rem(1) solid $colorGray;
         border-radius: rem(5);
         width: 100%;
         text-align: left;
         color: inherit;
-        background-color: $color-light;
+        background-color: $colorLight;
         cursor: pointer;
     }
 
@@ -53,7 +53,7 @@
     }
 
     &__input {
-        @include width-height(100%, 100%);
+        @include widthHeight(100%, 100%);
 
         background-color: transparent;
     }
@@ -62,13 +62,13 @@
         position: absolute;
         left: 0;
         top: rem(30);
-        border: rem(1) solid $color-gray;
+        border: rem(1) solid $colorGray;
         border-top: 0;
         border-radius: 0 0 rem(5) rem(5);
         padding: rem(10) 0 rem(5) 0;
         min-width: 100%;
-        color: $color-dark;
-        background-color: $color-light;
+        color: $colorDark;
+        background-color: $colorLight;
     }
 
     &__scroll {
@@ -91,11 +91,11 @@
         cursor: pointer;
 
         &.select-selected {
-            background-color: $color-gray;
+            background-color: $colorGray;
         }
 
-        @include media-hover {
-            background-color: $color-light;
+        @include mediaHover {
+            background-color: $colorLight;
         }
     }
 

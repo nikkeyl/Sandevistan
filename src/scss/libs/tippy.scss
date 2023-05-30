@@ -15,16 +15,16 @@
 }
 
 .tippy-box {
-    $font-size: 18;
+    $fontSize: 18;
 
-    font-size: rem($font-size);
+    font-size: rem($fontSize);
     position: relative;
     outline: 0;
     border-radius: rem(4);
     line-height: 1.4;
     white-space: normal;
-    color: $color-light;
-    background-color: $color-dark-gray;
+    color: $colorLight;
+    background-color: $colorDarkGray;
     transition-property: transform, visibility, opacity;
 }
 
@@ -79,9 +79,9 @@
 }
 
 .tippy-arrow {
-    @include width-height(rem(16), rem(16));
+    @include widthHeight(rem(16), rem(16));
 
-    color: $color-dark-gray;
+    color: $colorDarkGray;
 
     &::before {
         @include pseudo;
