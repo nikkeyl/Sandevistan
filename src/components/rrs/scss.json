@@ -101,35 +101,35 @@
     },
     "%Responsive Video": {
         "prefix": "erv",
-        "body": "%responsive-video"
+        "body": "@extend %responsive-video"
     },
     "Extend Video Background": {
         "prefix": "evb",
-        "body": "%video-background"
+        "body": "@extend %video-background"
     },
     "Extend List Counter": {
         "prefix": "elc",
-        "body": "%list-counter"
+        "body": "@extend %list-counter"
     },
     "Extend Gray Filter": {
         "prefix": "egf",
-        "body": "%gray-filter"
+        "body": "@extend %gray-filter"
     },
     "Extend Hide Scroll": {
         "prefix": "ehs",
-        "body": "%hide-scroll"
+        "body": "@extend %hide-scroll"
     },
     "Extend Touch": {
         "prefix": "etouch",
-        "body": "%touch"
+        "body": "@extend %touch"
     },
     "Extend Mirror": {
         "prefix": "emir",
-        "body": "%mirror"
+        "body": "@extend %mirror"
     },
     "Extend User Select": {
         "prefix": "eus",
-        "body": "%user-select"
+        "body": "@extend %user-select"
     },
     "@media max": {
         "prefix": "md",
