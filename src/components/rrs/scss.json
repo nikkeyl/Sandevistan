@@ -203,6 +203,14 @@
         "prefix": "rem",
         "body": "rem($0)"
     },
+    "Percent": {
+        "prefix": "prc",
+        "body": "percent($1, $2)"
+    },
+    "Aspect Ratio": {
+        "prefix": "asr",
+        "body": "aspect-ratio(${1:16}, ${2:9})"
+    },
     "Z-index And Position Relative": {
         "prefix": "z",
         "body": "z-index: 3;\nposition: relative;"
@@ -210,10 +218,6 @@
     "Color Alpha": {
         "prefix": "ca",
         "body": "rgba(\\$color-${1:light}, 0.${2:5})"
-    },
-    "Percent": {
-        "prefix": "prc",
-        "body": "percent($1, $2)"
     },
     "Percentage Padding Bottom": {
         "prefix": "pbp",
