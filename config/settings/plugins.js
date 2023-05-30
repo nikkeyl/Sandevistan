@@ -6,6 +6,7 @@ import CopyPlugin from 'copy-webpack-plugin'
 import webpack from 'webpack-stream'
 import rename from 'gulp-rename'
 import ifPlugin from 'gulp-if'
+import chalk from 'chalk'
 import fs from 'fs'
 
 const plugins = {
@@ -16,6 +17,7 @@ const plugins = {
 	CopyPlugin,
 	webpack,
 	rename,
+	chalk,
 	fs
 }
 

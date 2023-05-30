@@ -15,6 +15,7 @@
 		"url": "https://github.com/nikkeyl/projectName.git"
 	},
 	"devDependencies": {
+		"chalk": "latest",
 		"copy-webpack-plugin": "latest",
 		"css-loader": "latest",
 		"del": "latest",
