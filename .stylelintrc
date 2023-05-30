@@ -499,9 +499,6 @@
 		"selector-max-universal": 1,
 		"selector-max-id": 1,
 		"time-min-milliseconds": 10,
-		"unit-disallowed-list": [
-			"px"
-		],
 		"scss/at-else-closing-brace-newline-after": "always-last-in-chain",
 		"scss/at-if-closing-brace-newline-after": "always-last-in-chain",
 		"scss/at-else-closing-brace-space-after": "always-intermediate",
