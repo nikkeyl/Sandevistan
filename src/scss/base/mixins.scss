@@ -240,14 +240,14 @@
 	}
 }
 
-@mixin media-min($value) {
-	@media (min-width: em($value)) {
+@mixin media-min($breakpoint) {
+	@media (min-width: em($breakpoint)) {
 		@content;
 	}
 }
 
-@mixin media-max($value) {
-	@media (max-width: md($value)) {
+@mixin media-max($breakpoint) {
+	@media (max-width: md($breakpoint)) {
 		@content;
 	}
 }

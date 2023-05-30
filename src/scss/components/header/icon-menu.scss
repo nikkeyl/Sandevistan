@@ -3,7 +3,7 @@
     display: none;
 
     @include media-max($tablet) {
-        @include width-height(rem(30), rem(18));
+        @include width-height(rem(30), rem(20));
 
         position: relative;
         z-index: 5;

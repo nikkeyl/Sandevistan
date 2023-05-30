@@ -1,8 +1,5 @@
 /* Styles for scrollbar */
 * {
-    // scrollbar-color: $color-dark #d6d6d6;
-    // scrollbar-width: rem(10);
-
     &::-webkit-scrollbar {
         @include width-height(rem(10), rem(10));
 
@@ -17,8 +14,6 @@
     &::-webkit-scrollbar-thumb {
         border-radius: rem(5);
         background-color: $color-dark;
-
-        // transition: background-color 0.3s;
 
         @media (any-hover: hover) {
             &:hover {

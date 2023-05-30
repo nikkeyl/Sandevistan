@@ -44,8 +44,8 @@
         &::-webkit-slider-thumb {
             appearance: none;
             border-radius: 50%;
-            width: rem(9);
-            height: rem(9);
+            width: rem(10);
+            height: rem(10);
             background-color: $color-dark;
             cursor: pointer;
         }
