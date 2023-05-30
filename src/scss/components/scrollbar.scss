@@ -15,10 +15,8 @@
         border-radius: rem(5);
         background-color: $color-dark;
 
-        @media (any-hover: hover) {
-            &:hover {
-                background-color: $color-dark;
-            }
+        @include media-hover {
+            background-color: $color-dark;
         }
     }
 }

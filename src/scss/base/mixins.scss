@@ -252,6 +252,14 @@
 	}
 }
 
+@mixin media-hover {
+	@media (any-hover: hover) {
+		&:hover {
+			@content;
+		}
+	}
+}
+
 // Gradient text
 @mixin text-gradient($gradient) {
 	background: $gradient;

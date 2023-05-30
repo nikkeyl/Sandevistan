@@ -94,10 +94,8 @@
             background-color: $color-gray;
         }
 
-        @media (any-hover: hover) {
-            &:hover {
-                background-color: $color-light;
-            }
+        @include media-hover {
+            background-color: $color-light;
         }
     }
 

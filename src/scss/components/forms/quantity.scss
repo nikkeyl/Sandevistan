@@ -29,12 +29,10 @@
             }
         }
 
-        @media (any-hover: hover) {
-            &:hover {
-                &::before,
-                &::after {
-                    background-color: $color-dark;
-                }
+        @include media-hover {
+            &::before,
+            &::after {
+                background-color: $color-dark;
             }
         }
     }

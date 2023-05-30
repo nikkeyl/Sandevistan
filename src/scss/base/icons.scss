@@ -6,9 +6,7 @@
     stroke: $color-gray;
     transition: stroke 0.3s;
 
-    @media (any-hover: hover) {
-        &:hover {
-            stroke: $color-gray;
-        }
+    @include media-hover {
+        stroke: $color-gray;
     }
 }

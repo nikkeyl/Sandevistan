@@ -55,10 +55,8 @@
     filter: grayscale(1);
     transition: filter 0.3s;
 
-    @media (any-hover: hover) {
-        &:hover {
-            filter: grayscale(0);
-        }
+    @include media-hover {
+        filter: grayscale(0);
     }
 }
 

@@ -171,17 +171,15 @@ $lightblue: #add8e6;
         transform: translate(-25%, -50%);
     }
 
-    @media (any-hover: hover) {
-        &:hover {
-            background-color: rgba($color-dark, 0.1);
+    @include media-hover {
+        background-color: rgba($color-dark, 0.1);
 
-            &.qs-left::after {
-                border-right-color: $color-dark;
-            }
+        &.qs-left::after {
+            border-right-color: $color-dark;
+        }
 
-            &.qs-right::after {
-                border-left-color: $color-dark;
-            }
+        &.qs-right::after {
+            border-left-color: $color-dark;
         }
     }
 }
@@ -199,10 +197,8 @@ $lightblue: #add8e6;
     &:not(.qs-disabled-year-overlay) {
         cursor: pointer;
 
-        @media (any-hover: hover) {
-            &:hover {
-                border-bottom: rem(1) solid $color-gray;
-            }
+        @include media-hover {
+            border-bottom: rem(1) solid $color-gray;
         }
     }
 }
@@ -241,10 +237,8 @@ $lightblue: #add8e6;
     &:not(.qs-disabled),
     &:not(.qs-day),
     &:not(.qs-active) {
-        @media (any-hover: hover) {
-            &:hover {
-                background-color: $color-dark-gray;
-            }
+        @include media-hover {
+            background-color: $color-dark-gray;
         }
     }
 }

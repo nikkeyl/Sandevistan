@@ -515,17 +515,21 @@
         "prefix": "lcm",
         "body": "&:last-child {\n\tmargin: rem(${1:0}) rem(${2:0}) rem(${3:0}) rem(${4:0});\n}"
     },
+    "Hover": {
+        "prefix": "hh",
+        "body": "transition: ${1:all} 0.${2:3}s ${3:0}s;\n\n@media (any-hover: hover) {\n\t$4\n}"
+    },
     "Transition And Hover": {
         "prefix": "hhv",
-        "body": "transition: ${1:all} 0.${2:3}s ${3:0}s;\n\n@media (any-hover: hover) {\n\t&:hover {\n\t\t$5\n\t}\n}"
+        "body": "transition: ${1:all} 0.${2:3}s ${3:0}s;\n\n@include media-hover {\n\t$4\n}"
     },
     "Hover Decoration Underline": {
         "prefix": "hvu",
-        "body": "@media (any-hover: hover) {\n\t&:hover {\n\t\ttext-decoration: underline;\n\t}\n}"
+        "body": "@include media-hover {\n\ttext-decoration: underline;\n}"
     },
     "Hover Decoration None": {
         "prefix": "hvn",
-        "body": "@media (any-hover: hover) {\n\t&:hover {\n\t\ttext-decoration: none;\n\t}\n}"
+        "body": "@include media-hover {\n\ttext-decoration: none;\n}"
     },
     "Key Frames": {
         "prefix": "kf",

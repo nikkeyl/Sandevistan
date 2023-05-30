@@ -27,10 +27,8 @@
             width: 100%;
         }
 
-        @media (any-hover: hover) {
-            &:hover {
-                color: $color-gray;
-            }
+        @include media-hover {
+            color: $color-gray;
         }
     }
 }
