@@ -265,7 +265,7 @@
 			"error",
 			{
 				"multiline": true,
-				"minProperties": 3
+				"minProperties": 4
 			}
 		],
 		"object-curly-spacing": [
