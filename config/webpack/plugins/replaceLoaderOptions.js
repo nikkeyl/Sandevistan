@@ -1,6 +1,6 @@
 const replaceLoaderOptions = {
-    search: '@content',
-    replace: '../content',
+    search: '@img',
+    replace: '../img',
     flags: 'g'
 }
 

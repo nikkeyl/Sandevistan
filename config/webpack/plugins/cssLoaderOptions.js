@@ -4,7 +4,7 @@ const cssLoaderOptions = (importLoaders = 0, sourceMap = false, endPath = '') =>
     modules: false,
     url: {
         filter: url => {
-            !url.includes(`content${endPath}`)
+            !url.includes(`img${endPath}`)
                 || !url.includes(`fonts${endPath}`)
         }
     }

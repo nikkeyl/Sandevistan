@@ -10,7 +10,7 @@ const sprite = () => {
 		.pipe(svgSprite({
 			mode: {
 				symbol: {
-					sprite: '../content/icons/sprite.svg'
+					sprite: '../img/icons/sprite.svg'
 				}
 			},
 			transform: [

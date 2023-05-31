@@ -449,7 +449,7 @@
     },
     "Background": {
         "prefix": "bg+",
-        "body": "background: url(\"@content$0\") 0 0 no-repeat;"
+        "body": "background: url(\"@img$0\") 0 0 no-repeat;"
     },
     "Inline Flex": {
         "prefix": "fbi",

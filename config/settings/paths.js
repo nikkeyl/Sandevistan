@@ -7,7 +7,7 @@ const srcFolder = 'src'
 
 const paths = {
 	build: {
-		images: `${buildFolder}/content/`,
+		images: `${buildFolder}/img/`,
 		static: `${buildFolder}/static/`,
 		fonts: `${buildFolder}/fonts/`,
 		css: `${buildFolder}/css/`,
@@ -15,11 +15,11 @@ const paths = {
 		html: `${buildFolder}/`
 	},
 	src: {
-		images: `${srcFolder}/content/**/*.{jpg,png,webp}`,
-		svgSprites: `${srcFolder}/content/sprites/*.svg`,
+		images: `${srcFolder}/img/**/*.{jpg,png,webp}`,
+		svgSprites: `${srcFolder}/img/sprites/*.svg`,
 		svg: [
-			`${srcFolder}/content/**/*.svg`,
-			`!${srcFolder}/content/sprites/*.svg`
+			`${srcFolder}/img/**/*.svg`,
+			`!${srcFolder}/img/sprites/*.svg`
 		],
 		scss: `${srcFolder}/scss/style.scss`,
 		static: `${srcFolder}/static/**/*.*`,

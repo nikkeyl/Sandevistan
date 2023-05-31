@@ -62,11 +62,11 @@ const config = {
 			},
 			replace: [
 				{
-					regex: '../content',
-					to: 'content'
+					regex: '../img',
+					to: 'img'
 				}, {
-					regex: '@content',
-					to: 'content'
+					regex: '@img',
+					to: 'img'
 				}
 			]
 		}),

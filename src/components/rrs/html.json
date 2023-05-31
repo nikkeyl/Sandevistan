@@ -297,11 +297,11 @@
     },
     "Image lazy": {
         "prefix": "imgl",
-        "body": "<img data-src=\"@content$1\" alt=\"$2\">"
+        "body": "<img data-src=\"@img$1\" alt=\"$2\">"
     },
     "Image": {
         "prefix": "img",
-        "body": "<img src=\"@content$1\" alt=\"$2\">"
+        "body": "<img src=\"@img$1\" alt=\"$2\">"
     },
     "Change Font Range": {
         "prefix": "cfr",
@@ -321,7 +321,7 @@
     },
     "Logo": {
         "prefix": "logo",
-        "body": "<a class=\"logo\" href=\"index.html\">\n\t<img src=\"@content$1\" alt=\"${2:alt}\">\n</a>"
+        "body": "<a class=\"logo\" href=\"index.html\">\n\t<img src=\"@img$1\" alt=\"${2:alt}\">\n</a>"
     },
     "Breadcrumbs": {
         "prefix": "bc",
@@ -329,7 +329,7 @@
     },
     "Sprite": {
         "prefix": "sprite",
-        "body": "<svg class=\"${1:icon}\">\n\t<use href=\"@content/icons/sprite.svg#${2:icon}\"></use>\n</svg>"
+        "body": "<svg class=\"${1:icon}\">\n\t<use href=\"@img/icons/sprite.svg#${2:icon}\"></use>\n</svg>"
     },
     "Section": {
         "prefix": "section",
@@ -341,7 +341,7 @@
     },
     "Section Response": {
         "prefix": "secres",
-        "body": "<section class=\"${1:block}\">\n\t<div class=\"${1:block}__inner\">\n\t\t<div class=\"${1:block}__container\">\n\t\t\t<div class=\"${1:block}__body\">\n\t\t\t\t$4\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div class=\"${1:block}__image\">\n\t\t<img data-src=\"@content$2\" alt=\"$3\">\n\t</div>\n</section>"
+        "body": "<section class=\"${1:block}\">\n\t<div class=\"${1:block}__inner\">\n\t\t<div class=\"${1:block}__container\">\n\t\t\t<div class=\"${1:block}__body\">\n\t\t\t\t$4\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div class=\"${1:block}__image\">\n\t\t<img data-src=\"@img$2\" alt=\"$3\">\n\t</div>\n</section>"
     },
     "Spollers": {
         "prefix": "spollers",
@@ -365,11 +365,11 @@
     },
     "IBG": {
         "prefix": "ibg",
-        "body": "<div class=\"${1:block}__image-ibg\">\n\t<img data-src=\"@content$2\" alt=\"${3:alt}\">\n</div>"
+        "body": "<div class=\"${1:block}__image-ibg\">\n\t<img data-src=\"@img$2\" alt=\"${3:alt}\">\n</div>"
     },
     "IBGA": {
         "prefix": "ibga",
-        "body": "<a class=\"${1:block}__image-ibg\" href=\"$2\">\n\t<img data-src=\"@content$3\" alt=\"${4:alt}\">\n</a>"
+        "body": "<a class=\"${1:block}__image-ibg\" href=\"$2\">\n\t<img data-src=\"@img$3\" alt=\"${4:alt}\">\n</a>"
     },
     "Input": {
         "prefix": "inp",

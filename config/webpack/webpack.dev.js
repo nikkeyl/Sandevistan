@@ -25,7 +25,7 @@ const config = {
 		open: true,
 
 		watchFiles: [
-			`${paths.root}/content/**/*.*`,
+			`${paths.root}/img/**/*.*`,
 			`${paths.root}/**/*.html`,
 			`${paths.root}/**/*.htm`
 		]
@@ -61,19 +61,19 @@ const config = {
 					regex: '<link rel="stylesheet" href="css/style.min.css">',
 					to: ''
 				}, {
-					regex: '../content',
-					to: 'content'
+					regex: '../img',
+					to: 'img'
 				}, {
-					regex: '@content',
-					to: 'content'
+					regex: '@img',
+					to: 'img'
 				}
 			]
 		}),
 		new plugins.CopyPlugin({
 			patterns: [
 				{
-					from: `${paths.root}/content`,
-					to: 'content',
+					from: `${paths.root}/img`,
+					to: 'img',
 					noErrorOnMissing: true,
 					force: true
 				}, {
