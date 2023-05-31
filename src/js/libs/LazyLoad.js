@@ -5,11 +5,11 @@
 import LazyLoad from 'vanilla-lazyload'
 
 const lazyMedia = new LazyLoad({
-    elements_selector: '[data-src],[data-srcset]',
-    class_loaded: 'lazy-loaded',
-    use_native: true
+	elements_selector: '[data-src],[data-srcset]',
+	class_loaded: 'lazy-loaded',
+	use_native: true
 })
 
-// LazyMedia.update() только при ajax подгрузке контента
+// lazyMedia.update() только при ajax подгрузке контента
 
 export { lazyMedia }

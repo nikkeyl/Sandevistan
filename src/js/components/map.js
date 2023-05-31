@@ -117,7 +117,7 @@ function mapInit(n = 1) {
     }
     const map = new google.maps.Map(document.getElementById('map'), options)
     const icon = {
-        url: 'content/icons/sprite.svg#map',
+        url: 'img/icons/sprite.svg#map',
         scaledSize: new google.maps.Size(18, 20),
         anchor: new google.maps.Point(9, 10)
     }
