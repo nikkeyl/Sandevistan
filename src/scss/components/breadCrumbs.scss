@@ -1,25 +1,25 @@
 .breadcrumbs {
-    white-space: nowrap;
+  white-space: nowrap;
 
-    &__list {
-        display: flex;
-        gap: rem(5);
-        overflow-x: auto;
-        overflow-y: hidden;
+  &__list {
+    display: flex;
+    gap: rem(5);
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
+  &__item {
+    display: flex;
+
+    &:not(:last-child) {
+      &::after {
+        content: "/";
+        margin-left: rem(5);
+      }
     }
+  }
 
-    &__item {
-        display: flex;
-
-        &:not(:last-child) {
-            &::after {
-                content: "/";
-                margin-left: rem(5);
-            }
-        }
-    }
-
-    &__link {
-        color: $colorGray;
-    }
+  &__link {
+    color: $colorGray;
+  }
 }

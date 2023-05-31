@@ -1,33 +1,33 @@
 .pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  // &__arrow {
+  //     svg {
+  //     }
+
+  //     &--prev {
+  //     }
+
+  //     &--next {
+  //     }
+  // }
+
+  &__list {
     display: flex;
-    align-items: center;
-    justify-content: center;
+  }
 
-    // &__arrow {
-    //     svg {
-    //     }
+  // &__item {
+  //     &.active {
+  //     }
+  // }
 
-    //     &--prev {
-    //     }
+  // &__link {
+  //     .active & {
+  //     }
 
-    //     &--next {
-    //     }
-    // }
-
-    &__list {
-        display: flex;
-    }
-
-    // &__item {
-    //     &.active {
-    //     }
-    // }
-
-    // &__link {
-    //     .active & {
-    //     }
-
-    //     @include mediaHover {
-    //     }
-    // }
+  //     @include mediaHover {
+  //     }
+  // }
 }

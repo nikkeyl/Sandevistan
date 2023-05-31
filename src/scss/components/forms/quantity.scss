@@ -1,54 +1,54 @@
 .quantity {
-    @include widthHeight(rem(88), rem(40));
+  @include widthHeight(rem(88), rem(40));
 
-    display: flex;
-    border: rem(2) solid $colorDark;
-    border-radius: rem(5);
+  display: flex;
+  border: rem(2) solid $colorDark;
+  border-radius: rem(5);
 
-    &__button {
-        position: relative;
-        flex: 0 0 rem(30);
-        cursor: pointer;
+  &__button {
+    position: relative;
+    flex: 0 0 rem(30);
+    cursor: pointer;
 
-        &::before,
-        &::after {
-            @include widthHeight(rem(10), rem(1));
-            @include pseudo;
+    &::before,
+    &::after {
+      @include widthHeight(rem(10), rem(1));
+      @include pseudo;
 
-            left: 50%;
-            top: 50%;
-            margin: 0 0 0 rem(-4.5);
-            border-radius: rem(1);
-            background-color: $colorGray;
-            transition: background-color 0.3s;
-        }
-
-        &--plus {
-            &::before {
-                transform: rotate(-90deg);
-            }
-        }
-
-        @include mediaHover {
-            &::before,
-            &::after {
-                background-color: $colorDark;
-            }
-        }
+      left: 50%;
+      top: 50%;
+      margin: 0 0 0 rem(-4.5);
+      border-radius: rem(1);
+      background-color: $colorGray;
+      transition: background-color 0.3s;
     }
 
-    &__input {
-        flex: 1 1 auto;
-
-        input {
-            $fontSize: 18;
-
-            @include widthHeight(100%, 100%);
-
-            font-weight: 700;
-            font-size: rem($fontSize);
-            text-align: center;
-            color: $colorDark;
-        }
+    &--plus {
+      &::before {
+        transform: rotate(-90deg);
+      }
     }
+
+    @include mediaHover {
+      &::before,
+      &::after {
+        background-color: $colorDark;
+      }
+    }
+  }
+
+  &__input {
+    flex: 1 1 auto;
+
+    input {
+      $fontSize: 18;
+
+      @include widthHeight(100%, 100%);
+
+      font-weight: 700;
+      font-size: rem($fontSize);
+      text-align: center;
+      color: $colorDark;
+    }
+  }
 }

@@ -1,21 +1,21 @@
 /* Line effect */
 .hover {
-    @include mediaMin($tablet) {
-        @include widthHeight(100%, 100%);
+  @include mediaMin($tablet) {
+    @include widthHeight(100%, 100%);
 
-        position: absolute;
-        left: 0;
-        top: 0;
-        z-index: 2;
-        overflow: hidden;
-        background-color: $colorGray;
-        will-change: transform;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    overflow: hidden;
+    background-color: $colorGray;
+    will-change: transform;
 
-        &__text {
-            display: block;
-            padding: rem(20) rem(30);
-            color: $colorLight;
-            will-change: transform;
-        }
+    &__text {
+      display: block;
+      padding: rem(20) rem(30);
+      color: $colorLight;
+      will-change: transform;
     }
+  }
 }

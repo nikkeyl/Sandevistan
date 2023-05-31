@@ -1,67 +1,67 @@
 .rating {
-    $fontSize: 18;
+  $fontSize: 18;
 
+  display: flex;
+  align-items: flex-end;
+  font-size: rem($fontSize);
+  line-height: 0.75;
+  transition: opacity 0.3s;
+
+  &__body {
+    position: relative;
+
+    &::before {
+      content: "★★★★★";
+      display: block;
+    }
+  }
+
+  &__active {
+    @include widthHeight(0, 100%);
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    transition: width 0.2s, color 0.2s;
+
+    &::before {
+      @include pseudo("★★★★★", absolute);
+      @include widthHeight(100%, 100%);
+
+      left: 0;
+      top: 0;
+      color: $colorYellow;
+    }
+  }
+
+  &__items {
+    @include widthHeight(100%, 100%);
+
+    position: absolute;
+    left: 0;
+    top: 0;
     display: flex;
-    align-items: flex-end;
-    font-size: rem($fontSize);
-    line-height: 0.75;
-    transition: opacity 0.3s;
+  }
 
-    &__body {
-        position: relative;
+  &__item {
+    flex: 0 0 20%;
+    height: 100%;
+    opacity: 0;
+  }
 
-        &::before {
-            content: "★★★★★";
-            display: block;
-        }
-    }
+  &__value {
+    padding: 0 0 0 rem(10);
+    font-size: 50%;
+    line-height: 1;
+  }
 
-    &__active {
-        @include widthHeight(0, 100%);
+  &--sending {
+    opacity: 0.2;
+  }
 
-        position: absolute;
-        left: 0;
-        top: 0;
-        overflow: hidden;
-        transition: width 0.2s, color 0.2s;
-
-        &::before {
-            @include pseudo("★★★★★", absolute);
-            @include widthHeight(100%, 100%);
-
-            left: 0;
-            top: 0;
-            color: $colorYellow;
-        }
-    }
-
-    &__items {
-        @include widthHeight(100%, 100%);
-
-        position: absolute;
-        left: 0;
-        top: 0;
-        display: flex;
-    }
-
-    &__item {
-        flex: 0 0 20%;
-        height: 100%;
-        opacity: 0;
-    }
-
-    &__value {
-        padding: 0 0 0 rem(10);
-        font-size: 50%;
-        line-height: 1;
-    }
-
-    &--sending {
-        opacity: 0.2;
-    }
-
-    &--set .rating__active,
-    &--set .rating__item {
-        cursor: pointer;
-    }
+  &--set .rating__active,
+  &--set .rating__item {
+    cursor: pointer;
+  }
 }

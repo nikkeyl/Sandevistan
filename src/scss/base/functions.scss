@@ -1,35 +1,35 @@
 @function rounding($number, $digits: 4, $mode: round) {
-    $n: 1;
+  $n: 1;
 
-    @for $i from 1 through $digits {
-        $n: $n * 10;
-    }
+  @for $i from 1 through $digits {
+    $n: $n * 10;
+  }
 
-    @if $mode == round {
-        @return math.div(round($number * $n), $n);
-    } @else if $mode == ceil {
-        @return math.div(ceil($number * $n), $n);
-    } @else {
-        @return math.div(floor($number * $n), $n);
-    }
+  @if $mode == round {
+    @return math.div(round($number * $n), $n);
+  } @else if $mode == ceil {
+    @return math.div(ceil($number * $n), $n);
+  } @else {
+    @return math.div(floor($number * $n), $n);
+  }
 }
 
 @function em($px, $current: 16) {
-    @return rounding(math.div($px, $current)) + em;
+  @return rounding(math.div($px, $current)) + em;
 }
 
 @function percent($px, $from) {
-    @return rounding(math.div($px, $from)) * 100%;
+  @return rounding(math.div($px, $from)) * 100%;
 }
 
 @function rem($px) {
-    @return rounding(math.div($px, 16)) + rem;
+  @return rounding(math.div($px, 16)) + rem;
 }
 
 @function aspectRatio($width, $height) {
-    @return percent($height, $width);
+  @return percent($height, $width);
 }
 
 @function md($px) {
-    @return em($px - 0.02);
+  @return em($px - 0.02);
 }

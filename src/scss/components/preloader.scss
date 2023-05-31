@@ -1,40 +1,40 @@
 .preloader {
-    @include widthHeight(100%, 100%);
+  @include widthHeight(100%, 100%);
 
-    position: fixed;
-    left: 0;
-    top: 0;
-    z-index: 100;
-    background-color: $colorDark;
-    opacity: 1;
-    visibility: visible;
-    transition: opacity 0.3s, visibility 0.3s;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  background-color: $colorDark;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s, visibility 0.3s;
 
-    &__load {
-        @include widthHeight(rem(100), rem(100));
+  &__load {
+    @include widthHeight(rem(100), rem(100));
 
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        border: rem(10) solid $colorLight;
-        border-top-color: $colorGray;
-        border-radius: 50%;
-        transform: translate(-50%, -50%);
-        animation: spin 2s linear infinite;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border: rem(10) solid $colorLight;
+    border-top-color: $colorGray;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: spin 2s linear infinite;
 
-        @keyframes spin {
-            0% {
-                transform: translate(-50%, -50%) rotate(0deg);
-            }
+    @keyframes spin {
+      0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+      }
 
-            100% {
-                transform: translate(-50%, -50%) rotate(360deg);
-            }
-        }
+      100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+      }
     }
+  }
 
-    &.hide {
-        opacity: 0;
-        visibility: hidden;
-    }
+  &.hide {
+    opacity: 0;
+    visibility: hidden;
+  }
 }

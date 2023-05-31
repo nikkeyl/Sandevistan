@@ -1,82 +1,82 @@
 %responsiveVideo {
-    position: relative;
-    overflow: hidden;
-    padding-bottom: aspectRatio(16, 9);
-    height: 0;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: aspectratio(16, 9);
+  height: 0;
 
-    iframe,
-    object,
-    video,
-    embed {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-    }
+  iframe,
+  object,
+  video,
+  embed {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
 }
 
 %videoBackground {
-    iframe,
-    object,
-    video,
-    embed {
-        position: fixed;
-        left: 50%;
-        top: 50%;
-        z-index: -100;
-        width: auto;
-        height: auto;
-        min-width: 100%;
-        min-height: 100%;
-        background-size: cover;
-        transform: translateX(-50%) translateY(-50%);
-    }
+  iframe,
+  object,
+  video,
+  embed {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    z-index: -100;
+    width: auto;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%;
+    background-size: cover;
+    transform: translateX(-50%) translateY(-50%);
+  }
 }
 
 %listCounter {
-    counter-reset: item;
-    list-style-type: none;
+  counter-reset: item;
+  list-style-type: none;
 
-    li {
-        position: relative;
+  li {
+    position: relative;
 
-        &::before {
-            counter-increment: item;
-            content: counter(item);
-            position: absolute;
-            left: 0;
-            top: 0;
-        }
+    &::before {
+      counter-increment: item;
+      content: counter(item);
+      position: absolute;
+      left: 0;
+      top: 0;
     }
+  }
 }
 
 %grayFilter {
-    filter: grayscale(1);
-    transition: filter 0.3s;
+  filter: grayscale(1);
+  transition: filter 0.3s;
 
-    @include mediaHover {
-        filter: grayscale(0);
-    }
+  @include mediaHover {
+    filter: grayscale(0);
+  }
 }
 
 %hideScroll {
-    &::-webkit-scrollbar {
-        display: none;
-    }
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 %touch {
-    /* Pulse-based scrolling https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-overflow-scrolling */
-    -webkit-overflow-scrolling: touch;
+  /* Pulse-based scrolling https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-overflow-scrolling */
+  -webkit-overflow-scrolling: touch;
 }
 
 %mirror {
-    /* Mirror effect */
-    transform: scale(-1, 1);
+  /* Mirror effect */
+  transform: scale(-1, 1);
 }
 
 %userSelect {
-    /* Prevents the user from selecting text */
-    user-select: none;
+  /* Prevents the user from selecting text */
+  user-select: none;
 }

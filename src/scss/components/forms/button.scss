@@ -1,32 +1,32 @@
 .button {
-    $icon: 0;
-    $fw: 0;
-    $fontSize: 18;
+  $icon: 0;
+  $fw: 0;
+  $fontSize: 18;
 
-    display: inline-flex;
-    justify-content: center;
-    padding: rem(10) rem(15);
-    font-size: rem($fontSize);
-    line-height: math.div(20, $fontSize);
-    text-align: center;
-    color: $colorDark;
-    background-color: $colorLight;
-    transition: transform 0.3s, background-color 0.3s, color 0.3s;
+  display: inline-flex;
+  justify-content: center;
+  padding: rem(10) rem(15);
+  font-size: rem($fontSize);
+  line-height: math.div(20, $fontSize);
+  text-align: center;
+  color: $colorDark;
+  background-color: $colorLight;
+  transition: transform 0.3s, background-color 0.3s, color 0.3s;
 
-    &:active {
-        transform: translateY(rem(3));
+  &:active {
+    transform: translateY(rem(3));
+  }
+
+  &--fw {
+    @include mediaMax($phone) {
+      width: 100%;
     }
+  }
 
-    &--fw {
-        @include mediaMax($phone) {
-            width: 100%;
-        }
+  @if $icon == 1 {
+    span {
+      padding: 0 rem(30) 0 0;
+      background: url("@img") left no-repeat;
     }
-
-    @if $icon == 1 {
-        span {
-            padding: 0 rem(30) 0 0;
-            background: url("@img") left no-repeat;
-        }
-    }
+  }
 }

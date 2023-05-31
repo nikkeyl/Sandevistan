@@ -1,58 +1,58 @@
 .spollers {
-    display: grid;
-    gap: rem(15);
+  display: grid;
+  gap: rem(15);
 
-    &__item {
-        $fontSize: 18;
+  &__item {
+    $fontSize: 18;
 
-        font-size: rem($fontSize);
-    }
+    font-size: rem($fontSize);
+  }
 
-    &__title {
-        position: relative;
-        border: rem(1) solid $colorGray;
-        border-radius: rem(5);
-        padding: rem(10) rem(15);
-        width: 100%;
-        text-align: left;
-        cursor: default;
+  &__title {
+    position: relative;
+    border: rem(1) solid $colorGray;
+    border-radius: rem(5);
+    padding: rem(10) rem(15);
+    width: 100%;
+    text-align: left;
+    cursor: default;
 
-        .spoller-init & {
-            cursor: pointer;
+    .spoller-init & {
+      cursor: pointer;
 
-            &::before,
-            &::after {
-                @include pseudo;
-                @include widthHeight(rem(15), rem(2));
+      &::before,
+      &::after {
+        @include pseudo;
+        @include widthHeight(rem(15), rem(2));
 
-                right: rem(10);
-                top: 50%;
-                background-color: $colorDark;
-                transition: transform 0.5s;
-            }
+        right: rem(10);
+        top: 50%;
+        background-color: $colorDark;
+        transition: transform 0.5s;
+      }
 
-            &::before {
-                transform: translate(-75%, -50%) rotate(40deg);
-            }
+      &::before {
+        transform: translate(-75%, -50%) rotate(40deg);
+      }
 
-            &::after {
-                transform: translate(0, -50%) rotate(-40deg);
-            }
+      &::after {
+        transform: translate(0, -50%) rotate(-40deg);
+      }
 
-            &.spoller-active {
-                &::before {
-                    transform: translateX(-75%) rotate(-40deg);
-                }
-
-                &::after {
-                    transform: rotate(40deg);
-                }
-            }
+      &.spoller-active {
+        &::before {
+          transform: translateX(-75%) rotate(-40deg);
         }
-    }
 
-    &__body {
-        border: rem(1) solid $colorGray;
-        padding: rem(20);
+        &::after {
+          transform: rotate(40deg);
+        }
+      }
     }
+  }
+
+  &__body {
+    border: rem(1) solid $colorGray;
+    padding: rem(20);
+  }
 }

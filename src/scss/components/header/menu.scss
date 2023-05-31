@@ -1,65 +1,65 @@
 /* Menu */
 .menu {
-    &__body {
-        @include mediaMax($tablet) {
-            @include widthHeight(100%, 100%);
+  &__body {
+    @include mediaMax($tablet) {
+      @include widthHeight(100%, 100%);
 
-            position: fixed;
-            left: -100%;
-            top: 0;
-            z-index: 4;
-            overflow: auto;
-            padding: rem(80) 0 rem(30);
-            background-color: $colorLight;
-            transition: left 0.3s;
+      position: fixed;
+      left: -100%;
+      top: 0;
+      z-index: 4;
+      overflow: auto;
+      padding: rem(80) 0 rem(30);
+      background-color: $colorLight;
+      transition: left 0.3s;
 
-            &::before {
-                @include pseudo("", fixed);
-                @include widthHeight(100%, rem(70));
+      &::before {
+        @include pseudo("", fixed);
+        @include widthHeight(100%, rem(70));
 
-                left: -100%;
-                top: 0;
-                z-index: 4;
-                background-color: $colorLight;
-                transition: left 0.3s;
-            }
+        left: -100%;
+        top: 0;
+        z-index: 4;
+        background-color: $colorLight;
+        transition: left 0.3s;
+      }
 
-            .menu-open & {
-                left: 0;
+      .menu-open & {
+        left: 0;
 
-                &::before {
-                    left: 0;
-                }
-            }
+        &::before {
+          left: 0;
         }
+      }
     }
+  }
 
-    &__link {
-        $fontSize: 16;
+  &__link {
+    $fontSize: 16;
 
-        font-size: rem($fontSize);
-        line-height: math.div(20, $fontSize);
-        transition: color 0.3s;
+    font-size: rem($fontSize);
+    line-height: math.div(20, $fontSize);
+    transition: color 0.3s;
 
-        // для корректной работы line effect
-        //     display: block;
-        //     overflow: hidden;
+    // для корректной работы line effect
+    //     display: block;
+    //     overflow: hidden;
 
-        @include mediaHover {
-            color: $colorDark;
-        }
+    @include mediaHover {
+      color: $colorDark;
     }
+  }
 
-    &__list {
-        display: flex;
-        flex-wrap: wrap;
-        column-gap: rem(20);
-        row-gap: rem(10);
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: rem(20);
+    row-gap: rem(10);
 
-        @include mediaMax($tablet) {
-            flex-direction: column;
-            align-items: center;
-            row-gap: rem(20);
-        }
+    @include mediaMax($tablet) {
+      flex-direction: column;
+      align-items: center;
+      row-gap: rem(20);
     }
+  }
 }

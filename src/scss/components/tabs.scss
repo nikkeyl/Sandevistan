@@ -1,18 +1,18 @@
 .tabs {
-    &__navigation {
-        display: flex;
-    }
+  &__navigation {
+    display: flex;
+  }
 
-    &__title {
-        border: rem(1) solid $colorGray;
-        padding: rem(10) rem(15);
+  &__title {
+    border: rem(1) solid $colorGray;
+    padding: rem(10) rem(15);
 
-        &.tab-active {
-            border: rem(1) solid $colorDark;
-        }
+    &.tab-active {
+      border: rem(1) solid $colorDark;
     }
+  }
 
-    &__content {
-        padding: rem(10) rem(15);
-    }
+  &__content {
+    padding: rem(10) rem(15);
+  }
 }

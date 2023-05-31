@@ -1,22 +1,22 @@
 /* Background image using css */
 [class*="-ibg"] {
-    position: relative;
+  position: relative;
 
-    img {
-        @include widthHeight(100%, 100%);
+  img {
+    @include widthHeight(100%, 100%);
 
-        position: absolute;
-        left: 0;
-        top: 0;
-        object-fit: cover;
-    }
+    position: absolute;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+  }
 }
 
 @if $ibgContain == 1 {
-    /* Background image using css (contain) */
-    [class*="-ibg--contain"] {
-        img {
-            object-fit: contain;
-        }
+  /* Background image using css (contain) */
+  [class*="-ibg--contain"] {
+    img {
+      object-fit: contain;
     }
+  }
 }

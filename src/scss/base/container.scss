@@ -1,26 +1,18 @@
 /* Looks for all classes in which there is a (__container), sets padding and centers. */
 [class*="__container"] {
-    @if $maxWidthContainer > 0 {
-        margin: 0 auto;
-        max-width: rem($maxWidthContainer);
-        box-sizing: content-box;
-    }
+  @if $maxWidthContainer > 0 {
+    margin: 0 auto;
+    max-width: rem($maxWidthContainer);
+    box-sizing: content-box;
+  }
 
-    @if $containerPadding > 0 {
-        @if $maxWidthContainer > 0 {
-            padding: 0 rem(math.div($containerPadding, 2));
-        } @else {
-            /* Adaptive property, that helps to change numeric values depending on the width of the viewport */
-            @include adaptiveValue(
-                "padding-right",
-                math.div($containerPadding, 2),
-                15
-            );
-            @include adaptiveValue(
-                "padding-left",
-                math.div($containerPadding, 2),
-                15
-            );
-        }
+  @if $containerPadding > 0 {
+    @if $maxWidthContainer > 0 {
+      padding: 0 rem(math.div($containerPadding, 2));
+    } @else {
+      /* Adaptive property, that helps to change numeric values depending on the width of the viewport */
+      @include adaptiveValue("padding-right", math.div($containerPadding, 2), 15);
+      @include adaptiveValue("padding-left", math.div($containerPadding, 2), 15);
     }
+  }
 }
