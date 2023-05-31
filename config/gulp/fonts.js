@@ -60,10 +60,8 @@ const fontStyle = () => {
 					const fileName = file.split('.')[0]
 
 					if (newFileOnly !== fileName) {
-						const [fontName, fontWeight = 'regular']
-							= fileName.split('-')
-						const fontWeightValue
-							= fontWeights[fontWeight.toLowerCase()]
+						const [fontName, fontWeight = 'regular'] = fileName.split('-')
+						const fontWeightValue = fontWeights[fontWeight.toLowerCase()]
 
 						app.plugins.fs.appendFile(
 							fontStylesFile,
