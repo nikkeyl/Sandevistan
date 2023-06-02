@@ -1,86 +1,86 @@
 {
-    "Event Listener": {
-        "prefix": "ae",
-        "body": "${1:document}.addEventListener('${2:event}', e => {\n\t$3\n})"
-    },
-    "Click Event Listener": {
-        "prefix": "ck",
-        "body": "${1:document}.addEventListener('click', e => {\n\t$2\n})"
-    },
-    "Const With An Array Of Elements": {
-        "prefix": "dqa",
-        "body": "let ${1:name} = document.querySelectorAll('${2:elem}')"
-    },
-    "Const": {
-        "prefix": "dq",
-        "body": "let ${1:name} = document.querySelector('${2:elem}')"
-    },
-    "Target Element": {
-        "prefix": "te",
-        "body": "const targetElement = e.target"
-    },
-    "Adding A Class": {
-        "prefix": "ca",
-        "body": "${1:element}.classList.add('${2:class}')"
-    },
-    "Toggling A Class": {
-        "prefix": "ct",
-        "body": "${1:element}.classList.toggle('${2:class}')"
-    },
-    "Removing A Class": {
-        "prefix": "cr",
-        "body": "${1:element}.classList.remove('${2:class}')"
-    },
-    "Set Attribute": {
-        "prefix": "sa",
-        "body": "${1:element}.setAttribute('${2:attr}', ${3:value})"
-    },
-    "Removing Attribute": {
-        "prefix": "ra",
-        "body": "${1:element}.removeAttribute('${2:attr}')"
-    },
-    "Get An Attribute": {
-        "prefix": "ga",
-        "body": "${1:element}.dataset.${2:attrName}"
-    },
-    "Text Content": {
-        "prefix": "tc",
-        "body": "${1:element}.textContent = '${2:content}'"
-    },
-    "Inner HTML": {
-        "prefix": "ih",
-        "body": "${1:element}.innerHTML = '${2:elem}'"
-    },
-    "Insert Adjacent HTML": {
-        "prefix": "iah",
-        "body": "${1:element}.insertAdjacentHTML('beforeend', '${2:htmlTemplate}')"
-    },
-    "For Each": {
-        "prefix": "fe",
-        "body": "${1:array}.forEach(${2:item} => {\n\t$3\n})"
-    },
-    "Anonymous Function": {
-        "prefix": "afn",
-        "body": "(${1:arguments}) => {\n\t$2\n}"
-    },
-    "Function As A Property Of An Object": {
-        "prefix": "ofn",
-        "body": "${1:functionName}: (${2:arguments}) => {\n\t$3\n}"
-    },
-    "Set Interval": {
-        "prefix": "si",
-        "body": "setInterval(($1) => {\n\t$2\n}, ${3:0})"
-    },
-    "Set Timeout": {
-        "prefix": "st",
-        "body": "setTimeout(($1) => {\n\t$2\n}, ${3:0})"
-    },
-    "Json Parse": {
-        "prefix": "jp",
-        "body": "JSON.parse(${0:object})"
-    },
-    "Json Stringify": {
-        "prefix": "js",
-        "body": "JSON.stringify(${0:object})"
-    }
+  "Event Listener": {
+    "prefix": "ae",
+    "body": "${1:document}.addEventListener('${2:event}', e => {\n\t$3\n})"
+  },
+  "Click Event Listener": {
+    "prefix": "ck",
+    "body": "${1:document}.addEventListener('click', e => {\n\t$2\n})"
+  },
+  "Const With An Array Of Elements": {
+    "prefix": "dqa",
+    "body": "let ${1:name} = document.querySelectorAll('${2:elem}')"
+  },
+  "Const": {
+    "prefix": "dq",
+    "body": "let ${1:name} = document.querySelector('${2:elem}')"
+  },
+  "Target Element": {
+    "prefix": "te",
+    "body": "const targetElement = e.target"
+  },
+  "Adding A Class": {
+    "prefix": "ca",
+    "body": "${1:element}.classList.add('${2:class}')"
+  },
+  "Toggling A Class": {
+    "prefix": "ct",
+    "body": "${1:element}.classList.toggle('${2:class}')"
+  },
+  "Removing A Class": {
+    "prefix": "cr",
+    "body": "${1:element}.classList.remove('${2:class}')"
+  },
+  "Set Attribute": {
+    "prefix": "sa",
+    "body": "${1:element}.setAttribute('${2:attr}', ${3:value})"
+  },
+  "Removing Attribute": {
+    "prefix": "ra",
+    "body": "${1:element}.removeAttribute('${2:attr}')"
+  },
+  "Get An Attribute": {
+    "prefix": "ga",
+    "body": "${1:element}.dataset.${2:attrName}"
+  },
+  "Text Content": {
+    "prefix": "tc",
+    "body": "${1:element}.textContent = '${2:content}'"
+  },
+  "Inner HTML": {
+    "prefix": "ih",
+    "body": "${1:element}.innerHTML = '${2:elem}'"
+  },
+  "Insert Adjacent HTML": {
+    "prefix": "iah",
+    "body": "${1:element}.insertAdjacentHTML('beforeend', '${2:htmlTemplate}')"
+  },
+  "For Each": {
+    "prefix": "fe",
+    "body": "${1:array}.forEach(${2:item} => {\n\t$3\n})"
+  },
+  "Anonymous Function": {
+    "prefix": "afn",
+    "body": "(${1:arguments}) => {\n\t$2\n}"
+  },
+  "Function As A Property Of An Object": {
+    "prefix": "ofn",
+    "body": "${1:functionName}: (${2:arguments}) => {\n\t$3\n}"
+  },
+  "Set Interval": {
+    "prefix": "si",
+    "body": "setInterval(($1) => {\n\t$2\n}, ${3:0})"
+  },
+  "Set Timeout": {
+    "prefix": "st",
+    "body": "setTimeout(($1) => {\n\t$2\n}, ${3:0})"
+  },
+  "Json Parse": {
+    "prefix": "jp",
+    "body": "JSON.parse(${0:object})"
+  },
+  "Json Stringify": {
+    "prefix": "js",
+    "body": "JSON.stringify(${0:object})"
+  }
 }

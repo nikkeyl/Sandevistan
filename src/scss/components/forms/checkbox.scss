@@ -1,47 +1,10 @@
 .checkbox {
   position: relative;
-
-  &__label {
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-    gap: rem(10);
-    cursor: pointer;
-
-    &::before {
-      content: "";
-      flex: 0 0 rem(20);
-      align-self: flex-start;
-      border: rem(1) solid $colorGray;
-      border-radius: rem(5);
-      width: rem(20);
-      height: rem(20);
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      left: rem(2);
-      top: rem(2);
-      border-radius: rem(2);
-      width: rem(16);
-      height: rem(16);
-      background-color: $colorDark;
-      transform: scale(0);
-      transition: transform 0.3s;
-    }
-  }
-
-  &__input {
-    position: absolute;
-    width: 0;
-    height: 0;
-    opacity: 0;
-
-    &:checked + .checkbox__label::after {
-      transform: scale(1);
-    }
-  }
+  display: inline-flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: rem(10);
+  cursor: pointer;
 
   &__text {
     $fontSize: 18;
@@ -51,7 +14,58 @@
     color: $colorGray;
   }
 
+  &__box {
+    $size: 20;
+
+    position: relative;
+    flex: 0 0 rem($size);
+    align-self: flex-start;
+    border: rem(2) solid $colorGray;
+    border-radius: rem(3);
+    width: rem($size);
+    height: rem($size);
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: rem(-2);
+      top: rem(-2);
+      border-radius: rem(3);
+      width: rem(20);
+      height: rem(20);
+      background-color: $colorDark;
+      transform: scale(0);
+      transition: transform 0.3s;
+    }
+
+    svg {
+      @include widthHeight(rem(10), rem(10));
+
+      position: absolute;
+      left: rem(3);
+      top: rem(3);
+      fill: $color-light;
+      transform: scale(0);
+    }
+  }
+
+  input {
+    display: none;
+
+    &:checked + .checkbox__box {
+      &::after {
+        transform: scale(1);
+      }
+
+      svg {
+        transform: scale(1);
+      }
+    }
+  }
+
   &:not(:last-child) {
     margin-bottom: em(5);
   }
+
+  @extend %userSelect;
 }
