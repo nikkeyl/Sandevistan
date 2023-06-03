@@ -13,16 +13,16 @@ import { ftp } from './config/modules/ftp.js'
 import { otfToTtf, ttfToWoff, fontStyle } from './config/gulp/fonts.js'
 import { images } from './config/gulp/images.js'
 import { sprite } from './config/gulp/sprite.js'
+import { jsProd } from './config/gulp/jsProd.js'
 import { jsDev } from './config/gulp/jsDev.js'
 import { html } from './config/gulp/html.js'
 import { css } from './config/gulp/css.js'
-import { js } from './config/gulp/js.js'
 
 const fonts = gulp.series(reset, otfToTtf, ttfToWoff, fontStyle)
 const build = gulp.series(
 	fonts,
 	jsDev,
-	js,
+	jsProd,
 	gulp.parallel(html, css, images),
 	gulp.parallel(validator, zip)
 )
