@@ -7,7 +7,7 @@ const svgoConfig = {
 				attrs: '(stroke|fill|style)'
 			}
 		}, {
-			removeViewBox: false
+			removeViewBox: false // not working
 		}, {
 			removeXMLNS: true
 		}
