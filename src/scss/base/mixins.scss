@@ -268,8 +268,8 @@
 	}
 }
 
-@mixin mediaHover {
-	@media (any-hover: hover) {
+@mixin mediaHover($value: hover) {
+	@media (any-hover: $value) {
 		&:hover {
 			@content;
 		}
