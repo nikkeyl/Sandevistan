@@ -7,8 +7,8 @@
     $center: 1;
     $reverse: 0;
 
-    @include adaptiveValue("padding-top", 120, 30, $startWidth, $endWidth, $typeValue);
-    @include adaptiveValue("padding-bottom", 120, 30, $startWidth, $endWidth, $typeValue);
+    @include adaptiveValue("padding-top", 120, 30, $typeValue, $startWidth, $endWidth);
+    @include adaptiveValue("padding-bottom", 120, 30, $typeValue, $startWidth, $endWidth);
 
     // .block__container
     &__container {

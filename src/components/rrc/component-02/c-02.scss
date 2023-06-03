@@ -63,7 +63,7 @@
         }
 
         @if $fontType == 1 {
-            @include adaptiveValue("font-size", $fontSize, 16);
+            @include adaptiveValue("font-size", $fontSize, 16, 1, $maxWidth, $minWidth);
         } @else {
             font-size: rem($fontSize);
         }
@@ -84,7 +84,7 @@
         }
 
         @if $fontType == 1 {
-            @include adaptiveValue("font-size", $fontSize, 16);
+            @include adaptiveValue("font-size", $fontSize, 16, 1, $maxWidth, $minWidth);
         } @else {
             font-size: rem($fontSize);
         }

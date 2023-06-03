@@ -2,9 +2,9 @@
 	$property,
 	$startSize,
 	$minSize,
+	$keepSize: 0,
 	$widthFrom: $containerWidth,
-	$widthTo: $minWidth,
-	$keepSize: 0
+	$widthTo: $minWidth
 ) {
 	@if $startSize == 0 {
 		$startSize: 0.000001;
@@ -14,7 +14,7 @@
 		$minSize: 0.000001;
 	}
 
-	$addSize: math.div($startSize - $minSize, 16);
+	// $addSize: math.div($startSize - $minSize, 16);
 
 	@if $widthFrom == $containerWidth and $maxWidthContainer == 0 {
 		$widthFrom: $maxWidth;
@@ -34,17 +34,25 @@
 		$propertyValue: #{"clamp(" rem($startSize) "," $flyValue "," rem($minSize) ")"};
 	}
 
-	#{$property}: $propertyValue;
-
-	@if $widthFrom != $containerWidth and $widthFrom != $maxWidth and $keepSize != 1 and $keepSize != 2 {
+	@if $keepSize != 1 and $keepSize != 3 {
 		@include mediaMin($widthFrom) {
-			#{$property}: inherit;
+			#{$property}: rem($startSize);
 		}
 	}
 
-	@if $widthTo != $minWidth and $keepSize != 1 and $keepSize != 3 {
+	@media (min-width: $widthTo) and (max-width: $widthFrom) {
+		#{$property}: $propertyValue;
+		// @supports (#{$property}: $propertyValue) {
+		// }
+
+		// @supports not (#{$property}: $propertyValue) {
+		// 	#{$property}: calc(#{rem($minSize)} + #{$addSize} * (100vw - #{rem($widthTo)}) / #{math.div($widthFrom, 16) - math.div($widthTo, 16)});
+		// }
+	}
+
+	@if $keepSize != 1 and $keepSize != 2 {
 		@include mediaMax($widthTo) {
-			#{$property}: inherit;
+			#{$property}: rem($minSize);
 		}
 	}
 }
@@ -97,8 +105,8 @@
 			position: relative;
 			flex: 0 0
 				calc(
-					((100% - #{rem($containerPadding)}) * 0.#{math.div((100 - $percent), 1)}) +
-						(rem($containerPadding) / 2)
+					((100% - #{rem($containerPadding)}) * 0.#{math.div((100 - $percent), 1)})
+						+ (rem($containerPadding) / 2)
 				);
 			padding-bottom: round(percent($imageHeight, $maxWidth));
 
@@ -139,7 +147,14 @@
 	}
 }
 
-@mixin slide($items, $translate, $time, $animationDelay, $direction, $breakpoint: $tablet) {
+@mixin slide(
+	$items,
+	$translate,
+	$time,
+	$animationDelay,
+	$direction,
+	$breakpoint: $tablet
+) {
 	$count: $items + 1;
 
 	@include mediaMin($breakpoint) {
