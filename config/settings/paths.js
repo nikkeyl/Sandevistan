@@ -1,15 +1,17 @@
-import { basename, resolve } from 'path'
+import {
+	basename,
+	resolve
+} from 'path'
 
 const rootFolder = basename(resolve())
 const buildFolder = 'build'
 const tempFolder = 'temp'
 const srcFolder = 'src'
-
 const paths = {
 	build: {
-		images: `${buildFolder}/img/`,
 		static: `${buildFolder}/static/`,
 		fonts: `${buildFolder}/fonts/`,
+		images: `${buildFolder}/img/`,
 		css: `${buildFolder}/css/`,
 		js: `${buildFolder}/js/`,
 		html: `${buildFolder}/`
