@@ -25,6 +25,8 @@
 }
 
 .swiper-initialized {
+	touch-action: pan-y;
+
   .swiper-slide {
     flex-shrink: 0;
 
