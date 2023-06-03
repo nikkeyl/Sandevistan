@@ -56,10 +56,6 @@ const config = {
 		new plugins.FileIncludeWebpackPlugin({
 			source: paths.srcFolder,
 			destination: '../',
-			htmlBeautifyOptions: {
-				'indent-with-tabs': true,
-				'indent_size': 4
-			},
 			replace: [
 				{
 					regex: '../img',
