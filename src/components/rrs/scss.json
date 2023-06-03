@@ -3,6 +3,10 @@
     "prefix": "in",
     "body": "@include $0;"
   },
+  "Extend Templates": {
+    "prefix": "ex",
+    "body": "@extend %$0"
+  },
   "Mixin Width And Height": {
     "prefix": "wh",
     "body": "@include widthHeight(rem($1), rem($2));"
@@ -450,10 +454,6 @@
   "Background": {
     "prefix": "bg+",
     "body": "background: url(\"@img$0\") 0 0 no-repeat;"
-  },
-  "Inline Flex": {
-    "prefix": "fbi",
-    "body": "display: inline-flex;"
   },
   "Flex Order": {
     "prefix": "fbo",

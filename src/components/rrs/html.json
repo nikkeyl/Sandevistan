@@ -331,9 +331,9 @@
     "prefix": "sprite",
     "body": "<svg class=\"${1:icon}\">\n\t<use href=\"@img/icons/sprite.svg#${2:icon}\"></use>\n</svg>"
   },
-  "Section": {
-    "prefix": "section",
-    "body": "<section class=\"${1:block}\">\n\t<div class=\"${1:block}__container\">\n\t\t$2\n\t</div>\n</section>"
+  "Full Page Section": {
+    "prefix": "fullpage",
+    "body": "<div data-fp class=\"${1:block}\">\n\t<div data-fp-section class=\"${1:block}__section\"></div>\n</div>"
   },
   "Container": {
     "prefix": "cnt",
@@ -345,7 +345,7 @@
   },
   "Spollers": {
     "prefix": "spollers",
-    "body": "<div class=\"${1:spollers}\" data-spollers=\"${2:768}, ${3:max}\">\n\t<div class=\"${1:spollers}__item\">\n\t\t<button class=\"${1:spollers}__title\" type=\"button\" data-spoller>${4:title}</button>\n\t\t<div class=\"${1:spollers}__body\">${5:content}</div>\n\t</div>\n</div>"
+    "body": "<div class=\"${1:spollers}\" data-spollers=\"${3:768}, ${4:max}\">\n\t<details class=\"${2:spoller} ${1:spollers}__item\">\n\t\t<summary class=\"${2:spoller}__title\" type=\"button\" data-spoller>${5:title}</summary>\n\t\t<div class=\"${2:spoller}__body\">${6:content}</div>\n\t</details>\n</div>"
   },
   "Tabs": {
     "prefix": "tabs",
@@ -361,7 +361,7 @@
   },
   "Quantity": {
     "prefix": "qa",
-    "body": "<div class=\"quantity\" data-quantity>\n\t<button class=\"quantity__button quantity__button--plus\" type=\"button\" data-quantity-plus></button>\n\t<div class=\"quantity__input\">\n\t\t<input type=\"text\" autocomplete=\"off\" value=\"1\" name=\"quantity\" data-quantity-value>\n\t</div>\n\t<button class=\"quantity__button quantity__button--minus\" type=\"button\" data-quantity-minus></button>\n</div>"
+    "body": "<div class=\"quantity\" data-quantity>\n\t<button class=\"quantity__button quantity__button--plus\" type=\"button\" data-quantity-plus></button>\n\t<div class=\"quantity__input\">\n\t\t<input type=\"text\" value=\"1\" name=\"quantity\" data-quantity-value>\n\t</div>\n\t<button class=\"quantity__button quantity__button--minus\" type=\"button\" data-quantity-minus></button>\n</div>"
   },
   "IBG": {
     "prefix": "ibg",
@@ -402,5 +402,13 @@
   "Menu": {
     "prefix": "menu",
     "body": "<div class=\"menu\">\n\t<button class=\"icon-menu menu__icon-menu\" type=\"button\">\n\t\t<span>\n\t\t</span>\n\t</button>\n\t<nav class=\"menu__body\">\n\t\t<ul class=\"menu__list\">\n\t\t\t<li class=\"menu__item\">\n\t\t\t\t<a class=\"menu__link\" href=\"$1\">$2</a>\n\t\t\t</li>\n\t\t</ul>\n\t</nav>\n</div>"
+  },
+  "Add Popup Include": {
+    "prefix": "pop",
+    "body": "@@include(\"html/modules/popup.htm\")"
+  },
+  "Add Preloader Include": {
+    "prefix": "prl",
+    "body": "@@include(\"html/modules/preloader.htm\")"
   }
 }
