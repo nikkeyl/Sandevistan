@@ -36,17 +36,13 @@ button,
 input {
   font-family: $mainFontFamily;
   font-size: inherit;
+	line-height: inherit;
 }
 
 button {
   color: inherit;
-  background-color: inherit;
+  background-color: transparent;
   cursor: pointer;
-
-  &::-moz-focus-inner {
-    border: 0;
-    padding: 0;
-  }
 }
 
 :focus,
