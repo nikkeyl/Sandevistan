@@ -3,11 +3,10 @@
   gap: rem(15);
 
   &__item {
-    $fontSize: 18;
-
-    font-size: rem($fontSize);
   }
+}
 
+.spoller {
   &__title {
     position: relative;
     border: rem(1) solid $colorGray;
