@@ -1,0 +1,156 @@
+<style>
+	.lock .page {
+		overflow: hidden;
+		touch-action: none;
+		overscroll-behavior: none;
+	}
+
+	.loading .page {
+		opacity: 0;
+		visibility: hidden;
+	}
+
+	.loaded .page {
+		opacity: 1;
+		visibility: visible;
+		transition: opacity 0.5s;
+	}
+</style>
+<div id="preloader">
+	<style>
+		*,
+		*::before,
+		*::after {
+			margin: 0;
+			border: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		html {
+			overflow: hidden;
+			touch-action: none;
+			overscroll-behavior: none;
+		}
+
+		.preloader {
+			position: fixed;
+			left: 0;
+			top: 0;
+			z-index: -1;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 100%;
+			height: 100%;
+			pointer-events: none;
+		}
+
+		.preloader__body {
+			display: flex;
+			flex-direction: column;
+			padding: 0.93rem;
+			max-width: 31.25rem;
+		}
+
+		.preloader__counter {
+			font-size: 10rem;
+		}
+
+		.preloader__line {}
+
+		.preloader__line span {
+			display: inline-block;
+			height: 0.8rem;
+			background-color: #80f;
+			transition: width 0.2s;
+		}
+	</style>
+	<script>
+		function preloader() {
+			const preloaderImages = document.querySelector('[data-preloader]')
+				? document.querySelectorAll('[data-preloader] img')
+				: document.querySelectorAll('img')
+			const preloaderContainer = document.querySelector('#preloader')
+
+			if (preloaderImages.length) {
+				const preloaderTemplate =
+					`
+						<div class="preloader">
+							<div class="preloader__body">
+								<div class="preloader__counter">0%</div>
+								<div class="preloader__line"><span></span></div>
+							</div>
+						</div>
+					`
+
+				document.querySelector('html').insertAdjacentHTML(
+					"beforeend",
+					preloaderTemplate
+				)
+
+				const preloader = document.querySelector('.preloader')
+				const showPercentLoad = document.querySelector('.preloader__counter')
+				const showLineLoad = document.querySelector('.preloader__line span')
+				const htmlDocument = document.documentElement
+
+				let imagesLoadedCount = counter = progress = 0
+
+				htmlDocument.classList.add('loading')
+				htmlDocument.classList.add('lock')
+
+				preloaderImages.forEach(preloaderImage => {
+					const imgClone = document.createElement('img')
+
+					if (imgClone) {
+						imgClone.onload = imageLoaded
+						imgClone.onerror = imageLoaded
+						preloaderImage.dataset.src
+							? imgClone.src = preloaderImage.dataset.src
+							: imgClone.src = preloaderImage.src
+					}
+				})
+
+				function setValueProgress(progress) {
+					showPercentLoad
+						? showPercentLoad.innerText = `${progress}%`
+						: null
+					showLineLoad
+						? showLineLoad.style.width = `${progress}%`
+						: null
+				}
+
+				showPercentLoad
+					? setValueProgress(progress)
+					: null
+
+				function imageLoaded() {
+					imagesLoadedCount++
+					progress = Math.round((100 / preloaderImages.length) * imagesLoadedCount)
+
+					const intervalId = setInterval(() => {
+						counter >= progress
+							? clearInterval(intervalId)
+							: setValueProgress(++counter)
+						counter >= 100
+							? addLoadedClass()
+							: null
+					}, 10)
+				}
+
+				function addLoadedClass() {
+					htmlDocument.classList.add('loaded')
+					htmlDocument.classList.remove('lock')
+					htmlDocument.classList.remove('loading')
+					setInterval(() => {
+						preloader.remove()
+						preloaderContainer.remove()
+					}, 500)
+				}
+			} else {
+				preloaderContainer.remove()
+			}
+		}
+		preloader()
+	</script>
+</div>
