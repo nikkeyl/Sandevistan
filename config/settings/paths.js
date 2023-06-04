@@ -31,11 +31,11 @@ const paths = {
 	},
 	built: resolve(buildFolder),
 	root: resolve(srcFolder),
-	tempFolder,
+	ftp: rootFolder,
 	buildFolder,
+	tempFolder,
 	rootFolder,
-	srcFolder,
-	ftp: ``
+	srcFolder
 }
 
 export { paths }
