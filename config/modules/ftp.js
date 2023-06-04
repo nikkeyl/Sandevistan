@@ -12,7 +12,7 @@ const ftp = () => {
 
 	return app.gulp.src(`${app.paths.buildFolder}/**/*.*`)
 		.pipe(app.plugins.catchError('FTP'))
-		.pipe(ftpConnect.dest(`/${app.paths.ftp}/${app.paths.rootFolder}`))
+		.pipe(ftpConnect.dest(`/${app.paths.ftp}/`))
 }
 
 export { ftp }
