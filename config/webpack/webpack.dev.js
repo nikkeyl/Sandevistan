@@ -22,6 +22,7 @@ const config = {
 		historyApiFallback: true,
 		static: paths.built,
 		compress: true,
+		port: 3000,
 		open: true,
 
 		watchFiles: [
