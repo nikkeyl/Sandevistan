@@ -143,18 +143,6 @@
     "prefix": "dwo",
     "body": "data-watch-once"
   },
-  "Data Sticky": {
-    "prefix": "dstic",
-    "body": "data-sticky"
-  },
-  "Data Sticky Header": {
-    "prefix": "dsh",
-    "body": "data-sticky-header"
-  },
-  "Data Sticky Item": {
-    "prefix": "dsi",
-    "body": "data-sticky-item"
-  },
   "Data Sticky Bottom": {
     "prefix": "dsb",
     "body": "data-sticky-bottom=\"$0\""
@@ -385,7 +373,7 @@
   },
   "Radio Buttons": {
     "prefix": "opt",
-    "body": "<div class=\"options\">\n\t<div class=\"options__item\">\n\t\t<input class=\"options__input\" id=\"o_1\" type=\"radio\" value=\"1\" name=\"option\" hidden checked>\n\t\t<label class=\"options__label\" for=\"o_1\">\n\t\t\t<span class=\"options__text\">${2:text}</span>\n\t\t</label>\n\t</div>\n\t<div class=\"options__item\">\n\t\t<input class=\"options__input\" id=\"o_2\" type=\"radio\" value=\"2\" name=\"option\" hidden>\n\t\t<label class=\"options__label\" for=\"o_2\">\n\t\t\t<span class=\"options__text\">${3:text}</span>\n\t\t</label>\n\t</div>\n</div>"
+    "body": "<div class=\"options\">\n\t<label class=\"option\">\n\t\t<span class=\"option__text\">${1:text}</span>\n\t\t<input type=\"radio\" name=\"option\" checked>\n\t\t<span class=\"option__box\"></span>\n\t</label>\n\t<label class=\"option\">\n\t\t<span class=\"option__text\">${2:text}</span>\n\t\t<input type=\"radio\" name=\"option\">\n\t\t<span class=\"option__box\"></span>\n\t</label>\n</div>"
   },
   "Checkbox": {
     "prefix": "chk",
