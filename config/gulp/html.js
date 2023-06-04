@@ -6,12 +6,10 @@ import versionNumber from 'gulp-version-number'
 const html = () => {
 	return app.gulp.src(`${app.paths.build.html}*.html`)
 		.pipe(app.plugins.catchError('HTML'))
-		.pipe(
-			app.plugins.if(
-				app.isNoWebp,
-				webpHtmlNosvg()
-			)
-		)
+		.pipe(app.plugins.if(
+			app.isNoWebp,
+			webpHtmlNosvg()
+		))
 		.pipe(versionNumber({
 			'value': '%DT%',
 			'append': {
@@ -19,6 +17,7 @@ const html = () => {
 				'cover': 0,
 				'to': [
 					'css',
+					'img', // not working
 					'js'
 				]
 			}
