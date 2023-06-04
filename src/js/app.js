@@ -36,8 +36,6 @@ import { menuInit } from '@js/components/menu'
 
 // import { headerScroll } from '@js/modules/scroll/headerScroll'
 
-// import { stickyBlock } from '@js/modules/scroll/stickyBlock'
-
 // import { ScrollWatcher } from '@js/modules/scroll/watcher'
 
 import { lazyMedia } from '@js/libs/lazyLoad'
@@ -105,7 +103,6 @@ menuInit()
 // new ScrollWatcher()
 // pageNavigation()
 // headerScroll()
-// stickyBlock()
 lazyMedia
 
 // ----------------------------------------------------------------FORMS

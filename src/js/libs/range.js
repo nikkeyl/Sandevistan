@@ -8,7 +8,7 @@ function range() {
 	const priceSlider = document.querySelector('[data-range]')
 
 	function rangeInit() {
-		noUiSlider(priceSlider, {
+		noUiSlider.create(priceSlider, {
 			start: [0, 200000],
 			connect: true,
 			tooltips: [wNumb({ decimals: 0 }), wNumb({ decimals: 0 })],
