@@ -12,13 +12,9 @@ webPackConfigBeautify.optimization = {
 		new plugins.TerserPlugin({
 			extractComments: false,
 			terserOptions: {
+				compress: { defaults: false },
+				format: { beautify: true },
 				keep_classnames: true,
-				compress: {
-					defaults: false
-				},
-				format: {
-					beautify: true
-				},
 				keep_fnames: true,
 				mangle: false
 			}
@@ -35,9 +31,7 @@ webPackConfigBeautify.output = {
 const jsDev = () => {
 	return app.gulp.src(app.paths.src.js)
 		.pipe(app.plugins.catchError('JS'))
-		.pipe(plugins.webpack({
-			config: webPackConfigBeautify
-		}))
+		.pipe(plugins.webpack({ config: webPackConfigBeautify }))
 		.pipe(app.gulp.dest(app.paths.build.js))
 }
 
