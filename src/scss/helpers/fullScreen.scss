@@ -1,12 +1,3 @@
 [data-fullscreen] {
-  min-height: 100vh;
-
-  .touch & {
-    /* The (--vh) variable is used by the fullVHfix function */
-    min-height: calc(var(--vh, 1vh) * 100);
-
-    @include mediaMax($tablet) {
-      transition: min-height 0.3s;
-    }
-  }
+  @extend %fullScreen;
 }
