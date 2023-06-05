@@ -277,7 +277,7 @@
   },
   "Position Absolute Center": {
     "prefix": "img",
-    "body": "position: absolute;\ntop: 50%;\nleft: 50%;\ntransform: translate(-50%, -50%);\nwidth: 100%;\nheight: 100%;"
+    "body": "position: absolute;\ninset: 50%;\ntransform: translate(-50%, -50%);\nwidth: 100%;\nheight: 100%;"
   },
   "Background Blur": {
     "prefix": "br",
@@ -301,7 +301,7 @@
   },
   "Filter": {
     "prefix": "bfil",
-    "body": "position: relative;\n\n&::before {\n\t@include pseudo;\n\twidth: 100%;\n\theight: 100%;\n\ttop: 0;\n\tleft: 0;\n\tbackground-color: rgba(\\$colorDark, 0.3);\n}"
+    "body": "position: relative;\n\n&::before {\n\t@include pseudo;\n\tinset: 0;\n\twidth: 100%;\n\theight: 100%;\n\tbackground-color: rgba(\\$colorDark, 0.3);\n}"
   },
   "Padding In Rem": {
     "prefix": "pp",
@@ -369,7 +369,7 @@
   },
   "Position": {
     "prefix": "ps",
-    "body": "position: ${absolute};\nwidth: 100%;\nheight: 100%;\ntop: 0;\nleft: 0;"
+    "body": "position: ${absolute};\ninset: 0;\nwidth: 100%;\nheight: 100%;"
   },
   "Direction": {
     "prefix": "drt",
