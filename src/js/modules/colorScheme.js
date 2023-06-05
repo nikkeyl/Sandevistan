@@ -42,7 +42,9 @@ function colorScheme() {
 			if (saveUserTheme) {
 				htmlBlock.classList.add(saveUserTheme)
 				resetButton.classList.add('active')
-			} else htmlBlock.classList.add(userTheme)
+			} else {
+				htmlBlock.classList.add(userTheme)
+			}
 		}
 
 		setThemeClass()

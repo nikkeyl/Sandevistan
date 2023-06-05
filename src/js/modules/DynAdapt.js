@@ -44,8 +44,12 @@ class DynamicAdapt {
 				this.moveTo(object.place, object.element, object.destination)
 			})
 		} else {
-			objects.forEach(({ parent, element, index }) => {
-				if (element.classList.contains(this.daClassname)) this.moveBack(parent, element, index)
+			objects.forEach(({
+				parent, element, index
+			}) => {
+				if (element.classList.contains(this.daClassname)) {
+					this.moveBack(parent, element, index)
+				}
 			})
 		}
 	}
@@ -79,11 +83,17 @@ class DynamicAdapt {
 		if (this.type === 'min') {
 			arr.sort((a, b) => {
 				if (a.breakpoint === b.breakpoint) {
-					if (a.place === b.place) return 0
+					if (a.place === b.place) {
+						return 0
+					}
 
-					if (a.place === 'first' || b.place === 'last') return -1
+					if (a.place === 'first' || b.place === 'last') {
+						return -1
+					}
 
-					if (a.place === 'last' || b.place === 'first') return 1
+					if (a.place === 'last' || b.place === 'first') {
+						return 1
+					}
 
 					return 0
 				}
@@ -93,11 +103,17 @@ class DynamicAdapt {
 		} else {
 			arr.sort((a, b) => {
 				if (a.breakpoint === b.breakpoint) {
-					if (a.place === b.place) return 0
+					if (a.place === b.place) {
+						return 0
+					}
 
-					if (a.place === 'first' || b.place === 'last') return 1
+					if (a.place === 'first' || b.place === 'last') {
+						return 1
+					}
 
-					if (a.place === 'last' || b.place === 'first') return -1
+					if (a.place === 'last' || b.place === 'first') {
+						return -1
+					}
 
 					return 0
 				}

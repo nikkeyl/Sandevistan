@@ -178,8 +178,9 @@ class SelectConstructor {
 						this.optionAction(selectItem, originalSelect, optionItem)
 					} else if (
 						targetElement.closest(this.getSelectClass(this.selectClasses.classSelectTitle))
-					) this.selectAction(selectItem)
-					else if (
+					) {
+						this.selectAction(selectItem)
+					} else if (
 						targetElement.closest(this.getSelectClass(this.selectClasses.classSelectOption))
 					) {
 						const optionItem = targetElement.closest(this.getSelectClass(this.selectClasses.classSelectOption))
@@ -195,8 +196,12 @@ class SelectConstructor {
 						? selectItem.classList.add(this.selectClasses.classSelectFocus)
 						: selectItem.classList.remove(this.selectClasses.classSelectFocus)
 				}
-			} else if (targetType === 'keydown' && e.code === 'Escape') this.selectsClose()
-		} else this.selectsClose()
+			} else if (targetType === 'keydown' && e.code === 'Escape') {
+				this.selectsClose()
+			}
+		} else {
+			this.selectsClose()
+		}
 	}
 
 	selectsClose(selectOneGroup) {
@@ -252,7 +257,9 @@ class SelectConstructor {
 			this.selectClasses.classSelectTitle
 		).selectElement
 
-		if (selectItemTitle) selectItemTitle.remove()
+		if (selectItemTitle) {
+			selectItemTitle.remove()
+		}
 
 		selectItemBody.insertAdjacentHTML(
 			'afterbegin',
@@ -277,7 +284,9 @@ class SelectConstructor {
 				document.querySelector(originalSelect.dataset.tags).innerHTML
 					= selectTitleValue
 
-				if (originalSelect.hasAttribute('data-search')) selectTitleValue = false
+				if (originalSelect.hasAttribute('data-search')) {
+					selectTitleValue = false
+				}
 			}
 		}
 
@@ -391,7 +400,9 @@ class SelectConstructor {
 			selectedOptions = Array.from(originalSelect.options)
 				.filter(option => option.value)
 				.filter(option => option.selected)
-		} else selectedOptions.push(originalSelect.options[originalSelect.selectedIndex])
+		} else {
+			selectedOptions.push(originalSelect.options[originalSelect.selectedIndex])
+		}
 
 		return {
 			elements: selectedOptions.map(option => option),
@@ -419,7 +430,9 @@ class SelectConstructor {
 				this.getSelectPlaceholder(originalSelect)
 				&& !this.getSelectPlaceholder(originalSelect).show
 				|| originalSelect.multiple
-			) selectOptions = selectOptions.filter(option => option.value)
+			) {
+				selectOptions = selectOptions.filter(option => option.value)
+			}
 
 			selectOptionsHTML += selectOptionsScroll
 				? `<div ${selectOptionsScroll} ${selectOptionsScrollHeight}
@@ -510,7 +523,9 @@ class SelectConstructor {
 			if (!originalSelect.hasAttribute('data-show-selected')) {
 				if (
 					selectItem.querySelector(`${this.getSelectClass(this.selectClasses.classSelectOption)}[hidden]`)
-				) selectItem.querySelector(`${this.getSelectClass(this.selectClasses.classSelectOption)}[hidden]`).hidden = false
+				) {
+					selectItem.querySelector(`${this.getSelectClass(this.selectClasses.classSelectOption)}[hidden]`).hidden = false
+				}
 
 				optionItem.hidden = true
 			}
@@ -533,7 +548,9 @@ class SelectConstructor {
 	}
 
 	setSelectChange(originalSelect) {
-		if (originalSelect.hasAttribute('data-validate')) formValidate.validateInput(originalSelect)
+		if (originalSelect.hasAttribute('data-validate')) {
+			formValidate.validateInput(originalSelect)
+		}
 
 		if (originalSelect.hasAttribute('data-submit') && originalSelect.value) {
 			const tempButton = document.createElement('button')
@@ -583,8 +600,11 @@ class SelectConstructor {
 					selectOptionsItem.textContent
 						.toUpperCase()
 						.indexOf(selectInput.value.toUpperCase()) >= 0
-				) selectOptionsItem.hidden = false
-				else selectOptionsItem.hidden = true
+				) {
+					selectOptionsItem.hidden = false
+				} else {
+					selectOptionsItem.hidden = true
+				}
 			})
 			selectOptions.hidden === true
 				? that.selectAction(selectItem)

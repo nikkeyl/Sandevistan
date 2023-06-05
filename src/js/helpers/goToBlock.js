@@ -11,7 +11,21 @@ const gotoBlock = (targetBlock, noHeader = false, speed = 500, offsetTop = 0) =>
 
 		if (noHeader) {
 			headerItem = 'header.header'
-			headerItemHeight = document.querySelector(headerItem).offsetHeight
+
+			const headerElement = document.querySelector(headerItem)
+
+			if (!headerElement.classList.contains('header-scroll')) {
+				headerElement.style.cssText = 'transition-duration: 0s;'
+				headerElement.classList.add('header-scroll')
+				headerItemHeight = headerElement.offsetHeight
+				headerElement.classList.remove('header-scroll')
+
+				// setTimeout(() => {
+				// 	headerElement.style.cssText = ``;
+				// }, 0);
+			} else {
+				headerItemHeight = headerElement.offsetHeight
+			}
 		}
 
 		const options = {

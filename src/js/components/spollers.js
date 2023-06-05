@@ -47,7 +47,9 @@ function spollers() {
 			if (hideSpollerBody) {
 				spollerTitle.removeAttribute('tabindex')
 
-				if (!spollerTitle.classList.contains('spoller-active')) spollerTitle.nextElementSibling.hidden = true
+				if (!spollerTitle.classList.contains('spoller-active')) {
+					spollerTitle.nextElementSibling.hidden = true
+				}
 			} else {
 				spollerTitle.setAttribute('tabindex', '-1')
 				spollerTitle.nextElementSibling.hidden = false

@@ -90,7 +90,9 @@ function tabs() {
 		let tabsContent = tabsBlock.querySelectorAll('[data-tabs-item]')
 
 		function isTabsAnamate(tabsBlock) {
-			if (tabsBlock.hasAttribute('data-tabs-animate')) return +tabsBlock.dataset.tabsAnimate || 500
+			if (tabsBlock.hasAttribute('data-tabs-animate')) {
+				return +tabsBlock.dataset.tabsAnimate || 500
+			}
 		}
 
 		const tabsBlockAnimate = isTabsAnamate(tabsBlock)
@@ -106,8 +108,11 @@ function tabs() {
 				isHash && !tabsContentItem.closest('.popup')
 					? setHash(`tab-${tabsBlockIndex}-${index}`)
 					: null
-			} else if (tabsBlockAnimate) slideUp(tabsContentItem, tabsBlockAnimate)
-			else tabsContentItem.hidden = true
+			} else if (tabsBlockAnimate) {
+				slideUp(tabsContentItem, tabsBlockAnimate)
+			} else {
+				tabsContentItem.hidden = true
+			}
 		})
 	}
 

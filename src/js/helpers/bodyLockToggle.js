@@ -1,4 +1,6 @@
-import { lockPadding, html, body } from '@js/helpers/nodeList'
+import {
+	lockPadding, html, body
+} from '@js/helpers/nodeList'
 
 let bodyLockStatus = true
 

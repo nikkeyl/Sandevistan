@@ -108,6 +108,7 @@
 				"content",
 				"quotes",
 				"position",
+				"inset",
 				"left",
 				"right",
 				"top",

@@ -12,7 +12,9 @@ function menuInit() {
 			if (bodyLockStatus && target.closest('.icon-menu')) {
 				bodyLockToggle()
 				html.classList.toggle('menu-open')
-			} else if (bodyLockStatus && !target.closest('.menu__body')) html.classList.remove('menu-open')
+			} else if (bodyLockStatus && !target.closest('.menu__body')) {
+				html.classList.remove('menu-open')
+			}
 		})
 		document.addEventListener('keyup', e => {
 			e.code === 'Escape' && html.classList.remove('menu-open')
@@ -30,4 +32,6 @@ function menuClose() {
 	html.classList.remove('menu-open')
 }
 
-export { menuClose, menuOpen, menuInit }
+export {
+	menuClose, menuOpen, menuInit
+}

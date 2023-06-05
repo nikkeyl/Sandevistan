@@ -5,6 +5,7 @@ import autoPrefixer from 'gulp-autoprefixer'
 import cleanCss from 'gulp-clean-css'
 import webpCss from 'gulp-webpcss'
 import cssComb from 'gulp-csscomb'
+
 // import purge from 'gulp-css-purge'
 
 const css = () => {
@@ -15,19 +16,16 @@ const css = () => {
 			noWebpClass: '.no-webp',
 			webpClass: '.webp'
 		}))
-		// .pipe(purge({
+
+		// .pipe(purge({ // working with errors
 		// 	shorten: false,
 		// 	trim: false
 		// }))
 		.pipe(cssComb())
 		.pipe(autoPrefixer())
 		.pipe(app.gulp.dest(app.paths.build.css))
-		.pipe(cleanCss({
-			level: 2
-		}))
-		.pipe(app.plugins.rename({
-			suffix: '.min'
-		}))
+		.pipe(cleanCss({ level: 2 }))
+		.pipe(app.plugins.rename({ suffix: '.min' }))
 		.pipe(app.gulp.dest(app.paths.build.css))
 }
 

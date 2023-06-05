@@ -27,7 +27,10 @@ if (document.querySelectorAll('[data-tippy-content]')) {
 		// Arrow: true,
 		// Content: '',
 		delay: 0,
-		duration: [300, 250],
+		duration: [
+			300,
+			250
+		],
 
 		// FollowCursor: false,
 		// GetReferenceClientRect: null,
@@ -40,7 +43,10 @@ if (document.querySelectorAll('[data-tippy-content]')) {
 		interactiveDebounce: 0,
 		maxWidth: 350,
 		moveTransition: '',
-		offset: [0, 10],
+		offset: [
+			0,
+			10
+		],
 		placement: 'top',
 		role: 'tooltip',
 		showOnCreate: false,

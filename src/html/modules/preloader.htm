@@ -35,8 +35,7 @@
 
 		.preloader {
 			position: fixed;
-			left: 0;
-			top: 0;
+			inset: 0;
 			z-index: -1;
 			display: flex;
 			align-items: center;
@@ -90,14 +89,14 @@
 				)
 
 				const preloader = document.querySelector('.preloader')
-				const showPercentLoad = document.querySelector('.preloader__counter')
-				const showLineLoad = document.querySelector('.preloader__line span')
-				const htmlDocument = document.documentElement
+				const percentLoad = document.querySelector('.preloader__counter')
+				const lineLoad = document.querySelector('.preloader__line span')
+				const html = document.documentElement
 
 				let imagesLoadedCount = counter = progress = 0
 
-				htmlDocument.classList.add('loading')
-				htmlDocument.classList.add('lock')
+				html.classList.add('loading')
+				html.classList.add('lock')
 
 				preloaderImages.forEach(preloaderImage => {
 					const imgClone = document.createElement('img')
@@ -112,15 +111,11 @@
 				})
 
 				function setValueProgress(progress) {
-					showPercentLoad
-						? showPercentLoad.innerText = `${progress}%`
-						: null
-					showLineLoad
-						? showLineLoad.style.width = `${progress}%`
-						: null
+					percentLoad?.percentLoad.innerText = `${progress}%`
+					lineLoad?.style.width = `${progress}%`
 				}
 
-				showPercentLoad
+				percentLoad
 					? setValueProgress(progress)
 					: null
 
@@ -139,9 +134,10 @@
 				}
 
 				function addLoadedClass() {
-					htmlDocument.classList.add('loaded')
-					htmlDocument.classList.remove('lock')
-					htmlDocument.classList.remove('loading')
+					html.classList.add('loaded')
+					html.classList.remove('lock')
+					html.classList.remove('loading')
+					
 					setInterval(() => {
 						preloader.remove()
 						preloaderContainer.remove()

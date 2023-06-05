@@ -1,5 +1,9 @@
-import { bodyLockStatus, bodyUnlock, bodyLock } from '@js/helpers/bodyLockToggle'
-import { nodeObjects, html } from '@js/helpers/nodeList'
+import {
+	bodyLockStatus, bodyUnlock, bodyLock
+} from '@js/helpers/bodyLockToggle'
+import {
+	nodeObjects, html
+} from '@js/helpers/nodeList'
 
 class Popup {
 	constructor(options) {
@@ -102,7 +106,9 @@ class Popup {
 					this.youTubeCode = buttonOpen?.getAttribute(this.options.youtubeAttribute) || null
 
 					if (this.dataValue !== 'error') {
-						if (!this.isOpen) this.lastFocusEl = buttonOpen
+						if (!this.isOpen) {
+							this.lastFocusEl = buttonOpen
+						}
 
 						this.targetOpen.selector = `${this.dataValue}`
 						this.selectorOpen = true
@@ -156,15 +162,20 @@ class Popup {
 			window.addEventListener(
 				'hashchange',
 				function () {
-					if (window.location.hash) this.openToHash()
-					else this.close(this.targetOpen.selector)
+					if (window.location.hash) {
+						this.openToHash()
+					} else {
+						this.close(this.targetOpen.selector)
+					}
 				}.bind(this)
 			)
 
 			window.addEventListener(
 				'load',
 				function () {
-					if (window.location.hash) this.openToHash()
+					if (window.location.hash) {
+						this.openToHash()
+					}
 				}.bind(this)
 			)
 		}
@@ -191,9 +202,13 @@ class Popup {
 				this.close()
 			}
 
-			if (!this.selectorOpen) this.targetOpen.selector = this.lastClosed.selector
+			if (!this.selectorOpen) {
+				this.targetOpen.selector = this.lastClosed.selector
+			}
 
-			if (!this.reopen) this.previousActiveElement = document.activeElement
+			if (!this.reopen) {
+				this.previousActiveElement = document.activeElement
+			}
 
 			this.targetOpen.element = document.querySelector(this.targetOpen.selector)
 
@@ -242,7 +257,9 @@ class Popup {
 					!this.bodyLock
 						? bodyLock()
 						: null
-				} else this.reopen = false
+				} else {
+					this.reopen = false
+				}
 
 				this.targetOpen.element.setAttribute('aria-hidden', 'false')
 				this.previousOpen.selector = this.targetOpen.selector
@@ -263,9 +280,13 @@ class Popup {
 			selectorValue
             && typeof selectorValue === 'string'
             && selectorValue.trim() !== ''
-		) this.previousOpen.selector = selectorValue
+		) {
+			this.previousOpen.selector = selectorValue
+		}
 
-		if (!this.isOpen || !bodyLockStatus) return
+		if (!this.isOpen || !bodyLockStatus) {
+			return
+		}
 
 		this.options.on.beforeClose(this)
 		document.dispatchEvent(new CustomEvent('beforePopupClose', { detail: { popup: this } }))
@@ -273,7 +294,9 @@ class Popup {
 		if (this.youTubeCode) {
 			if (
 				this.targetOpen.element.querySelector(`[${this.options.youtubePlaceAttribute}]`)
-			) this.targetOpen.element.querySelector(`[${this.options.youtubePlaceAttribute}]`).innerHTML = ''
+			) {
+				this.targetOpen.element.querySelector(`[${this.options.youtubePlaceAttribute}]`).innerHTML = ''
+			}
 		}
 
 		this.previousOpen.element.classList.remove(this.options.classes.popupActive)
@@ -320,7 +343,9 @@ class Popup {
 			'#'
 		)}"]`)
 
-		if (buttons && classInHash) this.open(classInHash)
+		if (buttons && classInHash) {
+			this.open(classInHash)
+		}
 	}
 
 	setHash() {

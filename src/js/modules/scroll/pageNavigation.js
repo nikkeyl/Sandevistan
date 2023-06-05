@@ -27,10 +27,10 @@ function pageNavigation() {
 				let navigatorCurrentItem
 
 				if (
-					targetElement.id
-                    && document.querySelector(`[data-goto="#${targetElement.id}"]`)
-				) navigatorCurrentItem = document.querySelector(`[data-goto="#${targetElement.id}"]`)
-				else if (targetElement.classList.length) {
+					targetElement.id && document.querySelector(`[data-goto="#${targetElement.id}"]`)
+				) {
+					navigatorCurrentItem = document.querySelector(`[data-goto="#${targetElement.id}"]`)
+				} else if (targetElement.classList.length) {
 					for (let i = 0; i < targetElement.classList.length; i++) {
 						const element = targetElement.classList[i]
 
@@ -42,8 +42,11 @@ function pageNavigation() {
 					}
 				}
 
-				if (entry.isIntersecting) navigatorCurrentItem?.classList.add('navigator-active')
-				else navigatorCurrentItem?.classList.remove('navigator-active')
+				if (entry.isIntersecting) {
+					navigatorCurrentItem?.classList.add('navigator-active')
+				} else {
+					navigatorCurrentItem?.classList.remove('navigator-active')
+				}
 			}
 		}
 	}

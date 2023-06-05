@@ -8,7 +8,9 @@ function counter() {
 			let startTimestamp
 
 			const step = timestamp => {
-				if (!startTimestamp) startTimestamp = timestamp
+				if (!startTimestamp) {
+					startTimestamp = timestamp
+				}
 
 				const progress = Math.min((timestamp - startTimestamp) / duration, 1)
 
@@ -25,7 +27,9 @@ function counter() {
 
 		const options = { threshold: 0.3 }
 		const observer = new IntersectionObserver((entries, observer) => {
-			entries.forEach(({ isIntersecting, target }) => {
+			entries.forEach(({
+				isIntersecting, target
+			}) => {
 				if (isIntersecting) {
 					const digitsCountersItems = target.querySelectorAll('[data-digits-counter]')
 

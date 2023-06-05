@@ -45,8 +45,9 @@ function rating() {
 				ratingItem.addEventListener('click', () => {
 					initRatingVars(rating)
 
-					if (rating.dataset.ajax) setRatingValue(ratingItem.value, rating)
-					else {
+					if (rating.dataset.ajax) {
+						setRatingValue(ratingItem.value, rating)
+					} else {
 						ratingValue.innerHTML = index + 1
 						setRatingActiveWidth()
 					}

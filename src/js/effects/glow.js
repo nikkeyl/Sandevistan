@@ -6,7 +6,9 @@ function glow() {
 	function buttonActions(e) {
 		const button = e.target.closest('[data-glow]')
 
-		if (!button) return
+		if (!button) {
+			return
+		}
 
 		if (e.type === 'mouseover') {
 			button.insertAdjacentHTML(
@@ -25,7 +27,9 @@ function glow() {
 			bGlowColor.style.height = `${button.offsetHeight}px`
 		}
 
-		if (e.type === 'mouseout') button.querySelector('.button__glow').remove()
+		if (e.type === 'mouseout') {
+			button.querySelector('.button__glow').remove()
+		}
 
 		if (e.type === 'mousemove') {
 			const posX = e.pageX - (button.getBoundingClientRect().left - scrollX)

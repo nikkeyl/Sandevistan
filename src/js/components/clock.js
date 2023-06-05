@@ -9,7 +9,9 @@ function clock() {
 			})
 			const clock = document.querySelector('[data-clock]')
 
-			if (clock) clock.innerHTML = time
+			if (clock) {
+				clock.innerHTML = time
+			}
 		}, 1000)
 	})
 }

@@ -18,13 +18,19 @@ function quantity() {
 				if (
 					+valueElement.dataset.quantityMax
                     && +valueElement.dataset.quantityMax < value
-				) value = valueElement.dataset.quantityMax
+				) {
+					value = valueElement.dataset.quantityMax
+				}
 			} else {
 				--value
 
 				if (+valueElement.dataset.quantityMin) {
-					if (+valueElement.dataset.quantityMin > value) value = valueElement.dataset.quantityMin
-				} else if (value < 1) value = 1
+					if (+valueElement.dataset.quantityMin > value) {
+						value = valueElement.dataset.quantityMin
+					}
+				} else if (value < 1) {
+					value = 1
+				}
 			}
 
 			targetElement

@@ -9,9 +9,15 @@ function range() {
 
 	function rangeInit() {
 		noUiSlider.create(priceSlider, {
-			start: [0, 200000],
+			start: [
+				0,
+				200000
+			],
 			connect: true,
-			tooltips: [wNumb({ decimals: 0 }), wNumb({ decimals: 0 })],
+			tooltips: [
+				wNumb({ decimals: 0 }),
+				wNumb({ decimals: 0 })
+			],
 			range: {
 				min: 0,
 				max: 200000
@@ -31,14 +37,19 @@ function range() {
 			priceEnd.value !== ''
 				? priceEndValue = priceEnd.value
 				: null
-			priceSlider.noUiSlider.set([priceStartValue, priceEndValue])
+			priceSlider.noUiSlider.set([
+				priceStartValue,
+				priceEndValue
+			])
 		}
 
 		priceStart.addEventListener('change', setPriceValues)
 		priceEnd.addEventListener('change', setPriceValues)
 	}
 
-	if (priceSlider) rangeInit()
+	if (priceSlider) {
+		rangeInit()
+	}
 }
 
 export { range }

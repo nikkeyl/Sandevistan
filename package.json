@@ -32,6 +32,7 @@
 		"gulp-fonter-fix": "latest",
 		"gulp-group-css-media-queries": "latest",
 		"gulp-html-bem-validator": "latest",
+		"gulp-htmlmin": "latest",
 		"gulp-if": "latest",
 		"gulp-imagemin": "latest",
 		"gulp-newer": "latest",

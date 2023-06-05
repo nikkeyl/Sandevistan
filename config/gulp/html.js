@@ -2,6 +2,7 @@ import { app } from '../../gulpfile.js'
 
 import webpHtmlNosvg from 'gulp-webp-html-nosvg'
 import versionNumber from 'gulp-version-number'
+import htmlMin from 'gulp-htmlmin'
 
 const html = () => {
 	return app.gulp.src(`${app.paths.build.html}*.html`)
@@ -17,11 +18,11 @@ const html = () => {
 				'cover': 0,
 				'to': [
 					'css',
-					'img', // not working
 					'js'
 				]
 			}
 		}))
+		.pipe(htmlMin({ removeComments: true }))
 		.pipe(app.gulp.dest(app.paths.build.html))
 }
 

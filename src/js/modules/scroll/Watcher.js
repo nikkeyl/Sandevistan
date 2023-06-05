@@ -39,7 +39,9 @@ class ScrollWatcher {
 					String(watchRoot) === paramsWatch.root
                     && String(watchMargin) === paramsWatch.margin
                     && String(watchThreshold) === paramsWatch.threshold
-				) return item
+				) {
+					return item
+				}
 			})
 			const configWatcher = this.getScrollWatcherConfig(paramsWatch)
 
@@ -50,15 +52,21 @@ class ScrollWatcher {
 	getScrollWatcherConfig(paramsWatch) {
 		const configWatcher = {}
 
-		if (document.querySelector(paramsWatch.root)) configWatcher.root = document.querySelector(paramsWatch.root)
+		if (document.querySelector(paramsWatch.root)) {
+			configWatcher.root = document.querySelector(paramsWatch.root)
+		}
 
 		configWatcher.rootMargin = paramsWatch.margin
 
 		if (paramsWatch.threshold === 'prx') {
 			paramsWatch.threshold = []
 
-			for (let i = 0; i <= 1.0; i += 0.005) paramsWatch.threshold.push(i)
-		} else paramsWatch.threshold = paramsWatch.threshold.split(',')
+			for (let i = 0; i <= 1.0; i += 0.005) {
+				paramsWatch.threshold.push(i)
+			}
+		} else {
+			paramsWatch.threshold = paramsWatch.threshold.split(',')
+		}
 
 		configWatcher.threshold = paramsWatch.threshold
 

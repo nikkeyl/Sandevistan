@@ -47,10 +47,7 @@
 		// ],
 		// "consistent-return": "error", // learn more
 		"consistent-this": "error",
-		"curly": [
-			"error",
-			"multi-or-nest"
-		],
+		"curly": "error",
 		"default-case": "error",
 		"default-case-last": "error",
 		"default-param-last": "error",
@@ -172,7 +169,7 @@
 			"error",
 			{
 				"multiline": true,
-				"minItems": 4
+				"minItems": 2
 			}
 		],
 		"array-bracket-spacing": "error",
@@ -180,7 +177,7 @@
 			"error",
 			{
 				"multiline": true,
-				"minItems": 4
+				"minItems": 2
 			}
 		],
 		"arrow-parens": [
@@ -265,7 +262,7 @@
 			"error",
 			{
 				"multiline": true,
-				"minProperties": 4
+				"minProperties": 2
 			}
 		],
 		"object-curly-spacing": [

@@ -76,7 +76,9 @@ function showMore() {
 
 					hiddenHeight += showMoreItem.offsetHeight
 
-					if (i === showMoreTypeValue) break
+					if (i === showMoreTypeValue) {
+						break
+					}
 				}
 			} else {
 				const showMoreTypeValue

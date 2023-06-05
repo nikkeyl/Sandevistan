@@ -9,7 +9,9 @@ class MousePRLX {
 		if (this.config) {
 			const paralaxMouse = document.querySelectorAll('[data-prlx-mouse]')
 
-			if (paralaxMouse.length) this.paralaxMouseInit(paralaxMouse)
+			if (paralaxMouse.length) {
+				this.paralaxMouseInit(paralaxMouse)
+			}
 		}
 	}
 

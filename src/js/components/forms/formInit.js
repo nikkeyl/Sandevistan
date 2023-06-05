@@ -76,7 +76,9 @@ function formFieldsInit(options = {
 		})
 	})
 
-	if (options.autoHeight) setHeight()
+	if (options.autoHeight) {
+		setHeight()
+	}
 }
 
 export { formFieldsInit }
