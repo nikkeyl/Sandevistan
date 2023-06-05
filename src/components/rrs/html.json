@@ -7,6 +7,10 @@
     "prefix": "dm",
     "body": "data-marquee"
   },
+  "Data Placeholder No Hidden": {
+    "prefix": "dpnh",
+    "body": "data-placeholder-nohidden"
+  },
   "Data Change Font Item": {
     "prefix": "dfi",
     "body": "data-font-item"
