@@ -103,38 +103,6 @@
     "prefix": "avw",
     "body": "@include adaptiveValue(\"width\", $1, $2, 1, \\$maxWidth, \\$minWidth);"
   },
-  "%Responsive Video": {
-    "prefix": "erv",
-    "body": "@extend %responsiveVideo"
-  },
-  "Extend Video Background": {
-    "prefix": "evb",
-    "body": "@extend %videoBackground"
-  },
-  "Extend List Counter": {
-    "prefix": "elc",
-    "body": "@extend %listCounter"
-  },
-  "Extend Gray Filter": {
-    "prefix": "egf",
-    "body": "@extend %grayFilter"
-  },
-  "Extend Hide Scroll": {
-    "prefix": "ehs",
-    "body": "@extend %hideScroll"
-  },
-  "Extend Touch": {
-    "prefix": "etouch",
-    "body": "@extend %touch"
-  },
-  "Extend Mirror": {
-    "prefix": "emir",
-    "body": "@extend %mirror"
-  },
-  "Extend User Select": {
-    "prefix": "eus",
-    "body": "@extend %userSelect"
-  },
   "@media max": {
     "prefix": "md",
     "body": "@include mediaMax($1) {\n\t$2\n}"
@@ -175,29 +143,49 @@
     "prefix": "mmd4",
     "body": "@include mediaMin(\\$phone) {\n\t$0\n}"
   },
-  "Gap With Rem ": {
-    "prefix": "gap",
-    "body": "gap: rem($0);"
+  "Transition And Hover": {
+    "prefix": "hhv",
+    "body": "transition: ${1:all} 0.${2:3}s ${3:0}s;\n\n@include mediaHover {\n\t$4\n}"
   },
-  "Dark Theme": {
-    "prefix": "dt",
-    "body": ".dark & {\n\tbackground-color: \\$color$1;\n\tcolor: \\$color$2;\n}"
+  "Hover Decoration Underline": {
+    "prefix": "hvu",
+    "body": "@include mediaHover {\n\ttext-decoration: underline;\n}"
   },
-  "Letter Spacing With Em": {
-    "prefix": "lte",
-    "body": "letter-spacing: em($1, ${2:\\$fontSize});"
+  "Hover Decoration None": {
+    "prefix": "hvn",
+    "body": "@include mediaHover {\n\ttext-decoration: none;\n}"
   },
-  "Font Family": {
-    "prefix": "ff",
-    "body": "font-family: \\$font$0;"
+  "%Responsive Video": {
+    "prefix": "erv",
+    "body": "@extend %responsiveVideo"
   },
-  "Light Theme": {
-    "prefix": "lt",
-    "body": ".ligth & {\n\tbackground-color: \\$color$1;\n\tcolor: \\$color$2;\n}"
+  "Extend Video Background": {
+    "prefix": "evb",
+    "body": "@extend %videoBackground"
   },
-  "Flex Centering": {
-    "prefix": "cf",
-    "body": "display: flex;\nflex-direction: column;\nalign-items: center;"
+  "Extend List Counter": {
+    "prefix": "elc",
+    "body": "@extend %listCounter"
+  },
+  "Extend Gray Filter": {
+    "prefix": "egf",
+    "body": "@extend %grayFilter"
+  },
+  "Extend Hide Scroll": {
+    "prefix": "ehs",
+    "body": "@extend %hideScroll"
+  },
+  "Extend Touch": {
+    "prefix": "etouch",
+    "body": "@extend %touch"
+  },
+  "Extend Mirror": {
+    "prefix": "emir",
+    "body": "@extend %mirror"
+  },
+  "Extend User Select": {
+    "prefix": "eus",
+    "body": "@extend %userSelect"
   },
   "Em": {
     "prefix": "em",
@@ -215,6 +203,34 @@
     "prefix": "asr",
     "body": "aspectRatio(${1:16}, ${2:9})"
   },
+  "Dark Theme": {
+    "prefix": "dt",
+    "body": ".dark & {\n\tbackground-color: \\$color$1;\n\tcolor: \\$color$2;\n}"
+  },
+  "Light Theme": {
+    "prefix": "lt",
+    "body": ".ligth & {\n\tbackground-color: \\$color$1;\n\tcolor: \\$color$2;\n}"
+  },
+  "Font Family": {
+    "prefix": "ff",
+    "body": "font-family: \\$font$0;"
+  },
+  "Letter Spacing With Em": {
+    "prefix": "lte",
+    "body": "letter-spacing: em($1, ${2:\\$fontSize});"
+  },
+  "Font Size In Rem": {
+    "prefix": "fz",
+    "body": "\\$fontSize: ${0:18};\n\nfont-size: rem(\\$fontSize);"
+  },
+  "Gap With Rem ": {
+    "prefix": "gap",
+    "body": "gap: rem($0);"
+  },
+  "Flex Centering": {
+    "prefix": "cf",
+    "body": "display: flex;\nflex-direction: column;\nalign-items: center;"
+  },
   "Z-index And Position Relative": {
     "prefix": "z",
     "body": "z-index: 3;\nposition: relative;"
@@ -226,10 +242,6 @@
   "Percentage Padding Bottom": {
     "prefix": "pbp",
     "body": "padding-bottom: percent($1, $2);"
-  },
-  "Font Size In Rem": {
-    "prefix": "fz",
-    "body": "\\$fontSize: ${0:18};\n\nfont-size: rem(\\$fontSize);"
   },
   "Divide": {
     "prefix": "di",
@@ -263,10 +275,6 @@
     "prefix": "nlc",
     "body": "&:not(:last-child) {\n\t$0\n}"
   },
-  "Image 100%": {
-    "prefix": "is",
-    "body": "img {\n\tmax-width: 100%;\n}"
-  },
   "Position Absolute Center": {
     "prefix": "img",
     "body": "position: absolute;\ntop: 50%;\nleft: 50%;\ntransform: translate(-50%, -50%);\nwidth: 100%;\nheight: 100%;"
@@ -293,7 +301,7 @@
   },
   "Filter": {
     "prefix": "bfil",
-    "body": "position: relative;\n\n&::before {\n\t@include pseudo();\n\twidth: 100%;\n\theight: 100%;\n\ttop: 0;\n\tleft: 0;\n\tbackground-color: rgba(\\$colorDark, 0.3);\n}"
+    "body": "position: relative;\n\n&::before {\n\t@include pseudo;\n\twidth: 100%;\n\theight: 100%;\n\ttop: 0;\n\tleft: 0;\n\tbackground-color: rgba(\\$colorDark, 0.3);\n}"
   },
   "Padding In Rem": {
     "prefix": "pp",
@@ -383,10 +391,6 @@
     "prefix": "ha",
     "body": "height: auto;"
   },
-  "Color": {
-    "prefix": "c",
-    "body": "color: #${0:fff};"
-  },
   "Animation": {
     "prefix": "an",
     "body": "animation: ${1:name} ${2:1}s ${3:infinite} ${4:linear};"
@@ -405,11 +409,11 @@
   },
   "Transform Translate": {
     "prefix": "at",
-    "body": "transform: translate(rem(${1:0}), rem(${2:0}));"
+    "body": "transform: translate(-50%, -50%);"
   },
   "Transform All": {
     "prefix": "att",
-    "body": "transform: translate(rem(${1:0}), rem(${2:0})) rotate(${3:0}deg) scale(${4:1}) skew(${5:0}, ${6:0});"
+    "body": "transform: translate(-50%, -50%) rotate(${3:0}deg) scale(${4:1}) skew(${5:0}, ${6:0});"
   },
   "Last Child": {
     "prefix": "lc",
@@ -455,10 +459,6 @@
     "prefix": "bg+",
     "body": "background: url(\"@img$0\") 0 0 no-repeat;"
   },
-  "Flex Order": {
-    "prefix": "fbo",
-    "body": "order: ${0:1};"
-  },
   "Justify Content": {
     "prefix": "fbs",
     "body": "justify-content: space-${0:between};"
@@ -469,11 +469,11 @@
   },
   "Flex Row": {
     "prefix": "dfr",
-    "body": "display: flex;\nflex-direction: row;\nflex-wrap: wrap;\njustify-content: center;\nalign-items: center;"
+    "body": "display: flex;\nflex-wrap: wrap;\njustify-content: center;\nalign-items: center;"
   },
   "Flex Column": {
     "prefix": "dfc",
-    "body": "display: flex;\nflex-direction: column;\nflex-wrap: wrap;\njustify-content: center;\nalign-items: center;"
+    "body": "display: flex;\nflex-direction: column;\njustify-content: center;\nalign-items: center;"
   },
   "Flex wrap": {
     "prefix": "fbw",
@@ -519,28 +519,16 @@
     "prefix": "hh",
     "body": "transition: ${1:all} 0.${2:3}s ${3:0}s;\n\n@media (any-hover: hover) {\n\t$4\n}"
   },
-  "Transition And Hover": {
-    "prefix": "hhv",
-    "body": "transition: ${1:all} 0.${2:3}s ${3:0}s;\n\n@include mediaHover {\n\t$4\n}"
-  },
-  "Hover Decoration Underline": {
-    "prefix": "hvu",
-    "body": "@include mediaHover {\n\ttext-decoration: underline;\n}"
-  },
-  "Hover Decoration None": {
-    "prefix": "hvn",
-    "body": "@include mediaHover {\n\ttext-decoration: none;\n}"
-  },
   "Key Frames": {
     "prefix": "kf",
     "body": "@keyframes ${1:name} {\n\t0% {\n\t\t$2\n\t}\n\t100% {\n\t\t$3\n\t}\n}"
   },
-  "Separating Comment": {
-    "prefix": "sp",
-    "body": "// ======================================================================================================================================================== //"
-  },
   "White Space": {
     "prefix": "wsnw",
     "body": "white-space: ${no}wrap;"
+  },
+  "Separating Comment": {
+    "prefix": "sp",
+    "body": "// ======================================================================================================================================================== //"
   }
 }
