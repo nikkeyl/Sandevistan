@@ -15,8 +15,8 @@
     will-change: opacity;
 
     .lg-progress {
-        width: 0;
-        height: $lg-progress-bar-height;
+        @include widthHeight(0, $lg-progress-bar-height);
+
         background-color: $lg-progress-bar-active-bg;
     }
 

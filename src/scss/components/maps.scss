@@ -2,8 +2,7 @@
   @include widthHeight(rem(100), rem(100));
 
   position: absolute;
-  left: 50%;
-  top: 50%;
+  inset: 50%;
   border: rem(10) solid $colorLight;
   border-top-color: $colorDarkGray;
   border-radius: 50%;

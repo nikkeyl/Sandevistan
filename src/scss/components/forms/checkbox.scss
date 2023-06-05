@@ -17,22 +17,21 @@
   &__box {
     $size: 20;
 
+    @include widthHeight(rem($size), rem($size));
+
     position: relative;
     flex: 0 0 rem($size);
     align-self: flex-start;
     border: rem(2) solid $colorGray;
     border-radius: rem(3);
-    width: rem($size);
-    height: rem($size);
 
     &::after {
+      @include widthHeight(rem(20), rem(20));
+
       content: "";
       position: absolute;
-      left: rem(-2);
-      top: rem(-2);
+      inset: rem(-2);
       border-radius: rem(3);
-      width: rem(20);
-      height: rem(20);
       background-color: $colorDark;
       transform: scale(0);
       transition: transform 0.3s;
@@ -42,9 +41,8 @@
       @include widthHeight(rem(10), rem(10));
 
       position: absolute;
-      left: rem(3);
-      top: rem(3);
-      fill: $color-light;
+      inset: rem(3);
+      fill: $colorLight;
       transform: scale(0);
     }
   }

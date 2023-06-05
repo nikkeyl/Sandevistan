@@ -1,4 +1,4 @@
-.change-font-buttons {
+.change-font {
   display: flex;
   align-items: flex-end;
   gap: rem(10);
@@ -25,16 +25,6 @@
       @include widthHeight(rem(35), rem(35));
     }
   }
-}
-
-[data-font-item] {
-  transition: font-size 0.3s;
-}
-
-.change-font-range {
-  display: flex;
-  gap: rem(15);
-  width: fit-content;
 
   &__range {
     appearance: none;
@@ -42,10 +32,10 @@
     background-color: transparent;
 
     &::-webkit-slider-thumb {
+      @include widthHeight(rem(10), rem(10));
+
       appearance: none;
       border-radius: 50%;
-      width: rem(10);
-      height: rem(10);
       background-color: $colorDark;
       cursor: pointer;
     }
@@ -72,4 +62,8 @@
     color: $colorLight;
     background-color: $colorDark;
   }
+}
+
+[data-font-item] {
+  transition: font-size 0.3s;
 }

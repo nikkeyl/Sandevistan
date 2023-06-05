@@ -23,8 +23,7 @@
   @include widthHeight(100%, 100%);
 
   position: absolute;
-  right: 0;
-  top: 0;
+  inset: 0;
   transform-origin: 0 0;
   will-change: transform;
 }

@@ -7,6 +7,6 @@
   transition: stroke 0.3s;
 
   @include mediaHover {
-    stroke: $colorGray;
+    stroke: $colorDark;
   }
 }

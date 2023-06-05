@@ -8,8 +8,7 @@
       @include pseudo;
       @include widthHeight(100%, 100%);
 
-      left: 0;
-      top: 0;
+      inset: 0;
       z-index: 2;
       backdrop-filter: blur(rem(25));
     }
@@ -21,15 +20,13 @@
 
     &__glow {
       position: absolute;
-      left: 0;
-      top: 0;
+      inset: 0;
       overflow: hidden;
     }
 
     &__color {
       position: absolute;
-      left: 0;
-      top: 0;
+      inset: 0;
       background-color: $colorLight;
     }
   }

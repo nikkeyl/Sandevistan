@@ -15,8 +15,7 @@
       @include widthHeight(rem(10), rem(1));
       @include pseudo;
 
-      left: 50%;
-      top: 50%;
+      inset: 50%;
       margin: 0 0 0 rem(-4.5);
       border-radius: rem(1);
       background-color: $colorGray;

@@ -4,8 +4,7 @@
     @include widthHeight(100%, 100%);
 
     position: absolute;
-    left: 0;
-    top: 0;
+    inset: 0;
     z-index: 2;
     overflow: hidden;
     background-color: $colorGray;
