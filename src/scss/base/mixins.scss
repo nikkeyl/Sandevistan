@@ -40,7 +40,7 @@
 		}
 	}
 
-	@media (min-width: $widthTo) and (max-width: $widthFrom) {
+	@media (min-width: em($widthTo)) and (max-width: em($widthFrom)) {
 		#{$property}: $propertyValue;
 		// @supports (#{$property}: $propertyValue) {
 		// }
