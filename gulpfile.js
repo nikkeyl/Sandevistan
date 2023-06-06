@@ -6,6 +6,7 @@ import { plugins } from './config/settings/plugins.js'
 import { paths } from './config/settings/paths.js'
 
 import { validator } from './config/modules/validators.js'
+import { deploy } from './config/modules/deploy.js'
 import { reset } from './config/modules/reset.js'
 import { zip } from './config/modules/zip.js'
 import { ftp } from './config/modules/ftp.js'
@@ -40,6 +41,7 @@ gulp.task('default', dev)
 export {
 	sprite,
 	runFTP,
+	deploy,
 	build,
 	fonts,
 	app
