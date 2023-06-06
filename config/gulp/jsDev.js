@@ -1,12 +1,15 @@
 import { app } from '../../gulpfile.js'
 
+import { plugins } from '../settings/plugins.js'
+import { paths } from '../settings/paths.js'
+
 import webPackConfig from '../webpack/webpack.prod.js'
 
 const webPackConfigBeautify = Object.assign({}, webPackConfig)
 
 webPackConfigBeautify.optimization = {
 	minimizer: [
-		new app.plugins.TerserPlugin({
+		new plugins.TerserPlugin({
 			extractComments: false,
 			terserOptions: {
 				compress: { defaults: false },
@@ -20,16 +23,16 @@ webPackConfigBeautify.optimization = {
 }
 
 webPackConfigBeautify.output = {
-	path: app.paths.built,
+	path: paths.built,
 	filename: 'app.js',
 	publicPath: '/'
 }
 
 const jsDev = () => {
-	return app.gulp.src(app.paths.src.js)
-		.pipe(app.plugins.catchError('JS'))
-		.pipe(app.plugins.webpack({ config: webPackConfigBeautify }))
-		.pipe(app.gulp.dest(app.paths.build.js))
+	return app.gulp.src(paths.src.js)
+		.pipe(plugins.catchError('JS'))
+		.pipe(plugins.webpack({ config: webPackConfigBeautify }))
+		.pipe(app.gulp.dest(paths.build.js))
 }
 
 export { jsDev }
