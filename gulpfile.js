@@ -2,9 +2,6 @@ import gulp from 'gulp'
 
 import { argv } from 'node:process'
 
-import { plugins } from './config/settings/plugins.js'
-import { paths } from './config/settings/paths.js'
-
 import { validator } from './config/modules/validators.js'
 import { reset } from './config/modules/reset.js'
 import { zip } from './config/modules/zip.js'
@@ -28,13 +25,14 @@ const build = gulp.series(
 )
 const dev = gulp.parallel(fonts, sprite)
 const runFTP = gulp.series(build, ftp)
-const app = {
-	isNoWebp: !argv.includes('--nowebp'),
-	plugins,
-	paths,
-	gulp
-}
+const isNoWebp = !argv.includes('--nowebp')
 
 gulp.task('default', dev)
 
-export { sprite, runFTP, build, fonts, app }
+export {
+	isNoWebp,
+	sprite,
+	runFTP,
+	build,
+	fonts
+}

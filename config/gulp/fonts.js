@@ -1,4 +1,4 @@
-import { app } from '../../gulpfile.js'
+import gulp from 'gulp'
 
 import { plugins } from '../settings/plugins.js'
 import { paths } from '../settings/paths.js'
@@ -17,18 +17,18 @@ function cb(error) {
 }
 
 const otfToTtf = () => {
-	return app.gulp.src(`${paths.srcFolder}/fonts/*.otf`)
+	return gulp.src(`${paths.srcFolder}/fonts/*.otf`)
 		.pipe(plugins.catchError('FONTS'))
 		.pipe(fonter({ formats: ['ttf'] }))
-		.pipe(app.gulp.dest(`${paths.srcFolder}/fonts/`))
+		.pipe(gulp.dest(`${paths.srcFolder}/fonts/`))
 }
 const ttfToWoff = () => {
-	return app.gulp.src(`${paths.srcFolder}/fonts/*.ttf`)
+	return gulp.src(`${paths.srcFolder}/fonts/*.ttf`)
 		.pipe(plugins.catchError('FONTS'))
 		.pipe(ttf2woff2())
-		.pipe(app.gulp.dest(paths.build.fonts))
-		.pipe(app.gulp.src(`${paths.srcFolder}/fonts/*.woff2`))
-		.pipe(app.gulp.dest(paths.build.fonts))
+		.pipe(gulp.dest(paths.build.fonts))
+		.pipe(gulp.src(`${paths.srcFolder}/fonts/*.woff2`))
+		.pipe(gulp.dest(paths.build.fonts))
 }
 const fontsStyles = () => {
 	const fontStylesFile = `${paths.srcFolder}/scss/base/fonts/fonts.scss`
@@ -90,7 +90,11 @@ const fontsStyles = () => {
 		}
 	})
 
-	return app.gulp.src(paths.srcFolder)
+	return gulp.src(paths.srcFolder)
 }
 
-export { otfToTtf, ttfToWoff, fontsStyles }
+export {
+	fontsStyles,
+	ttfToWoff,
+	otfToTtf
+}

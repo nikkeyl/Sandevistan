@@ -1,12 +1,15 @@
-import { app } from '../../gulpfile.js'
+import gulp from 'gulp'
+
+import { plugins } from '../settings/plugins.js'
+import { paths } from '../settings/paths.js'
 
 import webPackConfig from '../webpack/webpack.prod.js'
 
 const jsProd = () => {
-	return app.gulp.src(app.paths.src.js)
-		.pipe(app.plugins.catchError('JS'))
-		.pipe(app.plugins.webpack({ config: webPackConfig }))
-		.pipe(app.gulp.dest(app.paths.build.js))
+	return gulp.src(paths.src.js)
+		.pipe(plugins.catchError('JS'))
+		.pipe(plugins.webpack({ config: webPackConfig }))
+		.pipe(gulp.dest(paths.build.js))
 }
 
 export { jsProd }
