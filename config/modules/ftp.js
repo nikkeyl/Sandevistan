@@ -1,7 +1,4 @@
-import gulp from 'gulp'
-
-import { plugins } from '../settings/plugins.js'
-import { paths } from '../settings/paths.js'
+import { app } from '../../gulpfile.js'
 
 import { configFTP } from '../settings/configFTP.js'
 
@@ -13,9 +10,9 @@ const ftp = () => {
 
 	const ftpConnect = vinylFTP.create(configFTP)
 
-	return gulp.src(`${paths.buildFolder}/**/*.*`)
-		.pipe(plugins.catchError('FTP'))
-		.pipe(ftpConnect.dest(`/${paths.ftp}/`))
+	return app.gulp.src(`${app.paths.buildFolder}/**/*.*`)
+		.pipe(app.plugins.catchError('FTP'))
+		.pipe(ftpConnect.dest(`/${app.paths.ftp}/`))
 }
 
 export { ftp }

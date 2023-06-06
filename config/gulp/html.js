@@ -1,19 +1,14 @@
-import gulp from 'gulp'
-
-import { plugins } from '../settings/plugins.js'
-import { paths } from '../settings/paths.js'
-
-import { isNoWebp } from '../../gulpfile.js'
+import { app } from '../../gulpfile.js'
 
 import webpHtmlNosvg from 'gulp-webp-html-nosvg'
 import versionNumber from 'gulp-version-number'
 import htmlMin from 'gulp-htmlmin'
 
 const html = () => {
-	return gulp.src(`${paths.build.html}*.html`)
-		.pipe(plugins.catchError('HTML'))
-		.pipe(plugins.if(
-			isNoWebp,
+	return app.gulp.src(`${app.paths.build.html}*.html`)
+		.pipe(app.plugins.catchError('HTML'))
+		.pipe(app.plugins.if(
+			app.isNoWebp,
 			webpHtmlNosvg()
 		))
 		.pipe(versionNumber({
@@ -30,10 +25,9 @@ const html = () => {
 		.pipe(htmlMin({
 			removeRedundantAttributes: true,
 			removeEmptyAttributes: true,
-			removeEmptyElements: true,
 			removeComments: true
 		}))
-		.pipe(gulp.dest(paths.build.html))
+		.pipe(app.gulp.dest(app.paths.build.html))
 }
 
 export { html }

@@ -1,15 +1,12 @@
-import gulp from 'gulp'
-
-import { plugins } from '../settings/plugins.js'
-import { paths } from '../settings/paths.js'
+import { app } from '../../gulpfile.js'
 
 import zipPlugin from 'gulp-zip'
 
 const zip = () => {
-	return gulp.src(`${paths.buildFolder}/**/*.*`)
-		.pipe(plugins.catchError('ZIP'))
-		.pipe(zipPlugin(`${paths.rootFolder}.zip`))
-		.pipe(gulp.dest(paths.tempFolder))
+	return app.gulp.src(`${app.paths.buildFolder}/**/*.*`)
+		.pipe(app.plugins.catchError('ZIP'))
+		.pipe(zipPlugin(`${app.paths.rootFolder}.zip`))
+		.pipe(app.gulp.dest(app.paths.tempFolder))
 }
 
 export { zip }

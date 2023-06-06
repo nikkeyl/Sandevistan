@@ -1,18 +1,16 @@
-import gulp from 'gulp'
-
-import { paths } from '../settings/paths.js'
+import { app } from '../../gulpfile.js'
 
 import { htmlValidator } from 'gulp-w3c-html-validator'
 import accessibility from 'gulp-wcag-accessibility'
 import bemValidator from 'gulp-html-bem-validator'
 
 const validator = () => {
-	return gulp.src(`${paths.build.html}*.html`)
+	return app.gulp.src(`${app.paths.build.html}*.html`)
 		.pipe(bemValidator())
 		.pipe(htmlValidator.analyzer())
 		.pipe(htmlValidator.reporter())
 		.pipe(accessibility({
-			reportLocation: paths.tempFolder,
+			reportLocation: app.paths.tempFolder,
 			accessibilityLevel: 'WCAG2AAA',
 			reportLevels: {
 				warning: true,
