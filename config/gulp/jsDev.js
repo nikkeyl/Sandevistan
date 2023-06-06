@@ -12,7 +12,10 @@ webPackConfigBeautify.optimization = {
 		new plugins.TerserPlugin({
 			extractComments: false,
 			terserOptions: {
-				compress: { defaults: false },
+				compress: {
+					defaults: false,
+					unused: true
+				},
 				format: { beautify: true },
 				keep_classnames: true,
 				keep_fnames: true,
