@@ -1,11 +1,11 @@
-import { app } from '../../gulpfile.js'
+import { paths } from '../settings/paths.js'
 
 import { deleteAsync } from 'del'
 
 const reset = () =>
 	deleteAsync([
-		app.paths.buildFolder,
-		app.paths.tempFolder,
+		paths.buildFolder,
+		paths.tempFolder,
 		'**/.gitkeep'
 	])
 

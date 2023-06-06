@@ -37,4 +37,10 @@ const app = {
 
 gulp.task('default', dev)
 
-export { sprite, runFTP, build, fonts, app }
+export {
+	sprite,
+	runFTP,
+	build,
+	fonts,
+	app
+}
