@@ -1,4 +1,6 @@
 /* Section-specific styles */
 .content {
-  @include adaptiveValue("padding-top", 150, 80, 1, $maxWidth, $minWidth);
+  @supports not(position: sticky) {
+    @include adaptiveValue("padding-top", 150, 80, 1, $maxWidth, $minWidth);
+  }
 }

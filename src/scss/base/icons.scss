@@ -2,11 +2,11 @@
 .icon {
   @include widthHeight(rem(20), rem(20));
 
-  fill: none;
-  stroke: $colorGray;
-  transition: stroke 0.3s;
+  fill: $colorDark;
+  stroke: none;
+  transition: fill 0.3s;
 
   @include mediaHover {
-    stroke: $colorDark;
+    stroke: $colorGray;
   }
 }
