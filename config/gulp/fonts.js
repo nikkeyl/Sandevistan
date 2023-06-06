@@ -5,9 +5,9 @@ import fonter from 'gulp-fonter-fix'
 
 function cb(error) {
 	if (error) {
-		console.log(app.plugins.chalk.bgRed.white.bold('[ERROR]\n'), error)
+		console.log(app.plugins.chalk.red.bold('[ERROR]\n'), error)
 	} else {
-		console.log(app.plugins.chalk.bgGreen.white.bold(
+		console.log(app.plugins.chalk.green.bold(
 			'[SUCCESS]\nThe (fonts.scss) file is written]')
 		)
 	}
@@ -79,7 +79,7 @@ const fontsStyles = () => {
 				})
 			} else {
 				console.log(
-					app.plugins.chalk.bgYellow.black.bold(
+					app.plugins.chalk.yellow.bold(
 						`[WARNING]\nThe (${fontStylesFile}) file already exists.\nTo update a file, you need to delete it!`
 					)
 				)
