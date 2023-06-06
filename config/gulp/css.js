@@ -1,4 +1,7 @@
-import { app } from '../../gulpfile.js'
+import gulp from 'gulp'
+
+import { plugins } from '../settings/plugins.js'
+import { paths } from '../settings/paths.js'
 
 import groupCssMediaQueries from 'gulp-group-css-media-queries'
 import autoPrefixer from 'gulp-autoprefixer'
@@ -9,8 +12,8 @@ import cssComb from 'gulp-csscomb'
 // import purge from 'gulp-css-purge'
 
 const css = () => {
-	return app.gulp.src(`${app.paths.build.css}style.css`)
-		.pipe(app.plugins.catchError('CSS'))
+	return gulp.src(`${paths.build.css}style.css`)
+		.pipe(plugins.catchError('CSS'))
 		.pipe(groupCssMediaQueries())
 		.pipe(webpCss({
 			noWebpClass: '.no-webp',
@@ -23,10 +26,10 @@ const css = () => {
 		// }))
 		.pipe(cssComb())
 		.pipe(autoPrefixer())
-		.pipe(app.gulp.dest(app.paths.build.css))
+		.pipe(gulp.dest(paths.build.css))
 		.pipe(cleanCss({ level: 2 }))
-		.pipe(app.plugins.rename({ suffix: '.min' }))
-		.pipe(app.gulp.dest(app.paths.build.css))
+		.pipe(plugins.rename({ suffix: '.min' }))
+		.pipe(gulp.dest(paths.build.css))
 }
 
 export { css }

@@ -1,4 +1,4 @@
-import { app } from '../../gulpfile.js'
+import { app } from '../../gulpfile'
 
 import ttf2woff2 from 'gulp-ttf2woff2'
 import fonter from 'gulp-fonter-fix'
@@ -87,7 +87,11 @@ const fontsStyles = () => {
 		}
 	})
 
-	return app.gulp.src(app.paths.srcFolder)
+	return app.gulp.src(paths.srcFolder)
 }
 
-export { otfToTtf, ttfToWoff, fontsStyles }
+export {
+	fontsStyles,
+	ttfToWoff,
+	otfToTtf
+}
