@@ -14,11 +14,11 @@ const images = () => {
 		))
 		.pipe(app.plugins.if(
 			app.isNoWebp,
-			gulp.dest(app.paths.build.images)
+			app.gulp.dest(app.paths.build.images)
 		))
 		.pipe(app.plugins.if(
 			app.isNoWebp,
-			gulp.src(app.paths.src.images)
+			app.gulp.src(app.paths.src.images)
 		))
 		.pipe(app.plugins.if(
 			app.isNoWebp,
