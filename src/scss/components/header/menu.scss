@@ -52,9 +52,12 @@
 
   &__list {
     display: flex;
-    flex-wrap: wrap;
-    column-gap: rem(20);
-    row-gap: rem(10);
+
+    @include mediaMin($tablet) {
+      flex-wrap: wrap;
+      column-gap: rem(20);
+      row-gap: rem(10);
+    }
 
     @include mediaMax($tablet) {
       flex-direction: column;

@@ -1,9 +1,6 @@
 .breadcrumbs {
-  white-space: nowrap;
-
   &__list {
     display: flex;
-    gap: rem(5);
     overflow-x: auto;
     overflow-y: hidden;
   }
@@ -14,12 +11,13 @@
     &:not(:last-child) {
       &::after {
         content: "/";
-        margin-left: rem(5);
+        margin-inline: rem(5);
       }
     }
   }
 
   &__link {
+    white-space: nowrap;
     color: $colorGray;
   }
 }

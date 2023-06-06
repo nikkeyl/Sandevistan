@@ -9,7 +9,7 @@
     z-index: 5;
     display: block;
 
-    &__line,
+    span,
     &::before,
     &::after {
       @include pseudo;
@@ -28,7 +28,7 @@
       bottom: 0;
     }
 
-    &__line {
+    span {
       top: calc(50% - rem(1));
     }
 
@@ -43,7 +43,7 @@
         transform: rotate(45deg);
       }
 
-      &__line {
+      span {
         width: 0;
       }
     }
