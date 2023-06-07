@@ -61,9 +61,5 @@
     }
   }
 
-  &:not(:last-child) {
-    margin-bottom: em(5);
-  }
-
   @extend %userSelect;
 }

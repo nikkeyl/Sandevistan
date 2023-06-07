@@ -12,12 +12,6 @@
     overscroll-behavior: none;
   }
 
-  // .touch & {
-  // }
-
-  // .loaded & {
-  // }
-
   @if $backgroundGradient == 1 {
     background: $mainBackgroundColor;
 
@@ -25,14 +19,5 @@
     background-attachment: fixed;
   } @else {
     background-color: $mainBackgroundColor;
-  }
-
-  @if $selestion == 1 {
-    *::selection {
-      color: $colorLight;
-
-      /* Changes the default text selection styles */
-      background-color: $colorDarkGray;
-    }
   }
 }

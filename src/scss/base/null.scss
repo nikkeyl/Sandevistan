@@ -22,6 +22,15 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+@if $selestion == 1 {
+  ::selection {
+    color: $colorLight;
+
+    /* Changes the default text selection styles */
+    background-color: $colorDarkGray;
+  }
+}
+
 input[type="search"],
 input[type="email"],
 input[type="text"],
@@ -36,13 +45,20 @@ button,
 input {
   font-family: $mainFontFamily;
   font-size: inherit;
-	line-height: inherit;
+  line-height: inherit;
+}
+
+textarea {
+  resize: none;
 }
 
 button {
   color: inherit;
   background-color: transparent;
-  cursor: pointer;
+
+  @media (any-hover: hover) {
+    cursor: pointer;
+  }
 }
 
 :focus,
@@ -60,14 +76,7 @@ a {
     text-decoration: none;
   }
 
-  &:active,
-  &:focus {
-    @if $aFocusActiveOutline == 1 {
-      outline: none;
-    }
-  }
-
-  &:hover {
+  @include mediaHover {
     text-decoration: none;
   }
 }
@@ -77,7 +86,9 @@ address {
 }
 
 label {
-  cursor: pointer;
+  @media (any-hover: hover) {
+    cursor: pointer;
+  }
 }
 
 summary,

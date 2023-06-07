@@ -1,5 +1,4 @@
-/* Burger menu icon */
-.icon-menu {
+.burger-icon {
   display: none;
 
   @include mediaMax($tablet) {
@@ -46,10 +45,6 @@
       span {
         width: 0;
       }
-    }
-
-    @include mediaHover(none) {
-      cursor: default;
     }
   }
 }

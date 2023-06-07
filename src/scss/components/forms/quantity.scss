@@ -1,5 +1,5 @@
 .quantity {
-  @include widthHeight(rem(88), rem(40));
+  @include widthHeight(rem(90), rem(40));
 
   display: flex;
   border: rem(2) solid $colorDark;
@@ -8,7 +8,6 @@
   &__button {
     position: relative;
     flex: 0 0 rem(30);
-    cursor: pointer;
 
     &::before,
     &::after {
@@ -16,22 +15,15 @@
       @include pseudo;
 
       inset: 50%;
-      margin: 0 0 0 rem(-4.5);
+      margin-left: rem(-4.5);
       border-radius: rem(1);
-      background-color: $colorGray;
+      background-color: $colorDark;
       transition: background-color 0.3s;
     }
 
     &--plus {
       &::before {
         transform: rotate(-90deg);
-      }
-    }
-
-    @include mediaHover {
-      &::before,
-      &::after {
-        background-color: $colorDark;
       }
     }
   }
@@ -44,10 +36,8 @@
 
       @include widthHeight(100%, 100%);
 
-      font-weight: 700;
       font-size: rem($fontSize);
       text-align: center;
-      color: $colorDark;
     }
   }
 }

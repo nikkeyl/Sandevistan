@@ -2,7 +2,7 @@
   display: block;
   border: rem(1) solid $colorGray;
   border-radius: rem(5);
-  padding: 0 rem(20);
+  padding: rem(5);
   width: 100%;
   color: $colorGray;
 
@@ -16,9 +16,4 @@
       }
     }
   }
-}
-
-textarea.input {
-  padding: 0;
-  resize: none;
 }
