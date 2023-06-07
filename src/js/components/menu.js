@@ -7,9 +7,9 @@ import {
 } from '@js/helpers/bodyLockToggle'
 
 function menuInit() {
-	if (document.querySelector('.icon-menu')) {
+	if (document.querySelector('.burger-icon')) {
 		document.addEventListener('click', ({ target }) => {
-			if (bodyLockStatus && target.closest('.icon-menu')) {
+			if (bodyLockStatus && target.closest('.burger-icon')) {
 				bodyLockToggle()
 				html.classList.toggle('menu-open')
 			} else if (bodyLockStatus && !target.closest('.menu__body')) {

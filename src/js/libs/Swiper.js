@@ -11,8 +11,6 @@ import Swiper, { Navigation } from 'swiper'
 
 import '@scss/components/swiper'
 
-// import '@scss/libs/swiper'
-
 function initSliders() {
 	if (document.querySelector('.swiper')) {
 		new Swiper('.swiper', {
@@ -30,73 +28,73 @@ function initSliders() {
 			// preloadImages: true,
 			// lazy: true,
 			/*
-            effect: 'fade',
-            autoplay: {
-                delay: 3000,
-                disableOnInteraction: false
-            },
-        */
+						effect: 'fade',
+						autoplay: {
+								delay: 3000,
+								disableOnInteraction: false
+						},
+				*/
 			/*
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true
-            },
-        */
+						pagination: {
+								el: '.swiper-pagination',
+								clickable: true
+						},
+				*/
 			/*
-            scrollbar: {
-                el: '.swiper-scrollbar',
-                draggable: true
-            },
-        */
+						scrollbar: {
+								el: '.swiper-scrollbar',
+								draggable: true
+						},
+				*/
 			navigation: {
 				prevEl: '.swiper-button-prev',
 				nextEl: '.swiper-button-next'
 			},
 
 			/*
-        	breakpoints: {
-                320: {
-                    slidesPerView: 1,
-                    spaceBetween: 0,
-                    autoHeight: true
-                },
-                768: {
-                    slidesPerView: 2,
-                    spaceBetween: 20
-                },
-                992: {
-                    slidesPerView: 3,
-                    spaceBetween: 20
-                },
-                1268: {
-                    slidesPerView: 4,
-                    spaceBetween: 30
-                }
-            },
-        */
+					breakpoints: {
+								320: {
+										slidesPerView: 1,
+										spaceBetween: 0,
+										autoHeight: true
+								},
+								768: {
+										slidesPerView: 2,
+										spaceBetween: 20
+								},
+								992: {
+										slidesPerView: 3,
+										spaceBetween: 20
+								},
+								1268: {
+										slidesPerView: 4,
+										spaceBetween: 30
+								}
+						},
+				*/
 			on: {
-			/* Fix: применить при не правильном числе слайдов */
-			// init: swiper => {
-			//     const allSlides = document.querySelector(
-			//         '.fraction-controll__all'
-			//     )
-			//     const allSlidesItems = document.querySelectorAll(
-			//         '.slide-main-block:not(.swiper-slide-duplicate)'
-			//     )
-			//     allSlides.innerHTML =
-			//         AllSlidesItems.length < 10
-			//             ? `0${allSlidesItems.length}`
-			//             : allSlidesItems.length
-			// },
-			// slideChange: swiper => {
-			//     const currentSlide = document.querySelector(
-			//         '.fraction-controll__current'
-			//     )
-			//     currentSlide.innerHTML =
-			//         swiper.realIndex + 1 < 10
-			//             ? `0${swiper.realIndex + 1}`
-			//             : swiper.realIndex + 1
-			// }
+				/* Fix: применить при не правильном числе слайдов */
+				// init: swiper => {
+				//     const allSlides = document.querySelector(
+				//         '.fraction-controll__all'
+				//     )
+				//     const allSlidesItems = document.querySelectorAll(
+				//         '.slide-main-block:not(.swiper-slide-duplicate)'
+				//     )
+				//     allSlides.innerHTML =
+				//         AllSlidesItems.length < 10
+				//             ? `0${allSlidesItems.length}`
+				//             : allSlidesItems.length
+				// },
+				// slideChange: swiper => {
+				//     const currentSlide = document.querySelector(
+				//         '.fraction-controll__current'
+				//     )
+				//     currentSlide.innerHTML =
+				//         swiper.realIndex + 1 < 10
+				//             ? `0${swiper.realIndex + 1}`
+				//             : swiper.realIndex + 1
+				// }
 			}
 		})
 	}
