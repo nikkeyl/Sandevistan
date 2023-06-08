@@ -349,7 +349,7 @@
   },
   "Show More": {
     "prefix": "showmore",
-    "body": "<div class=\"${1:showmore}\" data-showmore>\n\t<div class=\"${1:showmore}__content\" data-showmore-content=\"${2:200}\">$3</div>\n\t<button class=\"${1:showmore}__button\" type=\"button\" data-showmore-button>\n\t\t<span>${4:Show more}</span>\n\t\t<span>${5:Hide}</span>\n\t</button>\n</div>"
+    "body": "<div class=\"${1:showmore}\" data-showmore>\n\t<div class=\"${1:showmore}__content\" data-showmore-content=\"${2:200}\">$3</div>\n\t<button class=\"button\" type=\"button\" data-showmore-button>\n\t\t<span>${4:Show more}</span>\n\t\t<span>${5:Hide}</span>\n\t</button>\n</div>"
   },
   "Swiper": {
     "prefix": "sf",
