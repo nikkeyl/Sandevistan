@@ -4,11 +4,6 @@
 }
 
 [data-showmore-button] {
-  display: inline-flex;
-  align-self: center;
-  border: rem(1) solid $colorDark;
-  padding: rem(5) rem(10);
-
   span {
     &:last-child {
       display: none;

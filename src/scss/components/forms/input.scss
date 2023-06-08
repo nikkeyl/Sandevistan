@@ -10,6 +10,7 @@
     &::placeholder {
       transition: opacity 0.3s;
     }
+
     &:focus {
       &::placeholder {
         opacity: 0;

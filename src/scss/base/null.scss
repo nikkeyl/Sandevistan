@@ -22,7 +22,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-@if $selestion == 1 {
+@if $selection == 1 {
   ::selection {
     color: $colorLight;
 

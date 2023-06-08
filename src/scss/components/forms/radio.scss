@@ -29,11 +29,11 @@
       @include pseudo;
       @include widthHeight(rem(15), rem(15));
 
+      inset: 50%;
       border-radius: 50%;
       background-color: $colorDark;
       transform: translate(-50%, -50%) scale(0);
       transition: transform 0.3s;
-      inset: 50%;
     }
   }
 

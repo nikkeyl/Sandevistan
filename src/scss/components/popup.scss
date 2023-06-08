@@ -22,26 +22,20 @@
 
 .popup {
   position: fixed;
-  padding: rem(30) rem(10);
-  visibility: hidden;
-  transition: visibility 0.8s;
-  pointer-events: none;
   inset: 0;
+  padding: rem(30) rem(math.div($containerPadding, 2));
+  pointer-events: none;
 
   &__wrapper {
     display: flex;
-    flex: 1 1 auto;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100%;
     min-height: 100%;
   }
 
   &__content {
     border-radius: rem(20);
     padding: rem(20);
-    width: 100%;
     max-width: rem(900);
     background-color: $colorGray;
     visibility: hidden;
@@ -56,7 +50,6 @@
   &--show {
     z-index: 150;
     overflow: auto;
-    visibility: visible;
     pointer-events: auto;
 
     .popup__content {

@@ -262,7 +262,7 @@
 }
 
 @mixin mediaMax($breakpoint) {
-	@media (max-width: md($breakpoint)) {
+	@media (max-width: diff($breakpoint)) {
 		@content;
 	}
 }

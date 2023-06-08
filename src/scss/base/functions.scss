@@ -1,17 +1,11 @@
-@function rounding($number, $digits: 4, $mode: round) {
+@function rounding($number) {
   $n: 1;
 
-  @for $i from 1 through $digits {
+  @for $i from 1 through 4 {
     $n: $n * 10;
   }
 
-  @if $mode == round {
-    @return math.div(round($number * $n), $n);
-  } @else if $mode == ceil {
-    @return math.div(ceil($number * $n), $n);
-  } @else {
-    @return math.div(floor($number * $n), $n);
-  }
+  @return math.div(round($number * $n), $n);
 }
 
 @function em($px, $current: 16) {
@@ -30,6 +24,6 @@
   @return percent($height, $width);
 }
 
-@function md($px) {
+@function diff($px) {
   @return em($px - 0.02);
 }
