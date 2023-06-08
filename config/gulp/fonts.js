@@ -80,7 +80,7 @@ const fontsStyles = () => {
 			} else {
 				console.log(
 					app.plugins.chalk.yellow.bold(
-						`[WARNING]\nThe (${fontStylesFile}) file already exists.\nTo update a file, you need to delete it!`
+						`[WARNING]\nThe (${fontStylesFile}) file already exists.`
 					)
 				)
 			}
