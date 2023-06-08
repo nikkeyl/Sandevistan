@@ -2,9 +2,10 @@
 @if $containerType == 1 {
   [class*="__container"] {
     @if $maxWidthContainer > 0 {
-      max-width: rem($containerWidth);
       margin: 0 auto;
+      max-width: rem($containerWidth);
     }
+
     @if $containerPadding > 0 {
       @if $maxWidthContainer > 0 {
         padding: 0 rem(math.div($containerPadding, 2));
@@ -29,9 +30,11 @@
     @media (max-width: $desktop) {
       max-width: rem(970);
     }
+
     @media (max-width: $laptop) {
       max-width: rem(750);
     }
+
     @media (max-width: $tablet) {
       max-width: none;
 
