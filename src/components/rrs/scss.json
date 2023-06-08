@@ -201,7 +201,7 @@
   },
   "Aspect Ratio": {
     "prefix": "asr",
-    "body": "aspectRatio(${1:16}, ${2:9})"
+    "body": "ratio(${1:16}, ${2:9})"
   },
   "Dark Theme": {
     "prefix": "dt",
@@ -517,7 +517,7 @@
   },
   "Hover": {
     "prefix": "hh",
-    "body": "transition: ${1:all} 0.${2:3}s ${3:0}s;\n\n@media (any-hover: hover) {\n\t$4\n}"
+    "body": "@media (any-hover: hover) {\n\t$1\n}"
   },
   "Key Frames": {
     "prefix": "kf",
