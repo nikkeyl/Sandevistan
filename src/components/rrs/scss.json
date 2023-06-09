@@ -45,63 +45,63 @@
   },
   "Adaptive Value": {
     "prefix": "av",
-    "body": "@include adaptiveValue(\"$1\", $2, $3, 1, \\$maxWidth, \\$minWidth);"
+    "body": "@include adaptiveValue(\"$1\", $2, $3, 3, \\$maxWidth, \\$minWidth);"
   },
   "Adaptive Font Value": {
     "prefix": "avf",
-    "body": "@include adaptiveValue(\"font-size\", ${1:\\$fontSize}, $2, 1, \\$maxWidth, \\$minWidth);"
+    "body": "@include adaptiveValue(\"font-size\", ${1:\\$fontSize}, $2, 3, \\$maxWidth, \\$minWidth);"
   },
   "Adaptive Gap Value": {
     "prefix": "avg",
-    "body": "@include adaptiveValue(\"gap\", $1, $2, 1, \\$maxWidth, \\$minWidth);"
+    "body": "@include adaptiveValue(\"gap\", $1, $2, 3, \\$maxWidth, \\$minWidth);"
   },
   "Adaptive Padding Value": {
     "prefix": "avp",
-    "body": "@include adaptiveValue(\"padding\", $1, $2, 1, \\$maxWidth, \\$minWidth);"
+    "body": "@include adaptiveValue(\"padding\", $1, $2, 3, \\$maxWidth, \\$minWidth);"
   },
   "Adaptive Padding Top Value": {
     "prefix": "avpt",
-    "body": "@include adaptiveValue(\"padding-top\", $1, $2, 1, \\$maxWidth, \\$minWidth);"
+    "body": "@include adaptiveValue(\"padding-top\", $1, $2, 3, \\$maxWidth, \\$minWidth);"
   },
   "Adaptive Padding Bottom Value": {
     "prefix": "avpb",
-    "body": "@include adaptiveValue(\"padding-bottom\", $1, $2, 1, \\$maxWidth, \\$minWidth);"
+    "body": "@include adaptiveValue(\"padding-bottom\", $1, $2, 3, \\$maxWidth, \\$minWidth);"
   },
   "Adaptive Padding Right Value": {
     "prefix": "avpr",
-    "body": "@include adaptiveValue(\"padding-right\", $1, $2, 1, \\$maxWidth, \\$minWidth);"
+    "body": "@include adaptiveValue(\"padding-right\", $1, $2, 3, \\$maxWidth, \\$minWidth);"
   },
   "Adaptive Padding Left Value": {
     "prefix": "avpl",
-    "body": "@include adaptiveValue(\"padding-left\", $1, $2, 1, \\$maxWidth, \\$minWidth);"
+    "body": "@include adaptiveValue(\"padding-left\", $1, $2, 3, \\$maxWidth, \\$minWidth);"
   },
   "Adaptive Margin Value": {
     "prefix": "avm",
-    "body": "@include adaptiveValue(\"margin\", $1, $2, 1, \\$maxWidth, \\$minWidth);"
+    "body": "@include adaptiveValue(\"margin\", $1, $2, 3, \\$maxWidth, \\$minWidth);"
   },
   "Adaptive Margin Top Value": {
     "prefix": "avmt",
-    "body": "@include adaptiveValue(\"margin-top\", $1, $2, 1, \\$maxWidth, \\$minWidth);"
+    "body": "@include adaptiveValue(\"margin-top\", $1, $2, 3, \\$maxWidth, \\$minWidth);"
   },
   "Adaptive Margin Bottom Value": {
     "prefix": "avmb",
-    "body": "@include adaptiveValue(\"margin-bottom\", $1, $2, 1, \\$maxWidth, \\$minWidth);"
+    "body": "@include adaptiveValue(\"margin-bottom\", $1, $2, 3, \\$maxWidth, \\$minWidth);"
   },
   "Adaptive Margin Right Value": {
     "prefix": "avmr",
-    "body": "@include adaptiveValue(\"margin-right\", $1, $2, 1, \\$maxWidth, \\$minWidth);"
+    "body": "@include adaptiveValue(\"margin-right\", $1, $2, 3, \\$maxWidth, \\$minWidth);"
   },
   "Adaptive Margin Left Value": {
     "prefix": "avml",
-    "body": "@include adaptiveValue(\"margin-left\", $1, $2, 1, \\$maxWidth, \\$minWidth);"
+    "body": "@include adaptiveValue(\"margin-left\", $1, $2, 3, \\$maxWidth, \\$minWidth);"
   },
   "Adaptive Height Value": {
     "prefix": "avh",
-    "body": "@include adaptiveValue(\"height\", $1, $2, 1, \\$maxWidth, \\$minWidth);"
+    "body": "@include adaptiveValue(\"height\", $1, $2, 3, \\$maxWidth, \\$minWidth);"
   },
   "Adaptive Width Value": {
     "prefix": "avw",
-    "body": "@include adaptiveValue(\"width\", $1, $2, 1, \\$maxWidth, \\$minWidth);"
+    "body": "@include adaptiveValue(\"width\", $1, $2, 3, \\$maxWidth, \\$minWidth);"
   },
   "@media max": {
     "prefix": "md",

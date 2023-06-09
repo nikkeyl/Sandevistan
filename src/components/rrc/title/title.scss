@@ -14,7 +14,7 @@
         }
 
         @if $fontType == 1 {
-            @include adaptiveValue("font-size", $fontSize, 18, 1, $maxWidth, $minWidth);
+            @include adaptiveValue("font-size", $fontSize, 18, 3, $maxWidth, $minWidth);
         } @else {
             font-size: rem($fontSize);
         }
@@ -29,7 +29,7 @@
         color: $colorDark;
 
         @if $fontType == 1 {
-            @include adaptiveValue("font-size", $fontSize, 16, 1, $maxWidth, $minWidth);
+            @include adaptiveValue("font-size", $fontSize, 16, 3, $maxWidth, $minWidth);
         } @else {
             font-size: rem($fontSize);
         }
