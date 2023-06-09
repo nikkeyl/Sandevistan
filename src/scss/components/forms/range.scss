@@ -7,8 +7,13 @@
 /* Range plugin */
 
 .noUi-target {
+  position: relative;
+  border: rem(1) solid #d3d3d3;
+  border-radius: rem(30);
+  background-color: #fafafa;
+
   &,
-  & * {
+  * {
     box-sizing: border-box;
     user-select: none;
   }
@@ -54,13 +59,6 @@
 }
 
 /* Styling; * Giving the connect element a border radius causes issues with using transform: scale */
-.noUi-target {
-  position: relative;
-  border: rem(1) solid #d3d3d3;
-  border-radius: rem(30);
-  background-color: #fafafa;
-}
-
 .noUi-active {
   background-color: #d9d9d9;
   cursor: grabbing;
