@@ -6,10 +6,12 @@
 
 /* Range plugin */
 
-.noUi-target,
-.noUi-target * {
-  box-sizing: border-box;
-  user-select: none;
+.noUi-target {
+  &,
+  & * {
+    box-sizing: border-box;
+    user-select: none;
+  }
 }
 
 .noUi-base,
