@@ -56,8 +56,10 @@
     opacity: 0.2;
   }
 
-  &--set .rating__active,
-  &--set .rating__item {
-    cursor: pointer;
+  &--set {
+    .rating__active,
+    .rating__item {
+      cursor: pointer;
+    }
   }
 }

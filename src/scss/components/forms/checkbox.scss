@@ -50,13 +50,15 @@
   input {
     display: none;
 
-    &:checked + .checkbox__box {
-      &::after {
-        transform: scale(1);
-      }
+    &:checked {
+      + .checkbox__box {
+        &::after {
+          transform: scale(1);
+        }
 
-      svg {
-        transform: scale(1);
+        svg {
+          transform: scale(1);
+        }
       }
     }
   }

@@ -27,15 +27,15 @@
       }
     }
 
-    @media (max-width: $desktop) {
+    @media (max-width: diff($desktop)) {
       max-width: rem(970);
     }
 
-    @media (max-width: $laptop) {
+    @media (max-width: diff($laptop)) {
       max-width: rem(750);
     }
 
-    @media (max-width: $tablet) {
+    @media (max-width: diff($tablet)) {
       max-width: none;
 
       @if $containerPadding > 0 and $maxWidthContainer > 0 {

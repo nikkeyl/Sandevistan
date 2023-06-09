@@ -1,11 +1,13 @@
-*,
-*::before,
-*::after {
-  margin: 0;
-  border: 0;
-  padding: 0;
-  box-sizing: border-box;
-  -webkit-tap-highlight-color: transparent;
+* {
+  &,
+  &::before,
+  &::after {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+  }
 }
 
 html,
@@ -31,12 +33,13 @@ body {
   }
 }
 
-input[type="search"],
-input[type="email"],
-input[type="text"],
-input[type="tel"],
-textarea {
-  appearance: none;
+input {
+  &[type="search"],
+  &[type="email"],
+  &[type="text"],
+  &[type="tel"] {
+    appearance: none;
+  }
 }
 
 textarea,

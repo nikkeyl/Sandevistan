@@ -6,14 +6,16 @@
   width: 100%;
   color: $colorGray;
 
-  &[placeholder]:not([data-placeholder-nohidden]) {
-    &::placeholder {
-      transition: opacity 0.3s;
-    }
-
-    &:focus {
+  &[placeholder] {
+    &:not([data-placeholder-nohidden]) {
       &::placeholder {
-        opacity: 0;
+        transition: opacity 0.3s;
+      }
+
+      &:focus {
+        &::placeholder {
+          opacity: 0;
+        }
       }
     }
   }
