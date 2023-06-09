@@ -209,7 +209,7 @@
 		"implicit-arrow-linebreak": "error",
 		"indent": [
 			"error",
-			"tab"
+			2
 		],
 		"key-spacing": "error",
 		"keyword-spacing": "error",
