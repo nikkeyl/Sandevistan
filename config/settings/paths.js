@@ -4,7 +4,7 @@ import {
 } from 'path'
 
 const rootFolder = basename(resolve())
-const buildFolder = 'build'
+const buildFolder = 'dist'
 const tempFolder = 'temp'
 const srcFolder = 'src'
 const paths = {
