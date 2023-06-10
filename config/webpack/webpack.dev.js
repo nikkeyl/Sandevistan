@@ -4,6 +4,7 @@ import { paths } from '../settings/paths.js'
 import { extensionsAndAliases } from './plugins/extensionsAndAliases.js'
 import { replaceLoaderOptions } from './plugins/replaceLoaderOptions.js'
 import { cssLoaderOptions } from './plugins/cssLoaderOptions.js'
+import { output } from './plugins/webPackOutputFile.js'
 
 const config = {
 	mode: 'development',
@@ -13,11 +14,7 @@ const config = {
 		minimize: false
 	},
 	entry: `${paths.root}/js/app.js`,
-	output: {
-		filename: 'js/app.min.js',
-		path: paths.built,
-		publicPath: '/'
-	},
+	output: output('js/app.min.js'),
 	devServer: {
 		historyApiFallback: true,
 		static: paths.built,

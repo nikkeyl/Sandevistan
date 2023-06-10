@@ -4,6 +4,7 @@ import { paths } from '../settings/paths.js'
 import { extensionsAndAliases } from './plugins/extensionsAndAliases.js'
 import { replaceLoaderOptions } from './plugins/replaceLoaderOptions.js'
 import { cssLoaderOptions } from './plugins/cssLoaderOptions.js'
+import { output } from './plugins/webPackOutputFile.js'
 import { linters } from '../modules/linters.js'
 
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
@@ -20,11 +21,7 @@ const config = {
 			})
 		]
 	},
-	output: {
-		filename: 'app.min.js',
-		path: paths.built,
-		publicPath: '/'
-	},
+	output: output('app.min.js'),
 	module: {
 		rules: [
 			{

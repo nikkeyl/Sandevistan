@@ -5,6 +5,8 @@ import { paths } from '../settings/paths.js'
 
 import webPackConfig from '../webpack/webpack.prod.js'
 
+import { output } from '../webpack/plugins/webPackOutputFile.js'
+
 const webPackConfigBeautify = Object.assign({}, webPackConfig)
 
 webPackConfigBeautify.optimization = {
@@ -25,11 +27,7 @@ webPackConfigBeautify.optimization = {
 	]
 }
 
-webPackConfigBeautify.output = {
-	path: paths.built,
-	filename: 'app.js',
-	publicPath: '/'
-}
+webPackConfigBeautify.output = output('app.js')
 
 const jsDev = () => {
 	return app.gulp.src(paths.src.js)
