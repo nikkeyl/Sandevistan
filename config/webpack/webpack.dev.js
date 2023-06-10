@@ -34,6 +34,13 @@ const config = {
 	module: {
 		rules: [
 			{
+				test: /\.js$/,
+				exclude: /node_modules/,
+				resolve: {
+					fullySpecified: false
+				}
+			},
+			{
 				test: /\.scss$/,
 				exclude: `${paths.root}/fonts`,
 				use: [
