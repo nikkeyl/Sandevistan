@@ -28,6 +28,13 @@ const config = {
 	module: {
 		rules: [
 			{
+				test: /\.js$/,
+				exclude: /node_modules/,
+				resolve: {
+					fullySpecified: false
+				}
+			},
+			{
 				test: /\.scss$/,
 				use: [
 					MiniCssExtractPlugin.loader,
