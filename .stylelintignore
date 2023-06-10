@@ -1,2 +1,3 @@
+src/scss/base/functions.scss
 src/scss/base/mixins.scss
 src/scss/libs/**/*.scss

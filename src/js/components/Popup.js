@@ -1,8 +1,11 @@
 import {
-	bodyLockStatus, bodyUnlock, bodyLock
+	bodyLockStatus,
+	bodyUnlock,
+	bodyLock
 } from '@js/helpers/bodyLockToggle'
 import {
-	nodeObjects, html
+	nodeObjects,
+	html
 } from '@js/helpers/nodeList'
 
 class Popup {
@@ -29,10 +32,10 @@ class Popup {
 				goHash: true
 			},
 			on: {
-				beforeOpen: () => {},
-				afterOpen: () => {},
-				beforeClose: () => {},
-				afterClose: () => {}
+				beforeOpen: () => { },
+				afterOpen: () => { },
+				beforeClose: () => { },
+				afterClose: () => { }
 			}
 		}
 
@@ -124,8 +127,8 @@ class Popup {
 
 				if (
 					buttonClose
-                    || !e.target.closest(`.${this.options.classes.popupContent}`)
-                        && this.isOpen
+					|| !e.target.closest(`.${this.options.classes.popupContent}`)
+					&& this.isOpen
 				) {
 					e.preventDefault()
 					this.close()
@@ -140,9 +143,9 @@ class Popup {
 			function (e) {
 				if (
 					this.options.closeEsc
-                    && e.which === 27
-                    && e.code === 'Escape'
-                    && this.isOpen
+					&& e.which === 27
+					&& e.code === 'Escape'
+					&& this.isOpen
 				) {
 					e.preventDefault()
 					this.close()
@@ -184,14 +187,14 @@ class Popup {
 	open(selectorValue) {
 		if (bodyLockStatus) {
 			this.bodyLock
-                = html.classList.contains('lock') && !this.isOpen
+				= html.classList.contains('lock') && !this.isOpen
 					? true
 					: false
 
 			if (
 				selectorValue
-                && typeof selectorValue === 'string'
-                && selectorValue.trim() !== ''
+				&& typeof selectorValue === 'string'
+				&& selectorValue.trim() !== ''
 			) {
 				this.targetOpen.selector = selectorValue
 				this.selectorOpen = true
@@ -278,8 +281,8 @@ class Popup {
 	close(selectorValue) {
 		if (
 			selectorValue
-            && typeof selectorValue === 'string'
-            && selectorValue.trim() !== ''
+			&& typeof selectorValue === 'string'
+			&& selectorValue.trim() !== ''
 		) {
 			this.previousOpen.selector = selectorValue
 		}

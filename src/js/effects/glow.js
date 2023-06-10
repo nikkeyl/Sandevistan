@@ -14,10 +14,10 @@ function glow() {
 			button.insertAdjacentHTML(
 				'beforeend',
 				`
-                    <span class="button__glow">
-                        <span class="button__color"></span>
-                    </span>
-                `
+          <span class="button__glow">
+            <span class="button__color"></span>
+          </span>
+        `
 			)
 			bGlow = button.querySelector('.button__glow')
 			bGlowColor = button.querySelector('.button__color')
@@ -39,8 +39,8 @@ function glow() {
 			bGlow.style.left = `${posX - bGlowSize / 2}px`
 			bGlow.style.top = `${posY - bGlowSize / 2}px`
 			bGlowColor.style.transform = `
-                    translate(${posX - (button.offsetWidth - bGlowSize / 2)}px,
-                            ${posY - (button.offsetHeight - bGlowSize / 2)}px)`
+        translate(${posX - (button.offsetWidth - bGlowSize / 2)}px,
+        ${posY - (button.offsetHeight - bGlowSize / 2)}px)`
 		}
 	}
 

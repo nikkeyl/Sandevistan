@@ -1,5 +1,7 @@
 import {
-	lockPadding, html, body
+	lockPadding,
+	html,
+	body
 } from '@js/helpers/nodeList'
 
 let bodyLockStatus = true
@@ -27,12 +29,12 @@ const bodyLock = (delay = 500) => {
 	if (bodyLockStatus) {
 		lockPadding.forEach(el => {
 			el.style.paddingRight
-                = window.innerWidth
-                - document.querySelector('.wrapper').offsetWidth
-                + 'px'
+        = window.innerWidth
+        - document.querySelector('.wrapper').offsetWidth
+        + 'px'
 		})
 		body.style.paddingRight
-            = window.innerWidth - document.querySelector('.wrapper').offsetWidth + 'px'
+      = window.innerWidth - document.querySelector('.wrapper').offsetWidth + 'px'
 		html.classList.add('lock')
 		delayToggle(delay)
 	}
@@ -46,5 +48,8 @@ const bodyLockToggle = (delay = 500) => {
 }
 
 export {
-	bodyLockStatus, bodyLockToggle, bodyUnlock, bodyLock
+	bodyLockStatus,
+	bodyLockToggle,
+	bodyUnlock,
+	bodyLock
 }

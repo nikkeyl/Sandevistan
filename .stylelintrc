@@ -52,10 +52,6 @@
 			},
 			{
 				"type": "rule",
-				"selector": "&:invalid"
-			},
-			{
-				"type": "rule",
 				"selector": "&:disabled"
 			},
 			{
@@ -158,13 +154,10 @@
 				"grid-auto-rows",
 				"grid-column",
 				"grid-column-end",
-				"grid-column-gap",
 				"column-gap",
 				"grid-column-start",
-				"grid-gap",
 				"grid-row",
 				"grid-row-end",
-				"grid-row-gap",
 				"row-gap",
 				"grid-row-start",
 				"gap",
@@ -397,16 +390,29 @@
 				"resize",
 				"scroll-behavior",
 				"overscroll-behavior",
-				"scroll-snap-coordinate",
-				"scroll-snap-destination",
-				"scroll-snap-type",
-				"scroll-snap-type-x",
-				"scroll-snap-type-y"
+				"scroll-snap-type"
 			],
 			{
 				"unspecified": "bottomAlphabetical"
 			}
 		],
+		"block-no-empty": [
+			true,
+			{
+				"severity": "warning"
+			}
+		],
+		"no-empty-source": [
+			true,
+			{
+				"severity": "warning"
+			}
+		],
+		"annotation-no-unknown": true,
+		"no-unknown-animations": true,
+		"declaration-no-important": true,
+		"function-url-no-scheme-relative": true,
+		"color-named": "never",
 		"at-rule-empty-line-before": [
 			"always",
 			{
@@ -420,13 +426,6 @@
 				"ignoreAtRules": [
 					"else"
 				]
-			}
-		],
-		"annotation-no-unknown": true,
-		"block-no-empty": [
-			true,
-			{
-				"severity": "warning"
 			}
 		],
 		"custom-property-empty-line-before": [
@@ -453,8 +452,6 @@
 				]
 			}
 		],
-		"color-hex-length": "short",
-		"color-named": "never",
 		"declaration-empty-line-before": [
 			"always",
 			{
@@ -468,19 +465,6 @@
 				]
 			}
 		],
-		"declaration-no-important": true,
-		"font-family-name-quotes": "always-unless-keyword",
-		"function-url-no-scheme-relative": true,
-		"font-weight-notation": "numeric",
-		"keyframe-selector-notation": "percentage",
-		"no-unknown-animations": true,
-		"number-max-precision": 6,
-		"no-empty-source": [
-			true,
-			{
-				"severity": "warning"
-			}
-		],
 		"rule-empty-line-before": [
 			"always-multi-line",
 			{
@@ -492,18 +476,22 @@
 				]
 			}
 		],
+		"number-max-precision": 6,
+		"selector-max-combinators": 4,
 		"selector-max-compound-selectors": 4,
+		"selector-max-id": 1,
+		"selector-max-universal": 1,
+		"time-min-milliseconds": 10,
+		"alpha-value-notation": "number",
+		"font-weight-notation": "numeric",
+		"keyframe-selector-notation": "percentage",
+		"media-feature-range-notation": "context",
 		"selector-not-notation": "simple",
 		"selector-class-pattern": null,
-		"selector-max-combinators": 4,
-		"selector-max-universal": 1,
-		"selector-max-id": 1,
-		"time-min-milliseconds": 10,
+		"font-family-name-quotes": "always-unless-keyword",
 		"scss/at-function-named-arguments": "never",
 		"scss/at-mixin-named-arguments": "never",
-
 		"scss/at-mixin-pattern": null,
-
 		"scss/at-rule-conditional-no-parentheses": true,
 		"scss/at-use-no-unnamespaced": true,
 		"scss/declaration-nested-properties": "never",
@@ -523,9 +511,7 @@
 				]
 			}
 		],
-
 		"scss/dollar-variable-pattern": null,
-
 		"scss/double-slash-comment-empty-line-before": [
 			"always",
 			{
@@ -542,10 +528,8 @@
 		"scss/map-keys-quotes": "always",
 		"scss/no-duplicate-dollar-variables": true,
 		"scss/no-global-function-names": true,
-
 		"scss/partial-no-import": true,
 		"scss/percent-placeholder-pattern": null,
-
 		"scss/selector-nest-combinators": "always",
 		"scss/selector-no-redundant-nesting-selector": true
 	}
