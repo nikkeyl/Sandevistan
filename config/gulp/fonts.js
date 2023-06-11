@@ -3,30 +3,31 @@ import { app } from '../../gulpfile.js'
 import ttf2woff2 from 'gulp-ttf2woff2'
 import fonter from 'gulp-fonter-fix'
 
-function cb(error) {
+const cb = error => {
 	if (error) {
 		console.log(app.plugins.chalk.red.bold('[ERROR]\n'), error)
 	} else {
 		console.log(app.plugins.chalk.green.bold(
-			'[SUCCESS]\nThe (fonts.scss) file is written]')
+			'[SUCCESS]\nThe (fonts.scss) file is written]'
+			)
 		)
 	}
 }
 
-const otfToTtf = () => {
-	return app.gulp.src(`${app.paths.srcFolder}/fonts/*.otf`)
+const otfToTtf = () =>
+	app.gulp.src(`${app.paths.srcFolder}/fonts/*.otf`)
 		.pipe(app.plugins.catchError('FONTS'))
 		.pipe(fonter({ formats: ['ttf'] }))
 		.pipe(app.gulp.dest(`${app.paths.srcFolder}/fonts/`))
-}
-const ttfToWoff = () => {
-	return app.gulp.src(`${app.paths.srcFolder}/fonts/*.ttf`)
+
+const ttfToWoff = () =>
+	app.gulp.src(`${app.paths.srcFolder}/fonts/*.ttf`)
 		.pipe(app.plugins.catchError('FONTS'))
 		.pipe(ttf2woff2())
 		.pipe(app.gulp.dest(app.paths.build.fonts))
 		.pipe(app.gulp.src(`${app.paths.srcFolder}/fonts/*.woff2`))
 		.pipe(app.gulp.dest(app.paths.build.fonts))
-}
+
 const fontsStyles = () => {
 	const fontStylesFile = `${app.paths.srcFolder}/scss/base/fonts/fonts.scss`
 
@@ -63,7 +64,10 @@ const fontsStyles = () => {
 					const fileName = file.split('.')[0]
 
 					if (newFileOnly !== fileName) {
-						const [fontName, fontWeight = 'regular'] = fileName.split('-')
+						const [
+							fontName,
+							fontWeight = 'regular'
+						] = fileName.split('-')
 						const fontWeightValue = fontWeights[fontWeight.toLowerCase()]
 						const fontStyle = fileName.includes('-Italic')
 							? 'italic'
@@ -78,9 +82,8 @@ const fontsStyles = () => {
 					}
 				})
 			} else {
-				console.log(
-					app.plugins.chalk.yellow.bold(
-						`[WARNING]\nThe (${fontStylesFile}) file already exists.`
+				console.log(app.plugins.chalk.yellow.bold(
+					`[WARNING]\nThe (${fontStylesFile}) file already exists.`
 					)
 				)
 			}

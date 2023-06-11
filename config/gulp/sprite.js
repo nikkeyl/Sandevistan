@@ -4,8 +4,8 @@ import { svgoConfig } from '../../svgo.config.js'
 
 import svgSprite from 'gulp-svg-sprite'
 
-const sprite = () => {
-	return app.gulp.src(app.paths.src.svgSprites)
+const sprite = () =>
+	app.gulp.src(app.paths.src.svgSprites)
 		.pipe(app.plugins.catchError('SPRITE'))
 		.pipe(svgSprite({
 			mode: { symbol: { sprite: '../img/icons/sprite.svg' } },
@@ -19,6 +19,5 @@ const sprite = () => {
 			}
 		}))
 		.pipe(app.gulp.dest(app.paths.srcFolder))
-}
 
 export { sprite }
