@@ -3,16 +3,7 @@ import { app } from '../../gulpfile.js'
 import ttf2woff2 from 'gulp-ttf2woff2'
 import fonter from 'gulp-fonter-fix'
 
-const cb = error => {
-	if (error) {
-		console.log(app.plugins.chalk.red.bold('[ERROR]\n'), error)
-	} else {
-		console.log(app.plugins.chalk.green.bold(
-			'[SUCCESS]\nThe (fonts.scss) file is written]'
-			)
-		)
-	}
-}
+function cb() { }
 
 const otfToTtf = () =>
 	app.gulp.src(`${app.paths.srcFolder}/fonts/*.otf`)
@@ -31,7 +22,7 @@ const ttfToWoff = () =>
 const fontsStyles = () => {
 	const fontStylesFile = `${app.paths.srcFolder}/scss/base/fonts/fonts.scss`
 
-	app.plugins.fs.readdir(app.paths.build.fonts, (err, fontFiles) => {
+	app.plugins.fs.readdir(app.paths.build.fonts, (error, fontFiles) => {
 		if (fontFiles) {
 			if (!app.plugins.fs.existsSync(fontStylesFile)) {
 				const fontWeights = {
@@ -81,12 +72,16 @@ const fontsStyles = () => {
 						newFileOnly = fileName
 					}
 				})
+				console.log(app.plugins.chalk.green.bold(
+					'[SUCCESS]\nThe (fonts.scss) file is written]'
+				))
 			} else {
 				console.log(app.plugins.chalk.yellow.bold(
 					`[WARNING]\nThe (${fontStylesFile}) file already exists.`
-					)
-				)
+				))
 			}
+		} else {
+			console.log(app.plugins.chalk.red.bold('[ERROR]\n'), error)
 		}
 	})
 
