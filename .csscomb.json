@@ -62,13 +62,10 @@
     "grid-auto-rows",
     "grid-column",
     "grid-column-end",
-    "grid-column-gap",
     "column-gap",
     "grid-column-start",
-    "grid-gap",
     "grid-row",
     "grid-row-end",
-    "grid-row-gap",
     "row-gap",
     "grid-row-start",
     "gap",
@@ -301,10 +298,6 @@
     "resize",
     "scroll-behavior",
     "overscroll-behavior",
-    "scroll-snap-coordinate",
-    "scroll-snap-destination",
-    "scroll-snap-type",
-    "scroll-snap-type-x",
-    "scroll-snap-type-y"
+    "scroll-snap-type"
   ]
 }
