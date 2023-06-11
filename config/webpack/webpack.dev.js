@@ -10,9 +10,7 @@ const config = {
 	mode: 'development',
 	devtool: 'inline-source-map',
 	stats: 'errors-warnings',
-	optimization: {
-		minimize: false
-	},
+	optimization: { minimize: false },
 	entry: `${paths.root}/js/app.js`,
 	output: output('js/app.min.js'),
 	devServer: {
@@ -33,9 +31,7 @@ const config = {
 			{
 				test: /\.js$/,
 				exclude: /node_modules/,
-				resolve: {
-					fullySpecified: false
-				}
+				resolve: { fullySpecified: false }
 			},
 			{
 				test: /\.scss$/,
@@ -50,9 +46,7 @@ const config = {
 						options: cssLoaderOptions(1, true, '/')
 					}, {
 						loader: 'sass-loader',
-						options: {
-							sourceMap: true
-						}
+						options: { sourceMap: true }
 					}
 				]
 			}
