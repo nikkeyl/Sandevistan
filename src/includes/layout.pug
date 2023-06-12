@@ -1,24 +1,28 @@
 block variables
-  - var pageTitle = "Главная"
+  - let title = "Главная"
 
 doctype html
-html(lang=ru)
+html(lang="ru")
   head
-    title=pageTitle
+    title=title
     meta(charset="UTF-8")
     meta(name="viewport" content="width=device-width, initial-scale=1")
     meta(name="format-detection" content="telephone=no")
     link(rel="stylesheet" href="css/style.min.css")
-    block linkStyles
+    block styles
     link(rel="icon" href="favicon.ico")
 
   body.page
     .wrapper
-      include components/header
-      block pageContent
-      include components/footer
+      block header
+        include components/header
+      block content
+      block footer
+        include components/footer
 
     block preloader
+      //- include pug/modules/preloader
     block popups
+      //- include pug/modules/popup
     block scripts
     script(src="js/app.min.js")
