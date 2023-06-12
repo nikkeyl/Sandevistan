@@ -1,4 +1,4 @@
-<style>
+style.
 	.lock .page {
 		overflow: hidden;
 		touch-action: none;
@@ -15,9 +15,9 @@
 		visibility: visible;
 		transition: opacity 0.5s;
 	}
-</style>
-<div id="preloader">
-	<style>
+
+#preloader
+	style.
 		*,
 		*::before,
 		*::after {
@@ -56,21 +56,18 @@
 			font-size: 10rem;
 		}
 
-		.preloader__line {}
-
 		.preloader__line span {
 			display: inline-block;
 			height: 0.8rem;
 			background-color: #80f;
 			transition: width 0.2s;
 		}
-	</style>
-	<script>
+	script.
 		function preloader() {
 			const preloaderImages = document.querySelector('[data-preloader]')
 				? document.querySelectorAll('[data-preloader] img')
-				: document.querySelectorAll('img')
-			const preloaderContainer = document.querySelector('#preloader')
+				: document.querySelectorAll('img');
+			const preloaderContainer = document.querySelector('#preloader');
 
 			if (preloaderImages.length) {
 				const preloaderTemplate =
@@ -81,72 +78,65 @@
 								<div class="preloader__line"><span></span></div>
 							</div>
 						</div>
-					`
+					`;
 
-				document.querySelector('html').insertAdjacentHTML(
-					"beforeend",
-					preloaderTemplate
-				)
+				document.querySelector('html').insertAdjacentHTML("beforeend", preloaderTemplate);
 
-				const preloader = document.querySelector('.preloader')
-				const percentLoad = document.querySelector('.preloader__counter')
-				const lineLoad = document.querySelector('.preloader__line span')
-				const html = document.documentElement
+				const preloader = document.querySelector('.preloader');
+				const	showPercentLoad = document.querySelector('.preloader__counter');
+				const	showLineLoad = document.querySelector('.preloader__line span');
+				const	html = document.documentElement;
 
-				let imagesLoadedCount = counter = progress = 0
+				let imagesLoadedCount = counter = progress = 0;
 
-				html.classList.add('loading')
-				html.classList.add('lock')
+				html.classList.add('loading');
+				html.classList.add('lock');
 
 				preloaderImages.forEach(preloaderImage => {
-					const imgClone = document.createElement('img')
-
+					const imgClone = document.createElement('img');
 					if (imgClone) {
-						imgClone.onload = imageLoaded
-						imgClone.onerror = imageLoaded
+						imgClone.onload = imageLoaded;
+						imgClone.onerror = imageLoaded;
 						preloaderImage.dataset.src
 							? imgClone.src = preloaderImage.dataset.src
-							: imgClone.src = preloaderImage.src
+							: imgClone.src = preloaderImage.src;
 					}
-				})
-
+				});
 				function setValueProgress(progress) {
-					percentLoad?.percentLoad.innerText = `${progress}%`
-					lineLoad?.style.width = `${progress}%`
+					showPercentLoad
+						? showPercentLoad.innerText = `${progress}%`
+						: null;
+					showLineLoad
+						? showLineLoad.style.width = `${progress}%`
+						: null;
 				}
-
-				percentLoad
+				showPercentLoad
 					? setValueProgress(progress)
-					: null
+					: null;
 
 				function imageLoaded() {
-					imagesLoadedCount++
-					progress = Math.round((100 / preloaderImages.length) * imagesLoadedCount)
-
+					imagesLoadedCount++;
+					progress = Math.round((100 / preloaderImages.length) * imagesLoadedCount);
 					const intervalId = setInterval(() => {
 						counter >= progress
 							? clearInterval(intervalId)
-							: setValueProgress(++counter)
+							: setValueProgress(++counter);
 						counter >= 100
 							? addLoadedClass()
-							: null
-					}, 10)
+							: null;
+					}, 10);
 				}
-
 				function addLoadedClass() {
-					html.classList.add('loaded')
-					html.classList.remove('lock')
-					html.classList.remove('loading')
-					
+					html.classList.add('loaded');
+					html.classList.remove('lock');
+					html.classList.remove('loading');
 					setInterval(() => {
-						preloader.remove()
-						preloaderContainer.remove()
-					}, 500)
+						preloader.remove();
+						preloaderContainer.remove();
+					}, 500);
 				}
 			} else {
-				preloaderContainer.remove()
+				preloaderContainer.remove();
 			}
 		}
-		preloader()
-	</script>
-</div>
+		preloader();

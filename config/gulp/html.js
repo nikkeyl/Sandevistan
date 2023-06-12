@@ -24,8 +24,7 @@ const html = () =>
     }))
     .pipe(htmlMin({
       removeRedundantAttributes: true,
-      removeEmptyAttributes: true,
-      removeComments: true
+      removeEmptyAttributes: true
     }))
     .pipe(app.gulp.dest(app.paths.build.html))
 

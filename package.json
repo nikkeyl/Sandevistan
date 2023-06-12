@@ -1,7 +1,7 @@
 {
 	"type": "module",
 	"scripts": {
-		"init": "rm -rf .git && npm i",
+		"init": "rm -rf .git && npm i && git init && git add -A && git commit -a -m \"init: New project\" && git status",
 		"dev": "gulp && webpack serve -c config/webpack/webpack.dev.js",
 		"build": "gulp build",
 		"devBuild": "gulp build --nowebp",
@@ -18,7 +18,6 @@
 		"eslint": "latest",
 		"eslint-plugin-import": "latest",
 		"eslint-webpack-plugin": "latest",
-		"file-include-webpack-plugin-replace": "latest",
 		"gh-pages": "latest",
 		"gulp": "latest",
 		"gulp-autoprefixer": "latest",
@@ -45,6 +44,7 @@
 		"gulp-webp-html-nosvg": "latest",
 		"gulp-webpcss": "latest",
 		"gulp-zip": "latest",
+		"html-webpack-plugin": "latest",
 		"husky": "latest",
 		"inputmask": "latest",
 		"isotope-layout": "latest",
@@ -53,6 +53,8 @@
 		"lint-staged": "latest",
 		"mini-css-extract-plugin": "latest",
 		"nouislider": "latest",
+		"pug": "latest",
+		"pug-loader": "latest",
 		"sass": "latest",
 		"sass-loader": "latest",
 		"simplebar": "latest",

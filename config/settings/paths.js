@@ -26,8 +26,7 @@ const paths = {
 		scss: `${srcFolder}/scss/style.scss`,
 		static: `${srcFolder}/static/**/*.*`,
 		fonts: `${srcFolder}/fonts/*.*`,
-		js: `${srcFolder}/js/app.js`,
-		html: `${srcFolder}/*.html`
+		js: `${srcFolder}/js/app.js`
 	},
 	built: resolve(buildFolder),
 	root: resolve(srcFolder),

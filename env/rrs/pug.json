@@ -289,130 +289,130 @@
   },
   "Active Class": {
     "prefix": "ac",
-    "body": "active"
+    "body": ".active"
   },
   "Image lazy": {
     "prefix": "imgl",
-    "body": "<img data-src=\"@img$1\" alt=\"$2\">"
+    "body": "img(data-src=\"@img$1\" alt=\"$2\")"
   },
   "Image": {
     "prefix": "img",
-    "body": "<img src=\"@img$1\" alt=\"$2\">"
+    "body": "img(src=\"@img$1\" alt=\"$2\")"
   },
   "IBG": {
     "prefix": "ibg",
-    "body": "<div class=\"${1:block}__image-ibg\">\n\t<img data-src=\"@img$2\" alt=\"${3:alt}\">\n</div>"
+    "body": ".${1:block}__image-ibg\n\timg(data-src=\"@img$2\" alt=\"${3:alt}\")"
   },
   "IBGA": {
     "prefix": "ibga",
-    "body": "<a class=\"${1:block}__image-ibg\" href=\"$2\">\n\t<img data-src=\"@img$3\" alt=\"${4:alt}\">\n</a>"
+    "body": "a.${1:block}__image-ibg(href=\"$2\")\n\timg(data-src=\"@img$3\" alt=\"${4:alt}\")"
   },
   "Logo": {
     "prefix": "logo",
-    "body": "<a class=\"logo\" href=\"index.html\">\n\t<img src=\"@img$1\" alt=\"${2:alt}\">\n</a>"
+    "body": "a.logo(href=\"index.html\")\n\timg(src=\"@img$1\" alt=\"${2:alt}\")"
   },
   "Sprite": {
     "prefix": "sprite",
-    "body": "<svg class=\"${1:icon}\">\n\t<use href=\"@img/icons/sprite.svg#${2:icon}\"></use>\n</svg>"
+    "body": "svg.${1:icon}\n\tuse(href=\"@img/icons/sprite.svg#${2:icon}\")"
   },
   "Button": {
     "prefix": "btn",
-    "body": "<button class=\"button\" type=\"${1:button}\">$2</button>"
+    "body": "button.button(type=\"${1:button}\") $2"
   },
   "Button Link": {
     "prefix": "abtn",
-    "body": "<a class=\"button\" href=\"$1\">$2</a>"
+    "body": "a.button(href=\"$1\") $2"
   },
   "Menu": {
     "prefix": "menu",
-    "body": "<nav class=\"menu\">\n\t<ul class=\"menu__list\">\n\t\t<li class=\"menu__item\">\n\t\t\t<a class=\"menu__link\" href=\"$1\">$2</a>\n\t\t</li>\n\t</ul>\n</nav>"
+    "body": "nav.menu\n\tul.menu__list\n\t\tli.menu__item\n\t\t\ta.menu__link(href=\"$1\") $2"
   },
   "Breadcrumbs": {
     "prefix": "bc",
-    "body": "<nav class=\"breadcrumbs\">\n\t<ul class=\"breadcrumbs__list\">\n\t\t<li class=\"breadcrumbs__item\">\n\t\t\t<a class=\"breadcrumbs__link\" href=\"${1:index}.html\">${2:prev}</a>\n\t\t</li>\n\t\t<li class=\"breadcrumbs__item\">\n\t\t\t<span class=\"breadcrumbs__current\">${3:current}</span>\n\t\t</li>\n\t</ul>\n</nav>"
+    "body": "nav.breadcrumbs\n\tul.breadcrumbs__list\n\t\tli.breadcrumbs__item\n\t\t\ta.breadcrumbs__link(href=\"${1:index}.html\") ${2:prev}\n\t\tli.breadcrumbs__item\n\t\t\tspan.breadcrumbs__current ${3:current}"
   },
   "Change Font Range": {
     "prefix": "cfr",
-    "body": "<div class=\"${1:change-font}\">\n\t<input class=\"${1:change-font}__range\" id=\"range\" type=\"range\" value=\"${2:16}\" min=\"${3:16}\" max=\"${4:30}\" data-font-range>\n\t<label class=\"${1:change-font}__value\" for=\"range\" data-font-value></label>\n</div>"
+    "body": ".${1:change-font}\n\tinput.${1:change-font}__range(id=\"range\" type=\"range\" value=\"${2:16}\" min=\"${3:16}\" max=\"${4:30}\" data-font-range)\n\tlabel.${1:change-font}__value(for=\"range\" data-font-value)"
   },
   "Change Font Buttons": {
     "prefix": "cfb",
-    "body": "<div class=\"${1:change-font}\">\n\t<button class=\"${1:change-font}__button active\" type=\"button\" data-font-size=\"${2:16}\">${2:16}</button>\n\t<button class=\"${1:change-font}__button ${1:change-font}__button--low\" type=\"button\" data-font-size=\"${3:25}\">${3:25}</button>\n\t<button class=\"${1:change-font}__button ${1:change-font}__button--big\" type=\"button\" data-font-size=\"${4:30}\">${4:30}</button>\n</div>"
+    "body": ".${1:change-font}\n\tbutton.${1:change-font}__button.active(type=\"button\" data-font-size=\"${2:16}\") ${2:16}\n\tbutton.${1:change-font}__button.${1:change-font}__button--low(type=\"button\" data-font-size=\"${3:25}\") ${3:25}\n\tbutton.${1:change-font}__button.${1:change-font}__button--big(type=\"button\" data-font-size=\"${4:30}\") ${4:30}"
   },
   "Spollers": {
     "prefix": "spollers",
-    "body": "<div class=\"${1:spollers}\" data-spollers=\"${3:768}\">\n\t<details class=\"${2:spoller}\">\n\t\t<summary class=\"${2:spoller}__title\" type=\"button\" data-spoller>${5:title}</summary>\n\t\t<div class=\"${2:spoller}__body\">${6:content}</div>\n\t</details>\n</div>"
+    "body": ".${1:spollers}(data-spollers=\"${3:768}\")\n\tdetails.${2:spoller}\n\t\tsummary.${2:spoller}__title(type=\"button\" data-spoller) ${5:title}\n\t\t.${2:spoller}__body ${6:content}"
   },
   "Tabs": {
     "prefix": "tabs",
-    "body": "<div class=\"${1:tabs}\" data-tabs>\n\t<nav class=\"${1:tabs}__navigation\" data-tabs-titles>\n\t\t<button class=\"${1:tabs}__title tab-active\" type=\"button\">${2:btn}</button>\n\t\t<button class=\"${1:tabs}__title\" type=\"button\">${3:btn}</button>\n\t\t<button class=\"${1:tabs}__title\" type=\"button\">${4:btn}</button>\n\t</nav>\n\t<div class=\"${1:tabs}__content\" data-tabs-body>\n\t\t<div class=\"${1:tabs}__body\">\n\t\t\t${5:content}\n\t\t</div>\n\t\t<div class=\"${1:tabs}__body\">\n\t\t\t${6:content}\n\t\t</div>\n\t\t<div class=\"${1:tabs}__body\">\n\t\t\t${7:content}\n\t\t</div>\n\t</div>\n</div>"
+    "body": ".${1:tabs}(data-tabs)\n\tnav.${1:tabs}__navigation(data-tabs-titles)\n\t\tbutton.${1:tabs}__title.tab-active(type=\"button\") ${2:btn}\n\t\tbutton.${1:tabs}__title(type=\"button\") ${3:btn}\n\t\tbutton.${1:tabs}__title(type=\"button\") ${4:btn}\n\t.${1:tabs}__content(data-tabs-body)\n\t\t.${1:tabs}__body\n\t\t\t${5:| content}\n\t\t.${1:tabs}__body\n\t\t\t${6:| content}\n\t\t.${1:tabs}__body\n\t\t\t${7:| content}"
   },
   "Show More": {
     "prefix": "showmore",
-    "body": "<div class=\"${1:showmore}\" data-showmore>\n\t<div class=\"${1:showmore}__content\" data-showmore-content=\"${2:200}\">$3</div>\n\t<button class=\"button\" type=\"button\" data-showmore-button>\n\t\t<span>${4:Show more}</span>\n\t\t<span>${5:Hide}</span>\n\t</button>\n</div>"
+    "body": ".${1:showmore}(data-showmore)\n\t.${1:showmore}__content(data-showmore-content=\"${2:200}\") $3\n\tbutton.button(type=\"button\" data-showmore-button)\n\t\tspan ${4:Show more}\n\t\tspan ${5:Hide}"
   },
   "Swiper": {
     "prefix": "sf",
-    "body": "<div class=\"swiper\">\n\t<div class=\"swiper-wrapper ${1:block}__wrapper\">\n\t\t<div class=\"swiper-slide ${1:block}__slide\">\n\t\t\t$2\n\t\t</div>\n\t</div>\n\t<div class=\"swiper-pagination\"></div>\n\t<button class=\"swiper-button-prev\" type=\"button\">$3</button>\n\t<button class=\"swiper-button-next\" type=\"button\">$4</button>\n\t<div class=\"swiper-scrollbar\"></div>\n</div>"
+    "body": ".swiper\n\t.swiper-wrapper.${1:block}__wrapper\n\t\t.swiper-slide.${1:block}__slide\n\t\t\t$2\n\t.swiper-pagination\n\t\tbutton.swiper-button-prev(type=\"button\") $3\n\t\tbutton.swiper-button-next(type=\"button\") $4\n\t.swiper-scrollbar"
   },
   "Section": {
     "prefix": "sec",
-    "body": "<section class=\"${1:block}\">\n\t<div class=\"${1:block}__container\">\n\t\t$4\n\t</div>\n</section>"
+    "body": "section.${1:block}\n\t.${1:block}__container\n\t\t$4"
   },
   "Section Response": {
     "prefix": "secres",
-    "body": "<section class=\"${1:block}\">\n\t<div class=\"${1:block}__inner\">\n\t\t<div class=\"${1:block}__container\">\n\t\t\t<div class=\"${1:block}__body\">\n\t\t\t\t$4\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div class=\"${1:block}__image\">\n\t\t<img data-src=\"@img$2\" alt=\"$3\">\n\t</div>\n</section>"
+    "body": "section.${1:block}\n\t.${1:block}__inner\n\t\t.${1:block}__container\n\t\t\t.${1:block}__body\n\t\t\t\t$4\n\t.${1:block}__image\n\t\timg(data-src=\"@img$2\" alt=\"$3\")"
   },
   "Full Page Section": {
     "prefix": "fullpage",
-    "body": "<div data-fp class=\"${1:block}\">\n\t<div data-fp-section class=\"${1:block}__section\"></div>\n</div>"
+    "body": ".${1:block}(data-fp)\n\t.${1:block}__section(data-fp-section)"
   },
   "Container": {
     "prefix": "cnt",
-    "body": "<div class=\"${1:block}__container\">\n\t$2\n</div>"
+    "body": ".${1:block}__container\n\t$2"
   },
   "Rating": {
     "prefix": "rating",
-    "body": "<div class=\"rating rating--set\">\n\t<div class=\"rating__body\">\n\t\t<div class=\"rating__active\"></div>\n\t\t<div class=\"rating__items\">\n\t\t\t<input class=\"rating__item\" type=\"radio\" value=\"1\" name=\"rating\">\n\t\t\t<input class=\"rating__item\" type=\"radio\" value=\"2\" name=\"rating\">\n\t\t\t<input class=\"rating__item\" type=\"radio\" value=\"3\" name=\"rating\">\n\t\t\t<input class=\"rating__item\" type=\"radio\" value=\"4\" name=\"rating\">\n\t\t\t<input class=\"rating__item\" type=\"radio\" value=\"5\" name=\"rating\">\n\t\t</div>\n\t</div>\n\t<div class=\"rating__value\">3.6</div>\n</div>"
+    "body": ".rating.rating--set\n\t.rating__body\n\t\t.rating__active\n\t\t.rating__items\n\t\t\tinput.rating__item(type=\"radio\" value=\"1\" name=\"rating\")\n\t\t\tinput.rating__item(type=\"radio\" value=\"2\" name=\"rating\")\n\t\t\tinput.rating__item(type=\"radio\" value=\"3\" name=\"rating\")\n\t\t\tinput.rating__item(type=\"radio\" value=\"4\" name=\"rating\")\n\t\t\tinput.rating__item(type=\"radio\" value=\"5\" name=\"rating\")\n\t.rating__value 3.6"
   },
   "Form email": {
     "prefix": "formemail",
-    "body": "<form class=\"${1:form}\" action=\"${2:static/sendmail/sendmail.php}\" method=\"${3:POST}\">\n\t<input class=\"${1:form}__input\" type=\"text\" placeholder=\"${4:E-mail}\" name=\"email\" data-required=\"email\">\n\t<button class=\"${1:form}__button button\" type=\"submit\">${6:Send}</button>\n</form>"
+    "body": "form.${1:form}(action=\"${2:static/sendmail/sendmail.php}\" method=\"${3:POST}\")\n\tinput.${1:form}__input(type=\"text\" placeholder=\"${4:E-mail}\" name=\"email\" data-required=\"email\")\n\tbutton.${1:form}__button.button(type=\"submit\") ${6:Send}"
   },
   "Quantity": {
     "prefix": "qa",
-    "body": "<div class=\"quantity\" data-quantity>\n\t<button class=\"quantity__button quantity__button--plus\" type=\"button\" data-quantity-plus></button>\n\t<div class=\"quantity__input\">\n\t\t<input type=\"text\" value=\"1\" name=\"quantity\" data-quantity-value>\n\t</div>\n\t<button class=\"quantity__button quantity__button--minus\" type=\"button\" data-quantity-minus></button>\n</div>"
+    "body": ".quantity(data-quantity)\n\tbutton.quantity__button.quantity__button--plus(type=\"button\" data-quantity-plus)\n\t.quantity__input\n\t\tinput(type=\"text\" value=\"1\" name=\"quantity\" data-quantity-value)\n\tbutton.quantity__button.quantity__button--minus(type=\"button\" data-quantity-minus)"
   },
   "Input": {
     "prefix": "inp",
-    "body": "<input class=\"${1:input}\" type=\"${2:text}\" name=\"${3:input}\" placeholder=\"$4\">"
+    "body": "input.${1:input}(type=\"${2:text}\" name=\"${3:input}\" placeholder=\"$4\")"
   },
   "Textarea": {
     "prefix": "txta",
-    "body": "<textarea class=\"${1:input}\" name=\"${2:message}\" placeholder=\"$3\"></textarea>"
+    "body": "textarea.${1:input}(name=\"${2:message}\" placeholder=\"$3\")"
   },
   "Select": {
     "prefix": "sel",
-    "body": "<select class=\"${1:select}\" name=\"select\">\n\t<option value=\"1\" selected>${2:option}</option>\n\t<option value=\"2\">${3:option}</option>\n\t<option value=\"3\">${4:option}</option>\n\t<option value=\"4\">${5:option}</option>\n</select>"
+    "body": "select.${1:select}(name=\"select\")\n\toption(value=\"1\" selected) ${2:option}\n\toption(value=\"2\") ${3:option}\n\toption(value=\"3\") ${4:option}\n\toption(value=\"4\") ${5:option}"
   },
   "Radio Buttons": {
     "prefix": "opt",
-    "body": "<div class=\"options\">\n\t<label class=\"option\">\n\t\t<span class=\"option__text\">${1:text}</span>\n\t\t<input type=\"radio\" name=\"option\" checked>\n\t\t<span class=\"option__box\"></span>\n\t</label>\n\t<label class=\"option\">\n\t\t<span class=\"option__text\">${2:text}</span>\n\t\t<input type=\"radio\" name=\"option\">\n\t\t<span class=\"option__box\"></span>\n\t</label>\n</div>"
+    "body": ".options\n\tlabel.option\n\t\tspan.option__text ${1:text}\n\t\tinput(type=\"radio\" name=\"option\" checked)\n\t\tspan.option__box\n\tlabel.option\n\t\tspan.option__text ${2:text}\n\t\tinput(type=\"radio\" name=\"option\")\n\t\tspan.option__box"
   },
   "Checkbox": {
     "prefix": "chk",
-    "body": "<label class=\"checkbox\">\n\t<span class=\"checkbox__text\">${1:text}</span>\n\t<input type=\"checkbox\" name=\"checkbox\">\n\t<span class=\"checkbox__box\">\n\t\t<svg>\n\t\t\t<use href=\"@img/icons/sprite.svg#${2:check}\"></use>\n\t\t</svg>\n\t</span>\n</label>"
+    "body": "label.checkbox\n\tspan.checkbox__text ${1:text}\n\tinput(type=\"checkbox\" name=\"checkbox\")\n\tspan.checkbox__box\n\t\tsvg\n\t\t\tuse(href=\"@img/icons/sprite.svg#${2:check}\")"
   },
   "Add Popup Include": {
     "prefix": "pop",
-    "body": "@@include(\"html/modules/popup.htm\")"
+    "body": "include pug/modules/popup"
   },
   "Add Preloader Include": {
     "prefix": "prl",
-    "body": "@@include(\"html/modules/preloader.htm\")"
+    "body": "include pug/modules/preloader"
   },
   "Add Pagination Include": {
     "prefix": "pag",
-    "body": "@@include(\"html/modules/pagination.htm\")"
+    "body": "include pug/modules/pagination"
   }
 }

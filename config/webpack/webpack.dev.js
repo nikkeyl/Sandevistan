@@ -5,6 +5,7 @@ import { extensionsAndAliases } from './plugins/extensionsAndAliases.js'
 import { replaceLoaderOptions } from './plugins/replaceLoaderOptions.js'
 import { cssLoaderOptions } from './plugins/cssLoaderOptions.js'
 import { output } from './plugins/webPackOutputFile.js'
+import { pugPages } from './plugins/pugPages.js'
 
 const config = {
 	mode: 'development',
@@ -22,8 +23,7 @@ const config = {
 
 		watchFiles: [
 			`${paths.root}/img/**/*.*`,
-			`${paths.root}/**/*.html`,
-			`${paths.root}/**/*.htm`
+			`${paths.root}/**/*.pug`
 		]
 	},
 	module: {
@@ -32,15 +32,14 @@ const config = {
 				test: /\.js$/,
 				exclude: /node_modules/,
 				resolve: { fullySpecified: false }
-			},
-			{
+			}, {
 				test: /\.scss$/,
 				exclude: `${paths.root}/fonts`,
 				use: [
 					'style-loader',
 					{
 						loader: 'string-replace-loader',
-						options: replaceLoaderOptions
+						options: replaceLoaderOptions('../')
 					}, {
 						loader: 'css-loader',
 						options: cssLoaderOptions(1, true, '/')
@@ -49,25 +48,26 @@ const config = {
 						options: { sourceMap: true }
 					}
 				]
+			}, {
+				test: /\.pug$/,
+				use: [
+					{
+						loader: 'pug-loader'
+					}, {
+						loader: 'string-replace-loader',
+						options: replaceLoaderOptions('')
+					}
+				]
 			}
 		]
 	},
 	plugins: [
-		new plugins.FileIncludeWebpackPlugin({
-			source: paths.srcFolder,
-			replace: [
-				{
-					regex: '<link rel="stylesheet" href="css/style.min.css">',
-					to: ''
-				}, {
-					regex: '../img',
-					to: 'img'
-				}, {
-					regex: '@img',
-					to: 'img'
-				}
-			]
-		}),
+		...pugPages.map(pugPage => new plugins.HtmlWebpackPlugin({
+			minify: false,
+			inject: false,
+			template: `${paths.srcFolder}/${pugPage}`,
+			filename: `${pugPage.replace(/\.pug$/, '.html')}`
+		})),
 		new plugins.CopyPlugin({
 			patterns: [
 				{

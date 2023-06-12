@@ -1,0 +1,24 @@
+block variables
+  - var pageTitle = "Главная"
+
+doctype html
+html(lang=ru)
+  head
+    title=pageTitle
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    meta(name="format-detection" content="telephone=no")
+    link(rel="stylesheet" href="css/style.min.css")
+    block linkStyles
+    link(rel="icon" href="favicon.ico")
+
+  body.page
+    .wrapper
+      include components/header
+      block pageContent
+      include components/footer
+
+    block preloader
+    block popups
+    block scripts
+    script(src="js/app.min.js")

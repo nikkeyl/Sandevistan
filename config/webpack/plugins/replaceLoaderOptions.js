@@ -1,7 +1,7 @@
-const replaceLoaderOptions = {
+const replaceLoaderOptions = startPath => ({
   search: '@img',
-  replace: '../img',
+  replace: `${startPath}img`,
   flags: 'g'
-}
+})
 
 export { replaceLoaderOptions }

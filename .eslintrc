@@ -84,10 +84,13 @@
 		// 	"cb",
 		// 	"callback"
 		// ],
-		"id-length": "error",
+		// "id-length": "error",
 		// "id-match": [ // learn more
 		// 	"error",
-		// 	"^[a-z]+([A-Z][a-z]+)*$"
+		// 	"^[a-z]+([A-Z][a-z]+)*$",
+		// 	{
+		// 		"classFields": true
+		// 	}
 		// ],
 		// "init-declarations": [ // learn more
 		// 	"error",
@@ -232,21 +235,21 @@
 			}
 		],
 		"lines-between-class-members": "error",
-		"max-len": [ // learn more
-			"error",
-			{
-				"code": 85
-			}
-		],
+		// "max-len": [ // learn more
+		// 	"error",
+		// 	{
+		// 		"code": 85
+		// 	}
+		// ],
 		"max-statements-per-line": "error",
 		"multiline-ternary": "error",
 		"new-parens": "error",
-		"newline-per-chained-call": [
-			"error",
-			{
-				"ignoreChainWithDepth": 3
-			}
-		],
+		// "newline-per-chained-call": [
+		// 	"error",
+		// 	{
+		// 		"ignoreChainWithDepth": 3
+		// 	}
+		// ],
 		"no-extra-parens": "error",
 		"no-multi-spaces": "error",
 		"no-multiple-empty-lines": [
@@ -270,10 +273,10 @@
 			"always"
 		],
 		"object-property-newline": "error",
-		"operator-linebreak": [ // in folder scroll wrong working
-			"error",
-			"before"
-		],
+		// "operator-linebreak": [
+		// 	"error",
+		// 	"before"
+		// ],
 		"padded-blocks": [
 			"error",
 			"never"
@@ -355,15 +358,15 @@
 				"next": "if"
 			}
 		],
-		"quotes": [
-			"error",
-			"single"
-		],
+		// "quotes": [
+		// 	"error",
+		// 	"single"
+		// ],
 		"rest-spread-spacing": "error",
-		"semi": [
-			"error",
-			"never"
-		],
+		// "semi": [
+		// 	"error",
+		// 	"never"
+		// ],
 		"space-before-blocks": "error",
 		"space-before-function-paren": [
 			"error",

@@ -5,6 +5,7 @@ import { extensionsAndAliases } from './plugins/extensionsAndAliases.js'
 import { replaceLoaderOptions } from './plugins/replaceLoaderOptions.js'
 import { cssLoaderOptions } from './plugins/cssLoaderOptions.js'
 import { output } from './plugins/webPackOutputFile.js'
+import { pugPages } from './plugins/pugPages.js'
 import { linters } from '../modules/linters.js'
 
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
@@ -24,14 +25,13 @@ const config = {
 				test: /\.js$/,
 				exclude: /node_modules/,
 				resolve: { fullySpecified: false }
-			},
-			{
+			}, {
 				test: /\.scss$/,
 				use: [
 					MiniCssExtractPlugin.loader,
 					{
 						loader: 'string-replace-loader',
-						options: replaceLoaderOptions
+						options: replaceLoaderOptions('../')
 					}, {
 						loader: 'css-loader',
 						options: cssLoaderOptions()
@@ -42,6 +42,19 @@ const config = {
 						}
 					}
 				]
+			}, {
+				test: /\.pug$/,
+				use: [
+					{
+						loader: 'pug-loader',
+						options: {
+							pretty: true
+						}
+					}, {
+						loader: 'string-replace-loader',
+						options: replaceLoaderOptions('')
+					}
+				]
 			}
 		]
 	},
@@ -49,19 +62,12 @@ const config = {
 		linters.styleLint,
 		linters.esLint,
 
-		new plugins.FileIncludeWebpackPlugin({
-			source: paths.srcFolder,
-			destination: '../',
-			replace: [
-				{
-					regex: '../img',
-					to: 'img'
-				}, {
-					regex: '@img',
-					to: 'img'
-				}
-			]
-		}),
+		...pugPages.map(pugPage => new plugins.HtmlWebpackPlugin({
+			minify: false,
+			inject: false,
+			template: `${paths.srcFolder}/${pugPage}`,
+			filename: `${pugPage.replace(/\.pug$/, '.html')}`
+		})),
 		new MiniCssExtractPlugin({ filename: '../css/style.css' }),
 		new plugins.CopyPlugin({
 			patterns: [

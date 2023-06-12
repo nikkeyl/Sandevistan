@@ -1,6 +1,6 @@
 import { catchError } from '../modules/catchErrors.js'
 
-import FileIncludeWebpackPlugin from 'file-include-webpack-plugin-replace'
+import HtmlWebpackPlugin from 'html-webpack-plugin'
 import TerserPlugin from 'terser-webpack-plugin'
 import CopyPlugin from 'copy-webpack-plugin'
 import webpack from 'webpack-stream'
@@ -10,7 +10,7 @@ import chalk from 'chalk'
 import fs from 'fs'
 
 const plugins = {
-	FileIncludeWebpackPlugin,
+	HtmlWebpackPlugin,
 	if: ifPlugin,
 	TerserPlugin,
 	catchError,
