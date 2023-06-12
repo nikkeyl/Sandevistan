@@ -66,7 +66,7 @@ const config = {
 			minify: false,
 			inject: false,
 			template: `${paths.srcFolder}/${pugPage}`,
-			filename: `${pugPage.replace(/\.pug$/, '.html')}`
+			filename: `../${pugPage.replace(/\.pug$/, '.html')}`
 		})),
 		new MiniCssExtractPlugin({ filename: '../css/style.css' }),
 		new plugins.CopyPlugin({
