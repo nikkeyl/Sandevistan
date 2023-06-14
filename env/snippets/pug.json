@@ -377,7 +377,7 @@
   },
   "Form email": {
     "prefix": "formemail",
-    "body": "form.${1:form}(action=\"${2:static/sendmail/sendmail.php}\" method=\"${3:POST}\")\n\tinput.${1:form}__input(type=\"text\" placeholder=\"${4:E-mail}\" name=\"email\" data-required=\"email\")\n\tbutton.${1:form}__button.button(type=\"submit\") ${6:Send}"
+    "body": "form.${1:form}(method=\"${3:POST}\")\n\tinput.${1:form}__input(type=\"text\" placeholder=\"${4:E-mail}\" name=\"email\" data-required=\"email\")\n\tbutton.${1:form}__button.button(type=\"submit\") ${6:Send}"
   },
   "Quantity": {
     "prefix": "qa",
