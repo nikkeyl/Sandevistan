@@ -17,8 +17,12 @@ const css = () =>
 		.pipe(cssComb())
 		.pipe(autoPrefixer())
 		.pipe(app.gulp.dest(app.paths.build.css))
-		.pipe(cleanCss({ level: 2 }))
-		.pipe(app.plugins.rename({ suffix: '.min' }))
+		.pipe(cleanCss({
+			level: 2
+		}))
+		.pipe(app.plugins.rename({
+			suffix: '.min'
+		}))
 		.pipe(app.gulp.dest(app.paths.build.css))
 
 export { css }

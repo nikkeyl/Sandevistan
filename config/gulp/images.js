@@ -25,7 +25,9 @@ const images = () =>
       newer(app.paths.build.images)
     ))
     .pipe(imagemin({
-      svgoPlugins: [{ removeViewBox: false }],
+      svgoPlugins: [{
+        removeViewBox: false
+      }],
       interlaced: true
     }))
     .pipe(app.gulp.dest(app.paths.build.images))

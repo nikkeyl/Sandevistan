@@ -12,10 +12,14 @@ import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 
 const config = {
 	mode: 'production',
-	cache: { type: 'filesystem' },
+	cache: {
+		type: 'filesystem'
+	},
 	optimization: {
 		minimizer: [
-			new plugins.TerserPlugin({ extractComments: false })
+			new plugins.TerserPlugin({
+				extractComments: false
+			})
 		]
 	},
 	output: output('app.min.js'),
@@ -24,7 +28,9 @@ const config = {
 			{
 				test: /\.js$/,
 				exclude: /node_modules/,
-				resolve: { fullySpecified: false }
+				resolve: {
+					fullySpecified: false
+				}
 			}, {
 				test: /\.scss$/,
 				use: [
@@ -38,7 +44,9 @@ const config = {
 					}, {
 						loader: 'sass-loader',
 						options: {
-							sassOptions: { outputStyle: 'expanded' }
+							sassOptions: {
+								outputStyle: 'expanded'
+							}
 						}
 					}
 				]
@@ -68,7 +76,9 @@ const config = {
 			template: `${paths.srcFolder}/${pugPage}`,
 			filename: `../${pugPage.replace(/\.pug$/, '.html')}`
 		})),
-		new MiniCssExtractPlugin({ filename: '../css/style.css' }),
+		new MiniCssExtractPlugin({
+			filename: '../css/style.css'
+		}),
 		new plugins.CopyPlugin({
 			patterns: [
 				{

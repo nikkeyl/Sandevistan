@@ -8,8 +8,14 @@ const sprite = () =>
 	app.gulp.src(app.paths.src.svgSprites)
 		.pipe(app.plugins.catchError('SPRITE'))
 		.pipe(svgSprite({
-			mode: { symbol: { sprite: '../img/icons/sprite.svg' } },
-			transform: [{ svgo: svgoConfig }],
+			mode: {
+				symbol: {
+					sprite: '../img/icons/sprite.svg'
+				}
+			},
+			transform: [{
+				svgo: svgoConfig
+			}],
 			svg: {
 				xmlDeclaration: false,
 				rootAttributes: {

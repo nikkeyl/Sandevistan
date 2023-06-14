@@ -8,7 +8,9 @@ function cb() { }
 const otfToTtf = () =>
 	app.gulp.src(`${app.paths.srcFolder}/fonts/*.otf`)
 		.pipe(app.plugins.catchError('FONTS'))
-		.pipe(fonter({ formats: ['ttf'] }))
+		.pipe(fonter({
+			formats: ['ttf']
+		}))
 		.pipe(app.gulp.dest(`${app.paths.srcFolder}/fonts/`))
 
 const ttfToWoff = () =>
