@@ -10,6 +10,4 @@ const body = document.body
 /*! Plugin connection object */
 const nodeObjects = {}
 
-export {
-	lockPadding, nodeObjects, html, body
-}
+export { lockPadding, nodeObjects, html, body }

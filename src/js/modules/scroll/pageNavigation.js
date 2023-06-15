@@ -27,15 +27,20 @@ function pageNavigation() {
         let navigatorCurrentItem
 
         if (
-          targetElement.id && document.querySelector(`[data-goto="#${targetElement.id}"]`)
+          targetElement.id &&
+          document.querySelector(`[data-goto="#${targetElement.id}"]`)
         ) {
-          navigatorCurrentItem = document.querySelector(`[data-goto="#${targetElement.id}"]`)
+          navigatorCurrentItem = document.querySelector(
+            `[data-goto="#${targetElement.id}"]`
+          )
         } else if (targetElement.classList.length) {
           for (let i = 0; i < targetElement.classList.length; i++) {
             const element = targetElement.classList[i]
 
             if (document.querySelector(`[data-goto=".${element}"]`)) {
-              navigatorCurrentItem = document.querySelector(`[data-goto=".${element}"]`)
+              navigatorCurrentItem = document.querySelector(
+                `[data-goto=".${element}"]`
+              )
 
               break
             }
@@ -55,11 +60,9 @@ function pageNavigation() {
     let goToHash
 
     document.querySelector(`#${getHash()}`)
-      ? goToHash = `#${getHash()}`
-      : goToHash = `.${getHash()}`
-    goToHash
-      ? gotoBlock(goToHash, true, 500, 20)
-      : null
+      ? (goToHash = `#${getHash()}`)
+      : (goToHash = `.${getHash()}`)
+    goToHash ? gotoBlock(goToHash, true, 500, 20) : null
   }
 }
 

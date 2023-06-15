@@ -24,12 +24,18 @@ class DynamicAdapt {
       this.objects.push(object)
     })
     this.arraySort(this.objects)
-    this.mediaQueries = uniqArray(this.objects.map(({ breakpoint }) => `(${this.type}-width: ${breakpoint}px),${breakpoint}`))
+    this.mediaQueries = uniqArray(
+      this.objects.map(
+        ({ breakpoint }) => `(${this.type}-width: ${breakpoint}px),${breakpoint}`
+      )
+    )
     this.mediaQueries.forEach(media => {
       const mediaSplit = media.split(',')
       const matchMedia = window.matchMedia(mediaSplit[0])
       const mediaBreakpoint = mediaSplit[1]
-      const objectsFilter = this.objects.filter(({ breakpoint }) => breakpoint === mediaBreakpoint)
+      const objectsFilter = this.objects.filter(
+        ({ breakpoint }) => breakpoint === mediaBreakpoint
+      )
 
       matchMedia.addEventListener('change', () => {
         this.mediaHandler(matchMedia, objectsFilter)
@@ -44,9 +50,7 @@ class DynamicAdapt {
         this.moveTo(object.place, object.element, object.destination)
       })
     } else {
-      objects.forEach(({
-        parent, element, index
-      }) => {
+      objects.forEach(({ parent, element, index }) => {
         if (element.classList.contains(this.daClassname)) {
           this.moveBack(parent, element, index)
         }

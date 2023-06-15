@@ -4,9 +4,7 @@ import { html } from '@js/helpers/nodeList'
 class ScrollWatcher {
   constructor() {
     this.observer
-    !html.classList.contains('watcher')
-      ? this.scrollWatcherRun()
-      : null
+    !html.classList.contains('watcher') ? this.scrollWatcherRun() : null
   }
 
   scrollWatcherUpdate() {
@@ -19,9 +17,14 @@ class ScrollWatcher {
   }
 
   scrollWatcherConstructor(items) {
-    const uniqParams = uniqArray(Array.from(items).map(item => `${item.dataset.watchRoot || null}|${
-      item.dataset.watchMargin || '0px'
-    }|${item.dataset.watchThreshold || 0}`))
+    const uniqParams = uniqArray(
+      Array.from(items).map(
+        item =>
+          `${item.dataset.watchRoot || null}|${item.dataset.watchMargin || '0px'}|${
+            item.dataset.watchThreshold || 0
+          }`
+      )
+    )
 
     uniqParams.forEach(uniqParam => {
       const uniqParamArray = uniqParam.split('|')
@@ -36,9 +39,9 @@ class ScrollWatcher {
         const watchThreshold = item.dataset.watchThreshold || 0
 
         if (
-          String(watchRoot) === paramsWatch.root
-                    && String(watchMargin) === paramsWatch.margin
-                    && String(watchThreshold) === paramsWatch.threshold
+          String(watchRoot) === paramsWatch.root &&
+          String(watchMargin) === paramsWatch.margin &&
+          String(watchThreshold) === paramsWatch.threshold
         ) {
           return item
         }

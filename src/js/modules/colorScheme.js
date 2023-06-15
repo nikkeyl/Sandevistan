@@ -16,9 +16,7 @@ function colorScheme() {
     window
       .matchMedia('(prefers-color-scheme: dark)')
       .addEventListener('change', () => {
-        !saveUserTheme
-          ? changeTheme()
-          : null
+        !saveUserTheme ? changeTheme() : null
       })
 
     const themeButton = document.querySelector('.theme-change')
@@ -50,20 +48,14 @@ function colorScheme() {
     setThemeClass()
 
     function changeTheme(saveTheme = false) {
-      const currentTheme = htmlBlock.classList.contains('light')
-        ? 'light'
-        : 'dark'
+      const currentTheme = htmlBlock.classList.contains('light') ? 'light' : 'dark'
 
       let newTheme
 
-      currentTheme === 'light'
-        ? newTheme = 'dark'
-        : newTheme = 'light'
+      currentTheme === 'light' ? (newTheme = 'dark') : (newTheme = 'light')
       htmlBlock.classList.remove(currentTheme)
       htmlBlock.classList.add(newTheme)
-      saveTheme
-        ? localStorage.setItem('user-theme', newTheme)
-        : null
+      saveTheme ? localStorage.setItem('user-theme', newTheme) : null
     }
   })
 }

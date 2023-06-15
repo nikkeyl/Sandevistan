@@ -5,6 +5,5 @@ import { nodeObjects } from '@js/helpers/nodeList'
 const inputMasks = document.querySelectorAll('input')
 
 if (inputMasks.length) {
-	nodeObjects.inputmask = new Inputmask().mask(inputMasks)
+  nodeObjects.inputmask = new Inputmask().mask(inputMasks)
 }
-

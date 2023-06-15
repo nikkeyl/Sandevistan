@@ -46,9 +46,7 @@ function headerScroll() {
       }
     }
 
-    scrollDirection = scrollTop <= 0
-      ? 0
-      : scrollTop
+    scrollDirection = scrollTop <= 0 ? 0 : scrollTop
   })
 }
 
