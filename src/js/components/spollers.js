@@ -4,12 +4,13 @@ import { slideUp } from '@js/helpers/slideUp'
 
 function spollers() {
   const spollersArray = document.querySelectorAll('[data-spollers]')
-  const spollersRegular = Array.from(spollersArray).filter(item => !item.dataset.spollers.split(',')[0])
 
-  spollersRegular.length
-    ? initSpollers(spollersRegular)
-    : null
+  document.addEventListener('click', setSpollerAction)
+  const spollersRegular = Array.from(spollersArray).filter(
+    item => !item.dataset.spollers.split(',')[0]
+  )
 
+  spollersRegular.length ? initSpollers(spollersRegular) : null
   const mdQueriesArray = dataMediaQueries(spollersArray, 'spollers')
 
   if (mdQueriesArray && mdQueriesArray.length) {
@@ -23,87 +24,107 @@ function spollers() {
 
   function initSpollers(spollersArray, matchMedia = false) {
     spollersArray.forEach(spollersBlock => {
-      spollersBlock = matchMedia
-        ? spollersBlock.item
-        : spollersBlock
+      spollersBlock = matchMedia ? spollersBlock.item : spollersBlock
 
       if (matchMedia.matches || !matchMedia) {
         spollersBlock.classList.add('spoller-init')
         initSpollerBody(spollersBlock)
-        spollersBlock.addEventListener('click', setSpollerAction)
       } else {
         spollersBlock.classList.remove('spoller-init')
         initSpollerBody(spollersBlock, false)
-        spollersBlock.removeEventListener('click', setSpollerAction)
       }
     })
   }
 
   function initSpollerBody(spollersBlock, hideSpollerBody = true) {
-    let spollerTitles = spollersBlock.querySelectorAll('[data-spoller]')
+    let spollerItems = spollersBlock.querySelectorAll('details')
 
-    spollerTitles = Array.from(spollerTitles).filter(item => item.closest('[data-spollers]') === spollersBlock)
-    spollerTitles.forEach(spollerTitle => {
+    spollerItems = Array.from(spollerItems).filter(
+      item => item.closest('[data-spollers]') === spollersBlock
+    )
+    spollerItems.forEach(spollerItem => {
+      const spollerTitle = spollerItem.querySelector('summary')
+
       if (hideSpollerBody) {
         spollerTitle.removeAttribute('tabindex')
 
-        if (!spollerTitle.classList.contains('spoller-active')) {
+        if (!spollerItem.hasAttribute('data-open')) {
+          spollerItem.open = false
           spollerTitle.nextElementSibling.hidden = true
+        } else {
+          spollerTitle.classList.add('spoller-active')
+          spollerItem.open = true
         }
       } else {
         spollerTitle.setAttribute('tabindex', '-1')
+        spollerTitle.classList.remove('spoller-active')
+        spollerItem.open = true
         spollerTitle.nextElementSibling.hidden = false
       }
     })
   }
 
   function setSpollerAction(e) {
+    e.preventDefault()
     const el = e.target
 
-    if (el.closest('[data-spoller]')) {
-      const spollerTitle = el.closest('[data-spoller]')
-      const spollersBlock = spollerTitle.closest('[data-spollers]')
-      const oneSpoller = spollersBlock.hasAttribute('data-one-spoller')
-      const spollerSpeed = parseInt(spollersBlock.dataset.spollersSpeed) || 500
+    if (el.closest('summary') && el.closest('[data-spollers]')) {
+      if (el.closest('[data-spollers]').classList.contains('spoller-init')) {
+        const spollerTitle = el.closest('summary')
+        const spollerBlock = spollerTitle.closest('details')
+        const spollersBlock = spollerTitle.closest('[data-spollers]')
+        const oneSpoller = spollersBlock.hasAttribute('data-one-spoller')
+        const spollerSpeed = parseInt(spollersBlock.dataset.spollersSpeed) || 500
 
-      if (!spollersBlock.querySelectorAll('.slide').length) {
-        oneSpoller && !spollerTitle.classList.contains('spoller-active')
-          ? hideSpollersBody(spollersBlock)
-          : null
-        spollerTitle.classList.toggle('spoller-active')
-        slideToggle(spollerTitle.nextElementSibling, spollerSpeed)
+        if (!spollersBlock.querySelectorAll('.slide').length) {
+          oneSpoller && !spollerBlock.open ? hideSpollersBody(spollersBlock) : null
+
+          !spollerBlock.open
+            ? (spollerBlock.open = true)
+            : setTimeout(() => {
+                spollerBlock.open = false
+              }, spollerSpeed)
+
+          spollerTitle.classList.toggle('spoller-active')
+          slideToggle(spollerTitle.nextElementSibling, spollerSpeed)
+        }
       }
+    }
 
-      e.preventDefault()
+    if (!el.closest('[data-spollers]')) {
+      const spollersClose = document.querySelectorAll('[data-spoller-close]')
+
+      spollersClose.forEach(spollerClose => {
+        const spollersBlock = spollerClose.closest('[data-spollers]')
+        const spollerCloseBlock = spollerClose.parentNode
+
+        if (spollersBlock.classList.contains('spoller-init')) {
+          const spollerSpeed = parseInt(spollersBlock.dataset.spollersSpeed) || 500
+
+          spollerClose.classList.remove('spoller-active')
+          slideUp(spollerClose.nextElementSibling, spollerSpeed)
+          setTimeout(() => {
+            spollerCloseBlock.open = false
+          }, spollerSpeed)
+        }
+      })
     }
   }
 
   function hideSpollersBody(spollersBlock) {
-    const spollerActiveTitle = spollersBlock.querySelector('[data-spoller].spoller-active')
-    const spollerSpeed = parseInt(spollersBlock.dataset.spollersSpeed) || 500
+    const spollerActiveBlock = spollersBlock.querySelector('details[open]')
 
-    if (spollerActiveTitle && !spollersBlock.querySelectorAll('.slide').length) {
+    if (spollerActiveBlock && !spollersBlock.querySelectorAll('.slide').length) {
+      const spollerActiveTitle = spollerActiveBlock.querySelector('summary')
+      const spollerSpeed = parseInt(spollersBlock.dataset.spollersSpeed) || 500
+
       spollerActiveTitle.classList.remove('spoller-active')
       slideUp(spollerActiveTitle.nextElementSibling, spollerSpeed)
+      setTimeout(() => {
+        spollerActiveBlock.open = false
+      }, spollerSpeed)
     }
   }
-
-  const spollersClose = document.querySelectorAll('[data-spoller-close]')
-
-  document.addEventListener('click', e => {
-    const el = e.target
-
-    if (!el.closest('[data-spollers]')) {
-      spollersClose.forEach(spollerClose => {
-        const spollersBlock = spollerClose.closest('[data-spollers]')
-        const spollerSpeed
-					= parseInt(spollersBlock.dataset.spollersSpeed) || 500
-
-        spollerClose.classList.remove('spoller-active')
-        slideUp(spollerClose.nextElementSibling, spollerSpeed)
-      })
-    }
-  })
 }
 
 export { spollers }
