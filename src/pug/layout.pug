@@ -1,27 +1,24 @@
 block variables
-  - let title = "Главная"
+	- let title = "Главная"
 
 doctype html
 html(lang="ru")
-  head
-    title=title
-    meta(charset="UTF-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1")
-    meta(name="format-detection", content="telephone=no")
-    link(rel="stylesheet", href="css/style.min.css")
-    block styles
-    link(rel="icon", href="favicon.ico")
+	head
+		title=title
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+		meta(name="format-detection" content="telephone=no")
+		link(rel="stylesheet" href="css/style.min.css")
+		block styles
+		link(rel="icon" href="favicon.ico")
 
-  body.page
-    .wrapper
-      block header
-        include components/header
-      block content
-      block footer
-        include components/footer
+	body.page
+		.wrapper
+			include components/header
+			block content
+			include components/footer
 
-    block preloader
-      //- include pug/modules/preloader
-    block popups
-    block scripts
-    script(src="js/app.min.js")
+		//- include modules/preloader
+		block popups
+		block scripts
+		script(src="js/app.min.js")

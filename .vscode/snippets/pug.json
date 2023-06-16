@@ -293,23 +293,23 @@
 	},
 	"Image lazy": {
 		"prefix": "imgl",
-		"body": "img(data-src=\"@img$1\", alt=\"$2\")"
+		"body": "img(alt=\"$2\" data-src=\"@img$3\")"
 	},
 	"Image": {
 		"prefix": "img",
-		"body": "img(src=\"@img$1\", alt=\"$2\")"
+		"body": "img(src=\"@img$1\" alt=\"$2\")"
 	},
 	"IBG": {
 		"prefix": "ibg",
-		"body": ".${1:block}__image-ibg\n\timg(data-src=\"@img$2\", alt=\"${3:alt}\")"
+		"body": ".${1:block}__image-ibg\n\timg(alt=\"${3:alt}\" data-src=\"@img$2\")"
 	},
 	"IBGA": {
 		"prefix": "ibga",
-		"body": "a.${1:block}__image-ibg(href=\"$2\")\n\timg(data-src=\"@img$3\", alt=\"${4:alt}\")"
+		"body": "a.${1:block}__image-ibg(href=\"$2\")\n\timg(alt=\"${4:alt}\" data-src=\"@img$3\")"
 	},
 	"Logo": {
 		"prefix": "logo",
-		"body": "a.logo(href=\"index.html\")\n\timg(src=\"@img$1\", alt=\"${2:alt}\")"
+		"body": "a.logo(href=\"index.html\")\n\timg(src=\"@img$1\" alt=\"${2:alt}\")"
 	},
 	"Sprite": {
 		"prefix": "sprite",
@@ -333,15 +333,15 @@
 	},
 	"Change Font Range": {
 		"prefix": "cfr",
-		"body": ".${1:change-font}\n\tinput.${1:change-font}__range(id=\"range\", type=\"range\", value=\"${2:16}\", min=\"${3:16}\", max=\"${4:30}\", data-font-range)\n\tlabel.${1:change-font}__value(for=\"range\", data-font-value)"
+		"body": ".${1:change-font}\n\tinput.${1:change-font}__range(id=\"range\" type=\"range\" value=\"${2:16}\" min=\"${3:16}\" max=\"${4:30}\" data-font-range)\n\tlabel.${1:change-font}__value(for=\"range\" data-font-value)"
 	},
 	"Change Font Buttons": {
 		"prefix": "cfb",
-		"body": ".${1:change-font}\n\tbutton.${1:change-font}__button.active(type=\"button\", data-font-size=\"${2:16}\") ${2:16}\n\tbutton.${1:change-font}__button.${1:change-font}__button--low(type=\"button\", data-font-size=\"${3:25}\") ${3:25}\n\tbutton.${1:change-font}__button.${1:change-font}__button--big(type=\"button\", data-font-size=\"${4:30}\") ${4:30}"
+		"body": ".${1:change-font}\n\tbutton.${1:change-font}__button.active(type=\"button\" data-font-size=\"${2:16}\") ${2:16}\n\tbutton.${1:change-font}__button.${1:change-font}__button--low(type=\"button\" data-font-size=\"${3:25}\") ${3:25}\n\tbutton.${1:change-font}__button.${1:change-font}__button--big(type=\"button\" data-font-size=\"${4:30}\") ${4:30}"
 	},
 	"Spollers": {
 		"prefix": "spollers",
-		"body": ".${1:spollers}(data-spollers=\"${3:768}\")\n\tdetails.${2:spoller}\n\t\tsummary.${2:spoller}__title(type=\"button\", data-spoller) ${5:title}\n\t\t.${2:spoller}__body ${6:content}"
+		"body": ".${1:spollers}(data-spollers=\"${3:768}\")\n\tdetails.${2:spoller}\n\t\tsummary.${2:spoller}__title(type=\"button\" data-spoller) ${5:title}\n\t\t.${2:spoller}__body ${6:content}"
 	},
 	"Tabs": {
 		"prefix": "tabs",
@@ -349,7 +349,7 @@
 	},
 	"Show More": {
 		"prefix": "showmore",
-		"body": ".${1:showmore}(data-showmore)\n\t.${1:showmore}__content(data-showmore-content=\"${2:200}\") $3\n\tbutton.button(type=\"button\", data-showmore-button)\n\t\tspan ${4:Show more}\n\t\tspan ${5:Hide}"
+		"body": ".${1:showmore}(data-showmore)\n\t.${1:showmore}__content(data-showmore-content=\"${2:200}\") $3\n\tbutton.button(type=\"button\" data-showmore-button)\n\t\tspan ${4:Show more}\n\t\tspan ${5:Hide}"
 	},
 	"Swiper": {
 		"prefix": "sf",
@@ -361,11 +361,11 @@
 	},
 	"Section Response": {
 		"prefix": "secres",
-		"body": "section.${1:block}\n\t.${1:block}__inner\n\t\t.${1:block}__container\n\t\t\t.${1:block}__body\n\t\t\t\t$4\n\t.${1:block}__image\n\t\timg(data-src=\"@img$2\", alt=\"$3\")"
+		"body": "section.${1:block}\n\t.${1:block}__inner\n\t\t.${1:block}__container\n\t\t\t.${1:block}__body\n\t\t\t\t$4\n\t.${1:block}__image\n\t\timg(data-src=\"@img$2\" alt=\"$3\")"
 	},
 	"Full Page Section": {
 		"prefix": "fullpage",
-		"body": ".${1:block}(data-fp)\n\t.${1:block}__section(data-fp-section)"
+		"body": "main.content(data-fp)\n\tsection.${1:block}(data-fp-section)\n\t\t$2"
 	},
 	"Container": {
 		"prefix": "cnt",
@@ -373,43 +373,39 @@
 	},
 	"Rating": {
 		"prefix": "rating",
-		"body": ".rating.rating--set\n\t.rating__body\n\t\t.rating__active\n\t\t.rating__items\n\t\t\tinput.rating__item(type=\"radio\", value=\"1\", name=\"rating\")\n\t\t\tinput.rating__item(type=\"radio\", value=\"2\", name=\"rating\")\n\t\t\tinput.rating__item(type=\"radio\", value=\"3\", name=\"rating\")\n\t\t\tinput.rating__item(type=\"radio\", value=\"4\", name=\"rating\")\n\t\t\tinput.rating__item(type=\"radio\", value=\"5\", name=\"rating\")\n\t.rating__value 3.6"
+		"body": ".rating.rating--set\n\t.rating__body\n\t\t.rating__active\n\t\t.rating__items\n\t\t\tinput.rating__item(type=\"radio\" value=\"1\" name=\"rating\")\n\t\t\tinput.rating__item(type=\"radio\" value=\"2\" name=\"rating\")\n\t\t\tinput.rating__item(type=\"radio\" value=\"3\" name=\"rating\")\n\t\t\tinput.rating__item(type=\"radio\" value=\"4\" name=\"rating\")\n\t\t\tinput.rating__item(type=\"radio\" value=\"5\" name=\"rating\")\n\t.rating__value 3.6"
 	},
 	"Form email": {
 		"prefix": "formemail",
-		"body": "form.${1:form}(method=\"${3:POST}\")\n\tinput.${1:form}__input(type=\"text\", placeholder=\"${4:E-mail}\", name=\"email\", data-required=\"email\")\n\tbutton.${1:form}__button.button(type=\"submit\") ${6:Send}"
+		"body": "form.${1:form}(method=\"${3:POST}\")\n\tinput.${1:form}__input(type=\"text\" placeholder=\"${4:E-mail}\" name=\"email\" data-required=\"email\")\n\tbutton.${1:form}__button.button(type=\"submit\") ${6:Send}"
 	},
 	"Quantity": {
 		"prefix": "qa",
-		"body": ".quantity(data-quantity)\n\tbutton.quantity__button.quantity__button--plus(type=\"button\", data-quantity-plus)\n\t.quantity__input\n\t\tinput(type=\"text\", value=\"1\", name=\"quantity\", data-quantity-value)\n\tbutton.quantity__button.quantity__button--minus(type=\"button\", data-quantity-minus)"
+		"body": ".quantity(data-quantity)\n\tbutton.quantity__button.quantity__button--plus(type=\"button\" data-quantity-plus)\n\t.quantity__input\n\t\tinput(type=\"text\" value=\"1\" name=\"quantity\" data-quantity-value)\n\tbutton.quantity__button.quantity__button--minus(type=\"button\" data-quantity-minus)"
 	},
 	"Input": {
 		"prefix": "inp",
-		"body": "input.${1:input}(type=\"${2:text}\", name=\"${3:input}\", placeholder=\"$4\")"
+		"body": "input.${1:input}(type=\"${2:text}\" name=\"${3:input}\" placeholder=\"$4\")"
 	},
 	"Textarea": {
 		"prefix": "txta",
-		"body": "textarea.${1:input}(name=\"${2:message}\", placeholder=\"$3\")"
+		"body": "textarea.${1:input}(name=\"${2:message}\" placeholder=\"$3\")"
 	},
 	"Select": {
 		"prefix": "sel",
-		"body": "select.${1:select}(name=\"select\")\n\toption(value=\"1\", selected) ${2:option}\n\toption(value=\"2\") ${3:option}\n\toption(value=\"3\") ${4:option}\n\toption(value=\"4\") ${5:option}"
+		"body": "select.${1:select}(name=\"select\")\n\toption(value=\"1\" selected) ${2:option}\n\toption(value=\"2\") ${3:option}\n\toption(value=\"3\") ${4:option}\n\toption(value=\"4\") ${5:option}"
 	},
 	"Radio Buttons": {
 		"prefix": "opt",
-		"body": ".options\n\tlabel.option\n\t\tspan.option__text ${1:text}\n\t\tinput(type=\"radio\", name=\"option\", checked)\n\t\tspan.option__box\n\tlabel.option\n\t\tspan.option__text ${2:text}\n\t\tinput(type=\"radio\", name=\"option\")\n\t\tspan.option__box"
+		"body": ".options\n\tlabel.option\n\t\tspan.option__text ${1:text}\n\t\tinput(type=\"radio\" name=\"option\" checked)\n\t\tspan.option__box\n\tlabel.option\n\t\tspan.option__text ${2:text}\n\t\tinput(type=\"radio\" name=\"option\")\n\t\tspan.option__box"
 	},
 	"Checkbox": {
 		"prefix": "chk",
-		"body": "label.checkbox\n\tspan.checkbox__text ${1:text}\n\tinput(type=\"checkbox\", name=\"checkbox\")\n\tspan.checkbox__box\n\t\tsvg\n\t\t\tuse(href=\"@img/icons/sprite.svg#${2:check}\")"
+		"body": "label.checkbox\n\tspan.checkbox__text ${1:text}\n\tinput(type=\"checkbox\" name=\"checkbox\")\n\tspan.checkbox__box\n\t\tsvg\n\t\t\tuse(href=\"@img/icons/sprite.svg#${2:check}\")"
 	},
 	"Add Popup Include": {
 		"prefix": "pop",
 		"body": "include pug/modules/popup"
-	},
-	"Add Preloader Include": {
-		"prefix": "prl",
-		"body": "include pug/modules/preloader"
 	},
 	"Add Pagination Include": {
 		"prefix": "pag",
