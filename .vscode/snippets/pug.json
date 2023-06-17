@@ -321,7 +321,7 @@
 	},
 	"Button Link": {
 		"prefix": "abtn",
-		"body": "a.button(href=\"$1\") $2"
+		"body": "a.button(href=\"$1\")$2"
 	},
 	"Menu": {
 		"prefix": "menu",
