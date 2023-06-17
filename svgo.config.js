@@ -1,16 +1,20 @@
 const svgoConfig = {
 	plugins: [
 		{
-			convertPathData: false
-		}, {
-			removeAttrs: {
-				attrs: '(stroke|fill|style)'
+			name: 'preset-default',
+			params: {
+				overrides: {
+					convertPathData: false,
+					removeViewBox: false
+				}
 			}
 		}, {
-			removeViewBox: false
-		}, {
-			removeXMLNS: true
-		}
+			name: 'removeAttrs',
+			params: {
+				attrs: '(fill|stroke|style)'
+			}
+		},
+		'removeXMLNS'
 	]
 }
 

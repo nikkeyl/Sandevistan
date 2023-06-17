@@ -13,9 +13,11 @@ const sprite = () =>
 					sprite: '../img/icons/sprite.svg'
 				}
 			},
-			transform: [{
-				svgo: svgoConfig
-			}],
+			shape: {
+				transform: [{
+					svgo: svgoConfig
+				}],
+			},
 			svg: {
 				xmlDeclaration: false,
 				rootAttributes: {
