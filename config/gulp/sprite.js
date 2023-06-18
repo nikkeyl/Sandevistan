@@ -16,7 +16,7 @@ const sprite = () =>
 			shape: {
 				transform: [{
 					svgo: svgoConfig
-				}],
+				}]
 			},
 			svg: {
 				xmlDeclaration: false,
