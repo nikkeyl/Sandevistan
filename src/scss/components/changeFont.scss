@@ -1,69 +1,69 @@
 .change-font {
-  display: flex;
-  align-items: flex-end;
-  gap: rem(10);
-  width: fit-content;
+	display: flex;
+	align-items: flex-end;
+	gap: rem(10);
+	width: fit-content;
 
-  &__button {
-    @include widthHeight(rem(25), rem(25));
+	&__button {
+		@include widthHeight(rem(25), rem(25));
 
-    border-radius: 50%;
-    color: $colorLight;
-    background-color: $colorDarkGray;
-    transition: color 0.3s, background-color 0.3s;
+		border-radius: 50%;
+		color: $colorLight;
+		background-color: $colorDarkGray;
+		transition: color 0.3s, background-color 0.3s;
 
-    &.active {
-      color: $colorDark;
-      background-color: $colorLight;
-    }
+		&.active {
+			color: $colorDark;
+			background-color: $colorLight;
+		}
 
-    &--low {
-      @include widthHeight(rem(30), rem(30));
-    }
+		&--low {
+			@include widthHeight(rem(30), rem(30));
+		}
 
-    &--big {
-      @include widthHeight(rem(35), rem(35));
-    }
-  }
+		&--big {
+			@include widthHeight(rem(35), rem(35));
+		}
+	}
 
-  &__range {
-    appearance: none;
-    width: rem(100);
-    background-color: transparent;
+	&__range {
+		appearance: none;
+		width: rem(100);
+		background-color: transparent;
 
-    &::-webkit-slider-thumb {
-      @include widthHeight(rem(10), rem(10));
+		&::-webkit-slider-thumb {
+			@include widthHeight(rem(10), rem(10));
 
-      appearance: none;
-      border-radius: 50%;
-      background-color: $colorDark;
-      cursor: pointer;
-    }
+			appearance: none;
+			border-radius: 50%;
+			background-color: $colorDark;
+			cursor: pointer;
+		}
 
-    &::-webkit-slider-runnable-track {
-      border: rem(2) solid $colorGray;
-      border-radius: rem(40);
-      padding: rem(1);
-      height: rem(15);
-      cursor: pointer;
-    }
-  }
+		&::-webkit-slider-runnable-track {
+			border: rem(2) solid $colorGray;
+			border-radius: rem(40);
+			padding: rem(1);
+			height: rem(15);
+			cursor: pointer;
+		}
+	}
 
-  &__value {
-    $fontSize: 14;
+	&__value {
+		$fontSize: 14;
 
-    @include widthHeight(rem(25), rem(25));
+		@include widthHeight(rem(25), rem(25));
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    font-size: rem($fontSize);
-    color: $colorLight;
-    background-color: $colorDark;
-  }
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 50%;
+		font-size: rem($fontSize);
+		color: $colorLight;
+		background-color: $colorDark;
+	}
 }
 
 [data-font-item] {
-  transition: font-size 0.3s;
+	transition: font-size 0.3s;
 }

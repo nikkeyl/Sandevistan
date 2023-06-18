@@ -1,50 +1,50 @@
 .burger-icon {
-  display: none;
+	display: none;
 
-  @include mediaMax($tablet) {
-    @include widthHeight(rem(30), rem(20));
+	@include mediaMax($tablet) {
+		@include widthHeight(rem(30), rem(20));
 
-    position: relative;
-    z-index: 5;
-    display: block;
+		position: relative;
+		z-index: 5;
+		display: block;
 
-    span,
-    &::before,
-    &::after {
-      @include pseudo;
-      @include widthHeight(100%, rem(2));
+		span,
+		&::before,
+		&::after {
+			@include pseudo;
+			@include widthHeight(100%, rem(2));
 
-      right: 0;
-      background-color: $colorDark;
-      transition: transform 0.3s, width 0.3s, top 0.3s, bottom 0.3s;
-    }
+			right: 0;
+			background-color: $colorDark;
+			transition: transform 0.3s, width 0.3s, top 0.3s, bottom 0.3s;
+		}
 
-    &::before {
-      top: 0;
-    }
+		&::before {
+			top: 0;
+		}
 
-    &::after {
-      bottom: 0;
-    }
+		&::after {
+			bottom: 0;
+		}
 
-    span {
-      top: calc(50% - rem(1));
-    }
+		span {
+			top: calc(50% - rem(1));
+		}
 
-    .menu-open & {
-      &::before {
-        top: calc(50% - rem(1));
-        transform: rotate(-45deg);
-      }
+		.menu-open & {
+			&::before {
+				top: calc(50% - rem(1));
+				transform: rotate(-45deg);
+			}
 
-      &::after {
-        bottom: calc(50% - rem(1));
-        transform: rotate(45deg);
-      }
+			&::after {
+				bottom: calc(50% - rem(1));
+				transform: rotate(45deg);
+			}
 
-      span {
-        width: 0;
-      }
-    }
-  }
+			span {
+				width: 0;
+			}
+		}
+	}
 }

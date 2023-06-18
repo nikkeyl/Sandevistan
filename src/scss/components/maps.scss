@@ -1,21 +1,21 @@
 .map {
-  @include widthHeight(rem(100), rem(100));
+	@include widthHeight(rem(100), rem(100));
 
-  position: absolute;
-  inset: 50%;
-  border: rem(10) solid $colorLight;
-  border-top-color: $colorDarkGray;
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  animation: spin 2s linear infinite;
+	position: absolute;
+	inset: 50%;
+	border: rem(10) solid $colorLight;
+	border-top-color: $colorDarkGray;
+	border-radius: 50%;
+	transform: translate(-50%, -50%);
+	animation: spin 2s linear infinite;
 
-  @keyframes spin {
-    0% {
-      transform: translate(-50%, -50%) rotate(0deg);
-    }
+	@keyframes spin {
+		0% {
+			transform: translate(-50%, -50%) rotate(0deg);
+		}
 
-    100% {
-      transform: translate(-50%, -50%) rotate(360deg);
-    }
-  }
+		100% {
+			transform: translate(-50%, -50%) rotate(360deg);
+		}
+	}
 }

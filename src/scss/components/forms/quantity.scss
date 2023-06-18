@@ -1,43 +1,43 @@
 .quantity {
-  @include widthHeight(rem(90), rem(40));
+	@include widthHeight(rem(90), rem(40));
 
-  display: flex;
-  border: rem(2) solid $colorDark;
-  border-radius: rem(5);
+	display: flex;
+	border: rem(2) solid $colorDark;
+	border-radius: rem(5);
 
-  &__button {
-    position: relative;
-    flex: 0 0 rem(30);
+	&__button {
+		position: relative;
+		flex: 0 0 rem(30);
 
-    &::before,
-    &::after {
-      @include widthHeight(rem(10), rem(1));
-      @include pseudo;
+		&::before,
+		&::after {
+			@include widthHeight(rem(10), rem(1));
+			@include pseudo;
 
-      inset: 50%;
-      margin-left: rem(-4.5);
-      border-radius: rem(1);
-      background-color: $colorDark;
-      transition: background-color 0.3s;
-    }
+			inset: 50%;
+			margin-left: rem(-4.5);
+			border-radius: rem(1);
+			background-color: $colorDark;
+			transition: background-color 0.3s;
+		}
 
-    &--plus {
-      &::before {
-        transform: rotate(-90deg);
-      }
-    }
-  }
+		&--plus {
+			&::before {
+				transform: rotate(-90deg);
+			}
+		}
+	}
 
-  &__input {
-    flex: 1 1 auto;
+	&__input {
+		flex: 1 1 auto;
 
-    input {
-      $fontSize: 18;
+		input {
+			$fontSize: 18;
 
-      @include widthHeight(100%, 100%);
+			@include widthHeight(100%, 100%);
 
-      font-size: rem($fontSize);
-      text-align: center;
-    }
-  }
+			font-size: rem($fontSize);
+			text-align: center;
+		}
+	}
 }

@@ -1,108 +1,108 @@
 * {
-  &,
-  &::before,
-  &::after {
-    margin: 0;
-    border: 0;
-    padding: 0;
-    box-sizing: border-box;
-    -webkit-tap-highlight-color: transparent;
-  }
+	&,
+	&::before,
+	&::after {
+		margin: 0;
+		border: 0;
+		padding: 0;
+		box-sizing: border-box;
+		-webkit-tap-highlight-color: transparent;
+	}
 }
 
 html,
 body {
-  height: 100%;
-  min-width: $minWidth + px;
+	height: 100%;
+	min-width: $minWidth + px;
 }
 
 body {
-  line-height: 1;
-  text-rendering: optimizelegibility;
-  text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
+	line-height: 1;
+	text-rendering: optimizelegibility;
+	text-size-adjust: 100%;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
 }
 
 @if $selection == 1 {
-  ::selection {
-    color: $colorLight;
+	::selection {
+		color: $colorLight;
 
-    /* Changes the default text selection styles */
-    background-color: $colorDarkGray;
-  }
+		/* Changes the default text selection styles */
+		background-color: $colorDarkGray;
+	}
 }
 
 input {
-  &[type="search"],
-  &[type="email"],
-  &[type="text"],
-  &[type="tel"] {
-    appearance: none;
-  }
+	&[type="search"],
+	&[type="email"],
+	&[type="text"],
+	&[type="tel"] {
+		appearance: none;
+	}
 }
 
 textarea,
 select,
 button,
 input {
-  font-family: $mainFontFamily;
-  font-size: inherit;
-  line-height: inherit;
+	font-family: $mainFontFamily;
+	font-size: inherit;
+	line-height: inherit;
 }
 
 textarea {
-  resize: none;
+	resize: none;
 }
 
 button {
-  color: inherit;
-  background-color: transparent;
+	color: inherit;
+	background-color: transparent;
 
-  @media (any-hover: hover) {
-    cursor: pointer;
-  }
+	@media (any-hover: hover) {
+		cursor: pointer;
+	}
 }
 
 :focus,
 :active {
-  @if $focusActiveOutline == 1 {
-    outline: none;
-  }
+	@if $focusActiveOutline == 1 {
+		outline: none;
+	}
 }
 
 a {
-  color: inherit;
+	color: inherit;
 
-  &:visited,
-  &:link {
-    text-decoration: none;
-  }
+	&:visited,
+	&:link {
+		text-decoration: none;
+	}
 
-  @include mediaHover {
-    text-decoration: none;
-  }
+	@include mediaHover {
+		text-decoration: none;
+	}
 }
 
 address {
-  font-style: normal;
+	font-style: normal;
 }
 
 label {
-  @media (any-hover: hover) {
-    cursor: pointer;
-  }
+	@media (any-hover: hover) {
+		cursor: pointer;
+	}
 }
 
 summary,
 ul,
 ol,
 li {
-  list-style: none;
+	list-style: none;
 }
 
 img {
-  vertical-align: top;
+	vertical-align: top;
 }
 
 h1,
@@ -112,6 +112,6 @@ h4,
 h5,
 h6,
 p {
-  font-weight: inherit;
-  font-size: inherit;
+	font-weight: inherit;
+	font-size: inherit;
 }

@@ -1,22 +1,22 @@
 .input {
-  display: block;
-  border: rem(1) solid $colorGray;
-  border-radius: rem(5);
-  padding: rem(5);
-  width: 100%;
-  color: $colorGray;
+	display: block;
+	border: rem(1) solid $colorGray;
+	border-radius: rem(5);
+	padding: rem(5);
+	width: 100%;
+	color: $colorGray;
 
-  &[placeholder] {
-    &:not([data-placeholder-nohidden]) {
-      &::placeholder {
-        transition: opacity 0.3s;
-      }
+	&[placeholder] {
+		&:not([data-placeholder-nohidden]) {
+			&::placeholder {
+				transition: opacity 0.3s;
+			}
 
-      &:focus {
-        &::placeholder {
-          opacity: 0;
-        }
-      }
-    }
-  }
+			&:focus {
+				&::placeholder {
+					opacity: 0;
+				}
+			}
+		}
+	}
 }

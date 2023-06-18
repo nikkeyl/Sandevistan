@@ -1,24 +1,24 @@
 /* Ripple effect */
 [data-ripple] {
-  position: relative;
-  overflow: hidden;
+	position: relative;
+	overflow: hidden;
 }
 
 .ripple {
-  position: absolute;
-  border: rem(1) solid $colorGray;
-  border-radius: 50%;
-  background-color: $colorLight;
-  animation: ripple 2s forwards;
+	position: absolute;
+	border: rem(1) solid $colorGray;
+	border-radius: 50%;
+	background-color: $colorLight;
+	animation: ripple 2s forwards;
 
-  @keyframes ripple {
-    0% {
-      transform: scale(0);
-    }
+	@keyframes ripple {
+		0% {
+			transform: scale(0);
+		}
 
-    100% {
-      opacity: 0;
-      transform: scale(20);
-    }
-  }
+		100% {
+			opacity: 0;
+			transform: scale(20);
+		}
+	}
 }

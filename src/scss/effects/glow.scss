@@ -1,33 +1,33 @@
 /* Glow effect */
 .button {
-  @include mediaMin($tablet) {
-    position: relative;
-    overflow: hidden;
+	@include mediaMin($tablet) {
+		position: relative;
+		overflow: hidden;
 
-    &::before {
-      @include pseudo;
-      @include widthHeight(100%, 100%);
+		&::before {
+			@include pseudo;
+			@include widthHeight(100%, 100%);
 
-      inset: 0;
-      z-index: 2;
-      backdrop-filter: blur(rem(25));
-    }
+			inset: 0;
+			z-index: 2;
+			backdrop-filter: blur(rem(25));
+		}
 
-    &__text {
-      position: relative;
-      z-index: 2;
-    }
+		&__text {
+			position: relative;
+			z-index: 2;
+		}
 
-    &__glow {
-      position: absolute;
-      inset: 0;
-      overflow: hidden;
-    }
+		&__glow {
+			position: absolute;
+			inset: 0;
+			overflow: hidden;
+		}
 
-    &__color {
-      position: absolute;
-      inset: 0;
-      background-color: $colorLight;
-    }
-  }
+		&__color {
+			position: absolute;
+			inset: 0;
+			background-color: $colorLight;
+		}
+	}
 }

@@ -1,147 +1,147 @@
 .select {
-  position: relative;
-  min-width: 0;
+	position: relative;
+	min-width: 0;
 
-  &__body {
-    position: relative;
-  }
+	&__body {
+		position: relative;
+	}
 
-  &__title {
-    border: rem(1) solid $colorGray;
-    border-radius: rem(5);
-    width: 100%;
-    text-align: left;
-    color: inherit;
-    background-color: $colorLight;
-    cursor: pointer;
-  }
+	&__title {
+		border: rem(1) solid $colorGray;
+		border-radius: rem(5);
+		width: 100%;
+		text-align: left;
+		color: inherit;
+		background-color: $colorLight;
+		cursor: pointer;
+	}
 
-  &__value {
-    display: flex;
-    align-items: center;
-    gap: rem(10);
-    padding: 0 rem(15);
-    height: rem(30);
+	&__value {
+		display: flex;
+		align-items: center;
+		gap: rem(10);
+		padding: 0 rem(15);
+		height: rem(30);
 
-    &::after {
-      content: "";
-      display: flex;
-      flex: 0 0 rem(10);
-      align-items: center;
-      align-self: stretch;
-      justify-content: center;
-      transition: transform 0.3s;
+		&::after {
+			content: "";
+			display: flex;
+			flex: 0 0 rem(10);
+			align-items: center;
+			align-self: stretch;
+			justify-content: center;
+			transition: transform 0.3s;
 
-      .select-open & {
-        transform: rotate(-180deg);
-      }
-    }
+			.select-open & {
+				transform: rotate(-180deg);
+			}
+		}
 
-    > * {
-      flex: 1 1 auto;
-    }
+		> * {
+			flex: 1 1 auto;
+		}
 
-    &.select-pseudo-label {
-      &::before {
-        content: attr(data-pseudo-label);
-        opacity: 0.5;
-      }
-    }
-  }
+		&.select-pseudo-label {
+			&::before {
+				content: attr(data-pseudo-label);
+				opacity: 0.5;
+			}
+		}
+	}
 
-  &__text {
-    flex: 1 1 auto;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-  }
+	&__text {
+		flex: 1 1 auto;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+	}
 
-  &__input {
-    @include widthHeight(100%, 100%);
+	&__input {
+		@include widthHeight(100%, 100%);
 
-    background-color: transparent;
-  }
+		background-color: transparent;
+	}
 
-  &__options {
-    position: absolute;
-    left: 0;
-    top: rem(30);
-    border: rem(1) solid $colorGray;
-    border-top: 0;
-    border-radius: 0 0 rem(5) rem(5);
-    padding: rem(10) 0 rem(5) 0;
-    min-width: 100%;
-    color: $colorDark;
-    background-color: $colorLight;
-  }
+	&__options {
+		position: absolute;
+		left: 0;
+		top: rem(30);
+		border: rem(1) solid $colorGray;
+		border-top: 0;
+		border-radius: 0 0 rem(5) rem(5);
+		padding: rem(10) 0 rem(5) 0;
+		min-width: 100%;
+		color: $colorDark;
+		background-color: $colorLight;
+	}
 
-  &__scroll {
-    overflow-x: hidden;
-    overflow-y: auto;
-    max-height: rem(200);
+	&__scroll {
+		overflow-x: hidden;
+		overflow-y: auto;
+		max-height: rem(200);
 
-    // .simplebar-scrollbar {
-    //     &::before {
-    //         opacity: 1;
-    //     }
-    // }
-  }
+		// .simplebar-scrollbar {
+		//     &::before {
+		//         opacity: 1;
+		//     }
+		// }
+	}
 
-  &__option {
-    padding: rem(5) rem(15);
-    width: 100%;
-    text-align: left;
-    color: inherit;
-    cursor: pointer;
+	&__option {
+		padding: rem(5) rem(15);
+		width: 100%;
+		text-align: left;
+		color: inherit;
+		cursor: pointer;
 
-    &.select-selected {
-      background-color: $colorGray;
-    }
+		&.select-selected {
+			background-color: $colorGray;
+		}
 
-    @include mediaHover {
-      background-color: $colorLight;
-    }
-  }
+		@include mediaHover {
+			background-color: $colorLight;
+		}
+	}
 
-  &__row {
-    display: inline-flex;
-    align-items: center;
-  }
+	&__row {
+		display: inline-flex;
+		align-items: center;
+	}
 
-  // &__asset {
-  // }
+	// &__asset {
+	// }
 
-  &.select-open {
-    z-index: 5;
-  }
+	&.select-open {
+		z-index: 5;
+	}
 
-  &--show-top {
-    .select__options {
-      top: auto;
-      bottom: calc(100% - rem(1));
-      border: rem(1) solid #d9d9d9;
-      border-bottom: 0;
-      border-radius: rem(4) rem(4) 0 0;
-      padding: rem(5) 0 rem(10) 0;
-    }
-  }
+	&--show-top {
+		.select__options {
+			top: auto;
+			bottom: calc(100% - rem(1));
+			border: rem(1) solid #d9d9d9;
+			border-bottom: 0;
+			border-radius: rem(4) rem(4) 0 0;
+			padding: rem(5) 0 rem(10) 0;
+		}
+	}
 
-  // &.select-disabled {
-  // }
+	// &.select-disabled {
+	// }
 
-  // &.select-active {
-  // }
+	// &.select-active {
+	// }
 
-  // &.select-focus {
-  // }
+	// &.select-focus {
+	// }
 
-  // &.select-multiple {
-  // }
+	// &.select-multiple {
+	// }
 
-  // &.select-checkbox {
-  // }
+	// &.select-checkbox {
+	// }
 }
 
 .select-tag {
-  cursor: pointer;
+	cursor: pointer;
 }

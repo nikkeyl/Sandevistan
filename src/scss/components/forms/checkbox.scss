@@ -1,67 +1,67 @@
 .checkbox {
-  position: relative;
-  display: inline-flex;
-  flex-direction: row-reverse;
-  align-items: center;
-  gap: rem(10);
-  cursor: pointer;
+	position: relative;
+	display: inline-flex;
+	flex-direction: row-reverse;
+	align-items: center;
+	gap: rem(10);
+	cursor: pointer;
 
-  &__text {
-    $fontSize: 18;
+	&__text {
+		$fontSize: 18;
 
-    font-size: rem($fontSize);
-    line-height: math.div(22, $fontSize);
-    color: $colorGray;
-  }
+		font-size: rem($fontSize);
+		line-height: math.div(22, $fontSize);
+		color: $colorGray;
+	}
 
-  &__box {
-    $size: 20;
+	&__box {
+		$size: 20;
 
-    @include widthHeight(rem($size), rem($size));
+		@include widthHeight(rem($size), rem($size));
 
-    position: relative;
-    flex: 0 0 rem($size);
-    align-self: flex-start;
-    border: rem(2) solid $colorGray;
-    border-radius: rem(3);
+		position: relative;
+		flex: 0 0 rem($size);
+		align-self: flex-start;
+		border: rem(2) solid $colorGray;
+		border-radius: rem(3);
 
-    &::after {
-      @include widthHeight(rem(20), rem(20));
+		&::after {
+			@include widthHeight(rem(20), rem(20));
 
-      content: "";
-      position: absolute;
-      inset: rem(-2);
-      border-radius: rem(3);
-      background-color: $colorDark;
-      transform: scale(0);
-      transition: transform 0.3s;
-    }
+			content: "";
+			position: absolute;
+			inset: rem(-2);
+			border-radius: rem(3);
+			background-color: $colorDark;
+			transform: scale(0);
+			transition: transform 0.3s;
+		}
 
-    svg {
-      @include widthHeight(rem(10), rem(10));
+		svg {
+			@include widthHeight(rem(10), rem(10));
 
-      position: absolute;
-      inset: rem(3);
-      fill: $colorLight;
-      transform: scale(0);
-    }
-  }
+			position: absolute;
+			inset: rem(3);
+			fill: $colorLight;
+			transform: scale(0);
+		}
+	}
 
-  input {
-    display: none;
+	input {
+		display: none;
 
-    &:checked {
-      + .checkbox__box {
-        &::after {
-          transform: scale(1);
-        }
+		&:checked {
+			+ .checkbox__box {
+				&::after {
+					transform: scale(1);
+				}
 
-        svg {
-          transform: scale(1);
-        }
-      }
-    }
-  }
+				svg {
+					transform: scale(1);
+				}
+			}
+		}
+	}
 
-  @extend %userSelect;
+	@extend %userSelect;
 }

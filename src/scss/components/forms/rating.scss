@@ -1,65 +1,65 @@
 .rating {
-  $fontSize: 18;
+	$fontSize: 18;
 
-  display: flex;
-  align-items: flex-end;
-  font-size: rem($fontSize);
-  line-height: 0.75;
+	display: flex;
+	align-items: flex-end;
+	font-size: rem($fontSize);
+	line-height: 0.75;
 
-  &__body {
-    position: relative;
+	&__body {
+		position: relative;
 
-    &::before {
-      content: "★★★★★";
-      display: block;
-    }
-  }
+		&::before {
+			content: "★★★★★";
+			display: block;
+		}
+	}
 
-  &__active {
-    @include widthHeight(0, 100%);
+	&__active {
+		@include widthHeight(0, 100%);
 
-    position: absolute;
-    inset: 0;
-    overflow: hidden;
-    transition: width 0.2s;
+		position: absolute;
+		inset: 0;
+		overflow: hidden;
+		transition: width 0.2s;
 
-    &::before {
-      @include pseudo("★★★★★");
-      @include widthHeight(100%, 100%);
+		&::before {
+			@include pseudo("★★★★★");
+			@include widthHeight(100%, 100%);
 
-      inset: 0;
-      color: $colorYellow;
-    }
-  }
+			inset: 0;
+			color: $colorYellow;
+		}
+	}
 
-  &__items {
-    @include widthHeight(100%, 100%);
+	&__items {
+		@include widthHeight(100%, 100%);
 
-    position: absolute;
-    inset: 0;
-    display: flex;
-  }
+		position: absolute;
+		inset: 0;
+		display: flex;
+	}
 
-  &__item {
-    flex: 0 0 20%;
-    height: 100%;
-    opacity: 0;
-  }
+	&__item {
+		flex: 0 0 20%;
+		height: 100%;
+		opacity: 0;
+	}
 
-  &__value {
-    padding: 0 0 0 rem(10);
-    font-size: 50%;
-    line-height: 1;
-  }
+	&__value {
+		padding: 0 0 0 rem(10);
+		font-size: 50%;
+		line-height: 1;
+	}
 
-  &--sending {
-    opacity: 0.2;
-  }
+	&--sending {
+		opacity: 0.2;
+	}
 
-  &--set {
-    .rating__active,
-    .rating__item {
-      cursor: pointer;
-    }
-  }
+	&--set {
+		.rating__active,
+		.rating__item {
+			cursor: pointer;
+		}
+	}
 }

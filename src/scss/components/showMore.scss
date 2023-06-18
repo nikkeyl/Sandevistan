@@ -1,20 +1,20 @@
 [data-showmore] {
-  display: grid;
-  gap: rem(10);
+	display: grid;
+	gap: rem(10);
 }
 
 [data-showmore-button] {
-  span {
-    &:last-child {
-      display: none;
-    }
+	span {
+		&:last-child {
+			display: none;
+		}
 
-    .showmore-active & {
-      display: none;
+		.showmore-active & {
+			display: none;
 
-      &:last-child {
-        display: block;
-      }
-    }
-  }
+			&:last-child {
+				display: block;
+			}
+		}
+	}
 }

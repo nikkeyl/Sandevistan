@@ -1,51 +1,51 @@
 .options {
-  display: grid;
-  justify-items: start;
-  gap: rem(5);
+	display: grid;
+	justify-items: start;
+	gap: rem(5);
 }
 
 .option {
-  display: flex;
-  flex-direction: row-reverse;
-  gap: rem(10);
+	display: flex;
+	flex-direction: row-reverse;
+	gap: rem(10);
 
-  &__text {
-    $fontSize: 18;
+	&__text {
+		$fontSize: 18;
 
-    font-size: rem($fontSize);
-    line-height: math.div(22, $fontSize);
-    color: $colorGray;
-  }
+		font-size: rem($fontSize);
+		line-height: math.div(22, $fontSize);
+		color: $colorGray;
+	}
 
-  &__box {
-    @include widthHeight(rem(20), rem(20));
+	&__box {
+		@include widthHeight(rem(20), rem(20));
 
-    position: relative;
-    flex: 0 0 rem(20);
-    border: rem(1) solid $colorGray;
-    border-radius: 50%;
+		position: relative;
+		flex: 0 0 rem(20);
+		border: rem(1) solid $colorGray;
+		border-radius: 50%;
 
-    &::before {
-      @include pseudo;
-      @include widthHeight(rem(15), rem(15));
+		&::before {
+			@include pseudo;
+			@include widthHeight(rem(15), rem(15));
 
-      inset: 50%;
-      border-radius: 50%;
-      background-color: $colorDark;
-      transform: translate(-50%, -50%) scale(0);
-      transition: transform 0.3s;
-    }
-  }
+			inset: 50%;
+			border-radius: 50%;
+			background-color: $colorDark;
+			transform: translate(-50%, -50%) scale(0);
+			transition: transform 0.3s;
+		}
+	}
 
-  input {
-    display: none;
+	input {
+		display: none;
 
-    &:checked {
-      + .option__box {
-        &::before {
-          transform: translate(-50%, -50%) scale(1);
-        }
-      }
-    }
-  }
+		&:checked {
+			+ .option__box {
+				&::before {
+					transform: translate(-50%, -50%) scale(1);
+				}
+			}
+		}
+	}
 }

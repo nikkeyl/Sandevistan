@@ -1,23 +1,23 @@
 .page {
-  font-family: $mainFontFamily;
-  font-weight: $mainFontWeight;
-  font-size: rem($mainFontSize);
-  color: $mainFontColor;
+	font-family: $mainFontFamily;
+	font-weight: $mainFontWeight;
+	font-size: rem($mainFontSize);
+	color: $mainFontColor;
 
-  .lock & {
-    overflow: hidden;
-    touch-action: none;
+	.lock & {
+		overflow: hidden;
+		touch-action: none;
 
-    /* Prevents chain scrolling */
-    overscroll-behavior: none;
-  }
+		/* Prevents chain scrolling */
+		overscroll-behavior: none;
+	}
 
-  @if $backgroundGradient == 1 {
-    background: $mainBackgroundColor;
+	@if $backgroundGradient == 1 {
+		background: $mainBackgroundColor;
 
-    /* If the background is a gradient, then this property helps to stretch the gradinet to its full height */
-    background-attachment: fixed;
-  } @else {
-    background-color: $mainBackgroundColor;
-  }
+		/* If the background is a gradient, then this property helps to stretch the gradinet to its full height */
+		background-attachment: fixed;
+	} @else {
+		background-color: $mainBackgroundColor;
+	}
 }
