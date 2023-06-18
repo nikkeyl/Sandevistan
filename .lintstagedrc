@@ -1,4 +1,4 @@
 {
-	"src/scss/**/*.scss": "stylelint --fix",
-	"src/js/**/*.js": "eslint --fix"
+	"src/js/**/*.js": "eslint --fix",
+	"*.scss": "stylelint --fix"
 }
