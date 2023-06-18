@@ -24,7 +24,7 @@ const ttfToWoff = () =>
 const fontsStyles = () => {
 	const fontStylesFile = `${app.paths.srcFolder}/scss/base/fonts/fonts.scss`
 
-	app.plugins.fs.readdir(app.paths.build.fonts, (error, fontFiles) => {
+	app.plugins.fs.readdir(app.paths.build.fonts, (err, fontFiles) => {
 		if (fontFiles) {
 			if (!app.plugins.fs.existsSync(fontStylesFile)) {
 				const fontWeights = {
@@ -62,9 +62,7 @@ const fontsStyles = () => {
 							fontWeight = 'regular'
 						] = fileName.split('-')
 						const fontWeightValue = fontWeights[fontWeight.toLowerCase()]
-						const fontStyle = fileName.includes('-Italic')
-							? 'italic'
-							: 'normal'
+						const fontStyle = fileName.includes('-Italic') ? 'italic' : 'normal'
 
 						app.plugins.fs.appendFile(
 							fontStylesFile,
@@ -75,15 +73,15 @@ const fontsStyles = () => {
 					}
 				})
 				console.log(app.plugins.chalk.green.bold(
-					'[SUCCESS]\nThe (fonts.scss) file is written]'
+					'(fonts.scss) successfully written'
 				))
 			} else {
 				console.log(app.plugins.chalk.yellow.bold(
-					`[WARNING]\nThe (${fontStylesFile}) file already exists.`
+					`(fonts.scss) already exists`
 				))
 			}
 		} else {
-			console.log(app.plugins.chalk.red.bold('[ERROR]\n'), error)
+			console.log(app.plugins.chalk.red.bold('Add the font files to the fonts folder'))
 		}
 	})
 
