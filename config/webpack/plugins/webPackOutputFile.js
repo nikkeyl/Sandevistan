@@ -2,7 +2,7 @@ import { paths } from '../../settings/paths.js'
 
 const output = fileName => ({
 	filename: fileName,
-	path: paths.build.resolve,
+	path: paths.buildFolder,
 	publicPath: '/'
 })
 

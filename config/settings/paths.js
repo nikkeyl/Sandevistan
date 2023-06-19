@@ -4,9 +4,9 @@ import {
 } from 'path'
 
 const rootFolder = basename(resolve())
-const buildFolder = 'dist'
+const buildFolder = resolve('dist')
+const srcFolder = resolve('src')
 const tempFolder = 'temp'
-const srcFolder = 'src'
 const paths = {
 	build: {
 		static: `${buildFolder}/static/`,
@@ -14,8 +14,7 @@ const paths = {
 		images: `${buildFolder}/img/`,
 		css: `${buildFolder}/css/`,
 		js: `${buildFolder}/js/`,
-		html: `${buildFolder}/`,
-		resolve: resolve(buildFolder)
+		html: `${buildFolder}/`
 	},
 	src: {
 		images: `${srcFolder}/img/**/*.{jpg,png,webp}`,
@@ -29,8 +28,7 @@ const paths = {
 		fonts: `${srcFolder}/fonts/*.*`,
 		pug: `${srcFolder}/pug/*.pug`,
 		js: `${srcFolder}/js/app.js`,
-		html: `${srcFolder}/*.html`,
-		resolve: resolve(srcFolder)
+		html: `${srcFolder}/*.html`
 	},
 	ftp: rootFolder,
 	buildFolder,

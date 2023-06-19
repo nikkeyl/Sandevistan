@@ -14,18 +14,18 @@ const config = {
 	optimization: {
 		minimize: false
 	},
-	entry: `${paths.src.resolve}/js/app.js`,
+	entry: `${paths.srcFolder}/js/app.js`,
 	output: output('js/app.min.js'),
 	devServer: {
 		historyApiFallback: true,
-		static: paths.build.resolve,
+		static: paths.buildFolder,
 		compress: true,
 		port: 3000,
 		open: true,
 
 		watchFiles: [
-			`${paths.src.resolve}/img/**/*.*`,
-			`${paths.src.resolve}/**/*.pug`
+			`${paths.srcFolder}/img/**/*.*`,
+			`${paths.srcFolder}/**/*.pug`
 		]
 	},
 	module: {
@@ -38,7 +38,7 @@ const config = {
 				}
 			}, {
 				test: /\.scss$/,
-				exclude: `${paths.src.resolve}/fonts`,
+				exclude: `${paths.srcFolder}/fonts`,
 				use: [
 					'style-loader',
 					{
@@ -77,17 +77,17 @@ const config = {
 		new plugins.CopyPlugin({
 			patterns: [
 				{
-					from: `${paths.src.resolve}/img`,
+					from: `${paths.srcFolder}/img`,
 					to: 'img',
 					noErrorOnMissing: true,
 					force: true
 				}, {
-					from: `${paths.src.resolve}/static`,
+					from: `${paths.srcFolder}/static`,
 					to: 'static',
 					noErrorOnMissing: true,
 					force: true
 				}, {
-					from: `${paths.src.resolve}/favicon.ico`,
+					from: `${paths.srcFolder}/favicon.ico`,
 					to: './',
 					noErrorOnMissing: true
 				}
