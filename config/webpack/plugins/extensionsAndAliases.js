@@ -6,8 +6,8 @@ const extensionsAndAliases = {
     '.js'
   ],
   alias: {
-    '@scss': `${paths.root}/scss`,
-    '@js': `${paths.root}/js`
+    '@scss': `${paths.src.resolve}/scss`,
+		'@js': `${paths.src.resolve}/js`
   }
 }
 

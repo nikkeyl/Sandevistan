@@ -14,7 +14,8 @@ const paths = {
 		images: `${buildFolder}/img/`,
 		css: `${buildFolder}/css/`,
 		js: `${buildFolder}/js/`,
-		html: `${buildFolder}/`
+		html: `${buildFolder}/`,
+		resolve: resolve(buildFolder)
 	},
 	src: {
 		images: `${srcFolder}/img/**/*.{jpg,png,webp}`,
@@ -28,10 +29,9 @@ const paths = {
 		fonts: `${srcFolder}/fonts/*.*`,
 		pug: `${srcFolder}/pug/*.pug`,
 		js: `${srcFolder}/js/app.js`,
-		html: `${srcFolder}/*.html`
+		html: `${srcFolder}/*.html`,
+		resolve: resolve(srcFolder)
 	},
-	built: resolve(buildFolder),
-	root: resolve(srcFolder),
 	ftp: rootFolder,
 	buildFolder,
 	tempFolder,

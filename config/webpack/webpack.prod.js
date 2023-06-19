@@ -82,11 +82,11 @@ const config = {
 		new plugins.CopyPlugin({
 			patterns: [
 				{
-					from: `${paths.root}/static`,
+					from: `${paths.src.resolve}/static`,
 					to: '../static',
 					noErrorOnMissing: true
 				}, {
-					from: `${paths.root}/favicon.ico`,
+					from: `${paths.src.resolve}/favicon.ico`,
 					to: '../',
 					noErrorOnMissing: true
 				}
