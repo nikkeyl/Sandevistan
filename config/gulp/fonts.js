@@ -24,7 +24,7 @@ const ttfToWoff = () =>
 const fontsStyles = () => {
 	const fontStylesFile = `${app.paths.srcFolder}/scss/base/fonts/fonts.scss`
 
-	app.plugins.fs.readdir(app.paths.build.fonts, (err, fontFiles) => {
+	app.plugins.fs.readdir(app.paths.build.fonts, (error, fontFiles) => {
 		if (fontFiles) {
 			if (!app.plugins.fs.existsSync(fontStylesFile)) {
 				const fontWeights = {
@@ -81,7 +81,7 @@ const fontsStyles = () => {
 				))
 			}
 		} else {
-			console.log(app.plugins.chalk.red.bold('Add the font files to the fonts folder'))
+			console.log(app.plugins.chalk.red.bold('Add the font files to the fonts folder\n'), error)
 		}
 	})
 
