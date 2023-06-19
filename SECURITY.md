@@ -2,7 +2,7 @@
 
 ## Supported Versions
 
-| Version | Supported          |
+| Version | Support            |
 | ------- | ------------------ |
 | 3.6.0   | Supported          |
 | 3.5.0   | Not supported      |
