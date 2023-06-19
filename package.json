@@ -5,7 +5,7 @@
 		"dev": "gulp && webpack serve -c config/webpack/webpack.dev.js",
 		"build": "gulp build",
 		"devBuild": "gulp build --nowebp",
-		"deploy": "gulp deploy -d build",
+		"deploy": "gulp deploy -d dist",
 		"sprite": "gulp sprite",
 		"fonts": "gulp fonts",
 		"ftp": "gulp runFTP"
