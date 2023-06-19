@@ -90,6 +90,7 @@
 		"no-invalid-this": "error",
 		"no-label-var": "error",
 		"no-lone-blocks": "error",
+		"no-mixed-spaces-and-tabs": 0,
 		"no-lonely-if": "error",
 		// "no-loop-func": "error",
 		"prefer-const": "error",

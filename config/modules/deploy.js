@@ -1,10 +1,18 @@
-import { paths } from '../settings/paths.js'
+import { app } from '../../gulpfile.js'
 
 import ghPages from 'gh-pages'
 
 const deploy = () =>
-  ghPages.publish(paths.buildFolder, {
-    repo: `https://github.com/nikkeyl/${paths.rootFolder}.git`
-  })
+	ghPages.publish(
+		app.paths.buildFolder,
+		{
+			repo: `https://github.com/nikkeyl/${app.paths.rootFolder}.git`
+		},
+		error => {
+			error
+				? console.log(error)
+				: console.log(app.plugins.chalk.green.bold('Published'))
+		}
+	)
 
 export { deploy }
