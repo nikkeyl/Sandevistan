@@ -6,5 +6,3 @@
 | ------- | ------------------ |
 | 3.6.0   | Supported          |
 | 3.5.0   | Not supported      |
-
-## Reporting a Vulnerability
