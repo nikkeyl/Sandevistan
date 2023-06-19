@@ -1,7 +1,7 @@
 {
 	"type": "module",
 	"scripts": {
-		"init": "rm -rf .git && npm i && git init && git add -A && git commit -a -m \"init: New project\" && git status",
+		"init": "rm -rf .git && npm i",
 		"dev": "gulp && webpack serve -c config/webpack/webpack.dev.js",
 		"build": "gulp build",
 		"devBuild": "gulp build --nowebp",
