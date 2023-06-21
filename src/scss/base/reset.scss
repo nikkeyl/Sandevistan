@@ -17,6 +17,7 @@ body {
 }
 
 body {
+	scroll-behavior: smooth;
 	line-height: 1;
 	text-rendering: optimizelegibility;
 	text-size-adjust: 100%;
@@ -103,6 +104,13 @@ li {
 
 img {
 	vertical-align: top;
+}
+
+video,
+img,
+svg,
+legend {
+	display: block;
 }
 
 h1,

@@ -1,0 +1,46 @@
+/* Looks for all classes in which there is a (__container), sets padding and centers. */
+@if $containerType == 1 {
+	[class*="__container"] {
+		@if $maxWidthContainer > 0 {
+			margin-inline: auto;
+			max-width: rem($containerWidth);
+		}
+
+		@if $containerPadding > 0 {
+			@if $maxWidthContainer > 0 {
+				padding: 0 rem(math.div($containerPadding, 2));
+			} @else {
+				@include adaptiveValue("padding-left", math.div($containerPadding, 2), 15);
+				@include adaptiveValue("padding-right", math.div($containerPadding, 2), 15);
+			}
+		}
+	}
+} @else {
+	[class*="__container"] {
+		margin-inline: auto;
+
+		@if $maxWidthContainer > 0 {
+			max-width: rem($containerWidth);
+		} @else {
+			@if $containerPadding > 0 {
+				padding: 0 rem(math.div($containerPadding, 2));
+			}
+		}
+
+		@media (max-width: diff($desktop)) {
+			max-width: rem(970);
+		}
+
+		@media (max-width: diff($laptop)) {
+			max-width: rem(750);
+		}
+
+		@media (max-width: diff($tablet)) {
+			max-width: none;
+
+			@if $containerPadding > 0 and $maxWidthContainer > 0 {
+				padding: 0 rem(math.div($containerPadding, 2));
+			}
+		}
+	}
+}

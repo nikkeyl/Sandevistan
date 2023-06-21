@@ -1,25 +1,23 @@
 @use "sass:math";
 
-@import "base/variables";
-@import "base/functions";
-@import "base/mixins";
+@import "abstracts/variables";
+@import "abstracts/functions";
+@import "abstracts/mixins";
 
-// @import "base/colorsPallete";
-@import "base/fonts/fonts";
+// @import "base/colors";
+@import "base/fonts";
 @import "base/reset";
-@import "base/page";
-@import "base/wrapper";
-@import "base/container";
+@import "base/typography";
 
-// @import "base/sections";
-// @import "base/icons";
-@import "base/placeholders";
-@import "components/common";
+@import "utils/page";
+@import "utils/wrapper";
+@import "utils/container";
 
-// @import "helpers/fullScreen";
-@import "helpers/ibg";
+@import "abstracts/placeholders";
 
-// @import "modules/colorScheme";
+// @import "utils/fullScreen";
+
+// @import "themes/colorScheme";
 
 @import "effects/effects";
 
@@ -27,18 +25,19 @@
 // @import "effects/line";
 // @import "effects/glow";
 
-// @import "components/breadCrumbs";
-@import "components/forms/forms";
-
-// @import "components/pagination";
-// @import "components/changeFont";
 // @import "components/scrollbar";
 // @import "components/spollers";
 // @import "components/showMore";
 // @import "components/marquee";
 // @import "components/popup";
 // @import "components/tabs";
-// @import "components/maps";
-@import "components/header";
-@import "components/footer";
-@import "components/pages/home";
+// @import "components/map";
+
+// @import "layout/breadCrumbs";
+// @import "layout/pagination";
+@import "layout/forms";
+@import "layout/header";
+@import "layout/sidebar";
+@import "layout/footer";
+
+@import "pages/home";

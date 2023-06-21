@@ -1,0 +1,105 @@
+%responsiveVideo {
+	position: relative;
+	overflow: hidden;
+	padding-bottom: ratio(16, 9);
+	height: 0;
+
+	iframe,
+	object,
+	video,
+	embed {
+		@include widthHeight(100%, 100%);
+
+		position: absolute;
+		inset: 0;
+	}
+}
+
+%videoBackground {
+	iframe,
+	object,
+	video,
+	embed {
+		@include widthHeight(auto, auto);
+
+		position: fixed;
+		inset: 50%;
+		z-index: -100;
+		min-width: 100%;
+		min-height: 100%;
+		background-size: cover;
+		transform: translateX(-50%) translateY(-50%);
+	}
+}
+
+%imageBackground {
+	/* Background image using css */
+	position: relative;
+
+	img {
+		@include widthHeight(100%, 100%);
+
+		position: absolute;
+		inset: 0;
+		object-fit: cover;
+	}
+}
+
+%listCounter {
+	counter-reset: item;
+	list-style-type: none;
+
+	li {
+		position: relative;
+
+		&::before {
+			counter-increment: item;
+			content: counter(item);
+			position: absolute;
+			inset: 0;
+		}
+	}
+}
+
+%fullScreen {
+	min-height: 100vh;
+
+	.touch & {
+		/* The (--vh) variable is used by the fullVHfix function */
+		min-height: calc(var(--vh, 1vh) * 100);
+
+		@include mediaMax($tablet) {
+			transition: min-height 0.3s;
+		}
+	}
+}
+
+%grayFilter {
+	filter: grayscale(1);
+	transition: filter 0.3s;
+
+	@include mediaHover {
+		filter: grayscale(0);
+	}
+}
+
+%hideScroll {
+	&::-webkit-scrollbar {
+		display: none;
+	}
+}
+
+%touch {
+	/* Pulse-based scrolling https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-overflow-scrolling */
+	-webkit-overflow-scrolling: touch;
+}
+
+%mirror {
+	/* Mirror effect */
+	transform: scale(-1, 1);
+}
+
+%userSelect {
+	/* Prevents the user from selecting text */
+	user-select: none;
+}

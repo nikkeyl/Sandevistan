@@ -1,0 +1,293 @@
+@mixin adaptiveValue(
+	$property,
+	$startSize,
+	$minSize,
+	$keepSize: 0,
+	$widthFrom: $containerWidth,
+	$widthTo: $minWidth
+) {
+	@if $startSize == 0 {
+		$startSize: 0.000001;
+	}
+
+	@if $minSize == 0 {
+		$minSize: 0.000001;
+	}
+
+	// $addSize: math.div($startSize - $minSize, 16);
+
+	@if $widthFrom == $containerWidth and $maxWidthContainer == 0 {
+		$widthFrom: $maxWidth;
+	}
+
+	$slope: math.div(($startSize - $minSize), ($widthFrom - $widthTo));
+	$yIntersection: -$widthTo * $slope + $minSize;
+
+	@if $yIntersection == 0 {
+		$yIntersection: 0.000001;
+	}
+
+	$flyValue: #{rem($yIntersection)}" + " #{$slope * 100}vw;
+	$propertyValue: #{"clamp(" rem($minSize) "," $flyValue "," rem($startSize) ")"};
+
+	@if $minSize > $startSize {
+		$propertyValue: #{"clamp(" rem($startSize) "," $flyValue "," rem($minSize) ")"};
+	}
+
+	@if $keepSize != 1 and $keepSize != 3 {
+		@include mediaMin($widthFrom) {
+			#{$property}: rem($startSize);
+		}
+	}
+
+	@media (min-width: em($widthTo)) and (max-width: em($widthFrom)) {
+		#{$property}: $propertyValue;
+		// @supports (#{$property}: $propertyValue) {
+		// }
+
+		// @supports not (#{$property}: $propertyValue) {
+		// 	#{$property}: calc(#{rem($minSize)} + #{$addSize} * (100vw - #{rem($widthTo)}) / #{math.div($widthFrom, 16) - math.div($widthTo, 16)});
+		// }
+	}
+
+	@if $keepSize != 1 and $keepSize != 2 {
+		@include mediaMax($widthTo) {
+			#{$property}: rem($minSize);
+		}
+	}
+}
+
+// Responsive exit from the container https://www.youtube.com/watch?v=NVdlfhkDAGM&pp=ygU70J7RgtC30YvQstGH0LjQstGL0Lkg0LLRi9GF0L7QtCDQuNC3INC60L7QvdGC0LXQudC90LXRgNCy0LA%3D
+@mixin responsiveOutput($imageHeight, $bodyWidth, $breakpoint: 2, $reverse: 0) {
+	$percent: round(math.div($bodyWidth, $maxWidthContainer) * 100);
+	$width: $bodyWidth - ($bodyWidth - $percent);
+
+	@if $breakpoint == 1 {
+		$breakpoint: $laptop;
+	} @else if $breakpoint == 2 {
+		$breakpoint: $tablet;
+	} @else if $breakpoint == 3 {
+		$breakpoint: $phone;
+	} @else {
+		$breakpoint: $breakpoint;
+	}
+
+	@if $width <= 10 {
+		$width: 0 + #{$width};
+	}
+
+	&__inner {
+		display: flex;
+		flex: 0 0 100%;
+	}
+
+	&__container {
+		flex: 0 1 100%;
+
+		@if $reverse == 1 {
+			display: flex;
+			flex-direction: row-reverse;
+		}
+	}
+
+	&__body {
+		@include mediaMin($breakpoint) {
+			width: #{$percent} + "%";
+		}
+	}
+
+	&__image {
+		img {
+			width: 100%;
+		}
+
+		@include mediaMin($breakpoint) {
+			flex: 0 0
+				calc(
+					((100% - #{rem($containerPadding)}) * 0.#{math.div((100 - $percent), 1)})
+						+ (rem($containerPadding) / 2)
+				);
+			padding-bottom: round(percent($imageHeight, $maxWidth));
+
+			@if $reverse == 1 {
+				transform: translateX(100%);
+			} @else {
+				transform: translateX(-100%);
+			}
+
+			@extend %imageBackground;
+		}
+
+		@include mediaMin($containerWidth) {
+			flex: 0 0 calc(50% - (0.#{$width} - 0.5) * rem($maxWidthContainer));
+		}
+	}
+
+	@include mediaMin($breakpoint) {
+		display: flex;
+
+		@if $reverse == 1 {
+			flex-direction: row-reverse;
+		}
+	}
+
+	@include mediaMax($breakpoint) {
+		@if $reverse == 1 {
+			display: flex;
+			flex-direction: column-reverse;
+		}
+	}
+}
+
+@mixin slide(
+	$items,
+	$translate,
+	$time,
+	$animationDelay,
+	$direction,
+	$breakpoint: $tablet
+) {
+	$count: $items + 1;
+
+	@include mediaMin($breakpoint) {
+		opacity: 0;
+		animation: slide-#{$direction} #{$time}s forwards;
+
+		@if $direction == top {
+			transform: translateY(#{$translate} + "%");
+		} @else if $direction == bottom {
+			transform: translateY(0);
+		} @else if $direction == left {
+			transform: translateX(#{$translate} + "%");
+		} @else {
+			transform: translateX(0);
+		}
+
+		@keyframes slide-#{$direction} {
+			100% {
+				opacity: 1;
+
+				@if $direction == top {
+					transform: translateY(0);
+				} @else if $direction == bottom {
+					transform: translateY(#{$translate} + "%");
+				} @else if $direction == left {
+					transform: translateX(0);
+				} @else {
+					transform: translateX(#{$translate} + "%");
+				}
+			}
+		}
+
+		@for $i from 2 through $count {
+			$delay: ($i - 1) * $animationDelay;
+
+			&:nth-child(#{$i}) {
+				animation-delay: #{$delay}s;
+			}
+		}
+	}
+}
+
+// Triangle using pseudo elements
+@mixin triangle($color, $direction, $top, $right, $bottom, $left, $position) {
+	position: $position;
+	width: 0;
+	height: 0;
+
+	@if $direction == bottom {
+		margin-top: 0 - round(calc($top / 2.5));
+		border-top: rem($top) solid $color;
+		border-right: rem($right) solid transparent;
+		border-left: rem($left) solid transparent;
+	} @else if $direction == up {
+		margin-bottom: 0 - round(calc($bottom / 2.5));
+		border-right: rem($right) solid transparent;
+		border-bottom: rem($bottom) solid $color;
+		border-left: rem($left) solid transparent;
+	} @else if $direction == right {
+		margin-right: rem(-$right);
+		border-top: rem($top) solid transparent;
+		border-bottom: rem($bottom) solid transparent;
+		border-left: rem($left) solid $color;
+	} @else {
+		margin-left: rem(-$left);
+		border-top: rem($top) solid transparent;
+		border-right: rem($right) solid $color;
+		border-bottom: rem($bottom) solid transparent;
+	}
+}
+
+// Text truncation
+@mixin truncate($truncationWidth, $selector, $rows: 7, $type: 1) {
+	@if $type == 1 {
+		min-width: 0;
+	}
+
+	&__#{$selector} {
+		max-width: rem($truncationWidth);
+		overflow: hidden;
+
+		@if $type == 0 {
+			display: -webkit-box;
+			-webkit-box-orient: vertical;
+			-webkit-line-clamp: $rows;
+		} @else {
+			white-space: nowrap;
+			text-overflow: ellipsis;
+		}
+	}
+}
+
+@mixin gridCards($type: fit, $min: rem(290), $max: 1fr, $breakpoint: $phone) {
+	display: grid;
+	@content;
+
+	@include mediaMin($breakpoint) {
+		grid-template-columns: repeat(auto-#{$type}, minmax($min, $max));
+	}
+}
+
+@mixin mediaMin($breakpoint) {
+	@media (min-width: em($breakpoint)) {
+		@content;
+	}
+}
+
+@mixin mediaMax($breakpoint) {
+	@media (max-width: diff($breakpoint)) {
+		@content;
+	}
+}
+
+@mixin mediaHover($value: hover) {
+	@media (any-hover: $value) {
+		&:hover {
+			@content;
+		}
+	}
+}
+
+// Gradient text
+@mixin textGradient($gradient) {
+	background: $gradient;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+@mixin pseudo($content: "", $position: absolute) {
+	content: $content;
+	position: $position;
+}
+
+@mixin widthHeight($width, $height) {
+	width: $width;
+	height: $height;
+}
+
+@mixin currency($sym) {
+	&::after {
+		content: "#{$sym}";
+		@content;
+	}
+}
