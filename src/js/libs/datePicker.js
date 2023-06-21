@@ -2,7 +2,7 @@
 import { nodeObjects } from '@js/helpers/nodeList'
 import datepicker from 'js-datepicker'
 
-import '@scss/libs/datePicker'
+import '@scss/vendors/datePicker'
 
 if (document.querySelector('[data-datepicker]')) {
 	const picker = datepicker('[data-datepicker]', {

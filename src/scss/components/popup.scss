@@ -1,11 +1,11 @@
 .page {
 	&::after {
-		@include widthHeight(100%, 100%);
+		@include width-height(100%, 100%);
 		@include pseudo("", fixed);
 
 		inset: 0;
 		z-index: 149;
-		background-color: rgba($colorDark, 50%);
+		background-color: rgba($color-dark, 50%);
 		opacity: 0;
 		transition: opacity 0.8s;
 		pointer-events: none;
@@ -23,7 +23,7 @@
 .popup {
 	position: fixed;
 	inset: 0;
-	padding: rem(30) rem(math.div($containerPadding, 2));
+	padding: rem(30) rem(math.div($container-padding, 2));
 	pointer-events: none;
 
 	&__wrapper {
@@ -37,7 +37,7 @@
 		border-radius: rem(20);
 		padding: rem(20);
 		max-width: rem(900);
-		background-color: $colorGray;
+		background-color: $color-gray;
 		visibility: hidden;
 		transform: scale(0);
 		transition: transform 0.3s, visibility 0.3s;

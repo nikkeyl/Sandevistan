@@ -8,7 +8,7 @@ import tippy from 'tippy.js'
 // RoundArrow,
 // Sticky,
 
-import '@scss/libs/tippy'
+import '@scss/vendors/tippy'
 
 if (document.querySelectorAll('[data-tippy-content]')) {
 	const hints = tippy('[data-tippy-content]', {

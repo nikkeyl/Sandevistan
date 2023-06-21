@@ -7,23 +7,20 @@
 // @import "base/colors";
 @import "base/fonts";
 @import "base/reset";
-@import "base/typography";
-
 @import "utils/page";
 @import "utils/wrapper";
 @import "utils/container";
-
 @import "abstracts/placeholders";
+@import "base/typography";
 
 // @import "utils/fullScreen";
-
 // @import "themes/colorScheme";
 
-@import "effects/effects";
+@import "utils/effects/effects";
 
-// @import "effects/ripple";
-// @import "effects/line";
-// @import "effects/glow";
+// @import "utils/effects/ripple";
+// @import "utils/effects/line";
+// @import "utils/effects/glow";
 
 // @import "components/scrollbar";
 // @import "components/spollers";
@@ -39,5 +36,4 @@
 @import "layout/header";
 @import "layout/sidebar";
 @import "layout/footer";
-
 @import "pages/home";

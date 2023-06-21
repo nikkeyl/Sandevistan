@@ -6,7 +6,7 @@
 .spoller {
 	&__title {
 		position: relative;
-		border: rem(1) solid $colorGray;
+		border: rem(1) solid $color-gray;
 		border-radius: rem(5);
 		padding: rem(10) rem(15);
 		width: 100%;
@@ -19,11 +19,11 @@
 			&::before,
 			&::after {
 				@include pseudo;
-				@include widthHeight(rem(15), rem(2));
+				@include width-height(rem(15), rem(2));
 
 				right: rem(10);
 				top: 50%;
-				background-color: $colorDark;
+				background-color: $color-dark;
 				transition: transform 0.5s;
 			}
 
@@ -48,7 +48,7 @@
 	}
 
 	&__body {
-		border: rem(1) solid $colorGray;
+		border: rem(1) solid $color-gray;
 		padding: rem(20);
 	}
 }

@@ -1,14 +1,14 @@
 /* Color scheme */
 .theme-change {
-	@include widthHeight(rem(30), rem(30));
+	@include width-height(rem(30), rem(30));
 
 	transition: background-color 0.6s;
 }
 
 .dark {
 	.page {
-		color: $colorLight;
-		background-color: $colorDarkGray;
+		color: $color-light;
+		background-color: $color-dark-gray;
 	}
 
 	.theme-change {
@@ -18,8 +18,8 @@
 
 .light {
 	.page {
-		color: $colorDarkGray;
-		background-color: $colorLight;
+		color: $color-dark-gray;
+		background-color: $color-light;
 	}
 
 	.theme-change {
@@ -28,14 +28,14 @@
 }
 
 .reset-theme {
-	$fontSize: 18;
+	$font-size: 18;
 
-	@include widthHeight(rem(15), rem(15));
+	@include width-height(rem(15), rem(15));
 
 	border-radius: 50%;
-	font-size: rem($fontSize);
-	color: $colorLight;
-	background-color: $colorDark;
+	font-size: rem($font-size);
+	color: $color-light;
+	background-color: $color-dark;
 	opacity: 0;
 	visibility: hidden;
 	transition: opacity 0.3s, visibility 0.3s;

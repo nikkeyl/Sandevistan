@@ -7,42 +7,42 @@
 	cursor: pointer;
 
 	&__text {
-		$fontSize: 18;
+		$font-size: 18;
 
-		font-size: rem($fontSize);
-		line-height: math.div(22, $fontSize);
-		color: $colorGray;
+		font-size: rem($font-size);
+		line-height: math.div(22, $font-size);
+		color: $color-gray;
 	}
 
 	&__box {
 		$size: 20;
 
-		@include widthHeight(rem($size), rem($size));
+		@include width-height(rem($size), rem($size));
 
 		position: relative;
 		flex: 0 0 rem($size);
 		align-self: flex-start;
-		border: rem(2) solid $colorGray;
+		border: rem(2) solid $color-gray;
 		border-radius: rem(3);
 
 		&::after {
-			@include widthHeight(rem(20), rem(20));
+			@include width-height(rem(20), rem(20));
 
 			content: "";
 			position: absolute;
 			inset: rem(-2);
 			border-radius: rem(3);
-			background-color: $colorDark;
+			background-color: $color-dark;
 			transform: scale(0);
 			transition: transform 0.3s;
 		}
 
 		svg {
-			@include widthHeight(rem(10), rem(10));
+			@include width-height(rem(10), rem(10));
 
 			position: absolute;
 			inset: rem(3);
-			fill: $colorLight;
+			fill: $color-light;
 			transform: scale(0);
 		}
 	}

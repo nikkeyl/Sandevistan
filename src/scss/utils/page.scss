@@ -1,8 +1,8 @@
 .page {
-	font-family: $mainFontFamily;
-	font-weight: $mainFontWeight;
-	font-size: rem($mainFontSize);
-	color: $mainFontColor;
+	font-family: $main-font-family;
+	font-weight: $main-font-weight;
+	font-size: rem($main-font-size);
+	color: $main-font-color;
 
 	.lock & {
 		overflow: hidden;
@@ -12,12 +12,12 @@
 		overscroll-behavior: none;
 	}
 
-	@if $backgroundGradient == 1 {
-		background: $mainBackgroundColor;
+	@if $background-gradient == 1 {
+		background: $main-background-color;
 
 		/* If the background is a gradient, then this property helps to stretch the gradinet to its full height */
 		background-attachment: fixed;
 	} @else {
-		background-color: $mainBackgroundColor;
+		background-color: $main-background-color;
 	}
 }

@@ -10,28 +10,28 @@
 	gap: rem(10);
 
 	&__text {
-		$fontSize: 18;
+		$font-size: 18;
 
-		font-size: rem($fontSize);
-		line-height: math.div(22, $fontSize);
-		color: $colorGray;
+		font-size: rem($font-size);
+		line-height: math.div(22, $font-size);
+		color: $color-gray;
 	}
 
 	&__box {
-		@include widthHeight(rem(20), rem(20));
+		@include width-height(rem(20), rem(20));
 
 		position: relative;
 		flex: 0 0 rem(20);
-		border: rem(1) solid $colorGray;
+		border: rem(1) solid $color-gray;
 		border-radius: 50%;
 
 		&::before {
 			@include pseudo;
-			@include widthHeight(rem(15), rem(15));
+			@include width-height(rem(15), rem(15));
 
 			inset: 50%;
 			border-radius: 50%;
-			background-color: $colorDark;
+			background-color: $color-dark;
 			transform: translate(-50%, -50%) scale(0);
 			transition: transform 0.3s;
 		}

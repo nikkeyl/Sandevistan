@@ -1,19 +1,19 @@
 /* Line effect */
 .hover {
-	@include mediaMin($tablet) {
-		@include widthHeight(100%, 100%);
+	@include media-min($tablet) {
+		@include width-height(100%, 100%);
 
 		position: absolute;
 		inset: 0;
 		z-index: 2;
 		overflow: hidden;
-		background-color: $colorGray;
+		background-color: $color-gray;
 		will-change: transform;
 
 		&__text {
 			display: block;
 			padding: rem(20) rem(30);
-			color: $colorLight;
+			color: $color-light;
 			will-change: transform;
 		}
 	}

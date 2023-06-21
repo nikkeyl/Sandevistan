@@ -1,76 +1,72 @@
-@mixin adaptiveValue(
+@mixin adaptive-value(
 	$property,
-	$startSize,
-	$minSize,
-	$keepSize: 0,
-	$widthFrom: $containerWidth,
-	$widthTo: $minWidth
+	$start-size,
+	$min-size,
+	$keep-size: 0,
+	$width-from: $container-width,
+	$width-to: $min-width
 ) {
-	@if $startSize == 0 {
-		$startSize: 0.000001;
+	@if $start-size == 0 {
+		$start-size: 0.000001;
 	}
 
-	@if $minSize == 0 {
-		$minSize: 0.000001;
+	@if $min-size == 0 {
+		$min-size: 0.000001;
 	}
 
-	// $addSize: math.div($startSize - $minSize, 16);
+	// $add-size: math.div($start-size - $min-size, 16);
 
-	@if $widthFrom == $containerWidth and $maxWidthContainer == 0 {
-		$widthFrom: $maxWidth;
+	@if $width-from == $container-width and $max-width-container == 0 {
+		$width-from: $max-width;
 	}
 
-	$slope: math.div(($startSize - $minSize), ($widthFrom - $widthTo));
-	$yIntersection: -$widthTo * $slope + $minSize;
+	$slope: math.div(($start-size - $min-size), ($width-from - $width-to));
+	$y-intersection: -$width-to * $slope + $min-size;
 
-	@if $yIntersection == 0 {
-		$yIntersection: 0.000001;
+	@if $y-intersection == 0 {
+		$y-intersection: 0.000001;
 	}
 
-	$flyValue: #{rem($yIntersection)}" + " #{$slope * 100}vw;
-	$propertyValue: #{"clamp(" rem($minSize) "," $flyValue "," rem($startSize) ")"};
+	$fly-value: #{rem($y-intersection)}" + " #{$slope * 100}vw;
+	$property-value: #{"clamp(" rem($min-size) "," $fly-value "," rem($start-size) ")"};
 
-	@if $minSize > $startSize {
-		$propertyValue: #{"clamp(" rem($startSize) "," $flyValue "," rem($minSize) ")"};
+	@if $min-size > $start-size {
+		$property-value: #{"clamp("
+			rem($start-size)
+			","
+			$fly-value
+			","
+			rem($min-size)
+			")"};
 	}
 
-	@if $keepSize != 1 and $keepSize != 3 {
-		@include mediaMin($widthFrom) {
-			#{$property}: rem($startSize);
+	@if $keep-size != 1 and $keep-size != 3 {
+		@include media-min($width-from) {
+			#{$property}: rem($start-size);
 		}
 	}
 
-	@media (min-width: em($widthTo)) and (max-width: em($widthFrom)) {
-		#{$property}: $propertyValue;
-		// @supports (#{$property}: $propertyValue) {
+	@media (min-width: em($width-to)) and (max-width: em($width-from)) {
+		#{$property}: $property-value;
+		// @supports (#{$property}: $property-value) {
 		// }
 
-		// @supports not (#{$property}: $propertyValue) {
-		// 	#{$property}: calc(#{rem($minSize)} + #{$addSize} * (100vw - #{rem($widthTo)}) / #{math.div($widthFrom, 16) - math.div($widthTo, 16)});
+		// @supports not (#{$property}: $property-value) {
+		// 	#{$property}: calc(#{rem($min-size)} + #{$add-size} * (100vw - #{rem($width-to)}) / #{math.div($width-from, 16) - math.div($width-to, 16)});
 		// }
 	}
 
-	@if $keepSize != 1 and $keepSize != 2 {
-		@include mediaMax($widthTo) {
-			#{$property}: rem($minSize);
+	@if $keep-size != 1 and $keep-size != 2 {
+		@include media-max($width-to) {
+			#{$property}: rem($min-size);
 		}
 	}
 }
 
 // Responsive exit from the container https://www.youtube.com/watch?v=NVdlfhkDAGM&pp=ygU70J7RgtC30YvQstGH0LjQstGL0Lkg0LLRi9GF0L7QtCDQuNC3INC60L7QvdGC0LXQudC90LXRgNCy0LA%3D
-@mixin responsiveOutput($imageHeight, $bodyWidth, $breakpoint: 2, $reverse: 0) {
-	$percent: round(math.div($bodyWidth, $maxWidthContainer) * 100);
-	$width: $bodyWidth - ($bodyWidth - $percent);
-
-	@if $breakpoint == 1 {
-		$breakpoint: $laptop;
-	} @else if $breakpoint == 2 {
-		$breakpoint: $tablet;
-	} @else if $breakpoint == 3 {
-		$breakpoint: $phone;
-	} @else {
-		$breakpoint: $breakpoint;
-	}
+@mixin responsiveOutput($image-height, $body-width, $breakpoint: $tablet, $reverse: 0) {
+	$percent: round(math.div($body-width, $max-width-container) * 100);
+	$width: $body-width - ($body-width - $percent);
 
 	@if $width <= 10 {
 		$width: 0 + #{$width};
@@ -91,7 +87,7 @@
 	}
 
 	&__body {
-		@include mediaMin($breakpoint) {
+		@include media-min($breakpoint) {
 			width: #{$percent} + "%";
 		}
 	}
@@ -101,29 +97,38 @@
 			width: 100%;
 		}
 
-		@include mediaMin($breakpoint) {
+		@include media-min($breakpoint) {
+			position: relative;
 			flex: 0 0
 				calc(
-					((100% - #{rem($containerPadding)}) * 0.#{math.div((100 - $percent), 1)})
-						+ (rem($containerPadding) / 2)
+					(
+							(100% - #{rem($container-padding)}) *
+								math.div(math.div((100 - $percent), 1), 100)
+						) + (rem($container-padding) / 2)
 				);
-			padding-bottom: round(percent($imageHeight, $maxWidth));
+			padding-bottom: round(percent($image-height, $max-width));
+
+			img {
+				position: absolute;
+				inset: 0;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
 
 			@if $reverse == 1 {
 				transform: translateX(100%);
 			} @else {
 				transform: translateX(-100%);
 			}
-
-			@extend %imageBackground;
 		}
 
-		@include mediaMin($containerWidth) {
-			flex: 0 0 calc(50% - (0.#{$width} - 0.5) * rem($maxWidthContainer));
+		@include media-min($container-width) {
+			flex: 0 0 calc(50% - (math.div($width, 100) - 0.5) * rem($max-width-container));
 		}
 	}
 
-	@include mediaMin($breakpoint) {
+	@include media-min($breakpoint) {
 		display: flex;
 
 		@if $reverse == 1 {
@@ -131,7 +136,7 @@
 		}
 	}
 
-	@include mediaMax($breakpoint) {
+	@include media-max($breakpoint) {
 		@if $reverse == 1 {
 			display: flex;
 			flex-direction: column-reverse;
@@ -143,13 +148,13 @@
 	$items,
 	$translate,
 	$time,
-	$animationDelay,
+	$animation-delay,
 	$direction,
 	$breakpoint: $tablet
 ) {
 	$count: $items + 1;
 
-	@include mediaMin($breakpoint) {
+	@include media-min($breakpoint) {
 		opacity: 0;
 		animation: slide-#{$direction} #{$time}s forwards;
 
@@ -180,7 +185,7 @@
 		}
 
 		@for $i from 2 through $count {
-			$delay: ($i - 1) * $animationDelay;
+			$delay: ($i - 1) * $animation-delay;
 
 			&:nth-child(#{$i}) {
 				animation-delay: #{$delay}s;
@@ -219,13 +224,13 @@
 }
 
 // Text truncation
-@mixin truncate($truncationWidth, $selector, $rows: 7, $type: 1) {
+@mixin truncate($truncation-width, $selector, $rows: 7, $type: 1) {
 	@if $type == 1 {
 		min-width: 0;
 	}
 
 	&__#{$selector} {
-		max-width: rem($truncationWidth);
+		max-width: rem($truncation-width);
 		overflow: hidden;
 
 		@if $type == 0 {
@@ -239,28 +244,28 @@
 	}
 }
 
-@mixin gridCards($type: fit, $min: rem(290), $max: 1fr, $breakpoint: $phone) {
+@mixin grid-cards($type: fit, $min: rem(290), $max: 1fr, $breakpoint: $phone) {
 	display: grid;
 	@content;
 
-	@include mediaMin($breakpoint) {
+	@include media-min($breakpoint) {
 		grid-template-columns: repeat(auto-#{$type}, minmax($min, $max));
 	}
 }
 
-@mixin mediaMin($breakpoint) {
+@mixin media-min($breakpoint) {
 	@media (min-width: em($breakpoint)) {
 		@content;
 	}
 }
 
-@mixin mediaMax($breakpoint) {
+@mixin media-max($breakpoint) {
 	@media (max-width: diff($breakpoint)) {
 		@content;
 	}
 }
 
-@mixin mediaHover($value: hover) {
+@mixin media-hover($value: hover) {
 	@media (any-hover: $value) {
 		&:hover {
 			@content;
@@ -269,7 +274,7 @@
 }
 
 // Gradient text
-@mixin textGradient($gradient) {
+@mixin text-gradient($gradient) {
 	background: $gradient;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -280,7 +285,7 @@
 	position: $position;
 }
 
-@mixin widthHeight($width, $height) {
+@mixin width-height($width, $height) {
 	width: $width;
 	height: $height;
 }

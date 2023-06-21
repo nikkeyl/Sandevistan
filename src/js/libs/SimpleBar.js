@@ -4,7 +4,7 @@
 */
 import SimpleBar from 'simplebar'
 
-import '@scss/libs/simpleBar'
+import '@scss/vendors/simpleBar'
 
 if (document.querySelectorAll('[data-simplebar]').length) {
 	document.querySelectorAll('[data-simplebar]').forEach(scrollBlock => {

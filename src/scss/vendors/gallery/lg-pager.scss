@@ -7,96 +7,96 @@
 @import "lg-mixins";
 
 .lg-outer {
-  .lg-pager-outer {
-    z-index: $zindex-pager;
-    margin-bottom: rem(10);
-    height: rem(10);
-    text-align: center;
+	.lg-pager-outer {
+		z-index: $zindex-pager;
+		margin-bottom: rem(10);
+		height: rem(10);
+		text-align: center;
 
-    &.lg-pager-hover {
-      .lg-pager-cont {
-        overflow: visible;
-      }
-    }
-  }
+		&.lg-pager-hover {
+			.lg-pager-cont {
+				overflow: visible;
+			}
+		}
+	}
 
-  .lg-pager-cont {
-    position: relative;
-    display: inline-block;
-    vertical-align: top;
-    overflow: hidden;
-    margin: 0 rem(5);
-    cursor: pointer;
+	.lg-pager-cont {
+		position: relative;
+		display: inline-block;
+		vertical-align: top;
+		overflow: hidden;
+		margin: 0 rem(5);
+		cursor: pointer;
 
-    &:hover {
-      .lg-pager-thumb-cont {
-        @include translate3d(0, 0, 0);
+		&:hover {
+			.lg-pager-thumb-cont {
+				@include translate3d(0, 0, 0);
 
-        opacity: 1;
-      }
-    }
+				opacity: 1;
+			}
+		}
 
-    &.lg-pager-active {
-      .lg-pager {
-        box-shadow: 0 0 0 rem(2) $colorLight inset;
-      }
-    }
-  }
+		&.lg-pager-active {
+			.lg-pager {
+				box-shadow: 0 0 0 rem(2) $color-light inset;
+			}
+		}
+	}
 
-  .lg-pager-thumb-cont {
-    @include transitionCustom(opacity 0.15s, transform 0.15s);
-    @include translate3d(0, rem(5), 0);
-    @include widthHeight(rem(120), rem(83));
+	.lg-pager-thumb-cont {
+		@include transitionCustom(opacity 0.15s, transform 0.15s);
+		@include translate3d(0, rem(5), 0);
+		@include width-height(rem(120), rem(83));
 
-    position: absolute;
-    left: 0;
-    bottom: 100%;
-    margin-bottom: rem(20);
-    margin-left: rem(-60);
-    border-radius: rem(3);
-    padding: rem(5);
-    color: $colorLight;
-    background-color: $colorLight;
-    opacity: 0;
-    will-change: transform, opacity;
+		position: absolute;
+		left: 0;
+		bottom: 100%;
+		margin-bottom: rem(20);
+		margin-left: rem(-60);
+		border-radius: rem(3);
+		padding: rem(5);
+		color: $color-light;
+		background-color: $color-light;
+		opacity: 0;
+		will-change: transform, opacity;
 
-    img {
-      @include widthHeight(100%, 100%);
-    }
-  }
+		img {
+			@include width-height(100%, 100%);
+		}
+	}
 
-  .lg-pager {
-    @include transition(box-shadow 0.3s 0s);
-    @include widthHeight(rem(12), rem(12));
+	.lg-pager {
+		@include transition(box-shadow 0.3s 0s);
+		@include width-height(rem(12), rem(12));
 
-    display: block;
-    border-radius: 50%;
-    box-shadow: 0 0 0 rem(8) rgba($colorLight, 0.7) inset;
-    background-color: rgba($colorLight, 0.5);
+		display: block;
+		border-radius: 50%;
+		box-shadow: 0 0 0 rem(8) rgba($color-light, 0.7) inset;
+		background-color: rgba($color-light, 0.5);
 
-    &:hover,
-    &:focus {
-      box-shadow: 0 0 0 rem(8) $colorLight inset;
-    }
-  }
+		&:hover,
+		&:focus {
+			box-shadow: 0 0 0 rem(8) $color-light inset;
+		}
+	}
 
-  .lg-caret {
-    @include widthHeight(0, 0);
+	.lg-caret {
+		@include width-height(0, 0);
 
-    position: absolute;
-    left: 50%;
-    bottom: rem(-10);
-    display: inline-block;
-    vertical-align: middle;
-    margin-left: rem(-5);
-    border-top: rem(10) dashed;
-    border-right: rem(10) solid transparent;
-    border-left: rem(10) solid transparent;
-  }
+		position: absolute;
+		left: 50%;
+		bottom: rem(-10);
+		display: inline-block;
+		vertical-align: middle;
+		margin-left: rem(-5);
+		border-top: rem(10) dashed;
+		border-right: rem(10) solid transparent;
+		border-left: rem(10) solid transparent;
+	}
 
-  &.lg-single-item {
-    .lg-pager-outer {
-      display: none;
-    }
-  }
+	&.lg-single-item {
+		.lg-pager-outer {
+			display: none;
+		}
+	}
 }

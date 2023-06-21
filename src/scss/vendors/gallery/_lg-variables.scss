@@ -4,13 +4,17 @@
 @import "@scss/abstracts/variables";
 
 $backdrop-opacity: 1 !default;
-$lg-toolbar-bg: linear-gradient(0deg, rgba($colorDark, 0), rgba($colorDark, 0.4)) !default;
+$lg-toolbar-bg: linear-gradient(
+	0deg,
+	rgba($color-dark, 0),
+	rgba($color-dark, 0.4)
+) !default;
 $lg-border-radius-base: rem(2) !default;
 $lg-theme-highlight: rgb(169 7 7) !default;
-$lg-theme-color: $colorDark !default;
-$lg-icon-bg: rgba($colorDark, 0.45) !default;
+$lg-theme-color: $color-dark !default;
+$lg-icon-bg: rgba($color-dark, 0.45) !default;
 $lg-icon-color: #999 !default;
-$lg-icon-hover-color: $colorLight !default;
+$lg-icon-hover-color: $color-light !default;
 $lg-counter-color: #e6e6e6 !default;
 $lg-counter-font-size: rem(16) !default;
 $lg-next-prev-bg: $lg-icon-bg !default;
@@ -19,13 +23,17 @@ $lg-next-prev-hover-color: $lg-icon-hover-color !default;
 $lg-toolbar-icon-color: $lg-icon-color !default;
 $lg-toolbar-icon-hover-color: $lg-icon-hover-color !default;
 $lg-toolbar-icon-disabled-opacity: 0.75 !default;
-$lg-progress-bar-bg: $colorDarkGray !default;
+$lg-progress-bar-bg: $color-dark-gray !default;
 $lg-progress-bar-active-bg: $lg-theme-highlight !default;
 $lg-progress-bar-height: rem(5) !default;
 $lg-path-fonts: "../fonts" !default;
 $lg-path-images: "../images" !default;
 $zoom-transition-duration: 0.5s !default;
-$lg-sub-html-bg: linear-gradient(180deg, rgba($colorDark, 0), rgba($colorDark, 0.6)) !default;
+$lg-sub-html-bg: linear-gradient(
+	180deg,
+	rgba($color-dark, 0),
+	rgba($color-dark, 0.6)
+) !default;
 $lg-sub-html-color: #eee !default;
 $lg-thumb-toggle-bg: #0d0a0a !default;
 $lg-thumb-toggle-color: $lg-icon-color !default;

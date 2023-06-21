@@ -10,7 +10,7 @@
 		flex: 1 1 auto;
 	}
 
-	@if $sliderFix == 1 {
+	@if $slider-fix == 1 {
 		> * {
 			/* Fixes swiper.js bug */
 			min-width: 0;

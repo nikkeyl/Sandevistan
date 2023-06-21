@@ -1,8 +1,8 @@
 .quantity {
-	@include widthHeight(rem(90), rem(40));
+	@include width-height(rem(90), rem(40));
 
 	display: flex;
-	border: rem(2) solid $colorDark;
+	border: rem(2) solid $color-dark;
 	border-radius: rem(5);
 
 	&__button {
@@ -11,13 +11,13 @@
 
 		&::before,
 		&::after {
-			@include widthHeight(rem(10), rem(1));
+			@include width-height(rem(10), rem(1));
 			@include pseudo;
 
 			inset: 50%;
 			margin-left: rem(-4.5);
 			border-radius: rem(1);
-			background-color: $colorDark;
+			background-color: $color-dark;
 			transition: background-color 0.3s;
 		}
 
@@ -32,11 +32,11 @@
 		flex: 1 1 auto;
 
 		input {
-			$fontSize: 18;
+			$font-size: 18;
 
-			@include widthHeight(100%, 100%);
+			@include width-height(100%, 100%);
 
-			font-size: rem($fontSize);
+			font-size: rem($font-size);
 			text-align: center;
 		}
 	}

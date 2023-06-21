@@ -1,4 +1,4 @@
-%responsiveVideo {
+%responsive-video {
 	position: relative;
 	overflow: hidden;
 	padding-bottom: ratio(16, 9);
@@ -8,19 +8,19 @@
 	object,
 	video,
 	embed {
-		@include widthHeight(100%, 100%);
+		@include width-height(100%, 100%);
 
 		position: absolute;
 		inset: 0;
 	}
 }
 
-%videoBackground {
+%video-background {
 	iframe,
 	object,
 	video,
 	embed {
-		@include widthHeight(auto, auto);
+		@include width-height(auto, auto);
 
 		position: fixed;
 		inset: 50%;
@@ -32,12 +32,12 @@
 	}
 }
 
-%imageBackground {
+%image-background {
 	/* Background image using css */
 	position: relative;
 
 	img {
-		@include widthHeight(100%, 100%);
+		@include width-height(100%, 100%);
 
 		position: absolute;
 		inset: 0;
@@ -45,7 +45,7 @@
 	}
 }
 
-%listCounter {
+%list-counter {
 	counter-reset: item;
 	list-style-type: none;
 
@@ -61,29 +61,29 @@
 	}
 }
 
-%fullScreen {
+%full-screen {
 	min-height: 100vh;
 
 	.touch & {
 		/* The (--vh) variable is used by the fullVHfix function */
 		min-height: calc(var(--vh, 1vh) * 100);
 
-		@include mediaMax($tablet) {
+		@include media-max($tablet) {
 			transition: min-height 0.3s;
 		}
 	}
 }
 
-%grayFilter {
+%gray-filter {
 	filter: grayscale(1);
 	transition: filter 0.3s;
 
-	@include mediaHover {
+	@include media-hover {
 		filter: grayscale(0);
 	}
 }
 
-%hideScroll {
+%hide-scroll {
 	&::-webkit-scrollbar {
 		display: none;
 	}
@@ -99,7 +99,7 @@
 	transform: scale(-1, 1);
 }
 
-%userSelect {
+%user-select {
 	/* Prevents the user from selecting text */
 	user-select: none;
 }

@@ -1,39 +1,38 @@
-$containerType: 1;
+$container-type: 1;
 
 // --------------------------------- //
-$maxWidthContainer: 0;
-$containerPadding: 30;
+$max-width-container: 0;
+$container-padding: 30;
 
 // --------------------------------- //
-$maxWidth: 1920;
-$minWidth: 320;
+$max-width: 1920;
+$min-width: 320;
 
 // --------------------------------- //
-$containerWidth: $maxWidthContainer + $containerPadding;
-$desktop: $containerWidth;
+$container-width: $max-width-container + $container-padding;
+$desktop: $container-width;
 $laptop: 992;
 $tablet: 768;
 $phone: 480;
 
 // --------------------------------- //
-$aFocusActiveOutline: 0;
-$focusActiveOutline: 0;
-$backgroundGradient: 0;
-$ibgContain: 0;
-$sliderFix: 0;
+$a-focus-active-outline: 0;
+$focus-active-outline: 0;
+$background-gradient: 0;
+$slider-fix: 0;
 $selection: 0;
 
 // --------------------------------- //
-$colorDark: #000;
-$colorDarkGray: #333;
-$colorGray: #888;
-$colorLight: #fff;
-$colorYellow: #fe0;
-$mainBackgroundColor: $colorLight;
-$mainFontColor: $colorDark;
+$color-dark: #000;
+$color-dark-gray: #333;
+$color-gray: #888;
+$color-light: #fff;
+$color-yellow: #fe0;
+$main-background-color: $color-light;
+$main-font-color: $color-dark;
 
 // --------------------------------- //
-$mainFontFamily: "";
-$fontSecond: "";
-$mainFontSize: 16;
-$mainFontWeight: 400;
+$main-font-family: "";
+$font-second: "";
+$main-font-size: 16;
+$main-font-weight: 400;

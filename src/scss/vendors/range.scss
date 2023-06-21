@@ -8,303 +8,305 @@
 
 .noUi-target,
 .noUi-target * {
-  box-sizing: border-box;
-  touch-action: none;
-  user-select: none;
+	box-sizing: border-box;
+	touch-action: none;
+	user-select: none;
 }
 
 .noUi-base,
 .noUi-connects {
-  @include widthHeight(100%, 100%);
+	@include width-height(100%, 100%);
 
-  position: relative;
-  z-index: 1;
+	position: relative;
+	z-index: 1;
 }
 
 /* Wrapper for all connect elements. */
 .noUi-connects {
-  z-index: 0;
-  overflow: hidden;
-  border-radius: rem(3);
+	z-index: 0;
+	overflow: hidden;
+	border-radius: rem(3);
 }
 
 .noUi-connect,
 .noUi-origin {
-  @include widthHeight(100%, 100%);
+	@include width-height(100%, 100%);
 
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  transform-origin: 0 0;
-  transform-style: flat;
-  will-change: transform;
+	position: absolute;
+	inset: 0;
+	z-index: 1;
+	transform-origin: 0 0;
+	transform-style: flat;
+	will-change: transform;
 }
 
 /* Offset direction */
 .noUi-txt-dir-rtl.noUi-horizontal .noUi-origin {
-  left: 0;
-  right: auto;
+	left: 0;
+	right: auto;
 }
 
 /* Give origins 0 height/width so they don't interfere with clicking the * connect elements. */
 .noUi-vertical .noUi-origin {
-  top: -100%;
-  width: 0;
+	top: -100%;
+	width: 0;
 }
 
 .noUi-horizontal .noUi-origin {
-  height: 0;
+	height: 0;
 }
 
 .noUi-touch-area {
-  @include widthHeight(100%, 100%);
+	@include width-height(100%, 100%);
 }
 
 .noUi-state-tap .noUi-connect,
 .noUi-state-tap .noUi-origin {
-  transition: transform 0.3s;
+	transition: transform 0.3s;
 }
 
 .noUi-state-drag * {
-  cursor: inherit !important;
+	cursor: inherit !important;
 }
 
 /* Slider size and handle placement; */
 .noUi-horizontal {
-  height: rem(18);
+	height: rem(18);
 }
 
 .noUi-horizontal .noUi-handle {
-  @include widthHeight(rem(30), rem(30));
+	@include width-height(rem(30), rem(30));
 
-  right: rem(-17);
-  top: rem(-6);
+	right: rem(-17);
+	top: rem(-6);
 }
 
 .noUi-vertical {
-  width: rem(18);
+	width: rem(18);
 }
 
 .noUi-vertical .noUi-handle {
-  @include widthHeight(rem(28), rem(24));
+	@include width-height(rem(28), rem(24));
 
-  right: rem(6);
-  bottom: rem(-17);
+	right: rem(6);
+	bottom: rem(-17);
 }
 
 .noUi-txt-dir-rtl.noUi-horizontal .noUi-handle {
-  left: rem(-17);
-  right: auto;
+	left: rem(-17);
+	right: auto;
 }
 
 /* Styling; * Giving the connect element a border radius causes issues with using transform: scale */
 .noUi-target {
-  position: relative;
-  border: rem(1) solid #d3d3d3;
-  border-radius: rem(4);
-  box-shadow: inset 0 rem(1) rem(1) #f0f0f0, 0 rem(3) rem(6) rem(-5) #bbb;
-  background-color: #fafafa;
+	position: relative;
+	border: rem(1) solid #d3d3d3;
+	border-radius: rem(4);
+	box-shadow: inset 0 rem(1) rem(1) #f0f0f0, 0 rem(3) rem(6) rem(-5) #bbb;
+	background-color: #fafafa;
 }
 
 .noUi-connect {
-  background-color: #3fb8af;
+	background-color: #3fb8af;
 }
 
 /* Handles and cursors; */
 .noUi-draggable {
-  cursor: ew-resize;
+	cursor: ew-resize;
 }
 
 .noUi-vertical .noUi-draggable {
-  cursor: ns-resize;
+	cursor: ns-resize;
 }
 
 .noUi-handle {
-  position: absolute;
-  border: rem(1) solid #d9d9d9;
-  border-radius: rem(3);
-  box-shadow: inset 0 0 rem(1) $colorLight, inset 0 rem(1) rem(7) #ebebeb, 0 rem(3) rem(6) rem(-3) #bbb;
-  background-color: $colorLight;
-  backface-visibility: hidden;
-  cursor: default;
+	position: absolute;
+	border: rem(1) solid #d9d9d9;
+	border-radius: rem(3);
+	box-shadow: inset 0 0 rem(1) $color-light, inset 0 rem(1) rem(7) #ebebeb,
+		0 rem(3) rem(6) rem(-3) #bbb;
+	background-color: $color-light;
+	backface-visibility: hidden;
+	cursor: default;
 }
 
 .noUi-active {
-  box-shadow: inset 0 0 rem(1) $colorLight, inset 0 rem(1) rem(7) #ddd, 0 rem(3) rem(6) rem(-3) #bbb;
+	box-shadow: inset 0 0 rem(1) $color-light, inset 0 rem(1) rem(7) #ddd,
+		0 rem(3) rem(6) rem(-3) #bbb;
 }
 
 /* Handle stripes; */
 .noUi-handle::before,
 .noUi-handle::after {
-  @include pseudo;
-  @include widthHeight(rem(1), rem(14));
+	@include pseudo;
+	@include width-height(rem(1), rem(14));
 
-  left: rem(14);
-  top: rem(6);
-  display: block;
-  background-color: #e8e7e6;
+	left: rem(14);
+	top: rem(6);
+	display: block;
+	background-color: #e8e7e6;
 }
 
 .noUi-handle::after {
-  left: rem(17);
+	left: rem(17);
 }
 
 .noUi-vertical .noUi-handle::before,
 .noUi-vertical .noUi-handle::after {
-  @include widthHeight(rem(14), rem(1));
+	@include width-height(rem(14), rem(1));
 
-  left: rem(6);
-  top: rem(14);
+	left: rem(6);
+	top: rem(14);
 }
 
 .noUi-vertical .noUi-handle::after {
-  top: rem(17);
+	top: rem(17);
 }
 
 /* Disabled state; */
 [disabled] .noUi-connect {
-  background-color: #b8b8b8;
+	background-color: #b8b8b8;
 }
 
 [disabled].noUi-target,
 [disabled].noUi-handle,
 [disabled] .noUi-handle {
-  cursor: not-allowed;
+	cursor: not-allowed;
 }
 
 /* Base; */
 .noUi-pips,
 .noUi-pips * {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 .noUi-pips {
-  position: absolute;
-  color: #999;
+	position: absolute;
+	color: #999;
 }
 
 /* Values; */
 .noUi-value {
-  position: absolute;
-  white-space: nowrap;
-  text-align: center;
+	position: absolute;
+	white-space: nowrap;
+	text-align: center;
 }
 
 .noUi-value-sub {
-  $fontSize: 18;
+	$font-size: 18;
 
-  font-size: rem($fontSize);
-  color: #ccc;
+	font-size: rem($font-size);
+	color: #ccc;
 }
 
 /* Markings; */
 .noUi-marker {
-  position: absolute;
-  background-color: #ccc;
+	position: absolute;
+	background-color: #ccc;
 }
 
 .noUi-marker-sub {
-  background-color: #aaa;
+	background-color: #aaa;
 }
 
 .noUi-marker-large {
-  background-color: #aaa;
+	background-color: #aaa;
 }
 
 /* Horizontal layout; */
 .noUi-pips-horizontal {
-  @include widthHeight(100%, rem(80));
+	@include width-height(100%, rem(80));
 
-  left: 0;
-  top: 100%;
-  padding: rem(10) 0;
+	left: 0;
+	top: 100%;
+	padding: rem(10) 0;
 }
 
 .noUi-value-horizontal {
-  transform: translate(-50%, 50%);
+	transform: translate(-50%, 50%);
 }
 
 .noUi-rtl .noUi-value-horizontal {
-  transform: translate(50%, 50%);
+	transform: translate(50%, 50%);
 }
 
 .noUi-marker-horizontal.noUi-marker {
-  @include widthHeight(rem(2), rem(5));
+	@include width-height(rem(2), rem(5));
 
-  margin-left: rem(-1);
+	margin-left: rem(-1);
 }
 
 .noUi-marker-horizontal.noUi-marker-sub {
-  height: rem(10);
+	height: rem(10);
 }
 
 .noUi-marker-horizontal.noUi-marker-large {
-  height: rem(15);
+	height: rem(15);
 }
 
 /* Vertical layout; */
 .noUi-pips-vertical {
-  left: 100%;
-  top: 0;
-  padding: 0 rem(10);
-  height: 100%;
+	left: 100%;
+	top: 0;
+	padding: 0 rem(10);
+	height: 100%;
 }
 
 .noUi-value-vertical {
-  padding-left: rem(25);
-  transform: translate(0, -50%);
+	padding-left: rem(25);
+	transform: translate(0, -50%);
 }
 
 .noUi-rtl .noUi-value-vertical {
-  transform: translate(0, 50%);
+	transform: translate(0, 50%);
 }
 
 .noUi-marker-vertical.noUi-marker {
-  @include widthHeight(rem(5), rem(2));
+	@include width-height(rem(5), rem(2));
 
-  margin-top: rem(-1);
+	margin-top: rem(-1);
 }
 
 .noUi-marker-vertical.noUi-marker-sub {
-  width: rem(10);
+	width: rem(10);
 }
 
 .noUi-marker-vertical.noUi-marker-large {
-  width: rem(15);
+	width: rem(15);
 }
 
 .noUi-tooltip {
-  position: absolute;
-  display: block;
-  border: rem(1) solid #d9d9d9;
-  border-radius: rem(3);
-  padding: rem(5);
-  white-space: nowrap;
-  text-align: center;
-  color: $colorDark;
-  background-color: $colorLight;
+	position: absolute;
+	display: block;
+	border: rem(1) solid #d9d9d9;
+	border-radius: rem(3);
+	padding: rem(5);
+	white-space: nowrap;
+	text-align: center;
+	color: $color-dark;
+	background-color: $color-light;
 }
 
 .noUi-horizontal .noUi-tooltip {
-  left: 50%;
-  bottom: 120%;
-  transform: translate(-50%, 0);
+	left: 50%;
+	bottom: 120%;
+	transform: translate(-50%, 0);
 }
 
 .noUi-vertical .noUi-tooltip {
-  right: 120%;
-  top: 50%;
-  transform: translate(0, -50%);
+	right: 120%;
+	top: 50%;
+	transform: translate(0, -50%);
 }
 
 .noUi-horizontal .noUi-origin > .noUi-tooltip {
-  left: auto;
-  bottom: rem(10);
-  transform: translate(50%, 0);
+	left: auto;
+	bottom: rem(10);
+	transform: translate(50%, 0);
 }
 
 .noUi-vertical .noUi-origin > .noUi-tooltip {
-  right: rem(28);
-  top: auto;
-  transform: translate(0, -1.125rem);
+	right: rem(28);
+	top: auto;
+	transform: translate(0, -1.125rem);
 }

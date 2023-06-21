@@ -21,13 +21,13 @@
 
 .noUi-base,
 .noUi-connects {
-	@include widthHeight(100%, 100%);
+	@include width-height(100%, 100%);
 }
 
 /* Wrapper for all connect elements. */
 .noUi-connect,
 .noUi-origin {
-	@include widthHeight(100%, 100%);
+	@include width-height(100%, 100%);
 
 	position: absolute;
 	inset: 0;
@@ -52,7 +52,7 @@
 	position: absolute;
 	border: rem(1) solid #d9d9d9;
 	border-radius: 50%;
-	background-color: $colorLight;
+	background-color: $color-light;
 	backface-visibility: hidden;
 	transition: background-color 0.1s;
 	cursor: grab;
@@ -72,15 +72,15 @@
 	padding: rem(5);
 	white-space: nowrap;
 	text-align: center;
-	color: $colorDark;
-	background-color: $colorLight;
+	color: $color-dark;
+	background-color: $color-light;
 }
 
 .noUi-horizontal {
 	height: rem(10);
 
 	.noUi-handle {
-		@include widthHeight(rem(15), rem(15));
+		@include width-height(rem(15), rem(15));
 
 		right: rem(-7.5);
 		top: rem(-3);

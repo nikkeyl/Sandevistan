@@ -13,24 +13,24 @@
 html,
 body {
 	height: 100%;
-	min-width: $minWidth + px;
+	min-width: $min-width + px;
 }
 
 body {
-	scroll-behavior: smooth;
 	line-height: 1;
 	text-rendering: optimizelegibility;
 	text-size-adjust: 100%;
+	scroll-behavior: smooth;
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
 }
 
 @if $selection == 1 {
 	::selection {
-		color: $colorLight;
+		color: $color-light;
 
 		/* Changes the default text selection styles */
-		background-color: $colorDarkGray;
+		background-color: $color-dark-gray;
 	}
 }
 
@@ -47,7 +47,7 @@ textarea,
 select,
 button,
 input {
-	font-family: $mainFontFamily;
+	font-family: $main-font-family;
 	font-size: inherit;
 	line-height: inherit;
 }
@@ -67,7 +67,7 @@ button {
 
 :focus,
 :active {
-	@if $focusActiveOutline == 1 {
+	@if $focus-active-outline == 1 {
 		outline: none;
 	}
 }
@@ -80,7 +80,7 @@ a {
 		text-decoration: none;
 	}
 
-	@include mediaHover {
+	@include media-hover {
 		text-decoration: none;
 	}
 }
@@ -106,10 +106,10 @@ img {
 	vertical-align: top;
 }
 
+legend,
 video,
 img,
-svg,
-legend {
+svg {
 	display: block;
 }
 

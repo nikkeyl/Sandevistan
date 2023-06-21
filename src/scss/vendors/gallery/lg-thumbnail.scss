@@ -9,112 +9,112 @@
 $thumbnails-margin: 5;
 
 .lg-outer {
-  .lg-thumb-outer {
-    float: left;
-    overflow: hidden;
-    width: 100%;
-    max-height: rem(350);
-    background-color: $lg-thumb-bg;
+	.lg-thumb-outer {
+		float: left;
+		overflow: hidden;
+		width: 100%;
+		max-height: rem(350);
+		background-color: $lg-thumb-bg;
 
-    &.lg-grab {
-      .lg-thumb-item {
-        @include grab-cursor;
-      }
-    }
+		&.lg-grab {
+			.lg-thumb-item {
+				@include grab-cursor;
+			}
+		}
 
-    &.lg-grabbing {
-      .lg-thumb-item {
-        @include grabbing-cursor;
-      }
-    }
+		&.lg-grabbing {
+			.lg-thumb-item {
+				@include grabbing-cursor;
+			}
+		}
 
-    &.lg-dragging {
-      .lg-thumb {
-        @include transition-duration(0s !important);
-      }
-    }
+		&.lg-dragging {
+			.lg-thumb {
+				@include transition-duration(0s !important);
+			}
+		}
 
-    &.lg-rebuilding-thumbnails {
-      .lg-thumb {
-        @include transition-duration(0s !important);
-      }
-    }
+		&.lg-rebuilding-thumbnails {
+			.lg-thumb {
+				@include transition-duration(0s !important);
+			}
+		}
 
-    &.lg-thumb-align-middle {
-      text-align: center;
-    }
+		&.lg-thumb-align-middle {
+			text-align: center;
+		}
 
-    &.lg-thumb-align-left {
-      text-align: left;
-    }
+		&.lg-thumb-align-left {
+			text-align: left;
+		}
 
-    &.lg-thumb-align-right {
-      text-align: right;
-    }
-  }
+		&.lg-thumb-align-right {
+			text-align: right;
+		}
+	}
 
-  .lg-thumb {
-    display: inline-block;
-    vertical-align: middle;
-    margin-bottom: rem(-$thumbnails-margin);
-    padding: rem(5) 0;
-    height: 100%;
+	.lg-thumb {
+		display: inline-block;
+		vertical-align: middle;
+		margin-bottom: rem(-$thumbnails-margin);
+		padding: rem(5) 0;
+		height: 100%;
 
-    @media (width >= $tablet) {
-      padding: rem(10) 0;
-    }
-  }
+		@media (width >= $tablet) {
+			padding: rem(10) 0;
+		}
+	}
 
-  .lg-thumb-item {
-    float: left;
-    overflow: hidden;
-    margin-bottom: $thumbnails-margin;
-    border-radius: rem(2);
-    height: 100%;
-    will-change: border-color;
-    cursor: pointer;
+	.lg-thumb-item {
+		float: left;
+		overflow: hidden;
+		margin-bottom: $thumbnails-margin;
+		border-radius: rem(2);
+		height: 100%;
+		will-change: border-color;
+		cursor: pointer;
 
-    img {
-      @include widthHeight(100%, 100%);
+		img {
+			@include width-height(100%, 100%);
 
-      display: block;
-      object-fit: cover;
-    }
+			display: block;
+			object-fit: cover;
+		}
 
-    &.active,
-    &:hover {
-      border-color: $lg-theme-highlight;
-    }
+		&.active,
+		&:hover {
+			border-color: $lg-theme-highlight;
+		}
 
-    @media (width >= $tablet) {
-      @include transition(border-color 0.25s);
+		@media (width >= $tablet) {
+			@include transition(border-color 0.25s);
 
-      border: rem(2) solid #fff;
-      border-radius: rem(4);
-    }
-  }
+			border: rem(2) solid #fff;
+			border-radius: rem(4);
+		}
+	}
 
-  .lg-toggle-thumb {
-    &::after {
-      content: "\e1ff";
-    }
-  }
+	.lg-toggle-thumb {
+		&::after {
+			content: "\e1ff";
+		}
+	}
 
-  &.lg-single-item {
-    .lg-thumb-outer {
-      display: none;
-    }
-  }
+	&.lg-single-item {
+		.lg-thumb-outer {
+			display: none;
+		}
+	}
 
-  &.lg-can-toggle {
-    .lg-item {
-      padding-bottom: 0;
-    }
-  }
+	&.lg-can-toggle {
+		.lg-item {
+			padding-bottom: 0;
+		}
+	}
 
-  &.lg-animate-thumb {
-    .lg-thumb {
-      @include transition-timing-function(cubic-bezier(0.215, 0.61, 0.355, 1));
-    }
-  }
+	&.lg-animate-thumb {
+		.lg-thumb {
+			@include transition-timing-function(cubic-bezier(0.215, 0.61, 0.355, 1));
+		}
+	}
 }

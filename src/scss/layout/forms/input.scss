@@ -1,10 +1,10 @@
 .input {
 	display: block;
-	border: rem(1) solid $colorGray;
+	border: rem(1) solid $color-gray;
 	border-radius: rem(5);
 	padding: rem(5);
 	width: 100%;
-	color: $colorGray;
+	color: $color-gray;
 
 	&[placeholder] {
 		&:not([data-placeholder-nohidden]) {

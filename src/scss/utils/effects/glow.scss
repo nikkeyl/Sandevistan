@@ -1,12 +1,12 @@
 /* Glow effect */
 .button {
-	@include mediaMin($tablet) {
+	@include media-min($tablet) {
 		position: relative;
 		overflow: hidden;
 
 		&::before {
 			@include pseudo;
-			@include widthHeight(100%, 100%);
+			@include width-height(100%, 100%);
 
 			inset: 0;
 			z-index: 2;
@@ -27,7 +27,7 @@
 		&__color {
 			position: absolute;
 			inset: 0;
-			background-color: $colorLight;
+			background-color: $color-light;
 		}
 	}
 }
