@@ -14,10 +14,6 @@
   @return rounding(math.div($px, 16)) + rem;
 }
 
-@function ratio($width, $height) {
-  @return percent($height, $width);
-}
-
 @function diff($px) {
   @return em($px - 0.02);
 }

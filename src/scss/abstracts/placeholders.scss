@@ -1,7 +1,7 @@
 %responsive-video {
 	position: relative;
 	overflow: hidden;
-	padding-bottom: ratio(16, 9);
+	aspect-ratio: 16 / 9;
 	height: 0;
 
 	iframe,

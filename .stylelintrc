@@ -241,6 +241,7 @@
 				"padding-right",
 				"padding-bottom",
 				"padding-left",
+				"aspect-ratio",
 				"width",
 				"height",
 				"min-width",
