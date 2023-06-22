@@ -9,7 +9,7 @@ import Swiper, { Navigation } from 'swiper'
 // Autoplay,
 // Parallax,
 
-import '@scss/components/swiper'
+import '@scss/components/slider'
 
 function initSliders() {
   if (document.querySelector('.swiper')) {
