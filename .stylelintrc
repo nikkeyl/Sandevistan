@@ -491,7 +491,6 @@
 		"font-family-name-quotes": "always-unless-keyword",
 		"scss/at-function-named-arguments": "never",
 		"scss/at-mixin-named-arguments": "never",
-		"scss/at-mixin-pattern": null,
 		"scss/at-rule-conditional-no-parentheses": true,
 		"scss/at-use-no-unnamespaced": true,
 		"scss/declaration-nested-properties": "never",
@@ -511,7 +510,6 @@
 				]
 			}
 		],
-		"scss/dollar-variable-pattern": null,
 		"scss/double-slash-comment-empty-line-before": [
 			"always",
 			{
@@ -529,7 +527,6 @@
 		"scss/no-duplicate-dollar-variables": true,
 		"scss/no-global-function-names": true,
 		"scss/partial-no-import": true,
-		"scss/percent-placeholder-pattern": null,
 		"scss/selector-nest-combinators": "always",
 		"scss/selector-no-redundant-nesting-selector": true
 	}
