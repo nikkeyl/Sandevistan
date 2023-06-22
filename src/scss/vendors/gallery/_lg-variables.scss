@@ -1,7 +1,7 @@
 @use "sass:math";
 
 @import "@scss/abstracts/functions";
-@import "@scss/base/colors";
+@import "@scss/base/root";
 
 $backdrop-opacity: 1 !default;
 $lg-toolbar-bg: linear-gradient(
