@@ -11,7 +11,7 @@
 
 		font-size: rem($font-size);
 		line-height: math.div(22, $font-size);
-		color: $color-gray;
+		color: var(--color-gray);
 	}
 
 	&__box {
@@ -22,7 +22,7 @@
 		position: relative;
 		flex: 0 0 rem($size);
 		align-self: flex-start;
-		border: rem(2) solid $color-gray;
+		border: rem(2) solid var(--color-gray);
 		border-radius: rem(3);
 
 		&::after {
@@ -32,7 +32,7 @@
 			position: absolute;
 			inset: rem(-2);
 			border-radius: rem(3);
-			background-color: $color-dark;
+			background-color: var(--color-dark);
 			transform: scale(0);
 			transition: transform 0.3s;
 		}
@@ -42,7 +42,7 @@
 
 			position: absolute;
 			inset: rem(3);
-			fill: $color-light;
+			fill: var(--color-light);
 			transform: scale(0);
 		}
 	}

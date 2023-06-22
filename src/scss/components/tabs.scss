@@ -4,11 +4,11 @@
 	}
 
 	&__title {
-		border: rem(1) solid $color-gray;
+		border: rem(1) solid var(--color-gray);
 		padding: rem(10) rem(15);
 
 		&.tab-active {
-			border: rem(1) solid $color-dark;
+			border: rem(1) solid var(--color-dark);
 		}
 	}
 

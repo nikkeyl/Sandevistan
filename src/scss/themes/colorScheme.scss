@@ -6,9 +6,9 @@
 }
 
 .dark {
-	.page {
-		color: $color-light;
-		background-color: $color-dark-gray;
+	body {
+		color: var(--color-light);
+		background-color: var(--color-dark-gray);
 	}
 
 	.theme-change {
@@ -17,9 +17,9 @@
 }
 
 .light {
-	.page {
-		color: $color-dark-gray;
-		background-color: $color-light;
+	body {
+		color: var(--color-dark-gray);
+		background-color: var(--color-light);
 	}
 
 	.theme-change {
@@ -34,8 +34,8 @@
 
 	border-radius: 50%;
 	font-size: rem($font-size);
-	color: $color-light;
-	background-color: $color-dark;
+	color: var(--color-light);
+	background-color: var(--color-dark);
 	opacity: 0;
 	visibility: hidden;
 	transition: opacity 0.3s, visibility 0.3s;

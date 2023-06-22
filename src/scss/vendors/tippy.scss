@@ -1,8 +1,8 @@
 @use "sass:math";
 
 @import "@scss/abstracts/functions";
-@import "@scss/abstracts/variables";
 @import "@scss/abstracts/mixins";
+@import "@scss/base/colors";
 
 /* Tips (Tippy plugin) */
 
@@ -23,8 +23,8 @@
 	border-radius: rem(4);
 	line-height: 1.4;
 	white-space: normal;
-	color: $color-light;
-	background-color: $color-dark-gray;
+	color: var(--color-light);
+	background-color: var(--color-dark-gray);
 	transition-property: transform, visibility, opacity;
 }
 
@@ -81,7 +81,7 @@
 .tippy-arrow {
 	@include width-height(rem(16), rem(16));
 
-	color: $color-dark-gray;
+	color: var(--color-dark-gray);
 
 	&::before {
 		@include pseudo;

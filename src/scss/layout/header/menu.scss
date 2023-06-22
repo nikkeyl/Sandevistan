@@ -9,7 +9,7 @@
 			z-index: 4;
 			overflow: auto;
 			padding: rem(80) 0 rem(30);
-			background-color: $color-light;
+			background-color: var(--color-light);
 			transition: left 0.3s;
 
 			&::before {
@@ -19,7 +19,7 @@
 				left: -100%;
 				top: 0;
 				z-index: 4;
-				background-color: $color-light;
+				background-color: var(--color-light);
 				transition: left 0.3s;
 			}
 
@@ -45,7 +45,7 @@
 		//     overflow: hidden;
 
 		@include media-hover {
-			color: $color-dark;
+			color: var(--color-dark);
 		}
 	}
 

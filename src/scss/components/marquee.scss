@@ -5,5 +5,5 @@
 	font-size: rem($font-size);
 	line-height: math.div(20, $font-size);
 	white-space: nowrap;
-	color: $color-light;
+	color: var(--color-light);
 }

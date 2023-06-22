@@ -1,8 +1,8 @@
 @use "sass:math";
 
 @import "@scss/abstracts/functions";
-@import "@scss/abstracts/variables";
 @import "@scss/abstracts/mixins";
+@import "@scss/base/colors";
 
 /* Calendar (Datepicker plugin) */
 
@@ -18,15 +18,15 @@ $lightblue: #add8e6;
 	display: flex;
 	flex-direction: column;
 	overflow: hidden;
-	border: rem(1) solid $color-gray;
+	border: rem(1) solid var(--color-gray);
 	border-radius: $radius;
 	width: $width;
 	box-shadow: 0 ($width * 0.08) ($width * 0.08) ($width * -0.06)
-		rgba($color-dark, 0.3);
+		rgba(--color-dark, 0.3);
 	font-family: sans-serif;
 	font-size: rem(16);
-	color: $color-dark;
-	background-color: $color-light;
+	color: var(--color-dark);
+	background-color: var(--color-light);
 	user-select: none;
 
 	* {
@@ -53,8 +53,8 @@ $lightblue: #add8e6;
 	display: flex;
 	flex-direction: column;
 	padding: em(8);
-	color: $color-light;
-	background-color: rgba($color-dark, 0.75);
+	color: var(--color-light);
+	background-color: rgba(--color-dark, 0.75);
 	opacity: 1;
 	transition: opacity $transition;
 
@@ -62,13 +62,13 @@ $lightblue: #add8e6;
 		display: block;
 		margin: 0 auto;
 		border: none;
-		border-bottom: rem(1) solid $color-light;
+		border-bottom: rem(1) solid var(--color-light);
 		border-radius: 0;
 		padding: em(8) 0;
 		width: 80%;
 		font-size: $font-size;
 		text-align: center;
-		color: $color-light;
+		color: var(--color-light);
 		background-color: transparent;
 
 		&::-webkit-inner-spin-button {
@@ -85,15 +85,15 @@ $lightblue: #add8e6;
 
 	.qs-submit {
 		margin: 0 auto auto;
-		border: rem(1) solid $color-light;
+		border: rem(1) solid var(--color-light);
 		border-radius: $radius;
 		padding: em(8);
 		background-color: rgba(#808080, 0.4);
 		cursor: pointer;
 
 		&.qs-disabled {
-			border-color: $color-gray;
-			color: $color-gray;
+			border-color: var(--color-gray);
+			color: var(--color-gray);
 			cursor: not-allowed;
 		}
 	}
@@ -159,25 +159,25 @@ $lightblue: #add8e6;
 
 	&.qs-left::after {
 		right: 50%;
-		border-right-color: $color-gray;
+		border-right-color: var(--color-gray);
 		transform: translate(25%, -50%);
 	}
 
 	&.qs-right::after {
 		left: 50%;
-		border-left-color: $color-gray;
+		border-left-color: var(--color-gray);
 		transform: translate(-25%, -50%);
 	}
 
 	@include media-hover {
-		background-color: rgba($color-dark, 0.1);
+		background-color: rgba(--color-dark, 0.1);
 
 		&.qs-left::after {
-			border-right-color: $color-dark;
+			border-right-color: var(--color-dark);
 		}
 
 		&.qs-right::after {
-			border-left-color: $color-dark;
+			border-left-color: var(--color-dark);
 		}
 	}
 }
@@ -196,7 +196,7 @@ $lightblue: #add8e6;
 		cursor: pointer;
 
 		@include media-hover {
-			border-bottom: rem(1) solid $color-gray;
+			border-bottom: rem(1) solid var(--color-gray);
 		}
 	}
 }
@@ -236,7 +236,7 @@ $lightblue: #add8e6;
 	&:not(.qs-day),
 	&:not(.qs-active) {
 		@include media-hover {
-			background-color: $color-dark-gray;
+			background-color: var(--color-dark-gray);
 		}
 	}
 }
@@ -306,7 +306,7 @@ $lightblue: #add8e6;
 
 .qs-day {
 	font-weight: 700;
-	color: $color-gray;
+	color: var(--color-gray);
 	cursor: default;
 }
 
@@ -320,6 +320,6 @@ $lightblue: #add8e6;
 		right: 0;
 		bottom: 0;
 		border-radius: 50%;
-		background-color: $color-gray;
+		background-color: var(--color-gray);
 	}
 }

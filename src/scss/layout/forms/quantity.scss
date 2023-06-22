@@ -2,7 +2,7 @@
 	@include width-height(rem(90), rem(40));
 
 	display: flex;
-	border: rem(2) solid $color-dark;
+	border: rem(2) solid var(--color-dark);
 	border-radius: rem(5);
 
 	&__button {
@@ -17,7 +17,7 @@
 			inset: 50%;
 			margin-left: rem(-4.5);
 			border-radius: rem(1);
-			background-color: $color-dark;
+			background-color: var(--color-dark);
 			transition: background-color 0.3s;
 		}
 

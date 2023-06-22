@@ -14,7 +14,7 @@
 
 		font-size: rem($font-size);
 		line-height: math.div(22, $font-size);
-		color: $color-gray;
+		color: var(--color-gray);
 	}
 
 	&__box {
@@ -22,7 +22,7 @@
 
 		position: relative;
 		flex: 0 0 rem(20);
-		border: rem(1) solid $color-gray;
+		border: rem(1) solid var(--color-gray);
 		border-radius: 50%;
 
 		&::before {
@@ -31,7 +31,7 @@
 
 			inset: 50%;
 			border-radius: 50%;
-			background-color: $color-dark;
+			background-color: var(--color-dark);
 			transform: translate(-50%, -50%) scale(0);
 			transition: transform 0.3s;
 		}

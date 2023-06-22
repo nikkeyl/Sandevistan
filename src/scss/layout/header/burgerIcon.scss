@@ -1,7 +1,5 @@
 .burger-icon {
-	display: none;
-
-	@include media-max($tablet) {
+	@include media-min-max {
 		@include width-height(rem(30), rem(20));
 
 		position: relative;
@@ -15,7 +13,7 @@
 			@include width-height(100%, rem(2));
 
 			right: 0;
-			background-color: $color-dark;
+			background-color: var(--color-dark);
 			transition: transform 0.3s, width 0.3s, top 0.3s, bottom 0.3s;
 		}
 

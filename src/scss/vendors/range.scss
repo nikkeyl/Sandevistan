@@ -1,8 +1,8 @@
 @use "sass:math";
 
 @import "@scss/abstracts/functions";
-@import "@scss/abstracts/variables";
 @import "@scss/abstracts/mixins";
+@import "@scss/base/colors";
 
 /* Functional styling; These styles are required for noUiSlider to function. You don't need to change these rules to apply your design. */
 
@@ -123,15 +123,15 @@
 	position: absolute;
 	border: rem(1) solid #d9d9d9;
 	border-radius: rem(3);
-	box-shadow: inset 0 0 rem(1) $color-light, inset 0 rem(1) rem(7) #ebebeb,
+	box-shadow: inset 0 0 rem(1) var(--color-light), inset 0 rem(1) rem(7) #ebebeb,
 		0 rem(3) rem(6) rem(-3) #bbb;
-	background-color: $color-light;
+	background-color: var(--color-light);
 	backface-visibility: hidden;
 	cursor: default;
 }
 
 .noUi-active {
-	box-shadow: inset 0 0 rem(1) $color-light, inset 0 rem(1) rem(7) #ddd,
+	box-shadow: inset 0 0 rem(1) var(--color-light), inset 0 rem(1) rem(7) #ddd,
 		0 rem(3) rem(6) rem(-3) #bbb;
 }
 
@@ -283,8 +283,8 @@
 	padding: rem(5);
 	white-space: nowrap;
 	text-align: center;
-	color: $color-dark;
-	background-color: $color-light;
+	color: var(--color-dark);
+	background-color: var(--color-light);
 }
 
 .noUi-horizontal .noUi-tooltip {

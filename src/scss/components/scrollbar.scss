@@ -3,20 +3,20 @@
 	&::-webkit-scrollbar {
 		@include width-height(rem(10), rem(10));
 
-		background-color: $color-light;
+		background-color: var(--color-light);
 	}
 
 	&::-webkit-scrollbar-track {
 		border-radius: rem(5);
-		background-color: $color-gray;
+		background-color: var(--color-gray);
 	}
 
 	&::-webkit-scrollbar-thumb {
 		border-radius: rem(5);
-		background-color: $color-dark;
+		background-color: var(--color-dark);
 
 		@include media-hover {
-			background-color: $color-dark;
+			background-color: var(--color-dark);
 		}
 	}
 }

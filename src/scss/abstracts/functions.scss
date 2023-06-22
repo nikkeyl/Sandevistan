@@ -8,8 +8,8 @@
   @return math.div(round($number * $n), $n);
 }
 
-@function em($px, $current: 16) {
-  @return rounding(math.div($px, $current)) + em;
+@function em($px, $default: 16) {
+  @return rounding(math.div($px, $default)) + em;
 }
 
 @function percent($px, $from) {

@@ -17,20 +17,23 @@ body {
 }
 
 body {
+	font-family: $font-family;
+	font-weight: $font-weight;
+	font-size: rem($font-size);
 	line-height: 1;
 	text-rendering: optimizelegibility;
 	text-size-adjust: 100%;
+	color: var(--text-color);
 	scroll-behavior: smooth;
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
 }
 
 @if $selection == 1 {
+	/* Changes the default text selection styles */
 	::selection {
-		color: $color-light;
-
-		/* Changes the default text selection styles */
-		background-color: $color-dark-gray;
+		color: var(--color-light);
+		background-color: var(--color-dark-gray);
 	}
 }
 
@@ -47,7 +50,7 @@ textarea,
 select,
 button,
 input {
-	font-family: $main-font-family;
+	font-family: $font-family;
 	font-size: inherit;
 	line-height: inherit;
 }

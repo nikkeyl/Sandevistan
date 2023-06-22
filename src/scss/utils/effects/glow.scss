@@ -27,7 +27,7 @@
 		&__color {
 			position: absolute;
 			inset: 0;
-			background-color: $color-light;
+			background-color: var(--color-light);
 		}
 	}
 }

@@ -9,8 +9,8 @@
 	font-size: rem($font-size);
 	line-height: math.div(20, $font-size);
 	text-align: center;
-	color: $color-dark;
-	background-color: $color-light;
+	color: var(--color-dark);
+	background-color: var(--color-light);
 	transition: transform 0.3s, background-color 0.3s, color 0.3s;
 
 	&:active {

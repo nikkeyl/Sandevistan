@@ -10,10 +10,27 @@
 		flex: 1 1 auto;
 	}
 
+	.lock & {
+		overflow: hidden;
+		touch-action: none;
+
+		/* Prevents chain scrolling */
+		overscroll-behavior: none;
+	}
+
 	@if $slider-fix == 1 {
 		> * {
 			/* Fixes swiper.js bug */
 			min-width: 0;
 		}
+	}
+
+	@if $background-gradient == 1 {
+		background: var(--background-color);
+
+		/* If the background is a gradient, then this property helps to stretch the gradinet to its full height */
+		background-attachment: fixed;
+	} @else {
+		background-color: var(--background-color);
 	}
 }

@@ -46,8 +46,9 @@
 		}
 	}
 
-	@media (min-width: em($width-to)) and (max-width: em($width-from)) {
+	@include media-min-max($width-to, $width-from) {
 		#{$property}: $property-value;
+
 		// @supports (#{$property}: $property-value) {
 		// }
 
@@ -64,7 +65,12 @@
 }
 
 // Responsive exit from the container https://www.youtube.com/watch?v=NVdlfhkDAGM&pp=ygU70J7RgtC30YvQstGH0LjQstGL0Lkg0LLRi9GF0L7QtCDQuNC3INC60L7QvdGC0LXQudC90LXRgNCy0LA%3D
-@mixin responsiveOutput($image-height, $body-width, $breakpoint: $tablet, $reverse: 0) {
+@mixin responsive-output(
+	$image-height,
+	$body-width,
+	$breakpoint: $tablet,
+	$reverse: 0
+) {
 	$percent: round(math.div($body-width, $max-width-container) * 100);
 	$width: $body-width - ($body-width - $percent);
 
@@ -250,6 +256,12 @@
 
 	@include media-min($breakpoint) {
 		grid-template-columns: repeat(auto-#{$type}, minmax($min, $max));
+	}
+}
+
+@mixin media-min-max($min-width: 320, $max-width: $tablet) {
+	@media (min-width: em($min-width)) and (max-width: diff($max-width)) {
+		@content;
 	}
 }
 
