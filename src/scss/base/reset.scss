@@ -17,9 +17,9 @@ body {
 }
 
 body {
-	font-family: $font-family;
-	font-weight: $font-weight;
-	font-size: rem($font-size);
+	font-family: var(--font-family);
+	font-weight: var(--font-weight);
+	font-size: var(--font-size);
 	line-height: 1;
 	text-rendering: optimizelegibility;
 	text-size-adjust: 100%;
@@ -50,7 +50,7 @@ textarea,
 select,
 button,
 input {
-	font-family: $font-family;
+	font-family: var(--font-family);
 	font-size: inherit;
 	line-height: inherit;
 }

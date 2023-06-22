@@ -1,11 +1,5 @@
 @function rounding($number) {
-  $n: 1;
-
-  @for $i from 1 through 4 {
-    $n: $n * 10;
-  }
-
-  @return math.div(round($number * $n), $n);
+  @return math.div(round($number * 10000), 10000);
 }
 
 @function em($px, $default: 16) {
