@@ -6,7 +6,7 @@ import { replaceLoaderOptions } from './plugins/replaceLoaderOptions.js'
 import { cssLoaderOptions } from './plugins/cssLoaderOptions.js'
 import { output } from './plugins/webPackOutputFile.js'
 import { pugPages } from './plugins/pugPages.js'
-import { linters } from '../modules/linters.js'
+import { linters } from '../utils/linters.js'
 
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 

@@ -1,4 +1,4 @@
-import { catchError } from '../modules/catchErrors.js'
+import { catchError } from '../utils/catchErrors.js'
 
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import TerserPlugin from 'terser-webpack-plugin'
