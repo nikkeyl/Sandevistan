@@ -42,9 +42,7 @@
 		@if $max-width-container > 0 {
 			max-width: rem($container-width);
 		} @else {
-			@if $container-padding > 0 {
-				padding: 0 rem(math.div($container-padding, 2));
-			}
+			padding: 0 rem(math.div($container-padding, 2));
 		}
 	}
 }
