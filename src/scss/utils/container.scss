@@ -2,8 +2,8 @@
 @if $container-type == 1 {
 	[class*="__container"] {
 		@if $max-width-container > 0 {
-			max-width: rem($container-width);
 			margin-inline: auto;
+			max-width: rem($container-width);
 		}
 
 		@if $container-padding > 0 {
