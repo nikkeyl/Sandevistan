@@ -1,6 +1,5 @@
-/* Looks for all classes in which there is a (__container), sets padding and centers. */
 @if $container-type == 1 {
-	[class*="__container"] {
+	.container {
 		@if $max-width-container > 0 {
 			margin-inline: auto;
 			max-width: rem($container-width);
@@ -20,7 +19,7 @@
 		}
 	}
 } @else {
-	[class*="__container"] {
+	.container {
 		margin-inline: auto;
 
 		@include media-max($desktop) {
