@@ -38,8 +38,6 @@ import { menuInit } from '@js/components/menu'
 
 // import { ScrollWatcher } from '@js/modules/scroll/watcher'
 
-import { lazyMedia } from '@js/libs/lazyLoad'
-
 // import '@js/libs/simpleBar'
 
 // ----------------------------------------------------------------FORMS
@@ -103,7 +101,6 @@ menuInit()
 // new ScrollWatcher()
 // pageNavigation()
 // headerScroll()
-lazyMedia
 
 // ----------------------------------------------------------------FORMS
 // formFieldsInit({

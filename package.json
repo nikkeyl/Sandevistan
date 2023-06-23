@@ -76,7 +76,6 @@
 		"terser-webpack-plugin": "latest",
 		"tippy.js": "latest",
 		"typed.js": "latest",
-		"vanilla-lazyload": "latest",
 		"vanilla-marquee": "latest",
 		"vinyl-ftp": "latest",
 		"webp-converter": "2.2.3",
