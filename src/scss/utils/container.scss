@@ -23,26 +23,26 @@
 	[class*="__container"] {
 		margin-inline: auto;
 
-		@if $max-width-container > 0 {
-			max-width: rem($container-width);
-		} @else {
-			@if $container-padding > 0 {
+		@include media-max($desktop) {
+			max-width: rem(970);
+		}
+
+		@include media-max($laptop) {
+			max-width: rem(750);
+		}
+
+		@include media-max($tablet) {
+			max-width: none;
+
+			@if $container-padding > 0 and $max-width-container > 0 {
 				padding: 0 rem(math.div($container-padding, 2));
 			}
 		}
 
-		@media (max-width: diff($desktop)) {
-			max-width: rem(970);
-		}
-
-		@media (max-width: diff($laptop)) {
-			max-width: rem(750);
-		}
-
-		@media (max-width: diff($tablet)) {
-			max-width: none;
-
-			@if $container-padding > 0 and $max-width-container > 0 {
+		@if $max-width-container > 0 {
+			max-width: rem($container-width);
+		} @else {
+			@if $container-padding > 0 {
 				padding: 0 rem(math.div($container-padding, 2));
 			}
 		}

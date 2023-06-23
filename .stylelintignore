@@ -1,3 +1,2 @@
-src/scss/abstracts/functions.scss
 src/scss/abstracts/mixins.scss
 src/scss/vendors/**/*.scss

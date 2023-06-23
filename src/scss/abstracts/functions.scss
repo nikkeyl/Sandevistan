@@ -1,19 +1,15 @@
 @function rounding($number) {
-  @return math.div(round($number * 10000), 10000);
+	@return math.div(round($number * 10000), 10000);
 }
 
 @function em($px, $default: 16) {
-  @return rounding(math.div($px, $default)) + em;
+	@return rounding(math.div($px, $default)) + em;
 }
 
 @function percent($px, $from) {
-  @return rounding(math.div($px, $from)) * 100%;
+	@return rounding(math.div($px, $from)) * 100%;
 }
 
 @function rem($px) {
-  @return rounding(math.div($px, 16)) + rem;
-}
-
-@function diff($px) {
-  @return em($px - 0.02);
+	@return rounding(math.div($px, 16)) + rem;
 }
