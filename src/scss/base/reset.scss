@@ -21,7 +21,7 @@ body {
 	font-weight: var(--font-weight);
 	font-size: var(--font-size);
 	line-height: 1;
-	text-rendering: optimizelegibility;
+	text-rendering: optimizeLegibility;
 	text-size-adjust: 100%;
 	color: var(--text-color);
 	scroll-behavior: smooth;
@@ -125,4 +125,19 @@ h6,
 p {
 	font-weight: inherit;
 	font-size: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01s;
+    animation-iteration-count: 1;
+    transition-duration: 0.01s;
+    scroll-behavior: auto;
+  }
 }
