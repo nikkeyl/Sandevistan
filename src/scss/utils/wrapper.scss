@@ -20,13 +20,4 @@
 			min-width: 0;
 		}
 	}
-
-	@if $background-gradient == 1 {
-		background: var(--background-color);
-
-		/* If the background is a gradient, then this property helps to stretch the gradinet to its full height */
-		background-attachment: fixed;
-	} @else {
-		background-color: var(--background-color);
-	}
 }
