@@ -221,9 +221,9 @@
 	.lg-next,
 	.lg-sub-html {
 		@include transitionCustom(
-			transform 0.08 cubic-bezier(0, 0, 0.25, 1),
-			opacity 0.08 cubic-bezier(0, 0, 0.25, 1),
-			color 0.08 linear
+			transform 0.08s cubic-bezier(0, 0, 0.25, 1),
+			opacity 0.08s cubic-bezier(0, 0, 0.25, 1),
+			color 0.08s linear
 		);
 
 		opacity: 0;

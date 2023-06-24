@@ -17,11 +17,11 @@ body {
 }
 
 body {
-	font-family: var(--font-family);
+	font-family: var(--font-family), sans-serif;
 	font-weight: var(--font-weight);
 	font-size: var(--font-size);
 	line-height: 1;
-	text-rendering: optimizeLegibility;
+	text-rendering: optimizelegibility;
 	text-size-adjust: 100%;
 	color: var(--text-color);
 	scroll-behavior: smooth;
@@ -50,7 +50,7 @@ textarea,
 select,
 button,
 input {
-	font-family: var(--font-family);
+	font-family: var(--font-family), sans-serif;
 	font-size: inherit;
 	line-height: inherit;
 }

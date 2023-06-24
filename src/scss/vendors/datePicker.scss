@@ -2,7 +2,6 @@
 
 @import "@scss/abstracts/functions";
 @import "@scss/abstracts/mixins";
-@import "@scss/base/root";
 
 /* Calendar (Datepicker plugin) */
 
@@ -21,8 +20,7 @@ $lightblue: #add8e6;
 	border: rem(1) solid var(--color-gray);
 	border-radius: $radius;
 	width: $width;
-	box-shadow: 0 ($width * 0.08) ($width * 0.08) ($width * -0.06)
-		rgba(var(--color-dark), 0.3);
+	box-shadow: 0 ($width * 0.08) ($width * 0.08) ($width * -0.06) rgba(0 0 0 / 0.3);
 	font-family: sans-serif;
 	font-size: rem(16);
 	color: var(--color-dark);
@@ -54,7 +52,7 @@ $lightblue: #add8e6;
 	flex-direction: column;
 	padding: em(8);
 	color: var(--color-light);
-	background-color: rgba(var(--color-dark), 0.75);
+	background-color: rgba(0 0 0 / 0.75);
 	opacity: 1;
 	transition: opacity $transition;
 
@@ -170,7 +168,7 @@ $lightblue: #add8e6;
 	}
 
 	@include media-hover {
-		background-color: rgba(var(--color-dark), 0.1);
+		background-color: rgba(0 0 0 / 0.1);
 
 		&.qs-left::after {
 			border-right-color: var(--color-dark);

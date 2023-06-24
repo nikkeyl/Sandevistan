@@ -2,7 +2,6 @@
 
 @import "@scss/abstracts/functions";
 @import "@scss/abstracts/mixins";
-@import "@scss/base/colors";
 @import "lg-variables";
 @import "lg-mixins";
 
@@ -94,7 +93,7 @@
 
 		position: fixed;
 		z-index: $zindex-toolbar - 1;
-		background-color: rgba(--color-dark, 0.25);
+		background-color: rgba(0 0 0 / 0.25);
 		opacity: 0;
 		visibility: hidden;
 		will-change: visibility, opacity;

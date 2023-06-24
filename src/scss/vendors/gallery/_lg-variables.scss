@@ -1,18 +1,17 @@
 @use "sass:math";
 
 @import "@scss/abstracts/functions";
-@import "@scss/base/root";
 
 $backdrop-opacity: 1 !default;
 $lg-toolbar-bg: linear-gradient(
 	0deg,
-	rgba(var(--color-dark), 0),
-	rgba(var(--color-dark), 0.4)
+	rgba(0 0 0 / 0),
+	rgba(0 0 0 / 0.4)
 ) !default;
 $lg-border-radius-base: rem(2) !default;
 $lg-theme-highlight: rgb(169 7 7) !default;
 $lg-theme-color: var(--color-dark) !default;
-$lg-icon-bg: rgba(var(--color-dark), 0.45) !default;
+$lg-icon-bg: rgba(0 0 0 / 0.45) !default;
 $lg-icon-color: #999 !default;
 $lg-icon-hover-color: var(--color-light) !default;
 $lg-counter-color: #e6e6e6 !default;
@@ -31,8 +30,8 @@ $lg-path-images: "../images" !default;
 $zoom-transition-duration: 0.5s !default;
 $lg-sub-html-bg: linear-gradient(
 	180deg,
-	rgba(var(--color-dark), 0),
-	rgba(var(--color-dark), 0.6)
+	rgba(0 0 0 / 0),
+	rgba(0 0 0 / 0.6)
 ) !default;
 $lg-sub-html-color: #eee !default;
 $lg-thumb-toggle-bg: #0d0a0a !default;

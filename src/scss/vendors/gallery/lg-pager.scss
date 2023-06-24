@@ -2,7 +2,6 @@
 
 @import "@scss/abstracts/functions";
 @import "@scss/abstracts/mixins";
-@import "@scss/base/colors";
 @import "lg-variables";
 @import "lg-mixins";
 
@@ -71,8 +70,8 @@
 
 		display: block;
 		border-radius: 50%;
-		box-shadow: 0 0 0 rem(8) rgba(--color-light, 0.7) inset;
-		background-color: rgba(--color-light, 0.5);
+		box-shadow: 0 0 0 rem(8) rgba(255 255 255 / 0.7) inset;
+		background-color: rgba(255 255 255 /  0.5);
 
 		&:hover,
 		&:focus {
