@@ -5,7 +5,7 @@
 	$keep-size: 0,
 	$width-from: $container-width,
 	$width-to: $min-width
-) { // TODO refactor
+) {
 	@if $start-size == 0 {
 		$start-size: 0.000001;
 	}
@@ -64,7 +64,6 @@
 	}
 }
 
-//! FIX: after build wrong working
 // Responsive exit from the container https://www.youtube.com/watch?v=NVdlfhkDAGM&pp=ygU70J7RgtC30YvQstGH0LjQstGL0Lkg0LLRi9GF0L7QtCDQuNC3INC60L7QvdGC0LXQudC90LXRgNCy0LA%3D
 @mixin responsive-output(
 	$image-height,
