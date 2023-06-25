@@ -482,6 +482,14 @@
 			}
 		],
 		"number-max-precision": 6,
+		"value-keyword-case": [
+			"lower",
+			{
+				"ignoreProperties": [
+					"text-rendering"
+				]
+			}
+		],
 		"selector-max-combinators": 4,
 		"selector-max-compound-selectors": 4,
 		"selector-max-id": 1,
