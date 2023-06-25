@@ -1,0 +1,10 @@
+.light {
+	body {
+		color: var(--color-dark-gray);
+		background-color: var(--color-light);
+	}
+
+	.theme-change {
+		background: url("@img/icons/sprite.svg#moon") 0 0 no-repeat;
+	}
+}

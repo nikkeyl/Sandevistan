@@ -1,1 +1,8 @@
-// grid
+.grid {
+	display: grid;
+	gap: rem(20);
+
+	@include media-min($laptop) {
+		grid-template-columns: 1fr minmax(rem(290), rem(400));
+	}
+}

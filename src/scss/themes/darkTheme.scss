@@ -1,0 +1,10 @@
+.dark {
+	body {
+		color: var(--color-light);
+		background-color: var(--color-dark-gray);
+	}
+
+	.theme-change {
+		background: url("@img/icons/sprite.svg#sun") 0 0 no-repeat;
+	}
+}
