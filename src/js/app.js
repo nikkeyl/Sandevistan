@@ -16,19 +16,19 @@ import { menuInit } from '@js/components/menu'
 
 // import { tabs } from '@js/components/tabs'
 
-// import { filter } from '@js/libs/isotope'
+// import { filter } from '@js/vendors/isotope'
 
 // import '@js/components/popup'
 
 // import '@js/components/map'
 
-// import '@js/libs/gallery'
+// import '@js/vendors/gallery'
 
-// import '@js/libs/marquee'
+// import '@js/vendors/marquee'
 
-// import '@js/libs/swiper'
+// import '@js/vendors/swiper'
 
-// import '@js/libs/tippy'
+// import '@js/vendors/tippy'
 
 // ----------------------------------------------------------------SCROLL
 
@@ -38,7 +38,7 @@ import { menuInit } from '@js/components/menu'
 
 // import { ScrollWatcher } from '@js/modules/scroll/watcher'
 
-// import '@js/libs/simpleBar'
+// import '@js/vendors/simpleBar'
 
 // ----------------------------------------------------------------FORMS
 
@@ -52,13 +52,13 @@ import { menuInit } from '@js/components/menu'
 
 // import { rating } from '@js/components/forms/rating'
 
-// import { range } from '@js/libs/range'
+// import { range } from '@js/vendors/range'
 
 // import '@js/components/forms/select'
 
-// import '@js/libs/datePicker'
+// import '@js/vendors/datePicker'
 
-// import '@js/libs/inputMask'
+// import '@js/vendors/inputMask'
 
 // ----------------------------------------------------------------MODULES
 
@@ -76,7 +76,7 @@ import { menuInit } from '@js/components/menu'
 
 import { webp } from '@js/modules/webp'
 
-// import '@js/libs/typed'
+// import '@js/vendors/typed'
 
 // ----------------------------------------------------------------EFFECTS
 
