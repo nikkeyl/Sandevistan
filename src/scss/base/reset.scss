@@ -17,14 +17,6 @@ body {
 }
 
 body {
-	@if $background-gradient == 1 {
-		background: var(--background-color);
-
-		/* If the background is a gradient, then this property helps to stretch the gradinet to its full height */
-		background-attachment: fixed;
-	} @else {
-		background-color: var(--background-color);
-	}
 	font-family: var(--font-family), sans-serif;
 	font-weight: var(--font-weight);
 	font-size: var(--font-size);
@@ -35,6 +27,15 @@ body {
 	scroll-behavior: smooth;
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
+
+	@if $background-gradient == 1 {
+		background: var(--background-color);
+
+		/* If the background is a gradient, then this property helps to stretch the gradinet to its full height */
+		background-attachment: fixed;
+	} @else {
+		background-color: var(--background-color);
+	}
 }
 
 @if $selection == 1 {
@@ -135,17 +136,17 @@ p {
 	font-size: inherit;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
+// @media (prefers-reduced-motion: reduce) {
+//   html {
+//     scroll-behavior: auto;
+//   }
 
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01s;
-    animation-iteration-count: 1;
-    transition-duration: 0.01s;
-    scroll-behavior: auto;
-  }
-}
+//   *,
+//   *::before,
+//   *::after {
+//     animation-duration: 0.01s;
+//     animation-iteration-count: 1;
+//     transition-duration: 0.01s;
+//     scroll-behavior: auto;
+//   }
+// }
