@@ -2,7 +2,6 @@ import { app } from '../../gulpfile.js'
 
 import ghPages from 'gh-pages'
 
-//! FIX: Speed up the { deploy } function
 const deploy = () =>
 	ghPages.publish(
 		app.paths.buildFolder,

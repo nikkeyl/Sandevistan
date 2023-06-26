@@ -6,7 +6,6 @@ import cleanCss from 'gulp-clean-css'
 import webpCss from 'gulp-webpcss'
 import cssComb from 'gulp-csscomb'
 
-//! FIX: Remove duplicates of class selectors using the purge-css plugin
 const css = () =>
 	app.gulp.src(`${app.paths.build.css}style.css`)
 		.pipe(app.plugins.catchError('CSS'))
