@@ -1,3 +1,7 @@
+@use "sass:math" as *;
+@use "@scss/abstracts" as *;
+@use "@scss/base" as *;
+
 .button {
 	$icon: 0;
 	$fw: 0;
@@ -7,7 +11,7 @@
 	justify-content: center;
 	padding: rem(10) rem(15);
 	font-size: rem($font-size);
-	line-height: math.div(20, $font-size);
+	line-height: div(20, $font-size);
 	text-align: center;
 	color: var(--color-dark);
 	background-color: var(--color-light);

@@ -1,34 +1,6 @@
-@use "sass:math";
-
-@import "abstracts/variables";
-@import "abstracts/functions";
-@import "abstracts/mixins";
-@import "base/root";
-@import "base/fonts";
-@import "base/reset";
-@import "utils/wrapper";
-@import "utils/container";
-@import "base/typography";
-@import "base/placeholders";
-
-// @import "utils/fullScreen";
-// @import "themes/colorScheme";
-// @import "themes/lightTheme";
-// @import "themes/darkTheme";
-
-// @import "components/breadCrumbs";
-// @import "components/pagination";
-// @import "components/scrollbar";
-// @import "components/spollers";
-// @import "components/showMore";
-// @import "components/marquee";
-// @import "components/popup";
-// @import "components/tabs";
-// @import "components/map";
-
-// @import "layout/grid";
-@import "layout/forms";
-@import "layout/header";
-@import "layout/sidebar";
-@import "layout/footer";
-@import "pages/home";
+@use "base";
+@use "utils";
+@use "themes";
+@use "components";
+@use "layout";
+@use "pages";

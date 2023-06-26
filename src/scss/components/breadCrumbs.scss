@@ -1,3 +1,7 @@
+@use "sass:math" as *;
+@use "@scss/abstracts" as *;
+@use "@scss/base" as *;
+
 .breadcrumbs {
 	&__list {
 		display: flex;

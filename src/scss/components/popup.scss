@@ -1,3 +1,7 @@
+@use "sass:math" as *;
+@use "@scss/abstracts" as *;
+@use "@scss/base" as *;
+
 body {
 	&::after {
 		@include width-height(100%, 100%);
@@ -23,7 +27,7 @@ body {
 .popup {
 	position: fixed;
 	inset: 0;
-	padding: rem(30) rem(math.div($container-padding, 2));
+	padding: rem(30) rem(div($container-padding, 2));
 	pointer-events: none;
 
 	&__wrapper {

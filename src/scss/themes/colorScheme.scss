@@ -1,3 +1,6 @@
+@use "@scss/abstracts" as *;
+@use "@scss/base" as *;
+
 /* Color scheme */
 .theme-change {
 	@include width-height(rem(30), rem(30));

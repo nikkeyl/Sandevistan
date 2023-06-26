@@ -505,7 +505,7 @@
 		"scss/at-function-named-arguments": "never",
 		"scss/at-mixin-named-arguments": "never",
 		"scss/at-rule-conditional-no-parentheses": true,
-		"scss/at-use-no-unnamespaced": true,
+		"scss/at-use-no-unnamespaced": null,
 		"scss/declaration-nested-properties": "never",
 		"scss/dimension-no-non-numeric-values": true,
 		"scss/dollar-variable-colon-newline-after": "always-multi-line",

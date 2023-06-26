@@ -1,3 +1,6 @@
+@use "sass:math" as *;
+@use "@scss/abstracts" as *;
+
 %responsive-video {
 	position: relative;
 	overflow: hidden;

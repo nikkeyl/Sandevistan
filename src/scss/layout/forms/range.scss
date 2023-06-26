@@ -1,8 +1,5 @@
-@use "sass:math";
-
-@import "@scss/abstracts/functions";
-@import "@scss/abstracts/variables";
-@import "@scss/abstracts/mixins";
+@use "sass:math" as *;
+@use "@scss/abstracts" as *;
 
 /* Range plugin */
 

@@ -1,3 +1,7 @@
+@use "sass:math" as *;
+@use "@scss/abstracts" as *;
+@use "@scss/base" as *;
+
 [data-showmore] {
 	display: grid;
 	gap: rem(10);

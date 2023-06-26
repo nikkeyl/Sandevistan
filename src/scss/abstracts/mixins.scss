@@ -1,3 +1,7 @@
+@use "sass:math" as *;
+@use "variables" as *;
+@use "functions" as *;
+
 @mixin adaptive-value(
 	$property,
 	$start-size,
@@ -14,13 +18,13 @@
 		$min-size: 0.000001;
 	}
 
-	// $add-size: math.div($start-size - $min-size, 16);
+	// $add-size: div($start-size - $min-size, 16);
 
 	@if $width-from == $container-width and $max-width-container == 0 {
 		$width-from: $max-width;
 	}
 
-	$slope: math.div(($start-size - $min-size), ($width-from - $width-to));
+	$slope: div(($start-size - $min-size), ($width-from - $width-to));
 	$y-intersection: -$width-to * $slope + $min-size;
 
 	@if $y-intersection == 0 {
@@ -53,7 +57,7 @@
 		// }
 
 		// @supports not (#{$property}: $property-value) {
-		// 	#{$property}: calc(#{rem($min-size)} + #{$add-size} * (100vw - #{rem($width-to)}) / #{math.div($width-from, 16) - math.div($width-to, 16)});
+		// 	#{$property}: calc(#{rem($min-size)} + #{$add-size} * (100vw - #{rem($width-to)}) / #{div($width-from, 16) - div($width-to, 16)});
 		// }
 	}
 
@@ -71,7 +75,7 @@
 	$breakpoint: $tablet,
 	$reverse: 0
 ) {
-	$percent: round(math.div($body-width, $max-width-container) * 100);
+	$percent: round(div($body-width, $max-width-container) * 100);
 	$width: $body-width - ($body-width - $percent);
 
 	@if $width <= 10 {
@@ -109,7 +113,7 @@
 				calc(
 					(
 							(100% - #{rem($container-padding)}) *
-								math.div(math.div((100 - $percent), 1), 100)
+								div(div((100 - $percent), 1), 100)
 						) + (rem($container-padding) / 2)
 				);
 			padding-bottom: round(percent($image-height, $max-width));
@@ -130,7 +134,7 @@
 		}
 
 		@include media-min($container-width) {
-			flex: 0 0 calc(50% - (math.div($width, 100) - 0.5) * rem($max-width-container));
+			flex: 0 0 calc(50% - (div($width, 100) - 0.5) * rem($max-width-container));
 		}
 	}
 

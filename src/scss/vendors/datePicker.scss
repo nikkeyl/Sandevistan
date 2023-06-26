@@ -1,7 +1,6 @@
-@use "sass:math";
-
-@import "@scss/abstracts/functions";
-@import "@scss/abstracts/mixins";
+@use "sass:math" as *;
+@use "@scss/abstracts" as *;
+@use "@scss/base" as *;
 
 /* Calendar (Datepicker plugin) */
 
@@ -108,7 +107,7 @@ $lightblue: #add8e6;
 		justify-content: center;
 		width: #{"calc(100% / 3)"};
 		opacity: 0.5;
-		transition: opacity math.div($transition, 2);
+		transition: opacity div($transition, 2);
 		cursor: pointer;
 
 		&.active,
@@ -140,7 +139,7 @@ $lightblue: #add8e6;
 }
 
 .qs-arrow {
-	@include width-height(math.div($width, 10), math.div($width, 10));
+	@include width-height(div($width, 10), div($width, 10));
 
 	position: relative;
 	border-radius: $radius;
@@ -151,7 +150,7 @@ $lightblue: #add8e6;
 		@include pseudo;
 
 		top: 50%;
-		border: math.div($width, 40) solid transparent;
+		border: div($width, 40) solid transparent;
 		transition: border 0.2s;
 	}
 
@@ -220,7 +219,7 @@ $lightblue: #add8e6;
 }
 
 .qs-square {
-	@include width-height(#{"calc(100% / 7)"}, math.div($width, 10));
+	@include width-height(#{"calc(100% / 7)"}, div($width, 10));
 
 	display: flex;
 	align-items: center;

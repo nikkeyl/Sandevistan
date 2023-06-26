@@ -1,7 +1,6 @@
-@use "sass:math";
-
-@import "@scss/abstracts/functions";
-@import "@scss/abstracts/mixins";
+@use "sass:math" as *;
+@use "@scss/abstracts" as *;
+@use "@scss/base" as *;
 
 /* Custom scrollbar (Simplebar plugin) */
 

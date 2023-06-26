@@ -1,3 +1,7 @@
+@use "sass:math" as *;
+@use "@scss/abstracts" as *;
+@use "@scss/base" as *;
+
 .burger-icon {
 	@include media-min-max {
 		@include width-height(rem(30), rem(20));

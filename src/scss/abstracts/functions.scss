@@ -1,15 +1,17 @@
+@use "sass:math" as *;
+
 @function rounding($number) {
-	@return math.div(round($number * 10000), 10000);
+	@return div(round($number * 10000), 10000);
 }
 
 @function em($px, $default: 16) {
-	@return rounding(math.div($px, $default)) + em;
+	@return rounding(div($px, $default)) + em;
 }
 
 @function percent($px, $from) {
-	@return rounding(math.div($px, $from)) * 100%;
+	@return rounding(div($px, $from)) * 100%;
 }
 
 @function rem($px) {
-	@return rounding(math.div($px, 16)) + rem;
+	@return rounding(div($px, 16)) + rem;
 }

@@ -1,4 +1,4 @@
-@import "@scss/abstracts/mixins";
+@use "@scss/abstracts" as *;
 
 .swiper {
 	overflow: hidden;

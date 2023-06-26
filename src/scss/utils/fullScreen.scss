@@ -1,3 +1,5 @@
+@use "@scss/base" as *;
+
 [data-fullscreen] {
 	@extend %full-screen;
 }

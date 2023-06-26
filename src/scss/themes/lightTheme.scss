@@ -1,3 +1,6 @@
+@use "@scss/abstracts" as *;
+@use "@scss/base" as *;
+
 .light {
 	body {
 		color: var(--color-dark-gray);

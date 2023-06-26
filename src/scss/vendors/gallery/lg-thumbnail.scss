@@ -1,8 +1,5 @@
-@use "sass:math";
+@use "@scss/abstracts" as *;
 
-@import "@scss/abstracts/functions";
-@import "@scss/abstracts/variables";
-@import "@scss/abstracts/mixins";
 @import "lg-variables";
 @import "lg-mixins";
 

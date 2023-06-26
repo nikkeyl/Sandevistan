@@ -1,8 +1,8 @@
 /* Forms */
-// @import "quantity";
-// @import "checkbox";
-// @import "select";
-// @import "rating";
-// @import "input";
-// @import "radio";
-@import "button";
+@forward "quantity";
+@forward "checkbox";
+@forward "select";
+@forward "rating";
+@forward "input";
+@forward "radio";
+@forward "button";

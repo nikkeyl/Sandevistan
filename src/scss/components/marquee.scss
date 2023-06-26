@@ -1,9 +1,13 @@
+@use "sass:math" as *;
+@use "@scss/abstracts" as *;
+@use "@scss/base" as *;
+
 /* Styles for the creeping line */
 [data-marquee] {
 	$font-size: 18;
 
 	font-size: rem($font-size);
-	line-height: math.div(20, $font-size);
+	line-height: div(20, $font-size);
 	white-space: nowrap;
 	color: var(--color-light);
 }

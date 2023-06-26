@@ -1,3 +1,7 @@
+@use "sass:math" as *;
+@use "@scss/abstracts" as *;
+@use "@scss/base" as *;
+
 .menu {
 	&__body {
 		@include media-max($tablet) {
@@ -37,7 +41,7 @@
 		$font-size: 16;
 
 		font-size: rem($font-size);
-		line-height: math.div(20, $font-size);
+		line-height: div(20, $font-size);
 		transition: color 0.3s;
 
 		// для корректной работы line effect

@@ -1,3 +1,7 @@
+@use "sass:math" as *;
+@use "@scss/abstracts" as *;
+@use "@scss/base" as *;
+
 .input {
 	display: block;
 	border: rem(1) solid var(--color-gray);

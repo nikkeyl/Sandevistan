@@ -1,3 +1,7 @@
+@use "sass:math" as *;
+@use "@scss/abstracts" as *;
+@use "@scss/base" as *;
+
 .options {
 	display: grid;
 	justify-items: start;
@@ -13,7 +17,7 @@
 		$font-size: 18;
 
 		font-size: rem($font-size);
-		line-height: math.div(22, $font-size);
+		line-height: div(22, $font-size);
 		color: var(--color-gray);
 	}
 

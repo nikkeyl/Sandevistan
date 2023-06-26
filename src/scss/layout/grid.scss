@@ -1,3 +1,5 @@
+@use "@scss/abstracts" as *;
+
 .grid {
 	display: grid;
 	gap: rem(20);
