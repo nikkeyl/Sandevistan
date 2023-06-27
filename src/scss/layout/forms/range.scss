@@ -1,5 +1,6 @@
 @use "sass:math" as *;
 @use "@scss/abstracts" as *;
+@use "@scss/base/placeholders" as *;
 
 /* Range plugin */
 
@@ -12,7 +13,8 @@
 	&,
 	* {
 		box-sizing: border-box;
-		user-select: none;
+
+		@extend %user-select;
 	}
 }
 
