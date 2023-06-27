@@ -1,26 +1,21 @@
-@use "sass:math";
-
-@import "@scss/abstracts/functions";
-
 .lg-relative-caption {
-  .lg-outer {
-    .lg-sub-html {
-      bottom: auto;
-      padding: 0;
-      white-space: normal;
-      background-image: none;
-    }
+    .lg-outer {
+        .lg-sub-html {
+            white-space: normal;
+            bottom: auto;
+            padding: 0;
+            background-image: none;
+        }
+        .lg-relative-caption-item {
+            opacity: 0;
+            padding: 16px 0;
+            transition: 0.5s opacity ease;
+        }
 
-    .lg-relative-caption-item {
-      padding: rem(16) 0;
-      opacity: 0;
-      transition: opacity 0.5s;
+        .lg-show-caption {
+            .lg-relative-caption-item {
+                opacity: 1;
+            }
+        }
     }
-
-    .lg-show-caption {
-      .lg-relative-caption-item {
-        opacity: 1;
-      }
-    }
-  }
 }

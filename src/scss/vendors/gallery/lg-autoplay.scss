@@ -1,47 +1,43 @@
-@import "@scss/abstracts/mixins";
-@import "lg-variables";
-@import "lg-mixins";
-
+@import 'lg-variables';
+@import 'lg-mixins';
 .lg-progress-bar {
-	@include transitionCustom(opacity 0.08s 0s);
-	@include width-height(100%, $lg-progress-bar-height);
+    background-color: $lg-progress-bar-bg;
+    height: $lg-progress-bar-height;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: $zindex-progressbar;
+    opacity: 0;
+    will-change: opacity;
+    @include transitionCustom(opacity 0.08s ease 0s);
 
-	position: absolute;
-	left: 0;
-	top: 0;
-	z-index: $zindex-progressbar;
-	background-color: $lg-progress-bar-bg;
-	opacity: 0;
-	will-change: opacity;
+    .lg-progress {
+        background-color: $lg-progress-bar-active-bg;
+        height: $lg-progress-bar-height;
+        width: 0;
+    }
 
-	.lg-progress {
-		@include width-height(0, $lg-progress-bar-height);
+    &.lg-start {
+        .lg-progress {
+            width: 100%;
+        }
+    }
 
-		background-color: $lg-progress-bar-active-bg;
-	}
-
-	&.lg-start {
-		.lg-progress {
-			width: 100%;
-		}
-	}
-
-	.lg-show-autoplay & {
-		opacity: 1;
-	}
+    .lg-show-autoplay & {
+        opacity: 1;
+    }
 }
 
 .lg-autoplay-button {
-	&::after {
-		content: "\e01d";
-
-		.lg-show-autoplay & {
-			content: "\e01a";
-		}
-	}
-
-	.lg-single-item & {
-		opacity: $lg-toolbar-icon-disabled-opacity;
-		pointer-events: none;
-	}
+    &:after {
+        .lg-show-autoplay & {
+            content: '\e01a';
+        }
+        content: '\e01d';
+    }
+    .lg-single-item & {
+        opacity: $lg-toolbar-icon-disabled-opacity;
+        pointer-events: none;
+    }
 }

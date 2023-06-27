@@ -1,6 +1,6 @@
 @use "sass:math" as *;
 @use "@scss/abstracts" as *;
-@use "@scss/base" as *;
+@use "@scss/base/placeholders" as *;
 
 .quantity {
 	@include width-height(rem(90), rem(40));

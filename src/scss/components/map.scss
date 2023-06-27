@@ -1,5 +1,5 @@
 @use "@scss/abstracts" as *;
-@use "@scss/base" as *;
+@use "@scss/base/placeholders" as *;
 
 .map {
 	@include width-height(rem(100), rem(100));
