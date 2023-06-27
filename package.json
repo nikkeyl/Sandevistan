@@ -58,7 +58,6 @@
 		"lint-staged": "latest",
 		"mini-css-extract-plugin": "latest",
 		"nouislider": "latest",
-		"pug": "latest",
 		"pug-loader": "latest",
 		"sass": "latest",
 		"sass-loader": "latest",
