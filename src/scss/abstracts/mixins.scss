@@ -107,10 +107,8 @@
 			position: relative;
 			flex: 0 0
 				calc(
-					(
-							(100% - #{rem($container-padding)}) *
-								div(div((100 - $percent), 1), 100)
-						) + (rem($container-padding) / 2)
+					((100% - #{rem($container-padding)}) * div(div((100 - $percent), 1), 100)) +
+						(rem($container-padding) / 2)
 				);
 			padding-bottom: round(percent($image-height, $max-width));
 
