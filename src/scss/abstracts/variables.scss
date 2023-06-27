@@ -1,15 +1,15 @@
 $container-type: 1;
 
 // --------------------------------- //
-$max-width-container: 0;
 $container-padding: 30;
 
 // --------------------------------- //
+$max-width-container: 0;
+$container-width: $max-width-container + $container-padding;
 $max-width: 1920;
 $min-width: 320;
 
 // --------------------------------- //
-$container-width: $max-width-container + $container-padding;
 $desktop: $container-width;
 $laptop: 992;
 $tablet: 768;
