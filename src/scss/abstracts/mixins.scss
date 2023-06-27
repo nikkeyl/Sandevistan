@@ -31,7 +31,7 @@
 		$y-intersection: 0.000001;
 	}
 
-	$fly-value: #{rem($y-intersection)}" + " #{$slope * 100}vw;
+	$fly-value: #{rem($y-intersection)}" + "#{$slope * 100}vw;
 	$property-value: #{"clamp(" rem($min-size) "," $fly-value "," rem($start-size) ")"};
 
 	@if $min-size > $start-size {
