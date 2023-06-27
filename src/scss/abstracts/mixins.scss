@@ -103,10 +103,6 @@
 	}
 
 	&__image {
-		img {
-			width: 100%;
-		}
-
 		@include media-min($breakpoint) {
 			position: relative;
 			flex: 0 0

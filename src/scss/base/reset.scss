@@ -1,5 +1,7 @@
 @use "@scss/abstracts" as *;
 
+/* Reset styles */
+
 * {
 	&,
 	&::before,
@@ -118,6 +120,7 @@ li {
 
 img {
 	vertical-align: top;
+	max-width: 100%;
 }
 
 legend,
