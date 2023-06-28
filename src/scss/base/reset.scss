@@ -113,21 +113,23 @@ label {
 
 summary,
 ul,
-ol,
-li {
+ol {
 	list-style: none;
 }
 
 img {
 	vertical-align: top;
-	max-width: 100%;
 }
 
 legend,
+iframe,
+object,
 video,
+embed,
 img,
 svg {
 	display: block;
+	width: 100%;
 }
 
 h1,
