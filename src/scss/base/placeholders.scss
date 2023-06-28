@@ -5,7 +5,6 @@
 	position: relative;
 	overflow: hidden;
 	aspect-ratio: 16 / 9;
-	height: 0;
 
 	iframe,
 	object,
@@ -13,7 +12,6 @@
 	embed {
 		position: absolute;
 		inset: 0;
-		width: 100%;
 		height: 100%;
 	}
 }
@@ -23,21 +21,18 @@
 	object,
 	video,
 	embed {
-		position: fixed;
-		inset: 50%;
-		z-index: -100;
-		width: auto;
-		height: auto;
-		min-width: 100%;
-		min-height: 100%;
-		background-size: cover;
-		transform: translateX(-50%) translateY(-50%);
+		position: absolute;
+		inset: 0;
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
 	}
 }
 
 %image-background {
 	/* Background image using css */
 	position: relative;
+	overflow: hidden;
 
 	img {
 		position: absolute;
@@ -49,15 +44,14 @@
 
 %list-counter {
 	counter-reset: item;
-	list-style: none;
 
 	li {
 		position: relative;
 
 		&::before {
+			@include pseudo(counter(item));
+
 			counter-increment: item;
-			content: counter(item);
-			position: absolute;
 			inset: 0;
 		}
 	}
