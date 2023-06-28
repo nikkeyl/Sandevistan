@@ -23,10 +23,11 @@
 			&::before,
 			&::after {
 				@include pseudo;
-				@include width-height(rem(15), rem(2));
 
 				right: rem(10);
 				top: 50%;
+				width: rem(15);
+				height: rem(2);
 				background-color: var(--color-dark);
 				transition: transform 0.5s;
 			}

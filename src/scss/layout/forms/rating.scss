@@ -20,28 +20,29 @@
 	}
 
 	&__active {
-		@include width-height(0, 100%);
-
 		position: absolute;
 		inset: 0;
 		overflow: hidden;
+		width: 0;
+		height: 100%;
 		transition: width 0.2s;
 
 		&::before {
 			@include pseudo("★★★★★");
-			@include width-height(100%, 100%);
 
 			inset: 0;
+			width: 100%;
+			height: 100%;
 			color: var(--color-yellow);
 		}
 	}
 
 	&__items {
-		@include width-height(100%, 100%);
-
 		position: absolute;
 		inset: 0;
 		display: flex;
+		width: 100%;
+		height: 100%;
 	}
 
 	&__item {

@@ -3,8 +3,8 @@
 /* Styles for scrollbar */
 * {
 	&::-webkit-scrollbar {
-		@include width-height(rem(10), rem(10));
-
+		width: rem(10);
+		height: rem(10);
 		background-color: var(--color-light);
 	}
 

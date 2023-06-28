@@ -294,11 +294,6 @@
 	position: $position;
 }
 
-@mixin width-height($width, $height) {
-	width: $width;
-	height: $height;
-}
-
 @mixin currency($sym) {
 	&::after {
 		content: "#{$sym}";

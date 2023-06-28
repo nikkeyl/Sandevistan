@@ -2,13 +2,13 @@
 @use "@scss/base/placeholders" as *;
 
 .map {
-	@include width-height(rem(100), rem(100));
-
 	position: absolute;
 	inset: 50%;
 	border: rem(10) solid var(--color-light);
 	border-top-color: var(--color-dark-gray);
 	border-radius: 50%;
+	width: rem(100);
+	height: rem(100);
 	transform: translate(-50%, -50%);
 	animation: spin 2s linear infinite;
 

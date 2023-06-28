@@ -4,19 +4,20 @@
 
 .burger-icon {
 	@include media-min-max {
-		@include width-height(rem(30), rem(20));
-
 		position: relative;
 		z-index: 5;
 		display: block;
+		width: rem(30);
+		height: rem(20);
 
 		span,
 		&::before,
 		&::after {
 			@include pseudo;
-			@include width-height(100%, rem(2));
 
 			right: 0;
+			width: 100%;
+			height: rem(2);
 			background-color: var(--color-dark);
 			transition: transform 0.3s, width 0.3s, top 0.3s, bottom 0.3s;
 		}

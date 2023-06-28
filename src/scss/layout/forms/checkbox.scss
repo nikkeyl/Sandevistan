@@ -21,31 +21,31 @@
 	&__box {
 		$size: 20;
 
-		@include width-height(rem($size), rem($size));
-
 		position: relative;
 		flex: 0 0 rem($size);
 		align-self: flex-start;
 		border: rem(2) solid var(--color-gray);
 		border-radius: rem(3);
+		width: rem($size);
+		height: rem($size);
 
 		&::after {
-			@include width-height(rem(20), rem(20));
-
 			content: "";
 			position: absolute;
 			inset: rem(-2);
 			border-radius: rem(3);
+			width: rem(20);
+			height: rem(20);
 			background-color: var(--color-dark);
 			transform: scale(0);
 			transition: transform 0.3s;
 		}
 
 		svg {
-			@include width-height(rem(10), rem(10));
-
 			position: absolute;
 			inset: rem(3);
+			width: rem(10);
+			height: rem(10);
 			fill: var(--color-light);
 			transform: scale(0);
 		}

@@ -20,16 +20,17 @@
 
 .noUi-base,
 .noUi-connects {
-	@include width-height(100%, 100%);
+	width: 100%;
+	height: 100%;
 }
 
 /* Wrapper for all connect elements. */
 .noUi-connect,
 .noUi-origin {
-	@include width-height(100%, 100%);
-
 	position: absolute;
 	inset: 0;
+	width: 100%;
+	height: 100%;
 	transform-origin: 0 0;
 	will-change: transform;
 }
@@ -79,10 +80,10 @@
 	height: rem(10);
 
 	.noUi-handle {
-		@include width-height(rem(15), rem(15));
-
 		right: rem(-7.5);
 		top: rem(-3);
+		width: rem(15);
+		height: rem(15);
 	}
 
 	.noUi-tooltip {

@@ -22,19 +22,20 @@
 	}
 
 	&__box {
-		@include width-height(rem(20), rem(20));
-
 		position: relative;
 		flex: 0 0 rem(20);
 		border: rem(1) solid var(--color-gray);
 		border-radius: 50%;
+		width: rem(20);
+		height: rem(20);
 
 		&::before {
 			@include pseudo;
-			@include width-height(rem(15), rem(15));
 
 			inset: 50%;
 			border-radius: 50%;
+			width: rem(15);
+			height: rem(15);
 			background-color: var(--color-dark);
 			transform: translate(-50%, -50%) scale(0);
 			transition: transform 0.3s;
