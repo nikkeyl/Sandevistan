@@ -247,7 +247,7 @@
 	}
 }
 
-@mixin grid-cards($type: fit, $min: rem(290), $max: 1fr, $breakpoint: $phone) {
+@mixin grid($type: fit, $min: rem(290), $max: 1fr, $breakpoint: $phone) {
 	display: grid;
 	@content;
 
