@@ -29,21 +29,13 @@ body {
 	text-rendering: optimizeLegibility;
 	text-size-adjust: 100%;
 	color: var(--text-color);
+	background-color: var(--background-color);
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
-
-	@if $background-gradient == 1 {
-		background: var(--background-color);
-
-		/* If the background is a gradient, then this property helps to stretch the gradinet to its full height */
-		background-attachment: fixed;
-	} @else {
-		background-color: var(--background-color);
-	}
 }
 
 @if $selection == 1 {
-	/* Changes the default text selection styles */
+	/* Ыelection styles */
 	::selection {
 		color: var(--color-light);
 		background-color: var(--color-dark-gray);
@@ -83,9 +75,7 @@ button {
 
 :focus,
 :active {
-	@if $focus-active-outline == 1 {
-		outline: none;
-	}
+	// outline: none;
 }
 
 a {
