@@ -35,7 +35,7 @@ body {
 }
 
 @if $selection == 1 {
-	/* Ыelection styles */
+	/* Selection styles */
 	::selection {
 		color: var(--color-light);
 		background-color: var(--color-dark-gray);
