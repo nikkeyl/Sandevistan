@@ -1,7 +1,7 @@
 @use "sass:math" as *;
 @use "@scss/abstracts" as *;
 
-%responsive-video {
+%video-background {
 	position: relative;
 	overflow: hidden;
 
@@ -16,23 +16,7 @@
 	}
 }
 
-%video-background {
-	position: relative;
-
-	iframe,
-	object,
-	video,
-	embed {
-		position: absolute;
-		inset: 0;
-		min-width: 100%;
-		min-height: 100%;
-		object-fit: cover;
-		object-position: center;
-	}
-}
-
-%responsive-image {
+%image-background {
 	/* Background image using css */
 	position: relative;
 	overflow: hidden;
