@@ -1,22 +1,24 @@
 @use "sass:math" as *;
 @use "@scss/abstracts" as *;
 
-@if $container-type == 1 {
-	.container {
-		@if $max-width-container > 0 {
-			margin-inline: auto;
-			max-width: rem($container-width);
-		}
+.container {
+	@if $max-width-container > 0 {
+		margin-inline: auto;
+		max-width: rem($container-width);
+	}
 
-		@if $container-padding > 0 {
-			@if $max-width-container > 0 {
-				padding: 0 rem(div($container-padding, 2));
-			} @else {
-				@include adaptive-value("padding-left", div($container-padding, 2), 15);
-				@include adaptive-value("padding-right", div($container-padding, 2), 15);
-			}
+	@if $container-padding > 0 {
+		@if $max-width-container > 0 {
+			padding: 0 rem(div($container-padding, 2));
+		} @else {
+			@include adaptive-value("padding-left", div($container-padding, 2), 15);
+			@include adaptive-value("padding-right", div($container-padding, 2), 15);
 		}
 	}
+}
+
+/* Deprecated */
+/* @if $container-type == 1 {
 } @else {
 	.container {
 		margin-inline: auto;
@@ -43,4 +45,4 @@
 			padding: 0 rem(div($container-padding, 2));
 		}
 	}
-}
+} */
