@@ -2,6 +2,7 @@
 
 /* Reset styles */
 
+/* Box sizing rules and remove default margin and padding */
 * {
 	&,
 	&::before,
@@ -14,13 +15,15 @@
 	}
 }
 
+/* Set core root defaults */
 html,
 body {
-	height: 100%;
+	height: 100vh;
 	min-width: $min-width + px;
 	scroll-behavior: smooth;
 }
 
+/* Set core body defaults */
 body {
 	font-family: var(--font-family), sans-serif;
 	font-weight: var(--font-weight);
@@ -34,6 +37,11 @@ body {
 	-webkit-font-smoothing: antialiased;
 }
 
+:focus,
+:active {
+	// outline: none;
+}
+
 @if $selection == 1 {
 	/* Selection styles */
 	::selection {
@@ -42,6 +50,7 @@ body {
 	}
 }
 
+/* Remove the appearance of input with types: [search, email, text, tel] */
 input {
 	&[type="search"],
 	&[type="email"],
@@ -51,44 +60,32 @@ input {
 	}
 }
 
+/* Inherit fonts for inputs and buttons */
 textarea,
 select,
 button,
 input {
-	font-family: var(--font-family), sans-serif;
-	font-size: inherit;
-	line-height: inherit;
+	font: inherit;
 }
 
+/* Remove resize textarea */
 textarea {
 	resize: none;
 }
 
+/* Inherit the color of the text and set cursor pointer */
 button {
 	color: inherit;
-	background-color: transparent;
 
 	@media (any-hover: hover) {
 		cursor: pointer;
 	}
 }
 
-:focus,
-:active {
-	// outline: none;
-}
-
+/* Inherit the color of the text and remove the underline */
 a {
 	color: inherit;
-
-	&:visited,
-	&:link {
-		text-decoration: none;
-	}
-
-	@include media-hover {
-		text-decoration: none;
-	}
+	text-decoration: none;
 }
 
 address {
@@ -101,6 +98,7 @@ label {
 	}
 }
 
+/* Remove markers */
 summary,
 ul,
 ol {
@@ -111,6 +109,7 @@ img {
 	vertical-align: top;
 }
 
+/* Make images easier to work with */
 picture,
 legend,
 iframe,
@@ -123,6 +122,7 @@ svg {
 	width: 100%;
 }
 
+/* Inherit fonts for titles and paragraphs */
 h1,
 h2,
 h3,
@@ -130,18 +130,18 @@ h4,
 h5,
 h6,
 p {
-	font-weight: inherit;
-	font-size: inherit;
+	font: inherit;
 }
 
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
 	* {
 		&,
 		&::before,
 		&::after {
-			transition-duration: 0.01s;
-			animation-duration: 0.01s;
-			animation-iteration-count: 1;
+			transition-duration: 0.01s !important;
+			animation-duration: 0.01s !important;
+			animation-iteration-count: 1 !important;
 			scroll-behavior: auto;
 		}
 	}
