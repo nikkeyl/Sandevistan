@@ -22,7 +22,7 @@ const ttfToWoff = () =>
 		.pipe(app.gulp.dest(app.paths.build.fonts))
 
 const fontsStyles = () => {
-	const fontStylesFile = `${app.paths.srcFolder}/scss/base/fonts.scss`
+	const fontStylesFile = `${app.paths.srcFolder}/scss/base/font-face.scss`
 
 	app.plugins.fs.readdir(app.paths.build.fonts, (error, fontFiles) => {
 		if (fontFiles) {
