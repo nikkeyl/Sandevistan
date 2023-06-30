@@ -4,7 +4,7 @@
 	display: grid;
 	grid-template-rows: auto 1fr auto;
 
-	/* With value overflow: clip;, position: sticky; works correctly */
+	/* Set [overflow: clip;] for correct operation [position: sticky;] */
 	overflow: clip;
 	min-height: 100vh;
 
@@ -14,12 +14,5 @@
 
 		/* Prevents chain scrolling */
 		overscroll-behavior: none;
-	}
-
-	@if $slider-fix == 1 {
-		> * {
-			/* Fixes swiper.js bug */
-			min-width: 0;
-		}
 	}
 }

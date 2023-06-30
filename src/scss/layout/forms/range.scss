@@ -2,8 +2,7 @@
 @use "@scss/abstracts" as *;
 @use "@scss/base/placeholders" as *;
 
-/* Range plugin */
-
+/* Range styles */
 .noUi-target {
 	position: relative;
 	border: rem(1) solid #d3d3d3;
@@ -47,7 +46,7 @@
 	}
 }
 
-/* Slider size and handle placement; */
+/* Slider size and handle placement */
 .noUi-handle {
 	position: absolute;
 	border: rem(1) solid #d9d9d9;

@@ -1,8 +1,6 @@
 @use "@scss/abstracts" as *;
 
 /* Reset styles */
-
-/* Box sizing rules and remove default margin and padding */
 * {
 	&,
 	&::before,
@@ -11,6 +9,8 @@
 		border: 0;
 		padding: 0;
 		box-sizing: border-box;
+
+		/* Removes the blue highlight when you click on the elements */
 		-webkit-tap-highlight-color: transparent;
 	}
 }
@@ -42,15 +42,6 @@ body {
 	// outline: none;
 }
 
-@if $selection == 1 {
-	/* Selection styles */
-	::selection {
-		color: var(--color-light);
-		background-color: var(--color-dark-gray);
-	}
-}
-
-/* Remove the appearance of input with types: [search, email, text, tel] */
 input {
 	&[type="search"],
 	&[type="email"],
@@ -60,40 +51,42 @@ input {
 	}
 }
 
-/* Inherit fonts for inputs and buttons */
 textarea,
 select,
 button,
-input {
+input,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
 	font: inherit;
 }
 
-/* Remove resize textarea */
 textarea {
 	resize: none;
 }
 
-/* Inherit the color of the text and set cursor pointer */
-button {
+button,
+a {
 	color: inherit;
-
-	@media (any-hover: hover) {
-		cursor: pointer;
-	}
 }
 
-/* Inherit the color of the text and remove the underline */
 a {
 	text-decoration: none;
-	color: inherit;
 }
 
+/* Remove italic */
 address {
 	font-style: normal;
 }
 
+button,
 label {
 	@media (any-hover: hover) {
+		/* Set the cursor pointer for the button and the label for devices with a mouse */
 		cursor: pointer;
 	}
 }
@@ -105,43 +98,24 @@ ol {
 	list-style: none;
 }
 
-img {
-	vertical-align: top;
-}
-
-/* Make images easier to work with */
+/* Make images and inputs easier to work with */
 picture,
-legend,
 iframe,
-object,
-video,
-embed,
+input,
 img,
 svg {
 	display: block;
 	width: 100%;
 }
 
-/* Inherit fonts for titles and paragraphs */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-	font: inherit;
-}
-
-/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
+	/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 	* {
 		&,
 		&::before,
 		&::after {
-			transition-duration: 0.01s !important;
-			animation-duration: 0.01s !important;
-			animation-iteration-count: 1 !important;
+			transition: none;
+			animation: none;
 			scroll-behavior: auto;
 		}
 	}

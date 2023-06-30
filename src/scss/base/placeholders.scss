@@ -2,8 +2,8 @@
 @use "@scss/abstracts" as *;
 
 /* Placeholders styles */
-
 %video-background {
+	/* Background video using css */
 	position: relative;
 	overflow: hidden;
 
@@ -15,6 +15,7 @@
 		inset: 0;
 		height: 100%;
 		object-fit: cover;
+		object-position: center;
 	}
 }
 
@@ -28,10 +29,12 @@
 		inset: 0;
 		height: 100%;
 		object-fit: cover;
+		object-position: top;
 	}
 }
 
 %list-counter {
+	/* Counter for lists */
 	counter-reset: item;
 
 	li {
@@ -60,6 +63,7 @@
 }
 
 %gray-filter {
+	/* Gray filter */
 	filter: grayscale(1);
 	transition: filter 0.3s;
 
@@ -75,7 +79,7 @@
 }
 
 %touch {
-	/* Pulse-based scrolling https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-overflow-scrolling */
+	/* Set momentum-based scrolling, where the content continues to scroll for a while after finishing the scroll gesture */
 	-webkit-overflow-scrolling: touch;
 }
 
@@ -85,6 +89,5 @@
 }
 
 %select-none {
-	/* Prevents the user from selecting text */
 	user-select: none;
 }

@@ -3,8 +3,6 @@
 @use "@scss/base/placeholders" as *;
 
 .button {
-	$icon: 0;
-	$fw: 0;
 	$font-size: 18;
 
 	display: inline-flex;
@@ -21,16 +19,14 @@
 		transform: translateY(rem(3));
 	}
 
-	&--fw {
+	&--full {
 		@include media-max($phone) {
 			width: 100%;
 		}
 	}
 
-	@if $icon == 1 {
-		span {
-			padding: 0 rem(30) 0 0;
-			background: url("@img") left no-repeat;
-		}
+	@include media-hover {
+		color: var(--color-dark);
+		background-color: var(--color-light);
 	}
 }

@@ -2,13 +2,16 @@
 @use "@scss/abstracts" as *;
 @use "@scss/base/placeholders" as *;
 
+.checkboxes {
+	display: grid;
+	gap: rem(5);
+}
+
 .checkbox {
-	position: relative;
-	display: inline-flex;
+	display: flex;
 	flex-direction: row-reverse;
-	align-items: center;
 	gap: rem(10);
-	cursor: pointer;
+	width: max-content;
 
 	&__text {
 		$font-size: 18;
@@ -25,15 +28,15 @@
 		flex: 0 0 rem($size);
 		align-self: flex-start;
 		border: rem(2) solid var(--color-gray);
-		border-radius: rem(3);
+		border-radius: rem(5);
 		width: rem($size);
 		height: rem($size);
 
-		&::after {
-			content: "";
-			position: absolute;
+		&::before {
+			@include pseudo;
+
 			inset: rem(-2);
-			border-radius: rem(3);
+			border-radius: rem(5);
 			width: rem(20);
 			height: rem(20);
 			background-color: var(--color-dark);
@@ -56,10 +59,7 @@
 
 		&:checked {
 			+ .checkbox__box {
-				&::after {
-					transform: scale(1);
-				}
-
+				&::before,
 				svg {
 					transform: scale(1);
 				}
