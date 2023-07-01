@@ -500,12 +500,11 @@
 		"keyframe-selector-notation": "percentage",
 		"media-feature-range-notation": "context",
 		"selector-not-notation": "simple",
-		"selector-class-pattern": null,
+		"selector-class-pattern": "^[a-z][a-z0-9]*(-[a-z0-9]+)*(__[a-z0-9]+(-[a-z0-9]+)*)?(--[a-z0-9]+(-[a-z0-9]+)*)?$",
 		"font-family-name-quotes": "always-unless-keyword",
 		"scss/at-function-named-arguments": "never",
 		"scss/at-mixin-named-arguments": "never",
 		"scss/at-rule-conditional-no-parentheses": true,
-		"scss/at-use-no-unnamespaced": null,
 		"scss/declaration-nested-properties": "never",
 		"scss/dimension-no-non-numeric-values": true,
 		"scss/dollar-variable-colon-newline-after": "always-multi-line",
@@ -540,7 +539,6 @@
 		"scss/no-duplicate-dollar-variables": true,
 		"scss/no-global-function-names": true,
 		"scss/partial-no-import": true,
-		"scss/selector-nest-combinators": "always",
 		"scss/selector-no-redundant-nesting-selector": true
 	}
 }
