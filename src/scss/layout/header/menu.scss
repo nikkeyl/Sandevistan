@@ -8,7 +8,6 @@
 			position: fixed;
 			left: -100%;
 			top: 0;
-			z-index: 4;
 			overflow: auto;
 			padding: rem(80) 0 rem(30);
 			width: 100%;
@@ -18,13 +17,12 @@
 
 			&::before {
 				@include pseudo("", fixed);
+				@include adaptive-value("height", 70, 40, 3, 768, $min-width);
 
 				left: -100%;
 				top: 0;
-				z-index: 4;
 				width: 100%;
-				height: rem(70);
-				background-color: var(--color-light);
+				background-color: var(--color-dark-gray);
 				transition: left 0.3s;
 			}
 
