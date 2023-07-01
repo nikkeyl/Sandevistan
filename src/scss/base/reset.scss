@@ -1,21 +1,15 @@
 @use "@scss/abstracts" as *;
 
 /* Reset styles */
-* {
-	&,
-	&::before,
-	&::after {
-		margin: 0;
-		border: 0;
-		padding: 0;
-		box-sizing: border-box;
-
-		/* Removes the blue highlight when you click on the elements */
-		-webkit-tap-highlight-color: transparent;
-	}
+*,
+*::before,
+*::after {
+	margin: 0;
+	border: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
-/* Set core root defaults */
 html,
 body {
 	height: 100vh;
@@ -23,7 +17,6 @@ body {
 	scroll-behavior: smooth;
 }
 
-/* Set core body defaults */
 body {
 	font-family: var(--font-family), sans-serif;
 	font-weight: var(--font-weight);
@@ -40,60 +33,6 @@ body {
 :focus,
 :active {
 	// outline: none;
-}
-
-input {
-	&[type="search"],
-	&[type="email"],
-	&[type="text"],
-	&[type="tel"] {
-		appearance: none;
-	}
-
-	&[type="checkbox"],
-	&[type="radio"] {
-		user-select: none;
-	}
-}
-
-textarea,
-select,
-button,
-input,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-	font: inherit;
-}
-
-textarea {
-	resize: none;
-}
-
-button,
-a {
-	color: inherit;
-}
-
-a {
-	text-decoration: none;
-}
-
-/* Remove italic */
-address {
-	font-style: normal;
-}
-
-button,
-label {
-	@media (any-hover: hover) {
-		/* Set the cursor pointer for the button and the label for devices with a mouse */
-		cursor: pointer;
-	}
 }
 
 /* Remove markers */
@@ -113,15 +52,71 @@ svg {
 	width: 100%;
 }
 
+/* Remove italic */
+address {
+	font-style: normal;
+}
+
+input[type="search"],
+input[type="email"],
+input[type="text"],
+input[type="tel"] {
+	appearance: none;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+	user-select: none;
+}
+
+textarea,
+select,
+button,
+input,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font: inherit;
+}
+
+textarea {
+	resize: none;
+}
+
+button {
+	background-color: transparent;
+}
+
+a {
+	text-decoration: none;
+
+	/* Removes the blue highlight when you click on the elements */
+	-webkit-tap-highlight-color: transparent;
+}
+
+button,
+a {
+	color: inherit;
+}
+
+button,
+label {
+	@media (any-hover: hover) {
+		/* Set the cursor pointer for the button and the label for devices with a mouse */
+		cursor: pointer;
+	}
+}
+
 @media (prefers-reduced-motion: reduce) {
 	/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
-	* {
-		&,
-		&::before,
-		&::after {
-			transition: none;
-			animation: none;
-			scroll-behavior: auto;
-		}
+	*,
+	*::before,
+	*::after {
+		transition: none;
+		animation: none;
+		scroll-behavior: auto;
 	}
 }
