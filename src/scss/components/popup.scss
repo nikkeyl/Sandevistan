@@ -3,6 +3,7 @@
 @use "@scss/base/placeholders" as *;
 
 body {
+	/* Overlay styles for popup */
 	&::after {
 		@include pseudo("", fixed);
 

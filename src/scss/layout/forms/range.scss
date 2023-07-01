@@ -38,7 +38,6 @@
 	background-color: #add8e6;
 }
 
-/* Give origins 0 height/width so they don't interfere with clicking the * connect elements. */
 .noUi-state-tap {
 	.noUi-connect,
 	.noUi-origin {
@@ -46,7 +45,6 @@
 	}
 }
 
-/* Slider size and handle placement */
 .noUi-handle {
 	position: absolute;
 	border: rem(1) solid #d9d9d9;
@@ -57,7 +55,7 @@
 	cursor: grab;
 }
 
-/* Styling; * Giving the connect element a border radius causes issues with using transform: scale */
+/* Handles and cursors */
 .noUi-active {
 	background-color: #d9d9d9;
 	cursor: grabbing;
@@ -75,12 +73,12 @@
 	background-color: var(--color-light);
 }
 
+/* Slider size and handle placement */
 .noUi-horizontal {
 	height: rem(10);
 
 	.noUi-handle {
-		right: rem(-7.5);
-		top: rem(-3);
+		inset: rem(-3) rem(-7.5) 0 0;
 		width: rem(15);
 		height: rem(15);
 	}
@@ -88,6 +86,6 @@
 	.noUi-tooltip {
 		left: 50%;
 		bottom: 120%;
-		transform: translate(-50%, 0);
+		transform: translateY(-50%);
 	}
 }

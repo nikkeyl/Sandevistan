@@ -1,6 +1,5 @@
 @use "@scss/base/placeholders" as *;
 
-/* Fullscreen section styles */
 [data-fullscreen] {
-	@extend %full-screen;
+	@extend %fullscreen;
 }

@@ -34,16 +34,18 @@
 }
 
 %list-counter {
+	$type: item;
+
 	/* Counter for lists */
-	counter-reset: item;
+	counter-reset: $type;
 
 	li {
 		position: relative;
 
 		&::before {
-			@include pseudo(counter(item));
+			@include pseudo(counter($type));
 
-			counter-increment: item;
+			counter-increment: $type;
 			inset: 0;
 		}
 	}

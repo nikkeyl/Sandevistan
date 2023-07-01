@@ -49,6 +49,11 @@ input {
 	&[type="tel"] {
 		appearance: none;
 	}
+
+	&[type="checkbox"],
+	&[type="radio"] {
+		user-select: none;
+	}
 }
 
 textarea,

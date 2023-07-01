@@ -18,7 +18,7 @@
 
 		font-size: rem($font-size);
 		line-height: div(22, $font-size);
-		color: var(--color-gray);
+		color: var(--color-dark);
 	}
 
 	&__box {
@@ -35,10 +35,10 @@
 		&::before {
 			@include pseudo;
 
-			inset: rem(-2);
-			border-radius: rem(5);
-			width: rem(20);
-			height: rem(20);
+			inset: 0;
+			border-radius: rem(3);
+			width: rem(16);
+			height: rem(16);
 			background-color: var(--color-dark);
 			transform: scale(0);
 			transition: transform 0.3s;
@@ -66,6 +66,4 @@
 			}
 		}
 	}
-
-	@extend %select-none;
 }
