@@ -57,12 +57,10 @@
 	input {
 		display: none;
 
-		&:checked {
-			+ .checkbox__box {
-				&::before,
-				svg {
-					transform: scale(1);
-				}
+		&:checked + .checkbox__box {
+			&::before,
+			svg {
+				transform: scale(1);
 			}
 		}
 	}

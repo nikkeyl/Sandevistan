@@ -45,10 +45,6 @@
 		line-height: div(20, $font-size);
 		transition: color 0.3s;
 
-		// для корректной работы line effect
-		//     display: block;
-		//     overflow: hidden;
-
 		@include media-hover {
 			color: var(--color-dark);
 		}

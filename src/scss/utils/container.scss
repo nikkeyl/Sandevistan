@@ -16,33 +16,3 @@
 		}
 	}
 }
-
-// Deprecated
-// @if $container-type == 1 {
-// } @else {
-// 	.container {
-// 		margin-inline: auto;
-
-// 		@include media-max($desktop) {
-// 			max-width: rem(970);
-// 		}
-
-// 		@include media-max($laptop) {
-// 			max-width: rem(750);
-// 		}
-
-// 		@include media-max($tablet) {
-// 			max-width: none;
-
-// 			@if $container-padding > 0 and $max-width-container > 0 {
-// 				padding: 0 rem(div($container-padding, 2));
-// 			}
-// 		}
-
-// 		@if $max-width-container > 0 {
-// 			max-width: rem($container-width);
-// 		} @else {
-// 			padding: 0 rem(div($container-padding, 2));
-// 		}
-// 	}
-// }

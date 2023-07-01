@@ -47,11 +47,9 @@
 	input {
 		display: none;
 
-		&:checked {
-			+ .option__box {
-				&::before {
-					transform: translate(-50%, -50%) scale(1);
-				}
+		&:checked + .option__box {
+			&::before {
+				transform: translate(-50%, -50%) scale(1);
 			}
 		}
 	}
