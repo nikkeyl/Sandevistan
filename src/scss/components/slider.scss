@@ -26,12 +26,11 @@
 }
 
 .swiper-initialized {
+	/* Fix swiper bug */
 	touch-action: pan-y;
 
 	.swiper-slide {
 		flex-shrink: 0;
-
-		// transition-property: transform;
 	}
 }
 

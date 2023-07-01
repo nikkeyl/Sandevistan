@@ -70,7 +70,7 @@
 		"stylelint-order": "latest",
 		"stylelint-prettier": "latest",
 		"stylelint-webpack-plugin": "latest",
-		"swiper": "8.4.7",
+		"swiper": "latest",
 		"terser-webpack-plugin": "latest",
 		"tippy.js": "latest",
 		"typed.js": "latest",
