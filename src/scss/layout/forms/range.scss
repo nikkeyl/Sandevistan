@@ -8,13 +8,12 @@
 	border: rem(1) solid #d3d3d3;
 	border-radius: rem(30);
 	background-color: #fafafa;
+}
 
-	&,
-	* {
-		box-sizing: border-box;
-
-		@extend %select-none;
-	}
+.noUi-target,
+.noUi-target * {
+	box-sizing: border-box;
+	user-select: none;
 }
 
 .noUi-base,
