@@ -52,10 +52,10 @@ function tabs() {
 				if (matchMedia.matches) {
 					tabsContent.append(tabsTitleItems[index])
 					tabsContent.append(tabsContentItem)
-					tabsMediaItem.classList.add('tab-spoller')
+					tabsMediaItem.classList.add('tab-spoiler')
 				} else {
 					tabsTitles.append(tabsTitleItems[index])
-					tabsMediaItem.classList.remove('tab-spoller')
+					tabsMediaItem.classList.remove('tab-spoiler')
 				}
 			})
 		})

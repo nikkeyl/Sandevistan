@@ -2,12 +2,12 @@
 @use "@scss/abstracts" as *;
 @use "@scss/base/placeholders" as *;
 
-.spollers {
+.spoilers {
 	display: grid;
 	gap: rem(15);
 }
 
-.spoller {
+.spoiler {
 	&__title {
 		position: relative;
 		border: rem(1) solid var(--color-gray);
@@ -17,7 +17,7 @@
 		text-align: left;
 		cursor: default;
 
-		.spoller-init & {
+		.spoiler-init & {
 			cursor: pointer;
 
 			&::before,
@@ -40,7 +40,7 @@
 				transform: translate(0, -50%) rotate(-40deg);
 			}
 
-			&.spoller-active {
+			&.spoiler-active {
 				&::before {
 					transform: translateX(-75%) rotate(-40deg);
 				}

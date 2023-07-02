@@ -6,7 +6,7 @@ import '@js/script'
 
 // import { showMore } from '@js/components/showMore'
 
-// import { spollers } from '@js/components/spollers'
+// import { spoilers } from '@js/components/spoilers'
 
 // import { counter } from '@js/components/counter'
 
@@ -90,7 +90,7 @@ import { webp } from '@js/modules/webp'
 
 // ----------------------------------------------------------------COMPONENTS
 // showMore()
-// spollers()
+// spoilers()
 // counter()
 // filter()
 menuInit()
