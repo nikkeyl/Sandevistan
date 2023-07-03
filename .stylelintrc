@@ -44,6 +44,10 @@
 			},
 			{
 				"type": "rule",
+				"selector": "&:focus-visible"
+			},
+			{
+				"type": "rule",
 				"selector": "&:hover"
 			},
 			{
