@@ -2,7 +2,6 @@ import { html } from '@js/helpers/nodeList'
 
 function colorScheme() {
 	window.addEventListener('load', () => {
-		const htmlBlock = html
 		const saveUserTheme = localStorage.getItem('user-theme')
 
 		let userTheme
@@ -19,42 +18,32 @@ function colorScheme() {
 				!saveUserTheme ? changeTheme() : null
 			})
 
-		const themeButton = document.querySelector('.theme-change')
-		const resetButton = document.querySelector('.reset-theme')
+		const switchThemeButton = document.querySelector('.switch-theme')
 
-		if (themeButton) {
-			themeButton.addEventListener('click', () => {
-				resetButton.classList.add('active')
+		if (switchThemeButton) {
+			switchThemeButton.addEventListener('click', () => {
 				changeTheme(true)
-			})
-		}
-
-		if (resetButton) {
-			resetButton.addEventListener('click', () => {
-				resetButton.classList.remove('active')
-				localStorage.setItem('user-theme', '')
 			})
 		}
 
 		function setThemeClass() {
 			if (saveUserTheme) {
-				htmlBlock.classList.add(saveUserTheme)
-				resetButton.classList.add('active')
+				html.classList.add(saveUserTheme)
 			} else {
-				htmlBlock.classList.add(userTheme)
+				html.classList.add(userTheme)
 			}
 		}
 
 		setThemeClass()
 
 		function changeTheme(saveTheme = false) {
-			const currentTheme = htmlBlock.classList.contains('light') ? 'light' : 'dark'
+			const currentTheme = html.classList.contains('light') ? 'light' : 'dark'
 
 			let newTheme
 
 			currentTheme === 'light' ? (newTheme = 'dark') : (newTheme = 'light')
-			htmlBlock.classList.remove(currentTheme)
-			htmlBlock.classList.add(newTheme)
+			html.classList.remove(currentTheme)
+			html.classList.add(newTheme)
 			saveTheme ? localStorage.setItem('user-theme', newTheme) : null
 		}
 	})

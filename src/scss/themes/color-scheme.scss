@@ -2,31 +2,8 @@
 @use "@scss/base/placeholders" as *;
 
 /* Color scheme styles */
-.theme-change {
+.switch-theme {
 	width: rem(30);
 	height: rem(30);
 	transition: background-color 0.6s;
-}
-
-.reset-theme {
-	$font-size: 18;
-
-	border-radius: 50%;
-	width: rem(15);
-	height: rem(15);
-	font-size: rem($font-size);
-	color: var(--color-light);
-	background-color: var(--color-dark);
-	opacity: 0;
-	visibility: hidden;
-	transition: opacity 0.3s, visibility 0.3s;
-
-	&::before {
-		content: "X";
-	}
-
-	&.active {
-		opacity: 1;
-		visibility: visible;
-	}
 }
