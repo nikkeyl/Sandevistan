@@ -2,7 +2,7 @@
 @use "@scss/abstracts" as *;
 @use "@scss/base/placeholders" as *;
 
-.burger-icon {
+.hamburger {
 	@include media-min-max {
 		position: relative;
 		z-index: 5;
@@ -34,7 +34,7 @@
 			top: calc(50% - rem(1));
 		}
 
-		.menu-open & {
+		&[aria-expended="true"] {
 			&::before {
 				top: calc(50% - rem(1));
 				transform: rotate(-45deg);

@@ -10,7 +10,7 @@ import '@js/script'
 
 // import { counter } from '@js/components/counter'
 
-import { menuInit } from '@js/components/menu'
+import { hamburger } from '@js/components/menu'
 
 // import { clock } from '@js/components/clock'
 
@@ -93,7 +93,7 @@ import { webp } from '@js/modules/webp'
 // spoilers()
 // counter()
 // filter()
-menuInit()
+hamburger()
 // clock()
 // tabs()
 

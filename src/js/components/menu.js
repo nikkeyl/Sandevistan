@@ -6,14 +6,19 @@ import {
 	bodyLock
 } from '@js/helpers/bodyLockToggle'
 
-function menuInit() {
-	if (document.querySelector('.burger-icon')) {
+function hamburger() {
+	const hamburger = document.querySelector('.hamburger')
+
+	if (hamburger) {
 		document.addEventListener('click', ({ target }) => {
-			if (bodyLockStatus && target.closest('.burger-icon')) {
+			if (bodyLockStatus && target.closest('.hamburger')) {
 				bodyLockToggle()
 				html.classList.toggle('menu-open')
-			} else if (bodyLockStatus && !target.closest('.menu__body')) {
+			}
+
+			if (bodyLockStatus && !target.closest('.menu__body')) {
 				html.classList.remove('menu-open')
+				bodyUnlock()
 			}
 		})
 		document.addEventListener('keyup', e => {
@@ -32,4 +37,4 @@ function menuClose() {
 	html.classList.remove('menu-open')
 }
 
-export { menuClose, menuOpen, menuInit }
+export { menuClose, menuOpen, hamburger }
