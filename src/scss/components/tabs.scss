@@ -3,11 +3,11 @@
 @use "@scss/base/placeholders" as *;
 
 .tabs {
-	&__navigation {
+	&__triggers {
 		display: flex;
 	}
 
-	&__title {
+	&__trigger {
 		border: rem(1) solid var(--color-gray);
 		padding: rem(10) rem(15);
 
@@ -16,7 +16,7 @@
 		}
 	}
 
-	&__content {
+	&__panels {
 		padding: rem(10) rem(15);
 	}
 }
