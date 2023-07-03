@@ -8,27 +8,17 @@ import '@js/script'
 
 // import { spoilers } from '@js/components/spoilers'
 
-// import { counter } from '@js/components/counter'
+import { hamburger } from '@js/components/hamburger'
 
-import { hamburger } from '@js/components/menu'
+// import { counter } from '@js/components/counter'
 
 // import { clock } from '@js/components/clock'
 
 // import { tabs } from '@js/components/tabs'
 
-// import { filter } from '@js/vendors/isotope'
-
 // import '@js/components/popup'
 
 // import '@js/components/map'
-
-// import '@js/vendors/gallery'
-
-// import '@js/vendors/marquee'
-
-// import '@js/vendors/swiper'
-
-// import '@js/vendors/tippy'
 
 // ----------------------------------------------------------------SCROLL
 
@@ -37,8 +27,6 @@ import { hamburger } from '@js/components/menu'
 // import { headerScroll } from '@js/modules/scroll/headerScroll'
 
 // import { ScrollWatcher } from '@js/modules/scroll/watcher'
-
-// import '@js/vendors/simpleBar'
 
 // ----------------------------------------------------------------FORMS
 
@@ -52,13 +40,7 @@ import { hamburger } from '@js/components/menu'
 
 // import { rating } from '@js/components/forms/rating'
 
-// import { range } from '@js/vendors/range'
-
 // import '@js/components/forms/select'
-
-// import '@js/vendors/datePicker'
-
-// import '@js/vendors/inputMask'
 
 // ----------------------------------------------------------------MODULES
 
@@ -76,8 +58,6 @@ import { hamburger } from '@js/components/menu'
 
 import { webp } from '@js/modules/webp'
 
-// import '@js/vendors/typed'
-
 // ----------------------------------------------------------------EFFECTS
 
 // import { hoverEffect } from '@js/effects/hoverEffect'
@@ -86,13 +66,34 @@ import { webp } from '@js/modules/webp'
 
 // import { glow } from '@js/effects/glow'
 
+// ----------------------------------------------------------------VENDORS
+
+// import { filter } from '@js/vendors/isotope'
+
+// import { range } from '@js/vendors/range'
+
+// import '@js/vendors/datePicker'
+
+// import '@js/vendors/simpleBar'
+
+// import '@js/vendors/inputMask'
+
+// import '@js/vendors/gallery'
+
+// import '@js/vendors/marquee'
+
+// import '@js/vendors/swiper'
+
+// import '@js/vendors/tippy'
+
+// import '@js/vendors/typed'
+
 // ==========================================================================
 
 // ----------------------------------------------------------------COMPONENTS
 // showMore()
 // spoilers()
 // counter()
-// filter()
 hamburger()
 // clock()
 // tabs()
@@ -111,7 +112,6 @@ hamburger()
 // wordLimit()
 // quantity()
 // rating()
-// range()
 
 // ----------------------------------------------------------------MODULES
 // new DynamicAdapt('max').init()
@@ -126,3 +126,7 @@ webp()
 // hoverEffect()
 // ripple()
 // glow()
+
+// ----------------------------------------------------------------VENDORS
+// filter()
+// range()
