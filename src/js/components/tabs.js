@@ -24,38 +24,38 @@ function tabs() {
 	const mdQueriesArray = dataMediaQueries(tabs, 'tabs')
 
 	if (mdQueriesArray && mdQueriesArray.length) {
-		mdQueriesArray.forEach(mdQueriesItem => {
-			mdQueriesItem.matchMedia.addEventListener('change', () => {
-				setTriggerPosition(mdQueriesItem.itemsArray, mdQueriesItem.matchMedia)
+		mdQueriesArray.forEach(mdQueriesPanel => {
+			mdQueriesPanel.matchMedia.addEventListener('change', () => {
+				setTriggerPosition(mdQueriesPanel.PanelsArray, mdQueriesPanel.matchMedia)
 			})
-			setTriggerPosition(mdQueriesItem.itemsArray, mdQueriesItem.matchMedia)
+			setTriggerPosition(mdQueriesPanel.PanelsArray, mdQueriesPanel.matchMedia)
 		})
 	}
 
 	function setTriggerPosition(tabsMediaArray, matchMedia) {
-		tabsMediaArray.forEach(tabsMediaItem => {
-			tabsMediaItem = tabsMediaItem.item
+		tabsMediaArray.forEach(tabsMediaPanel => {
+			tabsMediaPanel = tabsMediaPanel.panel
 
-			const tabsTriggers = tabsMediaItem.querySelector('[data-tabs-triggers]')
-			const tabsPanels = tabsMediaItem.querySelector('[data-tabs-panels]')
+			const tabsTriggers = tabsMediaPanel.querySelector('[data-tabs-triggers]')
+			const tabsPanels = tabsMediaPanel.querySelector('[data-tabs-panels]')
 
-			let tabsTriggerItems = tabsMediaItem.querySelectorAll('[data-tabs-trigger]')
-			let tabsPanelsItems = tabsMediaItem.querySelectorAll('[data-tabs-item]')
+			let tabsTriggerPanels = tabsMediaPanel.querySelectorAll('[data-tabs-trigger]')
+			let tabsPanelsPanels = tabsMediaPanel.querySelectorAll('[data-tabs-panel]')
 
-			tabsTriggerItems = Array.from(tabsTriggerItems).filter(
-				item => item.closest('[data-tabs]') === tabsMediaItem
+			tabsTriggerPanels = Array.from(tabsTriggerPanels).filter(
+				panel => panel.closest('[data-tabs]') === tabsMediaPanel
 			)
-			tabsPanelsItems = Array.from(tabsPanelsItems).filter(
-				item => item.closest('[data-tabs]') === tabsMediaItem
+			tabsPanelsPanels = Array.from(tabsPanelsPanels).filter(
+				panel => panel.closest('[data-tabs]') === tabsMediaPanel
 			)
-			tabsPanelsItems.forEach((tabsPanelsItem, index) => {
+			tabsPanelsPanels.forEach((tabsPanelsPanel, index) => {
 				if (matchMedia.matches) {
-					tabsPanels.append(tabsTriggerItems[index])
-					tabsPanels.append(tabsPanelsItem)
-					tabsMediaItem.classList.add('tab-spoiler')
+					tabsPanels.append(tabsTriggerPanels[index])
+					tabsPanels.append(tabsPanelsPanel)
+					tabsMediaPanel.classList.add('tab-spoiler')
 				} else {
-					tabsTriggers.append(tabsTriggerItems[index])
-					tabsMediaItem.classList.remove('tab-spoiler')
+					tabsTriggers.append(tabsTriggerPanels[index])
+					tabsMediaPanel.classList.remove('tab-spoiler')
 				}
 			})
 		})
@@ -70,25 +70,26 @@ function tabs() {
 
 		if (tabsActiveHashBlock) {
 			const tabsActiveTrigger = tabsBlock.querySelector(
-				'[data-tabs-triggers]>.tab-active'
+				'[data-tabs-triggers]>.trigger-active'
 			)
 
-			tabsActiveTrigger?.classList.remove('tab-active')
+			tabsActiveTrigger?.classList.remove('trigger-active')
 		}
 
 		tabsPanels = Array.from(tabsPanels).filter(
-			item => item.closest('[data-tabs]') === tabsBlock
+			panel => panel.closest('[data-tabs]') === tabsBlock
 		)
 		tabsTriggers = Array.from(tabsTriggers).filter(
-			item => item.closest('[data-tabs]') === tabsBlock
+			panel => panel.closest('[data-tabs]') === tabsBlock
 		)
-		tabsPanels.forEach((tabsPanelsItem, index) => {
+		tabsPanels.forEach((tabsPanelsPanel, index) => {
 			tabsTriggers[index].setAttribute('data-tabs-trigger', '')
-			tabsPanelsItem.setAttribute('data-tabs-item', '')
+			tabsPanelsPanel.setAttribute('data-tabs-panel', '')
 			tabsActiveHashBlock && index === tabsActiveHash[1]
-				? tabsTriggers[index].classList.add('tab-active')
+				? tabsTriggers[index].classList.add('trigger-active')
 				: null
-			tabsPanelsItem.hidden = !tabsTriggers[index].classList.contains('tab-active')
+			tabsPanelsPanel.hidden =
+				!tabsTriggers[index].classList.contains('trigger-active')
 		})
 	}
 
@@ -96,7 +97,7 @@ function tabs() {
 		const tabsBlockIndex = tabsBlock.dataset.tabsIndex
 
 		let tabsTriggers = tabsBlock.querySelectorAll('[data-tabs-trigger]')
-		let tabsPanels = tabsBlock.querySelectorAll('[data-tabs-item]')
+		let tabsPanels = tabsBlock.querySelectorAll('[data-tabs-panel]')
 
 		function isTabsAnamate(tabsBlock) {
 			if (tabsBlock.hasAttribute('data-tabs-animate')) {
@@ -108,23 +109,23 @@ function tabs() {
 		const isHash = tabsBlock.hasAttribute('data-tabs-hash')
 
 		tabsPanels = Array.from(tabsPanels).filter(
-			item => item.closest('[data-tabs]') === tabsBlock
+			panel => panel.closest('[data-tabs]') === tabsBlock
 		)
 		tabsTriggers = Array.from(tabsTriggers).filter(
-			item => item.closest('[data-tabs]') === tabsBlock
+			panel => panel.closest('[data-tabs]') === tabsBlock
 		)
-		tabsPanels.forEach((tabsPanelsItem, index) => {
-			if (tabsTriggers[index].classList.contains('tab-active')) {
+		tabsPanels.forEach((tabsPanelsPanel, index) => {
+			if (tabsTriggers[index].classList.contains('trigger-active')) {
 				tabsBlockAnimate
-					? slideDown(tabsPanelsItem, tabsBlockAnimate)
-					: (tabsPanelsItem.hidden = false)
-				isHash && !tabsPanelsItem.closest('.popup')
+					? slideDown(tabsPanelsPanel, tabsBlockAnimate)
+					: (tabsPanelsPanel.hidden = false)
+				isHash && !tabsPanelsPanel.closest('.popup')
 					? setHash(`tab-${tabsBlockIndex}-${index}`)
 					: null
 			} else if (tabsBlockAnimate) {
-				slideUp(tabsPanelsItem, tabsBlockAnimate)
+				slideUp(tabsPanelsPanel, tabsBlockAnimate)
 			} else {
-				tabsPanelsItem.hidden = true
+				tabsPanelsPanel.hidden = true
 			}
 		})
 	}
@@ -137,20 +138,20 @@ function tabs() {
 			const tabsBlock = tabTrigger.closest('[data-tabs]')
 
 			if (
-				!tabTrigger.classList.contains('tab-active') &&
+				!tabTrigger.classList.contains('trigger-active') &&
 				!tabsBlock.querySelector('.slide')
 			) {
 				let tabActiveTrigger = tabsBlock.querySelectorAll(
-					'[data-tabs-trigger].tab-active'
+					'[data-tabs-trigger].trigger-active'
 				)
 
 				tabActiveTrigger.length
 					? (tabActiveTrigger = Array.from(tabActiveTrigger).filter(
-							item => item.closest('[data-tabs]') === tabsBlock
+							panel => panel.closest('[data-tabs]') === tabsBlock
 					  ))
 					: null
-				removeClasses('[data-tabs-trigger].tab-active', 'tab-active')
-				tabTrigger.classList.add('tab-active')
+				removeClasses('[data-tabs-trigger].trigger-active', 'trigger-active')
+				tabTrigger.classList.add('trigger-active')
 				setTabsStatus(tabsBlock)
 			}
 
