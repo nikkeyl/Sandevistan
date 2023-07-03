@@ -13,7 +13,7 @@
 			transition: opacity 0.3s;
 		}
 
-		&:focus {
+		&:focus-visible {
 			&::placeholder {
 				opacity: 0;
 			}
