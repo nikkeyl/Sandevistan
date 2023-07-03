@@ -11,18 +11,24 @@ function hamburger() {
 
 	if (hamburger) {
 		document.addEventListener('click', ({ target }) => {
-			if (bodyLockStatus && target.closest('.hamburger')) {
-				bodyLockToggle()
+			if (bodyLockStatus && target.closest('.burger')) {
+				target.getAttribute('aria-expended') === 'false'
+					? burger.setAttribute('aria-expended', true)
+					: burger.setAttribute('aria-expended', false)
+
 				html.classList.toggle('menu-open')
+				bodyLockToggle()
 			}
 
 			if (bodyLockStatus && !target.closest('.menu__body')) {
+				burger.setAttribute('aria-expended', false)
 				html.classList.remove('menu-open')
 				bodyUnlock()
 			}
 		})
 		document.addEventListener('keyup', e => {
 			e.code === 'Escape' && html.classList.remove('menu-open')
+			burger.setAttribute('aria-expended', false)
 		})
 	}
 }
