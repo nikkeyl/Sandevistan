@@ -1,18 +1,14 @@
 @use "@scss/abstracts" as *;
 
 .wrapper {
-	display: grid;
-	grid-template-rows: auto 1fr auto;
+	display: flex;
+	flex-direction: column;
 
 	/* Set [overflow: clip;] for correct operation [position: sticky;] */
 	overflow: clip;
 	min-height: 100vh;
 
-	.lock & {
-		overflow: hidden;
-		touch-action: none;
-
-		/* Prevents chain scrolling */
-		overscroll-behavior: none;
+	> .page {
+		flex: 1 1 auto;
 	}
 }
