@@ -34,7 +34,7 @@
 			top: calc(50% - rem(1));
 		}
 
-		&[aria-expended="true"] {
+		&[aria-expanded="true"] {
 			&::before {
 				top: calc(50% - rem(1));
 				transform: rotate(-45deg);
