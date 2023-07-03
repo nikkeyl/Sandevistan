@@ -3,7 +3,7 @@
 @use "@scss/base/placeholders" as *;
 
 /* Marquee styles */
-[data-marquee] {
+[role="marquee"] {
 	$font-size: 18;
 
 	font-size: rem($font-size);
