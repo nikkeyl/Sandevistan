@@ -2,7 +2,7 @@
 import noUiSlider from 'nouislider'
 import wNumb from 'wnumb'
 
-import '@scss/components/forms/range'
+import '@scss/vendors/range-min'
 
 function range() {
 	const priceSlider = document.querySelector('[data-range]')
