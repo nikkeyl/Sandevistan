@@ -80,8 +80,6 @@ import { webp } from '@js/modules/webp'
 
 // import '@js/vendors/gallery'
 
-// import '@js/vendors/marquee'
-
 // import '@js/vendors/swiper'
 
 // import '@js/vendors/tippy'
