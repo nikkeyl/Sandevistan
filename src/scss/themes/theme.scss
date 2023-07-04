@@ -1,0 +1,33 @@
+@use "@scss/abstracts" as *;
+@use "@scss/base/placeholders" as *;
+
+/* Color scheme styles */
+.switch-theme {
+	width: rem(30);
+	height: rem(30);
+	transition: background-color 0.6s;
+}
+
+/* Dark theme styles */
+.dark {
+	body {
+		color: var(--color-light);
+		background-color: var(--color-dark-gray);
+	}
+
+	.theme-change {
+		background: url("@img/icons/sprite.svg#sun") 0 0 no-repeat;
+	}
+}
+
+/* Light theme styles */
+.light {
+	body {
+		color: var(--color-dark-gray);
+		background-color: var(--color-light);
+	}
+
+	.theme-change {
+		background: url("@img/icons/sprite.svg#moon") 0 0 no-repeat;
+	}
+}

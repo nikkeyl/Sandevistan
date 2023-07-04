@@ -1,9 +1,0 @@
-@use "@scss/abstracts" as *;
-@use "@scss/base/placeholders" as *;
-
-/* Color scheme styles */
-.switch-theme {
-	width: rem(30);
-	height: rem(30);
-	transition: background-color 0.6s;
-}
