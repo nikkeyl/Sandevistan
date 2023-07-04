@@ -1,10 +1,10 @@
 @use "sass:math" as *;
 @use "@scss/abstracts" as *;
-@use "@scss/base/placeholders" as *;
+@use "@scss/utils/placeholders" as *;
 
 body {
-	/* Overlay styles for popup */
 	&::after {
+		/* Overlay styles for popup */
 		@include pseudo("", fixed);
 
 		inset: 0;
