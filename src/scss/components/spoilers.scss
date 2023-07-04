@@ -10,7 +10,7 @@
 .spoiler {
 	&__title {
 		position: relative;
-		border: rem(1) solid var(--accent;
+		border: rem(1) solid var(--accent);
 		border-radius: rem(5);
 		padding: rem(10) rem(15);
 		width: 100%;
@@ -53,7 +53,7 @@
 	}
 
 	&__body {
-		border: rem(1) solid var(--accent;
+		border: rem(1) solid var(--accent);
 		padding: rem(20);
 	}
 }

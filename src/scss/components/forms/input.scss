@@ -3,10 +3,10 @@
 @use "@scss/utils/placeholders" as *;
 
 .input {
-	border: rem(1) solid var(--accent;
+	border: rem(1) solid var(--accent);
 	border-radius: rem(5);
 	padding: rem(5);
-	color: var(--accent;
+	color: var(--accent);
 
 	&:not([data-placeholder-nohidden]) {
 		&::placeholder {

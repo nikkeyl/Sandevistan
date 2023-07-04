@@ -11,7 +11,7 @@
 	}
 
 	&__title {
-		border: rem(1) solid var(--accent;
+		border: rem(1) solid var(--accent);
 		border-radius: rem(5);
 		width: 100%;
 		text-align: left;
@@ -69,7 +69,7 @@
 		position: absolute;
 		left: 0;
 		top: rem(30);
-		border: rem(1) solid var(--accent;
+		border: rem(1) solid var(--accent);
 		border-top: 0;
 		border-radius: 0 0 rem(5) rem(5);
 		padding: rem(10) 0 rem(5) 0;
@@ -98,7 +98,7 @@
 		cursor: pointer;
 
 		&.select-selected {
-			background-color: var(--accent;
+			background-color: var(--accent);
 		}
 
 		@include media-hover {
