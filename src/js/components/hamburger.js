@@ -12,23 +12,23 @@ function hamburger() {
 	if (hamburger) {
 		document.addEventListener('click', ({ target }) => {
 			if (bodyLockStatus && target.closest('.hamburger')) {
-				target.getAttribute('aria-expanded') === 'false'
-					? hamburger.setAttribute('aria-expanded', true)
-					: hamburger.setAttribute('aria-expanded', false)
+				target.ariaExpanded === 'false'
+					? (hamburger.ariaExpanded = true)
+					: (hamburger.ariaExpanded = false)
 
 				html.classList.toggle('menu-open')
 				bodyLockToggle()
 			}
 
 			if (bodyLockStatus && !target.closest('.menu__body')) {
-				hamburger.setAttribute('aria-expanded', false)
+				hamburger.ariaExpanded = false
 				html.classList.remove('menu-open')
 				bodyUnlock()
 			}
 		})
 		document.addEventListener('keyup', e => {
+			hamburger.ariaExpanded = false
 			e.code === 'Escape' && html.classList.remove('menu-open')
-			hamburger.setAttribute('aria-expanded', false)
 		})
 	}
 }
