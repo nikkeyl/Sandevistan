@@ -8,11 +8,11 @@
 	}
 
 	&__trigger {
-		border: rem(1) solid var(--color-gray);
+		border: rem(1) solid var(--accent;
 		padding: rem(10) rem(15);
 
 		&.trigger-active {
-			border: rem(1) solid var(--color-dark);
+			border: rem(1) solid var(--primary);
 		}
 	}
 

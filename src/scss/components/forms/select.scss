@@ -11,11 +11,11 @@
 	}
 
 	&__title {
-		border: rem(1) solid var(--color-gray);
+		border: rem(1) solid var(--accent;
 		border-radius: rem(5);
 		width: 100%;
 		text-align: left;
-		background-color: var(--color-light);
+		background-color: var(--secondary);
 		cursor: pointer;
 	}
 
@@ -69,13 +69,13 @@
 		position: absolute;
 		left: 0;
 		top: rem(30);
-		border: rem(1) solid var(--color-gray);
+		border: rem(1) solid var(--accent;
 		border-top: 0;
 		border-radius: 0 0 rem(5) rem(5);
 		padding: rem(10) 0 rem(5) 0;
 		min-width: 100%;
-		color: var(--color-dark);
-		background-color: var(--color-light);
+		color: var(--primary);
+		background-color: var(--secondary);
 	}
 
 	&__scroll {
@@ -98,11 +98,11 @@
 		cursor: pointer;
 
 		&.select-selected {
-			background-color: var(--color-gray);
+			background-color: var(--accent;
 		}
 
 		@include media-hover {
-			background-color: var(--color-light);
+			background-color: var(--secondary);
 		}
 	}
 

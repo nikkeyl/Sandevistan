@@ -4,7 +4,7 @@
 
 .quantity {
 	display: flex;
-	border: rem(2) solid var(--color-dark);
+	border: rem(2) solid var(--primary);
 	border-radius: rem(5);
 	width: rem(90);
 	height: rem(40);
@@ -22,7 +22,7 @@
 			border-radius: rem(1);
 			width: rem(10);
 			height: rem(1);
-			background-color: var(--color-dark);
+			background-color: var(--primary);
 			transition: background-color 0.3s;
 		}
 

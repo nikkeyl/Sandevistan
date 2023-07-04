@@ -12,7 +12,7 @@
 			padding: rem(80) 0 rem(30);
 			width: 100%;
 			height: 100%;
-			background-color: var(--color-light);
+			background-color: var(--secondary);
 			transition: left 0.3s;
 
 			&::before {
@@ -22,7 +22,7 @@
 				left: -100%;
 				top: 0;
 				width: 100%;
-				background-color: var(--color-dark-gray);
+				background-color: var(--primary);
 				transition: left 0.3s;
 			}
 
@@ -44,7 +44,7 @@
 		transition: color 0.3s;
 
 		@include media-hover {
-			color: var(--color-dark);
+			color: var(--primary);
 		}
 	}
 

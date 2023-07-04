@@ -11,8 +11,8 @@
 /* Dark theme styles */
 .dark {
 	body {
-		color: var(--color-light);
-		background-color: var(--color-dark-gray);
+		color: var(--secondary);
+		background-color: var(--primary);
 	}
 
 	.theme-change {
@@ -23,8 +23,8 @@
 /* Light theme styles */
 .light {
 	body {
-		color: var(--color-dark-gray);
-		background-color: var(--color-light);
+		color: var(--primary);
+		background-color: var(--secondary);
 	}
 
 	.theme-change {

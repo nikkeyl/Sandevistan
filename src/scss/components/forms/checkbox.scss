@@ -18,7 +18,7 @@
 
 		font-size: rem($font-size);
 		line-height: div(22, $font-size);
-		color: var(--color-dark);
+		color: var(--primary);
 	}
 
 	&__box {
@@ -27,7 +27,7 @@
 		position: relative;
 		flex: 0 0 rem($size);
 		align-self: flex-start;
-		border: rem(2) solid var(--color-gray);
+		border: rem(2) solid var(--accent;
 		border-radius: rem(5);
 		width: rem($size);
 		height: rem($size);
@@ -39,7 +39,7 @@
 			border-radius: rem(3);
 			width: rem(16);
 			height: rem(16);
-			background-color: var(--color-dark);
+			background-color: var(--primary);
 			transform: scale(0);
 			transition: transform 0.3s;
 		}
@@ -49,7 +49,7 @@
 			inset: rem(3);
 			width: rem(10);
 			height: rem(10);
-			fill: var(--color-light);
+			fill: var(--secondary);
 			transform: scale(0);
 		}
 	}

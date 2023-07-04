@@ -1,11 +1,10 @@
 :root {
-	--color-dark: #000;
-	--color-dark-gray: #333;
-	--color-gray: #888;
-	--color-light: #fff;
-	--color-yellow: #fe0;
-	--background-color: var(--color-light);
-	--text-color: var(--color-dark);
+	--primary: #000;
+	--secondary: #fff;
+	--accent: #333;
+	--inverse: #fe0;
+	--background-primary: var(--secondary);
+	--text-primary: var(--primary);
 	--font-family: "";
 	--font-size: 1rem;
 	--font-weight: 400;

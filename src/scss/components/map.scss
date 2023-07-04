@@ -4,8 +4,8 @@
 .map {
 	position: absolute;
 	inset: 50%;
-	border: rem(10) solid var(--color-light);
-	border-top-color: var(--color-dark-gray);
+	border: rem(10) solid var(--secondary);
+	border-top-color: var(--primary);
 	border-radius: 50%;
 	width: rem(100);
 	height: rem(100);

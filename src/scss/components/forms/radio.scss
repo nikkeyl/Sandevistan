@@ -18,7 +18,7 @@
 
 		font-size: rem($font-size);
 		line-height: div(22, $font-size);
-		color: var(--color-dark);
+		color: var(--primary);
 	}
 
 	&__box {
@@ -26,7 +26,7 @@
 
 		position: relative;
 		flex: 0 0 rem($size);
-		border: rem(2) solid var(--color-gray);
+		border: rem(2) solid var(--accent;
 		border-radius: 50%;
 		width: rem($size);
 		height: rem($size);
@@ -38,7 +38,7 @@
 			border-radius: 50%;
 			width: rem(13);
 			height: rem(13);
-			background-color: var(--color-dark);
+			background-color: var(--primary);
 			transform: translate(-50%, -50%) scale(0);
 			transition: transform 0.3s;
 		}
