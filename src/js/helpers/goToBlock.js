@@ -1,4 +1,4 @@
-import { menuClose } from '@js/components/menu'
+import { menuClose } from '@js/components/hamburger'
 import { html } from '@js/helpers/nodeList'
 import SmoothScroll from 'smooth-scroll'
 

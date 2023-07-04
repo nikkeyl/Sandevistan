@@ -5,7 +5,7 @@
 .hamburger {
 	@include media-min-max {
 		position: relative;
-		z-index: 5;
+		z-index: 1;
 		display: block;
 		width: rem(30);
 		height: rem(20);

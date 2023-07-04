@@ -15,7 +15,6 @@ function hamburger() {
 				target.ariaExpanded === 'false'
 					? (hamburger.ariaExpanded = true)
 					: (hamburger.ariaExpanded = false)
-
 				html.classList.toggle('menu-open')
 				bodyLockToggle()
 			}

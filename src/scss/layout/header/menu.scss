@@ -25,14 +25,6 @@
 				background-color: var(--primary);
 				transition: left 0.3s;
 			}
-
-			.menu-open & {
-				left: 0;
-
-				&::before {
-					left: 0;
-				}
-			}
 		}
 	}
 
@@ -61,6 +53,18 @@
 			flex-direction: column;
 			align-items: center;
 			row-gap: rem(20);
+		}
+	}
+}
+
+.hamburger[aria-expanded="true"] {
+	@include media-max($tablet) {
+		& + .menu__body {
+			left: 0;
+
+			&::before {
+				left: 0;
+			}
 		}
 	}
 }
