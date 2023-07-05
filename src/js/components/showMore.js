@@ -127,13 +127,13 @@ function showMore() {
 					const hiddenHeight = getHeight(showMoreBlock, showMoreContent)
 
 					if (!showMoreContent.classList.contains('slide')) {
-						showMoreContent.ariaExpanded === 'true'
+						showMoreButton.ariaExpanded === 'true'
 							? slideUp(showMoreContent, showMoreSpeed, hiddenHeight)
 							: slideDown(showMoreContent, showMoreSpeed, hiddenHeight)
 
-						showMoreContent.ariaExpanded === 'true'
-							? showMoreContent.ariaExpanded = false
-							: showMoreContent.ariaExpanded = true
+						showMoreButton.ariaExpanded === 'true'
+							? (showMoreButton.ariaExpanded = false)
+							: (showMoreButton.ariaExpanded = true)
 					}
 				}
 			} else if (targetType === 'resize') {
