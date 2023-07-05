@@ -73,6 +73,7 @@
 		position: absolute;
 		left: 0;
 		top: rem(31);
+		z-index: 5;
 		border: rem(1) solid var(--accent);
 		border-top: 0;
 		border-radius: 0 0 rem(5) rem(5);
