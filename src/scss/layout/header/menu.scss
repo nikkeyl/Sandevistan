@@ -56,15 +56,3 @@
 		}
 	}
 }
-
-.hamburger[aria-expanded="true"] {
-	@include media-max($tablet) {
-		& + .menu__body {
-			left: 0;
-
-			&::before {
-				left: 0;
-			}
-		}
-	}
-}
