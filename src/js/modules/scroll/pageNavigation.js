@@ -1,4 +1,4 @@
-import { gotoBlock } from '@js/helpers/goToBlock'
+import { goToBlock } from '@js/helpers/goToBlock'
 import { getHash } from '@js/helpers/getHash'
 
 function pageNavigation() {
@@ -16,7 +16,7 @@ function pageNavigation() {
 				const gotoSpeed = gotoLink.dataset.gotoSpeed || 500
 				const offsetTop = parseInt(gotoLink.dataset.gotoTop) || 0
 
-				gotoBlock(gotoLinkSelector, noHeader, gotoSpeed, offsetTop)
+				goToBlock(gotoLinkSelector, noHeader, gotoSpeed, offsetTop)
 				e.preventDefault()
 			}
 		} else if (e.type === 'watcherCallback' && e.detail) {
@@ -62,7 +62,7 @@ function pageNavigation() {
 		document.querySelector(`#${getHash()}`)
 			? (goToHash = `#${getHash()}`)
 			: (goToHash = `.${getHash()}`)
-		goToHash ? gotoBlock(goToHash, true, 500, 20) : null
+		goToHash ? goToBlock(goToHash, true, 500, 20) : null
 	}
 }
 

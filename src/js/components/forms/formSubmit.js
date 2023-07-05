@@ -1,6 +1,6 @@
 import { formValidate } from '@js/components/forms/formValidate'
 import { nodeObjects } from '@js/helpers/nodeList'
-import { gotoBlock } from '@js/helpers/goToBlock'
+import { goToBlock } from '@js/helpers/goToBlock'
 
 function formSubmit() {
 	const forms = document.forms
@@ -64,7 +64,7 @@ function formSubmit() {
 			) {
 				const formGoToErrorClass = form.dataset.gotoError || '.form-error'
 
-				gotoBlock(formGoToErrorClass, true, 1000)
+				goToBlock(formGoToErrorClass, true, 1000)
 			}
 		}
 	}
