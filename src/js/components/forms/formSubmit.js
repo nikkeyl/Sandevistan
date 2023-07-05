@@ -70,7 +70,6 @@ function formSubmit() {
 	}
 
 	function formSent(form) {
-		document.dispatchEvent(new CustomEvent('formSent', { detail: form }))
 		setTimeout(() => {
 			if (nodeObjects.popup) {
 				const popup = form.dataset.popupMessage

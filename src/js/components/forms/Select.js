@@ -577,8 +577,6 @@ class SelectConstructor {
 		}
 
 		const selectItem = originalSelect.parentElement
-
-		this.selectCallback(selectItem, originalSelect)
 	}
 
 	selectDisabled(selectItem, originalSelect) {
@@ -625,12 +623,6 @@ class SelectConstructor {
 			})
 			selectOptions.hidden === true ? that.selectAction(selectItem) : null
 		})
-	}
-
-	selectCallback(originalSelect) {
-		document.dispatchEvent(
-			new CustomEvent('selectCallback', { detail: { select: originalSelect } })
-		)
 	}
 }
 nodeObjects.select = new SelectConstructor({})

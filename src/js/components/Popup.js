@@ -240,9 +240,9 @@ class Popup {
 				}
 
 				this.options.on.beforeOpen(this)
-				document.dispatchEvent(
-					new CustomEvent('beforePopupOpen', { detail: { popup: this } })
-				)
+				// document.dispatchEvent(
+				// 	new CustomEvent('beforePopupOpen', { detail: { popup: this } })
+				// )
 				this.targetOpen.element.classList.add(this.options.classes.popupActive)
 				html.classList.add(this.options.classes.bodyActive)
 
@@ -261,9 +261,9 @@ class Popup {
 					this.focusTrap()
 				}, 50)
 				this.options.on.afterOpen(this)
-				document.dispatchEvent(
-					new CustomEvent('afterPopupOpen', { detail: { popup: this } })
-				)
+				// document.dispatchEvent(
+				// 	new CustomEvent('afterPopupOpen', { detail: { popup: this } })
+				// )
 			}
 		}
 	}
@@ -282,9 +282,9 @@ class Popup {
 		}
 
 		this.options.on.beforeClose(this)
-		document.dispatchEvent(
-			new CustomEvent('beforePopupClose', { detail: { popup: this } })
-		)
+		// document.dispatchEvent(
+		// 	new CustomEvent('beforePopupClose', { detail: { popup: this } })
+		// )
 
 		if (this.youTubeCode) {
 			if (
@@ -315,9 +315,9 @@ class Popup {
 		}
 
 		this.options.on.afterClose(this)
-		document.dispatchEvent(
-			new CustomEvent('afterPopupClose', { detail: { popup: this } })
-		)
+		// document.dispatchEvent(
+		// 	new CustomEvent('afterPopupClose', { detail: { popup: this } })
+		// )
 		setTimeout(() => {
 			this.focusTrap()
 		}, 50)

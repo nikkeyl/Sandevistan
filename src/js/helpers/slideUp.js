@@ -23,8 +23,6 @@ const slideUp = (target, duration = 500, showmore = 0) => {
 			target.style.removeProperty('transition-duration')
 			target.style.removeProperty('transition-property')
 			target.classList.remove('slide')
-
-			document.dispatchEvent(new CustomEvent('slideUpDone', { detail: target }))
 		}, duration)
 	}
 }
