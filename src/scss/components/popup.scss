@@ -29,9 +29,9 @@ body {
 .popup {
 	position: fixed;
 	inset: 0;
+	padding: rem(30) rem(div($container-padding, 2));
 	visibility: hidden;
 	transition: visibility 0.8s;
-	padding: rem(30) rem(div($container-padding, 2));
 	pointer-events: none;
 
 	&__wrapper {
