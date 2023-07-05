@@ -1,4 +1,4 @@
-import { menuClose } from '@js/components/hamburger'
+import { bodyUnlock } from '@js/helpers/bodyLockToggle'
 import { html } from '@js/helpers/nodeList'
 import SmoothScroll from 'smooth-scroll'
 
@@ -15,14 +15,10 @@ const gotoBlock = (targetBlock, noHeader = false, speed = 500, offsetTop = 0) =>
 			const headerElement = document.querySelector(headerItem)
 
 			if (!headerElement.classList.contains('header-scroll')) {
-				headerElement.style.cssText = 'transition-duration: 0s;'
+				headerElement.style.cssText = 'transition-duration: 0;'
 				headerElement.classList.add('header-scroll')
 				headerItemHeight = headerElement.offsetHeight
 				headerElement.classList.remove('header-scroll')
-
-				// setTimeout(() => {
-				// 	headerElement.style.cssText = ``;
-				// }, 0);
 			} else {
 				headerItemHeight = headerElement.offsetHeight
 			}
@@ -36,7 +32,7 @@ const gotoBlock = (targetBlock, noHeader = false, speed = 500, offsetTop = 0) =>
 			easing: 'easeOutQuad'
 		}
 
-		html.classList.contains('menu-open') ? menuClose() : null
+		html.classList.contains('lock') ? bodyUnlock() : null
 
 		if (typeof SmoothScroll !== 'undefined') {
 			new SmoothScroll().animateScroll(targetBlockElement, '', options)
@@ -51,8 +47,7 @@ const gotoBlock = (targetBlock, noHeader = false, speed = 500, offsetTop = 0) =>
 				? targetBlockElementPosition - offsetTop
 				: targetBlockElementPosition
 			window.scrollTo({
-				top: targetBlockElementPosition,
-				behavior: 'smooth'
+				top: targetBlockElementPosition
 			})
 		}
 	}

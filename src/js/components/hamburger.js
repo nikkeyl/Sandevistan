@@ -2,44 +2,37 @@ import { html } from '@js/helpers/nodeList'
 import {
 	bodyLockStatus,
 	bodyLockToggle,
-	bodyUnlock,
-	bodyLock
+	bodyUnlock
 } from '@js/helpers/bodyLockToggle'
 
-function hamburger() {
-	const hamburger = document.querySelector('.hamburger')
+const burger = document.querySelector('.hamburger')
 
-	if (hamburger) {
+function hamburger() {
+	if (burger) {
 		document.addEventListener('click', ({ target }) => {
 			if (bodyLockStatus && target.closest('.hamburger')) {
-				target.ariaExpanded === 'false'
-					? (hamburger.ariaExpanded = true)
-					: (hamburger.ariaExpanded = false)
-				html.classList.toggle('menu-open')
+				!html.classList.contains('lock')
+					? (burger.ariaExpanded = true)
+					: (burger.ariaExpanded = false)
 				bodyLockToggle()
 			}
 
-			if (bodyLockStatus && !target.closest('.menu__body')) {
-				hamburger.ariaExpanded = false
-				html.classList.remove('menu-open')
+			if (
+				bodyLockStatus &&
+				!target.closest('.menu__body') &&
+				!target.closest('.popup')
+			) {
+				burger.ariaExpanded = false
 				bodyUnlock()
 			}
 		})
 		document.addEventListener('keyup', e => {
-			hamburger.ariaExpanded = false
-			e.code === 'Escape' && html.classList.remove('menu-open')
+			if (e.code === 'Escape') {
+				burger.ariaExpanded = false
+				bodyUnlock()
+			}
 		})
 	}
 }
 
-function menuOpen() {
-	bodyLock()
-	html.classList.add('menu-open')
-}
-
-function menuClose() {
-	bodyUnlock()
-	html.classList.remove('menu-open')
-}
-
-export { menuClose, menuOpen, hamburger }
+export { hamburger, burger }

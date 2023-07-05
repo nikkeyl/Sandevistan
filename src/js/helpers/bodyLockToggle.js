@@ -1,32 +1,25 @@
-import { lockPadding, html, body } from '@js/helpers/nodeList'
+import { html, body } from '@js/helpers/nodeList'
+import { burger } from '@js/components/hamburger'
 
 let bodyLockStatus = true
 
-function delayToggle(delay) {
+function delayToggle(delay = 500) {
 	bodyLockStatus = false
 	setTimeout(() => {
 		bodyLockStatus = true
 	}, delay)
 }
 
-const bodyUnlock = (delay = 500) => {
+const bodyUnlock = delay => {
 	if (bodyLockStatus) {
-		setTimeout(() => {
-			lockPadding.forEach(el => {
-				el.style.paddingRight = '0px'
-			})
-			body.style.paddingRight = '0px'
-			html.classList.remove('lock')
-		}, delay)
+		body.style.paddingRight = 0
+		html.classList.remove('lock')
+		burger.ariaExpanded = false
 		delayToggle(delay)
 	}
 }
-const bodyLock = (delay = 500) => {
+const bodyLock = delay => {
 	if (bodyLockStatus) {
-		lockPadding.forEach(el => {
-			el.style.paddingRight =
-				window.innerWidth - document.querySelector('.wrapper').offsetWidth + 'px'
-		})
 		body.style.paddingRight =
 			window.innerWidth - document.querySelector('.wrapper').offsetWidth + 'px'
 		html.classList.add('lock')
@@ -35,7 +28,7 @@ const bodyLock = (delay = 500) => {
 }
 
 /*! Blocks page scrolling  */
-const bodyLockToggle = (delay = 500) => {
+const bodyLockToggle = delay => {
 	html.classList.contains('lock') ? bodyUnlock(delay) : bodyLock(delay)
 }
 
