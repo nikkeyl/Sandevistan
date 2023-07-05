@@ -7,18 +7,24 @@
 	gap: rem(10);
 }
 
+[data-showmore-content] {
+	&[aria-expanded="true"] {
+		+ [data-showmore-button] {
+			span {
+				display: none;
+
+				&:last-child {
+					display: block;
+				}
+			}
+		}
+	}
+}
+
 [data-showmore-button] {
 	span {
 		&:last-child {
 			display: none;
-		}
-
-		.showmore-active & {
-			display: none;
-
-			&:last-child {
-				display: block;
-			}
 		}
 	}
 }
