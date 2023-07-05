@@ -18,7 +18,7 @@ function colorScheme() {
 				!saveUserTheme ? changeTheme() : null
 			})
 
-		const switchThemeButton = document.querySelector('.switch-theme')
+		const switchThemeButton = document.querySelector('[role="switch"]')
 
 		if (switchThemeButton) {
 			switchThemeButton.addEventListener('click', () => {

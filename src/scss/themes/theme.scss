@@ -2,7 +2,7 @@
 @use "@scss/utils/placeholders" as *;
 
 /* Color scheme styles */
-.switch-theme {
+[role="switch"] {
 	width: rem(30);
 	height: rem(30);
 	transition: background-color 0.6s;
