@@ -3,7 +3,6 @@
 @use "@scss/utils/placeholders" as *;
 
 .select {
-	position: relative;
 	min-width: 0;
 
 	&__body {
@@ -16,14 +15,19 @@
 		width: 100%;
 		text-align: left;
 		background-color: var(--secondary);
-		cursor: pointer;
+		transition: border-radius 0.3s;
+
+		.select-open & {
+			border-bottom-right-radius: 0;
+			border-bottom-left-radius: 0;
+		}
 	}
 
 	&__value {
 		display: flex;
 		align-items: center;
 		gap: rem(10);
-		padding: 0 rem(15);
+		padding: 0 rem(12.5);
 		height: rem(30);
 
 		&::after {
@@ -40,16 +44,16 @@
 			}
 		}
 
-		> * {
-			flex: 1 1 auto;
-		}
-
 		&.select-pseudo-label {
 			&::before {
 				content: attr(data-pseudo-label);
 				opacity: 0.5;
 			}
 		}
+	}
+
+	&__content {
+		flex: 1 1 auto;
 	}
 
 	&__text {
@@ -68,11 +72,11 @@
 	&__options {
 		position: absolute;
 		left: 0;
-		top: rem(30);
+		top: rem(31);
 		border: rem(1) solid var(--accent);
 		border-top: 0;
 		border-radius: 0 0 rem(5) rem(5);
-		padding: rem(10) 0 rem(5) 0;
+		padding: rem(5);
 		min-width: 100%;
 		color: var(--primary);
 		background-color: var(--secondary);
@@ -91,32 +95,30 @@
 	}
 
 	&__option {
-		padding: rem(5) rem(15);
+		border-radius: rem(5);
+		padding: rem(5) rem(7.5);
 		width: 100%;
 		text-align: left;
 		color: inherit;
-		cursor: pointer;
+		transition: background-color 0.3s, color 0.3s;
 
-		&.select-selected {
-			background-color: var(--accent);
-		}
+		// &.select-selected {
+		// }
 
 		@include media-hover {
-			background-color: var(--secondary);
+			color: var(--secondary);
+			background-color: var(--accent);
 		}
 	}
 
-	&__row {
-		display: inline-flex;
-		align-items: center;
-	}
+	// &__row {
+	// }
 
 	// &__asset {
 	// }
 
-	&.select-open {
-		z-index: 5;
-	}
+	// &.select-open {
+	// }
 
 	&--show-top {
 		.select__options {
@@ -124,7 +126,7 @@
 			bottom: calc(100% - rem(1));
 			border: rem(1) solid #d9d9d9;
 			border-bottom: 0;
-			border-radius: rem(4) rem(4) 0 0;
+			border-radius: 0 0 rem(5) rem(5);
 			padding: rem(5) 0 rem(10) 0;
 		}
 	}
