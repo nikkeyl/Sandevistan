@@ -64,16 +64,13 @@ address {
 	font-style: normal;
 }
 
+input[type="checkbox"],
 input[type="search"],
+input[type="radio"],
 input[type="email"],
 input[type="text"],
 input[type="tel"] {
 	appearance: none;
-}
-
-input[type="checkbox"],
-input[type="radio"] {
-	user-select: none;
 }
 
 textarea,
@@ -99,6 +96,10 @@ button {
 
 a {
 	text-decoration: none;
+}
+
+label {
+	user-select: none;
 }
 
 button,
