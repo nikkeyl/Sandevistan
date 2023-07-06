@@ -8,10 +8,11 @@
 
 .checkbox {
 	$font-size: 18;
+	$fix-size: 18;
 
 	display: flex;
 	align-items: center;
-	gap: rem(10);
+	gap: em(10, $fix-size);
 	max-width: fit-content;
 	font-size: rem($font-size);
 	line-height: div(22, $font-size);
@@ -21,17 +22,18 @@
 		$size: 20;
 
 		position: relative;
-		flex: 0 0 em($size, 18);
-		border: rem(2) solid var(--accent);
-		border-radius: rem(5);
-		height: em($size, 18);
+		overflow: hidden;
+		flex: 0 0 em($size, $fix-size);
+		border: em(2, $fix-size) solid var(--accent);
+		border-radius: em(5, $fix-size);
+		height: em($size, $fix-size);
 		background-color: var(--secondary);
 
 		&::after {
 			@include pseudo;
 
 			inset: 0;
-			border-radius: rem(3);
+			border-radius: em(3, $fix-size);
 			background-color: var(--primary);
 			transform: scale(0);
 			transition: transform 0.3s;
@@ -39,10 +41,12 @@
 
 		svg {
 			position: absolute;
-			inset: rem(3);
-			width: rem(10);
-			height: rem(10);
+			inset: em(3, $fix-size);
+			width: em(10, $fix-size);
+			z-index: 1;
+			height: em(10, $fix-size);
 			fill: var(--secondary);
+			transition: transform 0.3s;
 			transform: scale(0);
 		}
 	}
@@ -60,7 +64,7 @@
 
 		/* Focused */
 		&:checked:focus-visible + .checkbox__box {
-			outline: em(0.5, 18) solid var(--inverse);
+			outline: em(0.5, $fix-size) solid var(--inverse);
 
 			&::after,
 			svg {
@@ -69,7 +73,7 @@
 		}
 
 		&:focus-visible + .checkbox__box {
-			outline: em(0.5, 18) solid var(--inverse);
+			outline: em(0.5, $fix-size) solid var(--inverse);
 
 			&::after,
 			svg {
@@ -92,6 +96,6 @@
 	}
 
 	&:not(:last-child) {
-		margin-bottom: em(5, 18);
+		margin-bottom: em(5, $fix-size);
 	}
 }
