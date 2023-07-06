@@ -8,6 +8,7 @@
 	border: 0;
 	padding: 0;
 	box-sizing: border-box;
+	font: inherit;
 
 	@media (prefers-reduced-motion: reduce) {
 		/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
@@ -19,8 +20,8 @@
 
 html,
 body {
-	height: 100vh;
 	min-width: $min-width + px;
+	min-height: 100vh;
 	scroll-behavior: smooth;
 }
 
@@ -37,9 +38,10 @@ body {
 	-webkit-font-smoothing: antialiased;
 }
 
-:focus,
-:active {
-	outline: none;
+:focus-visible {
+	/* Styles for a contrasting theme */
+	outline-color: transparent;
+	outline: rem(2) solid var(--inverse);
 }
 
 /* Remove markers */
@@ -53,6 +55,7 @@ ol {
 picture,
 iframe,
 input,
+video,
 img,
 svg {
 	display: block;
@@ -66,19 +69,6 @@ address {
 
 input {
 	appearance: none;
-}
-
-textarea,
-select,
-button,
-input,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	font: inherit;
 }
 
 textarea {

@@ -1,6 +1,6 @@
 import { app } from '../../gulpfile.js'
 
-import webpHtmlNosvg from 'gulp-webp-html-nosvg'
+import webpHtmlNoSvg from 'gulp-webp-html-nosvg'
 import versionNumber from 'gulp-version-number'
 import htmlMin from 'gulp-htmlmin'
 
@@ -9,7 +9,7 @@ const html = () =>
     .pipe(app.plugins.catchError('HTML'))
     .pipe(app.plugins.if(
       app.isNoWebp,
-      webpHtmlNosvg()
+      webpHtmlNoSvg()
     ))
     .pipe(versionNumber({
       'value': '%DT%',

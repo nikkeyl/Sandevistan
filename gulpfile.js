@@ -30,7 +30,7 @@ const build = gulp.series(
 const dev = gulp.parallel(fonts, sprite)
 const runFTP = gulp.series(build, ftp)
 const app = {
-	isNoWebp: !argv.includes('--nowebp'),
+	isNoWebp: !argv.includes('--no-webp'),
 	plugins,
 	paths,
 	gulp

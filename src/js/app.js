@@ -48,13 +48,13 @@ import { hamburger } from '@js/components/hamburger'
 
 // import { addLoadedClass } from '@js/modules/addLoadedClass'
 
+// import { fullScreenFix } from '@js/modules/fullScreenFix'
+
+// import { MouseParallax } from '@js/modules/MouseParallax'
+
 // import { colorScheme } from '@js/modules/colorScheme'
 
-// import { fullVHfix } from '@js/modules/fullScreenFix'
-
 // import { DynamicAdapt } from '@js/modules/dynAdapt'
-
-// import { MousePRLX } from '@js/modules/mousePRLX'
 
 import { webp } from '@js/modules/webp'
 
@@ -113,11 +113,11 @@ hamburger()
 
 // ----------------------------------------------------------------MODULES
 // new DynamicAdapt('max').init()
+// new MouseParallax()
 // changeFontSize()
 // addLoadedClass()
-// new MousePRLX()
+// fullScreenFix()
 // colorScheme()
-// fullVHfix()
 webp()
 
 // ----------------------------------------------------------------EFFECTS

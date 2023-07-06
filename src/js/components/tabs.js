@@ -99,13 +99,13 @@ function tabs() {
 		let tabsTriggers = tabsBlock.querySelectorAll('[data-tabs-trigger]')
 		let tabsPanels = tabsBlock.querySelectorAll('[data-tabs-panel]')
 
-		function isTabsAnamate(tabsBlock) {
+		function isTabsAnimate(tabsBlock) {
 			if (tabsBlock.hasAttribute('data-tabs-animate')) {
 				return +tabsBlock.dataset.tabsAnimate || 500
 			}
 		}
 
-		const tabsBlockAnimate = isTabsAnamate(tabsBlock)
+		const tabsBlockAnimate = isTabsAnimate(tabsBlock)
 		const isHash = tabsBlock.hasAttribute('data-tabs-hash')
 
 		tabsPanels = Array.from(tabsPanels).filter(

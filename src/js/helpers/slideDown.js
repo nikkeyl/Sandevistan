@@ -1,13 +1,13 @@
-const slideDown = (target, duration = 500, showmore = 0) => {
+const slideDown = (target, duration = 500, showMore = 0) => {
 	if (!target.classList.contains('slide')) {
 		target.classList.add('slide')
 		target.hidden = target.hidden ? false : null
-		showmore ? target.style.removeProperty('height') : null
+		showMore ? target.style.removeProperty('height') : null
 
 		const height = target.offsetHeight
 
 		target.style.overflow = 'hidden'
-		target.style.height = `${showmore}px`
+		target.style.height = `${showMore}px`
 		target.style.paddingTop = 0
 		target.style.paddingBottom = 0
 		target.style.marginTop = 0

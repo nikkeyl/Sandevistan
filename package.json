@@ -8,7 +8,7 @@
 		"init": "rm -rf .git && npm i",
 		"dev": "gulp && webpack serve -c config/webpack/webpack.dev.js",
 		"build": "gulp build",
-		"devBuild": "gulp build --nowebp",
+		"devBuild": "gulp build --no-webp",
 		"deploy": "gulp deploy -d dist",
 		"sprite": "gulp sprite",
 		"fonts": "gulp fonts",

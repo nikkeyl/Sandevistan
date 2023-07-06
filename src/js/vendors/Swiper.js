@@ -76,7 +76,7 @@ function initSliders() {
         /* Fix: применить при не правильном числе слайдов */
         // init: swiper => {
         //     const allSlides = document.querySelector(
-        //         '.fraction-controll__all'
+        //         '.fraction-control__all'
         //     )
         //     const allSlidesItems = document.querySelectorAll(
         //         '.slide-main-block:not(.swiper-slide-duplicate)'
@@ -88,7 +88,7 @@ function initSliders() {
         // },
         // slideChange: swiper => {
         //     const currentSlide = document.querySelector(
-        //         '.fraction-controll__current'
+        //         '.fraction-control__current'
         //     )
         //     currentSlide.innerHTML =
         //         swiper.realIndex + 1 < 10

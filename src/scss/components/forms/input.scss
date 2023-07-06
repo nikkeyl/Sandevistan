@@ -8,7 +8,7 @@
 	padding: rem(5);
 	color: var(--accent);
 
-	&:not([data-placeholder-nohidden]) {
+	&:not([data-placeholder-unhidden]) {
 		&::placeholder {
 			transition: opacity 0.3s;
 		}

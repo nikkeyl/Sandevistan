@@ -37,28 +37,28 @@ function formFieldsInit(
 		document.addEventListener('click', e => {
 			const targetElement = e.target
 
-			if (targetElement.closest('[class*="__viewpass"]')) {
-				const inputType = targetElement.classList.contains('viewpass-active')
+			if (targetElement.closest('[class*="__view-pass"]')) {
+				const inputType = targetElement.classList.contains('view-pass')
 					? 'password'
 					: 'text'
 
 				targetElement.parentElement
 					.querySelector('input')
 					.setAttribute('type', inputType)
-				targetElement.classList.toggle('viewpass-active')
+				targetElement.classList.toggle('view-pass')
 			}
 		})
 	}
 
-	const textareas = document.querySelectorAll('textarea[data-autoheight]')
+	const textAreas = document.querySelectorAll('textarea[data-auto-height]')
 
 	function setHeight(textarea, height) {
 		textarea.style.height = `${height}px`
 	}
 
-	textareas.forEach(textarea => {
-		const startHeight = +textarea.dataset.autoheightMin || +textarea.offsetHeight
-		const maxHeight = +textarea.dataset.autoheightMax || Infinity
+	textAreas.forEach(textarea => {
+		const startHeight = +textarea.dataset.autoHeightMin || +textarea.offsetHeight
+		const maxHeight = +textarea.dataset.autoHeightMax || Infinity
 
 		setHeight(textarea, Math.min(startHeight, maxHeight))
 		textarea.addEventListener('input', () => {

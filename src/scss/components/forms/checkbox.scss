@@ -50,7 +50,7 @@
 	&__input {
 		position: absolute;
 
-		/* Cheked */
+		/* Checked */
 		&:checked + .checkbox__box {
 			&::after,
 			svg {
@@ -85,7 +85,7 @@
 				background-color: #888;
 			}
 		}
-		
+
 		&:disabled + .checkbox__box {
 			border-color: #888;
 		}

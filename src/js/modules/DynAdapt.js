@@ -1,4 +1,4 @@
-/*! Dynamiс adapt https://github.com/FreelancerLifeStyle/dynamic_adapt */
+/*! Dynamic adapt https://github.com/FreelancerLifeStyle/dynamic_adapt */
 class DynamicAdapt {
 	constructor(type) {
 		this.type = type
@@ -6,7 +6,7 @@ class DynamicAdapt {
 
 	init() {
 		this.objects = []
-		this.daClassname = 'dynamic-adapt'
+		this.daClassName = 'dynamic-adapt'
 		this.nodes = [...document.querySelectorAll('[data-da]')]
 		this.nodes.forEach(node => {
 			const data = node.dataset.da.trim()
@@ -48,7 +48,7 @@ class DynamicAdapt {
 			})
 		} else {
 			objects.forEach(({ parent, element, index }) => {
-				if (element.classList.contains(this.daClassname)) {
+				if (element.classList.contains(this.daClassName)) {
 					this.moveBack(parent, element, index)
 				}
 			})
@@ -56,7 +56,7 @@ class DynamicAdapt {
 	}
 
 	moveTo(place, element, destination) {
-		element.classList.add(this.daClassname)
+		element.classList.add(this.daClassName)
 
 		if (place === 'last' || place >= destination.children.length) {
 			destination.append(element)
@@ -74,7 +74,7 @@ class DynamicAdapt {
 	}
 
 	moveBack(parent, element, index) {
-		element.classList.remove(this.daClassname)
+		element.classList.remove(this.daClassName)
 
 		if (parent.children[index] !== undefined) {
 			parent.children[index].before(element)

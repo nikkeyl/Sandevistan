@@ -43,7 +43,7 @@
 	&__input {
 		position: absolute;
 
-		/* Cheked */
+		/* Checked */
 		&:checked + .option__box {
 			&::after {
 				transform: translate(-50%, -50%) scale(1);
@@ -58,7 +58,7 @@
 				transform: translate(-50%, -50%) scale(1);
 			}
 		}
-		
+
 		&:focus-visible + .option__box {
 			outline: em(0.5, 18) solid var(--inverse);
 

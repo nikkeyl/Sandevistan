@@ -272,8 +272,8 @@
 
 @mixin text-gradient($gradient) {
 	background: $gradient;
+	color: transparent;
 	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
 }
 
 @mixin pseudo($content: "", $position: absolute) {

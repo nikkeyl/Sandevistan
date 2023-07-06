@@ -130,8 +130,8 @@ class SelectConstructor {
 		const selectItem = originalSelect.parentElement
 
 		selectItem.dataset.id = originalSelect.dataset.id
-		originalSelect.dataset.classModif
-			? selectItem.classList.add(`select--${originalSelect.dataset.classModif}`)
+		originalSelect.dataset.classMod
+			? selectItem.classList.add(`select--${originalSelect.dataset.classMod}`)
 			: null
 		originalSelect.multiple
 			? selectItem.classList.add(this.selectClasses.classSelectMultiple)

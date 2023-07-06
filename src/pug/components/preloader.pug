@@ -1,20 +1,3 @@
-style.
-	.lock body {
-		overflow: hidden;
-		touch-action: none;
-		overscroll-behavior: none;
-	}
-
-	.loading body {
-		opacity: 0;
-		visibility: hidden;
-	}
-
-	.loaded body {
-		opacity: 1;
-		visibility: visible;
-		transition: opacity .5s;
-	}
 #preloader
 	style.
 		*,
@@ -30,6 +13,23 @@ style.
 			overflow: hidden;
 			touch-action: none;
 			overscroll-behavior: none;
+		}
+
+		.lock body {
+			overflow: hidden;
+			touch-action: none;
+			overscroll-behavior: none;
+		}
+
+		.loading body {
+			opacity: 0;
+			visibility: hidden;
+		}
+
+		.loaded body {
+			opacity: 1;
+			visibility: visible;
+			transition: opacity .5s;
 		}
 
 		.preloader {

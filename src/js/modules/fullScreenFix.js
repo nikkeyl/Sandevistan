@@ -2,7 +2,7 @@ import { addTouchClass } from '@js/helpers/addTouchClass'
 import { isMobile } from '@js/helpers/isMobile'
 import { html } from '@js/helpers/nodeList'
 
-function fullVHfix() {
+function fullScreenFix() {
 	const fullScreens = document.querySelectorAll('[data-fullscreen]')
 
 	/*! Accounting for floating panel in mobile browsers */
@@ -19,4 +19,4 @@ function fullVHfix() {
 	}
 }
 
-export { fullVHfix }
+export { fullScreenFix }
