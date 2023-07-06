@@ -65,8 +65,9 @@ function spoilers() {
 	}
 
 	function setSpoilerAction(e) {
-		e.preventDefault()
 		const el = e.target
+
+		el.closest('details') ? e.preventDefault() : null
 
 		if (el.closest('summary') && el.closest('[data-spoilers]')) {
 			if (el.closest('[data-spoilers]').classList.contains('spoiler-init')) {
