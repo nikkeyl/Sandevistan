@@ -1,2 +1,4 @@
+src/scss/components/forms/checkbox.scss
+src/scss/components/forms/radio.scss
 src/scss/abstracts/mixins.scss
 src/scss/vendors/**/*.scss

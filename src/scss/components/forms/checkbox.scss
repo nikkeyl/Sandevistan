@@ -4,41 +4,34 @@
 
 .checkboxes {
 	display: grid;
-	gap: rem(5);
 }
 
 .checkbox {
+	$font-size: 18;
+
 	display: flex;
-	flex-direction: row-reverse;
+	align-items: center;
 	gap: rem(10);
-	width: max-content;
-
-	&__text {
-		$font-size: 18;
-
-		font-size: rem($font-size);
-		line-height: div(22, $font-size);
-		color: var(--primary);
-	}
+	max-width: fit-content;
+	font-size: rem($font-size);
+	line-height: div(22, $font-size);
+	color: var(--primary);
 
 	&__box {
 		$size: 20;
 
 		position: relative;
-		flex: 0 0 rem($size);
-		align-self: flex-start;
+		flex: 0 0 em($size, 18);
 		border: rem(2) solid var(--accent);
 		border-radius: rem(5);
-		width: rem($size);
-		height: rem($size);
+		height: em($size, 18);
+		background-color: var(--secondary);
 
-		&::before {
+		&::after {
 			@include pseudo;
 
 			inset: 0;
 			border-radius: rem(3);
-			width: rem(16);
-			height: rem(16);
 			background-color: var(--primary);
 			transform: scale(0);
 			transition: transform 0.3s;
@@ -54,14 +47,51 @@
 		}
 	}
 
-	input {
-		display: none;
+	&__input {
+		position: absolute;
 
+		/* Cheked */
 		&:checked + .checkbox__box {
-			&::before,
+			&::after,
 			svg {
 				transform: scale(1);
 			}
 		}
+
+		/* Focused */
+		&:checked:focus-visible + .checkbox__box {
+			outline: em(0.5, 18) solid var(--inverse);
+
+			&::after,
+			svg {
+				transform: scale(1);
+			}
+		}
+
+		&:focus-visible + .checkbox__box {
+			outline: em(0.5, 18) solid var(--inverse);
+
+			&::after,
+			svg {
+				transform: scale(1);
+			}
+		}
+
+		/* Disabled */
+		&:checked:disabled + .checkbox__box {
+			border-color: #888;
+
+			&::after {
+				background-color: #888;
+			}
+		}
+		
+		&:disabled + .checkbox__box {
+			border-color: #888;
+		}
+	}
+
+	&:not(:last-child) {
+		margin-bottom: em(5, 18);
 	}
 }
