@@ -1,5 +1,5 @@
 .sr-only,
-.sr-only-focus:not(:focus-visible):not(:active) {
+.sr-only-focus:not(:focus-visible) {
 	position: fixed;
 	transform: scale(0);
 }
