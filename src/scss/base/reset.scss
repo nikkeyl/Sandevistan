@@ -39,7 +39,7 @@ body {
 
 :focus,
 :active {
-	// outline: none;
+	outline: none;
 }
 
 /* Remove markers */
@@ -64,12 +64,7 @@ address {
 	font-style: normal;
 }
 
-input[type="checkbox"],
-input[type="search"],
-input[type="radio"],
-input[type="email"],
-input[type="text"],
-input[type="tel"] {
+input {
 	appearance: none;
 }
 
