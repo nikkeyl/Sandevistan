@@ -27,23 +27,23 @@ function rating() {
 		}
 
 		function setRating(rating) {
-			const ratingItems = rating.querySelectorAll('.rating__item')
+			const ratingStars = rating.querySelectorAll('.rating__star')
 
-			for (let index = 0; index < ratingItems.length; index++) {
-				const ratingItem = ratingItems[index]
+			for (let index = 0; index < ratingStars.length; index++) {
+				const ratingStar = ratingStars[index]
 
-				ratingItem.addEventListener('mouseenter', () => {
+				ratingStar.addEventListener('mouseenter', () => {
 					initRatingVars(rating)
-					setRatingActiveWidth(ratingItem.value)
+					setRatingActiveWidth(ratingStar.value)
 				})
-				ratingItem.addEventListener('mouseleave', () => {
+				ratingStar.addEventListener('mouseleave', () => {
 					setRatingActiveWidth()
 				})
-				ratingItem.addEventListener('click', () => {
+				ratingStar.addEventListener('click', () => {
 					initRatingVars(rating)
 
 					if (rating.dataset.ajax) {
-						setRatingValue(ratingItem.value, rating)
+						setRatingValue(ratingStar.value, rating)
 					} else {
 						ratingValue.innerHTML = index + 1
 						setRatingActiveWidth()

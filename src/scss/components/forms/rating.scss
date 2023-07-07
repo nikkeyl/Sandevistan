@@ -10,7 +10,7 @@
 	font-size: rem($font-size);
 	line-height: 0.75;
 
-	&__body {
+	&__group {
 		position: relative;
 
 		&::before {
@@ -23,31 +23,24 @@
 		position: absolute;
 		inset: 0;
 		overflow: hidden;
-		width: 0;
-		height: 100%;
 		transition: width 0.2s;
 
 		&::before {
 			@include pseudo("★★★★★");
 
 			inset: 0;
-			width: 100%;
-			height: 100%;
 			color: var(--inverse);
 		}
 	}
 
-	&__items {
+	&__stars {
 		position: absolute;
 		inset: 0;
 		display: flex;
-		width: 100%;
-		height: 100%;
 	}
 
-	&__item {
+	&__star {
 		flex: 0 0 20%;
-		height: 100%;
 		opacity: 0;
 	}
 
@@ -63,7 +56,7 @@
 
 	&--set {
 		.rating__active,
-		.rating__item {
+		.rating__star {
 			cursor: pointer;
 		}
 	}
