@@ -2,23 +2,5 @@
 @use "@scss/utils/placeholders" as *;
 
 .map {
-	position: absolute;
-	inset: 50%;
-	border: rem(10) solid var(--secondary);
-	border-top-color: var(--primary);
-	border-radius: 50%;
-	width: rem(100);
-	height: rem(100);
-	transform: translate(-50%, -50%);
-	animation: spin 2s linear infinite;
-
-	@keyframes spin {
-		0% {
-			transform: translate(-50%, -50%) rotate(0deg);
-		}
-
-		100% {
-			transform: translate(-50%, -50%) rotate(360deg);
-		}
-	}
+	background-color: var(--accent);
 }

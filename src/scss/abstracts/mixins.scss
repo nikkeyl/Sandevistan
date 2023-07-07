@@ -189,26 +189,20 @@
 
 @mixin triangle($color, $direction, $top, $right, $bottom, $left, $position) {
 	position: $position;
-	width: 0;
-	height: 0;
 
 	@if $direction == bottom {
-		margin-top: 0 - round(calc($top / 2.5));
 		border-top: rem($top) solid $color;
 		border-right: rem($right) solid transparent;
 		border-left: rem($left) solid transparent;
-	} @else if $direction == up {
-		margin-bottom: 0 - round(calc($bottom / 2.5));
+	} @else if $direction == top {
 		border-right: rem($right) solid transparent;
 		border-bottom: rem($bottom) solid $color;
 		border-left: rem($left) solid transparent;
 	} @else if $direction == right {
-		margin-right: rem(-$right);
 		border-top: rem($top) solid transparent;
 		border-bottom: rem($bottom) solid transparent;
 		border-left: rem($left) solid $color;
 	} @else {
-		margin-left: rem(-$left);
 		border-top: rem($top) solid transparent;
 		border-right: rem($right) solid $color;
 		border-bottom: rem($bottom) solid transparent;

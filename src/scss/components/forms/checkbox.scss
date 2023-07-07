@@ -42,8 +42,8 @@
 		svg {
 			position: absolute;
 			inset: em(3, $fix-size);
-			width: em(10, $fix-size);
 			z-index: 1;
+			width: em(10, $fix-size);
 			height: em(10, $fix-size);
 			fill: var(--secondary);
 			transition: transform 0.3s;

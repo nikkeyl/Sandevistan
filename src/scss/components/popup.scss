@@ -9,8 +9,6 @@ body {
 
 		inset: 0;
 		z-index: 149;
-		width: 100%;
-		height: 100%;
 		background-color: rgba(0 0 0 / 0.5);
 		opacity: 0;
 		transition: opacity 0.8s;
@@ -44,8 +42,7 @@ body {
 	&__content {
 		border-radius: rem(20);
 		padding: rem(20);
-		width: 100%;
-		max-width: rem(900);
+		width: min(rem(900));
 		background-color: var(--accent);
 		visibility: hidden;
 		transform: scale(0);
