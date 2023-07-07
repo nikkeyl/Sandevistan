@@ -43,23 +43,23 @@ function spoilers() {
 			item => item.closest('[data-spoilers]') === spoilersBlock
 		)
 		spoilerItems.forEach(spoilerItem => {
-			const spoilerTitle = spoilerItem.querySelector('summary')
+			const spoilerTrigger = spoilerItem.querySelector('summary')
 
 			if (hideSpoilerBody) {
-				spoilerTitle.removeAttribute('tabindex')
+				spoilerTrigger.removeAttribute('tabindex')
 
 				if (!spoilerItem.hasAttribute('data-open')) {
 					spoilerItem.open = false
-					spoilerTitle.nextElementSibling.hidden = true
+					spoilerTrigger.nextElementSibling.hidden = true
 				} else {
-					spoilerTitle.classList.add('spoiler-active')
+					spoilerTrigger.classList.add('spoiler-active')
 					spoilerItem.open = true
 				}
 			} else {
-				spoilerTitle.setAttribute('tabindex', '-1')
-				spoilerTitle.classList.remove('spoiler-active')
+				spoilerTrigger.setAttribute('tabindex', '-1')
+				spoilerTrigger.classList.remove('spoiler-active')
 				spoilerItem.open = true
-				spoilerTitle.nextElementSibling.hidden = false
+				spoilerTrigger.nextElementSibling.hidden = false
 			}
 		})
 	}
@@ -71,9 +71,9 @@ function spoilers() {
 
 		if (el.closest('summary') && el.closest('[data-spoilers]')) {
 			if (el.closest('[data-spoilers]').classList.contains('spoiler-init')) {
-				const spoilerTitle = el.closest('summary')
-				const spoilerBlock = spoilerTitle.closest('details')
-				const spoilersBlock = spoilerTitle.closest('[data-spoilers]')
+				const spoilerTrigger = el.closest('summary')
+				const spoilerBlock = spoilerTrigger.closest('details')
+				const spoilersBlock = spoilerTrigger.closest('[data-spoilers]')
 				const oneSpoiler = spoilersBlock.hasAttribute('data-one-spoiler')
 				const spoilerSpeed = parseInt(spoilersBlock.dataset.spoilersSpeed) || 500
 
@@ -86,8 +86,8 @@ function spoilers() {
 								spoilerBlock.open = false
 						  }, spoilerSpeed)
 
-					spoilerTitle.classList.toggle('spoiler-active')
-					slideToggle(spoilerTitle.nextElementSibling, spoilerSpeed)
+					spoilerTrigger.classList.toggle('spoiler-active')
+					slideToggle(spoilerTrigger.nextElementSibling, spoilerSpeed)
 				}
 			}
 		}
@@ -116,11 +116,11 @@ function spoilers() {
 		const spoilerActiveBlock = spoilersBlock.querySelector('details[open]')
 
 		if (spoilerActiveBlock && !spoilersBlock.querySelectorAll('.slide').length) {
-			const spoilerActiveTitle = spoilerActiveBlock.querySelector('summary')
+			const spoilerActiveTrigger = spoilerActiveBlock.querySelector('summary')
 			const spoilerSpeed = parseInt(spoilersBlock.dataset.spoilersSpeed) || 500
 
-			spoilerActiveTitle.classList.remove('spoiler-active')
-			slideUp(spoilerActiveTitle.nextElementSibling, spoilerSpeed)
+			spoilerActiveTrigger.classList.remove('spoiler-active')
+			slideUp(spoilerActiveTrigger.nextElementSibling, spoilerSpeed)
 			setTimeout(() => {
 				spoilerActiveBlock.open = false
 			}, spoilerSpeed)
