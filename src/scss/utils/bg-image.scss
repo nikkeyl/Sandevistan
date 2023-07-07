@@ -1,0 +1,14 @@
+.bg-image {
+	/* Background image using css */
+	position: relative;
+	overflow: hidden;
+
+	img {
+		position: absolute;
+		inset: 0;
+		height: 100%;
+		object-fit: cover;
+
+		// object-position: top;
+	}
+}
