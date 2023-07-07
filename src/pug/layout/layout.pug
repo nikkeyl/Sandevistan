@@ -1,5 +1,7 @@
 block variables
-	- let title = "Главная"
+	- let title = "Title"
+	- let mod
+	- let fullPage
 
 doctype html
 html(lang="ru")
@@ -14,7 +16,8 @@ html(lang="ru")
 	body
 		.wrapper
 			include header
-			block page
+			main(class=["page", mod] data-fp=fullPage)
+				block page
 			include footer
 
 		//- include ../components/preloader
