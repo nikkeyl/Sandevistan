@@ -40,10 +40,6 @@
 			},
 			{
 				"type": "rule",
-				"selector": "&:focus"
-			},
-			{
-				"type": "rule",
 				"selector": "&:focus-visible"
 			},
 			{
