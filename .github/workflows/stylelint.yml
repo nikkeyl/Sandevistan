@@ -2,6 +2,9 @@ name: Stylelint
 
 on:
   pull_request:
+    branches:
+      - main
+      - fix
   push:
     branches:
       - main
