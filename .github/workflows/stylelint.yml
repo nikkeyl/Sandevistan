@@ -1,19 +1,21 @@
 name: Stylelint
 
 on:
-  pull_request:
-  push:
-    branches:
-      - main
+	pull_request:
+		branches:
+			- main
+	push:
+		branches:
+			- main
 			- fix
 
 jobs:
-  lint:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: lts/*
-      - run: npm ci
-      - run: npm run stylelint
+	lint:
+		runs-on: ubuntu-latest
+		steps:
+			- uses: actions/checkout@v3
+			- uses: actions/setup-node@v3
+				with:
+					node-version: lts/*
+			- run: npm ci
+			- run: npx stylelint
