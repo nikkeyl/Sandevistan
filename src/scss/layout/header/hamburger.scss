@@ -19,7 +19,11 @@
 			width: 100%;
 			height: rem(2);
 			background-color: var(--primary);
-			transition: transform 0.3s, width 0.3s, top 0.3s, bottom 0.3s;
+			transition:
+				transform 0.3s,
+				width 0.3s,
+				top 0.3s,
+				bottom 0.3s;
 		}
 
 		&::before {
