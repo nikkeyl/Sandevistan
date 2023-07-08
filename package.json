@@ -10,12 +10,11 @@
 		"build": "gulp build",
 		"deploy": "gulp deploy -d dist",
 		"devBuild": "gulp build --no-webp",
-		"editorconfig": "editorconfig-checker .editorconfig",
+		"editorconfig": "editorconfig-checker",
 		"stylelint": "stylelint --fix src/scss/**/*.scss",
 		"eslint": "eslint --fix src/js/**/*.js",
 		"sprite": "gulp sprite",
-		"fonts": "gulp fonts",
-		"ftp": "gulp runFTP"
+		"fonts": "gulp fonts"
 	},
 	"devDependencies": {
 		"chalk": "latest",
@@ -45,7 +44,6 @@
 		"gulp-rename": "latest",
 		"gulp-svg-sprite": "latest",
 		"gulp-ttf2woff2": "latest",
-		"gulp-util": "latest",
 		"gulp-version-number": "latest",
 		"gulp-w3c-html-validator": "latest",
 		"gulp-wcag-accessibility": "latest",
@@ -78,7 +76,6 @@
 		"terser-webpack-plugin": "latest",
 		"tippy.js": "latest",
 		"typed.js": "latest",
-		"vinyl-ftp": "latest",
 		"webp-converter": "2.2.3",
 		"webpack": "latest",
 		"webpack-cli": "latest",

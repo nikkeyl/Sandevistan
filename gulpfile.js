@@ -9,7 +9,6 @@ import { validator } from './config/utils/validators.js'
 import { deploy } from './config/utils/deploy.js'
 import { reset } from './config/utils/reset.js'
 import { zip } from './config/utils/zip.js'
-import { ftp } from './config/utils/ftp.js'
 
 import { otfToTtf, ttfToWoff, fontsStyles } from './config/gulp-tasks/fonts.js'
 import { images } from './config/gulp-tasks/images.js'
@@ -28,7 +27,6 @@ const build = gulp.series(
 	gulp.parallel(validator, zip)
 )
 const dev = gulp.parallel(fonts, sprite)
-const runFTP = gulp.series(build, ftp)
 const app = {
 	isNoWebp: !argv.includes('--no-webp'),
 	plugins,
@@ -40,7 +38,6 @@ gulp.task('default', dev)
 
 export {
 	sprite,
-	runFTP,
 	deploy,
 	build,
 	fonts,

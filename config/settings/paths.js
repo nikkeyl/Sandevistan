@@ -30,7 +30,6 @@ const paths = {
 		js: `${srcFolder}/js/app.js`,
 		html: `${srcFolder}/*.html`
 	},
-	ftp: rootFolder,
 	buildFolder,
 	tempFolder,
 	rootFolder,
