@@ -4,11 +4,9 @@ on:
   pull_request:
     branches:
       - main
-      - fix
   push:
     branches:
       - main
-      - fix
 
 jobs:
   lint:
