@@ -9,6 +9,8 @@
 		"dev": "gulp && webpack serve -c config/webpack/webpack.dev.js",
 		"build": "gulp build",
 		"devBuild": "gulp build --no-webp",
+		"stylelint": "stylelint --fix src/scss/**/*.scss",
+		"eslint": "eslint --fix src/js/**/*.js",
 		"deploy": "gulp deploy -d dist",
 		"sprite": "gulp sprite",
 		"fonts": "gulp fonts",
