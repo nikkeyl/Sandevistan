@@ -46,7 +46,9 @@ body {
 		background-color: var(--accent);
 		visibility: hidden;
 		transform: scale(0);
-		transition: transform 0.3s, visibility 0.3s;
+		transition:
+			transform 0.3s,
+			visibility 0.3s;
 
 		.lock & {
 			visibility: visible;
