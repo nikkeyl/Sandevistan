@@ -42,6 +42,7 @@ body {
 	/* Styles for a contrasting theme */
 	outline-color: transparent;
 	outline: rem(2) solid var(--inverse);
+	outline-offset: rem(2);
 }
 
 /* Remove markers */
