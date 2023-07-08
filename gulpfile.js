@@ -34,8 +34,6 @@ const app = {
 	gulp
 }
 
-gulp.task('default', dev)
-
 export {
 	sprite,
 	deploy,
@@ -43,3 +41,5 @@ export {
 	fonts,
 	app
 }
+
+export default dev
