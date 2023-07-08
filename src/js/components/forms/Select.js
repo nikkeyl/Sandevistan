@@ -335,10 +335,8 @@ class SelectConstructor {
 			return `<div class="${this.selectClasses.classSelectTitle}">
                 <span ${pseudoAttribute} class="${this.selectClasses.classSelectValue}">
                     <input class="${this.selectClasses.classSelectInput}"
-                        autocomplete="off"
                         type="text"
-                        placeholder="${selectTitleValue}"
-                        data-placeholder="${selectTitleValue}">
+                        placeholder="${selectTitleValue}">
                 </span>
             </div>`
 		}
