@@ -75,7 +75,7 @@ function rating() {
 					setRatingActiveWidth()
 					rating.classList.remove('rating--sending')
 				} else {
-					alert('Ошибка')
+					alert('Error')
 					rating.classList.remove('rating--sending')
 				}
 			}

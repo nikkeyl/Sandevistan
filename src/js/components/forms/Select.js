@@ -323,7 +323,7 @@ class SelectConstructor {
 		if (originalSelect.hasAttribute('data-pseudo-label')) {
 			pseudoAttribute = originalSelect.dataset.pseudoLabel
 				? ` data-pseudo-label="${originalSelect.dataset.pseudoLabel}"`
-				: ' data-pseudo-label="Заполните атрибут"'
+				: ' data-pseudo-label="Fill in attribute"'
 			pseudoAttributeClass = ` ${this.selectClasses.classSelectPseudoLabel}`
 		}
 

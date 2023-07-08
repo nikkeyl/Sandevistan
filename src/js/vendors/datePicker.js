@@ -6,23 +6,23 @@ import '@scss/vendors/datepicker'
 
 if (document.querySelector('[data-datepicker]')) {
 	const picker = datepicker('[data-datepicker]', {
-		customDays: ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'],
+		customDays: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
 		customMonths: [
-			'Янв',
-			'Фев',
-			'Мар',
-			'Апр',
-			'Май',
-			'Июн',
-			'Июл',
-			'Авг',
-			'Сен',
-			'Окт',
-			'Ноя',
-			'Дек'
+			'Jan',
+			'Feb',
+			'Mar',
+			'Apr',
+			'May',
+			'Jun',
+			'July',
+			'Aug',
+			'Sen',
+			'Oct',
+			'Nov',
+			'Dec'
 		],
-		overlayButton: 'Применить',
-		overlayPlaceholder: 'Год (4 цифры)',
+		overlayButton: 'Apply',
+		overlayPlaceholder: 'Year (4 digits)',
 		startDay: 1,
 		formatter: (input, date) => {
 			const value = date.toLocaleDateString()
