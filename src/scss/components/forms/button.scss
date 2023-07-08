@@ -8,8 +8,8 @@
 	display: inline-flex;
 	justify-content: center;
 	padding: rem(10) rem(15);
-	font-size: rem($font-size);
-line-height: div(20, $font-size);
+font-size: rem($font-size);
+	line-height: div(20, $font-size);
 	text-align: center;
 	color: var(--primary);
 	background-color: var(--secondary);
