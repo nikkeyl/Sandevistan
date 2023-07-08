@@ -1,19 +1,19 @@
 {
-	"trailingComma": "none",
-	"overrides": [
-		{
-			"files": "*.js",
-			"options": {
-				"arrowParens": "avoid",
-				"singleQuote": true,
-				"semi": false
-			}
-		},
-		{
-			"files": "*.scss",
-			"options": {
-				"singleQuote": false
-			}
-		}
-	]
+  "trailingComma": "none",
+  "overrides": [
+    {
+      "files": "*.js",
+      "options": {
+        "arrowParens": "avoid",
+        "singleQuote": true,
+        "semi": false
+      }
+    },
+    {
+      "files": "*.scss",
+      "options": {
+        "singleQuote": false
+      }
+    }
+  ]
 }
