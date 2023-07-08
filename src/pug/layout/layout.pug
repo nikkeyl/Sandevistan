@@ -1,12 +1,12 @@
 block variables
-	- let title = "Title"
-	- let mod
+	- let pageTitle = "Title"
+	- let pageMod
 	- let fullPage
 
 doctype html
 html(lang="ru")
 	head
-		title=title
+		title=pageTitle
 		meta(charset="UTF-8")
 		meta(name="viewport" content="width=device-width, initial-scale=1")
 		meta(name="format-detection" content="telephone=no")
@@ -16,8 +16,8 @@ html(lang="ru")
 	body
 		.wrapper
 			include header
-			main(class=["page", mod] data-fp=fullPage)
-				block page
+			main(class=["page", pageMod] data-fp=fullPage)
+				block pageContent
 			include footer
 
 		//- include ../components/preloader
