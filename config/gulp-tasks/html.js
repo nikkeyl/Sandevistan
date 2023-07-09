@@ -5,27 +5,27 @@ import versionNumber from 'gulp-version-number'
 import htmlMin from 'gulp-htmlmin'
 
 const html = () =>
-  app.gulp.src(`${app.paths.build.html}*.html`)
-    .pipe(app.plugins.catchError('HTML'))
-    .pipe(app.plugins.if(
-      app.isNoWebp,
-      webpHtmlNoSvg()
-    ))
-    .pipe(versionNumber({
-      'value': '%DT%',
-      'append': {
-        'key': 'v',
-        'cover': 0,
-        'to': [
-          'css',
-          'js'
-        ]
-      }
-    }))
-    .pipe(htmlMin({
-      removeRedundantAttributes: true,
-      removeEmptyAttributes: true
-    }))
-    .pipe(app.gulp.dest(app.paths.build.html))
+	app.gulp.src(`${app.paths.build.html}*.html`)
+		.pipe(app.plugins.catchError('HTML'))
+		.pipe(app.plugins.if(
+			app.isNoWebp,
+			webpHtmlNoSvg()
+		))
+		.pipe(versionNumber({
+			'value': '%DT%',
+			'append': {
+				'key': 'v',
+				'cover': 0,
+				'to': [
+					'css',
+					'js'
+				]
+			}
+		}))
+		.pipe(htmlMin({
+			removeRedundantAttributes: true,
+			removeEmptyAttributes: true
+		}))
+		.pipe(app.gulp.dest(app.paths.build.html))
 
 export { html }
