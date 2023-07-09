@@ -1,7 +1,7 @@
 {
   "type": "module",
   "scripts": {
-    "init": "rm -rf .git && npm i",
+    "init": "rm -rf .git && npm i && husky install",
     "dev": "gulp && webpack serve -c config/webpack/webpack.dev.js",
     "build": "gulp build",
     "deploy": "gulp deploy -d dist",
