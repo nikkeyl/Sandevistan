@@ -117,7 +117,12 @@ class SelectConstructor {
 
 		selectItem.insertAdjacentHTML(
 			'beforeend',
-			`<div class="${this.selectClasses.classSelectBody}"><div class="${this.selectClasses.classSelectOptions}" hidden></div></div>`
+			`
+				<div class="${this.selectClasses.classSelectBody}">
+					<div class="${this.selectClasses.classSelectOptions}" hidden>
+					</div>
+				</div>
+			`
 		)
 		this.selectBuild(originalSelect)
 		originalSelect.dataset.speed = originalSelect.dataset.speed || 150
@@ -164,7 +169,7 @@ class SelectConstructor {
 								this.getSelectClass(this.selectClasses.classSelectTag)
 							).dataset.selectId
 						}"]`
-				  )
+					)
 			const originalSelect = this.getSelectElement(selectItem).originalSelect
 
 			if (targetType === 'click') {
@@ -330,13 +335,16 @@ class SelectConstructor {
 			: selectItem.classList.remove(this.selectClasses.classSelectActive)
 
 		if (originalSelect.hasAttribute('data-search')) {
-			return `<div class="${this.selectClasses.classSelectTitle}">
-                <span ${pseudoAttribute} class="${this.selectClasses.classSelectValue}">
-                    <input class="${this.selectClasses.classSelectInput}"
-                        type="text"
-                        placeholder="${selectTitleValue}">
-                </span>
-            </div>`
+			return `
+				<div class="${this.selectClasses.classSelectTitle}">
+					<span ${pseudoAttribute}
+						class="${this.selectClasses.classSelectValue}">
+						<input class="${this.selectClasses.classSelectInput}"
+							type="text"
+							placeholder="${selectTitleValue}">
+					</span>
+				</div>
+			`
 		}
 
 		const customClass =
@@ -345,15 +353,17 @@ class SelectConstructor {
 				? ` ${this.getSelectedOptionsData(originalSelect).elements[0].dataset.class}`
 				: ''
 
-		return `<button class="${this.selectClasses.classSelectTitle}"
-                type="button">
-                <span${pseudoAttribute}
-                class="${this.selectClasses.classSelectValue}${pseudoAttributeClass}">
-                    <span class="${this.selectClasses.classSelectContent}${customClass}">
-                        ${selectTitleValue}
-                    </span>
-                </span>
-            </button>`
+		return `
+			<button class="${this.selectClasses.classSelectTitle}"
+				type="button">
+				<span${pseudoAttribute}
+					class="${this.selectClasses.classSelectValue}${pseudoAttributeClass}">
+						<span class="${this.selectClasses.classSelectContent}${customClass}">
+							${selectTitleValue}
+						</span>
+					</span>
+			</button>
+		`
 	}
 
 	getSelectElementContent(selectOption) {
@@ -445,7 +455,7 @@ class SelectConstructor {
 
 			selectOptionsHTML += selectOptionsScroll
 				? `<div ${selectOptionsScroll} ${selectOptionsScrollHeight}
-                class="${this.selectClasses.classSelectOptionsScroll}">`
+						class="${this.selectClasses.classSelectOptionsScroll}">`
 				: ''
 			selectOptions.forEach(selectOption => {
 				selectOptionsHTML += this.getOption(selectOption, originalSelect)
@@ -481,16 +491,16 @@ class SelectConstructor {
 
 		selectOptionHTML += selectOptionLink
 			? `<a class="${this.selectClasses.classSelectOption} ${selectOptionClass} ${selectOptionSelected}"
-                href="${selectOptionLink}"
-                data-value="${selectOption.value}"
-                    ${selectOptionLinkTarget}
-                    ${selectOptionHide}
-                >`
+					href="${selectOptionLink}"
+					data-value="${selectOption.value}"
+							${selectOptionLinkTarget}
+							${selectOptionHide}
+				>`
 			: `<button class="${this.selectClasses.classSelectOption} ${selectOptionClass} ${selectOptionSelected}"
-                type="button"
-                data-value="${selectOption.value}"
-                ${selectOptionHide}
-            >`
+					type="button"
+					data-value="${selectOption.value}"
+					${selectOptionHide}
+				>`
 		selectOptionHTML += this.getSelectElementContent(selectOption)
 		selectOptionHTML += selectOptionLink ? '</a>' : '</button>'
 
