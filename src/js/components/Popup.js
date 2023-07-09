@@ -209,7 +209,8 @@ class Popup {
 			if (this.targetOpen.element) {
 				if (this.youTubeCode) {
 					const codeVideo = this.youTubeCode
-					const urlVideo = `https://www.youtube.com/embed/${codeVideo}?rel=0&showinfo=0&autoplay=1`
+					const urlVideo =
+						`https://www.youtube.com/embed/${codeVideo}?rel=0&showinfo=0&autoplay=1`
 					const iframe = document.createElement('iframe')
 
 					iframe.setAttribute('allowfullscreen', '')

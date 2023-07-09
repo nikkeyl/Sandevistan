@@ -81,7 +81,10 @@ const fontsStyles = () => {
 				))
 			}
 		} else {
-			console.log(app.plugins.chalk.red.bold('No font file in fonts directory\n'), error)
+			console.log(app.plugins.chalk.red.bold(
+				'No font file in fonts directory\n'),
+				error
+			)
 		}
 	})
 

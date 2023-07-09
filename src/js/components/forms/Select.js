@@ -107,8 +107,9 @@ class SelectConstructor {
 
 				selectItemTitle.insertAdjacentHTML(
 					'afterbegin',
-					`<span class="${this.selectClasses.classSelectLabel}">${this.getSelectPlaceholder(originalSelect).label.text ||
-					this.getSelectPlaceholder(originalSelect).value
+					`<span class="${this.selectClasses.classSelectLabel}">${
+						this.getSelectPlaceholder(originalSelect).label.text ||
+						this.getSelectPlaceholder(originalSelect).value
 					}</span>`
 				)
 			}
@@ -158,11 +159,12 @@ class SelectConstructor {
 			const selectItem = targetElement.closest('.select')
 				? targetElement.closest('.select')
 				: document.querySelector(
-					`.${this.selectClasses.classSelect}[data-id="${targetElement.closest(
-						this.getSelectClass(this.selectClasses.classSelectTag)
-					).dataset.selectId
-					}"]`
-				)
+						`.${this.selectClasses.classSelect}[data-id="${
+							targetElement.closest(
+								this.getSelectClass(this.selectClasses.classSelectTag)
+							).dataset.selectId
+						}"]`
+				  )
 			const originalSelect = this.getSelectElement(selectItem).originalSelect
 
 			if (targetType === 'click') {
@@ -287,11 +289,10 @@ class SelectConstructor {
 		if (originalSelect.multiple && originalSelect.hasAttribute('data-tags')) {
 			selectTitleValue = this.getSelectedOptionsData(originalSelect)
 				.elements.map(
-					option => `<span role="button" data-select-id="${selectItem.dataset.id
-						}" data-value="${option.value}"
-            class="select-tag">${this.getSelectElementContent(
-							option
-						)}</span>`
+					option => `<span role="button" data-select-id="${
+						selectItem.dataset.id
+					}" data-value="${option.value}"
+						class="select-tag">${this.getSelectElementContent(option)}</span>`
 				)
 				.join('')
 
@@ -311,8 +312,8 @@ class SelectConstructor {
 		selectTitleValue = selectTitleValue.length
 			? selectTitleValue
 			: originalSelect.dataset.placeholder
-				? originalSelect.dataset.placeholder
-				: ''
+			? originalSelect.dataset.placeholder
+			: ''
 
 		let pseudoAttribute = ''
 		let pseudoAttributeClass = ''
@@ -340,7 +341,7 @@ class SelectConstructor {
 
 		const customClass =
 			this.getSelectedOptionsData(originalSelect).elements.length &&
-				this.getSelectedOptionsData(originalSelect).elements[0].dataset.class
+			this.getSelectedOptionsData(originalSelect).elements[0].dataset.class
 				? ` ${this.getSelectedOptionsData(originalSelect).elements[0].dataset.class}`
 				: ''
 
@@ -462,8 +463,8 @@ class SelectConstructor {
 				: ''
 		const selectOptionHide =
 			selectOption.selected &&
-				!originalSelect.hasAttribute('data-show-selected') &&
-				!originalSelect.multiple
+			!originalSelect.hasAttribute('data-show-selected') &&
+			!originalSelect.multiple
 				? 'hidden'
 				: ''
 		const selectOptionClass = selectOption.dataset.class
