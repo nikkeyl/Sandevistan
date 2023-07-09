@@ -7,8 +7,4 @@
 	/* Set [overflow: clip;] for correct operation [position: sticky;] */
 	overflow: clip;
 	min-height: 100vh;
-
-	> .page {
-		flex: 1;
-	}
 }
