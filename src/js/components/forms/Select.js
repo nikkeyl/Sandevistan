@@ -183,7 +183,10 @@ class SelectConstructor {
 							this.getSelectClass(this.selectClasses.classSelectTag)
 						)
 						const optionItem = document.querySelector(
-							`.${this.selectClasses.classSelect}[data-id="${targetTag.dataset.selectId}"] .select__option[data-value="${targetTag.dataset.value}"]`
+							`.${this.selectClasses.classSelect}
+								[data-id="${targetTag.dataset.selectId}"]
+									.select__option[data-value="${targetTag.dataset.value}"]
+							`
 						)
 
 						this.optionAction(selectItem, originalSelect, optionItem)
@@ -490,13 +493,15 @@ class SelectConstructor {
 		let selectOptionHTML = ''
 
 		selectOptionHTML += selectOptionLink
-			? `<a class="${this.selectClasses.classSelectOption} ${selectOptionClass} ${selectOptionSelected}"
+			? `<a
+					class="${this.selectClasses.classSelectOption} ${selectOptionClass} ${selectOptionSelected}"
 					href="${selectOptionLink}"
 					data-value="${selectOption.value}"
 							${selectOptionLinkTarget}
 							${selectOptionHide}
 				>`
-			: `<button class="${this.selectClasses.classSelectOption} ${selectOptionClass} ${selectOptionSelected}"
+			: `<button
+					class="${this.selectClasses.classSelectOption} ${selectOptionClass} ${selectOptionSelected}"
 					type="button"
 					data-value="${selectOption.value}"
 					${selectOptionHide}

@@ -6,7 +6,7 @@
     "build": "gulp build",
     "deploy": "gulp deploy -d dist",
     "devBuild": "gulp build --no-webp",
-    "editorconfig": "editorconfig-checker --exclude src/scss/vendors/",
+    "editorconfig": "editorconfig-checker",
     "stylelint": "stylelint --fix src/scss/**/*.scss",
     "eslint": "eslint --fix src/js/**/*.js",
     "sprite": "gulp sprite",

@@ -1,0 +1,9 @@
+{
+	"Exclude": [
+		"stylelintrc.json",
+		"src/scss/vendors",
+		"Select.js",
+		"fonts.js",
+		"webp.js"
+	]
+}
