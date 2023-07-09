@@ -16,7 +16,7 @@ function glow() {
 			button.insertAdjacentHTML(
 				'beforeend',
 				`
-        	<span class="button__glow">
+					<span class="button__glow">
 						<span class="button__color"></span>
 					</span>
 				`

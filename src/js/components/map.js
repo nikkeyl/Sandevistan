@@ -139,7 +139,9 @@ function mapInit(n = 1) {
 				const cnt = i + 1
 
 				/*
-				 * infowindow.setContent(document.querySelector('.events-map__item--' + cnt).innerHTML)
+				 * infowindow.setContent(document.querySelector(
+					'.events-map__item--' + cnt).innerHTML
+					)
 				 * infowindow.open(map, marker)
 				 */
 				marker.setIcon(icon)

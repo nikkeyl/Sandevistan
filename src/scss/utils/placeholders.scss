@@ -54,7 +54,10 @@
 }
 
 %touch {
-	/* Set momentum-based scrolling, where the content continues to scroll for a while after finishing the scroll gesture */
+	/*
+		Set momentum-based scrolling, where the content continues to scroll
+		for a while after finishing the scroll gesture
+	*/
 	-webkit-overflow-scrolling: touch;
 }
 

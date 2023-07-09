@@ -11,7 +11,10 @@
 	font: inherit;
 
 	@media (prefers-reduced-motion: reduce) {
-		/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+		/*
+			Remove all animations, transitions and smooth scroll
+			for people that prefer not to see them
+		*/
 		transition: none;
 		animation: none;
 		scroll-behavior: auto;

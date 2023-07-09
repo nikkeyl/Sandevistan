@@ -77,7 +77,10 @@
 						</div>
 					`;
 
-				document.querySelector('html').insertAdjacentHTML("beforeend", preloaderTemplate);
+				document.querySelector('html').insertAdjacentHTML(
+					"beforeend",
+					preloaderTemplate
+				);
 
 				const preloader = document.querySelector('.preloader');
 				const	showPercentLoad = document.querySelector('.preloader__counter');
