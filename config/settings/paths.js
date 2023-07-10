@@ -26,7 +26,7 @@ const paths = {
 		scss: `${srcFolder}/scss/style.scss`,
 		static: `${srcFolder}/static/**/*.*`,
 		fonts: `${srcFolder}/fonts/*.*`,
-		pug: `${srcFolder}/pug/*.pug`,
+		pug: `${srcFolder}/views/*.pug`,
 		js: `${srcFolder}/js/app.js`,
 		html: `${srcFolder}/*.html`
 	},
