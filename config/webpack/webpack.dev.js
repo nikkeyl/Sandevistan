@@ -58,7 +58,10 @@ const config = {
 				test: /\.pug$/,
 				use: [
 					{
-						loader: 'pug-loader'
+						loader: 'pug-loader',
+						options: {
+							self: true
+						}
 					}, {
 						loader: 'string-replace-loader',
 						options: replaceLoaderOptions('')

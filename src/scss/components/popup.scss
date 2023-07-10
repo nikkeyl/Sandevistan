@@ -8,7 +8,6 @@ body {
 		@include pseudo("", fixed);
 
 		inset: 0;
-		z-index: 149;
 		background-color: rgba(0 0 0 / 0.5);
 		opacity: 0;
 		transition: opacity 0.8s;

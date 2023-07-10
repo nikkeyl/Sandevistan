@@ -56,7 +56,8 @@ const config = {
 					{
 						loader: 'pug-loader',
 						options: {
-							pretty: true
+							pretty: true,
+							self: true
 						}
 					}, {
 						loader: 'string-replace-loader',
