@@ -9,10 +9,9 @@
 
 	@if $container-padding > 0 {
 		@if $max-width-container > 0 {
-			padding: 0 rem(div($container-padding, 2));
+			padding-inline: rem(div($container-padding, 2));
 		} @else {
-			@include adaptive-value("padding-left", div($container-padding, 2), 15);
-			@include adaptive-value("padding-right", div($container-padding, 2), 15);
+			@include adaptive-value("padding-inline", div($container-padding, 2), 15);
 		}
 	}
 }
