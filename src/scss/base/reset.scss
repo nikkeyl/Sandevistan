@@ -25,6 +25,7 @@ html,
 body {
 	min-width: $min-width + px;
 	min-height: 100vh;
+	// Interferes with the normal operation of smoothScroll.js
 	scroll-behavior: smooth;
 }
 
