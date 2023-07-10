@@ -1,7 +1,10 @@
+- const production = self.htmlWebpackPlugin.options.production
+
 block variables
-	- let pageTitle = 'Title'
+	- let pageTitle
 	- let pageMod
 	- let fullPage
+	- let preloader
 
 doctype html
 html(lang='ru')
@@ -10,7 +13,8 @@ html(lang='ru')
 		meta(charset='UTF-8')
 		meta(name='viewport' content='width=device-width, initial-scale=1')
 		meta(name='format-detection' content='telephone=no')
-		link(rel='stylesheet' href='css/style.min.css')
+		if production
+			link(rel='stylesheet' href='css/style.min.css')
 		block styles
 		link(rel='icon' href='favicon.ico')
 	body
@@ -20,7 +24,8 @@ html(lang='ru')
 				block pageContent
 			include footer
 
-		//- include ../components/preloader
+		if preloader
+			include ../components/preloader
 		block popups
 		block scripts
 		script(src='js/app.min.js')
