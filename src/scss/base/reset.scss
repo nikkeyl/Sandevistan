@@ -25,6 +25,7 @@ html,
 body {
 	min-width: $min-width + px;
 	min-height: 100vh;
+
 	// Interferes with the normal operation of smoothScroll.js
 	scroll-behavior: smooth;
 }
@@ -43,7 +44,7 @@ body {
 }
 
 :focus-visible {
-	outline: rem(2) solid #fa0;
+	outline: rem(2) solid var(--inverse);
 
 	/* Styles for a contrasting theme */
 	outline-color: transparent;
