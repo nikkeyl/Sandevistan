@@ -10,16 +10,14 @@
 
 /* Dark theme styles */
 .dark {
-	body {
-		color: var(--secondary);
-		background-color: var(--primary);
-	}
+	color: var(--secondary);
+	background-color: var(--primary);
+	color-scheme: dark;
 }
 
 /* Light theme styles */
 .light {
-	body {
-		color: var(--primary);
-		background-color: var(--secondary);
-	}
+	color: var(--primary);
+	background-color: var(--secondary);
+	color-scheme: light;
 }
