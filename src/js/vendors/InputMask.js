@@ -1,4 +1,4 @@
-/* https://github.com/RobinHerbots/Inputmask */
+/* https://robinherbots.github.io/Inputmask/#/documentation */
 import { nodeObjects } from '@js/helpers/nodeList'
 
 import InputMask from 'inputmask/dist/inputmask.es6.js'

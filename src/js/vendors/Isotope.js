@@ -1,3 +1,4 @@
+/* Filter plugin https://isotope.metafizzy.co/ */
 import Isotope from 'isotope-layout'
 
 function filter() {
