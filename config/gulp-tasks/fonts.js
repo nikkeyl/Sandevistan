@@ -73,16 +73,16 @@ const fontsStyles = () => {
 					}
 				})
 				console.log(app.plugins.chalk.green.bold(
-					'(fonts.scss) successfully written'
+					'(font-face.scss) successfully written'
 				))
 			} else {
 				console.log(app.plugins.chalk.yellow.bold(
-					`(fonts.scss) already exists`
+					`(font-face.scss) already exists`
 				))
 			}
 		} else {
-			console.log(app.plugins.chalk.red.bold(
-				'No font file in fonts directory\n'),
+			console.log(
+				app.plugins.chalk.red.bold('No font file in fonts directory\n'),
 				error
 			)
 		}
