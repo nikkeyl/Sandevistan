@@ -52,19 +52,21 @@
 	&__input {
 		position: absolute;
 
-		/* Checked */
-		&:checked + .checkbox__box {
-			&::after,
-			svg {
-				transform: scale(1);
+		&:checked {
+			&:focus-visible + .checkbox__box,
+			+ .checkbox__box {
+				&::after,
+				svg {
+					transform: scale(1);
+				}
 			}
-		}
 
-		/* Focused */
-		&:checked:focus-visible + .checkbox__box {
-			&::after,
-			svg {
-				transform: scale(1);
+			&:disabled + .checkbox__box {
+				border-color: var(--disabled);
+
+				&::after {
+					background-color: var(--disabled);
+				}
 			}
 		}
 
@@ -72,15 +74,6 @@
 			&::after,
 			svg {
 				transform: scale(1);
-			}
-		}
-
-		/* Disabled */
-		&:checked:disabled + .checkbox__box {
-			border-color: var(--disabled);
-
-			&::after {
-				background-color: var(--disabled);
 			}
 		}
 

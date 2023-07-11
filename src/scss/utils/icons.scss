@@ -1,0 +1,11 @@
+/* SVG icons styles */
+.icon {
+	width: rem(20);
+	height: rem(20);
+	stroke: var(--primary);
+	transition: stroke 0.3s;
+
+	@include media-hover {
+		stroke: var(--accent);
+	}
+}

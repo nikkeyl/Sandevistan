@@ -1,0 +1,8 @@
+@use "@scss/abstracts" as *;
+
+/* Color theme switcher */
+[role="switch"] {
+	width: rem(30);
+	height: rem(30);
+	transition: background-color 0.6s;
+}

@@ -43,32 +43,28 @@
 	&__input {
 		position: absolute;
 
-		/* Checked */
-		&:checked + .option__box {
-			&::after {
-				transform: scale(1);
+		&:checked {
+			&:focus-visible + .option__box,
+			+ .option__box {
+				&::after,
+				svg {
+					transform: scale(1);
+				}
 			}
-		}
 
-		/* Focused */
-		&:checked:focus-visible + .option__box {
-			&::after {
-				transform: scale(1);
+			&:disabled + .option__box {
+				border-color: var(--disabled);
+
+				&::after {
+					background-color: var(--disabled);
+				}
 			}
 		}
 
 		&:focus-visible + .option__box {
-			&::after {
+			&::after,
+			svg {
 				transform: scale(1);
-			}
-		}
-
-		/* Disabled */
-		&:checked:disabled + .option__box {
-			border-color: var(--disabled);
-
-			&::after {
-				background-color: var(--disabled);
 			}
 		}
 

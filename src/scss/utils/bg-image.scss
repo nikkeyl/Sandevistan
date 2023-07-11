@@ -9,3 +9,9 @@
 		object-fit: cover;
 	}
 }
+
+.bg-image--contain {
+	img {
+		object-fit: contain;
+	}
+}
