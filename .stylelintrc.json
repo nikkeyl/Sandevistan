@@ -386,6 +386,7 @@
         "animation-direction",
         "animation-fill-mode",
         "animation-play-state",
+        "color-scheme",
         "will-change",
         "cursor",
         "pointer-events",
