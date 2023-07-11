@@ -1,6 +1,5 @@
 @use "sass:math" as *;
 @use "@scss/abstracts" as *;
-@use "@scss/utils/placeholders" as *;
 
 .input {
 	border: rem(1) solid var(--accent);

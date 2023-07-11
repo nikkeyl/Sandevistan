@@ -1,27 +1,5 @@
 @use "sass:math" as *;
 @use "@scss/abstracts" as *;
-@use "@scss/utils/placeholders" as *;
-
-body {
-	&::after {
-		/* Overlay styles for popup */
-		@include pseudo("", fixed);
-
-		inset: 0;
-		background-color: rgba(0 0 0 / 0.5);
-		opacity: 0;
-		transition: opacity 0.8s;
-		pointer-events: none;
-	}
-}
-
-.popup-show {
-	body {
-		&::after {
-			opacity: 1;
-		}
-	}
-}
 
 .popup {
 	position: fixed;
@@ -35,7 +13,7 @@ body {
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		min-height: 100vh;
+		min-height: 100%;
 	}
 
 	&__content {
@@ -46,8 +24,8 @@ body {
 		visibility: hidden;
 		transform: scale(0);
 		transition:
-			transform 0.3s,
-			visibility 0.3s;
+			visibility 0.3s,
+			transform 0.3s;
 
 		.lock & {
 			visibility: visible;

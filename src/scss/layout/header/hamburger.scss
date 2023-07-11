@@ -1,6 +1,4 @@
-@use "sass:math" as *;
 @use "@scss/abstracts" as *;
-@use "@scss/utils/placeholders" as *;
 
 .hamburger {
 	@include media-max($tablet) {
@@ -21,9 +19,9 @@
 			background-color: var(--primary);
 			transition:
 				transform 0.3s,
+				bottom 0.3s,
 				width 0.3s,
-				top 0.3s,
-				bottom 0.3s;
+				top 0.3s;
 		}
 
 		&::before {

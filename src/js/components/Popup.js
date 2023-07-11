@@ -15,7 +15,7 @@ class Popup {
 				popup: 'popup',
 				popupContent: 'popup__content',
 				popupActive: 'popup--show',
-				bodyActive: 'popup-show'
+				overlayShow: 'overlay-show'
 			},
 			focusCatch: true,
 			closeEsc: true,
@@ -25,10 +25,10 @@ class Popup {
 				goHash: true
 			},
 			on: {
-				beforeOpen: () => {},
-				afterOpen: () => {},
-				beforeClose: () => {},
-				afterClose: () => {}
+				beforeOpen: () => { },
+				afterOpen: () => { },
+				beforeClose: () => { },
+				afterClose: () => { }
 			}
 		}
 
@@ -245,7 +245,7 @@ class Popup {
 				// 	new CustomEvent('beforePopupOpen', { detail: { popup: this } })
 				// )
 				this.targetOpen.element.classList.add(this.options.classes.popupActive)
-				html.classList.add(this.options.classes.bodyActive)
+				html.classList.add(this.options.classes.overlayShow)
 
 				if (!this.reopen) {
 					!this.bodyLock ? bodyLock() : null
@@ -303,7 +303,7 @@ class Popup {
 		this.previousOpen.element.setAttribute('aria-hidden', 'true')
 
 		if (!this.reopen) {
-			html.classList.remove(this.options.classes.bodyActive)
+			html.classList.remove(this.options.classes.overlayShow)
 			!this.bodyLock ? bodyUnlock() : null
 			this.isOpen = false
 		}
@@ -338,8 +338,8 @@ class Popup {
 		)
 			? `.${window.location.hash.replace('#', '')}`
 			: document.querySelector(`${window.location.hash}`)
-			? `${window.location.hash}`
-			: null
+				? `${window.location.hash}`
+				: null
 		const buttons =
 			document.querySelector(
 				`[${this.options.attributeOpenButton} = "${classInHash}"]`

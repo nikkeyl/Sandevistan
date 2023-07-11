@@ -1,6 +1,5 @@
 @use "sass:math" as *;
 @use "@scss/abstracts" as *;
-@use "@scss/utils/placeholders" as *;
 
 .button {
 	$font-size: 18;
@@ -14,8 +13,8 @@
 	color: var(--primary);
 	background-color: var(--secondary);
 	transition:
-		transform 0.3s,
 		background-color 0.3s,
+		transform 0.3s,
 		color 0.3s;
 
 	&:active {
