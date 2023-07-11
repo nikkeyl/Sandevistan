@@ -1,4 +1,5 @@
 import { formValidate } from '@js/components/forms/formValidate'
+
 import { slideToggle } from '@js/helpers/slideToggle'
 import { nodeObjects } from '@js/helpers/nodeList'
 import { slideUp } from '@js/helpers/slideUp'

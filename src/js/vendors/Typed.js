@@ -1,5 +1,6 @@
 /*! Simulate text printing (Typed plugin) https://mattboldt.github.io/typed/ */
 import { nodeObjects } from '@js/helpers/nodeList'
+
 import Typed from 'typed.js'
 
 if (document.querySelector('[data-typed]')) {

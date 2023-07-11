@@ -1,5 +1,6 @@
 /*! Tips (Tippy plugin) https://atomiks.github.io/tippyjs/ */
 import { nodeObjects } from '@js/helpers/nodeList'
+
 import tippy from 'tippy.js'
 
 // InlinePositioning,

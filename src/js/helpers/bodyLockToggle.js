@@ -1,5 +1,6 @@
-import { html, body } from '@js/helpers/nodeList'
 import { burger } from '@js/components/hamburger'
+
+import { html, body } from '@js/helpers/nodeList'
 
 let bodyLockStatus = true
 

@@ -1,5 +1,6 @@
 /* https://www.lightgalleryjs.com/ */
 import { nodeObjects } from '@js/helpers/nodeList'
+
 import lightGallery from 'lightgallery'
 
 // import lgThumbnail from 'lightgallery/plugins/thumbnail/lg-thumbnail.min.js'
