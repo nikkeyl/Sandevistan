@@ -1,6 +1,7 @@
-// import SmoothScroll from 'smooth-scroll'
 import { bodyUnlock } from '@js/helpers/bodyLockToggle'
 import { html } from '@js/helpers/nodeList'
+
+// import SmoothScroll from 'smooth-scroll'
 
 const goToBlock = (targetBlock, noHeader = false, speed = 500, offsetTop = 0) => {
 	const targetBlockElement = document.querySelector(targetBlock)
