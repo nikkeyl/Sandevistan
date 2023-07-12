@@ -170,7 +170,7 @@ class SelectConstructor {
 								this.getSelectClass(this.selectClasses.classSelectTag)
 							).dataset.selectId
 						}"]`
-					)
+				  )
 			const originalSelect = this.getSelectElement(selectItem).originalSelect
 
 			if (targetType === 'click') {
@@ -588,7 +588,7 @@ class SelectConstructor {
 			tempButton.remove()
 		}
 
-		const selectItem = originalSelect.parentElement
+		// const selectItem = originalSelect.parentElement
 	}
 
 	selectDisabled(selectItem, originalSelect) {

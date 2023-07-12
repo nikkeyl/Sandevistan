@@ -147,8 +147,8 @@ function tabs() {
 
 				tabActiveTrigger.length
 					? (tabActiveTrigger = Array.from(tabActiveTrigger).filter(
-						panel => panel.closest('[data-tabs]') === tabsBlock
-					))
+							panel => panel.closest('[data-tabs]') === tabsBlock
+					  ))
 					: null
 				removeClasses('[data-tabs-trigger].trigger-active', 'trigger-active')
 				tabTrigger.classList.add('trigger-active')

@@ -25,10 +25,10 @@ class Popup {
 				goHash: true
 			},
 			on: {
-				beforeOpen: () => { },
-				afterOpen: () => { },
-				beforeClose: () => { },
-				afterClose: () => { }
+				beforeOpen: () => {},
+				afterOpen: () => {},
+				beforeClose: () => {},
+				afterClose: () => {}
 			}
 		}
 
@@ -209,8 +209,7 @@ class Popup {
 			if (this.targetOpen.element) {
 				if (this.youTubeCode) {
 					const codeVideo = this.youTubeCode
-					const urlVideo =
-						`https://www.youtube.com/embed/${codeVideo}?rel=0&showinfo=0&autoplay=1`
+					const urlVideo = `https://www.youtube.com/embed/${codeVideo}?rel=0&showinfo=0&autoplay=1`
 					const iframe = document.createElement('iframe')
 
 					iframe.setAttribute('allowfullscreen', '')
@@ -241,6 +240,7 @@ class Popup {
 				}
 
 				this.options.on.beforeOpen(this)
+
 				// document.dispatchEvent(
 				// 	new CustomEvent('beforePopupOpen', { detail: { popup: this } })
 				// )
@@ -262,6 +262,7 @@ class Popup {
 					this.focusTrap()
 				}, 50)
 				this.options.on.afterOpen(this)
+
 				// document.dispatchEvent(
 				// 	new CustomEvent('afterPopupOpen', { detail: { popup: this } })
 				// )
@@ -283,6 +284,7 @@ class Popup {
 		}
 
 		this.options.on.beforeClose(this)
+
 		// document.dispatchEvent(
 		// 	new CustomEvent('beforePopupClose', { detail: { popup: this } })
 		// )
@@ -316,6 +318,7 @@ class Popup {
 		}
 
 		this.options.on.afterClose(this)
+
 		// document.dispatchEvent(
 		// 	new CustomEvent('afterPopupClose', { detail: { popup: this } })
 		// )
@@ -338,8 +341,8 @@ class Popup {
 		)
 			? `.${window.location.hash.replace('#', '')}`
 			: document.querySelector(`${window.location.hash}`)
-				? `${window.location.hash}`
-				: null
+			? `${window.location.hash}`
+			: null
 		const buttons =
 			document.querySelector(
 				`[${this.options.attributeOpenButton} = "${classInHash}"]`

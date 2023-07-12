@@ -83,8 +83,8 @@ function spoilers() {
 					!spoilerBlock.open
 						? (spoilerBlock.open = true)
 						: setTimeout(() => {
-							spoilerBlock.open = false
-						}, spoilerSpeed)
+								spoilerBlock.open = false
+						  }, spoilerSpeed)
 
 					spoilerTrigger.classList.toggle('spoiler-active')
 					slideToggle(spoilerTrigger.nextElementSibling, spoilerSpeed)
