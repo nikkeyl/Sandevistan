@@ -5,7 +5,7 @@ import { deleteAsync } from 'del'
 const reset = () =>
 	deleteAsync([
 		paths.buildFolder,
-		paths.tempFolder,
+		paths.binFolder,
 		'**/.gitkeep'
 	])
 

@@ -6,7 +6,7 @@ import {
 const rootFolder = basename(resolve())
 const buildFolder = resolve('dist')
 const srcFolder = resolve('src')
-const tempFolder = 'temp'
+const binFolder = 'bin'
 const paths = {
 	build: {
 		static: `${buildFolder}/static/`,
@@ -31,9 +31,9 @@ const paths = {
 		html: `${srcFolder}/*.html`
 	},
 	buildFolder,
-	tempFolder,
 	rootFolder,
-	srcFolder
+	srcFolder,
+	binFolder
 }
 
 export { paths }

@@ -20,6 +20,9 @@ const html = () =>
 					'css',
 					'js'
 				]
+			},
+			'output': {
+				'file': `${app.paths.binFolder}/version.json`
 			}
 		}))
 		.pipe(htmlMin({

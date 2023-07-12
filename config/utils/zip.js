@@ -6,6 +6,6 @@ const zip = () =>
 	app.gulp.src(`${app.paths.buildFolder}/**/*.*`)
 		.pipe(app.plugins.catchError('ZIP'))
 		.pipe(zipPlugin(`${app.paths.rootFolder}.zip`))
-		.pipe(app.gulp.dest(app.paths.tempFolder))
+		.pipe(app.gulp.dest(app.paths.binFolder))
 
 export { zip }
