@@ -500,7 +500,7 @@
     "font-weight-notation": "numeric",
     "keyframe-selector-notation": "percentage",
     "media-feature-range-notation": "context",
-    "selector-not-notation": "simple",
+    "selector-not-notation": "complex",
     "selector-class-pattern": "^[a-z][a-z0-9]*(-[a-z0-9]+)*(__[a-z0-9]+(-[a-z0-9]+)*)?(--[a-z0-9]+(-[a-z0-9]+)*)?$",
     "font-family-name-quotes": "always-unless-keyword",
     "scss/at-function-named-arguments": "never",
