@@ -76,7 +76,7 @@ const config = {
 			inject: false,
 			template: `${paths.srcFolder}/${pugPage}`,
 			filename: `../${pugPage.replace(/\.pug$/, '.html')}`,
-			production: (process.env.NODE_ENV !== 'production')
+			production: true
 		})),
 		new MiniCssExtractPlugin({
 			filename: '../css/style.css'

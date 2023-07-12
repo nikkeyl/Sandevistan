@@ -16,7 +16,6 @@ html(lang='ru')
 		meta(name='format-detection' content='telephone=no')
 		if production
 			link(rel='stylesheet' href='css/style.min.css')
-		block styles
 		link(rel='icon' href='favicon.ico')
 	body
 		.wrapper
@@ -24,10 +23,8 @@ html(lang='ru')
 			main(class=['page', pageMod] data-fp=fullPage)
 				block pageContent
 			include footer
-
 		if preloader
 			include ../components/preloader
 		if popups
 			include ../components/popup
-		block scripts
 		script(src='js/app.min.js')

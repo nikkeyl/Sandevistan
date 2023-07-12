@@ -17,8 +17,8 @@ const config = {
 	entry: `${paths.srcFolder}/js/app.js`,
 	output: output('js/app.min.js'),
 	devServer: {
-		historyApiFallback: true,
 		static: paths.buildFolder,
+		historyApiFallback: true,
 		compress: true,
 		port: 3000,
 		open: true,
@@ -76,7 +76,7 @@ const config = {
 			inject: false,
 			template: `${paths.srcFolder}/${pugPage}`,
 			filename: pugPage.replace(/\.pug$/, '.html'),
-			production: (process.env.NODE_ENV === 'production')
+			production: false
 		})),
 		new plugins.CopyPlugin({
 			patterns: [
