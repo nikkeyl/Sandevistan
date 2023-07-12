@@ -7,8 +7,8 @@
     "deploy": "gulp deploy -d dist",
     "devBuild": "gulp build --no-webp",
     "editorconfig": "editorconfig-checker",
-    "stylelint": "stylelint src/scss/**/*.scss --fix",
-    "eslint": "eslint src/js/**/*.js --fix",
+    "stylelint": "stylelint src/scss --fix",
+    "eslint": "eslint src/js --fix",
     "sprite": "gulp sprite",
     "fonts": "gulp fonts"
   },
