@@ -5,6 +5,7 @@ block variables
 	- let pageMod
 	- let fullPage
 	- let preloader
+	- let popups
 
 doctype html
 html(lang='ru')
@@ -26,6 +27,7 @@ html(lang='ru')
 
 		if preloader
 			include ../components/preloader
-		block popups
+		if popups
+			include ../components/popup
 		block scripts
 		script(src='js/app.min.js')
